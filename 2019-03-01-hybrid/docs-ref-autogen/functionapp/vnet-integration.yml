@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_functionapp_vnet_integration
-  name: az functionapp vnet-integration
-  summary: Methods that list, add, and remove virtual networks integrations from a functionapp.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_functionapp_vnet_integration_add
-  - az_functionapp_vnet_integration_list
-  - az_functionapp_vnet_integration_remove
+### YamlMime:CLIGroup
+uid: az_functionapp_vnet_integration
+name: az functionapp vnet-integration
+summary: Methods that list, add, and remove virtual networks integrations from a functionapp.
+description: ''
+directCommands:
 - uid: az_functionapp_vnet_integration_add
   name: az functionapp vnet-integration add
   summary: Add a regional virtual network integration to a functionapp.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: add a regional virtual network integration to a functionapp
-    syntax:
-      content: az functionapp vnet-integration add -g MyResourceGroup -n MyFunctionapp --vnet MyVnetName --subnet MySubnetName -s [slot]
+    syntax: az functionapp vnet-integration add -g MyResourceGroup -n MyFunctionapp --vnet MyVnetName --subnet MySubnetName -s [slot]
   parameters:
   - isRequired: true
     name: --name -n
@@ -53,12 +44,9 @@ items:
   name: az functionapp vnet-integration list
   summary: List the virtual network integrations on a functionapp.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: list the virtual networks integrations on a functionapp
-    syntax:
-      content: az functionapp vnet-integration list -g MyResourceGroup -n MyFunctionapp -s [slot]
+    syntax: az functionapp vnet-integration list -g MyResourceGroup -n MyFunctionapp -s [slot]
   parameters:
   - isRequired: true
     name: --name -n
@@ -84,12 +72,9 @@ items:
   name: az functionapp vnet-integration remove
   summary: Remove a regional virtual network integration from functionapp.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: remove a regional virtual network integration from functionapp
-    syntax:
-      content: az functionapp vnet-integration remove -g MyResourceGroup -n MyFunctionapp -s [slot]
+    syntax: az functionapp vnet-integration remove -g MyResourceGroup -n MyFunctionapp -s [slot]
   parameters:
   - isRequired: true
     name: --name -n
@@ -112,15 +97,9 @@ items:
       path: src/azure-cli/azure/cli/command_modules/appservice/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_functionapp_vnet_integration_add
-  name: az functionapp vnet-integration add
-  summary: Add a regional virtual network integration to a functionapp.
-- uid: az_functionapp_vnet_integration_list
-  name: az functionapp vnet-integration list
-  summary: List the virtual network integrations on a functionapp.
-- uid: az_functionapp_vnet_integration_remove
-  name: az functionapp vnet-integration remove
-  summary: Remove a regional virtual network integration from functionapp.
+- az_functionapp_vnet_integration_add
+- az_functionapp_vnet_integration_list
+- az_functionapp_vnet_integration_remove
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -136,10 +115,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/appservice/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/433268833f4a2e9c48736f28e34fbf8794e0a20a/src/azure-cli/azure/cli/command_modules/appservice/_help.py
-updated_at: 6/15/2020 6:19:53 PM
-ms.date: 06/15/2020
-description: Methods that list, add, and remove virtual networks integrations from a functionapp.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/433268833f4a2e9c48736f28e34fbf8794e0a20a/src/azure-cli/azure/cli/command_modules/appservice/_help.py
+  updated_at: 6/15/2020 6:19:53 PM
+  ms.date: 06/15/2020
+  description: Methods that list, add, and remove virtual networks integrations from a functionapp.

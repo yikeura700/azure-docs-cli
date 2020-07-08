@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_action
-  name: az network front-door rules-engine rule action
-  summary: Manage Rules Engine actions for Front Door.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_front-door_az_network_front_door_rules_engine_rule_action_add
-  - ext_front-door_az_network_front_door_rules_engine_rule_action_list
-  - ext_front-door_az_network_front_door_rules_engine_rule_action_remove
+### YamlMime:CLIGroup
+uid: ext_front-door_az_network_front_door_rules_engine_rule_action
+name: az network front-door rules-engine rule action
+summary: Manage Rules Engine actions for Front Door.
+description: ''
+directCommands:
 - uid: ext_front-door_az_network_front_door_rules_engine_rule_action_add
   name: az network front-door rules-engine rule action add
   summary: Add an action to a Rules Engine rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --front-door-name -f
@@ -102,8 +94,6 @@ items:
   name: az network front-door rules-engine rule action list
   summary: Show all actions that apply for a Rules Engine rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --front-door-name -f
@@ -125,8 +115,6 @@ items:
   name: az network front-door rules-engine rule action remove
   summary: Remove an action from a Rules Engine rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --front-door-name -f
@@ -153,15 +141,9 @@ items:
     summary: Action type to apply for a rule.
     description: ''
 commands:
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_action_add
-  name: az network front-door rules-engine rule action add
-  summary: Add an action to a Rules Engine rule.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_action_list
-  name: az network front-door rules-engine rule action list
-  summary: Show all actions that apply for a Rules Engine rule.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_action_remove
-  name: az network front-door rules-engine rule action remove
-  summary: Remove an action from a Rules Engine rule.
+- ext_front-door_az_network_front_door_rules_engine_rule_action_add
+- ext_front-door_az_network_front_door_rules_engine_rule_action_list
+- ext_front-door_az_network_front_door_rules_engine_rule_action_remove
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -177,4 +159,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Rules Engine actions for Front Door.
+metadata:
+  description: Manage Rules Engine actions for Front Door.

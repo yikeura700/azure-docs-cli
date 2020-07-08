@@ -1,33 +1,20 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_costmanagement_az_costmanagement_export
-  name: az costmanagement export
-  summary: Costmanagement export.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_costmanagement_az_costmanagement_export_create
-  - ext_costmanagement_az_costmanagement_export_delete
-  - ext_costmanagement_az_costmanagement_export_list
-  - ext_costmanagement_az_costmanagement_export_show
-  - ext_costmanagement_az_costmanagement_export_update
+### YamlMime:CLIGroup
+uid: ext_costmanagement_az_costmanagement_export
+name: az costmanagement export
+summary: Costmanagement export.
+description: ''
+directCommands:
 - uid: ext_costmanagement_az_costmanagement_export_create
   name: az costmanagement export create
   summary: The operation to create an export.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an export for ManagementGroup scope
-    syntax:
-      content: az costmanagement export create --name "TestExport" --type "Usage" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "providers/Microsoft.Management/managementGroups/TestMG"
+    syntax: az costmanagement export create --name "TestExport" --type "Usage" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "providers/Microsoft.Management/managementGroups/TestMG"
   - summary: Create an export for ResourceGroup scope
-    syntax:
-      content: az costmanagement export create --name "TestExport" --type "Usage" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG"
+    syntax: az costmanagement export create --name "TestExport" --type "Usage" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG"
   - summary: Create an export for Subscription scope
-    syntax:
-      content: az costmanagement export create --name "TestExport" --type "Usage" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "subscriptions/00000000-0000-0000-0000-000000000000"
+    syntax: az costmanagement export create --name "TestExport" --type "Usage" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "subscriptions/00000000-0000-0000-0000-000000000000"
   parameters:
   - isRequired: true
     name: --name
@@ -81,18 +68,13 @@ items:
   name: az costmanagement export delete
   summary: The operation to delete an export.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: delete an export for a ManagementGroup scope
-    syntax:
-      content: az costmanagement export delete --name "TestExport" --scope "providers/Microsoft.Management/managementGroups/TestMG"
+    syntax: az costmanagement export delete --name "TestExport" --scope "providers/Microsoft.Management/managementGroups/TestMG"
   - summary: delete an export for ResourceGroup scope
-    syntax:
-      content: az costmanagement export delete --name "TestExport" --scope "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG"
+    syntax: az costmanagement export delete --name "TestExport" --scope "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG"
   - summary: delete an export for Subscription scope
-    syntax:
-      content: az costmanagement export delete --name "TestExport" --scope "subscriptions/00000000-0000-0000-0000-000000000000"
+    syntax: az costmanagement export delete --name "TestExport" --scope "subscriptions/00000000-0000-0000-0000-000000000000"
   parameters:
   - isRequired: true
     name: --name
@@ -109,18 +91,13 @@ items:
   name: az costmanagement export list
   summary: The operation to list all exports at the given scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: list exports in a ManagementGroup scope
-    syntax:
-      content: az costmanagement export list --scope "providers/Microsoft.Management/managementGroups/TestMG"
+    syntax: az costmanagement export list --scope "providers/Microsoft.Management/managementGroups/TestMG"
   - summary: list exports in a ResourceGroup scope
-    syntax:
-      content: az costmanagement export list --scope "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG"
+    syntax: az costmanagement export list --scope "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG"
   - summary: list exports in a Subscription scope
-    syntax:
-      content: az costmanagement export list --scope "subscriptions/00000000-0000-0000-0000-000000000000"
+    syntax: az costmanagement export list --scope "subscriptions/00000000-0000-0000-0000-000000000000"
   parameters:
   - isRequired: true
     name: --scope
@@ -130,18 +107,13 @@ items:
   name: az costmanagement export show
   summary: The operation to get the execution history of an export for the defined scope by export name.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show an export in a ManagementGroup scope
-    syntax:
-      content: az costmanagement export show --name "TestExport" --scope "providers/Microsoft.Management/managementGroups/TestMG"
+    syntax: az costmanagement export show --name "TestExport" --scope "providers/Microsoft.Management/managementGroups/TestMG"
   - summary: Show an export in a ResourceGroup scope
-    syntax:
-      content: az costmanagement export show --name "TestExport" --scope "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG"
+    syntax: az costmanagement export show --name "TestExport" --scope "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG"
   - summary: Show an export in a Subscription scope
-    syntax:
-      content: az costmanagement export show --name "TestExport" --scope "subscriptions/00000000-0000-0000-0000-000000000000"
+    syntax: az costmanagement export show --name "TestExport" --scope "subscriptions/00000000-0000-0000-0000-000000000000"
   parameters:
   - isRequired: true
     name: --name
@@ -155,18 +127,13 @@ items:
   name: az costmanagement export update
   summary: The operation to update an export.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update an export in a ManagementGroup scope
-    syntax:
-      content: az costmanagement export update --name "TestExport" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "providers/Microsoft.Management/managementGroups/TestMG"
+    syntax: az costmanagement export update --name "TestExport" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "providers/Microsoft.Management/managementGroups/TestMG"
   - summary: Update an export in a ResourceGroup scope
-    syntax:
-      content: az costmanagement export update --name "TestExport" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG"
+    syntax: az costmanagement export update --name "TestExport" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG"
   - summary: Update an export in a Subscription scope
-    syntax:
-      content: az costmanagement export update --name "TestExport" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "subscriptions/00000000-0000-0000-0000-000000000000"
+    syntax: az costmanagement export update --name "TestExport" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "subscriptions/00000000-0000-0000-0000-000000000000"
   parameters:
   - isRequired: true
     name: --name
@@ -210,21 +177,11 @@ items:
     summary: The status of the schedule.Whether active or not. If inactive, the export's scheduled execution is paused.
     description: ''
 commands:
-- uid: ext_costmanagement_az_costmanagement_export_create
-  name: az costmanagement export create
-  summary: The operation to create an export.
-- uid: ext_costmanagement_az_costmanagement_export_delete
-  name: az costmanagement export delete
-  summary: The operation to delete an export.
-- uid: ext_costmanagement_az_costmanagement_export_list
-  name: az costmanagement export list
-  summary: The operation to list all exports at the given scope.
-- uid: ext_costmanagement_az_costmanagement_export_show
-  name: az costmanagement export show
-  summary: The operation to get the execution history of an export for the defined scope by export name.
-- uid: ext_costmanagement_az_costmanagement_export_update
-  name: az costmanagement export update
-  summary: The operation to update an export.
+- ext_costmanagement_az_costmanagement_export_create
+- ext_costmanagement_az_costmanagement_export_delete
+- ext_costmanagement_az_costmanagement_export_list
+- ext_costmanagement_az_costmanagement_export_show
+- ext_costmanagement_az_costmanagement_export_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -240,4 +197,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Costmanagement export.
+metadata:
+  description: Costmanagement export.

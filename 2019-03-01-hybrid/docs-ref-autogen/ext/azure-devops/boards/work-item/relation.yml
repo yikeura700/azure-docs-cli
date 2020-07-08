@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_boards_work_item_relation
-  name: az boards work-item relation
-  summary: Manage work item relations.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_boards_work_item_relation_add
-  - ext_azure-devops_az_boards_work_item_relation_list_type
-  - ext_azure-devops_az_boards_work_item_relation_remove
-  - ext_azure-devops_az_boards_work_item_relation_show
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_boards_work_item_relation
+name: az boards work-item relation
+summary: Manage work item relations.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_boards_work_item_relation_add
   name: az boards work-item relation add
   summary: Add relation(s) to work item.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -41,8 +32,6 @@ items:
   name: az boards work-item relation list-type
   summary: List work item relations supported in the organization.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --detect
     parameterValueGroup: false, true
@@ -55,8 +44,6 @@ items:
   name: az boards work-item relation remove
   summary: Remove relation(s) from work item.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -84,8 +71,6 @@ items:
   name: az boards work-item relation show
   summary: Get work item, fill relations with friendly name.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -99,18 +84,10 @@ items:
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href="https://dev.azure.com/MyOrganizationName/">https://dev.azure.com/MyOrganizationName/</a>.'
     description: ''
 commands:
-- uid: ext_azure-devops_az_boards_work_item_relation_add
-  name: az boards work-item relation add
-  summary: Add relation(s) to work item.
-- uid: ext_azure-devops_az_boards_work_item_relation_list_type
-  name: az boards work-item relation list-type
-  summary: List work item relations supported in the organization.
-- uid: ext_azure-devops_az_boards_work_item_relation_remove
-  name: az boards work-item relation remove
-  summary: Remove relation(s) from work item.
-- uid: ext_azure-devops_az_boards_work_item_relation_show
-  name: az boards work-item relation show
-  summary: Get work item, fill relations with friendly name.
+- ext_azure-devops_az_boards_work_item_relation_add
+- ext_azure-devops_az_boards_work_item_relation_list_type
+- ext_azure-devops_az_boards_work_item_relation_remove
+- ext_azure-devops_az_boards_work_item_relation_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -126,4 +103,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage work item relations.
+metadata:
+  description: Manage work item relations.

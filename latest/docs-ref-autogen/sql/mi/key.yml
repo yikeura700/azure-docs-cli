@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sql_mi_key
-  name: az sql mi key
-  summary: Manage a SQL Instance's keys.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sql_mi_key_create
-  - az_sql_mi_key_delete
-  - az_sql_mi_key_list
-  - az_sql_mi_key_show
+### YamlMime:CLIGroup
+uid: az_sql_mi_key
+name: az sql mi key
+summary: Manage a SQL Instance's keys.
+description: ''
+directCommands:
 - uid: az_sql_mi_key_create
   name: az sql mi key create
   summary: Creates a SQL Instance key.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --kid -k
@@ -43,8 +34,6 @@ items:
   name: az sql mi key delete
   summary: Deletes a SQL Instance key.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --kid -k
@@ -72,8 +61,6 @@ items:
   name: az sql mi key list
   summary: Gets a list of managed instance keys.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --filter
     summary: An OData filter expression that filters elements in the collection.
@@ -100,8 +87,6 @@ items:
   name: az sql mi key show
   summary: Shows a SQL Instance key.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --kid -k
@@ -126,18 +111,10 @@ items:
       path: src/azure-cli/azure/cli/command_modules/sql/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_sql_mi_key_create
-  name: az sql mi key create
-  summary: Creates a SQL Instance key.
-- uid: az_sql_mi_key_delete
-  name: az sql mi key delete
-  summary: Deletes a SQL Instance key.
-- uid: az_sql_mi_key_list
-  name: az sql mi key list
-  summary: Gets a list of managed instance keys.
-- uid: az_sql_mi_key_show
-  name: az sql mi key show
-  summary: Shows a SQL Instance key.
+- az_sql_mi_key_create
+- az_sql_mi_key_delete
+- az_sql_mi_key_list
+- az_sql_mi_key_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -153,10 +130,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
-updated_at: 6/19/2020 1:04:35 AM
-ms.date: 06/19/2020
-description: Manage a SQL Instance's keys.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  updated_at: 6/19/2020 1:04:35 AM
+  ms.date: 06/19/2020
+  description: Manage a SQL Instance's keys.

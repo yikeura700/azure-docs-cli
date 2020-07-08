@@ -1,26 +1,19 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_network_express_route_peering_connection
-  name: az network express-route peering connection
-  summary: Manage ExpressRoute circuit connections.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_network_express_route_peering_connection_create
+### YamlMime:CLIGroup
+uid: az_network_express_route_peering_connection
+name: az network express-route peering connection
+summary: Manage ExpressRoute circuit connections.
+description: ''
+directCommands:
 - uid: az_network_express_route_peering_connection_create
   name: az network express-route peering connection create
   summary: Create connections between two ExpressRoute circuits.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create connection between two ExpressRoute circuits with AzurePrivatePeering settings.
-    syntax:
-      content: >-
-        az network express-route peering connection create -g MyResourceGroup --circuit-name \
-            MyCircuit --peering-name AzurePrivatePeering -n myConnection --peer-circuit \
-            MyOtherCircuit --address-prefix 104.0.0.0/29
+    syntax: >-
+      az network express-route peering connection create -g MyResourceGroup --circuit-name \
+          MyCircuit --peering-name AzurePrivatePeering -n myConnection --peer-circuit \
+          MyOtherCircuit --address-prefix 104.0.0.0/29
   parameters:
   - isRequired: true
     name: --address-prefix
@@ -59,9 +52,7 @@ items:
       path: src/azure-cli/azure/cli/command_modules/network/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_network_express_route_peering_connection_create
-  name: az network express-route peering connection create
-  summary: Create connections between two ExpressRoute circuits.
+- az_network_express_route_peering_connection_create
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -77,10 +68,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/network/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
-updated_at: 6/18/2020 6:20:50 AM
-ms.date: 06/18/2020
-description: Manage ExpressRoute circuit connections.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
+  updated_at: 6/18/2020 6:20:50 AM
+  ms.date: 06/18/2020
+  description: Manage ExpressRoute circuit connections.

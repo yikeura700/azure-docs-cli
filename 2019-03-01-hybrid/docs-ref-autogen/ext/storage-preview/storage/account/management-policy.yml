@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_storage-preview_az_storage_account_management_policy
-  name: az storage account management-policy
-  summary: Manage storage account management policies.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_storage-preview_az_storage_account_management_policy_create
-  - ext_storage-preview_az_storage_account_management_policy_delete
-  - ext_storage-preview_az_storage_account_management_policy_show
-  - ext_storage-preview_az_storage_account_management_policy_update
+### YamlMime:CLIGroup
+uid: ext_storage-preview_az_storage_account_management_policy
+name: az storage account management-policy
+summary: Manage storage account management policies.
+description: ''
+directCommands:
 - uid: ext_storage-preview_az_storage_account_management_policy_create
   name: az storage account management-policy create
   summary: Creates the data policy rules associated with the specified storage account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name
@@ -33,8 +24,6 @@ items:
   name: az storage account management-policy delete
   summary: Deletes the data policy rules associated with the specified storage account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name
@@ -48,8 +37,6 @@ items:
   name: az storage account management-policy show
   summary: Gets the data policy rules associated with the specified storage account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name
@@ -63,8 +50,6 @@ items:
   name: az storage account management-policy update
   summary: Updates the data policy rules associated with the specified storage account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name
@@ -87,18 +72,10 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_storage-preview_az_storage_account_management_policy_create
-  name: az storage account management-policy create
-  summary: Creates the data policy rules associated with the specified storage account.
-- uid: ext_storage-preview_az_storage_account_management_policy_delete
-  name: az storage account management-policy delete
-  summary: Deletes the data policy rules associated with the specified storage account.
-- uid: ext_storage-preview_az_storage_account_management_policy_show
-  name: az storage account management-policy show
-  summary: Gets the data policy rules associated with the specified storage account.
-- uid: ext_storage-preview_az_storage_account_management_policy_update
-  name: az storage account management-policy update
-  summary: Updates the data policy rules associated with the specified storage account.
+- ext_storage-preview_az_storage_account_management_policy_create
+- ext_storage-preview_az_storage_account_management_policy_delete
+- ext_storage-preview_az_storage_account_management_policy_show
+- ext_storage-preview_az_storage_account_management_policy_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -114,4 +91,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage storage account management policies.
+metadata:
+  description: Manage storage account management policies.

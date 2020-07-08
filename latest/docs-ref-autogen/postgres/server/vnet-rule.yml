@@ -1,30 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_postgres_server_vnet_rule
-  name: az postgres server vnet-rule
-  summary: Manage a server's virtual network rules.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_postgres_server_vnet_rule_create
-  - az_postgres_server_vnet_rule_delete
-  - az_postgres_server_vnet_rule_list
-  - az_postgres_server_vnet_rule_show
-  - az_postgres_server_vnet_rule_update
+### YamlMime:CLIGroup
+uid: az_postgres_server_vnet_rule
+name: az postgres server vnet-rule
+summary: Manage a server's virtual network rules.
+description: ''
+directCommands:
 - uid: az_postgres_server_vnet_rule_create
   name: az postgres server vnet-rule create
   summary: Create a virtual network rule to allows access to a PostgreSQL server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a virtual network rule by providing the subnet id.
-    syntax:
-      content: az postgres server vnet-rule create -g testgroup -s testsvr -n vnetRuleName --subnet /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Network/virtualNetworks/vnetName/subnets/subnetName
+    syntax: az postgres server vnet-rule create -g testgroup -s testsvr -n vnetRuleName --subnet /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Network/virtualNetworks/vnetName/subnets/subnetName
   - summary: Create a vnet rule by providing the vnet and subnet name. The subnet id is created by taking the resource group name and subscription id of the server.
-    syntax:
-      content: az postgres server vnet-rule create -g testgroup -s testsvr -n vnetRuleName --subnet subnetName --vnet-name vnetName
+    syntax: az postgres server vnet-rule create -g testgroup -s testsvr -n vnetRuleName --subnet subnetName --vnet-name vnetName
   parameters:
   - isRequired: true
     name: --name -n
@@ -56,8 +44,6 @@ items:
   name: az postgres server vnet-rule delete
   summary: Deletes the virtual network rule with the given name.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -78,8 +64,6 @@ items:
   name: az postgres server vnet-rule list
   summary: Gets a list of virtual network rules in a server.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -97,8 +81,6 @@ items:
   name: az postgres server vnet-rule show
   summary: Gets a virtual network rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -119,8 +101,6 @@ items:
   name: az postgres server vnet-rule update
   summary: Update a virtual network rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --subnet
@@ -161,21 +141,11 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: az_postgres_server_vnet_rule_create
-  name: az postgres server vnet-rule create
-  summary: Create a virtual network rule to allows access to a PostgreSQL server.
-- uid: az_postgres_server_vnet_rule_delete
-  name: az postgres server vnet-rule delete
-  summary: Deletes the virtual network rule with the given name.
-- uid: az_postgres_server_vnet_rule_list
-  name: az postgres server vnet-rule list
-  summary: Gets a list of virtual network rules in a server.
-- uid: az_postgres_server_vnet_rule_show
-  name: az postgres server vnet-rule show
-  summary: Gets a virtual network rule.
-- uid: az_postgres_server_vnet_rule_update
-  name: az postgres server vnet-rule update
-  summary: Update a virtual network rule.
+- az_postgres_server_vnet_rule_create
+- az_postgres_server_vnet_rule_delete
+- az_postgres_server_vnet_rule_list
+- az_postgres_server_vnet_rule_show
+- az_postgres_server_vnet_rule_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -191,4 +161,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage a server's virtual network rules.
+metadata:
+  description: Manage a server's virtual network rules.

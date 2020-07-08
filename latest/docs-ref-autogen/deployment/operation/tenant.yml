@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_deployment_operation_tenant
-  name: az deployment operation tenant
-  summary: Manage deployment operations at tenant scope.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_deployment_operation_tenant_list
-  - az_deployment_operation_tenant_show
+### YamlMime:CLIGroup
+uid: az_deployment_operation_tenant
+name: az deployment operation tenant
+summary: Manage deployment operations at tenant scope.
+description: ''
+directCommands:
 - uid: az_deployment_operation_tenant_list
   name: az deployment operation tenant list
   summary: List deployment operations at tenant scope.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -33,8 +26,6 @@ items:
   name: az deployment operation tenant show
   summary: Show a deployment operation at tenant scope.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -54,12 +45,8 @@ items:
       path: src/azure-cli/azure/cli/command_modules/resource/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_deployment_operation_tenant_list
-  name: az deployment operation tenant list
-  summary: List deployment operations at tenant scope.
-- uid: az_deployment_operation_tenant_show
-  name: az deployment operation tenant show
-  summary: Show a deployment operation at tenant scope.
+- az_deployment_operation_tenant_list
+- az_deployment_operation_tenant_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -75,10 +62,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
-updated_at: 6/16/2020 5:44:37 AM
-ms.date: 06/16/2020
-description: Manage deployment operations at tenant scope.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  updated_at: 6/16/2020 5:44:37 AM
+  ms.date: 06/16/2020
+  description: Manage deployment operations at tenant scope.

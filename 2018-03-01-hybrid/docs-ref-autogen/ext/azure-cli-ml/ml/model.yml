@@ -1,27 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-cli-ml_az_ml_model
-  name: az ml model
-  summary: Manage machine learning models.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-cli-ml_az_ml_model_delete
-  - ext_azure-cli-ml_az_ml_model_deploy
-  - ext_azure-cli-ml_az_ml_model_download
-  - ext_azure-cli-ml_az_ml_model_list
-  - ext_azure-cli-ml_az_ml_model_package
-  - ext_azure-cli-ml_az_ml_model_profile
-  - ext_azure-cli-ml_az_ml_model_register
-  - ext_azure-cli-ml_az_ml_model_show
-  - ext_azure-cli-ml_az_ml_model_update
+### YamlMime:CLIGroup
+uid: ext_azure-cli-ml_az_ml_model
+name: az ml model
+summary: Manage machine learning models.
+description: ''
+directCommands:
 - uid: ext_azure-cli-ml_az_ml_model_delete
   name: az ml model delete
   summary: Delete a model from the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --model-id -i
@@ -46,8 +32,6 @@ items:
   name: az ml model deploy
   summary: Deploy model(s) from the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -258,8 +242,6 @@ items:
   name: az ml model download
   summary: Download a model from the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --model-id -i
@@ -291,8 +273,6 @@ items:
   name: az ml model list
   summary: List models in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --dataset-id
     summary: If provided, will only show models with the specified dataset ID.
@@ -328,8 +308,6 @@ items:
   name: az ml model package
   summary: Package a model in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --cf --conda-file
     summary: Path to local file containing a conda environment definition to use for the package.
@@ -386,8 +364,6 @@ items:
   name: az ml model profile
   summary: Profile model(s) in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -460,8 +436,6 @@ items:
   name: az ml model register
   summary: Register a model to the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -534,8 +508,6 @@ items:
   name: az ml model show
   summary: Show a model in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --model-id -i
     summary: ID of model to show.
@@ -568,8 +540,6 @@ items:
   name: az ml model update
   summary: Update a model in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --model-id -i
@@ -618,33 +588,15 @@ items:
     summary: Verbosity flag.
     description: ''
 commands:
-- uid: ext_azure-cli-ml_az_ml_model_delete
-  name: az ml model delete
-  summary: Delete a model from the workspace.
-- uid: ext_azure-cli-ml_az_ml_model_deploy
-  name: az ml model deploy
-  summary: Deploy model(s) from the workspace.
-- uid: ext_azure-cli-ml_az_ml_model_download
-  name: az ml model download
-  summary: Download a model from the workspace.
-- uid: ext_azure-cli-ml_az_ml_model_list
-  name: az ml model list
-  summary: List models in the workspace.
-- uid: ext_azure-cli-ml_az_ml_model_package
-  name: az ml model package
-  summary: Package a model in the workspace.
-- uid: ext_azure-cli-ml_az_ml_model_profile
-  name: az ml model profile
-  summary: Profile model(s) in the workspace.
-- uid: ext_azure-cli-ml_az_ml_model_register
-  name: az ml model register
-  summary: Register a model to the workspace.
-- uid: ext_azure-cli-ml_az_ml_model_show
-  name: az ml model show
-  summary: Show a model in the workspace.
-- uid: ext_azure-cli-ml_az_ml_model_update
-  name: az ml model update
-  summary: Update a model in the workspace.
+- ext_azure-cli-ml_az_ml_model_delete
+- ext_azure-cli-ml_az_ml_model_deploy
+- ext_azure-cli-ml_az_ml_model_download
+- ext_azure-cli-ml_az_ml_model_list
+- ext_azure-cli-ml_az_ml_model_package
+- ext_azure-cli-ml_az_ml_model_profile
+- ext_azure-cli-ml_az_ml_model_register
+- ext_azure-cli-ml_az_ml_model_show
+- ext_azure-cli-ml_az_ml_model_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -660,4 +612,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage machine learning models.
+metadata:
+  description: Manage machine learning models.

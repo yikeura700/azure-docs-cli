@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_storage_queue_policy
-  name: az storage queue policy
-  summary: Manage shared access policies for a storage queue.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_storage_queue_policy_create
-  - az_storage_queue_policy_delete
-  - az_storage_queue_policy_list
-  - az_storage_queue_policy_show
-  - az_storage_queue_policy_update
+### YamlMime:CLIGroup
+uid: az_storage_queue_policy
+name: az storage queue policy
+summary: Manage shared access policies for a storage queue.
+description: ''
+directCommands:
 - uid: az_storage_queue_policy_create
   name: az storage queue policy create
   summary: Create a stored access policy on the containing object.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -65,8 +55,6 @@ items:
   name: az storage queue policy delete
   summary: Delete a stored access policy on a containing object.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -105,8 +93,6 @@ items:
   name: az storage queue policy list
   summary: List stored access policies on a containing object.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --queue-name -q
@@ -141,8 +127,6 @@ items:
   name: az storage queue policy show
   summary: Show a stored access policy on a containing object.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -181,8 +165,6 @@ items:
   name: az storage queue policy update
   summary: Set a stored access policy on a containing object.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -227,21 +209,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/storage/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_storage_queue_policy_create
-  name: az storage queue policy create
-  summary: Create a stored access policy on the containing object.
-- uid: az_storage_queue_policy_delete
-  name: az storage queue policy delete
-  summary: Delete a stored access policy on a containing object.
-- uid: az_storage_queue_policy_list
-  name: az storage queue policy list
-  summary: List stored access policies on a containing object.
-- uid: az_storage_queue_policy_show
-  name: az storage queue policy show
-  summary: Show a stored access policy on a containing object.
-- uid: az_storage_queue_policy_update
-  name: az storage queue policy update
-  summary: Set a stored access policy on a containing object.
+- az_storage_queue_policy_create
+- az_storage_queue_policy_delete
+- az_storage_queue_policy_list
+- az_storage_queue_policy_show
+- az_storage_queue_policy_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -257,10 +229,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
-updated_at: 6/4/2020 1:53:34 PM
-ms.date: 06/04/2020
-description: Manage shared access policies for a storage queue.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  updated_at: 6/4/2020 1:53:34 PM
+  ms.date: 06/04/2020
+  description: Manage shared access policies for a storage queue.

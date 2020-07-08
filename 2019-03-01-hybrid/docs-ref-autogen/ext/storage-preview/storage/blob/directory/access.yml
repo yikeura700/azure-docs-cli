@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_storage-preview_az_storage_blob_directory_access
-  name: az storage blob directory access
-  summary: Manage the access control properties of a directory when Hierarchical Namespace is enabled.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_storage-preview_az_storage_blob_directory_access_set
-  - ext_storage-preview_az_storage_blob_directory_access_show
-  - ext_storage-preview_az_storage_blob_directory_access_update
+### YamlMime:CLIGroup
+uid: ext_storage-preview_az_storage_blob_directory_access
+name: az storage blob directory access
+summary: Manage the access control properties of a directory when Hierarchical Namespace is enabled.
+description: ''
+directCommands:
 - uid: ext_storage-preview_az_storage_blob_directory_access_set
   name: az storage blob directory access set
   summary: Set the access control properties of a directory.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Set the access control properties of a directory.
-    syntax:
-      content: az storage blob directory access set -a "user::rwx,group::r--,other::---" -d MyDirectoryPath -c MyContainer --account-name MyStorageAccount
+    syntax: az storage blob directory access set -a "user::rwx,group::r--,other::---" -d MyDirectoryPath -c MyContainer --account-name MyStorageAccount
   parameters:
   - isRequired: true
     name: --acl-spec -a
@@ -71,12 +62,9 @@ items:
   name: az storage blob directory access show
   summary: Show the access control properties of a directory.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show the access control properties of a directory.
-    syntax:
-      content: az storage blob directory access show -d MyDirectoryPath -c MyContainer --account-name MyStorageAccount
+    syntax: az storage blob directory access show -d MyDirectoryPath -c MyContainer --account-name MyStorageAccount
   parameters:
   - isRequired: true
     name: --container-name -c
@@ -127,18 +115,13 @@ items:
   name: az storage blob directory access update
   summary: Update the access control properties of a directory.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update the access permissions of a directory.
-    syntax:
-      content: az storage blob directory access update --permissions "rwxrwxrwx" -d MyDirectoryPath -c MyContainer --account-name MyStorageAccount
+    syntax: az storage blob directory access update --permissions "rwxrwxrwx" -d MyDirectoryPath -c MyContainer --account-name MyStorageAccount
   - summary: Update the owning user of a directory.
-    syntax:
-      content: az storage blob directory access update --owner [entityId/UPN] -d MyDirectoryPath -c MyContainer --account-name MyStorageAccount
+    syntax: az storage blob directory access update --owner [entityId/UPN] -d MyDirectoryPath -c MyContainer --account-name MyStorageAccount
   - summary: Update the owning group of a directory.
-    syntax:
-      content: az storage blob directory access update --group [entityId/UPN] -d MyDirectoryPath -c MyContainer --account-name MyStorageAccount
+    syntax: az storage blob directory access update --group [entityId/UPN] -d MyDirectoryPath -c MyContainer --account-name MyStorageAccount
   parameters:
   - isRequired: true
     name: --container-name -c
@@ -195,15 +178,9 @@ items:
     summary: 'A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.'
     description: ''
 commands:
-- uid: ext_storage-preview_az_storage_blob_directory_access_set
-  name: az storage blob directory access set
-  summary: Set the access control properties of a directory.
-- uid: ext_storage-preview_az_storage_blob_directory_access_show
-  name: az storage blob directory access show
-  summary: Show the access control properties of a directory.
-- uid: ext_storage-preview_az_storage_blob_directory_access_update
-  name: az storage blob directory access update
-  summary: Update the access control properties of a directory.
+- ext_storage-preview_az_storage_blob_directory_access_set
+- ext_storage-preview_az_storage_blob_directory_access_show
+- ext_storage-preview_az_storage_blob_directory_access_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -219,4 +196,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage the access control properties of a directory when Hierarchical Namespace is enabled.
+metadata:
+  description: Manage the access control properties of a directory when Hierarchical Namespace is enabled.

@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_netappfiles_volume_replication
-  name: az netappfiles volume replication
-  summary: Manage Azure NetApp Files (ANF) Volume replication operations.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_netappfiles_volume_replication_approve
-  - az_netappfiles_volume_replication_remove
-  - az_netappfiles_volume_replication_resume
-  - az_netappfiles_volume_replication_status
-  - az_netappfiles_volume_replication_suspend
+### YamlMime:CLIGroup
+uid: az_netappfiles_volume_replication
+name: az netappfiles volume replication
+summary: Manage Azure NetApp Files (ANF) Volume replication operations.
+description: ''
+directCommands:
 - uid: az_netappfiles_volume_replication_approve
   name: az netappfiles volume replication approve
   summary: Authorize a volume as a replication destination for a specified source.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Authorize the volume as the replication destination for the source
-    syntax:
-      content: az netappfiles volume replication approve -g mygroup --account-name myaccname --pool-name mypoolname --name mysourcevolname --remote-volume-resource-id /subscriptions/69a75bda-882e-44d5-8431-63421204131c/resourceGroups/mygroup1/providers/Microsoft.NetApp/netAppAccounts/myaccount1/capacityPools/mypool1/volumes/mydestinationvolume
+    syntax: az netappfiles volume replication approve -g mygroup --account-name myaccname --pool-name mypoolname --name mysourcevolname --remote-volume-resource-id /subscriptions/69a75bda-882e-44d5-8431-63421204131c/resourceGroups/mygroup1/providers/Microsoft.NetApp/netAppAccounts/myaccount1/capacityPools/mypool1/volumes/mydestinationvolume
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -56,12 +45,9 @@ items:
   name: az netappfiles volume replication remove
   summary: Delete a volume replication for the specified destination volume. The data replication objects of source and destination volumes will be removed.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete the replication objects of the paired volumes
-    syntax:
-      content: az netappfiles volume replication remove -g mygroup --account-name myaccname --pool-name mypoolname --name mydestinationvolname
+    syntax: az netappfiles volume replication remove -g mygroup --account-name myaccname --pool-name mypoolname --name mydestinationvolname
   parameters:
   - name: --account-name -a
     summary: The name of the ANF account.
@@ -91,12 +77,9 @@ items:
   name: az netappfiles volume replication resume
   summary: Resync a volume replication for the specified destination volume. The replication process is resumed from source to destination.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Resume the replication process
-    syntax:
-      content: az netappfiles volume replication resume -g mygroup --account-name myaccname --pool-name mypoolname --name mydestinationvolname
+    syntax: az netappfiles volume replication resume -g mygroup --account-name myaccname --pool-name mypoolname --name mydestinationvolname
   parameters:
   - name: --account-name -a
     summary: The name of the ANF account.
@@ -126,12 +109,9 @@ items:
   name: az netappfiles volume replication status
   summary: Get the replication status for the specified replication volume.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the replication status for the volume. Returns whether the replication is healthy, the replication schedule and the mirror state (whether replication is suspened/broken or synced/mirrored)
-    syntax:
-      content: az netappfiles volume replication status -g mygroup --account-name myaccname --pool-name mypoolname --name mydestinationvolname
+    syntax: az netappfiles volume replication status -g mygroup --account-name myaccname --pool-name mypoolname --name mydestinationvolname
   parameters:
   - name: --account-name -a
     summary: The name of the ANF account.
@@ -161,12 +141,9 @@ items:
   name: az netappfiles volume replication suspend
   summary: Suspend/break a volume replication for the specified destination volume. The replication process is suspended until resumed or deleted.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Suspend the replication process
-    syntax:
-      content: az netappfiles volume replication suspend -g mygroup --account-name myaccname --pool-name mypoolname --name mydestinationvolname
+    syntax: az netappfiles volume replication suspend -g mygroup --account-name myaccname --pool-name mypoolname --name mydestinationvolname
   parameters:
   - name: --account-name -a
     summary: The name of the ANF account.
@@ -193,21 +170,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_netappfiles_volume_replication_approve
-  name: az netappfiles volume replication approve
-  summary: Authorize a volume as a replication destination for a specified source.
-- uid: az_netappfiles_volume_replication_remove
-  name: az netappfiles volume replication remove
-  summary: Delete a volume replication for the specified destination volume. The data replication objects of source and destination volumes will be removed.
-- uid: az_netappfiles_volume_replication_resume
-  name: az netappfiles volume replication resume
-  summary: Resync a volume replication for the specified destination volume. The replication process is resumed from source to destination.
-- uid: az_netappfiles_volume_replication_status
-  name: az netappfiles volume replication status
-  summary: Get the replication status for the specified replication volume.
-- uid: az_netappfiles_volume_replication_suspend
-  name: az netappfiles volume replication suspend
-  summary: Suspend/break a volume replication for the specified destination volume. The replication process is suspended until resumed or deleted.
+- az_netappfiles_volume_replication_approve
+- az_netappfiles_volume_replication_remove
+- az_netappfiles_volume_replication_resume
+- az_netappfiles_volume_replication_status
+- az_netappfiles_volume_replication_suspend
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -223,10 +190,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/ee84afb7c3604c924b225b79095feee55c466a1b/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-updated_at: 5/15/2020 10:20:28 AM
-ms.date: 05/15/2020
-description: Manage Azure NetApp Files (ANF) Volume replication operations.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/ee84afb7c3604c924b225b79095feee55c466a1b/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
+  updated_at: 5/15/2020 10:20:28 AM
+  ms.date: 05/15/2020
+  description: Manage Azure NetApp Files (ANF) Volume replication operations.

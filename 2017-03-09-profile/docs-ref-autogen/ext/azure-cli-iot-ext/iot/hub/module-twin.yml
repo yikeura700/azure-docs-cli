@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-cli-iot-ext_az_iot_hub_module_twin
-  name: az iot hub module-twin
-  summary: Manage IoT device module twin configuration.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-cli-iot-ext_az_iot_hub_module_twin_replace
-  - ext_azure-cli-iot-ext_az_iot_hub_module_twin_show
-  - ext_azure-cli-iot-ext_az_iot_hub_module_twin_update
+### YamlMime:CLIGroup
+uid: ext_azure-cli-iot-ext_az_iot_hub_module_twin
+name: az iot hub module-twin
+summary: Manage IoT device module twin configuration.
+description: ''
+directCommands:
 - uid: ext_azure-cli-iot-ext_az_iot_hub_module_twin_replace
   name: az iot hub module-twin replace
   summary: Replace a module twin definition with target json.
   description: Input json directly or use a file path.
-  langs:
-  - azurecli
   examples:
   - summary: Replace a module twin with file contents.
-    syntax:
-      content: az iot hub module-twin replace -d {device_id} -n {iothub_name} -m {module_name} -j ../mymodtwin.json
+    syntax: az iot hub module-twin replace -d {device_id} -n {iothub_name} -m {module_name} -j ../mymodtwin.json
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -46,8 +37,6 @@ items:
   name: az iot hub module-twin show
   summary: Show a module twin definition.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -70,15 +59,11 @@ items:
   name: az iot hub module-twin update
   summary: Update module twin definition.
   description: Use --set followed by property assignments for updating a module. Leverage properties returned from 'iot hub module-twin show'.
-  langs:
-  - azurecli
   examples:
   - summary: Add desired properties to module twin.
-    syntax:
-      content: az iot hub module-twin update -d {device_id} -n {iothub_name} -m {module_name} --set properties.desired='{"conditions":{"temperature":{"warning":70, "critical":100}}}'
+    syntax: az iot hub module-twin update -d {device_id} -n {iothub_name} -m {module_name} --set properties.desired='{"conditions":{"temperature":{"warning":70, "critical":100}}}'
   - summary: Remove 'critical' property from parent 'temperature'
-    syntax:
-      content: az iot hub module-twin update -d mydevice -n myhub -m mymod --set properties.desired.condition.temperature.critical='null'
+    syntax: az iot hub module-twin update -d mydevice -n myhub -m mymod --set properties.desired.condition.temperature.critical='null'
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -110,15 +95,9 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_azure-cli-iot-ext_az_iot_hub_module_twin_replace
-  name: az iot hub module-twin replace
-  summary: Replace a module twin definition with target json.
-- uid: ext_azure-cli-iot-ext_az_iot_hub_module_twin_show
-  name: az iot hub module-twin show
-  summary: Show a module twin definition.
-- uid: ext_azure-cli-iot-ext_az_iot_hub_module_twin_update
-  name: az iot hub module-twin update
-  summary: Update module twin definition.
+- ext_azure-cli-iot-ext_az_iot_hub_module_twin_replace
+- ext_azure-cli-iot-ext_az_iot_hub_module_twin_show
+- ext_azure-cli-iot-ext_az_iot_hub_module_twin_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -134,4 +113,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage IoT device module twin configuration.
+metadata:
+  description: Manage IoT device module twin configuration.

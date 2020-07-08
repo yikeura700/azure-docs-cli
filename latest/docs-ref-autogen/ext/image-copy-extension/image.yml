@@ -1,30 +1,22 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_image-copy-extension_az_image
-  name: az image
-  summary: Manage custom virtual machine images.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_image-copy-extension_az_image_copy
+### YamlMime:CLIGroup
+uid: ext_image-copy-extension_az_image
+name: az image
+summary: Manage custom virtual machine images.
+description: ''
+directCommands:
 - uid: ext_image-copy-extension_az_image_copy
   name: az image copy
   summary: Copy a managed image (or vm) to other regions. It requires the source disk to be available.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Copy an image to several regions and cleanup at the end.
-    syntax:
-      content: >-
-        az image copy --source-resource-group mySources-rg --source-object-name myImage \
-            --target-location uksouth northeurope --target-resource-group "images-repo-rg" --cleanup
+    syntax: >-
+      az image copy --source-resource-group mySources-rg --source-object-name myImage \
+          --target-location uksouth northeurope --target-resource-group "images-repo-rg" --cleanup
   - summary: Use an already generalized vm to create images in other regions.
-    syntax:
-      content: >-
-        az image copy --source-resource-group mySources-rg --source-object-name myVm \
-            --source-type vm --target-location uksouth northeurope --target-resource-group "images-repo-rg"
+    syntax: >-
+      az image copy --source-resource-group mySources-rg --source-object-name myVm \
+          --source-type vm --target-location uksouth northeurope --target-resource-group "images-repo-rg"
   parameters:
   - isRequired: true
     name: --source-object-name
@@ -75,9 +67,7 @@ items:
     summary: Time in seconds for the copy operation to finish. Increase this time if you are going to copy large images (disks) like 512GB or more.
     description: ''
 commands:
-- uid: ext_image-copy-extension_az_image_copy
-  name: az image copy
-  summary: Copy a managed image (or vm) to other regions. It requires the source disk to be available.
+- ext_image-copy-extension_az_image_copy
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -93,4 +83,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage custom virtual machine images.
+metadata:
+  description: Manage custom virtual machine images.

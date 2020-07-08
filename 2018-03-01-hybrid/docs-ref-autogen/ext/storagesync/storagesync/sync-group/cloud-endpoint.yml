@@ -1,34 +1,23 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_storagesync_az_storagesync_sync_group_cloud_endpoint
-  name: az storagesync sync-group cloud-endpoint
-  summary: Manage cloud endpoint.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_storagesync_az_storagesync_sync_group_cloud_endpoint_create
-  - ext_storagesync_az_storagesync_sync_group_cloud_endpoint_delete
-  - ext_storagesync_az_storagesync_sync_group_cloud_endpoint_list
-  - ext_storagesync_az_storagesync_sync_group_cloud_endpoint_show
-  - ext_storagesync_az_storagesync_sync_group_cloud_endpoint_wait
+### YamlMime:CLIGroup
+uid: ext_storagesync_az_storagesync_sync_group_cloud_endpoint
+name: az storagesync sync-group cloud-endpoint
+summary: Manage cloud endpoint.
+description: ''
+directCommands:
 - uid: ext_storagesync_az_storagesync_sync_group_cloud_endpoint_create
   name: az storagesync sync-group cloud-endpoint create
   summary: Create a new cloud endpoint.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a new cloud endpoint "SampleCloudEndpoint" in sync group "SampleSyncGroup".
-    syntax:
-      content: >-
-        az storagesync sync-group cloud-endpoint create --resource-group "SampleResourceGroup" \
+    syntax: >-
+      az storagesync sync-group cloud-endpoint create --resource-group "SampleResourceGroup" \
 
-        --storage-sync-service "SampleStorageSyncService" --sync-group-name \
+      --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
-        "SampleSyncGroup" --name "SampleCloudEndpoint" --storage-account storageaccountnameorid --azure-file-share-name \
+      "SampleSyncGroup" --name "SampleCloudEndpoint" --storage-account storageaccountnameorid --azure-file-share-name \
 
-        "cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4"
+      "cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4"
   parameters:
   - isRequired: true
     name: --name -n
@@ -61,17 +50,14 @@ items:
   name: az storagesync sync-group cloud-endpoint delete
   summary: Delete a given cloud endpoint.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete cloud endpoint "SampleCloudEndpoint".
-    syntax:
-      content: >-
-        az storagesync sync-group cloud-endpoint delete --resource-group "SampleResourceGroup" \
+    syntax: >-
+      az storagesync sync-group cloud-endpoint delete --resource-group "SampleResourceGroup" \
 
-        --storage-sync-service "SampleStorageSyncService" --sync-group-name \
+      --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
-        "SampleSyncGroup" --name "SampleCloudEndpoint"
+      "SampleSyncGroup" --name "SampleCloudEndpoint"
   parameters:
   - isRequired: true
     name: --name -n
@@ -98,17 +84,14 @@ items:
   name: az storagesync sync-group cloud-endpoint list
   summary: List all cloud endpoints in a sync group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all cloud endpoints in sync group "SampleSyncGroup".
-    syntax:
-      content: >-
-        az storagesync sync-group cloud-endpoint list --resource-group "SampleResourceGroup" \
+    syntax: >-
+      az storagesync sync-group cloud-endpoint list --resource-group "SampleResourceGroup" \
 
-        --storage-sync-service "SampleStorageSyncService" --sync-group-name \
+      --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
-        "SampleSyncGroup"
+      "SampleSyncGroup"
   parameters:
   - isRequired: true
     name: --storage-sync-service
@@ -125,17 +108,14 @@ items:
   name: az storagesync sync-group cloud-endpoint show
   summary: Show the properties for a given cloud endpoint.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show the properties for cloud endpoint "SampleCloudEndpoint".
-    syntax:
-      content: >-
-        az storagesync sync-group cloud-endpoint show --resource-group "SampleResourceGroup" \
+    syntax: >-
+      az storagesync sync-group cloud-endpoint show --resource-group "SampleResourceGroup" \
 
-        --storage-sync-service "SampleStorageSyncService" --sync-group-name \
+      --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
-        "SampleSyncGroup" --name "SampleCloudEndpoint"
+      "SampleSyncGroup" --name "SampleCloudEndpoint"
   parameters:
   - isRequired: true
     name: --name -n
@@ -156,17 +136,14 @@ items:
   name: az storagesync sync-group cloud-endpoint wait
   summary: Place the CLI in a waiting state until a condition of a cloud endpoint is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Place the CLI in a waiting state until a condition of a cloud endpoint is created.
-    syntax:
-      content: >-
-        az storagesync sync-group cloud-endpoint wait --resource-group "SampleResourceGroup" \
+    syntax: >-
+      az storagesync sync-group cloud-endpoint wait --resource-group "SampleResourceGroup" \
 
-        --storage-sync-service "SampleStorageSyncService" --sync-group-name \
+      --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
-        "SampleSyncGroup" --name "SampleCloudEndpoint" --created
+      "SampleSyncGroup" --name "SampleCloudEndpoint" --created
   parameters:
   - isRequired: true
     name: --name -n
@@ -208,21 +185,11 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_storagesync_az_storagesync_sync_group_cloud_endpoint_create
-  name: az storagesync sync-group cloud-endpoint create
-  summary: Create a new cloud endpoint.
-- uid: ext_storagesync_az_storagesync_sync_group_cloud_endpoint_delete
-  name: az storagesync sync-group cloud-endpoint delete
-  summary: Delete a given cloud endpoint.
-- uid: ext_storagesync_az_storagesync_sync_group_cloud_endpoint_list
-  name: az storagesync sync-group cloud-endpoint list
-  summary: List all cloud endpoints in a sync group.
-- uid: ext_storagesync_az_storagesync_sync_group_cloud_endpoint_show
-  name: az storagesync sync-group cloud-endpoint show
-  summary: Show the properties for a given cloud endpoint.
-- uid: ext_storagesync_az_storagesync_sync_group_cloud_endpoint_wait
-  name: az storagesync sync-group cloud-endpoint wait
-  summary: Place the CLI in a waiting state until a condition of a cloud endpoint is met.
+- ext_storagesync_az_storagesync_sync_group_cloud_endpoint_create
+- ext_storagesync_az_storagesync_sync_group_cloud_endpoint_delete
+- ext_storagesync_az_storagesync_sync_group_cloud_endpoint_list
+- ext_storagesync_az_storagesync_sync_group_cloud_endpoint_show
+- ext_storagesync_az_storagesync_sync_group_cloud_endpoint_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -238,4 +205,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage cloud endpoint.
+metadata:
+  description: Manage cloud endpoint.

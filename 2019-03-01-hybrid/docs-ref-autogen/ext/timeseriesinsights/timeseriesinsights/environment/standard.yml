@@ -1,24 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_timeseriesinsights_az_timeseriesinsights_environment_standard
-  name: az timeseriesinsights environment standard
-  summary: Create or update a standard environment in the specified subscription and resource group.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_timeseriesinsights_az_timeseriesinsights_environment_standard_create
-  - ext_timeseriesinsights_az_timeseriesinsights_environment_standard_update
+### YamlMime:CLIGroup
+uid: ext_timeseriesinsights_az_timeseriesinsights_environment_standard
+name: az timeseriesinsights environment standard
+summary: Create or update a standard environment in the specified subscription and resource group.
+description: ''
+directCommands:
 - uid: ext_timeseriesinsights_az_timeseriesinsights_environment_standard_create
   name: az timeseriesinsights environment standard create
   summary: Create or update a standard environment in the specified subscription and resource group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a standard environment
-    syntax:
-      content: az timeseriesinsights environment standard create -g {rg} -n {env} --location westus --sku-name S1 --sku-capacity 1 --data-retention-time 31 --partition-key DeviceId1 --storage-limit-exceeded-behavior PauseIngress
+    syntax: az timeseriesinsights environment standard create -g {rg} -n {env} --location westus --sku-name S1 --sku-capacity 1 --data-retention-time 31 --partition-key DeviceId1 --storage-limit-exceeded-behavior PauseIngress
   parameters:
   - isRequired: true
     name: --data-retention-time
@@ -61,18 +53,13 @@ items:
   name: az timeseriesinsights environment standard update
   summary: Update a standard environment in the specified subscription and resource group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update sku capacity
-    syntax:
-      content: az timeseriesinsights environment standard update -g {rg} -n {env} --sku-name S1 --sku-capacity 2
+    syntax: az timeseriesinsights environment standard update -g {rg} -n {env} --sku-name S1 --sku-capacity 2
   - summary: Update data retention days
-    syntax:
-      content: az timeseriesinsights environment standard update -g {rg} -n {env} --data-retention-time 8
+    syntax: az timeseriesinsights environment standard update -g {rg} -n {env} --data-retention-time 8
   - summary: Update storage limit exceeded behavior
-    syntax:
-      content: az timeseriesinsights environment standard update -g {rg} -n {env} --storage-limit-exceeded-behavior PurgeOldData
+    syntax: az timeseriesinsights environment standard update -g {rg} -n {env} --storage-limit-exceeded-behavior PurgeOldData
   parameters:
   - isRequired: true
     name: --name -n
@@ -106,12 +93,8 @@ items:
     summary: The sku determines the type of environment, either standard (S1 or S2) or long-term (L1). For standard environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
     description: ''
 commands:
-- uid: ext_timeseriesinsights_az_timeseriesinsights_environment_standard_create
-  name: az timeseriesinsights environment standard create
-  summary: Create or update a standard environment in the specified subscription and resource group.
-- uid: ext_timeseriesinsights_az_timeseriesinsights_environment_standard_update
-  name: az timeseriesinsights environment standard update
-  summary: Update a standard environment in the specified subscription and resource group.
+- ext_timeseriesinsights_az_timeseriesinsights_environment_standard_create
+- ext_timeseriesinsights_az_timeseriesinsights_environment_standard_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -127,4 +110,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Create or update a standard environment in the specified subscription and resource group.
+metadata:
+  description: Create or update a standard environment in the specified subscription and resource group.

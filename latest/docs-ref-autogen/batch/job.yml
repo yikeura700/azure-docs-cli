@@ -1,27 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_batch_job
-  name: az batch job
-  summary: Manage Batch jobs.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_batch_job_create
-  - az_batch_job_delete
-  - az_batch_job_disable
-  - az_batch_job_enable
-  - az_batch_job_list
-  - az_batch_job_reset
-  - az_batch_job_set
-  - az_batch_job_show
-  - az_batch_job_stop
+### YamlMime:CLIGroup
+uid: az_batch_job
+name: az batch job
+summary: Manage Batch jobs.
+description: ''
+directCommands:
 - uid: az_batch_job_create
   name: az batch job create
   summary: Add a job to a Batch account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --json-file
     summary: A file containing the job specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Job Arguments' are ignored.
@@ -81,8 +67,6 @@ items:
   name: az batch job delete
   summary: Deletes a Job.
   description: Deleting a Job also deletes all Tasks that are part of that Job, and all Job statistics. This also overrides the retention period for Task data; that is, if the Job contains Tasks which are still retained on Compute Nodes, the Batch services deletes those Tasks' working directories and all their contents.  When a Delete Job request is received, the Batch service sets the Job to the deleting state. All update operations on a Job that is in deleting state will fail with status code 409 (Conflict), with additional information indicating that the Job is being deleted.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --job-id
@@ -125,8 +109,6 @@ items:
   name: az batch job disable
   summary: Disables the specified Job, preventing new Tasks from running.
   description: The Batch Service immediately moves the Job to the disabling state. Batch then uses the disableTasks parameter to determine what to do with the currently running Tasks of the Job. The Job remains in the disabling state until the disable operation is completed and all Tasks have been dealt with according to the disableTasks option; the Job then moves to the disabled state. No new Tasks are started under the Job until it moves back to active state. If you try to disable a Job that is in any state other than active, disabling, or disabled, the request fails with status code 409.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --job-id
@@ -170,8 +152,6 @@ items:
   name: az batch job enable
   summary: Enables the specified Job, allowing new Tasks to run.
   description: When you call this API, the Batch service sets a disabled Job to the enabling state. After the this operation is completed, the Job moves to the active state, and scheduling of new Tasks under the Job resumes. The Batch service does not allow a Task to remain in the active state for more than 180 days. Therefore, if you enable a Job containing active Tasks which were added more than 180 days ago, those Tasks will not run.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --job-id
@@ -211,8 +191,6 @@ items:
   name: az batch job list
   summary: List all of the jobs or job schedule in a Batch account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --job-schedule-id
     summary: The ID of the job schedule from which you want to get a list of jobs. If omitted, lists all jobs in the account.
@@ -248,8 +226,6 @@ items:
   name: az batch job reset
   summary: Update the properties of a Batch job. Unspecified properties which can be updated are reset to their defaults.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --job-id
@@ -311,8 +287,6 @@ items:
   name: az batch job set
   summary: Update the properties of a Batch job. Updating a property in a subgroup will reset the unspecified properties of that group.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --job-id
@@ -374,8 +348,6 @@ items:
   name: az batch job show
   summary: Gets information about the specified Job.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --job-id
@@ -421,8 +393,6 @@ items:
   name: az batch job stop
   summary: Terminates the specified Job, marking it as completed.
   description: When a Terminate Job request is received, the Batch service sets the Job to the terminating state. The Batch service then terminates any running Tasks associated with the Job and runs any required Job release Tasks. Then the Job moves into the completed state. If there are any Tasks in the Job in the active state, they will remain in the active state. Once a Job is terminated, new Tasks cannot be added and any remaining active Tasks will not be scheduled.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --job-id
@@ -462,51 +432,21 @@ items:
       path: src/azure-cli/azure/cli/command_modules/batch/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_batch_job_all_statistics
-  name: az batch job all-statistics
-  summary: View statistics of all jobs under a Batch account.
-- uid: az_batch_job_all_statistics_show
-  name: az batch job all-statistics show
-  summary: Get lifetime summary statistics for all of the jobs in a Batch account.
-- uid: az_batch_job_create
-  name: az batch job create
-  summary: Add a job to a Batch account.
-- uid: az_batch_job_delete
-  name: az batch job delete
-  summary: Deletes a Job.
-- uid: az_batch_job_disable
-  name: az batch job disable
-  summary: Disables the specified Job, preventing new Tasks from running.
-- uid: az_batch_job_enable
-  name: az batch job enable
-  summary: Enables the specified Job, allowing new Tasks to run.
-- uid: az_batch_job_list
-  name: az batch job list
-  summary: List all of the jobs or job schedule in a Batch account.
-- uid: az_batch_job_prep_release_status
-  name: az batch job prep-release-status
-  summary: View the status of Batch job preparation and release tasks.
-- uid: az_batch_job_prep_release_status_list
-  name: az batch job prep-release-status list
-  summary: Lists the execution status of the Job Preparation and Job Release Task for the specified Job across the Compute Nodes where the Job has run.
-- uid: az_batch_job_reset
-  name: az batch job reset
-  summary: Update the properties of a Batch job. Unspecified properties which can be updated are reset to their defaults.
-- uid: az_batch_job_set
-  name: az batch job set
-  summary: Update the properties of a Batch job. Updating a property in a subgroup will reset the unspecified properties of that group.
-- uid: az_batch_job_show
-  name: az batch job show
-  summary: Gets information about the specified Job.
-- uid: az_batch_job_stop
-  name: az batch job stop
-  summary: Terminates the specified Job, marking it as completed.
-- uid: az_batch_job_task_counts
-  name: az batch job task-counts
-  summary: View the number of tasks in a Batch job and their states.
-- uid: az_batch_job_task_counts_show
-  name: az batch job task-counts show
-  summary: Gets the Task counts for the specified Job.
+- az_batch_job_all_statistics
+- az_batch_job_all_statistics_show
+- az_batch_job_create
+- az_batch_job_delete
+- az_batch_job_disable
+- az_batch_job_enable
+- az_batch_job_list
+- az_batch_job_prep_release_status
+- az_batch_job_prep_release_status_list
+- az_batch_job_reset
+- az_batch_job_set
+- az_batch_job_show
+- az_batch_job_stop
+- az_batch_job_task_counts
+- az_batch_job_task_counts_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -522,10 +462,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/e1102d37a891598da84f80ba091b89a7532b90aa/src/azure-cli/azure/cli/command_modules/batch/_help.py
-updated_at: 10/19/2019 10:02:34 AM
-ms.date: 10/19/2019
-description: Manage Batch jobs.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/e1102d37a891598da84f80ba091b89a7532b90aa/src/azure-cli/azure/cli/command_modules/batch/_help.py
+  updated_at: 10/19/2019 10:02:34 AM
+  ms.date: 10/19/2019
+  description: Manage Batch jobs.

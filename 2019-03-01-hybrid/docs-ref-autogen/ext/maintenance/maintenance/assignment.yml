@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_maintenance_az_maintenance_assignment
-  name: az maintenance assignment
-  summary: Manage Azure Maintenance configuration assignment to resource.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_maintenance_az_maintenance_assignment_create
-  - ext_maintenance_az_maintenance_assignment_delete
-  - ext_maintenance_az_maintenance_assignment_list
+### YamlMime:CLIGroup
+uid: ext_maintenance_az_maintenance_assignment
+name: az maintenance assignment
+summary: Manage Azure Maintenance configuration assignment to resource.
+description: ''
+directCommands:
 - uid: ext_maintenance_az_maintenance_assignment_create
   name: az maintenance assignment create
   summary: Creates a Maintenance Assignment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a Maintenance Assignment.
-    syntax:
-      content: az maintenance assignment create -g smdtest --resource-name smdVM --resource-type virtualMachines --provider-name Microsoft.Compute --configuration-assignment-name workervms --maintenance-configuration-id "/subscriptions/2b4ce620-bb0f-4964-8428-dea4aefec295/resourcegroups/smdtest/providers/Microsoft.Maintenance/maintenanceConfigurations/workervms" -l eastus2
+    syntax: az maintenance assignment create -g smdtest --resource-name smdVM --resource-type virtualMachines --provider-name Microsoft.Compute --configuration-assignment-name workervms --maintenance-configuration-id "/subscriptions/2b4ce620-bb0f-4964-8428-dea4aefec295/resourcegroups/smdtest/providers/Microsoft.Maintenance/maintenanceConfigurations/workervms" -l eastus2
   parameters:
   - isRequired: true
     name: --configuration-assignment-name
@@ -62,12 +53,9 @@ items:
   name: az maintenance assignment delete
   summary: Delete a Maintenance Assignment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a Maintenance Assignment.
-    syntax:
-      content: az maintenance assignment delete -g smdtest --resource-name smdVM --resource-type virtualMachines --provider-name Microsoft.Compute --configuration-assignment-name workervms
+    syntax: az maintenance assignment delete -g smdtest --resource-name smdVM --resource-type virtualMachines --provider-name Microsoft.Compute --configuration-assignment-name workervms
   parameters:
   - isRequired: true
     name: --configuration-assignment-name
@@ -99,12 +87,9 @@ items:
   name: az maintenance assignment list
   summary: Lists Maintenance Assignment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List Maintenance Assignment.
-    syntax:
-      content: az maintenance assignment list -g smdtest --resource-name smdVM --resource-type virtualMachines --provider-name Microsoft.Compute
+    syntax: az maintenance assignment list -g smdtest --resource-name smdVM --resource-type virtualMachines --provider-name Microsoft.Compute
   parameters:
   - isRequired: true
     name: --provider-name
@@ -129,15 +114,9 @@ items:
     summary: Type of the parent resource e.g. for dedicated hosts this would be hostGroups, for VMSS VMs this would be virtualmachinescalesets.
     description: ''
 commands:
-- uid: ext_maintenance_az_maintenance_assignment_create
-  name: az maintenance assignment create
-  summary: Creates a Maintenance Assignment.
-- uid: ext_maintenance_az_maintenance_assignment_delete
-  name: az maintenance assignment delete
-  summary: Delete a Maintenance Assignment.
-- uid: ext_maintenance_az_maintenance_assignment_list
-  name: az maintenance assignment list
-  summary: Lists Maintenance Assignment.
+- ext_maintenance_az_maintenance_assignment_create
+- ext_maintenance_az_maintenance_assignment_delete
+- ext_maintenance_az_maintenance_assignment_list
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -153,4 +132,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Azure Maintenance configuration assignment to resource.
+metadata:
+  description: Manage Azure Maintenance configuration assignment to resource.

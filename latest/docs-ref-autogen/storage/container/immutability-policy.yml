@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_storage_container_immutability_policy
-  name: az storage container immutability-policy
-  summary: Manage container immutability policies.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_storage_container_immutability_policy_create
-  - az_storage_container_immutability_policy_delete
-  - az_storage_container_immutability_policy_extend
-  - az_storage_container_immutability_policy_lock
-  - az_storage_container_immutability_policy_show
+### YamlMime:CLIGroup
+uid: az_storage_container_immutability_policy
+name: az storage container immutability-policy
+summary: Manage container immutability policies.
+description: ''
+directCommands:
 - uid: az_storage_container_immutability_policy_create
   name: az storage container immutability-policy create
   summary: Creates or updates an unlocked immutability policy.
   description: ETag in If-Match is honored if given but not required for this operation.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name
@@ -53,8 +43,6 @@ items:
   name: az storage container immutability-policy delete
   summary: Aborts an unlocked immutability policy.
   description: The response of delete has immutabilityPeriodSinceCreationInDays set to 0. ETag in If-Match is required for this operation. Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name
@@ -84,8 +72,6 @@ items:
   name: az storage container immutability-policy extend
   summary: Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.
   description: The only action allowed on a Locked policy will be this action. ETag in If-Match is required for this operation.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name
@@ -122,8 +108,6 @@ items:
   name: az storage container immutability-policy lock
   summary: Sets the ImmutabilityPolicy to Locked state.
   description: The only action allowed on a Locked policy is ExtendImmutabilityPolicy action. ETag in If-Match is required for this operation.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name
@@ -153,8 +137,6 @@ items:
   name: az storage container immutability-policy show
   summary: Gets the existing immutability policy along with the corresponding ETag in response headers and body.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name
@@ -180,21 +162,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/storage/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_storage_container_immutability_policy_create
-  name: az storage container immutability-policy create
-  summary: Creates or updates an unlocked immutability policy.
-- uid: az_storage_container_immutability_policy_delete
-  name: az storage container immutability-policy delete
-  summary: Aborts an unlocked immutability policy.
-- uid: az_storage_container_immutability_policy_extend
-  name: az storage container immutability-policy extend
-  summary: Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.
-- uid: az_storage_container_immutability_policy_lock
-  name: az storage container immutability-policy lock
-  summary: Sets the ImmutabilityPolicy to Locked state.
-- uid: az_storage_container_immutability_policy_show
-  name: az storage container immutability-policy show
-  summary: Gets the existing immutability policy along with the corresponding ETag in response headers and body.
+- az_storage_container_immutability_policy_create
+- az_storage_container_immutability_policy_delete
+- az_storage_container_immutability_policy_extend
+- az_storage_container_immutability_policy_lock
+- az_storage_container_immutability_policy_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -210,10 +182,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
-updated_at: 6/4/2020 1:53:34 PM
-ms.date: 06/04/2020
-description: Manage container immutability policies.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  updated_at: 6/4/2020 1:53:34 PM
+  ms.date: 06/04/2020
+  description: Manage container immutability policies.

@@ -1,28 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-iot_az_iot_pnp_interface
-  name: az iot pnp interface
-  summary: Manage interfaces in an IoT Plug and Play model repository.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-iot_az_iot_pnp_interface_create
-  - ext_azure-iot_az_iot_pnp_interface_delete
-  - ext_azure-iot_az_iot_pnp_interface_list
-  - ext_azure-iot_az_iot_pnp_interface_publish
-  - ext_azure-iot_az_iot_pnp_interface_show
-  - ext_azure-iot_az_iot_pnp_interface_update
+### YamlMime:CLIGroup
+uid: ext_azure-iot_az_iot_pnp_interface
+name: az iot pnp interface
+summary: Manage interfaces in an IoT Plug and Play model repository.
+description: ''
+directCommands:
 - uid: ext_azure-iot_az_iot_pnp_interface_create
   name: az iot pnp interface create
   summary: Create an interface in the company repository.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an interface in the company repository.
-    syntax:
-      content: az iot pnp interface create --def {plug_and_play_interface_file_path} -r {pnp_repository}
+    syntax: az iot pnp interface create --def {plug_and_play_interface_file_path} -r {pnp_repository}
   parameters:
   - isRequired: true
     name: --def --definition
@@ -42,12 +30,9 @@ items:
   name: az iot pnp interface delete
   summary: Delete an interface in the company repository.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete an interface in the company repository.
-    syntax:
-      content: az iot pnp interface delete -r {pnp_repository} --interface {plug_and_play_interface_id}
+    syntax: az iot pnp interface delete -r {pnp_repository} --interface {plug_and_play_interface_id}
   parameters:
   - isRequired: true
     name: --interface -i
@@ -67,15 +52,11 @@ items:
   name: az iot pnp interface list
   summary: List all interfaces.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all company repository's interfaces.
-    syntax:
-      content: az iot pnp interface list -r {pnp_repository}
+    syntax: az iot pnp interface list -r {pnp_repository}
   - summary: List all public interfaces.
-    syntax:
-      content: az iot pnp interface list
+    syntax: az iot pnp interface list
   parameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
@@ -98,12 +79,9 @@ items:
   name: az iot pnp interface publish
   summary: Publish an interface to public repository.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Publish an interface to public repository.
-    syntax:
-      content: az iot pnp interface publish -r {pnp_repository} --interface {plug_and_play_interface_id}
+    syntax: az iot pnp interface publish -r {pnp_repository} --interface {plug_and_play_interface_id}
   parameters:
   - isRequired: true
     name: --interface -i
@@ -123,15 +101,11 @@ items:
   name: az iot pnp interface show
   summary: Get the details of an interface.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the details of a company repository interface.
-    syntax:
-      content: az iot pnp interface show -r {pnp_repository} --interface {plug_and_play_interface_id}
+    syntax: az iot pnp interface show -r {pnp_repository} --interface {plug_and_play_interface_id}
   - summary: Get the details of public interface.
-    syntax:
-      content: az iot pnp interface show --interface {plug_and_play_interface_id}
+    syntax: az iot pnp interface show --interface {plug_and_play_interface_id}
   parameters:
   - isRequired: true
     name: --interface -i
@@ -151,12 +125,9 @@ items:
   name: az iot pnp interface update
   summary: Update an interface in the company repository.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update an interface in the company repository.
-    syntax:
-      content: az iot pnp interface update --def {updated_plug_and_play_interface_file_path} -r {pnp_repository}
+    syntax: az iot pnp interface update --def {updated_plug_and_play_interface_file_path} -r {pnp_repository}
   parameters:
   - isRequired: true
     name: --def --definition
@@ -173,24 +144,12 @@ items:
     summary: IoT Plug and Play repository Id.
     description: ''
 commands:
-- uid: ext_azure-iot_az_iot_pnp_interface_create
-  name: az iot pnp interface create
-  summary: Create an interface in the company repository.
-- uid: ext_azure-iot_az_iot_pnp_interface_delete
-  name: az iot pnp interface delete
-  summary: Delete an interface in the company repository.
-- uid: ext_azure-iot_az_iot_pnp_interface_list
-  name: az iot pnp interface list
-  summary: List all interfaces.
-- uid: ext_azure-iot_az_iot_pnp_interface_publish
-  name: az iot pnp interface publish
-  summary: Publish an interface to public repository.
-- uid: ext_azure-iot_az_iot_pnp_interface_show
-  name: az iot pnp interface show
-  summary: Get the details of an interface.
-- uid: ext_azure-iot_az_iot_pnp_interface_update
-  name: az iot pnp interface update
-  summary: Update an interface in the company repository.
+- ext_azure-iot_az_iot_pnp_interface_create
+- ext_azure-iot_az_iot_pnp_interface_delete
+- ext_azure-iot_az_iot_pnp_interface_list
+- ext_azure-iot_az_iot_pnp_interface_publish
+- ext_azure-iot_az_iot_pnp_interface_show
+- ext_azure-iot_az_iot_pnp_interface_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -206,4 +165,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage interfaces in an IoT Plug and Play model repository.
+metadata:
+  description: Manage interfaces in an IoT Plug and Play model repository.

@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_acr_scope_map
-  name: az acr scope-map
-  summary: Manage scope access maps for Azure Container Registries.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_acr_scope_map_create
-  - az_acr_scope_map_delete
-  - az_acr_scope_map_list
-  - az_acr_scope_map_show
-  - az_acr_scope_map_update
+### YamlMime:CLIGroup
+uid: az_acr_scope_map
+name: az acr scope-map
+summary: Manage scope access maps for Azure Container Registries.
+description: ''
+directCommands:
 - uid: az_acr_scope_map_create
   name: az acr scope-map create
   summary: Create a scope map for an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a scope map that allows content/write and metadata/read actions for `hello-world` repository, and content/read action for `hello-world-again`.
-    syntax:
-      content: az acr scope-map create -n MyScopeMap -r MyRegistry --repository hello-world content/write metadata/read --repository hello-world-again content/read --description "Sample scope map."
+    syntax: az acr scope-map create -n MyScopeMap -r MyRegistry --repository hello-world content/write metadata/read --repository hello-world-again content/read --description "Sample scope map."
   parameters:
   - isRequired: true
     name: --name -n
@@ -54,12 +43,9 @@ items:
   name: az acr scope-map delete
   summary: Delete a scope map for an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete the scope map 'MyScopeMap'.
-    syntax:
-      content: az acr scope-map delete -n MyScopeMap -r MyRegistry
+    syntax: az acr scope-map delete -n MyScopeMap -r MyRegistry
   parameters:
   - isRequired: true
     name: --name -n
@@ -88,12 +74,9 @@ items:
   name: az acr scope-map list
   summary: List all scope maps for an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List scope maps under the registry 'MyRegistry'.
-    syntax:
-      content: az acr scope-map list -r MyRegistry
+    syntax: az acr scope-map list -r MyRegistry
   parameters:
   - isRequired: true
     name: --registry -r
@@ -115,12 +98,9 @@ items:
   name: az acr scope-map show
   summary: Show details and attributes of a scope map for an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get information for the scope map 'MyScopeMap'.
-    syntax:
-      content: az acr scope-map show -n MyScopeMap -r MyRegistry
+    syntax: az acr scope-map show -n MyScopeMap -r MyRegistry
   parameters:
   - isRequired: true
     name: --name -n
@@ -146,12 +126,9 @@ items:
   name: az acr scope-map update
   summary: Update a scope map for an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update the scope map 'MyScopeMap' removing metadata/read and content/read actions for `hello-world` repository, and metadata/write action for `hello-world-again`.
-    syntax:
-      content: az acr scope-map update -n MyScopeMap -r MyRegistry --remove hello-world metadata/read content/read --remove hello-world-again metadata/write
+    syntax: az acr scope-map update -n MyScopeMap -r MyRegistry --remove hello-world metadata/read content/read --remove hello-world-again metadata/write
   parameters:
   - isRequired: true
     name: --name -n
@@ -183,21 +160,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/acr/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_acr_scope_map_create
-  name: az acr scope-map create
-  summary: Create a scope map for an Azure Container Registry.
-- uid: az_acr_scope_map_delete
-  name: az acr scope-map delete
-  summary: Delete a scope map for an Azure Container Registry.
-- uid: az_acr_scope_map_list
-  name: az acr scope-map list
-  summary: List all scope maps for an Azure Container Registry.
-- uid: az_acr_scope_map_show
-  name: az acr scope-map show
-  summary: Show details and attributes of a scope map for an Azure Container Registry.
-- uid: az_acr_scope_map_update
-  name: az acr scope-map update
-  summary: Update a scope map for an Azure Container Registry.
+- az_acr_scope_map_create
+- az_acr_scope_map_delete
+- az_acr_scope_map_list
+- az_acr_scope_map_show
+- az_acr_scope_map_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -213,10 +180,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
-updated_at: 4/15/2020 7:14:42 AM
-ms.date: 04/15/2020
-description: Manage scope access maps for Azure Container Registries.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  updated_at: 4/15/2020 7:14:42 AM
+  ms.date: 04/15/2020
+  description: Manage scope access maps for Azure Container Registries.

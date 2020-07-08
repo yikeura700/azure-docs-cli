@@ -1,15 +1,9 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_front-door_az_network_front_door_waf_policy_rule_match_condition
-  name: az network front-door waf-policy rule match-condition
-  summary: Alter match-conditions associated with a WAF policy custom rule.
-  description: Note that at least one match-condition must be associated with a custom rule.
-  langs:
-  - azurecli
-  children:
-  - ext_front-door_az_network_front_door_waf_policy_rule_match_condition_add
-  - ext_front-door_az_network_front_door_waf_policy_rule_match_condition_list
-  - ext_front-door_az_network_front_door_waf_policy_rule_match_condition_remove
+### YamlMime:CLIGroup
+uid: ext_front-door_az_network_front_door_waf_policy_rule_match_condition
+name: az network front-door waf-policy rule match-condition
+summary: Alter match-conditions associated with a WAF policy custom rule.
+description: Note that at least one match-condition must be associated with a custom rule.
+directCommands:
 - uid: ext_front-door_az_network_front_door_waf_policy_rule_match_condition_add
   name: az network front-door waf-policy rule match-condition add
   summary: Add a match-condition to a WAF policy custom rule.
@@ -19,8 +13,6 @@ items:
       Variable allowed values: RemoteAddr, RequestMethod, QueryString, PostArgs, RequestUri, RequestHeader, RequestBody, Cookies, SocketAddr
 
       Operator allowed values: Any, IPMatch, GeoMatch, Equal, Contains, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, BeginsWith, EndsWith, RegEx.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --match-variable
@@ -58,8 +50,6 @@ items:
   name: az network front-door waf-policy rule match-condition list
   summary: Show all match-conditions associated with a WAF policy custom rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -77,8 +67,6 @@ items:
   name: az network front-door waf-policy rule match-condition remove
   summary: Remove a match-condition from a WAF policy custom rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --index
@@ -97,15 +85,9 @@ items:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
     description: ''
 commands:
-- uid: ext_front-door_az_network_front_door_waf_policy_rule_match_condition_add
-  name: az network front-door waf-policy rule match-condition add
-  summary: Add a match-condition to a WAF policy custom rule.
-- uid: ext_front-door_az_network_front_door_waf_policy_rule_match_condition_list
-  name: az network front-door waf-policy rule match-condition list
-  summary: Show all match-conditions associated with a WAF policy custom rule.
-- uid: ext_front-door_az_network_front_door_waf_policy_rule_match_condition_remove
-  name: az network front-door waf-policy rule match-condition remove
-  summary: Remove a match-condition from a WAF policy custom rule.
+- ext_front-door_az_network_front_door_waf_policy_rule_match_condition_add
+- ext_front-door_az_network_front_door_waf_policy_rule_match_condition_list
+- ext_front-door_az_network_front_door_waf_policy_rule_match_condition_remove
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -121,4 +103,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Note that at least one match-condition must be associated with a custom rule.
+metadata:
+  description: Note that at least one match-condition must be associated with a custom rule.

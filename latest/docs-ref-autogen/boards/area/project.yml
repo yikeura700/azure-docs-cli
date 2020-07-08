@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_boards_area_project
-  name: az boards area project
-  summary: Manage areas for a project.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_boards_area_project_create
-  - az_boards_area_project_delete
-  - az_boards_area_project_list
-  - az_boards_area_project_show
-  - az_boards_area_project_update
+### YamlMime:CLIGroup
+uid: az_boards_area_project
+name: az boards area project
+summary: Manage areas for a project.
+description: ''
+directCommands:
 - uid: az_boards_area_project_create
   name: az boards area project create
   summary: Create area.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name
@@ -43,8 +33,6 @@ items:
   name: az boards area project delete
   summary: Delete area.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --path
@@ -70,8 +58,6 @@ items:
   name: az boards area project list
   summary: List areas for a project.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --depth
     defaultValue: "1"
@@ -97,8 +83,6 @@ items:
   name: az boards area project show
   summary: Show area details for a project.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -121,8 +105,6 @@ items:
   name: az boards area project update
   summary: Update area.
   description: Move area or update area name.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --path
@@ -148,21 +130,11 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_boards_area_project_create
-  name: az boards area project create
-  summary: Create area.
-- uid: az_boards_area_project_delete
-  name: az boards area project delete
-  summary: Delete area.
-- uid: az_boards_area_project_list
-  name: az boards area project list
-  summary: List areas for a project.
-- uid: az_boards_area_project_show
-  name: az boards area project show
-  summary: Show area details for a project.
-- uid: az_boards_area_project_update
-  name: az boards area project update
-  summary: Update area.
+- az_boards_area_project_create
+- az_boards_area_project_delete
+- az_boards_area_project_list
+- az_boards_area_project_show
+- az_boards_area_project_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -178,4 +150,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage areas for a project.
+metadata:
+  description: Manage areas for a project.

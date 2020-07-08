@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_datashare_az_datashare_synchronization_setting
-  name: az datashare synchronization-setting
-  summary: Commands for providers to manage datashare synchronization settings.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_datashare_az_datashare_synchronization_setting_create
-  - ext_datashare_az_datashare_synchronization_setting_delete
-  - ext_datashare_az_datashare_synchronization_setting_list
-  - ext_datashare_az_datashare_synchronization_setting_show
-  - ext_datashare_az_datashare_synchronization_setting_wait
+### YamlMime:CLIGroup
+uid: ext_datashare_az_datashare_synchronization_setting
+name: az datashare synchronization-setting
+summary: Commands for providers to manage datashare synchronization settings.
+description: ''
+directCommands:
 - uid: ext_datashare_az_datashare_synchronization_setting_create
   name: az datashare synchronization-setting create
   summary: Create a synchronization setting.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a synchronization setting
-    syntax:
-      content: az datashare synchronization-setting create --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --name MyDataset --recurrence-interval Day --synchronization-time "2020-04-05 10:50:00 +00:00" --kind ScheduleBased
+    syntax: az datashare synchronization-setting create --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --name MyDataset --recurrence-interval Day --synchronization-time "2020-04-05 10:50:00 +00:00" --kind ScheduleBased
   parameters:
   - isRequired: true
     name: --account-name
@@ -57,12 +46,9 @@ items:
   name: az datashare synchronization-setting delete
   summary: Delete a synchronization setting in a share.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a synchronization setting
-    syntax:
-      content: az datashare synchronization-setting delete --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --name MySyncrhonizationSetting
+    syntax: az datashare synchronization-setting delete --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --name MySyncrhonizationSetting
   parameters:
   - isRequired: true
     name: --account-name
@@ -90,12 +76,9 @@ items:
   name: az datashare synchronization-setting list
   summary: List synchronization settings in a share.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List synchronization settings
-    syntax:
-      content: az datashare synchronization-setting list --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare
+    syntax: az datashare synchronization-setting list --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare
   parameters:
   - isRequired: true
     name: --account-name
@@ -113,12 +96,9 @@ items:
   name: az datashare synchronization-setting show
   summary: Show a synchronization setting in a share.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a synchronization setting
-    syntax:
-      content: az datashare synchronization-setting show --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --name MySyncrhonizationSetting
+    syntax: az datashare synchronization-setting show --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --name MySyncrhonizationSetting
   parameters:
   - isRequired: true
     name: --account-name
@@ -140,12 +120,9 @@ items:
   name: az datashare synchronization-setting wait
   summary: Place the CLI in a waiting state until a condition of the datashare synchronization setting is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pause executing next line of CLI script until the datashare synchronization setting is successfully provisioned.
-    syntax:
-      content: az datashare synchronization-setting wait --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --name MySyncrhonizationSetting --created
+    syntax: az datashare synchronization-setting wait --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --name MySyncrhonizationSetting --created
   parameters:
   - isRequired: true
     name: --account-name
@@ -187,21 +164,11 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_datashare_az_datashare_synchronization_setting_create
-  name: az datashare synchronization-setting create
-  summary: Create a synchronization setting.
-- uid: ext_datashare_az_datashare_synchronization_setting_delete
-  name: az datashare synchronization-setting delete
-  summary: Delete a synchronization setting in a share.
-- uid: ext_datashare_az_datashare_synchronization_setting_list
-  name: az datashare synchronization-setting list
-  summary: List synchronization settings in a share.
-- uid: ext_datashare_az_datashare_synchronization_setting_show
-  name: az datashare synchronization-setting show
-  summary: Show a synchronization setting in a share.
-- uid: ext_datashare_az_datashare_synchronization_setting_wait
-  name: az datashare synchronization-setting wait
-  summary: Place the CLI in a waiting state until a condition of the datashare synchronization setting is met.
+- ext_datashare_az_datashare_synchronization_setting_create
+- ext_datashare_az_datashare_synchronization_setting_delete
+- ext_datashare_az_datashare_synchronization_setting_list
+- ext_datashare_az_datashare_synchronization_setting_show
+- ext_datashare_az_datashare_synchronization_setting_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -217,4 +184,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands for providers to manage datashare synchronization settings.
+metadata:
+  description: Commands for providers to manage datashare synchronization settings.

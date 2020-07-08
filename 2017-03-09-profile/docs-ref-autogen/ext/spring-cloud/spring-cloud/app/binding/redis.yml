@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_spring-cloud_az_spring_cloud_app_binding_redis
-  name: az spring-cloud app binding redis
-  summary: Commands to manage Azure Cache for Redis bindings.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_spring-cloud_az_spring_cloud_app_binding_redis_add
-  - ext_spring-cloud_az_spring_cloud_app_binding_redis_update
+### YamlMime:CLIGroup
+uid: ext_spring-cloud_az_spring_cloud_app_binding_redis
+name: az spring-cloud app binding redis
+summary: Commands to manage Azure Cache for Redis bindings.
+description: ''
+directCommands:
 - uid: ext_spring-cloud_az_spring_cloud_app_binding_redis_add
   name: az spring-cloud app binding redis add
   summary: Bind an Azure Cache for Redis with the app.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --app
@@ -43,8 +36,6 @@ items:
   name: az spring-cloud app binding redis update
   summary: Update an Azure Cache for Redis service binding of the app.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --app
@@ -66,12 +57,8 @@ items:
     summary: Disable SSL.
     description: ''
 commands:
-- uid: ext_spring-cloud_az_spring_cloud_app_binding_redis_add
-  name: az spring-cloud app binding redis add
-  summary: Bind an Azure Cache for Redis with the app.
-- uid: ext_spring-cloud_az_spring_cloud_app_binding_redis_update
-  name: az spring-cloud app binding redis update
-  summary: Update an Azure Cache for Redis service binding of the app.
+- ext_spring-cloud_az_spring_cloud_app_binding_redis_add
+- ext_spring-cloud_az_spring_cloud_app_binding_redis_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -87,4 +74,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage Azure Cache for Redis bindings.
+metadata:
+  description: Commands to manage Azure Cache for Redis bindings.

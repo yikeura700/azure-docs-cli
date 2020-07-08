@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_netappfiles-preview_az_netappfiles_volume
-  name: az netappfiles volume
-  summary: Manage Azure NetApp Files (ANF) Volume Resources.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_netappfiles-preview_az_netappfiles_volume_create
-  - ext_netappfiles-preview_az_netappfiles_volume_delete
-  - ext_netappfiles-preview_az_netappfiles_volume_list
-  - ext_netappfiles-preview_az_netappfiles_volume_show
-  - ext_netappfiles-preview_az_netappfiles_volume_update
+### YamlMime:CLIGroup
+uid: ext_netappfiles-preview_az_netappfiles_volume
+name: az netappfiles volume
+summary: Manage Azure NetApp Files (ANF) Volume Resources.
+description: ''
+directCommands:
 - uid: ext_netappfiles-preview_az_netappfiles_volume_create
   name: az netappfiles volume create
   summary: Create a new Azure NetApp Files (ANF) volume.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an ANF volume
-    syntax:
-      content: "az netappfiles volume create -g group --account-name aname --pool-name pname --volume-name vname -l location --service-level \"Premium\" --usage-threshold 107374182400 --creation-token \"unique-token\" --subnet-id \"/subscriptions/mysubsid/resourceGroups/myrg/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/default\" --export-policy '[{\"allowed_clients\":\"0.0.0.0/0\", \"rule_index\": \"1\", \"unix_read_only\": \"true\", \"unix_read_write\": \"false\", \"cifs\": \"false\", \"nfsv3\": \"true\", \"nfsv3\": \"true\", \"nfsv4\": \"false\"}]'"
+    syntax: "az netappfiles volume create -g group --account-name aname --pool-name pname --volume-name vname -l location --service-level \"Premium\" --usage-threshold 107374182400 --creation-token \"unique-token\" --subnet-id \"/subscriptions/mysubsid/resourceGroups/myrg/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/default\" --export-policy '[{\"allowed_clients\":\"0.0.0.0/0\", \"rule_index\": \"1\", \"unix_read_only\": \"true\", \"unix_read_write\": \"false\", \"cifs\": \"false\", \"nfsv3\": \"true\", \"nfsv3\": \"true\", \"nfsv4\": \"false\"}]'"
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -69,12 +58,9 @@ items:
   name: az netappfiles volume delete
   summary: Delete the specified ANF volume.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete an ANF volume
-    syntax:
-      content: az netappfiles volume delete -g group --account-name aname --pool-name pname --volume-name vname
+    syntax: az netappfiles volume delete -g group --account-name aname --pool-name pname --volume-name vname
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -96,12 +82,9 @@ items:
   name: az netappfiles volume list
   summary: List the ANF Pools for the specified account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List the ANF volumes of the pool
-    syntax:
-      content: az netappfiles volume list -g group --account-name aname --pool-name pname
+    syntax: az netappfiles volume list -g group --account-name aname --pool-name pname
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -119,12 +102,9 @@ items:
   name: az netappfiles volume show
   summary: Get the specified ANF volume.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Returns the properties of the given ANF volume
-    syntax:
-      content: az netappfiles volume show -g group --account-name aname --pool-name pname --volume-name vname
+    syntax: az netappfiles volume show -g group --account-name aname --pool-name pname --volume-name vname
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -146,12 +126,9 @@ items:
   name: az netappfiles volume update
   summary: Update the specified ANF volume with the values provided. Unspecified values will remain unchanged.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an ANF volume
-    syntax:
-      content: "az netappfiles volume update -g group --account-name aname --pool-name pname --volume-name vname --service-level level --usage-threshold 107374182400 --tags 'key[=value] key[=value]' --export-policy '[{\"allowed_clients\":\"1.2.3.0/24\", \"rule_index\": \"1\", \"unix_read_only\": \"true\", \"unix_read_write\": \"false\", \"cifs\": \"false\", \"nfsv3\": \"true\", \"nfsv3\": \"true\", \"nfsv4\": \"false\"}, {\"allowed_clients\":\"1.2.4.0/24\", \"rule_index\": \"2\", \"unix_read_only\": \"true\", \"unix_read_write\": \"false\", \"cifs\": \"false\", \"nfsv3\": \"true\", \"nfsv3\": \"true\", \"nfsv4\": \"false\"}]'"
+    syntax: "az netappfiles volume update -g group --account-name aname --pool-name pname --volume-name vname --service-level level --usage-threshold 107374182400 --tags 'key[=value] key[=value]' --export-policy '[{\"allowed_clients\":\"1.2.3.0/24\", \"rule_index\": \"1\", \"unix_read_only\": \"true\", \"unix_read_write\": \"false\", \"cifs\": \"false\", \"nfsv3\": \"true\", \"nfsv3\": \"true\", \"nfsv4\": \"false\"}, {\"allowed_clients\":\"1.2.4.0/24\", \"rule_index\": \"2\", \"unix_read_only\": \"true\", \"unix_read_write\": \"false\", \"cifs\": \"false\", \"nfsv3\": \"true\", \"nfsv3\": \"true\", \"nfsv4\": \"false\"}]'"
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -194,21 +171,11 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_netappfiles-preview_az_netappfiles_volume_create
-  name: az netappfiles volume create
-  summary: Create a new Azure NetApp Files (ANF) volume.
-- uid: ext_netappfiles-preview_az_netappfiles_volume_delete
-  name: az netappfiles volume delete
-  summary: Delete the specified ANF volume.
-- uid: ext_netappfiles-preview_az_netappfiles_volume_list
-  name: az netappfiles volume list
-  summary: List the ANF Pools for the specified account.
-- uid: ext_netappfiles-preview_az_netappfiles_volume_show
-  name: az netappfiles volume show
-  summary: Get the specified ANF volume.
-- uid: ext_netappfiles-preview_az_netappfiles_volume_update
-  name: az netappfiles volume update
-  summary: Update the specified ANF volume with the values provided. Unspecified values will remain unchanged.
+- ext_netappfiles-preview_az_netappfiles_volume_create
+- ext_netappfiles-preview_az_netappfiles_volume_delete
+- ext_netappfiles-preview_az_netappfiles_volume_list
+- ext_netappfiles-preview_az_netappfiles_volume_show
+- ext_netappfiles-preview_az_netappfiles_volume_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -224,4 +191,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Azure NetApp Files (ANF) Volume Resources.
+metadata:
+  description: Manage Azure NetApp Files (ANF) Volume Resources.

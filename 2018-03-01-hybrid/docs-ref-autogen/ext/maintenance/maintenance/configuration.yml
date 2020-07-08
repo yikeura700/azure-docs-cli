@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_maintenance_az_maintenance_configuration
-  name: az maintenance configuration
-  summary: Manage Azure Maintenance configurations.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_maintenance_az_maintenance_configuration_create
-  - ext_maintenance_az_maintenance_configuration_delete
-  - ext_maintenance_az_maintenance_configuration_list
-  - ext_maintenance_az_maintenance_configuration_show
-  - ext_maintenance_az_maintenance_configuration_update
+### YamlMime:CLIGroup
+uid: ext_maintenance_az_maintenance_configuration
+name: az maintenance configuration
+summary: Manage Azure Maintenance configurations.
+description: ''
+directCommands:
 - uid: ext_maintenance_az_maintenance_configuration_create
   name: az maintenance configuration create
   summary: Creates a Maintenance Configuration.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a Maintenance Configuration with the All scope.
-    syntax:
-      content: az maintenance configuration create --name workervms -g MyResourceGroup -l westus
+    syntax: az maintenance configuration create --name workervms -g MyResourceGroup -l westus
   parameters:
   - isRequired: true
     name: --location -l
@@ -46,12 +35,9 @@ items:
   name: az maintenance configuration delete
   summary: Deletes a Maintenance Configuration.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a Maintenance Configuration.
-    syntax:
-      content: az maintenance configuration delete --name workervms -g MyResourceGroup
+    syntax: az maintenance configuration delete --name workervms -g MyResourceGroup
   parameters:
   - isRequired: true
     name: --name -n
@@ -65,23 +51,17 @@ items:
   name: az maintenance configuration list
   summary: Get Configuration records within a subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get Configuration records within a subscription.
-    syntax:
-      content: az maintenance configuration list --subscription 2b4ce620-bb0f-4964-8428-dea4aefe00000
+    syntax: az maintenance configuration list --subscription 2b4ce620-bb0f-4964-8428-dea4aefe00000
   parameters: []
 - uid: ext_maintenance_az_maintenance_configuration_show
   name: az maintenance configuration show
   summary: Get the details of a Maintenance Configuration.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the Maintenance Configuration.
-    syntax:
-      content: az maintenance configuration show --name workervms -g MyResourceGroup
+    syntax: az maintenance configuration show --name workervms -g MyResourceGroup
   parameters:
   - isRequired: true
     name: --name -n
@@ -95,12 +75,9 @@ items:
   name: az maintenance configuration update
   summary: Creates a Maintenance Configuration.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a Maintenance Configuration with the All scope.
-    syntax:
-      content: az maintenance configuration update --name workervms -g MyResourceGroup -l westus --maintenanceScope All
+    syntax: az maintenance configuration update --name workervms -g MyResourceGroup -l westus --maintenanceScope All
   parameters:
   - isRequired: true
     name: --location -l
@@ -122,21 +99,11 @@ items:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
 commands:
-- uid: ext_maintenance_az_maintenance_configuration_create
-  name: az maintenance configuration create
-  summary: Creates a Maintenance Configuration.
-- uid: ext_maintenance_az_maintenance_configuration_delete
-  name: az maintenance configuration delete
-  summary: Deletes a Maintenance Configuration.
-- uid: ext_maintenance_az_maintenance_configuration_list
-  name: az maintenance configuration list
-  summary: Get Configuration records within a subscription.
-- uid: ext_maintenance_az_maintenance_configuration_show
-  name: az maintenance configuration show
-  summary: Get the details of a Maintenance Configuration.
-- uid: ext_maintenance_az_maintenance_configuration_update
-  name: az maintenance configuration update
-  summary: Creates a Maintenance Configuration.
+- ext_maintenance_az_maintenance_configuration_create
+- ext_maintenance_az_maintenance_configuration_delete
+- ext_maintenance_az_maintenance_configuration_list
+- ext_maintenance_az_maintenance_configuration_show
+- ext_maintenance_az_maintenance_configuration_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -152,4 +119,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Azure Maintenance configurations.
+metadata:
+  description: Manage Azure Maintenance configurations.

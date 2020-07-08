@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_devops_admin_banner
-  name: az devops admin banner
-  summary: Manage organization banner.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_devops_admin_banner_add
-  - az_devops_admin_banner_list
-  - az_devops_admin_banner_remove
-  - az_devops_admin_banner_show
-  - az_devops_admin_banner_update
+### YamlMime:CLIGroup
+uid: az_devops_admin_banner
+name: az devops admin banner
+summary: Manage organization banner.
+description: ''
+directCommands:
 - uid: az_devops_admin_banner_add
   name: az devops admin banner add
   summary: Add a new banner and immediately show it.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --message -m
@@ -47,8 +37,6 @@ items:
   name: az devops admin banner list
   summary: List banners.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --detect
     parameterValueGroup: false, true
@@ -64,8 +52,6 @@ items:
   name: az devops admin banner remove
   summary: Remove a banner.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -85,8 +71,6 @@ items:
   name: az devops admin banner show
   summary: Show details for a banner.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -106,8 +90,6 @@ items:
   name: az devops admin banner update
   summary: Update the message, level, or expiration date for a banner.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -134,21 +116,11 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_devops_admin_banner_add
-  name: az devops admin banner add
-  summary: Add a new banner and immediately show it.
-- uid: az_devops_admin_banner_list
-  name: az devops admin banner list
-  summary: List banners.
-- uid: az_devops_admin_banner_remove
-  name: az devops admin banner remove
-  summary: Remove a banner.
-- uid: az_devops_admin_banner_show
-  name: az devops admin banner show
-  summary: Show details for a banner.
-- uid: az_devops_admin_banner_update
-  name: az devops admin banner update
-  summary: Update the message, level, or expiration date for a banner.
+- az_devops_admin_banner_add
+- az_devops_admin_banner_list
+- az_devops_admin_banner_remove
+- az_devops_admin_banner_show
+- az_devops_admin_banner_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -164,4 +136,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage organization banner.
+metadata:
+  description: Manage organization banner.

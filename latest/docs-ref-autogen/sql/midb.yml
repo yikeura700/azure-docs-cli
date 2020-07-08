@@ -1,28 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sql_midb
-  name: az sql midb
-  summary: Manage SQL managed instance databases.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sql_midb_create
-  - az_sql_midb_delete
-  - az_sql_midb_list
-  - az_sql_midb_list_deleted
-  - az_sql_midb_restore
-  - az_sql_midb_show
+### YamlMime:CLIGroup
+uid: az_sql_midb
+name: az sql midb
+summary: Manage SQL managed instance databases.
+description: ''
+directCommands:
 - uid: az_sql_midb_create
   name: az sql midb create
   summary: Create a managed database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a managed database with specified collation
-    syntax:
-      content: az sql midb create -g mygroup --mi myinstance -n mymanageddb --collation Latin1_General_100_CS_AS_SC
+    syntax: az sql midb create -g mygroup --mi myinstance -n mymanageddb --collation Latin1_General_100_CS_AS_SC
   parameters:
   - isRequired: true
     name: --managed-instance --mi
@@ -55,12 +43,9 @@ items:
   name: az sql midb delete
   summary: Delete a managed database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a managed database
-    syntax:
-      content: az sql midb delete -g mygroup --mi myinstance -n mymanageddb --yes
+    syntax: az sql midb delete -g mygroup --mi myinstance -n mymanageddb --yes
   parameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -93,12 +78,9 @@ items:
   name: az sql midb list
   summary: List managed databases on a managed instance.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List managed databases on a managed instance
-    syntax:
-      content: az sql midb list -g mygroup --mi myinstance
+    syntax: az sql midb list -g mygroup --mi myinstance
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -122,12 +104,9 @@ items:
   name: az sql midb list-deleted
   summary: List restorable deleted managed databases.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all restorable deleted managed databases on Managed Instance .
-    syntax:
-      content: az sql midb list-deleted -g mygroup --mi myinstance
+    syntax: az sql midb list-deleted -g mygroup --mi myinstance
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -151,18 +130,13 @@ items:
   name: az sql midb restore
   summary: Restore a managed database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Restore a live managed database using Point in time restore
-    syntax:
-      content: az sql midb restore -g mygroup --mi myinstance -n mymanageddb --dest-name targetmidb --time "2018-05-20T05:34:22"
+    syntax: az sql midb restore -g mygroup --mi myinstance -n mymanageddb --dest-name targetmidb --time "2018-05-20T05:34:22"
   - summary: Restore a dropped managed database using Point in time restore
-    syntax:
-      content: az sql midb restore -g mygroup --mi myinstance -n mymanageddb --dest-name targetmidb --time "2018-05-20T05:34:22" --deleted-time "2018-05-20T05:34:22"
+    syntax: az sql midb restore -g mygroup --mi myinstance -n mymanageddb --dest-name targetmidb --time "2018-05-20T05:34:22" --deleted-time "2018-05-20T05:34:22"
   - summary: Restore a live managed database from another instance using Point in time restore
-    syntax:
-      content: az sql midb restore -g mygroup --mi myinstance -n mymanageddb --dest-name targetmidb --time "2018-05-20T05:34:22" --dest-mi targetmi --dest-resource-group targetrg
+    syntax: az sql midb restore -g mygroup --mi myinstance -n mymanageddb --dest-name targetmidb --time "2018-05-20T05:34:22" --dest-mi targetmi --dest-resource-group targetrg
   parameters:
   - isRequired: true
     name: --dest-name
@@ -209,12 +183,9 @@ items:
   name: az sql midb show
   summary: Get the details for a managed database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the details for a managed database
-    syntax:
-      content: az sql midb show -g mygroup --mi myinstance -n mymanageddb
+    syntax: az sql midb show -g mygroup --mi myinstance -n mymanageddb
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -238,60 +209,24 @@ items:
       path: src/azure-cli/azure/cli/command_modules/sql/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_sql_midb_create
-  name: az sql midb create
-  summary: Create a managed database.
-- uid: az_sql_midb_delete
-  name: az sql midb delete
-  summary: Delete a managed database.
-- uid: az_sql_midb_list
-  name: az sql midb list
-  summary: List managed databases on a managed instance.
-- uid: az_sql_midb_list_deleted
-  name: az sql midb list-deleted
-  summary: List restorable deleted managed databases.
-- uid: az_sql_midb_ltr_backup
-  name: az sql midb ltr-backup
-  summary: Manage SQL Managed Instance database long term retention backups.
-- uid: az_sql_midb_ltr_backup_delete
-  name: az sql midb ltr-backup delete
-  summary: Delete a long term retention backup.
-- uid: az_sql_midb_ltr_backup_list
-  name: az sql midb ltr-backup list
-  summary: List the long term retention backups for a location, instance or database.
-- uid: az_sql_midb_ltr_backup_restore
-  name: az sql midb ltr-backup restore
-  summary: Restore a long term retention backup to a new database.
-- uid: az_sql_midb_ltr_backup_show
-  name: az sql midb ltr-backup show
-  summary: Get a long term retention backup for a managed database.
-- uid: az_sql_midb_ltr_backup_wait
-  name: az sql midb ltr-backup wait
-  summary: Place the CLI in a waiting state until a condition of the managed database is met.
-- uid: az_sql_midb_ltr_policy
-  name: az sql midb ltr-policy
-  summary: Manage SQL Managed Instance database long term retention policy.
-- uid: az_sql_midb_ltr_policy_set
-  name: az sql midb ltr-policy set
-  summary: Update long term retention settings for a managed database.
-- uid: az_sql_midb_ltr_policy_show
-  name: az sql midb ltr-policy show
-  summary: Show the long term retention policy for a managed database.
-- uid: az_sql_midb_restore
-  name: az sql midb restore
-  summary: Restore a managed database.
-- uid: az_sql_midb_short_term_retention_policy
-  name: az sql midb short-term-retention-policy
-  summary: Manage SQL Managed Instance database backup short term retention policy.
-- uid: az_sql_midb_short_term_retention_policy_set
-  name: az sql midb short-term-retention-policy set
-  summary: Update short term retention for automated backups on a single database.
-- uid: az_sql_midb_short_term_retention_policy_show
-  name: az sql midb short-term-retention-policy show
-  summary: Show short term retention for automated backups on a single database.
-- uid: az_sql_midb_show
-  name: az sql midb show
-  summary: Get the details for a managed database.
+- az_sql_midb_create
+- az_sql_midb_delete
+- az_sql_midb_list
+- az_sql_midb_list_deleted
+- az_sql_midb_ltr_backup
+- az_sql_midb_ltr_backup_delete
+- az_sql_midb_ltr_backup_list
+- az_sql_midb_ltr_backup_restore
+- az_sql_midb_ltr_backup_show
+- az_sql_midb_ltr_backup_wait
+- az_sql_midb_ltr_policy
+- az_sql_midb_ltr_policy_set
+- az_sql_midb_ltr_policy_show
+- az_sql_midb_restore
+- az_sql_midb_short_term_retention_policy
+- az_sql_midb_short_term_retention_policy_set
+- az_sql_midb_short_term_retention_policy_show
+- az_sql_midb_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -307,10 +242,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
-updated_at: 6/19/2020 1:04:35 AM
-ms.date: 06/19/2020
-description: Manage SQL managed instance databases.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  updated_at: 6/19/2020 1:04:35 AM
+  ms.date: 06/19/2020
+  description: Manage SQL managed instance databases.

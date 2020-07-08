@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_desktopvirtualization_az_desktopvirtualization_applicationgroup
-  name: az desktopvirtualization applicationgroup
-  summary: Desktopvirtualization applicationgroup.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_create
-  - ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_delete
-  - ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_list
-  - ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_show
-  - ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_update
+### YamlMime:CLIGroup
+uid: ext_desktopvirtualization_az_desktopvirtualization_applicationgroup
+name: az desktopvirtualization applicationgroup
+summary: Desktopvirtualization applicationgroup.
+description: ''
+directCommands:
 - uid: ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_create
   name: az desktopvirtualization applicationgroup create
   summary: Create or update an applicationGroup.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: ApplicationGroup_Create
-    syntax:
-      content: az desktopvirtualization applicationgroup create --location "centralus" --description "des1" --application-group-type "RemoteApp" --friendly-name "friendly" --host-pool-arm-path "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/MyResourceGroup/providers/Microsoft.DesktopVirtualization/hostPools/MyHostPool" --tags tag1="value1" tag2="value2" --name "MyApplicationGroup" --resource-group "MyResourceGroup"
+    syntax: az desktopvirtualization applicationgroup create --location "centralus" --description "des1" --application-group-type "RemoteApp" --friendly-name "friendly" --host-pool-arm-path "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/MyResourceGroup/providers/Microsoft.DesktopVirtualization/hostPools/MyHostPool" --tags tag1="value1" tag2="value2" --name "MyApplicationGroup" --resource-group "MyResourceGroup"
   parameters:
   - isRequired: true
     name: --application-group-type
@@ -57,12 +46,9 @@ items:
   name: az desktopvirtualization applicationgroup delete
   summary: Remove an applicationGroup.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: ApplicationGroup_Delete
-    syntax:
-      content: az desktopvirtualization applicationgroup delete --name "MyApplicationGroup" --resource-group "MyResourceGroup"
+    syntax: az desktopvirtualization applicationgroup delete --name "MyApplicationGroup" --resource-group "MyResourceGroup"
   parameters:
   - isRequired: true
     name: --name -n
@@ -76,12 +62,9 @@ items:
   name: az desktopvirtualization applicationgroup list
   summary: List applicationGroups in subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: ApplicationGroup_ListByResourceGroup
-    syntax:
-      content: az desktopvirtualization applicationgroup list --filter "applicationGroupType eq 'RailApplication'" --resource-group "MyResourceGroup"
+    syntax: az desktopvirtualization applicationgroup list --filter "applicationGroupType eq 'RailApplication'" --resource-group "MyResourceGroup"
   parameters:
   - name: --filter
     summary: OData filter expression. Valid properties for filtering are applicationGroupType.
@@ -93,12 +76,9 @@ items:
   name: az desktopvirtualization applicationgroup show
   summary: Get an application group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: ApplicationGroup_Get
-    syntax:
-      content: az desktopvirtualization applicationgroup show --name "MyApplicationGroup" --resource-group "MyResourceGroup"
+    syntax: az desktopvirtualization applicationgroup show --name "MyApplicationGroup" --resource-group "MyResourceGroup"
   parameters:
   - isRequired: true
     name: --name -n
@@ -112,12 +92,9 @@ items:
   name: az desktopvirtualization applicationgroup update
   summary: Update an applicationGroup.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: ApplicationGroups_Update
-    syntax:
-      content: az desktopvirtualization applicationgroup update --description "des1" --friendly-name "friendly" --tags tag1="value1" tag2="value2" --name "MyApplicationGroup" --resource-group "MyResourceGroup"
+    syntax: az desktopvirtualization applicationgroup update --description "des1" --friendly-name "friendly" --tags tag1="value1" tag2="value2" --name "MyApplicationGroup" --resource-group "MyResourceGroup"
   parameters:
   - isRequired: true
     name: --name -n
@@ -137,21 +114,11 @@ items:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
 commands:
-- uid: ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_create
-  name: az desktopvirtualization applicationgroup create
-  summary: Create or update an applicationGroup.
-- uid: ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_delete
-  name: az desktopvirtualization applicationgroup delete
-  summary: Remove an applicationGroup.
-- uid: ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_list
-  name: az desktopvirtualization applicationgroup list
-  summary: List applicationGroups in subscription.
-- uid: ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_show
-  name: az desktopvirtualization applicationgroup show
-  summary: Get an application group.
-- uid: ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_update
-  name: az desktopvirtualization applicationgroup update
-  summary: Update an applicationGroup.
+- ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_create
+- ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_delete
+- ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_list
+- ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_show
+- ext_desktopvirtualization_az_desktopvirtualization_applicationgroup_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -167,4 +134,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Desktopvirtualization applicationgroup.
+metadata:
+  description: Desktopvirtualization applicationgroup.

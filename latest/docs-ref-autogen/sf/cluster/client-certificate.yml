@@ -1,24 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sf_cluster_client_certificate
-  name: az sf cluster client-certificate
-  summary: Manage the client certificate of a cluster.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sf_cluster_client_certificate_add
-  - az_sf_cluster_client_certificate_remove
+### YamlMime:CLIGroup
+uid: az_sf_cluster_client_certificate
+name: az sf cluster client-certificate
+summary: Manage the client certificate of a cluster.
+description: ''
+directCommands:
 - uid: az_sf_cluster_client_certificate_add
   name: az sf cluster client-certificate add
   summary: Add a common name or certificate thumbprint to the cluster for client authentication.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add client certificate by thumbprint
-    syntax:
-      content: az sf cluster client-certificate add -g group-name -c cluster1 --thumbprint '5F3660C715EBBDA31DB1FFDCF508302348DE8E7A'
+    syntax: az sf cluster client-certificate add -g group-name -c cluster1 --thumbprint '5F3660C715EBBDA31DB1FFDCF508302348DE8E7A'
   parameters:
   - isRequired: true
     name: --cluster-name -c
@@ -56,12 +48,9 @@ items:
   name: az sf cluster client-certificate remove
   summary: Remove client certificates or subject names used for authentication.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Remove a client certificate by thumbprint.
-    syntax:
-      content: az sf cluster client-certificate remove -g group-name -c cluster1 --thumbprint '5F3660C715EBBDA31DB1FFDCF508302348DE8E7A'
+    syntax: az sf cluster client-certificate remove -g group-name -c cluster1 --thumbprint '5F3660C715EBBDA31DB1FFDCF508302348DE8E7A'
   parameters:
   - isRequired: true
     name: --cluster-name -c
@@ -87,12 +76,8 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_sf_cluster_client_certificate_add
-  name: az sf cluster client-certificate add
-  summary: Add a common name or certificate thumbprint to the cluster for client authentication.
-- uid: az_sf_cluster_client_certificate_remove
-  name: az sf cluster client-certificate remove
-  summary: Remove client certificates or subject names used for authentication.
+- az_sf_cluster_client_certificate_add
+- az_sf_cluster_client_certificate_remove
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -108,4 +93,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage the client certificate of a cluster.
+metadata:
+  description: Manage the client certificate of a cluster.

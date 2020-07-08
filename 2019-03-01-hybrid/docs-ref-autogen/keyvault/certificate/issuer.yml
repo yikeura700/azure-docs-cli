@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_keyvault_certificate_issuer
-  name: az keyvault certificate issuer
-  summary: Manage certificate issuer information.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_keyvault_certificate_issuer_create
-  - az_keyvault_certificate_issuer_delete
-  - az_keyvault_certificate_issuer_list
-  - az_keyvault_certificate_issuer_show
-  - az_keyvault_certificate_issuer_update
+### YamlMime:CLIGroup
+uid: az_keyvault_certificate_issuer
+name: az keyvault certificate issuer
+summary: Manage certificate issuer information.
+description: ''
+directCommands:
 - uid: az_keyvault_certificate_issuer_create
   name: az keyvault certificate issuer create
   summary: Create a certificate issuer record.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --issuer-name
@@ -57,8 +47,6 @@ items:
   name: az keyvault certificate issuer delete
   summary: Deletes the specified certificate issuer.
   description: The DeleteCertificateIssuer operation permanently removes the specified certificate issuer from the vault. This operation requires the certificates/manageissuers/deleteissuers permission.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --issuer-name
@@ -81,8 +69,6 @@ items:
   name: az keyvault certificate issuer list
   summary: List certificate issuers for a specified key vault.
   description: The GetCertificateIssuers operation returns the set of certificate issuer resources in the specified key vault. This operation requires the certificates/manageissuers/getissuers permission.
-  langs:
-  - azurecli
   parameters:
   - name: --maxresults
     summary: Maximum number of results to return in a page. If not specified the service will return up to 25 results.
@@ -104,8 +90,6 @@ items:
   name: az keyvault certificate issuer show
   summary: Lists the specified certificate issuer.
   description: The GetCertificateIssuer operation returns the specified certificate issuer resources in the specified key vault. This operation requires the certificates/manageissuers/getissuers permission.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --issuer-name
@@ -128,8 +112,6 @@ items:
   name: az keyvault certificate issuer update
   summary: Update a certificate issuer record.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --issuer-name
@@ -165,33 +147,15 @@ items:
       path: src/azure-cli/azure/cli/command_modules/keyvault/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_keyvault_certificate_issuer_admin
-  name: az keyvault certificate issuer admin
-  summary: Manage admin information for certificate issuers.
-- uid: az_keyvault_certificate_issuer_admin_add
-  name: az keyvault certificate issuer admin add
-  summary: Add admin details for a specified certificate issuer.
-- uid: az_keyvault_certificate_issuer_admin_delete
-  name: az keyvault certificate issuer admin delete
-  summary: Remove admin details for the specified certificate issuer.
-- uid: az_keyvault_certificate_issuer_admin_list
-  name: az keyvault certificate issuer admin list
-  summary: List admins for a specified certificate issuer.
-- uid: az_keyvault_certificate_issuer_create
-  name: az keyvault certificate issuer create
-  summary: Create a certificate issuer record.
-- uid: az_keyvault_certificate_issuer_delete
-  name: az keyvault certificate issuer delete
-  summary: Deletes the specified certificate issuer.
-- uid: az_keyvault_certificate_issuer_list
-  name: az keyvault certificate issuer list
-  summary: List certificate issuers for a specified key vault.
-- uid: az_keyvault_certificate_issuer_show
-  name: az keyvault certificate issuer show
-  summary: Lists the specified certificate issuer.
-- uid: az_keyvault_certificate_issuer_update
-  name: az keyvault certificate issuer update
-  summary: Update a certificate issuer record.
+- az_keyvault_certificate_issuer_admin
+- az_keyvault_certificate_issuer_admin_add
+- az_keyvault_certificate_issuer_admin_delete
+- az_keyvault_certificate_issuer_admin_list
+- az_keyvault_certificate_issuer_create
+- az_keyvault_certificate_issuer_delete
+- az_keyvault_certificate_issuer_list
+- az_keyvault_certificate_issuer_show
+- az_keyvault_certificate_issuer_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -207,10 +171,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/keyvault/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
-updated_at: 6/4/2020 1:53:34 PM
-ms.date: 06/04/2020
-description: Manage certificate issuer information.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
+  updated_at: 6/4/2020 1:53:34 PM
+  ms.date: 06/04/2020
+  description: Manage certificate issuer information.

@@ -1,26 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_acr_task_timer
-  name: az acr task timer
-  summary: Manage timer triggers for a task.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_acr_task_timer_add
-  - az_acr_task_timer_list
-  - az_acr_task_timer_remove
-  - az_acr_task_timer_update
+### YamlMime:CLIGroup
+uid: az_acr_task_timer
+name: az acr task timer
+summary: Manage timer triggers for a task.
+description: ''
+directCommands:
 - uid: az_acr_task_timer_add
   name: az acr task timer add
   summary: Add a timer trigger to a task.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add a timer trigger which schedules the task at 09:30 (UTC) every day of the week from Monday through Friday.
-    syntax:
-      content: az acr task timer add -n taskname -r registryname --timer-name t2 --schedule "30 9 * * 1-5"
+    syntax: az acr task timer add -n taskname -r registryname --timer-name t2 --schedule "30 9 * * 1-5"
   parameters:
   - isRequired: true
     name: --name -n
@@ -59,12 +49,9 @@ items:
   name: az acr task timer list
   summary: List all timer triggers for a task.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all timer triggers for a task.
-    syntax:
-      content: az acr task timer list -n taskname -r registryname
+    syntax: az acr task timer list -n taskname -r registryname
   parameters:
   - isRequired: true
     name: --name -n
@@ -90,12 +77,9 @@ items:
   name: az acr task timer remove
   summary: Remove a timer trigger from a task.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Remove a timer trigger from a task.
-    syntax:
-      content: az acr task timer remove -n taskname -r registryname --timer-name t2
+    syntax: az acr task timer remove -n taskname -r registryname --timer-name t2
   parameters:
   - isRequired: true
     name: --name -n
@@ -125,15 +109,11 @@ items:
   name: az acr task timer update
   summary: Update the timer trigger for a task.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update the schedule of a timer trigger for a task.
-    syntax:
-      content: az acr task timer update -n taskname -r registryname --timer-name t2 --schedule "0 12 * * *"
+    syntax: az acr task timer update -n taskname -r registryname --timer-name t2 --schedule "0 12 * * *"
   - summary: Update the status of a timer trigger for a task.
-    syntax:
-      content: az acr task timer update -n taskname -r registryname --timer-name t2 --enabled False
+    syntax: az acr task timer update -n taskname -r registryname --timer-name t2 --enabled False
   parameters:
   - isRequired: true
     name: --name -n
@@ -167,18 +147,10 @@ items:
       path: src/azure-cli/azure/cli/command_modules/acr/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_acr_task_timer_add
-  name: az acr task timer add
-  summary: Add a timer trigger to a task.
-- uid: az_acr_task_timer_list
-  name: az acr task timer list
-  summary: List all timer triggers for a task.
-- uid: az_acr_task_timer_remove
-  name: az acr task timer remove
-  summary: Remove a timer trigger from a task.
-- uid: az_acr_task_timer_update
-  name: az acr task timer update
-  summary: Update the timer trigger for a task.
+- az_acr_task_timer_add
+- az_acr_task_timer_list
+- az_acr_task_timer_remove
+- az_acr_task_timer_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -194,10 +166,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
-updated_at: 4/15/2020 7:14:42 AM
-ms.date: 04/15/2020
-description: Manage timer triggers for a task.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  updated_at: 4/15/2020 7:14:42 AM
+  ms.date: 04/15/2020
+  description: Manage timer triggers for a task.

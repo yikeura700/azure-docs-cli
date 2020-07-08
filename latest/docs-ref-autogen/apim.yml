@@ -1,26 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_apim
-  name: az apim
-  summary: Manage Azure API Management services.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_apim_apply_network_updates
-  - az_apim_backup
-  - az_apim_check_name
-  - az_apim_create
-  - az_apim_delete
-  - az_apim_list
-  - az_apim_show
-  - az_apim_update
+### YamlMime:CLIGroup
+uid: az_apim
+name: az apim
+summary: Manage Azure API Management services.
+description: ''
+directCommands:
 - uid: az_apim_apply_network_updates
   name: az apim apply-network-updates
   summary: Back up an API Management service to the configured storage account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -49,12 +36,9 @@ items:
   name: az apim backup
   summary: Creates a backup of the API Management service to the given Azure Storage Account. This is long running operation and could take several minutes to complete.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a backup of the API Management service instance
-    syntax:
-      content: az apim backup --name MyApim -g MyResourceGroup --backup-name myBackup              --storage-account-name mystorageaccount --storage-account-container backups              --storage-account-key Ay2ZbdxLnD4OJPT29F6jLPkB6KynOzx85YCObhrw==
+    syntax: az apim backup --name MyApim -g MyResourceGroup --backup-name myBackup              --storage-account-name mystorageaccount --storage-account-container backups              --storage-account-key Ay2ZbdxLnD4OJPT29F6jLPkB6KynOzx85YCObhrw==
   parameters:
   - isRequired: true
     name: --backup-name
@@ -96,8 +80,6 @@ items:
   name: az apim check-name
   summary: Checks to see if a service name is available to use.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -116,17 +98,13 @@ items:
   name: az apim create
   summary: Create an API Management service instance.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a Developer tier API Management service.
-    syntax:
-      content: az apim create --name MyApim -g MyResourceGroup -l eastus --publisher-email email@mydomain.com --publisher-name Microsoft
+    syntax: az apim create --name MyApim -g MyResourceGroup -l eastus --publisher-email email@mydomain.com --publisher-name Microsoft
   - summary: Create a Consumption tier API Management service.
-    syntax:
-      content: >-
-        az apim create --name MyApim -g MyResourceGroup -l eastus --sku-name Consumption --enable-client-certificate \
-            --publisher-email email@mydomain.com --publisher-name Microsoft
+    syntax: >-
+      az apim create --name MyApim -g MyResourceGroup -l eastus --sku-name Consumption --enable-client-certificate \
+          --publisher-email email@mydomain.com --publisher-name Microsoft
   parameters:
   - isRequired: true
     name: --name -n
@@ -191,12 +169,9 @@ items:
   name: az apim delete
   summary: Deletes an API Management service.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete an API Management service.
-    syntax:
-      content: az apim delete -n MyApim -g MyResourceGroup
+    syntax: az apim delete -n MyApim -g MyResourceGroup
   parameters:
   - isRequired: true
     name: --name -n
@@ -225,8 +200,6 @@ items:
   name: az apim list
   summary: List API Management service instances.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
@@ -244,8 +217,6 @@ items:
   name: az apim show
   summary: Show details of an API Management service instance.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -268,8 +239,6 @@ items:
   name: az apim update
   summary: Update an API Management service instance.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -332,30 +301,14 @@ items:
       path: src/azure-cli/azure/cli/command_modules/apim/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_apim_apply_network_updates
-  name: az apim apply-network-updates
-  summary: Back up an API Management service to the configured storage account.
-- uid: az_apim_backup
-  name: az apim backup
-  summary: Creates a backup of the API Management service to the given Azure Storage Account. This is long running operation and could take several minutes to complete.
-- uid: az_apim_check_name
-  name: az apim check-name
-  summary: Checks to see if a service name is available to use.
-- uid: az_apim_create
-  name: az apim create
-  summary: Create an API Management service instance.
-- uid: az_apim_delete
-  name: az apim delete
-  summary: Deletes an API Management service.
-- uid: az_apim_list
-  name: az apim list
-  summary: List API Management service instances.
-- uid: az_apim_show
-  name: az apim show
-  summary: Show details of an API Management service instance.
-- uid: az_apim_update
-  name: az apim update
-  summary: Update an API Management service instance.
+- az_apim_apply_network_updates
+- az_apim_backup
+- az_apim_check_name
+- az_apim_create
+- az_apim_delete
+- az_apim_list
+- az_apim_show
+- az_apim_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -371,10 +324,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/apim/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/add1daaaebc61c0c847e82bb85a71fbb04dfa513/src/azure-cli/azure/cli/command_modules/apim/_help.py
-updated_at: 12/23/2019 1:50:24 AM
-ms.date: 12/23/2019
-description: Manage Azure API Management services.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/add1daaaebc61c0c847e82bb85a71fbb04dfa513/src/azure-cli/azure/cli/command_modules/apim/_help.py
+  updated_at: 12/23/2019 1:50:24 AM
+  ms.date: 12/23/2019
+  description: Manage Azure API Management services.

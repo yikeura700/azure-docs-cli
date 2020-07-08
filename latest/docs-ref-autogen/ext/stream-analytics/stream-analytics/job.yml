@@ -1,35 +1,21 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_stream-analytics_az_stream_analytics_job
-  name: az stream-analytics job
-  summary: Commands to manage stream-analytics streaming job.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_stream-analytics_az_stream_analytics_job_create
-  - ext_stream-analytics_az_stream_analytics_job_delete
-  - ext_stream-analytics_az_stream_analytics_job_list
-  - ext_stream-analytics_az_stream_analytics_job_show
-  - ext_stream-analytics_az_stream_analytics_job_start
-  - ext_stream-analytics_az_stream_analytics_job_stop
-  - ext_stream-analytics_az_stream_analytics_job_update
-  - ext_stream-analytics_az_stream_analytics_job_wait
+### YamlMime:CLIGroup
+uid: ext_stream-analytics_az_stream_analytics_job
+name: az stream-analytics job
+summary: Commands to manage stream-analytics streaming job.
+description: ''
+directCommands:
 - uid: ext_stream-analytics_az_stream_analytics_job_create
   name: az stream-analytics job create
   summary: Create a streaming job or replaces an already existing streaming job.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a streaming job
-    syntax:
-      content: >-
-        az stream-analytics job create --resource-group MyResourceGroup --name MyJobName \
+    syntax: >-
+      az stream-analytics job create --resource-group MyResourceGroup --name MyJobName \
 
-        --location "West US" --output-error-policy "Drop" --events-outoforder-policy "Drop" \
+      --location "West US" --output-error-policy "Drop" --events-outoforder-policy "Drop" \
 
-        --events-outoforder-max-delay 5 --events-late-arrival-max-delay 16 --data-locale "en-US"
+      --events-outoforder-max-delay 5 --events-late-arrival-max-delay 16 --data-locale "en-US"
   parameters:
   - isRequired: true
     name: --name -n
@@ -79,12 +65,9 @@ items:
   name: az stream-analytics job delete
   summary: Delete a streaming job.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a streaming job
-    syntax:
-      content: az stream-analytics job delete --resource-group MyResourceGroup --name MyJobName
+    syntax: az stream-analytics job delete --resource-group MyResourceGroup --name MyJobName
   parameters:
   - isRequired: true
     name: --name -n
@@ -101,18 +84,13 @@ items:
   name: az stream-analytics job list
   summary: List all of the streaming jobs in the specified resource group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all streaming jobs in current subscription
-    syntax:
-      content: az stream-analytics job list
+    syntax: az stream-analytics job list
   - summary: List all streaming jobs in a resource group
-    syntax:
-      content: az stream-analytics job list --resource-group MyResourceGroup
+    syntax: az stream-analytics job list --resource-group MyResourceGroup
   - summary: List all streaming jobs and expand their inputs, outputs, transformation, and functions
-    syntax:
-      content: az stream-analytics job list --resource-group MyResourceGroup --expand
+    syntax: az stream-analytics job list --resource-group MyResourceGroup --expand
   parameters:
   - name: --expand
     summary: Expand inputs, transformation, outputs and functions of the streaming job.
@@ -124,15 +102,11 @@ items:
   name: az stream-analytics job show
   summary: Get details about the specified streaming job.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get a streaming job
-    syntax:
-      content: az stream-analytics job show --resource-group MyResourceGroup --name MyJobName
+    syntax: az stream-analytics job show --resource-group MyResourceGroup --name MyJobName
   - summary: Get a streaming job and expand its inputs, outputs, transformation, and functions
-    syntax:
-      content: az stream-analytics job show --resource-group MyResourceGroup --name MyJobName --expand
+    syntax: az stream-analytics job show --resource-group MyResourceGroup --name MyJobName --expand
   parameters:
   - isRequired: true
     name: --name -n
@@ -149,18 +123,13 @@ items:
   name: az stream-analytics job start
   summary: Start a streaming job.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Start a streaming job with LastOutputEventTime output start mode
-    syntax:
-      content: az stream-analytics job start --resource-group MyResourceGroup --name MyJobName --output-start-mode LastOutputEventTime
+    syntax: az stream-analytics job start --resource-group MyResourceGroup --name MyJobName --output-start-mode LastOutputEventTime
   - summary: Start a streaming job with JobStartTime output start mode
-    syntax:
-      content: az stream-analytics job start --resource-group MyResourceGroup --name MyJobName --output-start-mode JobStartTime
+    syntax: az stream-analytics job start --resource-group MyResourceGroup --name MyJobName --output-start-mode JobStartTime
   - summary: Start a streaming job with CustomTime output start mode
-    syntax:
-      content: az stream-analytics job start --resource-group MyResourceGroup --name MyJobName --output-start-mode CustomTime --output-start-time 2020-01-01T00:00:00Z
+    syntax: az stream-analytics job start --resource-group MyResourceGroup --name MyJobName --output-start-mode CustomTime --output-start-time 2020-01-01T00:00:00Z
   parameters:
   - isRequired: true
     name: --name -n
@@ -185,12 +154,9 @@ items:
   name: az stream-analytics job stop
   summary: Stop a running streaming job.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Stop a streaming job
-    syntax:
-      content: az stream-analytics job stop --resource-group MyResourceGroup --name MyJobName
+    syntax: az stream-analytics job stop --resource-group MyResourceGroup --name MyJobName
   parameters:
   - isRequired: true
     name: --name -n
@@ -207,15 +173,12 @@ items:
   name: az stream-analytics job update
   summary: Update existing streaming job.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update a streaming job
-    syntax:
-      content: >-
-        az stream-analytics job update --resource-group MyResourceGroup --name MyJobName \
+    syntax: >-
+      az stream-analytics job update --resource-group MyResourceGroup --name MyJobName \
 
-        --events-outoforder-max-delay 21 --events-late-arrival-max-delay 13
+      --events-outoforder-max-delay 21 --events-late-arrival-max-delay 13
   parameters:
   - isRequired: true
     name: --name -n
@@ -249,12 +212,9 @@ items:
   name: az stream-analytics job wait
   summary: Place the CLI in a waiting state until a condition of the streaming job is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pause executing next line of CLI script until the streaming job is successfully provisioned.
-    syntax:
-      content: az stream-analytics job wait --resource-group MyResourceGroup --name MyJobName --created
+    syntax: az stream-analytics job wait --resource-group MyResourceGroup --name MyJobName --created
   parameters:
   - isRequired: true
     name: --name -n
@@ -291,30 +251,14 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_stream-analytics_az_stream_analytics_job_create
-  name: az stream-analytics job create
-  summary: Create a streaming job or replaces an already existing streaming job.
-- uid: ext_stream-analytics_az_stream_analytics_job_delete
-  name: az stream-analytics job delete
-  summary: Delete a streaming job.
-- uid: ext_stream-analytics_az_stream_analytics_job_list
-  name: az stream-analytics job list
-  summary: List all of the streaming jobs in the specified resource group.
-- uid: ext_stream-analytics_az_stream_analytics_job_show
-  name: az stream-analytics job show
-  summary: Get details about the specified streaming job.
-- uid: ext_stream-analytics_az_stream_analytics_job_start
-  name: az stream-analytics job start
-  summary: Start a streaming job.
-- uid: ext_stream-analytics_az_stream_analytics_job_stop
-  name: az stream-analytics job stop
-  summary: Stop a running streaming job.
-- uid: ext_stream-analytics_az_stream_analytics_job_update
-  name: az stream-analytics job update
-  summary: Update existing streaming job.
-- uid: ext_stream-analytics_az_stream_analytics_job_wait
-  name: az stream-analytics job wait
-  summary: Place the CLI in a waiting state until a condition of the streaming job is met.
+- ext_stream-analytics_az_stream_analytics_job_create
+- ext_stream-analytics_az_stream_analytics_job_delete
+- ext_stream-analytics_az_stream_analytics_job_list
+- ext_stream-analytics_az_stream_analytics_job_show
+- ext_stream-analytics_az_stream_analytics_job_start
+- ext_stream-analytics_az_stream_analytics_job_stop
+- ext_stream-analytics_az_stream_analytics_job_update
+- ext_stream-analytics_az_stream_analytics_job_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -330,4 +274,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage stream-analytics streaming job.
+metadata:
+  description: Commands to manage stream-analytics streaming job.

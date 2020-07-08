@@ -1,50 +1,34 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_keyvault_storage_sas_definition
-  name: az keyvault storage sas-definition
-  summary: Manage storage account SAS definitions.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_keyvault_storage_sas_definition_create
-  - az_keyvault_storage_sas_definition_delete
-  - az_keyvault_storage_sas_definition_list
-  - az_keyvault_storage_sas_definition_list_deleted
-  - az_keyvault_storage_sas_definition_recover
-  - az_keyvault_storage_sas_definition_show
-  - az_keyvault_storage_sas_definition_show_deleted
-  - az_keyvault_storage_sas_definition_update
+### YamlMime:CLIGroup
+uid: az_keyvault_storage_sas_definition
+name: az keyvault storage sas-definition
+summary: Manage storage account SAS definitions.
+description: ''
+directCommands:
 - uid: az_keyvault_storage_sas_definition_create
   name: az keyvault storage sas-definition create
   summary: Creates or updates a new SAS definition for the specified storage account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add a sas-definition for an account sas-token
-    syntax:
-      content: >-
-        $sastoken = az storage account generate-sas --expiry 2020-01-01 --permissions rw --resource-types sco --services bfqt --https-only --account-name storageacct --account-key 00000000
+    syntax: >-
+      $sastoken = az storage account generate-sas --expiry 2020-01-01 --permissions rw --resource-types sco --services bfqt --https-only --account-name storageacct --account-key 00000000
 
 
-        az keyvault storage sas-definition create --vault-name vault --account-name storageacct -n rwallserviceaccess --validity-period P2D --sas-type account --template-uri $sastoken
+      az keyvault storage sas-definition create --vault-name vault --account-name storageacct -n rwallserviceaccess --validity-period P2D --sas-type account --template-uri $sastoken
   - summary: Add a sas-definition for a blob sas-token
-    syntax:
-      content: >-
-        $sastoken = az storage blob generate-sas --account-name storageacct --account-key 00000000 -c container1 -n blob1 --https-only --permissions rw
+    syntax: >-
+      $sastoken = az storage blob generate-sas --account-name storageacct --account-key 00000000 -c container1 -n blob1 --https-only --permissions rw
 
-        $url = az storage blob url --account-name storageacct -c container1 -n blob1
+      $url = az storage blob url --account-name storageacct -c container1 -n blob1
 
-        az keyvault storage sas-definition create --vault-name vault --account-name storageacct -n rwblobaccess --validity-period P2D --sas-type service --template-uri $url?$sastoken
+      az keyvault storage sas-definition create --vault-name vault --account-name storageacct -n rwblobaccess --validity-period P2D --sas-type service --template-uri $url?$sastoken
   - summary: Add a sas-definition for a container sas-token
-    syntax:
-      content: >-
-        $sastoken = az storage container generate-sas --account-name storageacct --account-key 00000000 -n container1 --https-only --permissions rw
+    syntax: >-
+      $sastoken = az storage container generate-sas --account-name storageacct --account-key 00000000 -n container1 --https-only --permissions rw
 
-        $url = "https://{storage-account-name}.blob.core.windows.net/{container-name}"  # The prefix of your blob url
+      $url = "https://{storage-account-name}.blob.core.windows.net/{container-name}"  # The prefix of your blob url
 
-        az keyvault storage sas-definition create --vault-name vault --account-name storageacct -n rwcontaineraccess --validity-period P2D --sas-type service --template-uri $url?$sastoken
+      az keyvault storage sas-definition create --vault-name vault --account-name storageacct -n rwcontaineraccess --validity-period P2D --sas-type service --template-uri $url?$sastoken
   parameters:
   - isRequired: true
     name: --sas-type
@@ -91,8 +75,6 @@ items:
   name: az keyvault storage sas-definition delete
   summary: Deletes a SAS definition from a specified storage account.
   description: This operation requires the storage/deletesas permission.
-  langs:
-  - azurecli
   parameters:
   - name: --account-name
     summary: Name to identify the storage account in the vault. Required if --id is not specified.
@@ -119,8 +101,6 @@ items:
   name: az keyvault storage sas-definition list
   summary: List storage SAS definitions for the given storage account.
   description: This operation requires the storage/listsas permission.
-  langs:
-  - azurecli
   parameters:
   - name: --maxresults
     summary: Maximum number of results to return in a page. If not specified the service will return up to 25 results.
@@ -146,8 +126,6 @@ items:
   name: az keyvault storage sas-definition list-deleted
   summary: Lists deleted SAS definitions for the specified vault and storage account.
   description: The Get Deleted Sas Definitions operation returns the SAS definitions that have been deleted for a vault enabled for soft-delete. This operation requires the storage/listsas permission.
-  langs:
-  - azurecli
   parameters:
   - name: --maxresults
     summary: Maximum number of results to return in a page. If not specified the service will return up to 25 results.
@@ -173,8 +151,6 @@ items:
   name: az keyvault storage sas-definition recover
   summary: Recovers the deleted SAS definition.
   description: Recovers the deleted SAS definition for the specified storage account. This operation can only be performed on a soft-delete enabled vault. This operation requires the storage/recover permission.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name
@@ -201,8 +177,6 @@ items:
   name: az keyvault storage sas-definition show
   summary: Gets information about a SAS definition for the specified storage account.
   description: This operation requires the storage/getsas permission.
-  langs:
-  - azurecli
   parameters:
   - name: --account-name
     summary: Name to identify the storage account in the vault. Required if --id is not specified.
@@ -229,8 +203,6 @@ items:
   name: az keyvault storage sas-definition show-deleted
   summary: Gets the specified deleted sas definition.
   description: The Get Deleted SAS Definition operation returns the specified deleted SAS definition along with its attributes. This operation requires the storage/getsas permission.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name
@@ -257,8 +229,6 @@ items:
   name: az keyvault storage sas-definition update
   summary: Updates the specified attributes associated with the given SAS definition.
   description: This operation requires the storage/setsas permission.
-  langs:
-  - azurecli
   parameters:
   - name: --disabled
     parameterValueGroup: false, true
@@ -299,30 +269,14 @@ items:
       path: src/azure-cli/azure/cli/command_modules/keyvault/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_keyvault_storage_sas_definition_create
-  name: az keyvault storage sas-definition create
-  summary: Creates or updates a new SAS definition for the specified storage account.
-- uid: az_keyvault_storage_sas_definition_delete
-  name: az keyvault storage sas-definition delete
-  summary: Deletes a SAS definition from a specified storage account.
-- uid: az_keyvault_storage_sas_definition_list
-  name: az keyvault storage sas-definition list
-  summary: List storage SAS definitions for the given storage account.
-- uid: az_keyvault_storage_sas_definition_list_deleted
-  name: az keyvault storage sas-definition list-deleted
-  summary: Lists deleted SAS definitions for the specified vault and storage account.
-- uid: az_keyvault_storage_sas_definition_recover
-  name: az keyvault storage sas-definition recover
-  summary: Recovers the deleted SAS definition.
-- uid: az_keyvault_storage_sas_definition_show
-  name: az keyvault storage sas-definition show
-  summary: Gets information about a SAS definition for the specified storage account.
-- uid: az_keyvault_storage_sas_definition_show_deleted
-  name: az keyvault storage sas-definition show-deleted
-  summary: Gets the specified deleted sas definition.
-- uid: az_keyvault_storage_sas_definition_update
-  name: az keyvault storage sas-definition update
-  summary: Updates the specified attributes associated with the given SAS definition.
+- az_keyvault_storage_sas_definition_create
+- az_keyvault_storage_sas_definition_delete
+- az_keyvault_storage_sas_definition_list
+- az_keyvault_storage_sas_definition_list_deleted
+- az_keyvault_storage_sas_definition_recover
+- az_keyvault_storage_sas_definition_show
+- az_keyvault_storage_sas_definition_show_deleted
+- az_keyvault_storage_sas_definition_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -338,10 +292,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/keyvault/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
-updated_at: 6/4/2020 1:53:34 PM
-ms.date: 06/04/2020
-description: Manage storage account SAS definitions.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
+  updated_at: 6/4/2020 1:53:34 PM
+  ms.date: 06/04/2020
+  description: Manage storage account SAS definitions.

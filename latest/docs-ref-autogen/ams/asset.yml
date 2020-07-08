@@ -1,26 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_ams_asset
-  name: az ams asset
-  summary: Manage assets for an Azure Media Services account.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_ams_asset_create
-  - az_ams_asset_delete
-  - az_ams_asset_get_encryption_key
-  - az_ams_asset_get_sas_urls
-  - az_ams_asset_list
-  - az_ams_asset_list_streaming_locators
-  - az_ams_asset_show
-  - az_ams_asset_update
+### YamlMime:CLIGroup
+uid: az_ams_asset
+name: az ams asset
+summary: Manage assets for an Azure Media Services account.
+description: ''
+directCommands:
 - uid: az_ams_asset_create
   name: az ams asset create
   summary: Create an asset.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -59,8 +46,6 @@ items:
   name: az ams asset delete
   summary: Delete an asset.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -87,8 +72,6 @@ items:
   name: az ams asset get-encryption-key
   summary: Get the asset storage encryption keys used to decrypt content created by version 2 of the Media Services API.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -115,8 +98,6 @@ items:
   name: az ams asset get-sas-urls
   summary: Lists storage container URLs with shared access signatures (SAS) for uploading and downloading Asset content. The signatures are derived from the storage account keys.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --expiry
     defaultValue: 2020-07-02 03:14:45.451686
@@ -152,12 +133,9 @@ items:
   name: az ams asset list
   summary: List all the assets of an Azure Media Services account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all the assets whose names start with the string 'Something'.
-    syntax:
-      content: az ams asset list -a amsAccount -g resourceGroup --query [?starts_with(name,'Something')]
+    syntax: az ams asset list -a amsAccount -g resourceGroup --query [?starts_with(name,'Something')]
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -189,8 +167,6 @@ items:
   name: az ams asset list-streaming-locators
   summary: List streaming locators which are associated with this asset.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -217,8 +193,6 @@ items:
   name: az ams asset show
   summary: Show the details of an asset.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -245,8 +219,6 @@ items:
   name: az ams asset update
   summary: Update the details of an asset.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --alternate-id
     summary: The alternate id of the asset.
@@ -288,30 +260,14 @@ items:
       path: src/azure-cli/azure/cli/command_modules/ams/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_ams_asset_create
-  name: az ams asset create
-  summary: Create an asset.
-- uid: az_ams_asset_delete
-  name: az ams asset delete
-  summary: Delete an asset.
-- uid: az_ams_asset_get_encryption_key
-  name: az ams asset get-encryption-key
-  summary: Get the asset storage encryption keys used to decrypt content created by version 2 of the Media Services API.
-- uid: az_ams_asset_get_sas_urls
-  name: az ams asset get-sas-urls
-  summary: Lists storage container URLs with shared access signatures (SAS) for uploading and downloading Asset content. The signatures are derived from the storage account keys.
-- uid: az_ams_asset_list
-  name: az ams asset list
-  summary: List all the assets of an Azure Media Services account.
-- uid: az_ams_asset_list_streaming_locators
-  name: az ams asset list-streaming-locators
-  summary: List streaming locators which are associated with this asset.
-- uid: az_ams_asset_show
-  name: az ams asset show
-  summary: Show the details of an asset.
-- uid: az_ams_asset_update
-  name: az ams asset update
-  summary: Update the details of an asset.
+- az_ams_asset_create
+- az_ams_asset_delete
+- az_ams_asset_get_encryption_key
+- az_ams_asset_get_sas_urls
+- az_ams_asset_list
+- az_ams_asset_list_streaming_locators
+- az_ams_asset_show
+- az_ams_asset_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -327,10 +283,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
-updated_at: 3/25/2020 2:12:45 AM
-ms.date: 03/25/2020
-description: Manage assets for an Azure Media Services account.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
+  updated_at: 3/25/2020 2:12:45 AM
+  ms.date: 03/25/2020
+  description: Manage assets for an Azure Media Services account.

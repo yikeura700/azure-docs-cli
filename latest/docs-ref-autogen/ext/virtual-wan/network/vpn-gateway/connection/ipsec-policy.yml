@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_virtual-wan_az_network_vpn_gateway_connection_ipsec_policy
-  name: az network vpn-gateway connection ipsec-policy
-  summary: Manage VPN gateway connection IPSec policies.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_virtual-wan_az_network_vpn_gateway_connection_ipsec_policy_add
-  - ext_virtual-wan_az_network_vpn_gateway_connection_ipsec_policy_list
-  - ext_virtual-wan_az_network_vpn_gateway_connection_ipsec_policy_remove
+### YamlMime:CLIGroup
+uid: ext_virtual-wan_az_network_vpn_gateway_connection_ipsec_policy
+name: az network vpn-gateway connection ipsec-policy
+summary: Manage VPN gateway connection IPSec policies.
+description: ''
+directCommands:
 - uid: ext_virtual-wan_az_network_vpn_gateway_connection_ipsec_policy_add
   name: az network vpn-gateway connection ipsec-policy add
   summary: Add an IPSec policy to a VPN gateway connection.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --connection-name
@@ -74,8 +66,6 @@ items:
   name: az network vpn-gateway connection ipsec-policy list
   summary: List VPN gateway connection IPSec policies.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --connection-name
@@ -93,8 +83,6 @@ items:
   name: az network vpn-gateway connection ipsec-policy remove
   summary: Remove an IPSec policy from a VPN gateway connection.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --connection-name
@@ -116,15 +104,9 @@ items:
     summary: Do not wait for the long-running operation to finish.
     description: ''
 commands:
-- uid: ext_virtual-wan_az_network_vpn_gateway_connection_ipsec_policy_add
-  name: az network vpn-gateway connection ipsec-policy add
-  summary: Add an IPSec policy to a VPN gateway connection.
-- uid: ext_virtual-wan_az_network_vpn_gateway_connection_ipsec_policy_list
-  name: az network vpn-gateway connection ipsec-policy list
-  summary: List VPN gateway connection IPSec policies.
-- uid: ext_virtual-wan_az_network_vpn_gateway_connection_ipsec_policy_remove
-  name: az network vpn-gateway connection ipsec-policy remove
-  summary: Remove an IPSec policy from a VPN gateway connection.
+- ext_virtual-wan_az_network_vpn_gateway_connection_ipsec_policy_add
+- ext_virtual-wan_az_network_vpn_gateway_connection_ipsec_policy_list
+- ext_virtual-wan_az_network_vpn_gateway_connection_ipsec_policy_remove
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -140,4 +122,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage VPN gateway connection IPSec policies.
+metadata:
+  description: Manage VPN gateway connection IPSec policies.

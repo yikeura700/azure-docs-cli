@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_timeseriesinsights_az_timeseriesinsights_reference_data_set
-  name: az timeseriesinsights reference-data-set
-  summary: Commands to manage timeseriesinsights reference data set.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_create
-  - ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_delete
-  - ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_list
-  - ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_show
-  - ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_update
+### YamlMime:CLIGroup
+uid: ext_timeseriesinsights_az_timeseriesinsights_reference_data_set
+name: az timeseriesinsights reference-data-set
+summary: Commands to manage timeseriesinsights reference data set.
+description: ''
+directCommands:
 - uid: ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_create
   name: az timeseriesinsights reference-data-set create
   summary: Create or update a reference data set in the specified environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create reference-data-set
-    syntax:
-      content: az timeseriesinsights reference-data-set create -g {rg} --environment-name {env} -n {rds} --key-properties DeviceId1 String DeviceFloor Double --data-string-comparison-behavior Ordinal
+    syntax: az timeseriesinsights reference-data-set create -g {rg} --environment-name {env} -n {rds} --key-properties DeviceId1 String DeviceFloor Double --data-string-comparison-behavior Ordinal
   parameters:
   - isRequired: true
     name: --data-string-comparison-behavior
@@ -54,12 +43,9 @@ items:
   name: az timeseriesinsights reference-data-set delete
   summary: Delete the reference data set with the specified name in the specified subscription, resource group, and environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete reference-data-set
-    syntax:
-      content: az timeseriesinsights reference-data-set delete -g {rg} --environment-name {env} -n {rds}
+    syntax: az timeseriesinsights reference-data-set delete -g {rg} --environment-name {env} -n {rds}
   parameters:
   - isRequired: true
     name: --environment-name
@@ -80,12 +66,9 @@ items:
   name: az timeseriesinsights reference-data-set list
   summary: List all the available reference data sets associated with the subscription and within the specified resource group and environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List reference-data-set by environment
-    syntax:
-      content: az timeseriesinsights reference-data-set list -g {rg} --environment-name {env}
+    syntax: az timeseriesinsights reference-data-set list -g {rg} --environment-name {env}
   parameters:
   - isRequired: true
     name: --environment-name
@@ -99,12 +82,9 @@ items:
   name: az timeseriesinsights reference-data-set show
   summary: Show the reference data set with the specified name in the specified environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show reference-data-set
-    syntax:
-      content: az timeseriesinsights reference-data-set show -g {rg} --environment-name {env} -n {rds}
+    syntax: az timeseriesinsights reference-data-set show -g {rg} --environment-name {env} -n {rds}
   parameters:
   - isRequired: true
     name: --environment-name
@@ -122,12 +102,9 @@ items:
   name: az timeseriesinsights reference-data-set update
   summary: Create or update a reference data set in the specified environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update reference-data-set
-    syntax:
-      content: az timeseriesinsights reference-data-set update -g {rg} --environment-name {env} -n {rds} --tags mykey=myvalue
+    syntax: az timeseriesinsights reference-data-set update -g {rg} --environment-name {env} -n {rds} --tags mykey=myvalue
   parameters:
   - isRequired: true
     name: --environment-name
@@ -145,21 +122,11 @@ items:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
 commands:
-- uid: ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_create
-  name: az timeseriesinsights reference-data-set create
-  summary: Create or update a reference data set in the specified environment.
-- uid: ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_delete
-  name: az timeseriesinsights reference-data-set delete
-  summary: Delete the reference data set with the specified name in the specified subscription, resource group, and environment.
-- uid: ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_list
-  name: az timeseriesinsights reference-data-set list
-  summary: List all the available reference data sets associated with the subscription and within the specified resource group and environment.
-- uid: ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_show
-  name: az timeseriesinsights reference-data-set show
-  summary: Show the reference data set with the specified name in the specified environment.
-- uid: ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_update
-  name: az timeseriesinsights reference-data-set update
-  summary: Create or update a reference data set in the specified environment.
+- ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_create
+- ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_delete
+- ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_list
+- ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_show
+- ext_timeseriesinsights_az_timeseriesinsights_reference_data_set_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -175,4 +142,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage timeseriesinsights reference data set.
+metadata:
+  description: Commands to manage timeseriesinsights reference data set.

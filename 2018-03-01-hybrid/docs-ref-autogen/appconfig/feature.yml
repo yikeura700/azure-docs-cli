@@ -1,33 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_appconfig_feature
-  name: az appconfig feature
-  summary: Manage feature flags stored in an App Configuration.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_appconfig_feature_delete
-  - az_appconfig_feature_disable
-  - az_appconfig_feature_enable
-  - az_appconfig_feature_list
-  - az_appconfig_feature_lock
-  - az_appconfig_feature_set
-  - az_appconfig_feature_show
-  - az_appconfig_feature_unlock
+### YamlMime:CLIGroup
+uid: az_appconfig_feature
+name: az appconfig feature
+summary: Manage feature flags stored in an App Configuration.
+description: ''
+directCommands:
 - uid: az_appconfig_feature_delete
   name: az appconfig feature delete
   summary: Delete feature flag.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a feature using App Configuration name without confirmation.
-    syntax:
-      content: az appconfig feature delete -n MyAppConfiguration --feature color --label MyLabel --yes
+    syntax: az appconfig feature delete -n MyAppConfiguration --feature color --label MyLabel --yes
   - summary: Delete a feature using connection string.
-    syntax:
-      content: az appconfig feature delete --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label MyLabel
+    syntax: az appconfig feature delete --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label MyLabel
   parameters:
   - isRequired: true
     name: --feature
@@ -58,15 +43,11 @@ items:
   name: az appconfig feature disable
   summary: Disable a feature flag to turn it OFF for use.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: disable a feature using App Configuration name.
-    syntax:
-      content: az appconfig feature disable -n MyAppConfiguration --feature color --label test
+    syntax: az appconfig feature disable -n MyAppConfiguration --feature color --label test
   - summary: Force disabling a feature using connection string.
-    syntax:
-      content: az appconfig feature disable --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label test --yes
+    syntax: az appconfig feature disable --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label test --yes
   parameters:
   - isRequired: true
     name: --feature
@@ -97,15 +78,11 @@ items:
   name: az appconfig feature enable
   summary: Enable a feature flag to turn it ON for use.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: enable a feature using App Configuration name.
-    syntax:
-      content: az appconfig feature enable -n MyAppConfiguration --feature color --label test
+    syntax: az appconfig feature enable -n MyAppConfiguration --feature color --label test
   - summary: Force enabling a feature using connection string.
-    syntax:
-      content: az appconfig feature enable --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label test --yes
+    syntax: az appconfig feature enable --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label test --yes
   parameters:
   - isRequired: true
     name: --feature
@@ -136,27 +113,19 @@ items:
   name: az appconfig feature list
   summary: List feature flags.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all feature flags.
-    syntax:
-      content: az appconfig feature list -n MyAppConfiguration
+    syntax: az appconfig feature list -n MyAppConfiguration
   - summary: List all feature flags with null labels.
-    syntax:
-      content: az appconfig feature list -n MyAppConfiguration --label \0
+    syntax: az appconfig feature list -n MyAppConfiguration --label \0
   - summary: List a specfic feature for any label start with v1. using connection string.
-    syntax:
-      content: az appconfig feature list --feature color --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --label v1.*
+    syntax: az appconfig feature list --feature color --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --label v1.*
   - summary: List all features with any labels and query only key, state and conditions.
-    syntax:
-      content: az appconfig feature list --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --fields key state conditions
+    syntax: az appconfig feature list --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --fields key state conditions
   - summary: List 150 feature flags with any labels.
-    syntax:
-      content: az appconfig feature list --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx  --top 150
+    syntax: az appconfig feature list --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx  --top 150
   - summary: List feature flags with multiple labels.
-    syntax:
-      content: az appconfig feature list --label test,prod,\0 -n MyAppConfiguration
+    syntax: az appconfig feature list --label test,prod,\0 -n MyAppConfiguration
   parameters:
   - name: --all
     summary: List all feature flags.
@@ -193,15 +162,11 @@ items:
   name: az appconfig feature lock
   summary: Lock a feature flag to prohibit write operations.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Lock a feature using App Configuration name.
-    syntax:
-      content: az appconfig feature lock -n MyAppConfiguration --feature color --label test
+    syntax: az appconfig feature lock -n MyAppConfiguration --feature color --label test
   - summary: Force locking a feature using connection string.
-    syntax:
-      content: az appconfig feature lock --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label test --yes
+    syntax: az appconfig feature lock --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label test --yes
   parameters:
   - isRequired: true
     name: --feature
@@ -232,15 +197,11 @@ items:
   name: az appconfig feature set
   summary: Set a feature flag.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Set a feature flag with label MyLabel.
-    syntax:
-      content: az appconfig feature set -n MyAppConfiguration --feature color --label MyLabel
+    syntax: az appconfig feature set -n MyAppConfiguration --feature color --label MyLabel
   - summary: Set a feature flag with null label using connection string and set a description.
-    syntax:
-      content: az appconfig feature set --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --description "This is a colorful feature"
+    syntax: az appconfig feature set --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --description "This is a colorful feature"
   parameters:
   - isRequired: true
     name: --feature
@@ -274,15 +235,11 @@ items:
   name: az appconfig feature show
   summary: Show all attributes of a feature flag.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a feature flag using App Configuration name with a specific label
-    syntax:
-      content: az appconfig feature show -n MyAppConfiguration --feature color --label MyLabel
+    syntax: az appconfig feature show -n MyAppConfiguration --feature color --label MyLabel
   - summary: Show a feature flag using connection string and field filters
-    syntax:
-      content: az appconfig feature show --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --fields key locked conditions state
+    syntax: az appconfig feature show --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --fields key locked conditions state
   parameters:
   - isRequired: true
     name: --feature
@@ -314,15 +271,11 @@ items:
   name: az appconfig feature unlock
   summary: Unlock a feature to gain write operations.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Unlock a feature using App Configuration name.
-    syntax:
-      content: az appconfig feature unlock -n MyAppConfiguration --feature color --label test
+    syntax: az appconfig feature unlock -n MyAppConfiguration --feature color --label test
   - summary: Force unlocking a feature using connection string.
-    syntax:
-      content: az appconfig feature unlock --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label test --yes
+    syntax: az appconfig feature unlock --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label test --yes
   parameters:
   - isRequired: true
     name: --feature
@@ -350,45 +303,19 @@ items:
       path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_appconfig_feature_delete
-  name: az appconfig feature delete
-  summary: Delete feature flag.
-- uid: az_appconfig_feature_disable
-  name: az appconfig feature disable
-  summary: Disable a feature flag to turn it OFF for use.
-- uid: az_appconfig_feature_enable
-  name: az appconfig feature enable
-  summary: Enable a feature flag to turn it ON for use.
-- uid: az_appconfig_feature_filter
-  name: az appconfig feature filter
-  summary: Manage filters associated with feature flags stored in an App Configuration.
-- uid: az_appconfig_feature_filter_add
-  name: az appconfig feature filter add
-  summary: Add a filter to a feature flag.
-- uid: az_appconfig_feature_filter_delete
-  name: az appconfig feature filter delete
-  summary: Delete a filter from a feature flag.
-- uid: az_appconfig_feature_filter_list
-  name: az appconfig feature filter list
-  summary: List all filters for a feature flag.
-- uid: az_appconfig_feature_filter_show
-  name: az appconfig feature filter show
-  summary: Show filters of a feature flag.
-- uid: az_appconfig_feature_list
-  name: az appconfig feature list
-  summary: List feature flags.
-- uid: az_appconfig_feature_lock
-  name: az appconfig feature lock
-  summary: Lock a feature flag to prohibit write operations.
-- uid: az_appconfig_feature_set
-  name: az appconfig feature set
-  summary: Set a feature flag.
-- uid: az_appconfig_feature_show
-  name: az appconfig feature show
-  summary: Show all attributes of a feature flag.
-- uid: az_appconfig_feature_unlock
-  name: az appconfig feature unlock
-  summary: Unlock a feature to gain write operations.
+- az_appconfig_feature_delete
+- az_appconfig_feature_disable
+- az_appconfig_feature_enable
+- az_appconfig_feature_filter
+- az_appconfig_feature_filter_add
+- az_appconfig_feature_filter_delete
+- az_appconfig_feature_filter_list
+- az_appconfig_feature_filter_show
+- az_appconfig_feature_list
+- az_appconfig_feature_lock
+- az_appconfig_feature_set
+- az_appconfig_feature_show
+- az_appconfig_feature_unlock
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -404,10 +331,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/26e341bd9ce989aa68defdb81ceede36b6c5ba6f/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-updated_at: 5/7/2020 7:45:43 AM
-ms.date: 05/07/2020
-description: Manage feature flags stored in an App Configuration.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/26e341bd9ce989aa68defdb81ceede36b6c5ba6f/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
+  updated_at: 5/7/2020 7:45:43 AM
+  ms.date: 05/07/2020
+  description: Manage feature flags stored in an App Configuration.

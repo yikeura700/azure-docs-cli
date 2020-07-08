@@ -1,30 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime
-  name: az ml endpoint realtime
-  summary: Manage operationalized realtime endpoints.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-cli-ml_az_ml_endpoint_realtime_create_version
-  - ext_azure-cli-ml_az_ml_endpoint_realtime_delete
-  - ext_azure-cli-ml_az_ml_endpoint_realtime_delete_version
-  - ext_azure-cli-ml_az_ml_endpoint_realtime_get_access_token
-  - ext_azure-cli-ml_az_ml_endpoint_realtime_get_keys
-  - ext_azure-cli-ml_az_ml_endpoint_realtime_get_logs
-  - ext_azure-cli-ml_az_ml_endpoint_realtime_list
-  - ext_azure-cli-ml_az_ml_endpoint_realtime_regen_key
-  - ext_azure-cli-ml_az_ml_endpoint_realtime_run
-  - ext_azure-cli-ml_az_ml_endpoint_realtime_show
-  - ext_azure-cli-ml_az_ml_endpoint_realtime_update
-  - ext_azure-cli-ml_az_ml_endpoint_realtime_update_version
+### YamlMime:CLIGroup
+uid: ext_azure-cli-ml_az_ml_endpoint_realtime
+name: az ml endpoint realtime
+summary: Manage operationalized realtime endpoints.
+description: ''
+directCommands:
 - uid: ext_azure-cli-ml_az_ml_endpoint_realtime_create_version
   name: az ml endpoint realtime create-version
   summary: Create a version for realtime endpoint in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -158,8 +141,6 @@ items:
   name: az ml endpoint realtime delete
   summary: Delete a realtime endpoint and its version from the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -184,8 +165,6 @@ items:
   name: az ml endpoint realtime delete-version
   summary: Delete a version for realtime endpoint in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -217,8 +196,6 @@ items:
   name: az ml endpoint realtime get-access-token
   summary: Get a token to issue requests a realtime endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -243,8 +220,6 @@ items:
   name: az ml endpoint realtime get-keys
   summary: Get keys to issue requests against a realtime endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -269,8 +244,6 @@ items:
   name: az ml endpoint realtime get-logs
   summary: Get logs for a realtime endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -302,8 +275,6 @@ items:
   name: az ml endpoint realtime list
   summary: List realtime endpoints in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --compute-type -c
     summary: If provided, will only show services that have the specified compute type. (Options are 'ACI', 'AKS', 'AKSENDPOINT').
@@ -339,8 +310,6 @@ items:
   name: az ml endpoint realtime regen-key
   summary: Regenerate keys for a realtime endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --key -k
@@ -372,8 +341,6 @@ items:
   name: az ml endpoint realtime run
   summary: Run a realtime endpoint in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -401,8 +368,6 @@ items:
   name: az ml endpoint realtime show
   summary: Show details for a realtime endpoint in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -427,8 +392,6 @@ items:
   name: az ml endpoint realtime update
   summary: Update a realtime endpoint in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -477,8 +440,6 @@ items:
   name: az ml endpoint realtime update-version
   summary: Update a version for realtime endpoint in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -609,42 +570,18 @@ items:
     summary: Verbosity flag.
     description: ''
 commands:
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime_create_version
-  name: az ml endpoint realtime create-version
-  summary: Create a version for realtime endpoint in the workspace.
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime_delete
-  name: az ml endpoint realtime delete
-  summary: Delete a realtime endpoint and its version from the workspace.
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime_delete_version
-  name: az ml endpoint realtime delete-version
-  summary: Delete a version for realtime endpoint in the workspace.
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime_get_access_token
-  name: az ml endpoint realtime get-access-token
-  summary: Get a token to issue requests a realtime endpoint.
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime_get_keys
-  name: az ml endpoint realtime get-keys
-  summary: Get keys to issue requests against a realtime endpoint.
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime_get_logs
-  name: az ml endpoint realtime get-logs
-  summary: Get logs for a realtime endpoint.
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime_list
-  name: az ml endpoint realtime list
-  summary: List realtime endpoints in the workspace.
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime_regen_key
-  name: az ml endpoint realtime regen-key
-  summary: Regenerate keys for a realtime endpoint.
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime_run
-  name: az ml endpoint realtime run
-  summary: Run a realtime endpoint in the workspace.
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime_show
-  name: az ml endpoint realtime show
-  summary: Show details for a realtime endpoint in the workspace.
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime_update
-  name: az ml endpoint realtime update
-  summary: Update a realtime endpoint in the workspace.
-- uid: ext_azure-cli-ml_az_ml_endpoint_realtime_update_version
-  name: az ml endpoint realtime update-version
-  summary: Update a version for realtime endpoint in the workspace.
+- ext_azure-cli-ml_az_ml_endpoint_realtime_create_version
+- ext_azure-cli-ml_az_ml_endpoint_realtime_delete
+- ext_azure-cli-ml_az_ml_endpoint_realtime_delete_version
+- ext_azure-cli-ml_az_ml_endpoint_realtime_get_access_token
+- ext_azure-cli-ml_az_ml_endpoint_realtime_get_keys
+- ext_azure-cli-ml_az_ml_endpoint_realtime_get_logs
+- ext_azure-cli-ml_az_ml_endpoint_realtime_list
+- ext_azure-cli-ml_az_ml_endpoint_realtime_regen_key
+- ext_azure-cli-ml_az_ml_endpoint_realtime_run
+- ext_azure-cli-ml_az_ml_endpoint_realtime_show
+- ext_azure-cli-ml_az_ml_endpoint_realtime_update
+- ext_azure-cli-ml_az_ml_endpoint_realtime_update_version
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -660,4 +597,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage operationalized realtime endpoints.
+metadata:
+  description: Manage operationalized realtime endpoints.

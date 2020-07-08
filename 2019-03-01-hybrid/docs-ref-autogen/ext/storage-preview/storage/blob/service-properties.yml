@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_storage-preview_az_storage_blob_service_properties
-  name: az storage blob service-properties
-  summary: Manage storage blob service properties.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_storage-preview_az_storage_blob_service_properties_show
-  - ext_storage-preview_az_storage_blob_service_properties_update
+### YamlMime:CLIGroup
+uid: ext_storage-preview_az_storage_blob_service_properties
+name: az storage blob service-properties
+summary: Manage storage blob service properties.
+description: ''
+directCommands:
 - uid: ext_storage-preview_az_storage_blob_service_properties_show
   name: az storage blob service-properties show
   summary: Gets the properties of a storage account's Blob service, including Azure Storage Analytics.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --auth-mode
     parameterValueGroup: key, login
@@ -39,8 +32,6 @@ items:
   name: az storage blob service-properties update
   summary: Update storage blob service properties.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --auth-mode
     parameterValueGroup: key, login
@@ -91,12 +82,8 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_storage-preview_az_storage_blob_service_properties_show
-  name: az storage blob service-properties show
-  summary: Gets the properties of a storage account's Blob service, including Azure Storage Analytics.
-- uid: ext_storage-preview_az_storage_blob_service_properties_update
-  name: az storage blob service-properties update
-  summary: Update storage blob service properties.
+- ext_storage-preview_az_storage_blob_service_properties_show
+- ext_storage-preview_az_storage_blob_service_properties_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -112,4 +99,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage storage blob service properties.
+metadata:
+  description: Manage storage blob service properties.

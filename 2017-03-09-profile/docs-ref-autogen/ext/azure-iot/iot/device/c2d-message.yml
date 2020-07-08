@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-iot_az_iot_device_c2d_message
-  name: az iot device c2d-message
-  summary: Cloud-to-device messaging commands.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-iot_az_iot_device_c2d_message_abandon
-  - ext_azure-iot_az_iot_device_c2d_message_complete
-  - ext_azure-iot_az_iot_device_c2d_message_receive
-  - ext_azure-iot_az_iot_device_c2d_message_reject
-  - ext_azure-iot_az_iot_device_c2d_message_send
+### YamlMime:CLIGroup
+uid: ext_azure-iot_az_iot_device_c2d_message
+name: az iot device c2d-message
+summary: Cloud-to-device messaging commands.
+description: ''
+directCommands:
 - uid: ext_azure-iot_az_iot_device_c2d_message_abandon
   name: az iot device c2d-message abandon
   summary: Abandon a cloud-to-device message.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -40,8 +30,6 @@ items:
   name: az iot device c2d-message complete
   summary: Complete a cloud-to-device message.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -64,8 +52,6 @@ items:
   name: az iot device c2d-message receive
   summary: Receive a cloud-to-device message.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -88,8 +74,6 @@ items:
   name: az iot device c2d-message reject
   summary: Reject or deadletter a cloud-to-device message.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -117,18 +101,13 @@ items:
     This command relies on and may install dependent Cython package (uamqp) upon first execution.
 
     <a href="https://github.com/Azure/azure-uamqp-python">https://github.com/Azure/azure-uamqp-python</a>.
-  langs:
-  - azurecli
   examples:
   - summary: Basic usage with default message body
-    syntax:
-      content: az iot device c2d-message send -d {device_id} -n {iothub_name}
+    syntax: az iot device c2d-message send -d {device_id} -n {iothub_name}
   - summary: Send cloud-to-device message with custom data and properties.
-    syntax:
-      content: az iot device c2d-message send -d {device_id} -n {iothub_name} --data 'Hello World' --props 'key0=value0;key1=value1'
+    syntax: az iot device c2d-message send -d {device_id} -n {iothub_name} --data 'Hello World' --props 'key0=value0;key1=value1'
   - summary: Send a C2D message and wait for device acknowledgement
-    syntax:
-      content: az iot device c2d-message send -d {device_id} -n {iothub_name} --ack full --wait
+    syntax: az iot device c2d-message send -d {device_id} -n {iothub_name} --ack full --wait
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -186,21 +165,11 @@ items:
     summary: 'Skip user prompts. Indicates acceptance of dependency installation (if required). Used primarily for automation scenarios. Default: false.'
     description: ''
 commands:
-- uid: ext_azure-iot_az_iot_device_c2d_message_abandon
-  name: az iot device c2d-message abandon
-  summary: Abandon a cloud-to-device message.
-- uid: ext_azure-iot_az_iot_device_c2d_message_complete
-  name: az iot device c2d-message complete
-  summary: Complete a cloud-to-device message.
-- uid: ext_azure-iot_az_iot_device_c2d_message_receive
-  name: az iot device c2d-message receive
-  summary: Receive a cloud-to-device message.
-- uid: ext_azure-iot_az_iot_device_c2d_message_reject
-  name: az iot device c2d-message reject
-  summary: Reject or deadletter a cloud-to-device message.
-- uid: ext_azure-iot_az_iot_device_c2d_message_send
-  name: az iot device c2d-message send
-  summary: Send a cloud-to-device message.
+- ext_azure-iot_az_iot_device_c2d_message_abandon
+- ext_azure-iot_az_iot_device_c2d_message_complete
+- ext_azure-iot_az_iot_device_c2d_message_receive
+- ext_azure-iot_az_iot_device_c2d_message_reject
+- ext_azure-iot_az_iot_device_c2d_message_send
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -216,4 +185,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Cloud-to-device messaging commands.
+metadata:
+  description: Cloud-to-device messaging commands.

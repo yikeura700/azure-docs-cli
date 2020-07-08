@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-iot_az_dt_endpoint_create
-  name: az dt endpoint create
-  summary: Add egress endpoints to a Digital Twins instance.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-iot_az_dt_endpoint_create_eventgrid
-  - ext_azure-iot_az_dt_endpoint_create_eventhub
-  - ext_azure-iot_az_dt_endpoint_create_servicebus
+### YamlMime:CLIGroup
+uid: ext_azure-iot_az_dt_endpoint_create
+name: az dt endpoint create
+summary: Add egress endpoints to a Digital Twins instance.
+description: ''
+directCommands:
 - uid: ext_azure-iot_az_dt_endpoint_create_eventgrid
   name: az dt endpoint create eventgrid
   summary: Adds an EventGrid Topic endpoint to a Digital Twins instance. Requires pre-created resource.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Adds an EventGrid Topic endpoint to a target instance.
-    syntax:
-      content: az dt endpoint create eventgrid --endpoint-name {endpoint_name} --eventgrid-resource-group {eventgrid_resource_group} --eventgrid-topic {eventgrid_topic_name} -n {instance_name}
+    syntax: az dt endpoint create eventgrid --endpoint-name {endpoint_name} --eventgrid-resource-group {eventgrid_resource_group} --eventgrid-topic {eventgrid_topic_name} -n {instance_name}
   parameters:
   - isRequired: true
     name: --dt-name --dtn -n
@@ -50,12 +41,9 @@ items:
   name: az dt endpoint create eventhub
   summary: Adds an EventHub endpoint to a Digital Twins instance. Requires pre-created resource.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Adds an EventHub endpoint to a target instance.
-    syntax:
-      content: az dt endpoint create eventhub --endpoint-name {endpoint_name} --eventhub-resource-group {eventhub_resource_group} --eventhub-namespace {eventhub_namespace} --eventhub {eventhub_name} --eventhub-policy {eventhub_policy} -n {instance_name}
+    syntax: az dt endpoint create eventhub --endpoint-name {endpoint_name} --eventhub-resource-group {eventhub_resource_group} --eventhub-namespace {eventhub_namespace} --eventhub {eventhub_name} --eventhub-policy {eventhub_policy} -n {instance_name}
   parameters:
   - isRequired: true
     name: --dt-name --dtn -n
@@ -94,12 +82,9 @@ items:
   name: az dt endpoint create servicebus
   summary: Adds a ServiceBus Topic endpoint to a Digital Twins instance. Requires pre-created resource.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Adds a ServiceBus Topic endpoint to a target instance.
-    syntax:
-      content: az dt endpoint create servicebus --endpoint-name {endpoint_name} --servicebus-resource-group {servicebus_resource_group} --servicebus-namespace {servicebus_namespace} --servicebus-topic {servicebus_topic_name} --servicebus-policy {servicebus_policy} -n {instance_name}
+    syntax: az dt endpoint create servicebus --endpoint-name {endpoint_name} --servicebus-resource-group {servicebus_resource_group} --servicebus-namespace {servicebus_namespace} --servicebus-topic {servicebus_topic_name} --servicebus-policy {servicebus_policy} -n {instance_name}
   parameters:
   - isRequired: true
     name: --dt-name --dtn -n
@@ -135,15 +120,9 @@ items:
     summary: Name or ID of subscription where the endpoint resource exists. If no subscription is provided the default subscription is used.
     description: ''
 commands:
-- uid: ext_azure-iot_az_dt_endpoint_create_eventgrid
-  name: az dt endpoint create eventgrid
-  summary: Adds an EventGrid Topic endpoint to a Digital Twins instance. Requires pre-created resource.
-- uid: ext_azure-iot_az_dt_endpoint_create_eventhub
-  name: az dt endpoint create eventhub
-  summary: Adds an EventHub endpoint to a Digital Twins instance. Requires pre-created resource.
-- uid: ext_azure-iot_az_dt_endpoint_create_servicebus
-  name: az dt endpoint create servicebus
-  summary: Adds a ServiceBus Topic endpoint to a Digital Twins instance. Requires pre-created resource.
+- ext_azure-iot_az_dt_endpoint_create_eventgrid
+- ext_azure-iot_az_dt_endpoint_create_eventhub
+- ext_azure-iot_az_dt_endpoint_create_servicebus
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -159,4 +138,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Add egress endpoints to a Digital Twins instance.
+metadata:
+  description: Add egress endpoints to a Digital Twins instance.

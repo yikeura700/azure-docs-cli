@@ -1,25 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_aks-preview_az_aks_nodepool
-  name: az aks nodepool
-  summary: Commands to manage node pools in Kubernetes kubernetes cluster.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_aks-preview_az_aks_nodepool_add
-  - ext_aks-preview_az_aks_nodepool_delete
-  - ext_aks-preview_az_aks_nodepool_list
-  - ext_aks-preview_az_aks_nodepool_scale
-  - ext_aks-preview_az_aks_nodepool_show
-  - ext_aks-preview_az_aks_nodepool_update
-  - ext_aks-preview_az_aks_nodepool_upgrade
+### YamlMime:CLIGroup
+uid: ext_aks-preview_az_aks_nodepool
+name: az aks nodepool
+summary: Commands to manage node pools in Kubernetes kubernetes cluster.
+description: ''
+directCommands:
 - uid: ext_aks-preview_az_aks_nodepool_add
   name: az aks nodepool add
   summary: Add a node pool to the managed Kubernetes cluster.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -117,8 +105,6 @@ items:
   name: az aks nodepool delete
   summary: Delete the agent pool in the managed Kubernetes cluster.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -139,8 +125,6 @@ items:
   name: az aks nodepool list
   summary: List node pools in the managed Kubernetes cluster.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -154,8 +138,6 @@ items:
   name: az aks nodepool scale
   summary: Scale the node pool in a managed Kubernetes cluster.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -180,8 +162,6 @@ items:
   name: az aks nodepool show
   summary: Show the details for a node pool in the managed Kubernetes cluster.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -199,21 +179,15 @@ items:
   name: az aks nodepool update
   summary: Update a node pool to enable/disable cluster-autoscaler or change min-count or max-count.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Enable cluster-autoscaler within node count range [1,5]
-    syntax:
-      content: az aks nodepool update --enable-cluster-autoscaler --min-count 1 --max-count 5 -g MyResourceGroup -n nodepool1 --cluster-name MyManagedCluster
+    syntax: az aks nodepool update --enable-cluster-autoscaler --min-count 1 --max-count 5 -g MyResourceGroup -n nodepool1 --cluster-name MyManagedCluster
   - summary: Disable cluster-autoscaler for an existing cluster
-    syntax:
-      content: az aks nodepool update --disable-cluster-autoscaler -g MyResourceGroup -n nodepool1 --cluster-name MyManagedCluster
+    syntax: az aks nodepool update --disable-cluster-autoscaler -g MyResourceGroup -n nodepool1 --cluster-name MyManagedCluster
   - summary: Update min-count or max-count for cluster autoscaler.
-    syntax:
-      content: az aks nodepool update --update-cluster-autoscaler --min-count 1 --max-count 10 -g MyResourceGroup -n nodepool1 --cluster-name MyManagedCluster
+    syntax: az aks nodepool update --update-cluster-autoscaler --min-count 1 --max-count 10 -g MyResourceGroup -n nodepool1 --cluster-name MyManagedCluster
   - summary: Change a node pool to system mode
-    syntax:
-      content: az aks nodepool update --mode System -g MyResourceGroup -n nodepool1 --cluster-name MyManagedCluster
+    syntax: az aks nodepool update --mode System -g MyResourceGroup -n nodepool1 --cluster-name MyManagedCluster
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -259,8 +233,6 @@ items:
   name: az aks nodepool upgrade
   summary: Upgrade the node pool in a managed Kubernetes cluster.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -287,27 +259,13 @@ items:
     summary: Only upgrade agent pool's node image.
     description: ''
 commands:
-- uid: ext_aks-preview_az_aks_nodepool_add
-  name: az aks nodepool add
-  summary: Add a node pool to the managed Kubernetes cluster.
-- uid: ext_aks-preview_az_aks_nodepool_delete
-  name: az aks nodepool delete
-  summary: Delete the agent pool in the managed Kubernetes cluster.
-- uid: ext_aks-preview_az_aks_nodepool_list
-  name: az aks nodepool list
-  summary: List node pools in the managed Kubernetes cluster.
-- uid: ext_aks-preview_az_aks_nodepool_scale
-  name: az aks nodepool scale
-  summary: Scale the node pool in a managed Kubernetes cluster.
-- uid: ext_aks-preview_az_aks_nodepool_show
-  name: az aks nodepool show
-  summary: Show the details for a node pool in the managed Kubernetes cluster.
-- uid: ext_aks-preview_az_aks_nodepool_update
-  name: az aks nodepool update
-  summary: Update a node pool to enable/disable cluster-autoscaler or change min-count or max-count.
-- uid: ext_aks-preview_az_aks_nodepool_upgrade
-  name: az aks nodepool upgrade
-  summary: Upgrade the node pool in a managed Kubernetes cluster.
+- ext_aks-preview_az_aks_nodepool_add
+- ext_aks-preview_az_aks_nodepool_delete
+- ext_aks-preview_az_aks_nodepool_list
+- ext_aks-preview_az_aks_nodepool_scale
+- ext_aks-preview_az_aks_nodepool_show
+- ext_aks-preview_az_aks_nodepool_update
+- ext_aks-preview_az_aks_nodepool_upgrade
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -323,4 +281,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage node pools in Kubernetes kubernetes cluster.
+metadata:
+  description: Commands to manage node pools in Kubernetes kubernetes cluster.

@@ -1,26 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_application-insights_az_monitor_app_insights_events
-  name: az monitor app-insights events
-  summary: Retrieve events from an application.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_application-insights_az_monitor_app_insights_events_show
+### YamlMime:CLIGroup
+uid: ext_application-insights_az_monitor_app_insights_events
+name: az monitor app-insights events
+summary: Retrieve events from an application.
+description: ''
+directCommands:
 - uid: ext_application-insights_az_monitor_app_insights_events_show
   name: az monitor app-insights events show
   summary: List events by type or view a single event from an application, specified by type and ID.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get an availability result by ID.
-    syntax:
-      content: az monitor app-insights events show --app 578f0e27-12e9-4631-bc02-50b965da2633 --type availabilityResults --event b2cf08df-bf42-4278-8d2c-5b55f85901fe
+    syntax: az monitor app-insights events show --app 578f0e27-12e9-4631-bc02-50b965da2633 --type availabilityResults --event b2cf08df-bf42-4278-8d2c-5b55f85901fe
   - summary: List availability results from the last 24 hours.
-    syntax:
-      content: az monitor app-insights events show --app 578f0e27-12e9-4631-bc02-50b965da2633 --type availabilityResults --offset 24h
+    syntax: az monitor app-insights events show --app 578f0e27-12e9-4631-bc02-50b965da2633 --type availabilityResults --offset 24h
   parameters:
   - isRequired: true
     name: --app -a
@@ -47,9 +39,7 @@ items:
     summary: 'Start-time of time range for which to retrieve data. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).'
     description: ''
 commands:
-- uid: ext_application-insights_az_monitor_app_insights_events_show
-  name: az monitor app-insights events show
-  summary: List events by type or view a single event from an application, specified by type and ID.
+- ext_application-insights_az_monitor_app_insights_events_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -65,4 +55,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Retrieve events from an application.
+metadata:
+  description: Retrieve events from an application.

@@ -1,24 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_application-insights_az_monitor_app_insights_component_billing
-  name: az monitor app-insights component billing
-  summary: Manage an Application Insights component billing features.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_application-insights_az_monitor_app_insights_component_billing_show
-  - ext_application-insights_az_monitor_app_insights_component_billing_update
+### YamlMime:CLIGroup
+uid: ext_application-insights_az_monitor_app_insights_component_billing
+name: az monitor app-insights component billing
+summary: Manage an Application Insights component billing features.
+description: ''
+directCommands:
 - uid: ext_application-insights_az_monitor_app_insights_component_billing_show
   name: az monitor app-insights component billing show
   summary: Show the billing features of an Application Insights resource.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show the billing features of an application insights component
-    syntax:
-      content: az monitor app-insights component billing show --app demoApp -g demoRg
+    syntax: az monitor app-insights component billing show --app demoApp -g demoRg
   parameters:
   - isRequired: true
     name: --app -a
@@ -32,12 +24,9 @@ items:
   name: az monitor app-insights component billing update
   summary: Update the billing features of an Application Insights resource.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update the daily cap of the billing features
-    syntax:
-      content: az monitor app-insights component billing update --app demoApp -g demoRg --cap 200 --stop
+    syntax: az monitor app-insights component billing update --app demoApp -g demoRg --cap 200 --stop
   parameters:
   - isRequired: true
     name: --app -a
@@ -55,12 +44,8 @@ items:
     summary: Do not send a notification email when the daily data volume cap is met.
     description: ''
 commands:
-- uid: ext_application-insights_az_monitor_app_insights_component_billing_show
-  name: az monitor app-insights component billing show
-  summary: Show the billing features of an Application Insights resource.
-- uid: ext_application-insights_az_monitor_app_insights_component_billing_update
-  name: az monitor app-insights component billing update
-  summary: Update the billing features of an Application Insights resource.
+- ext_application-insights_az_monitor_app_insights_component_billing_show
+- ext_application-insights_az_monitor_app_insights_component_billing_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -76,4 +61,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage an Application Insights component billing features.
+metadata:
+  description: Manage an Application Insights component billing features.

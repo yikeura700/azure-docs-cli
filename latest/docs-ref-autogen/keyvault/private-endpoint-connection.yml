@@ -1,42 +1,28 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_keyvault_private_endpoint_connection
-  name: az keyvault private-endpoint-connection
-  summary: Manage vault private endpoint connections.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_keyvault_private_endpoint_connection_approve
-  - az_keyvault_private_endpoint_connection_delete
-  - az_keyvault_private_endpoint_connection_reject
-  - az_keyvault_private_endpoint_connection_show
-  - az_keyvault_private_endpoint_connection_wait
+### YamlMime:CLIGroup
+uid: az_keyvault_private_endpoint_connection
+name: az keyvault private-endpoint-connection
+summary: Manage vault private endpoint connections.
+description: ''
+directCommands:
 - uid: az_keyvault_private_endpoint_connection_approve
   name: az keyvault private-endpoint-connection approve
   summary: Approve a private endpoint connection request for a Key Vault.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Approve a private endpoint connection request for a Key Vault by ID.
-    syntax:
-      content: az keyvault private-endpoint-connection approve --id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg/providers/Microsoft.KeyVault/vaults/mykv/privateEndpointConnections/mykv.00000000-0000-0000-0000-000000000000"
+    syntax: az keyvault private-endpoint-connection approve --id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg/providers/Microsoft.KeyVault/vaults/mykv/privateEndpointConnections/mykv.00000000-0000-0000-0000-000000000000"
   - summary: Approve a private endpoint connection request for a Key Vault by ID.
-    syntax:
-      content: >-
-        id = (az keyvault show -n mykv --query "privateEndpointConnections[0].id")
+    syntax: >-
+      id = (az keyvault show -n mykv --query "privateEndpointConnections[0].id")
 
-        az keyvault private-endpoint-connection approve --id $id
+      az keyvault private-endpoint-connection approve --id $id
   - summary: Approve a private endpoint connection request for a Key Vault using vault name and connection name.
-    syntax:
-      content: az keyvault private-endpoint-connection approve -g myrg --vault-name mykv --name myconnection
+    syntax: az keyvault private-endpoint-connection approve -g myrg --vault-name mykv --name myconnection
   - summary: Approve a private endpoint connection request for a Key Vault using vault name and connection name.
-    syntax:
-      content: >-
-        name = (az keyvault show -n mykv --query "privateEndpointConnections[0].name")
+    syntax: >-
+      name = (az keyvault show -n mykv --query "privateEndpointConnections[0].name")
 
-        az keyvault private-endpoint-connection approve -g myrg --vault-name mykv --name $name
+      az keyvault private-endpoint-connection approve -g myrg --vault-name mykv --name $name
   parameters:
   - name: --description
     summary: Comments for the approve operation.
@@ -69,27 +55,21 @@ items:
   name: az keyvault private-endpoint-connection delete
   summary: Delete the specified private endpoint connection associated with a Key Vault.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a private endpoint connection request for a Key Vault by ID.
-    syntax:
-      content: az keyvault private-endpoint-connection delete --id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg/providers/Microsoft.KeyVault/vaults/mykv/privateEndpointConnections/mykv.00000000-0000-0000-0000-000000000000"
+    syntax: az keyvault private-endpoint-connection delete --id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg/providers/Microsoft.KeyVault/vaults/mykv/privateEndpointConnections/mykv.00000000-0000-0000-0000-000000000000"
   - summary: Delete a private endpoint connection request for a Key Vault by ID.
-    syntax:
-      content: >-
-        id = (az keyvault show -n mykv --query "privateEndpointConnections[0].id")
+    syntax: >-
+      id = (az keyvault show -n mykv --query "privateEndpointConnections[0].id")
 
-        az keyvault private-endpoint-connection delete --id $id
+      az keyvault private-endpoint-connection delete --id $id
   - summary: Delete a private endpoint connection request for a Key Vault using account name and connection name.
-    syntax:
-      content: az keyvault private-endpoint-connection delete -g myrg --vault-name mykv --name myconnection
+    syntax: az keyvault private-endpoint-connection delete -g myrg --vault-name mykv --name myconnection
   - summary: Delete a private endpoint connection request for a Key Vault using account name and connection name.
-    syntax:
-      content: >-
-        name = (az keyvault show -n mykv --query "privateEndpointConnections[0].name")
+    syntax: >-
+      name = (az keyvault show -n mykv --query "privateEndpointConnections[0].name")
 
-        az keyvault private-endpoint-connection delete -g myrg --vault-name mykv --name $name
+      az keyvault private-endpoint-connection delete -g myrg --vault-name mykv --name $name
   parameters:
   - name: --id
     summary: The ID of the private endpoint connection associated with the Key Vault. If specified --vault-name and --name/-n, this should be omitted.
@@ -116,27 +96,21 @@ items:
   name: az keyvault private-endpoint-connection reject
   summary: Reject a private endpoint connection request for a Key Vault.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Reject a private endpoint connection request for a Key Vault by ID.
-    syntax:
-      content: az keyvault private-endpoint-connection reject --id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg/providers/Microsoft.KeyVault/vaults/mykv/privateEndpointConnections/mykv.00000000-0000-0000-0000-000000000000"
+    syntax: az keyvault private-endpoint-connection reject --id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg/providers/Microsoft.KeyVault/vaults/mykv/privateEndpointConnections/mykv.00000000-0000-0000-0000-000000000000"
   - summary: Reject a private endpoint connection request for a Key Vault by ID.
-    syntax:
-      content: >-
-        id = (az keyvault show -n mykv --query "privateEndpointConnections[0].id")
+    syntax: >-
+      id = (az keyvault show -n mykv --query "privateEndpointConnections[0].id")
 
-        az keyvault private-endpoint-connection reject --id $id
+      az keyvault private-endpoint-connection reject --id $id
   - summary: Reject a private endpoint connection request for a Key Vault using vault name and connection name.
-    syntax:
-      content: az keyvault private-endpoint-connection reject -g myrg --vault-name mykv --name myconnection
+    syntax: az keyvault private-endpoint-connection reject -g myrg --vault-name mykv --name myconnection
   - summary: Reject a private endpoint connection request for a Key Vault using vault name and connection name.
-    syntax:
-      content: >-
-        name = (az keyvault show -n mykv --query "privateEndpointConnections[0].name")
+    syntax: >-
+      name = (az keyvault show -n mykv --query "privateEndpointConnections[0].name")
 
-        az keyvault private-endpoint-connection reject -g myrg --vault-name mystorageaccount --name $name
+      az keyvault private-endpoint-connection reject -g myrg --vault-name mystorageaccount --name $name
   parameters:
   - name: --description
     summary: Comments for the reject operation.
@@ -169,27 +143,21 @@ items:
   name: az keyvault private-endpoint-connection show
   summary: Show details of a private endpoint connection associated with a Key Vault.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show details of a private endpoint connection request for a Key Vault by ID.
-    syntax:
-      content: az keyvault private-endpoint-connection show --id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg/providers/Microsoft.KeyVault/vaults/mykv/privateEndpointConnections/mykv.00000000-0000-0000-0000-000000000000"
+    syntax: az keyvault private-endpoint-connection show --id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg/providers/Microsoft.KeyVault/vaults/mykv/privateEndpointConnections/mykv.00000000-0000-0000-0000-000000000000"
   - summary: Show details of a private endpoint connection request for a Key Vault by ID.
-    syntax:
-      content: >-
-        id = (az keyvault show -n mykv --query "privateEndpointConnections[0].id")
+    syntax: >-
+      id = (az keyvault show -n mykv --query "privateEndpointConnections[0].id")
 
-        az keyvault private-endpoint-connection show --id $id
+      az keyvault private-endpoint-connection show --id $id
   - summary: Show details of a private endpoint connection request for a Key Vault using vault name and connection name.
-    syntax:
-      content: az keyvault private-endpoint-connection show -g myrg --vault-name mykv --name myconnection
+    syntax: az keyvault private-endpoint-connection show -g myrg --vault-name mykv --name myconnection
   - summary: Show details of a private endpoint connection request for a Key Vault using vault name and connection name.
-    syntax:
-      content: >-
-        name = (az keyvault show -n mykv --query "privateEndpointConnections[0].name")
+    syntax: >-
+      name = (az keyvault show -n mykv --query "privateEndpointConnections[0].name")
 
-        az keyvault private-endpoint-connection show -g myrg --vault-name mykv --name $name
+      az keyvault private-endpoint-connection show -g myrg --vault-name mykv --name $name
   parameters:
   - name: --id
     summary: The ID of the private endpoint connection associated with the Key Vault. If specified --vault-name and --name/-n, this should be omitted.
@@ -216,15 +184,11 @@ items:
   name: az keyvault private-endpoint-connection wait
   summary: Place the CLI in a waiting state until a condition of the private endpoint connection is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pause CLI until the private endpoint connection is approved/rejected by ID.
-    syntax:
-      content: az keyvault private-endpoint-connection wait --id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg/providers/Microsoft.KeyVault/vaults/mykv/privateEndpointConnections/mykv.00000000-0000-0000-0000-000000000000" --created
+    syntax: az keyvault private-endpoint-connection wait --id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg/providers/Microsoft.KeyVault/vaults/mykv/privateEndpointConnections/mykv.00000000-0000-0000-0000-000000000000" --created
   - summary: Pause CLI until the private endpoint connection is approved/rejected using vault name and connection name.
-    syntax:
-      content: az keyvault private-endpoint-connection wait -g myrg --vault-name mykv --name myconnection --created
+    syntax: az keyvault private-endpoint-connection wait -g myrg --vault-name mykv --name myconnection --created
   parameters:
   - name: --id
     summary: The ID of the private endpoint connection associated with the Key Vault. If specified --vault-name and --name/-n, this should be omitted.
@@ -271,21 +235,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/keyvault/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_keyvault_private_endpoint_connection_approve
-  name: az keyvault private-endpoint-connection approve
-  summary: Approve a private endpoint connection request for a Key Vault.
-- uid: az_keyvault_private_endpoint_connection_delete
-  name: az keyvault private-endpoint-connection delete
-  summary: Delete the specified private endpoint connection associated with a Key Vault.
-- uid: az_keyvault_private_endpoint_connection_reject
-  name: az keyvault private-endpoint-connection reject
-  summary: Reject a private endpoint connection request for a Key Vault.
-- uid: az_keyvault_private_endpoint_connection_show
-  name: az keyvault private-endpoint-connection show
-  summary: Show details of a private endpoint connection associated with a Key Vault.
-- uid: az_keyvault_private_endpoint_connection_wait
-  name: az keyvault private-endpoint-connection wait
-  summary: Place the CLI in a waiting state until a condition of the private endpoint connection is met.
+- az_keyvault_private_endpoint_connection_approve
+- az_keyvault_private_endpoint_connection_delete
+- az_keyvault_private_endpoint_connection_reject
+- az_keyvault_private_endpoint_connection_show
+- az_keyvault_private_endpoint_connection_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -301,10 +255,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/keyvault/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
-updated_at: 6/4/2020 1:53:34 PM
-ms.date: 06/04/2020
-description: Manage vault private endpoint connections.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
+  updated_at: 6/4/2020 1:53:34 PM
+  ms.date: 06/04/2020
+  description: Manage vault private endpoint connections.

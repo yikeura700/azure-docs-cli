@@ -1,35 +1,24 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_acr_task_identity
-  name: az acr task identity
-  summary: Managed Identities for Task. Please see <a href="https://aka.ms/acr/tasks/task-create-managed-identity">https://aka.ms/acr/tasks/task-create-managed-identity</a> for more information.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_acr_task_identity_assign
-  - az_acr_task_identity_remove
-  - az_acr_task_identity_show
+### YamlMime:CLIGroup
+uid: az_acr_task_identity
+name: az acr task identity
+summary: Managed Identities for Task. Please see <a href="https://aka.ms/acr/tasks/task-create-managed-identity">https://aka.ms/acr/tasks/task-create-managed-identity</a> for more information.
+description: ''
+directCommands:
 - uid: az_acr_task_identity_assign
   name: az acr task identity assign
   summary: Update the managed identity for a task.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Enable the system-assigned identity on an existing task. This will replace all existing user-assigned identities for that task.
-    syntax:
-      content: az acr task identity assign -n MyTask -r MyRegistry
+    syntax: az acr task identity assign -n MyTask -r MyRegistry
   - summary: Assign user-assigned managed identities to an existing task. This will remove the existing system-assigned identity.
-    syntax:
-      content: >-
-        az acr task identity assign -n MyTask -r MyRegistry \
-            --identities "/subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCE GROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentitiy"
+    syntax: >-
+      az acr task identity assign -n MyTask -r MyRegistry \
+          --identities "/subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCE GROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentitiy"
   - summary: Assign both system-assigned and user-assigned managed identities to an existing task.
-    syntax:
-      content: >-
-        az acr task identity assign -n MyTask -r MyRegistry \
-            --identities [system] "/subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCE GROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentitiy"
+    syntax: >-
+      az acr task identity assign -n MyTask -r MyRegistry \
+          --identities [system] "/subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCE GROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentitiy"
   parameters:
   - isRequired: true
     name: --name -n
@@ -58,20 +47,15 @@ items:
   name: az acr task identity remove
   summary: Remove managed identities for a task.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Remove the system-assigned identity from a task.
-    syntax:
-      content: az acr task identity remove -n MyTask -r MyRegistry
+    syntax: az acr task identity remove -n MyTask -r MyRegistry
   - summary: Remove a user-assigned identity from a task.
-    syntax:
-      content: >-
-        az acr task identity remove -n MyTask -r MyRegistry \
-            --identities "/subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCE GROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentitiy"
+    syntax: >-
+      az acr task identity remove -n MyTask -r MyRegistry \
+          --identities "/subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCE GROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentitiy"
   - summary: Remove all managed identities from a task.
-    syntax:
-      content: az acr task identity remove -n MyTask -r MyRegistry --identities [all]
+    syntax: az acr task identity remove -n MyTask -r MyRegistry --identities [all]
   parameters:
   - isRequired: true
     name: --name -n
@@ -100,12 +84,9 @@ items:
   name: az acr task identity show
   summary: Display the managed identities for task.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Display the managed identities for a task.
-    syntax:
-      content: az acr task identity show -n MyTask -r MyRegistry
+    syntax: az acr task identity show -n MyTask -r MyRegistry
   parameters:
   - isRequired: true
     name: --name -n
@@ -128,15 +109,9 @@ items:
       path: src/azure-cli/azure/cli/command_modules/acr/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_acr_task_identity_assign
-  name: az acr task identity assign
-  summary: Update the managed identity for a task.
-- uid: az_acr_task_identity_remove
-  name: az acr task identity remove
-  summary: Remove managed identities for a task.
-- uid: az_acr_task_identity_show
-  name: az acr task identity show
-  summary: Display the managed identities for task.
+- az_acr_task_identity_assign
+- az_acr_task_identity_remove
+- az_acr_task_identity_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -152,10 +127,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
-updated_at: 4/15/2020 7:14:42 AM
-ms.date: 04/15/2020
-description: Managed Identities for Task. Please see <a href="https://aka.ms/acr/tasks/task-create-managed-identity">https://aka.ms/acr/tasks/task-create-managed-identity</a> for more information.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  updated_at: 4/15/2020 7:14:42 AM
+  ms.date: 04/15/2020
+  description: Managed Identities for Task. Please see <a href="https://aka.ms/acr/tasks/task-create-managed-identity">https://aka.ms/acr/tasks/task-create-managed-identity</a> for more information.

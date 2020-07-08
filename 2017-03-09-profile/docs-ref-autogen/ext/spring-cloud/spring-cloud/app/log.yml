@@ -1,19 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_spring-cloud_az_spring_cloud_app_log
-  name: az spring-cloud app log
-  summary: Commands to tail app instances logs with multiple options. If the app has only one instance, the instance name is optional.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_spring-cloud_az_spring_cloud_app_log_tail
+### YamlMime:CLIGroup
+uid: ext_spring-cloud_az_spring_cloud_app_log
+name: az spring-cloud app log
+summary: Commands to tail app instances logs with multiple options. If the app has only one instance, the instance name is optional.
+description: ''
+directCommands:
 - uid: ext_spring-cloud_az_spring_cloud_app_log_tail
   name: az spring-cloud app log tail
   summary: Show logs of an app instance, logs will be streamed when setting '-f/--follow'.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -45,9 +39,7 @@ items:
     summary: Only return logs newer than a relative duration like 5s, 2m, or 1h. Maximum is 1h.
     description: ''
 commands:
-- uid: ext_spring-cloud_az_spring_cloud_app_log_tail
-  name: az spring-cloud app log tail
-  summary: Show logs of an app instance, logs will be streamed when setting '-f/--follow'.
+- ext_spring-cloud_az_spring_cloud_app_log_tail
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -63,4 +55,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to tail app instances logs with multiple options. If the app has only one instance, the instance name is optional.
+metadata:
+  description: Commands to tail app instances logs with multiple options. If the app has only one instance, the instance name is optional.

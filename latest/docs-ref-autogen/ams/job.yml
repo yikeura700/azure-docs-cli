@@ -1,24 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_ams_job
-  name: az ams job
-  summary: Manage jobs for a transform.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_ams_job_cancel
-  - az_ams_job_delete
-  - az_ams_job_list
-  - az_ams_job_show
-  - az_ams_job_start
-  - az_ams_job_update
+### YamlMime:CLIGroup
+uid: az_ams_job
+name: az ams job
+summary: Manage jobs for a transform.
+description: ''
+directCommands:
 - uid: az_ams_job_cancel
   name: az ams job cancel
   summary: Cancel a job.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --delete
     summary: Delete the job being cancelled.
@@ -51,8 +40,6 @@ items:
   name: az ams job delete
   summary: Delete a job.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -82,15 +69,11 @@ items:
   name: az ams job list
   summary: List all the jobs of a transform within an Azure Media Services account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all the jobs of a transform with 'Normal' priority by name.
-    syntax:
-      content: az ams job list -a amsAccount -g resourceGroup -t transformName --query [?priority=='Normal'].{jobName:name}
+    syntax: az ams job list -a amsAccount -g resourceGroup -t transformName --query [?priority=='Normal'].{jobName:name}
   - summary: List all the jobs of a transform by name and input.
-    syntax:
-      content: az ams job list -a amsAccount -g resourceGroup -t transformName --query [].{jobName:name,jobInput:input}
+    syntax: az ams job list -a amsAccount -g resourceGroup -t transformName --query [].{jobName:name,jobInput:input}
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -123,8 +106,6 @@ items:
   name: az ams job show
   summary: Show the details of a job.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -154,8 +135,6 @@ items:
   name: az ams job start
   summary: Start a job.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --output-assets
@@ -211,8 +190,6 @@ items:
   name: az ams job update
   summary: Update an existing job.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --description
     summary: The job description.
@@ -258,24 +235,12 @@ items:
       path: src/azure-cli/azure/cli/command_modules/ams/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_ams_job_cancel
-  name: az ams job cancel
-  summary: Cancel a job.
-- uid: az_ams_job_delete
-  name: az ams job delete
-  summary: Delete a job.
-- uid: az_ams_job_list
-  name: az ams job list
-  summary: List all the jobs of a transform within an Azure Media Services account.
-- uid: az_ams_job_show
-  name: az ams job show
-  summary: Show the details of a job.
-- uid: az_ams_job_start
-  name: az ams job start
-  summary: Start a job.
-- uid: az_ams_job_update
-  name: az ams job update
-  summary: Update an existing job.
+- az_ams_job_cancel
+- az_ams_job_delete
+- az_ams_job_list
+- az_ams_job_show
+- az_ams_job_start
+- az_ams_job_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -291,10 +256,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
-updated_at: 3/25/2020 2:12:45 AM
-ms.date: 03/25/2020
-description: Manage jobs for a transform.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
+  updated_at: 3/25/2020 2:12:45 AM
+  ms.date: 03/25/2020
+  description: Manage jobs for a transform.

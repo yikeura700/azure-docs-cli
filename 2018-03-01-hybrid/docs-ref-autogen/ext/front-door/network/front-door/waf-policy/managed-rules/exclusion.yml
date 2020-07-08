@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion
-  name: az network front-door waf-policy managed-rules exclusion
-  summary: View and alter exclusions on a managed rule set, rule group, or rule within a managed rule set.
-  description: Exclusions prevent the rule set, rule group, or rule from being applied to the content of the specified variable. Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
-  langs:
-  - azurecli
-  children:
-  - ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion_add
-  - ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion_list
-  - ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion_remove
+### YamlMime:CLIGroup
+uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion
+name: az network front-door waf-policy managed-rules exclusion
+summary: View and alter exclusions on a managed rule set, rule group, or rule within a managed rule set.
+description: Exclusions prevent the rule set, rule group, or rule from being applied to the content of the specified variable. Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
+directCommands:
 - uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion_add
   name: az network front-door waf-policy managed-rules exclusion add
   summary: Add an exclusion on a managed rule set, rule group, or rule within a managed rule set.
   description: Prevents the rule set, rule group, or rule from being applied to the content of the specified variable. Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --match-variable
@@ -51,8 +43,6 @@ items:
   name: az network front-door waf-policy managed-rules exclusion list
   summary: List the exclusions on managed rule set, rule group, or rule within a managed rule set.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --policy-name
@@ -76,8 +66,6 @@ items:
   name: az network front-door waf-policy managed-rules exclusion remove
   summary: Remove an exclusion on a managed rule set, rule group, or rule within a managed rule set.
   description: After this command, the standard behavior for the rule within the managed rule set will apply. Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --match-variable
@@ -110,15 +98,9 @@ items:
     summary: ID of the rule to remove from exclusion.
     description: ''
 commands:
-- uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion_add
-  name: az network front-door waf-policy managed-rules exclusion add
-  summary: Add an exclusion on a managed rule set, rule group, or rule within a managed rule set.
-- uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion_list
-  name: az network front-door waf-policy managed-rules exclusion list
-  summary: List the exclusions on managed rule set, rule group, or rule within a managed rule set.
-- uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion_remove
-  name: az network front-door waf-policy managed-rules exclusion remove
-  summary: Remove an exclusion on a managed rule set, rule group, or rule within a managed rule set.
+- ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion_add
+- ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion_list
+- ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion_remove
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -134,4 +116,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Exclusions prevent the rule set, rule group, or rule from being applied to the content of the specified variable. Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
+metadata:
+  description: Exclusions prevent the rule set, rule group, or rule from being applied to the content of the specified variable. Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.

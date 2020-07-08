@@ -1,27 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_ams_live_event
-  name: az ams live-event
-  summary: Manage live events for an Azure Media Service account.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_ams_live_event_create
-  - az_ams_live_event_delete
-  - az_ams_live_event_list
-  - az_ams_live_event_reset
-  - az_ams_live_event_show
-  - az_ams_live_event_start
-  - az_ams_live_event_stop
-  - az_ams_live_event_update
-  - az_ams_live_event_wait
+### YamlMime:CLIGroup
+uid: az_ams_live_event
+name: az ams live-event
+summary: Manage live events for an Azure Media Service account.
+description: ''
+directCommands:
 - uid: az_ams_live_event_create
   name: az ams live-event create
   summary: Create a live event.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -107,8 +93,6 @@ items:
   name: az ams live-event delete
   summary: Delete a live event.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -135,12 +119,9 @@ items:
   name: az ams live-event list
   summary: List all the live events of an Azure Media Services account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all the live events by name and resourceState quickly.
-    syntax:
-      content: az ams live-event list -a amsAccount -g resourceGroup --query [].{liveEventName:name,state:resourceState}
+    syntax: az ams live-event list -a amsAccount -g resourceGroup --query [].{liveEventName:name,state:resourceState}
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -163,8 +144,6 @@ items:
   name: az ams live-event reset
   summary: Reset a live event.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -194,8 +173,6 @@ items:
   name: az ams live-event show
   summary: Show the details of a live event.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -222,8 +199,6 @@ items:
   name: az ams live-event start
   summary: Start a live event.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -253,8 +228,6 @@ items:
   name: az ams live-event stop
   summary: Stop a live event.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -287,15 +260,11 @@ items:
   name: az ams live-event update
   summary: Update the details of a live event.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Set a new allowed IP address and remove an existing IP address at index '0'.
-    syntax:
-      content: az ams live-event update -a amsAccount -g resourceGroup -n liveEventName --remove input.accessControl.ip.allow 0 --add input.accessControl.ip.allow 1.2.3.4/22
+    syntax: az ams live-event update -a amsAccount -g resourceGroup -n liveEventName --remove input.accessControl.ip.allow 0 --add input.accessControl.ip.allow 1.2.3.4/22
   - summary: Clear existing IP addresses and set new ones.
-    syntax:
-      content: az ams live-event update -a amsAccount -g resourceGroup -n liveEventName --ips 1.2.3.4/22 5.6.7.8/30
+    syntax: az ams live-event update -a amsAccount -g resourceGroup -n liveEventName --ips 1.2.3.4/22 5.6.7.8/30
   parameters:
   - name: --description
     summary: The live event description.
@@ -355,12 +324,9 @@ items:
   name: az ams live-event wait
   summary: Place the CLI in a waiting state until a condition of the live event is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Place the CLI in a waiting state until the live event is created.
-    syntax:
-      content: az ams live-event wait -g MyResourceGroup -a MyAmsAccount -n MyLiveEvent --created
+    syntax: az ams live-event wait -g MyResourceGroup -a MyAmsAccount -n MyLiveEvent --created
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -407,33 +373,15 @@ items:
       path: src/azure-cli/azure/cli/command_modules/ams/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_ams_live_event_create
-  name: az ams live-event create
-  summary: Create a live event.
-- uid: az_ams_live_event_delete
-  name: az ams live-event delete
-  summary: Delete a live event.
-- uid: az_ams_live_event_list
-  name: az ams live-event list
-  summary: List all the live events of an Azure Media Services account.
-- uid: az_ams_live_event_reset
-  name: az ams live-event reset
-  summary: Reset a live event.
-- uid: az_ams_live_event_show
-  name: az ams live-event show
-  summary: Show the details of a live event.
-- uid: az_ams_live_event_start
-  name: az ams live-event start
-  summary: Start a live event.
-- uid: az_ams_live_event_stop
-  name: az ams live-event stop
-  summary: Stop a live event.
-- uid: az_ams_live_event_update
-  name: az ams live-event update
-  summary: Update the details of a live event.
-- uid: az_ams_live_event_wait
-  name: az ams live-event wait
-  summary: Place the CLI in a waiting state until a condition of the live event is met.
+- az_ams_live_event_create
+- az_ams_live_event_delete
+- az_ams_live_event_list
+- az_ams_live_event_reset
+- az_ams_live_event_show
+- az_ams_live_event_start
+- az_ams_live_event_stop
+- az_ams_live_event_update
+- az_ams_live_event_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -449,10 +397,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
-updated_at: 3/25/2020 2:12:45 AM
-ms.date: 03/25/2020
-description: Manage live events for an Azure Media Service account.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
+  updated_at: 3/25/2020 2:12:45 AM
+  ms.date: 03/25/2020
+  description: Manage live events for an Azure Media Service account.

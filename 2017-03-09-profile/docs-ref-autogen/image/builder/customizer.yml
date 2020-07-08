@@ -1,48 +1,36 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_image_builder_customizer
-  name: az image builder customizer
-  summary: Manage image builder template customizers.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_image_builder_customizer_add
-  - az_image_builder_customizer_clear
-  - az_image_builder_customizer_remove
+### YamlMime:CLIGroup
+uid: az_image_builder_customizer
+name: az image builder customizer
+summary: Manage image builder template customizers.
+description: ''
+directCommands:
 - uid: az_image_builder_customizer_add
   name: az image builder customizer add
   summary: Add an image builder customizer to an image builder template.
   description: Must be used with --defer.
-  langs:
-  - azurecli
   examples:
   - summary: Add an inline shell customizer to an image template in the cli object cache
-    syntax:
-      content: >-
-        az image builder customizer add -n mytemplate -g my-group \
-            --inline-script "sudo mkdir /buildArtifacts" \
-                            "sudo cp /tmp/index.html /buildArtifacts/index.html" \
-            --customizer-name shell-script-inline --type shell --defer
+    syntax: >-
+      az image builder customizer add -n mytemplate -g my-group \
+          --inline-script "sudo mkdir /buildArtifacts" \
+                          "sudo cp /tmp/index.html /buildArtifacts/index.html" \
+          --customizer-name shell-script-inline --type shell --defer
   - summary: Add a file customizer to an image template in the cli object cache
-    syntax:
-      content: >-
-        az image builder customizer add -n mytemplate -g my-group \
-            --customizer-name my-file --type file \
-            --file-source "https://my-remote-file.html" --dest-path "/tmp/index.html" --defer
+    syntax: >-
+      az image builder customizer add -n mytemplate -g my-group \
+          --customizer-name my-file --type file \
+          --file-source "https://my-remote-file.html" --dest-path "/tmp/index.html" --defer
   - summary: Add a windows restart customizer to an image template in the cli object cache
-    syntax:
-      content: >-
-        az image builder customizer add -n mytemplate -g my-group \
+    syntax: >-
+      az image builder customizer add -n mytemplate -g my-group \
 
-        --customizer-name shell-script-url \
+      --customizer-name shell-script-url \
 
-        --restart-check-command "echo Azure-Image-Builder-Restarted-the-VM  > \
-                                c:\buildArtifacts\restart.txt" \
-            --type windows-restart --restart-timeout 10m --defer
+      --restart-check-command "echo Azure-Image-Builder-Restarted-the-VM  > \
+                              c:\buildArtifacts\restart.txt" \
+          --type windows-restart --restart-timeout 10m --defer
   - summary: Add a windows update customizer to an image template in the cli object cache.
-    syntax:
-      content: az image builder customizer add -n mytemplate -g my-group --customizer-name win_update --type windows-update --search-criteria IsInstalled=0 --filters "exclude:\$_.Title -like \'*Preview*\'" "include:\$true" --update-limit 20 --defer
+    syntax: az image builder customizer add -n mytemplate -g my-group --customizer-name win_update --type windows-update --search-criteria IsInstalled=0 --filters "exclude:\$_.Title -like \'*Preview*\'" "include:\$true" --update-limit 20 --defer
   parameters:
   - isRequired: true
     name: --customizer-name
@@ -106,8 +94,6 @@ items:
   name: az image builder customizer clear
   summary: Remove all image builder customizers from an image builder template.
   description: Must be used with --defer.
-  langs:
-  - azurecli
   parameters:
   - name: --defer
     summary: Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.
@@ -128,8 +114,6 @@ items:
   name: az image builder customizer remove
   summary: Remove an image builder customizer from an image builder template.
   description: Must be used with --defer.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --customizer-name
@@ -151,15 +135,9 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_image_builder_customizer_add
-  name: az image builder customizer add
-  summary: Add an image builder customizer to an image builder template.
-- uid: az_image_builder_customizer_clear
-  name: az image builder customizer clear
-  summary: Remove all image builder customizers from an image builder template.
-- uid: az_image_builder_customizer_remove
-  name: az image builder customizer remove
-  summary: Remove an image builder customizer from an image builder template.
+- az_image_builder_customizer_add
+- az_image_builder_customizer_clear
+- az_image_builder_customizer_remove
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -175,4 +153,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage image builder template customizers.
+metadata:
+  description: Manage image builder template customizers.

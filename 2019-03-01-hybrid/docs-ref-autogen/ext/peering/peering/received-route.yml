@@ -1,23 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_peering_az_peering_received_route
-  name: az peering received-route
-  summary: Peering received-route.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_peering_az_peering_received_route_list
+### YamlMime:CLIGroup
+uid: ext_peering_az_peering_received_route
+name: az peering received-route
+summary: Peering received-route.
+description: ''
+directCommands:
 - uid: ext_peering_az_peering_received_route_list
   name: az peering received-route list
   summary: Lists the prefixes received over the specified peering under the given subscription and resource group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Lists the prefixes received over the specified peering under the given subscription and resource group.
-    syntax:
-      content: az peering received-route list --as-path "123 456" --origin-as-validation-state "Valid" --peering-name "peeringName" --prefix "1.1.1.0/24" --resource-group "rgName" --rpki-validation-state "Valid"
+    syntax: az peering received-route list --as-path "123 456" --origin-as-validation-state "Valid" --peering-name "peeringName" --prefix "1.1.1.0/24" --resource-group "rgName" --rpki-validation-state "Valid"
   parameters:
   - isRequired: true
     name: --peering-name
@@ -43,9 +36,7 @@ items:
     summary: The optional page continuation token that is used in the event of paginated result.
     description: ''
 commands:
-- uid: ext_peering_az_peering_received_route_list
-  name: az peering received-route list
-  summary: Lists the prefixes received over the specified peering under the given subscription and resource group.
+- ext_peering_az_peering_received_route_list
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -61,4 +52,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Peering received-route.
+metadata:
+  description: Peering received-route.

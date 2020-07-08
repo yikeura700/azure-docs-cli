@@ -1,30 +1,20 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_mariadb_server_replica
-  name: az mariadb server replica
-  summary: Manage read replicas.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_mariadb_server_replica_create
-  - az_mariadb_server_replica_list
-  - az_mariadb_server_replica_stop
+### YamlMime:CLIGroup
+uid: az_mariadb_server_replica
+name: az mariadb server replica
+summary: Manage read replicas.
+description: ''
+directCommands:
 - uid: az_mariadb_server_replica_create
   name: az mariadb server replica create
   summary: Create a read replica for a server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a read replica 'testreplsvr' for 'testsvr'.
-    syntax:
-      content: az mariadb server replica create -n testreplsvr -g testgroup -s testsvr
+    syntax: az mariadb server replica create -n testreplsvr -g testgroup -s testsvr
   - summary: Create a read replica 'testreplsvr' for 'testsvr2', where 'testreplsvr' is in a different resource group.
-    syntax:
-      content: >-
-        az mariadb server replica create -n testreplsvr -g testgroup \
-            -s "/subscriptions/${SubID}/resourceGroups/${ResourceGroup}/providers/Microsoft.DBforMariaDB/servers/testsvr2"
+    syntax: >-
+      az mariadb server replica create -n testreplsvr -g testgroup \
+          -s "/subscriptions/${SubID}/resourceGroups/${ResourceGroup}/providers/Microsoft.DBforMariaDB/servers/testsvr2"
   parameters:
   - isRequired: true
     name: --name -n
@@ -54,12 +44,9 @@ items:
   name: az mariadb server replica list
   summary: List all read replicas for a given server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all read replicas for master server 'testsvr'.
-    syntax:
-      content: az mariadb server replica list -g testgroup -s testsvr
+    syntax: az mariadb server replica list -g testgroup -s testsvr
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -77,12 +64,9 @@ items:
   name: az mariadb server replica stop
   summary: Stop replication to a read replica and make it a read/write server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Stop replication to 'testreplsvr' and make it a read/write server.
-    syntax:
-      content: az mariadb server replica stop -g testgroup -n testreplsvr
+    syntax: az mariadb server replica stop -g testgroup -n testreplsvr
   parameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
@@ -100,15 +84,9 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_mariadb_server_replica_create
-  name: az mariadb server replica create
-  summary: Create a read replica for a server.
-- uid: az_mariadb_server_replica_list
-  name: az mariadb server replica list
-  summary: List all read replicas for a given server.
-- uid: az_mariadb_server_replica_stop
-  name: az mariadb server replica stop
-  summary: Stop replication to a read replica and make it a read/write server.
+- az_mariadb_server_replica_create
+- az_mariadb_server_replica_list
+- az_mariadb_server_replica_stop
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -124,4 +102,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage read replicas.
+metadata:
+  description: Manage read replicas.

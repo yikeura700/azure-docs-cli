@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_boards_work_item
-  name: az boards work-item
-  summary: Manage work items.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_boards_work_item_create
-  - az_boards_work_item_delete
-  - az_boards_work_item_show
-  - az_boards_work_item_update
+### YamlMime:CLIGroup
+uid: az_boards_work_item
+name: az boards work-item
+summary: Manage work items.
+description: ''
+directCommands:
 - uid: az_boards_work_item_create
   name: az boards work-item create
   summary: Create a work item.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --title
@@ -67,8 +58,6 @@ items:
   name: az boards work-item delete
   summary: Delete a work item.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -97,8 +86,6 @@ items:
   name: az boards work-item show
   summary: Show details for a work item.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -132,8 +119,6 @@ items:
   name: az boards work-item update
   summary: Update work items.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -180,33 +165,15 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_boards_work_item_create
-  name: az boards work-item create
-  summary: Create a work item.
-- uid: az_boards_work_item_delete
-  name: az boards work-item delete
-  summary: Delete a work item.
-- uid: az_boards_work_item_relation
-  name: az boards work-item relation
-  summary: Manage work item relations.
-- uid: az_boards_work_item_relation_add
-  name: az boards work-item relation add
-  summary: Add relation(s) to work item.
-- uid: az_boards_work_item_relation_list_type
-  name: az boards work-item relation list-type
-  summary: List work item relations supported in the organization.
-- uid: az_boards_work_item_relation_remove
-  name: az boards work-item relation remove
-  summary: Remove relation(s) from work item.
-- uid: az_boards_work_item_relation_show
-  name: az boards work-item relation show
-  summary: Get work item, fill relations with friendly name.
-- uid: az_boards_work_item_show
-  name: az boards work-item show
-  summary: Show details for a work item.
-- uid: az_boards_work_item_update
-  name: az boards work-item update
-  summary: Update work items.
+- az_boards_work_item_create
+- az_boards_work_item_delete
+- az_boards_work_item_relation
+- az_boards_work_item_relation_add
+- az_boards_work_item_relation_list_type
+- az_boards_work_item_relation_remove
+- az_boards_work_item_relation_show
+- az_boards_work_item_show
+- az_boards_work_item_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -222,4 +189,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage work items.
+metadata:
+  description: Manage work items.

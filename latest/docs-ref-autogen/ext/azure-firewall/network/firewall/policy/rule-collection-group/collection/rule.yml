@@ -1,17 +1,12 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule
-  name: az network firewall policy rule-collection-group collection rule
-  summary: Manage and configure the rule of a filter collection in the rule collection group of Azure firewall policy.
-  description: >-
-    Filter collection supports having a list of network rules or application rules.
+### YamlMime:CLIGroup
+uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule
+name: az network firewall policy rule-collection-group collection rule
+summary: Manage and configure the rule of a filter collection in the rule collection group of Azure firewall policy.
+description: >-
+  Filter collection supports having a list of network rules or application rules.
 
-    NatRule collection supports including a list of nat rules.
-  langs:
-  - azurecli
-  children:
-  - ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_add
-  - ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_remove
+  NatRule collection supports including a list of nat rules.
+directCommands:
 - uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_add
   name: az network firewall policy rule-collection-group collection rule add
   summary: Add a rule into an Azure firewall policy rule collection.
@@ -19,8 +14,6 @@ items:
     Filter collection supports having a list of network rules or application rules.
 
     NatRule collection supports including a list of nat rules.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name
@@ -91,8 +84,6 @@ items:
     Filter collection supports having a list of network rules or application rules.
 
     NatRule collection supports including a list of nat rules.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name
@@ -115,12 +106,8 @@ items:
     summary: The name of rule.
     description: ''
 commands:
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_add
-  name: az network firewall policy rule-collection-group collection rule add
-  summary: Add a rule into an Azure firewall policy rule collection.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_remove
-  name: az network firewall policy rule-collection-group collection rule remove
-  summary: Remove a rule from an Azure firewall policy rule collection.
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_add
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_remove
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -136,7 +123,8 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: >-
-  Filter collection supports having a list of network rules or application rules.
+metadata:
+  description: >-
+    Filter collection supports having a list of network rules or application rules.
 
-  NatRule collection supports including a list of nat rules.
+    NatRule collection supports including a list of nat rules.

@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_group_lock
-  name: az group lock
-  summary: Manage Azure resource group locks.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_group_lock_create
-  - az_group_lock_delete
-  - az_group_lock_list
-  - az_group_lock_show
-  - az_group_lock_update
+### YamlMime:CLIGroup
+uid: az_group_lock
+name: az group lock
+summary: Manage Azure resource group locks.
+description: ''
+directCommands:
 - uid: az_group_lock_create
   name: az group lock create
   summary: Create a resource group lock.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a read-only resource group level lock.
-    syntax:
-      content: az group lock create --lock-type ReadOnly -n lockName -g MyResourceGroup
+    syntax: az group lock create --lock-type ReadOnly -n lockName -g MyResourceGroup
   parameters:
   - isRequired: true
     name: --lock-type -t
@@ -52,12 +41,9 @@ items:
   name: az group lock delete
   summary: Delete a resource group lock.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a resource group lock
-    syntax:
-      content: az group lock delete --name lockName -g MyResourceGroup
+    syntax: az group lock delete --name lockName -g MyResourceGroup
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.
@@ -81,12 +67,9 @@ items:
   name: az group lock list
   summary: List lock information in the resource-group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List out all locks on the resource group level
-    syntax:
-      content: az group lock list -g MyResourceGroup
+    syntax: az group lock list -g MyResourceGroup
   parameters:
   - name: --filter-string
     summary: A query filter to use to restrict the results.
@@ -107,12 +90,9 @@ items:
   name: az group lock show
   summary: Show the details of a resource group lock.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a resource group level lock
-    syntax:
-      content: az group lock show -n lockname -g MyResourceGroup
+    syntax: az group lock show -n lockname -g MyResourceGroup
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.
@@ -136,12 +116,9 @@ items:
   name: az group lock update
   summary: Update a resource group lock.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update a resource group lock with new notes and type
-    syntax:
-      content: az group lock update --name lockName -g MyResourceGroup --notes newNotesHere --lock-type CanNotDelete
+    syntax: az group lock update --name lockName -g MyResourceGroup --notes newNotesHere --lock-type CanNotDelete
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.
@@ -169,21 +146,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/resource/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_group_lock_create
-  name: az group lock create
-  summary: Create a resource group lock.
-- uid: az_group_lock_delete
-  name: az group lock delete
-  summary: Delete a resource group lock.
-- uid: az_group_lock_list
-  name: az group lock list
-  summary: List lock information in the resource-group.
-- uid: az_group_lock_show
-  name: az group lock show
-  summary: Show the details of a resource group lock.
-- uid: az_group_lock_update
-  name: az group lock update
-  summary: Update a resource group lock.
+- az_group_lock_create
+- az_group_lock_delete
+- az_group_lock_list
+- az_group_lock_show
+- az_group_lock_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -199,10 +166,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
-updated_at: 6/16/2020 5:44:37 AM
-ms.date: 06/16/2020
-description: Manage Azure resource group locks.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  updated_at: 6/16/2020 5:44:37 AM
+  ms.date: 06/16/2020
+  description: Manage Azure resource group locks.

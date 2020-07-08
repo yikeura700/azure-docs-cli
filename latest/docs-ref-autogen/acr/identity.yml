@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_acr_identity
-  name: az acr identity
-  summary: Manage service (managed) identities for a container registry.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_acr_identity_assign
-  - az_acr_identity_remove
-  - az_acr_identity_show
+### YamlMime:CLIGroup
+uid: az_acr_identity
+name: az acr identity
+summary: Manage service (managed) identities for a container registry.
+description: ''
+directCommands:
 - uid: az_acr_identity_assign
   name: az acr identity assign
   summary: Assign a managed identity to a container registry.
   description: Managed identities can be user-assigned or system-assigned.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --identities
@@ -41,8 +33,6 @@ items:
   name: az acr identity remove
   summary: Remove a managed identity from a container registry.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --identities
@@ -68,8 +58,6 @@ items:
   name: az acr identity show
   summary: Show the container registry's identity details.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -88,15 +76,9 @@ items:
       path: src/azure-cli/azure/cli/command_modules/acr/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_acr_identity_assign
-  name: az acr identity assign
-  summary: Assign a managed identity to a container registry.
-- uid: az_acr_identity_remove
-  name: az acr identity remove
-  summary: Remove a managed identity from a container registry.
-- uid: az_acr_identity_show
-  name: az acr identity show
-  summary: Show the container registry's identity details.
+- az_acr_identity_assign
+- az_acr_identity_remove
+- az_acr_identity_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -112,10 +94,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
-updated_at: 4/15/2020 7:14:42 AM
-ms.date: 04/15/2020
-description: Manage service (managed) identities for a container registry.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  updated_at: 4/15/2020 7:14:42 AM
+  ms.date: 04/15/2020
+  description: Manage service (managed) identities for a container registry.

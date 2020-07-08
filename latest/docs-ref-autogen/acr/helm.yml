@@ -1,30 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_acr_helm
-  name: az acr helm
-  summary: Manage helm charts for Azure Container Registries.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_acr_helm_delete
-  - az_acr_helm_install_cli
-  - az_acr_helm_list
-  - az_acr_helm_push
-  - az_acr_helm_show
+### YamlMime:CLIGroup
+uid: az_acr_helm
+name: az acr helm
+summary: Manage helm charts for Azure Container Registries.
+description: ''
+directCommands:
 - uid: az_acr_helm_delete
   name: az acr helm delete
   summary: Delete a helm chart version in an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete all versions of a helm chart in an Azure Container Registry
-    syntax:
-      content: az acr helm delete -n MyRegistry mychart
+    syntax: az acr helm delete -n MyRegistry mychart
   - summary: Delete a helm chart version in an Azure Container Registry
-    syntax:
-      content: az acr helm delete -n MyRegistry mychart --version 0.3.2
+    syntax: az acr helm delete -n MyRegistry mychart --version 0.3.2
   parameters:
   - isRequired: true
     name: --name -n
@@ -67,21 +55,15 @@ items:
   name: az acr helm install-cli
   summary: Download and install Helm command-line tool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Install the default version of Helm CLI to the default location
-    syntax:
-      content: az acr helm install-cli
+    syntax: az acr helm install-cli
   - summary: Install a specified version of Helm CLI to the default location
-    syntax:
-      content: az acr helm install-cli --client-version x.x.x
+    syntax: az acr helm install-cli --client-version x.x.x
   - summary: Install the default version of Helm CLI to a specified location
-    syntax:
-      content: az acr helm install-cli --install-location /folder/filename
+    syntax: az acr helm install-cli --install-location /folder/filename
   - summary: Install a specified version of Helm CLI to a specified location
-    syntax:
-      content: az acr helm install-cli --client-version x.x.x --install-location /folder/filename
+    syntax: az acr helm install-cli --client-version x.x.x --install-location /folder/filename
   parameters:
   - name: --client-version
     defaultValue: 2.16.3
@@ -107,12 +89,9 @@ items:
   name: az acr helm list
   summary: List all helm charts in an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all helm charts in an Azure Container Registry
-    syntax:
-      content: az acr helm list -n MyRegistry
+    syntax: az acr helm list -n MyRegistry
   parameters:
   - isRequired: true
     name: --name -n
@@ -143,15 +122,11 @@ items:
   name: az acr helm push
   summary: Push a helm chart package to an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Push a chart package to an Azure Container Registry
-    syntax:
-      content: az acr helm push -n MyRegistry mychart-0.3.2.tgz
+    syntax: az acr helm push -n MyRegistry mychart-0.3.2.tgz
   - summary: Push a chart package to an Azure Container Registry, overwriting the existing one.
-    syntax:
-      content: az acr helm push -n MyRegistry mychart-0.3.2.tgz --force
+    syntax: az acr helm push -n MyRegistry mychart-0.3.2.tgz --force
   parameters:
   - isRequired: true
     name: --name -n
@@ -188,15 +163,11 @@ items:
   name: az acr helm show
   summary: Describe a helm chart in an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show all versions of a helm chart in an Azure Container Registry
-    syntax:
-      content: az acr helm show -n MyRegistry mychart
+    syntax: az acr helm show -n MyRegistry mychart
   - summary: Show a helm chart version in an Azure Container Registry
-    syntax:
-      content: az acr helm show -n MyRegistry mychart --version 0.3.2
+    syntax: az acr helm show -n MyRegistry mychart --version 0.3.2
   parameters:
   - isRequired: true
     name: --name -n
@@ -230,27 +201,13 @@ items:
       path: src/azure-cli/azure/cli/command_modules/acr/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_acr_helm_delete
-  name: az acr helm delete
-  summary: Delete a helm chart version in an Azure Container Registry.
-- uid: az_acr_helm_install_cli
-  name: az acr helm install-cli
-  summary: Download and install Helm command-line tool.
-- uid: az_acr_helm_list
-  name: az acr helm list
-  summary: List all helm charts in an Azure Container Registry.
-- uid: az_acr_helm_push
-  name: az acr helm push
-  summary: Push a helm chart package to an Azure Container Registry.
-- uid: az_acr_helm_repo
-  name: az acr helm repo
-  summary: Manage helm chart repositories for Azure Container Registries.
-- uid: az_acr_helm_repo_add
-  name: az acr helm repo add
-  summary: Add a helm chart repository from an Azure Container Registry through the Helm CLI.
-- uid: az_acr_helm_show
-  name: az acr helm show
-  summary: Describe a helm chart in an Azure Container Registry.
+- az_acr_helm_delete
+- az_acr_helm_install_cli
+- az_acr_helm_list
+- az_acr_helm_push
+- az_acr_helm_repo
+- az_acr_helm_repo_add
+- az_acr_helm_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -266,10 +223,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
-updated_at: 4/15/2020 7:14:42 AM
-ms.date: 04/15/2020
-description: Manage helm charts for Azure Container Registries.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  updated_at: 4/15/2020 7:14:42 AM
+  ms.date: 04/15/2020
+  description: Manage helm charts for Azure Container Registries.

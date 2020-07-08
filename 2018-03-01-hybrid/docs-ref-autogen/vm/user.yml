@@ -1,28 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_vm_user
-  name: az vm user
-  summary: Manage user accounts for a VM.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_vm_user_delete
-  - az_vm_user_reset_ssh
-  - az_vm_user_update
+### YamlMime:CLIGroup
+uid: az_vm_user
+name: az vm user
+summary: Manage user accounts for a VM.
+description: ''
+directCommands:
 - uid: az_vm_user_delete
   name: az vm user delete
   summary: Delete a user account from a VM.
   description: Also deletes the user home directory on Linux VMs.
-  langs:
-  - azurecli
   examples:
   - summary: Delete a user account.
-    syntax:
-      content: az vm user delete -u username -n MyVm -g MyResourceGroup
+    syntax: az vm user delete -u username -n MyVm -g MyResourceGroup
   - summary: Delete a user on all VMs in a resource group.
-    syntax:
-      content: az vm user delete -u username --ids $(az vm list -g MyResourceGroup --query "[].id" -o tsv)
+    syntax: az vm user delete -u username --ids $(az vm list -g MyResourceGroup --query "[].id" -o tsv)
   parameters:
   - isRequired: true
     name: --username -u
@@ -53,15 +43,11 @@ items:
   name: az vm user reset-ssh
   summary: Reset the SSH configuration on a VM.
   description: The extension will restart the SSH service, open the SSH port on your VM, and reset the SSH configuration to default values. The user account (name, password, and SSH keys) are not changed.
-  langs:
-  - azurecli
   examples:
   - summary: Reset the SSH configuration.
-    syntax:
-      content: az vm user reset-ssh -n MyVm -g MyResourceGroup
+    syntax: az vm user reset-ssh -n MyVm -g MyResourceGroup
   - summary: Reset the SSH server on all VMs in a resource group.
-    syntax:
-      content: az vm user reset-ssh --ids $(az vm list -g MyResourceGroup --query "[].id" -o tsv)
+    syntax: az vm user reset-ssh --ids $(az vm list -g MyResourceGroup --query "[].id" -o tsv)
   parameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -88,18 +74,13 @@ items:
   name: az vm user update
   summary: Update a user account.
   description: This command uses VMAccessForLinux 1.5 for Linux operating system and VMAccessAgent 2.4 for Window operating system.
-  langs:
-  - azurecli
   examples:
   - summary: Update a Windows user account. If username does not exist, a new user will be created.
-    syntax:
-      content: az vm user update -u username -p password -n MyVm -g MyResourceGroup
+    syntax: az vm user update -u username -p password -n MyVm -g MyResourceGroup
   - summary: Update a Linux user account. ("$(< filename)" syntax is not supported on Command Prompt or PowerShell.)
-    syntax:
-      content: az vm user update -u username --ssh-key-value "$(< ~/.ssh/id_rsa.pub)" -n MyVm -g MyResourceGroup
+    syntax: az vm user update -u username --ssh-key-value "$(< ~/.ssh/id_rsa.pub)" -n MyVm -g MyResourceGroup
   - summary: Update a user on all VMs in a resource group. ("$(< filename)" syntax is not supported on Command Prompt or PowerShell.)
-    syntax:
-      content: az vm user update -u username --ssh-key-value "$(< ~/.ssh/id_rsa.pub)" --ids $(az vm list -g MyResourceGroup --query "[].id" -o tsv)
+    syntax: az vm user update -u username --ssh-key-value "$(< ~/.ssh/id_rsa.pub)" --ids $(az vm list -g MyResourceGroup --query "[].id" -o tsv)
   parameters:
   - isRequired: true
     name: --username -u
@@ -133,15 +114,9 @@ items:
       path: src/azure-cli/azure/cli/command_modules/vm/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_vm_user_delete
-  name: az vm user delete
-  summary: Delete a user account from a VM.
-- uid: az_vm_user_reset_ssh
-  name: az vm user reset-ssh
-  summary: Reset the SSH configuration on a VM.
-- uid: az_vm_user_update
-  name: az vm user update
-  summary: Update a user account.
+- az_vm_user_delete
+- az_vm_user_reset_ssh
+- az_vm_user_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -157,10 +132,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/f55acfa0a4074843c2a9fd392157a42afe8d2e59/src/azure-cli/azure/cli/command_modules/vm/_help.py
-updated_at: 6/10/2020 7:38:50 AM
-ms.date: 06/10/2020
-description: Manage user accounts for a VM.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/f55acfa0a4074843c2a9fd392157a42afe8d2e59/src/azure-cli/azure/cli/command_modules/vm/_help.py
+  updated_at: 6/10/2020 7:38:50 AM
+  ms.date: 06/10/2020
+  description: Manage user accounts for a VM.

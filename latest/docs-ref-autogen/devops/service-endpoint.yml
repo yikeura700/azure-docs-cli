@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_devops_service_endpoint
-  name: az devops service-endpoint
-  summary: Manage service endpoints/connections.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_devops_service_endpoint_create
-  - az_devops_service_endpoint_delete
-  - az_devops_service_endpoint_list
-  - az_devops_service_endpoint_show
-  - az_devops_service_endpoint_update
+### YamlMime:CLIGroup
+uid: az_devops_service_endpoint
+name: az devops service-endpoint
+summary: Manage service endpoints/connections.
+description: ''
+directCommands:
 - uid: az_devops_service_endpoint_create
   name: az devops service-endpoint create
   summary: Create a service endpoint using configuration file.
   description: You can learn more about this at <a href="https://aka.ms/azure-devops-service-endpoint-config">https://aka.ms/azure-devops-service-endpoint-config</a>.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --service-endpoint-configuration
@@ -45,8 +35,6 @@ items:
   name: az devops service-endpoint delete
   summary: Deletes service endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -75,8 +63,6 @@ items:
   name: az devops service-endpoint list
   summary: List service endpoints in a project.
   description: rtypelist of VssJsonCollectionWrapper.
-  langs:
-  - azurecli
   parameters:
   - name: --detect
     parameterValueGroup: false, true
@@ -95,8 +81,6 @@ items:
   name: az devops service-endpoint show
   summary: Get the details of a service endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -119,8 +103,6 @@ items:
   name: az devops service-endpoint update
   summary: Update a service endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -144,33 +126,15 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_devops_service_endpoint_azurerm
-  name: az devops service-endpoint azurerm
-  summary: Manage Azure RM service endpoints/connections.
-- uid: az_devops_service_endpoint_azurerm_create
-  name: az devops service-endpoint azurerm create
-  summary: Create an Azure RM type service endpoint.
-- uid: az_devops_service_endpoint_create
-  name: az devops service-endpoint create
-  summary: Create a service endpoint using configuration file.
-- uid: az_devops_service_endpoint_delete
-  name: az devops service-endpoint delete
-  summary: Deletes service endpoint.
-- uid: az_devops_service_endpoint_github
-  name: az devops service-endpoint github
-  summary: Manage GitHub service endpoints/connections.
-- uid: az_devops_service_endpoint_github_create
-  name: az devops service-endpoint github create
-  summary: Create a GitHub service endpoint.
-- uid: az_devops_service_endpoint_list
-  name: az devops service-endpoint list
-  summary: List service endpoints in a project.
-- uid: az_devops_service_endpoint_show
-  name: az devops service-endpoint show
-  summary: Get the details of a service endpoint.
-- uid: az_devops_service_endpoint_update
-  name: az devops service-endpoint update
-  summary: Update a service endpoint.
+- az_devops_service_endpoint_azurerm
+- az_devops_service_endpoint_azurerm_create
+- az_devops_service_endpoint_create
+- az_devops_service_endpoint_delete
+- az_devops_service_endpoint_github
+- az_devops_service_endpoint_github_create
+- az_devops_service_endpoint_list
+- az_devops_service_endpoint_show
+- az_devops_service_endpoint_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -186,4 +150,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage service endpoints/connections.
+metadata:
+  description: Manage service endpoints/connections.

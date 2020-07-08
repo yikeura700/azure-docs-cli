@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-firewall_az_network_firewall_management_ip_config
-  name: az network firewall management-ip-config
-  summary: Manage and configure Azure Firewall Management IP configurations.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-firewall_az_network_firewall_management_ip_config_show
-  - ext_azure-firewall_az_network_firewall_management_ip_config_update
+### YamlMime:CLIGroup
+uid: ext_azure-firewall_az_network_firewall_management_ip_config
+name: az network firewall management-ip-config
+summary: Manage and configure Azure Firewall Management IP configurations.
+description: ''
+directCommands:
 - uid: ext_azure-firewall_az_network_firewall_management_ip_config_show
   name: az network firewall management-ip-config show
   summary: Get the details of an Azure Firewall Management IP configuration.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --firewall-name -f
@@ -28,8 +21,6 @@ items:
   name: az network firewall management-ip-config update
   summary: Update an Azure Firewall Management IP configuration.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --firewall-name -f
@@ -58,12 +49,8 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_azure-firewall_az_network_firewall_management_ip_config_show
-  name: az network firewall management-ip-config show
-  summary: Get the details of an Azure Firewall Management IP configuration.
-- uid: ext_azure-firewall_az_network_firewall_management_ip_config_update
-  name: az network firewall management-ip-config update
-  summary: Update an Azure Firewall Management IP configuration.
+- ext_azure-firewall_az_network_firewall_management_ip_config_show
+- ext_azure-firewall_az_network_firewall_management_ip_config_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -79,4 +66,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage and configure Azure Firewall Management IP configurations.
+metadata:
+  description: Manage and configure Azure Firewall Management IP configurations.

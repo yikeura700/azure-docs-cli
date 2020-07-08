@@ -1,30 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_deployment_mg
-  name: az deployment mg
-  summary: Manage Azure Resource Manager template deployment at management group.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_deployment_mg_cancel
-  - az_deployment_mg_create
-  - az_deployment_mg_delete
-  - az_deployment_mg_export
-  - az_deployment_mg_list
-  - az_deployment_mg_show
-  - az_deployment_mg_validate
-  - az_deployment_mg_wait
+### YamlMime:CLIGroup
+uid: az_deployment_mg
+name: az deployment mg
+summary: Manage Azure Resource Manager template deployment at management group.
+description: ''
+directCommands:
 - uid: az_deployment_mg_cancel
   name: az deployment mg cancel
   summary: Cancel a deployment at management group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Cancel a deployment at management group.
-    syntax:
-      content: az deployment mg cancel -m testmg -n deployment01
+    syntax: az deployment mg cancel -m testmg -n deployment01
   parameters:
   - isRequired: true
     name: --management-group-id -m
@@ -47,26 +33,21 @@ items:
   name: az deployment mg create
   summary: Start a deployment at management group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a deployment at management group from a remote template file, using parameters from a local JSON file.
-    syntax:
-      content: >-
-        az deployment mg create --management-group-id testrg --name rollout01 --location WestUS \
-            --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json
+    syntax: >-
+      az deployment mg create --management-group-id testrg --name rollout01 --location WestUS \
+          --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json
   - summary: Create a deployment at management group from a local template file, using parameters from a JSON string.
-    syntax:
-      content: >-
-        az deployment mg create --management-group-id testmg --name rollout01 --location WestUS \
-            --template-file azuredeploy.json \
-            --parameters '{ \"policyName\": { \"value\": \"policy2\" } }'
+    syntax: >-
+      az deployment mg create --management-group-id testmg --name rollout01 --location WestUS \
+          --template-file azuredeploy.json \
+          --parameters '{ \"policyName\": { \"value\": \"policy2\" } }'
   - summary: Create a deployment at management group from a local template, using a parameter file, a remote parameter file, and selectively overriding key/value pairs.
-    syntax:
-      content: >-
-        az deployment mg create --management-group-id testmg --name rollout01 --location WestUS \
-            --template-file azuredeploy.json --parameters @params.json \
-            --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
+    syntax: >-
+      az deployment mg create --management-group-id testmg --name rollout01 --location WestUS \
+          --template-file azuredeploy.json --parameters @params.json \
+          --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
   parameters:
   - isRequired: true
     name: --location -l
@@ -111,12 +92,9 @@ items:
   name: az deployment mg delete
   summary: Delete a deployment at management group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a deployment at management group.
-    syntax:
-      content: az deployment mg delete -m testmg -n deployment01
+    syntax: az deployment mg delete -m testmg -n deployment01
   parameters:
   - isRequired: true
     name: --management-group-id -m
@@ -142,12 +120,9 @@ items:
   name: az deployment mg export
   summary: Export the template used for a deployment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Export the template used for a deployment at management group.
-    syntax:
-      content: az deployment mg export --management-group-id testmg --name MyDeployment
+    syntax: az deployment mg export --management-group-id testmg --name MyDeployment
   parameters:
   - isRequired: true
     name: --management-group-id -m
@@ -170,12 +145,9 @@ items:
   name: az deployment mg list
   summary: List deployments at management group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List deployments at management group.
-    syntax:
-      content: az deployment mg list -m testmg
+    syntax: az deployment mg list -m testmg
   parameters:
   - isRequired: true
     name: --management-group-id -m
@@ -197,12 +169,9 @@ items:
   name: az deployment mg show
   summary: Show a deployment at management group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a deployment at management group.
-    syntax:
-      content: az deployment mg show -m testmg -n deployment01
+    syntax: az deployment mg show -m testmg -n deployment01
   parameters:
   - isRequired: true
     name: --management-group-id -m
@@ -225,12 +194,9 @@ items:
   name: az deployment mg validate
   summary: Validate whether a template is valid at management group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Validate whether a template is valid at management group.
-    syntax:
-      content: az deployment mg validate --management-group-id testmg --location WestUS --template-file {template-file}
+    syntax: az deployment mg validate --management-group-id testmg --location WestUS --template-file {template-file}
   parameters:
   - isRequired: true
     name: --location -l
@@ -272,8 +238,6 @@ items:
   name: az deployment mg wait
   summary: Place the CLI in a waiting state until a deployment condition is met.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --management-group-id -m
@@ -316,30 +280,14 @@ items:
       path: src/azure-cli/azure/cli/command_modules/resource/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_deployment_mg_cancel
-  name: az deployment mg cancel
-  summary: Cancel a deployment at management group.
-- uid: az_deployment_mg_create
-  name: az deployment mg create
-  summary: Start a deployment at management group.
-- uid: az_deployment_mg_delete
-  name: az deployment mg delete
-  summary: Delete a deployment at management group.
-- uid: az_deployment_mg_export
-  name: az deployment mg export
-  summary: Export the template used for a deployment.
-- uid: az_deployment_mg_list
-  name: az deployment mg list
-  summary: List deployments at management group.
-- uid: az_deployment_mg_show
-  name: az deployment mg show
-  summary: Show a deployment at management group.
-- uid: az_deployment_mg_validate
-  name: az deployment mg validate
-  summary: Validate whether a template is valid at management group.
-- uid: az_deployment_mg_wait
-  name: az deployment mg wait
-  summary: Place the CLI in a waiting state until a deployment condition is met.
+- az_deployment_mg_cancel
+- az_deployment_mg_create
+- az_deployment_mg_delete
+- az_deployment_mg_export
+- az_deployment_mg_list
+- az_deployment_mg_show
+- az_deployment_mg_validate
+- az_deployment_mg_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -355,10 +303,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
-updated_at: 6/16/2020 5:44:37 AM
-ms.date: 06/16/2020
-description: Manage Azure Resource Manager template deployment at management group.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  updated_at: 6/16/2020 5:44:37 AM
+  ms.date: 06/16/2020
+  description: Manage Azure Resource Manager template deployment at management group.

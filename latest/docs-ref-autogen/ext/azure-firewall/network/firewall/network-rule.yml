@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-firewall_az_network_firewall_network_rule
-  name: az network firewall network-rule
-  summary: Manage and configure Azure Firewall network rules.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-firewall_az_network_firewall_network_rule_create
-  - ext_azure-firewall_az_network_firewall_network_rule_delete
-  - ext_azure-firewall_az_network_firewall_network_rule_list
-  - ext_azure-firewall_az_network_firewall_network_rule_show
+### YamlMime:CLIGroup
+uid: ext_azure-firewall_az_network_firewall_network_rule
+name: az network firewall network-rule
+summary: Manage and configure Azure Firewall network rules.
+description: ''
+directCommands:
 - uid: ext_azure-firewall_az_network_firewall_network_rule_create
   name: az network firewall network-rule create
   summary: Create an Azure Firewall network rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --destination-ports
@@ -72,8 +63,6 @@ items:
   name: az network firewall network-rule delete
   summary: Delete an Azure Firewall network rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -95,8 +84,6 @@ items:
   name: az network firewall network-rule list
   summary: List Azure Firewall network rules.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -114,8 +101,6 @@ items:
   name: az network firewall network-rule show
   summary: Get the details of an Azure Firewall network rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -134,30 +119,14 @@ items:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
     description: ''
 commands:
-- uid: ext_azure-firewall_az_network_firewall_network_rule_collection
-  name: az network firewall network-rule collection
-  summary: Manage and configure Azure Firewall network rule collections.
-- uid: ext_azure-firewall_az_network_firewall_network_rule_collection_delete
-  name: az network firewall network-rule collection delete
-  summary: Delete an Azure Firewall network rule collection.
-- uid: ext_azure-firewall_az_network_firewall_network_rule_collection_list
-  name: az network firewall network-rule collection list
-  summary: List Azure Firewall network rule collections.
-- uid: ext_azure-firewall_az_network_firewall_network_rule_collection_show
-  name: az network firewall network-rule collection show
-  summary: Get the details of an Azure Firewall network rule collection.
-- uid: ext_azure-firewall_az_network_firewall_network_rule_create
-  name: az network firewall network-rule create
-  summary: Create an Azure Firewall network rule.
-- uid: ext_azure-firewall_az_network_firewall_network_rule_delete
-  name: az network firewall network-rule delete
-  summary: Delete an Azure Firewall network rule.
-- uid: ext_azure-firewall_az_network_firewall_network_rule_list
-  name: az network firewall network-rule list
-  summary: List Azure Firewall network rules.
-- uid: ext_azure-firewall_az_network_firewall_network_rule_show
-  name: az network firewall network-rule show
-  summary: Get the details of an Azure Firewall network rule.
+- ext_azure-firewall_az_network_firewall_network_rule_collection
+- ext_azure-firewall_az_network_firewall_network_rule_collection_delete
+- ext_azure-firewall_az_network_firewall_network_rule_collection_list
+- ext_azure-firewall_az_network_firewall_network_rule_collection_show
+- ext_azure-firewall_az_network_firewall_network_rule_create
+- ext_azure-firewall_az_network_firewall_network_rule_delete
+- ext_azure-firewall_az_network_firewall_network_rule_list
+- ext_azure-firewall_az_network_firewall_network_rule_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -173,4 +142,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage and configure Azure Firewall network rules.
+metadata:
+  description: Manage and configure Azure Firewall network rules.

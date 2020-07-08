@@ -1,59 +1,43 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_appservice_ase
-  name: az appservice ase
-  summary: Manage App Service Environments v2.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_appservice_ase_create
-  - az_appservice_ase_delete
-  - az_appservice_ase_list
-  - az_appservice_ase_list_addresses
-  - az_appservice_ase_list_plans
-  - az_appservice_ase_show
-  - az_appservice_ase_update
+### YamlMime:CLIGroup
+uid: az_appservice_ase
+name: az appservice ase
+summary: Manage App Service Environments v2.
+description: ''
+directCommands:
 - uid: az_appservice_ase_create
   name: az appservice ase create
   summary: Create app service environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create Resource Group, vNet and app service environment with default values.
-    syntax:
-      content: >-
-        az group create -g MyResourceGroup --location westeurope
+    syntax: >-
+      az group create -g MyResourceGroup --location westeurope
 
 
-        az network vnet create -g MyResourceGroup -n MyVirtualNetwork \
-          --address-prefixes 10.0.0.0/16 --subnet-name MyAseSubnet --subnet-prefixes 10.0.0.0/24
+      az network vnet create -g MyResourceGroup -n MyVirtualNetwork \
+        --address-prefixes 10.0.0.0/16 --subnet-name MyAseSubnet --subnet-prefixes 10.0.0.0/24
 
-        az appservice ase create -n MyAseName -g MyResourceGroup --vnet-name MyVirtualNetwork \
-          --subnet MyAseSubnet
+      az appservice ase create -n MyAseName -g MyResourceGroup --vnet-name MyVirtualNetwork \
+        --subnet MyAseSubnet
   - summary: Create External app service environments with large front-ends and scale factor of 10 in existing resource group and vNet.
-    syntax:
-      content: >-
-        az appservice ase create -n MyAseName -g MyResourceGroup --vnet-name MyVirtualNetwork \
-          --subnet MyAseSubnet --front-end-sku I3 --front-end-scale-factor 10 \
-          --virtual-ip-type External
+    syntax: >-
+      az appservice ase create -n MyAseName -g MyResourceGroup --vnet-name MyVirtualNetwork \
+        --subnet MyAseSubnet --front-end-sku I3 --front-end-scale-factor 10 \
+        --virtual-ip-type External
   - summary: Create vNet and app service environment, but do not create network security group and route table in existing resource group.
-    syntax:
-      content: >-
-        az network vnet create -g MyResourceGroup -n MyVirtualNetwork \
-          --address-prefixes 10.0.0.0/16 --subnet-name MyAseSubnet --subnet-prefixes 10.0.0.0/24
+    syntax: >-
+      az network vnet create -g MyResourceGroup -n MyVirtualNetwork \
+        --address-prefixes 10.0.0.0/16 --subnet-name MyAseSubnet --subnet-prefixes 10.0.0.0/24
 
-        az appservice ase create -n MyAseName -g MyResourceGroup --vnet-name MyVirtualNetwork \
-          --subnet MyAseSubnet --ignore-network-security-group --ignore-route-table
+      az appservice ase create -n MyAseName -g MyResourceGroup --vnet-name MyVirtualNetwork \
+        --subnet MyAseSubnet --ignore-network-security-group --ignore-route-table
   - summary: Create vNet and app service environment in a smaller than recommended subnet in existing resource group.
-    syntax:
-      content: >-
-        az network vnet create -g MyResourceGroup -n MyVirtualNetwork \
-          --address-prefixes 10.0.0.0/16 --subnet-name MyAseSubnet --subnet-prefixes 10.0.0.0/26
+    syntax: >-
+      az network vnet create -g MyResourceGroup -n MyVirtualNetwork \
+        --address-prefixes 10.0.0.0/16 --subnet-name MyAseSubnet --subnet-prefixes 10.0.0.0/26
 
-        az appservice ase create -n MyAseName -g MyResourceGroup --vnet-name MyVirtualNetwork \
-          --subnet MyAseSubnet --ignore-subnet-size-validation
+      az appservice ase create -n MyAseName -g MyResourceGroup --vnet-name MyVirtualNetwork \
+        --subnet MyAseSubnet --ignore-subnet-size-validation
   parameters:
   - isRequired: true
     name: --name -n
@@ -123,12 +107,9 @@ items:
   name: az appservice ase delete
   summary: Delete app service environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete app service environment.
-    syntax:
-      content: az appservice ase delete -n MyAseName
+    syntax: az appservice ase delete -n MyAseName
   parameters:
   - isRequired: true
     name: --name -n
@@ -156,15 +137,11 @@ items:
   name: az appservice ase list
   summary: List app service environments.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all app service environments in subscription.
-    syntax:
-      content: az appservice ase list
+    syntax: az appservice ase list
   - summary: List all app service environment in resource group.
-    syntax:
-      content: az appservice ase list --resource-group MyResourceGroup
+    syntax: az appservice ase list --resource-group MyResourceGroup
   parameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
@@ -182,12 +159,9 @@ items:
   name: az appservice ase list-addresses
   summary: List VIPs associated with an app service environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List VIPs for an app service environments.
-    syntax:
-      content: az appservice ase list-addresses --name MyAseName
+    syntax: az appservice ase list-addresses --name MyAseName
   parameters:
   - isRequired: true
     name: --name -n
@@ -209,12 +183,9 @@ items:
   name: az appservice ase list-plans
   summary: List app service plans associated with an app service environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List app service plans for an app service environments.
-    syntax:
-      content: az appservice ase list-plans --name MyAseName
+    syntax: az appservice ase list-plans --name MyAseName
   parameters:
   - isRequired: true
     name: --name -n
@@ -236,12 +207,9 @@ items:
   name: az appservice ase show
   summary: Show details of an app service environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show app service environment.
-    syntax:
-      content: az appservice ase show --name MyAseName
+    syntax: az appservice ase show --name MyAseName
   parameters:
   - isRequired: true
     name: --name -n
@@ -263,14 +231,11 @@ items:
   name: az appservice ase update
   summary: Update app service environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update app service environment with medium front-ends and scale factor of 10.
-    syntax:
-      content: >-
-        az appservice ase update -n MyAseName -g MyResourceGroup --front-end-sku I2 \
-          --front-end-scale-factor 10
+    syntax: >-
+      az appservice ase update -n MyAseName -g MyResourceGroup --front-end-sku I2 \
+        --front-end-scale-factor 10
   parameters:
   - isRequired: true
     name: --name -n
@@ -299,27 +264,13 @@ items:
       path: src/azure-cli/azure/cli/command_modules/appservice/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_appservice_ase_create
-  name: az appservice ase create
-  summary: Create app service environment.
-- uid: az_appservice_ase_delete
-  name: az appservice ase delete
-  summary: Delete app service environment.
-- uid: az_appservice_ase_list
-  name: az appservice ase list
-  summary: List app service environments.
-- uid: az_appservice_ase_list_addresses
-  name: az appservice ase list-addresses
-  summary: List VIPs associated with an app service environment.
-- uid: az_appservice_ase_list_plans
-  name: az appservice ase list-plans
-  summary: List app service plans associated with an app service environment.
-- uid: az_appservice_ase_show
-  name: az appservice ase show
-  summary: Show details of an app service environment.
-- uid: az_appservice_ase_update
-  name: az appservice ase update
-  summary: Update app service environment.
+- az_appservice_ase_create
+- az_appservice_ase_delete
+- az_appservice_ase_list
+- az_appservice_ase_list_addresses
+- az_appservice_ase_list_plans
+- az_appservice_ase_show
+- az_appservice_ase_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -335,10 +286,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/appservice/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/433268833f4a2e9c48736f28e34fbf8794e0a20a/src/azure-cli/azure/cli/command_modules/appservice/_help.py
-updated_at: 6/15/2020 6:19:53 PM
-ms.date: 06/15/2020
-description: Manage App Service Environments v2.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/433268833f4a2e9c48736f28e34fbf8794e0a20a/src/azure-cli/azure/cli/command_modules/appservice/_help.py
+  updated_at: 6/15/2020 6:19:53 PM
+  ms.date: 06/15/2020
+  description: Manage App Service Environments v2.

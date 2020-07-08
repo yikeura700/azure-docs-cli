@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sql_instance_failover_group
-  name: az sql instance-failover-group
-  summary: Manage SQL Instance Failover Groups.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sql_instance_failover_group_create
-  - az_sql_instance_failover_group_delete
-  - az_sql_instance_failover_group_set_primary
-  - az_sql_instance_failover_group_show
-  - az_sql_instance_failover_group_update
+### YamlMime:CLIGroup
+uid: az_sql_instance_failover_group
+name: az sql instance-failover-group
+summary: Manage SQL Instance Failover Groups.
+description: ''
+directCommands:
 - uid: az_sql_instance_failover_group_create
   name: az sql instance-failover-group create
   summary: Creates an instance failover group between two connected managed instances.
   description: If an outage occurs on the primary server, the grace period indicates that Azure SQL Managed Database will not initiate automatic failover before the grace period expires. Please note that failover operation with --allow-data-loss option might cause data loss due to the nature of asynchronous synchronization.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --mi --source-mi
@@ -61,8 +51,6 @@ items:
   name: az sql instance-failover-group delete
   summary: Deletes a failover group.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --location -l
@@ -89,8 +77,6 @@ items:
   name: az sql instance-failover-group set-primary
   summary: Set the primary of the instance failover group by failing over all databases from the current primary managed instance.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --location -l
@@ -120,8 +106,6 @@ items:
   name: az sql instance-failover-group show
   summary: Gets a failover group.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --location -l
@@ -148,8 +132,6 @@ items:
   name: az sql instance-failover-group update
   summary: Updates the instance failover group.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --location -l
@@ -192,21 +174,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/sql/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_sql_instance_failover_group_create
-  name: az sql instance-failover-group create
-  summary: Creates an instance failover group between two connected managed instances.
-- uid: az_sql_instance_failover_group_delete
-  name: az sql instance-failover-group delete
-  summary: Deletes a failover group.
-- uid: az_sql_instance_failover_group_set_primary
-  name: az sql instance-failover-group set-primary
-  summary: Set the primary of the instance failover group by failing over all databases from the current primary managed instance.
-- uid: az_sql_instance_failover_group_show
-  name: az sql instance-failover-group show
-  summary: Gets a failover group.
-- uid: az_sql_instance_failover_group_update
-  name: az sql instance-failover-group update
-  summary: Updates the instance failover group.
+- az_sql_instance_failover_group_create
+- az_sql_instance_failover_group_delete
+- az_sql_instance_failover_group_set_primary
+- az_sql_instance_failover_group_show
+- az_sql_instance_failover_group_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -222,10 +194,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
-updated_at: 6/19/2020 1:04:35 AM
-ms.date: 06/19/2020
-description: Manage SQL Instance Failover Groups.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  updated_at: 6/19/2020 1:04:35 AM
+  ms.date: 06/19/2020
+  description: Manage SQL Instance Failover Groups.

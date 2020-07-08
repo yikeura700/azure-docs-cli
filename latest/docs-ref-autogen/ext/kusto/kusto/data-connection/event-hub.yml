@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_kusto_az_kusto_data_connection_event_hub
-  name: az kusto data-connection event-hub
-  summary: Kusto data-connection sub group event-hub.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_kusto_az_kusto_data_connection_event_hub_create
-  - ext_kusto_az_kusto_data_connection_event_hub_data_connection_validation
-  - ext_kusto_az_kusto_data_connection_event_hub_update
+### YamlMime:CLIGroup
+uid: ext_kusto_az_kusto_data_connection_event_hub
+name: az kusto data-connection event-hub
+summary: Kusto data-connection sub group event-hub.
+description: ''
+directCommands:
 - uid: ext_kusto_az_kusto_data_connection_event_hub_create
   name: az kusto data-connection event-hub create
   summary: Creates or updates a data connection.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDataConnectionsCreateOrUpdate
-    syntax:
-      content: az kusto data-connection event-hub create --cluster-name "KustoClusterRPTest4" --data-connection-name "DataConnections8" --database-name "KustoDatabase8" --location "westus" --consumer-group "testConsumerGroup1" --event-hub-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1" --resource-group "kustorptest"
+    syntax: az kusto data-connection event-hub create --cluster-name "KustoClusterRPTest4" --data-connection-name "DataConnections8" --database-name "KustoDatabase8" --location "westus" --consumer-group "testConsumerGroup1" --event-hub-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -70,12 +61,9 @@ items:
   name: az kusto data-connection event-hub data-connection-validation
   summary: Checks that the data connection parameters are valid.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDataConnectionValidation
-    syntax:
-      content: az kusto data-connection event-hub data-connection-validation --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --data-connection-name "DataConnections8" --consumer-group "testConsumerGroup1" --event-hub-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1" --resource-group "kustorptest"
+    syntax: az kusto data-connection event-hub data-connection-validation --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --data-connection-name "DataConnections8" --consumer-group "testConsumerGroup1" --event-hub-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -122,12 +110,9 @@ items:
   name: az kusto data-connection event-hub update
   summary: Updates a data connection.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDataConnectionsUpdate
-    syntax:
-      content: az kusto data-connection event-hub update --cluster-name "KustoClusterRPTest4" --data-connection-name "DataConnections8" --database-name "KustoDatabase8" --location "westus" --consumer-group "testConsumerGroup1" --event-hub-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1" --resource-group "kustorptest"
+    syntax: az kusto data-connection event-hub update --cluster-name "KustoClusterRPTest4" --data-connection-name "DataConnections8" --database-name "KustoDatabase8" --location "westus" --consumer-group "testConsumerGroup1" --event-hub-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.EventHub/namespaces/eventhubTestns1/eventhubs/eventhubTest1" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -175,15 +160,9 @@ items:
     summary: The table where the data should be ingested. Optionally the table information can be added to each message.
     description: ''
 commands:
-- uid: ext_kusto_az_kusto_data_connection_event_hub_create
-  name: az kusto data-connection event-hub create
-  summary: Creates or updates a data connection.
-- uid: ext_kusto_az_kusto_data_connection_event_hub_data_connection_validation
-  name: az kusto data-connection event-hub data-connection-validation
-  summary: Checks that the data connection parameters are valid.
-- uid: ext_kusto_az_kusto_data_connection_event_hub_update
-  name: az kusto data-connection event-hub update
-  summary: Updates a data connection.
+- ext_kusto_az_kusto_data_connection_event_hub_create
+- ext_kusto_az_kusto_data_connection_event_hub_data_connection_validation
+- ext_kusto_az_kusto_data_connection_event_hub_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -199,4 +178,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Kusto data-connection sub group event-hub.
+metadata:
+  description: Kusto data-connection sub group event-hub.

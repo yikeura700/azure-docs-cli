@@ -1,19 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_devops_service_endpoint_azurerm
-  name: az devops service-endpoint azurerm
-  summary: Manage Azure RM service endpoints/connections.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_devops_service_endpoint_azurerm_create
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_devops_service_endpoint_azurerm
+name: az devops service-endpoint azurerm
+summary: Manage Azure RM service endpoints/connections.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_devops_service_endpoint_azurerm_create
   name: az devops service-endpoint azurerm create
   summary: Create an Azure RM type service endpoint.
   description: For automation, set service principal password/secret in AZURE_DEVOPS_EXT_AZURE_RM_SERVICE_PRINCIPAL_KEY environment variable. You can learn more about this at <a href="https://aka.ms/azure-devops-cli-azurerm-service-endpoint">https://aka.ms/azure-devops-cli-azurerm-service-endpoint</a>.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --azure-rm-service-principal-id
@@ -49,9 +43,7 @@ items:
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
 commands:
-- uid: ext_azure-devops_az_devops_service_endpoint_azurerm_create
-  name: az devops service-endpoint azurerm create
-  summary: Create an Azure RM type service endpoint.
+- ext_azure-devops_az_devops_service_endpoint_azurerm_create
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -67,4 +59,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Azure RM service endpoints/connections.
+metadata:
+  description: Manage Azure RM service endpoints/connections.

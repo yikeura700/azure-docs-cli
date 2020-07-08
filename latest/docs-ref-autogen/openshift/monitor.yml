@@ -1,24 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_openshift_monitor
-  name: az openshift monitor
-  summary: Commands to manage Log Analytics monitoring. Requires "--workspace-id".
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_openshift_monitor_disable
-  - az_openshift_monitor_enable
+### YamlMime:CLIGroup
+uid: az_openshift_monitor
+name: az openshift monitor
+summary: Commands to manage Log Analytics monitoring. Requires "--workspace-id".
+description: ''
+directCommands:
 - uid: az_openshift_monitor_disable
   name: az openshift monitor disable
   summary: Disable Log Analytics monitoring.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Disable Log Analytics monitoring.
-    syntax:
-      content: az openshift monitor disable -g MyResourceGroup -n MyManagedCluster
+    syntax: az openshift monitor disable -g MyResourceGroup -n MyManagedCluster
   parameters:
   - isRequired: true
     name: --name -n
@@ -38,12 +30,9 @@ items:
   name: az openshift monitor enable
   summary: Enable Log Analytics monitoring. Requires "--workspace-id".
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Enable Log Analytics in a managed OpenShift cluster.
-    syntax:
-      content: az openshift monitor enable -g MyResourceGroup -n MyManagedCluster --workspace-id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/{workspace-id}"
+    syntax: az openshift monitor enable -g MyResourceGroup -n MyManagedCluster --workspace-id "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyResourceGroup/providers/Microsoft.OperationalInsights/workspaces/{workspace-id}"
   parameters:
   - isRequired: true
     name: --name -n
@@ -64,12 +53,8 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_openshift_monitor_disable
-  name: az openshift monitor disable
-  summary: Disable Log Analytics monitoring.
-- uid: az_openshift_monitor_enable
-  name: az openshift monitor enable
-  summary: Enable Log Analytics monitoring. Requires "--workspace-id".
+- az_openshift_monitor_disable
+- az_openshift_monitor_enable
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -85,4 +70,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage Log Analytics monitoring. Requires "--workspace-id".
+metadata:
+  description: Commands to manage Log Analytics monitoring. Requires "--workspace-id".

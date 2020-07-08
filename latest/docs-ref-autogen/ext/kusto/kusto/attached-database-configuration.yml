@@ -1,28 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_kusto_az_kusto_attached_database_configuration
-  name: az kusto attached-database-configuration
-  summary: Kusto attached-database-configuration.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_kusto_az_kusto_attached_database_configuration_create
-  - ext_kusto_az_kusto_attached_database_configuration_delete
-  - ext_kusto_az_kusto_attached_database_configuration_list
-  - ext_kusto_az_kusto_attached_database_configuration_show
-  - ext_kusto_az_kusto_attached_database_configuration_update
-  - ext_kusto_az_kusto_attached_database_configuration_wait
+### YamlMime:CLIGroup
+uid: ext_kusto_az_kusto_attached_database_configuration
+name: az kusto attached-database-configuration
+summary: Kusto attached-database-configuration.
+description: ''
+directCommands:
 - uid: ext_kusto_az_kusto_attached_database_configuration_create
   name: az kusto attached-database-configuration create
   summary: Creates or updates an attached database configuration.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: AttachedDatabaseConfigurationsCreateOrUpdate
-    syntax:
-      content: az kusto attached-database-configuration create --attached-database-configuration-name "attachedDatabaseConfigurations1" --cluster-name "KustoClusterRPTest4" --location "westus" --cluster-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader" --database-name "Kustodatabase8" --default-principals-modification-kind "Union" --resource-group "kustorptest"
+    syntax: az kusto attached-database-configuration create --attached-database-configuration-name "attachedDatabaseConfigurations1" --cluster-name "KustoClusterRPTest4" --location "westus" --cluster-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader" --database-name "Kustodatabase8" --default-principals-modification-kind "Union" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --attached-database-configuration-name
@@ -56,12 +44,9 @@ items:
   name: az kusto attached-database-configuration delete
   summary: Deletes the attached database configuration with the given name.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: AttachedDatabaseConfigurationsDelete
-    syntax:
-      content: az kusto attached-database-configuration delete --attached-database-configuration-name "attachedDatabaseConfigurations1" --cluster-name "KustoClusterRPTest4" --resource-group "kustorptest"
+    syntax: az kusto attached-database-configuration delete --attached-database-configuration-name "attachedDatabaseConfigurations1" --cluster-name "KustoClusterRPTest4" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --attached-database-configuration-name
@@ -82,12 +67,9 @@ items:
   name: az kusto attached-database-configuration list
   summary: Returns the list of attached database configurations of the given Kusto cluster.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoAttachedDatabaseConfigurationsListByCluster
-    syntax:
-      content: az kusto attached-database-configuration list --cluster-name "KustoClusterRPTest4" --resource-group "kustorptest"
+    syntax: az kusto attached-database-configuration list --cluster-name "KustoClusterRPTest4" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -101,12 +83,9 @@ items:
   name: az kusto attached-database-configuration show
   summary: Returns an attached database configuration.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: AttachedDatabaseConfigurationsGet
-    syntax:
-      content: az kusto attached-database-configuration show --attached-database-configuration-name "attachedDatabaseConfigurations1" --cluster-name "KustoClusterRPTest4" --resource-group "kustorptest"
+    syntax: az kusto attached-database-configuration show --attached-database-configuration-name "attachedDatabaseConfigurations1" --cluster-name "KustoClusterRPTest4" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --attached-database-configuration-name
@@ -124,12 +103,9 @@ items:
   name: az kusto attached-database-configuration update
   summary: Creates or updates an attached database configuration.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: AttachedDatabaseConfigurationsCreateOrUpdate
-    syntax:
-      content: az kusto attached-database-configuration update --attached-database-configuration-name "attachedDatabaseConfigurations1" --cluster-name "KustoClusterRPTest4" --location "westus" --cluster-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader" --database-name "Kustodatabase8" --default-principals-modification-kind "Union" --resource-group "kustorptest"
+    syntax: az kusto attached-database-configuration update --attached-database-configuration-name "attachedDatabaseConfigurations1" --cluster-name "KustoClusterRPTest4" --location "westus" --cluster-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader" --database-name "Kustodatabase8" --default-principals-modification-kind "Union" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --attached-database-configuration-name
@@ -163,8 +139,6 @@ items:
   name: az kusto attached-database-configuration wait
   summary: Wait for a managed Kusto cluster to reach a desired state.
   description: If an operation on a cluster was interrupted or was started with `--no-wait`, use this command to wait for it to complete.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --attached-database-configuration-name
@@ -202,24 +176,12 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_kusto_az_kusto_attached_database_configuration_create
-  name: az kusto attached-database-configuration create
-  summary: Creates or updates an attached database configuration.
-- uid: ext_kusto_az_kusto_attached_database_configuration_delete
-  name: az kusto attached-database-configuration delete
-  summary: Deletes the attached database configuration with the given name.
-- uid: ext_kusto_az_kusto_attached_database_configuration_list
-  name: az kusto attached-database-configuration list
-  summary: Returns the list of attached database configurations of the given Kusto cluster.
-- uid: ext_kusto_az_kusto_attached_database_configuration_show
-  name: az kusto attached-database-configuration show
-  summary: Returns an attached database configuration.
-- uid: ext_kusto_az_kusto_attached_database_configuration_update
-  name: az kusto attached-database-configuration update
-  summary: Creates or updates an attached database configuration.
-- uid: ext_kusto_az_kusto_attached_database_configuration_wait
-  name: az kusto attached-database-configuration wait
-  summary: Wait for a managed Kusto cluster to reach a desired state.
+- ext_kusto_az_kusto_attached_database_configuration_create
+- ext_kusto_az_kusto_attached_database_configuration_delete
+- ext_kusto_az_kusto_attached_database_configuration_list
+- ext_kusto_az_kusto_attached_database_configuration_show
+- ext_kusto_az_kusto_attached_database_configuration_update
+- ext_kusto_az_kusto_attached_database_configuration_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -235,4 +197,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Kusto attached-database-configuration.
+metadata:
+  description: Kusto attached-database-configuration.

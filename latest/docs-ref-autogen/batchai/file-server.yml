@@ -1,33 +1,22 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_batchai_file_server
-  name: az batchai file-server
-  summary: Commands to manage file servers.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_batchai_file_server_create
-  - az_batchai_file_server_delete
-  - az_batchai_file_server_list
-  - az_batchai_file_server_show
+### YamlMime:CLIGroup
+uid: az_batchai_file_server
+name: az batchai file-server
+summary: Commands to manage file servers.
+description: ''
+directCommands:
 - uid: az_batchai_file_server_create
   name: az batchai file-server create
   summary: Create a file server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a NFS file server using a configuration file.
-    syntax:
-      content: az batchai file-server create -g MyResourceGroup -w MyWorkspace -n MyNFS -f nfs.json
+    syntax: az batchai file-server create -g MyResourceGroup -w MyWorkspace -n MyNFS -f nfs.json
   - summary: Create a NFS manually providing parameters.
-    syntax:
-      content: >-
-        az batchai file-server create -g MyResourceGroup -w MyWorkspace -n MyNFS \
-            -s Standard_D14 --disk-count 4 --disk-size 512 \
-            --storage-sku Premium_LRS --caching-type readonly \
-            -u $USER -k ~/.ssh/id_rsa.pub
+    syntax: >-
+      az batchai file-server create -g MyResourceGroup -w MyWorkspace -n MyNFS \
+          -s Standard_D14 --disk-count 4 --disk-size 512 \
+          --storage-sku Premium_LRS --caching-type readonly \
+          -u $USER -k ~/.ssh/id_rsa.pub
   parameters:
   - isRequired: true
     name: --name -n
@@ -92,18 +81,13 @@ items:
   name: az batchai file-server delete
   summary: Delete a file server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete file server and wait for deletion to be completed.
-    syntax:
-      content: az batchai file-server delete -g MyResourceGroup -w MyWorkspace -n MyNFS
+    syntax: az batchai file-server delete -g MyResourceGroup -w MyWorkspace -n MyNFS
   - summary: Delete file server without asking for confirmation (for non-interactive scenarios).
-    syntax:
-      content: az batchai file-server delete -g MyResourceGroup -w MyWorkspace -n MyNFS -y
+    syntax: az batchai file-server delete -g MyResourceGroup -w MyWorkspace -n MyNFS -y
   - summary: Request file server deletion without waiting for deletion to be completed.
-    syntax:
-      content: az batchai file-server delete -g MyResourceGroup -w MyWorkspace -n MyNFS --no-wait
+    syntax: az batchai file-server delete -g MyResourceGroup -w MyWorkspace -n MyNFS --no-wait
   parameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -136,12 +120,9 @@ items:
   name: az batchai file-server list
   summary: List file servers.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all file servers in the given workspace.
-    syntax:
-      content: az batchai file-server list -g MyResourceGroup -w MyWorkspace -o table
+    syntax: az batchai file-server list -g MyResourceGroup -w MyWorkspace -o table
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -164,15 +145,11 @@ items:
   name: az batchai file-server show
   summary: Show information about a file server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show full information about a file server.
-    syntax:
-      content: az batchai file-server show -g MyResourceGroup -w MyWorkspace -n MyNFS
+    syntax: az batchai file-server show -g MyResourceGroup -w MyWorkspace -n MyNFS
   - summary: Show file server summary.
-    syntax:
-      content: az batchai file-server show -g MyResourceGroup -w MyWorkspace -n MyNFS -o table
+    syntax: az batchai file-server show -g MyResourceGroup -w MyWorkspace -n MyNFS -o table
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -196,18 +173,10 @@ items:
       path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_batchai_file_server_create
-  name: az batchai file-server create
-  summary: Create a file server.
-- uid: az_batchai_file_server_delete
-  name: az batchai file-server delete
-  summary: Delete a file server.
-- uid: az_batchai_file_server_list
-  name: az batchai file-server list
-  summary: List file servers.
-- uid: az_batchai_file_server_show
-  name: az batchai file-server show
-  summary: Show information about a file server.
+- az_batchai_file_server_create
+- az_batchai_file_server_delete
+- az_batchai_file_server_list
+- az_batchai_file_server_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -223,10 +192,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/e1102d37a891598da84f80ba091b89a7532b90aa/src/azure-cli/azure/cli/command_modules/batchai/_help.py
-updated_at: 10/19/2019 10:02:34 AM
-ms.date: 10/19/2019
-description: Commands to manage file servers.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/e1102d37a891598da84f80ba091b89a7532b90aa/src/azure-cli/azure/cli/command_modules/batchai/_help.py
+  updated_at: 10/19/2019 10:02:34 AM
+  ms.date: 10/19/2019
+  description: Commands to manage file servers.

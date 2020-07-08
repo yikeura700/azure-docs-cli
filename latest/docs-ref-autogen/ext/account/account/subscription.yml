@@ -1,28 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_account_az_account_subscription
-  name: az account subscription
-  summary: Manage subscriptions.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_account_az_account_subscription_cancel
-  - ext_account_az_account_subscription_create
-  - ext_account_az_account_subscription_create_csp
-  - ext_account_az_account_subscription_create_in_enrollment_account
-  - ext_account_az_account_subscription_enable
-  - ext_account_az_account_subscription_rename
+### YamlMime:CLIGroup
+uid: ext_account_az_account_subscription
+name: az account subscription
+summary: Manage subscriptions.
+description: ''
+directCommands:
 - uid: ext_account_az_account_subscription_cancel
   name: az account subscription cancel
   summary: Cancel subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Cancel subscription
-    syntax:
-      content: az account subscription cancel --subscription-id "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    syntax: az account subscription cancel --subscription-id "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
   parameters:
   - isRequired: true
     name: --subscription-id
@@ -35,21 +23,18 @@ items:
   name: az account subscription create
   summary: Create a new WebDirect or EA Azure subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create subscription
-    syntax:
-      content: >-
-        az account subscription create --billing-account-name \
+    syntax: >-
+      az account subscription create --billing-account-name \
 
-        "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_XXXX-XX-XX" \
+      "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_XXXX-XX-XX" \
 
-        --billing-profile-name "27VR-HDWX-BG7-TGB" --cost-center "135366376" --display-name \
+      --billing-profile-name "27VR-HDWX-BG7-TGB" --cost-center "135366376" --display-name \
 
-        "Contoso MCA subscription" --owner xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx \
+      "Contoso MCA subscription" --owner xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx \
 
-        --sku-id "0001" --invoice-section-name "JGF7-NSBG-PJA-TGB"
+      --sku-id "0001" --invoice-section-name "JGF7-NSBG-PJA-TGB"
   parameters:
   - isRequired: true
     name: --billing-account-name
@@ -87,19 +72,16 @@ items:
   name: az account subscription create-csp
   summary: Create a new CSP subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create CSP subscription
-    syntax:
-      content: >-
-        az account subscription create-csp --billing-account-name \
+    syntax: >-
+      az account subscription create-csp --billing-account-name \
 
-        "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_XXXX-XX-XX" \
+      "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_XXXX-XX-XX" \
 
-        --display-name "Contoso MCA subscription" --sku-id "0001" --customer-name \
+      --display-name "Contoso MCA subscription" --sku-id "0001" --customer-name \
 
-        "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+      "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
   parameters:
   - isRequired: true
     name: --billing-account-name
@@ -127,21 +109,18 @@ items:
   name: az account subscription create-in-enrollment-account
   summary: Create subscription in enrolment account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create subscription in enrollment account
-    syntax:
-      content: >-
-        az account subscription create-in-enrollment-account --display-name \
+    syntax: >-
+      az account subscription create-in-enrollment-account --display-name \
 
-        "Test Ea Azure Sub" --offer-type "MS-AZR-0017P" --owners \
+      "Test Ea Azure Sub" --offer-type "MS-AZR-0017P" --owners \
 
-        xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx \
+      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx \
 
-        xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --enrollment-account-name \
+      xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --enrollment-account-name \
 
-        "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+      "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
   parameters:
   - isRequired: true
     name: --enrollment-account-name
@@ -167,12 +146,9 @@ items:
   name: az account subscription enable
   summary: Enable subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Enable subscription
-    syntax:
-      content: az account subscription enable --subscription-id "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    syntax: az account subscription enable --subscription-id "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
   parameters:
   - isRequired: true
     name: --subscription-id
@@ -182,12 +158,9 @@ items:
   name: az account subscription rename
   summary: Rename subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Rename subscription
-    syntax:
-      content: az account subscription rename --subscription-id "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    syntax: az account subscription rename --subscription-id "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
   parameters:
   - isRequired: true
     name: --subscription-id
@@ -197,24 +170,12 @@ items:
     summary: New subscription name.
     description: ''
 commands:
-- uid: ext_account_az_account_subscription_cancel
-  name: az account subscription cancel
-  summary: Cancel subscription.
-- uid: ext_account_az_account_subscription_create
-  name: az account subscription create
-  summary: Create a new WebDirect or EA Azure subscription.
-- uid: ext_account_az_account_subscription_create_csp
-  name: az account subscription create-csp
-  summary: Create a new CSP subscription.
-- uid: ext_account_az_account_subscription_create_in_enrollment_account
-  name: az account subscription create-in-enrollment-account
-  summary: Create subscription in enrolment account.
-- uid: ext_account_az_account_subscription_enable
-  name: az account subscription enable
-  summary: Enable subscription.
-- uid: ext_account_az_account_subscription_rename
-  name: az account subscription rename
-  summary: Rename subscription.
+- ext_account_az_account_subscription_cancel
+- ext_account_az_account_subscription_create
+- ext_account_az_account_subscription_create_csp
+- ext_account_az_account_subscription_create_in_enrollment_account
+- ext_account_az_account_subscription_enable
+- ext_account_az_account_subscription_rename
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -230,4 +191,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage subscriptions.
+metadata:
+  description: Manage subscriptions.

@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_netappfiles-preview_az_netappfiles_pool
-  name: az netappfiles pool
-  summary: Manage Azure NetApp Files (ANF) Pool Resources.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_netappfiles-preview_az_netappfiles_pool_create
-  - ext_netappfiles-preview_az_netappfiles_pool_delete
-  - ext_netappfiles-preview_az_netappfiles_pool_list
-  - ext_netappfiles-preview_az_netappfiles_pool_show
-  - ext_netappfiles-preview_az_netappfiles_pool_update
+### YamlMime:CLIGroup
+uid: ext_netappfiles-preview_az_netappfiles_pool
+name: az netappfiles pool
+summary: Manage Azure NetApp Files (ANF) Pool Resources.
+description: ''
+directCommands:
 - uid: ext_netappfiles-preview_az_netappfiles_pool_create
   name: az netappfiles pool create
   summary: Create a new Azure NetApp Files (ANF) pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an ANF pool
-    syntax:
-      content: az netappfiles pool create -g group --account-name aname --pool-name pname -l location --size 4398046511104 --service-level "Premium"
+    syntax: az netappfiles pool create -g group --account-name aname --pool-name pname -l location --size 4398046511104 --service-level "Premium"
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -54,12 +43,9 @@ items:
   name: az netappfiles pool delete
   summary: Delete the specified ANF pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete an ANF pool
-    syntax:
-      content: az netappfiles pool delete -g group --account-name aname --pool-name pname
+    syntax: az netappfiles pool delete -g group --account-name aname --pool-name pname
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -77,12 +63,9 @@ items:
   name: az netappfiles pool list
   summary: L:ist the ANF pools for the specified account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List the pools for the ANF account
-    syntax:
-      content: az netappfiles pool list -g group --account-name name
+    syntax: az netappfiles pool list -g group --account-name name
   parameters:
   - isRequired: true
     name: --account-name -a -n
@@ -96,12 +79,9 @@ items:
   name: az netappfiles pool show
   summary: Get the specified ANF pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get an ANF pool
-    syntax:
-      content: az netappfiles pool show -g group --account-name aname --pool-name pname
+    syntax: az netappfiles pool show -g group --account-name aname --pool-name pname
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -119,12 +99,9 @@ items:
   name: az netappfiles pool update
   summary: Update the tags of the specified ANF pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update specific values for an ANF pool
-    syntax:
-      content: az netappfiles pool update -g group --account-name aname --pool-name pname --service-level "Extreme" --tags 'key[=value] key[=value]'
+    syntax: az netappfiles pool update -g group --account-name aname --pool-name pname --service-level "Extreme" --tags 'key[=value] key[=value]'
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -163,21 +140,11 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_netappfiles-preview_az_netappfiles_pool_create
-  name: az netappfiles pool create
-  summary: Create a new Azure NetApp Files (ANF) pool.
-- uid: ext_netappfiles-preview_az_netappfiles_pool_delete
-  name: az netappfiles pool delete
-  summary: Delete the specified ANF pool.
-- uid: ext_netappfiles-preview_az_netappfiles_pool_list
-  name: az netappfiles pool list
-  summary: L:ist the ANF pools for the specified account.
-- uid: ext_netappfiles-preview_az_netappfiles_pool_show
-  name: az netappfiles pool show
-  summary: Get the specified ANF pool.
-- uid: ext_netappfiles-preview_az_netappfiles_pool_update
-  name: az netappfiles pool update
-  summary: Update the tags of the specified ANF pool.
+- ext_netappfiles-preview_az_netappfiles_pool_create
+- ext_netappfiles-preview_az_netappfiles_pool_delete
+- ext_netappfiles-preview_az_netappfiles_pool_list
+- ext_netappfiles-preview_az_netappfiles_pool_show
+- ext_netappfiles-preview_az_netappfiles_pool_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -193,4 +160,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Azure NetApp Files (ANF) Pool Resources.
+metadata:
+  description: Manage Azure NetApp Files (ANF) Pool Resources.

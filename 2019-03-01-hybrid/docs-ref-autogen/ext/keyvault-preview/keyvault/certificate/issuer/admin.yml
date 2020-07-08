@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_keyvault-preview_az_keyvault_certificate_issuer_admin
-  name: az keyvault certificate issuer admin
-  summary: Manage admin information for certificate issuers.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_keyvault-preview_az_keyvault_certificate_issuer_admin_add
-  - ext_keyvault-preview_az_keyvault_certificate_issuer_admin_delete
-  - ext_keyvault-preview_az_keyvault_certificate_issuer_admin_list
+### YamlMime:CLIGroup
+uid: ext_keyvault-preview_az_keyvault_certificate_issuer_admin
+name: az keyvault certificate issuer admin
+summary: Manage admin information for certificate issuers.
+description: ''
+directCommands:
 - uid: ext_keyvault-preview_az_keyvault_certificate_issuer_admin_add
   name: az keyvault certificate issuer admin add
   summary: Add admin details for a specified certificate issuer.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --email
@@ -42,8 +34,6 @@ items:
   name: az keyvault certificate issuer admin delete
   summary: Remove admin details for the specified certificate issuer.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --email
@@ -61,8 +51,6 @@ items:
   name: az keyvault certificate issuer admin list
   summary: List admins for a specified certificate issuer.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --issuer-name
@@ -73,15 +61,9 @@ items:
     summary: Name of the key vault.
     description: ''
 commands:
-- uid: ext_keyvault-preview_az_keyvault_certificate_issuer_admin_add
-  name: az keyvault certificate issuer admin add
-  summary: Add admin details for a specified certificate issuer.
-- uid: ext_keyvault-preview_az_keyvault_certificate_issuer_admin_delete
-  name: az keyvault certificate issuer admin delete
-  summary: Remove admin details for the specified certificate issuer.
-- uid: ext_keyvault-preview_az_keyvault_certificate_issuer_admin_list
-  name: az keyvault certificate issuer admin list
-  summary: List admins for a specified certificate issuer.
+- ext_keyvault-preview_az_keyvault_certificate_issuer_admin_add
+- ext_keyvault-preview_az_keyvault_certificate_issuer_admin_delete
+- ext_keyvault-preview_az_keyvault_certificate_issuer_admin_list
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -97,4 +79,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage admin information for certificate issuers.
+metadata:
+  description: Manage admin information for certificate issuers.

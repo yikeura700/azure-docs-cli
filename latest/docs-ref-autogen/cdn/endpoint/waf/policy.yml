@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_cdn_endpoint_waf_policy
-  name: az cdn endpoint waf policy
-  summary: Apply a CDN WAF policy to a CDN endpoint.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_cdn_endpoint_waf_policy_remove
-  - az_cdn_endpoint_waf_policy_set
-  - az_cdn_endpoint_waf_policy_show
+### YamlMime:CLIGroup
+uid: az_cdn_endpoint_waf_policy
+name: az cdn endpoint waf policy
+summary: Apply a CDN WAF policy to a CDN endpoint.
+description: ''
+directCommands:
 - uid: az_cdn_endpoint_waf_policy_remove
   name: az cdn endpoint waf policy remove
   summary: Remove a CDN WAF policy from a CDN endpoint.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Remove a CDN WAF policy from a CDN endpoint.
-    syntax:
-      content: az cdn endpoint waf policy remove -g group --endpoint-name endpoint --profile-name profile
+    syntax: az cdn endpoint waf policy remove -g group --endpoint-name endpoint --profile-name profile
   parameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
@@ -49,12 +40,9 @@ items:
   name: az cdn endpoint waf policy set
   summary: Set the CDN WAF policy applied to a CDN endpoint.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Set the CDN WAF policy applied to a CDN endpoint by WAF Policy name.
-    syntax:
-      content: az cdn endpoint waf policy set -g group --endpoint-name endpoint --profile-name profile --waf-policy-subscription-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    syntax: az cdn endpoint waf policy set -g group --endpoint-name endpoint --profile-name profile --waf-policy-subscription-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   parameters:
   - name: --waf-policy-id
     summary: The Resource ID of the CDN WAF policy to apply to this endpoint.
@@ -93,12 +81,9 @@ items:
   name: az cdn endpoint waf policy show
   summary: Show which CDN WAF policy is applied to a CDN endpoint.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show which CDN WAF policy is applied to a CDN endpoint.
-    syntax:
-      content: az cdn endpoint waf policy show -g group --endpoint-name endpoint --profile-name profile
+    syntax: az cdn endpoint waf policy show -g group --endpoint-name endpoint --profile-name profile
   parameters:
   - name: --endpoint-name
     summary: Name of the CDN endpoint.
@@ -122,15 +107,9 @@ items:
       path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_cdn_endpoint_waf_policy_remove
-  name: az cdn endpoint waf policy remove
-  summary: Remove a CDN WAF policy from a CDN endpoint.
-- uid: az_cdn_endpoint_waf_policy_set
-  name: az cdn endpoint waf policy set
-  summary: Set the CDN WAF policy applied to a CDN endpoint.
-- uid: az_cdn_endpoint_waf_policy_show
-  name: az cdn endpoint waf policy show
-  summary: Show which CDN WAF policy is applied to a CDN endpoint.
+- az_cdn_endpoint_waf_policy_remove
+- az_cdn_endpoint_waf_policy_set
+- az_cdn_endpoint_waf_policy_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -146,10 +125,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/0bb45ecd541c1a6109ad67be4f45afe3ce47f2b5/src/azure-cli/azure/cli/command_modules/cdn/_help.py
-updated_at: 6/3/2020 1:56:07 AM
-ms.date: 06/03/2020
-description: Apply a CDN WAF policy to a CDN endpoint.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/0bb45ecd541c1a6109ad67be4f45afe3ce47f2b5/src/azure-cli/azure/cli/command_modules/cdn/_help.py
+  updated_at: 6/3/2020 1:56:07 AM
+  ms.date: 06/03/2020
+  description: Apply a CDN WAF policy to a CDN endpoint.

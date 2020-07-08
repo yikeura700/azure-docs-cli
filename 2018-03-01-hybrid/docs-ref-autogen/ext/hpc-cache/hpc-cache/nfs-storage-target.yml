@@ -1,31 +1,23 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_hpc-cache_az_hpc_cache_nfs_storage_target
-  name: az hpc-cache nfs-storage-target
-  summary: Commands to create hpc cache nfs storage target.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_hpc-cache_az_hpc_cache_nfs_storage_target_add
-  - ext_hpc-cache_az_hpc_cache_nfs_storage_target_update
+### YamlMime:CLIGroup
+uid: ext_hpc-cache_az_hpc_cache_nfs_storage_target
+name: az hpc-cache nfs-storage-target
+summary: Commands to create hpc cache nfs storage target.
+description: ''
+directCommands:
 - uid: ext_hpc-cache_az_hpc_cache_nfs_storage_target_add
   name: az hpc-cache nfs-storage-target add
   summary: Create or update a nfs Storage Target. This operation is allowed at any time, but if the Cache is down or unhealthy, the actual creation/modification of the Storage Target may be delayed until the Cache is healthy again.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: StorageTargets_CreateOrUpdate
-    syntax:
-      content: >-
-        az hpc-cache nfs-storage-target add --resource-group "scgroup" --cache-name "sc1" --name \
+    syntax: >-
+      az hpc-cache nfs-storage-target add --resource-group "scgroup" --cache-name "sc1" --name \
 
-        "st1" --nfs3-target 10.7.0.24 --nfs3-usage-model WRITE_AROUND \
+      "st1" --nfs3-target 10.7.0.24 --nfs3-usage-model WRITE_AROUND \
 
-        --junction namespace-path="/nt2" nfs-export="/export/a" target-path="/1" \
+      --junction namespace-path="/nt2" nfs-export="/export/a" target-path="/1" \
 
-        --junction namespace-path="/nt3" nfs-export="/export/b"
+      --junction namespace-path="/nt3" nfs-export="/export/b"
   parameters:
   - isRequired: true
     name: --cache-name
@@ -55,8 +47,6 @@ items:
   name: az hpc-cache nfs-storage-target update
   summary: Create or update a nfs Storage Target. This operation is allowed at any time, but if the Cache is down or unhealthy, the actual creation/modification of the Storage Target may be delayed until the Cache is healthy again.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cache-name
@@ -80,12 +70,8 @@ items:
     summary: Identifies the primary usage model to be used for this Storage Target.
     description: ''
 commands:
-- uid: ext_hpc-cache_az_hpc_cache_nfs_storage_target_add
-  name: az hpc-cache nfs-storage-target add
-  summary: Create or update a nfs Storage Target. This operation is allowed at any time, but if the Cache is down or unhealthy, the actual creation/modification of the Storage Target may be delayed until the Cache is healthy again.
-- uid: ext_hpc-cache_az_hpc_cache_nfs_storage_target_update
-  name: az hpc-cache nfs-storage-target update
-  summary: Create or update a nfs Storage Target. This operation is allowed at any time, but if the Cache is down or unhealthy, the actual creation/modification of the Storage Target may be delayed until the Cache is healthy again.
+- ext_hpc-cache_az_hpc_cache_nfs_storage_target_add
+- ext_hpc-cache_az_hpc_cache_nfs_storage_target_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -101,4 +87,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to create hpc cache nfs storage target.
+metadata:
+  description: Commands to create hpc cache nfs storage target.

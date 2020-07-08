@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sql_server_key
-  name: az sql server key
-  summary: Manage a server's keys.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sql_server_key_create
-  - az_sql_server_key_delete
-  - az_sql_server_key_list
-  - az_sql_server_key_show
+### YamlMime:CLIGroup
+uid: az_sql_server_key
+name: az sql server key
+summary: Manage a server's keys.
+description: ''
+directCommands:
 - uid: az_sql_server_key_create
   name: az sql server key create
   summary: Creates a server key.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --kid -k
@@ -43,8 +34,6 @@ items:
   name: az sql server key delete
   summary: Deletes a server key.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --kid -k
@@ -72,8 +61,6 @@ items:
   name: az sql server key list
   summary: Gets a list of server keys.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -97,8 +84,6 @@ items:
   name: az sql server key show
   summary: Shows a server key.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --kid -k
@@ -123,18 +108,10 @@ items:
       path: src/azure-cli/azure/cli/command_modules/sql/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_sql_server_key_create
-  name: az sql server key create
-  summary: Creates a server key.
-- uid: az_sql_server_key_delete
-  name: az sql server key delete
-  summary: Deletes a server key.
-- uid: az_sql_server_key_list
-  name: az sql server key list
-  summary: Gets a list of server keys.
-- uid: az_sql_server_key_show
-  name: az sql server key show
-  summary: Shows a server key.
+- az_sql_server_key_create
+- az_sql_server_key_delete
+- az_sql_server_key_list
+- az_sql_server_key_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -150,10 +127,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
-updated_at: 6/19/2020 1:04:35 AM
-ms.date: 06/19/2020
-description: Manage a server's keys.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  updated_at: 6/19/2020 1:04:35 AM
+  ms.date: 06/19/2020
+  description: Manage a server's keys.

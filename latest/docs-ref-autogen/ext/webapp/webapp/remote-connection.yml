@@ -1,19 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_webapp_az_webapp_remote_connection
-  name: az webapp remote-connection
-  summary: Create a remote connection using a tcp tunnel to your web app.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_webapp_az_webapp_remote_connection_create
+### YamlMime:CLIGroup
+uid: ext_webapp_az_webapp_remote_connection
+name: az webapp remote-connection
+summary: Create a remote connection using a tcp tunnel to your web app.
+description: ''
+directCommands:
 - uid: ext_webapp_az_webapp_remote_connection_create
   name: az webapp remote-connection create
   summary: Creates a remote connection using a tcp tunnel to your web app.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -30,9 +24,7 @@ items:
     summary: ''
     description: ''
 commands:
-- uid: ext_webapp_az_webapp_remote_connection_create
-  name: az webapp remote-connection create
-  summary: Creates a remote connection using a tcp tunnel to your web app.
+- ext_webapp_az_webapp_remote_connection_create
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -48,4 +40,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Create a remote connection using a tcp tunnel to your web app.
+metadata:
+  description: Create a remote connection using a tcp tunnel to your web app.

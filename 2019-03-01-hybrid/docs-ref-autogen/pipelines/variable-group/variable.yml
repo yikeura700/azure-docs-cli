@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_pipelines_variable_group_variable
-  name: az pipelines variable-group variable
-  summary: Manage variables in a variable group.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_pipelines_variable_group_variable_create
-  - az_pipelines_variable_group_variable_delete
-  - az_pipelines_variable_group_variable_list
-  - az_pipelines_variable_group_variable_update
+### YamlMime:CLIGroup
+uid: az_pipelines_variable_group_variable
+name: az pipelines variable-group variable
+summary: Manage variables in a variable group.
+description: ''
+directCommands:
 - uid: az_pipelines_variable_group_variable_create
   name: az pipelines variable-group variable create
   summary: Add a variable to a variable group.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --group-id --id
@@ -50,8 +41,6 @@ items:
   name: az pipelines variable-group variable delete
   summary: Delete a variable from variable group.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --group-id --id
@@ -81,8 +70,6 @@ items:
   name: az pipelines variable-group variable list
   summary: List the variables in a variable group.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --group-id --id
@@ -105,8 +92,6 @@ items:
   name: az pipelines variable-group variable update
   summary: Update a variable in a variable group.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --group-id --id
@@ -144,18 +129,10 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_pipelines_variable_group_variable_create
-  name: az pipelines variable-group variable create
-  summary: Add a variable to a variable group.
-- uid: az_pipelines_variable_group_variable_delete
-  name: az pipelines variable-group variable delete
-  summary: Delete a variable from variable group.
-- uid: az_pipelines_variable_group_variable_list
-  name: az pipelines variable-group variable list
-  summary: List the variables in a variable group.
-- uid: az_pipelines_variable_group_variable_update
-  name: az pipelines variable-group variable update
-  summary: Update a variable in a variable group.
+- az_pipelines_variable_group_variable_create
+- az_pipelines_variable_group_variable_delete
+- az_pipelines_variable_group_variable_list
+- az_pipelines_variable_group_variable_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -171,4 +148,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage variables in a variable group.
+metadata:
+  description: Manage variables in a variable group.

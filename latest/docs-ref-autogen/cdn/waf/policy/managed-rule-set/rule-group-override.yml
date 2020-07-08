@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_cdn_waf_policy_managed_rule_set_rule_group_override
-  name: az cdn waf policy managed-rule-set rule-group-override
-  summary: Manage rule group overrides of a managed rule on a CDN WAF policy.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_cdn_waf_policy_managed_rule_set_rule_group_override_delete
-  - az_cdn_waf_policy_managed_rule_set_rule_group_override_list
-  - az_cdn_waf_policy_managed_rule_set_rule_group_override_list_available
-  - az_cdn_waf_policy_managed_rule_set_rule_group_override_set
-  - az_cdn_waf_policy_managed_rule_set_rule_group_override_show
+### YamlMime:CLIGroup
+uid: az_cdn_waf_policy_managed_rule_set_rule_group_override
+name: az cdn waf policy managed-rule-set rule-group-override
+summary: Manage rule group overrides of a managed rule on a CDN WAF policy.
+description: ''
+directCommands:
 - uid: az_cdn_waf_policy_managed_rule_set_rule_group_override_delete
   name: az cdn waf policy managed-rule-set rule-group-override delete
   summary: Remove a rule group override from a managed rule set on a CDN WAF policy.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Remove the rule group override for SQLI from DefaultRuleSet_1.0 on a CDN WAF policy.
-    syntax:
-      content: az cdn waf policy managed-rule-set rule-group-override delete -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0 -n SQLI
+    syntax: az cdn waf policy managed-rule-set rule-group-override delete -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0 -n SQLI
   parameters:
   - isRequired: true
     name: --name -n
@@ -60,12 +49,9 @@ items:
   name: az cdn waf policy managed-rule-set rule-group-override list
   summary: List rule group overrides of a managed rule on a CDN WAF policy.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List rule group overrides of a managed rule on a CDN WAF policy.
-    syntax:
-      content: az cdn waf policy managed-rule-set rule-group-override list -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0
+    syntax: az cdn waf policy managed-rule-set rule-group-override list -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0
   parameters:
   - isRequired: true
     name: --policy-name
@@ -96,12 +82,9 @@ items:
   name: az cdn waf policy managed-rule-set rule-group-override list-available
   summary: List available CDN WAF managed rule groups of a managed rule set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List available rule groups for DefaultRuleSet_1.0.
-    syntax:
-      content: az cdn waf policy managed-rule-set rule-group-override list-available --rule-set-type DefaultRuleSet --rule-set-version 1.0
+    syntax: az cdn waf policy managed-rule-set rule-group-override list-available --rule-set-type DefaultRuleSet --rule-set-version 1.0
   parameters:
   - isRequired: true
     name: --rule-set-type
@@ -124,15 +107,11 @@ items:
   name: az cdn waf policy managed-rule-set rule-group-override set
   summary: Add or update a rule group override to a managed rule set on a CDN WAF policy.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add a rule group override for SQL injections to DefaultRuleSet_1.0 on a CDN WAF policy.
-    syntax:
-      content: az cdn waf policy managed-rule-set rule-group-override set -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0 -n SQLI -r id=942440 action=Redirect enabled=Enabled
+    syntax: az cdn waf policy managed-rule-set rule-group-override set -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0 -n SQLI -r id=942440 action=Redirect enabled=Enabled
   - summary: Add multiple rule group overrides to DefaultRuleSet_1.0 on a CDN WAF policy.
-    syntax:
-      content: az cdn waf policy managed-rule-set rule-group-override set -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0 -n SQLI -r id=942440 action=Redirect enabled=Enabled -r id=942120 -r id=942100
+    syntax: az cdn waf policy managed-rule-set rule-group-override set -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0 -n SQLI -r id=942440 action=Redirect enabled=Enabled -r id=942120 -r id=942100
   parameters:
   - isRequired: true
     name: --name -n
@@ -172,12 +151,9 @@ items:
   name: az cdn waf policy managed-rule-set rule-group-override show
   summary: Show a rule group override of a managed rule on a CDN WAF policy.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the rule group override for rule group SQLI of DefaultRuleSet_1.0 on a CDN WAF policy.
-    syntax:
-      content: az cdn waf policy managed-rule-set rule-group-override show -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0 -n SQLI
+    syntax: az cdn waf policy managed-rule-set rule-group-override show -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0 -n SQLI
   parameters:
   - isRequired: true
     name: --name -n
@@ -210,21 +186,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_cdn_waf_policy_managed_rule_set_rule_group_override_delete
-  name: az cdn waf policy managed-rule-set rule-group-override delete
-  summary: Remove a rule group override from a managed rule set on a CDN WAF policy.
-- uid: az_cdn_waf_policy_managed_rule_set_rule_group_override_list
-  name: az cdn waf policy managed-rule-set rule-group-override list
-  summary: List rule group overrides of a managed rule on a CDN WAF policy.
-- uid: az_cdn_waf_policy_managed_rule_set_rule_group_override_list_available
-  name: az cdn waf policy managed-rule-set rule-group-override list-available
-  summary: List available CDN WAF managed rule groups of a managed rule set.
-- uid: az_cdn_waf_policy_managed_rule_set_rule_group_override_set
-  name: az cdn waf policy managed-rule-set rule-group-override set
-  summary: Add or update a rule group override to a managed rule set on a CDN WAF policy.
-- uid: az_cdn_waf_policy_managed_rule_set_rule_group_override_show
-  name: az cdn waf policy managed-rule-set rule-group-override show
-  summary: Show a rule group override of a managed rule on a CDN WAF policy.
+- az_cdn_waf_policy_managed_rule_set_rule_group_override_delete
+- az_cdn_waf_policy_managed_rule_set_rule_group_override_list
+- az_cdn_waf_policy_managed_rule_set_rule_group_override_list_available
+- az_cdn_waf_policy_managed_rule_set_rule_group_override_set
+- az_cdn_waf_policy_managed_rule_set_rule_group_override_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -240,10 +206,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/0bb45ecd541c1a6109ad67be4f45afe3ce47f2b5/src/azure-cli/azure/cli/command_modules/cdn/_help.py
-updated_at: 6/3/2020 1:56:07 AM
-ms.date: 06/03/2020
-description: Manage rule group overrides of a managed rule on a CDN WAF policy.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/0bb45ecd541c1a6109ad67be4f45afe3ce47f2b5/src/azure-cli/azure/cli/command_modules/cdn/_help.py
+  updated_at: 6/3/2020 1:56:07 AM
+  ms.date: 06/03/2020
+  description: Manage rule group overrides of a managed rule on a CDN WAF policy.

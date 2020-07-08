@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_peering_az_peering_registered_prefix
-  name: az peering registered-prefix
-  summary: Peering registered-prefix.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_peering_az_peering_registered_prefix_create
-  - ext_peering_az_peering_registered_prefix_delete
-  - ext_peering_az_peering_registered_prefix_list
-  - ext_peering_az_peering_registered_prefix_show
-  - ext_peering_az_peering_registered_prefix_update
+### YamlMime:CLIGroup
+uid: ext_peering_az_peering_registered_prefix
+name: az peering registered-prefix
+summary: Peering registered-prefix.
+description: ''
+directCommands:
 - uid: ext_peering_az_peering_registered_prefix_create
   name: az peering registered-prefix create
   summary: Creates a new registered prefix with the specified name under the given subscription, resource group and peering.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create or update a registered prefix for the peering
-    syntax:
-      content: az peering registered-prefix create --peering-name "peeringName" --prefix "10.22.20.0/24" --registered-prefix-name "registeredPrefixName" --resource-group "rgName"
+    syntax: az peering registered-prefix create --peering-name "peeringName" --prefix "10.22.20.0/24" --registered-prefix-name "registeredPrefixName" --resource-group "rgName"
   parameters:
   - isRequired: true
     name: --peering-name
@@ -42,12 +31,9 @@ items:
   name: az peering registered-prefix delete
   summary: Deletes an existing registered prefix with the specified name under the given subscription, resource group and peering.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Deletes a registered prefix associated with the peering
-    syntax:
-      content: az peering registered-prefix delete --peering-name "peeringName" --registered-prefix-name "registeredPrefixName" --resource-group "rgName"
+    syntax: az peering registered-prefix delete --peering-name "peeringName" --registered-prefix-name "registeredPrefixName" --resource-group "rgName"
   parameters:
   - isRequired: true
     name: --peering-name
@@ -65,12 +51,9 @@ items:
   name: az peering registered-prefix list
   summary: Lists all registered prefixes under the given subscription, resource group and peering.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all the registered prefixes associated with the peering
-    syntax:
-      content: az peering registered-prefix list --peering-name "peeringName" --resource-group "rgName"
+    syntax: az peering registered-prefix list --peering-name "peeringName" --resource-group "rgName"
   parameters:
   - isRequired: true
     name: --peering-name
@@ -84,12 +67,9 @@ items:
   name: az peering registered-prefix show
   summary: Gets an existing registered prefix with the specified name under the given subscription, resource group and peering.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get a registered prefix associated with the peering
-    syntax:
-      content: az peering registered-prefix show --peering-name "peeringName" --registered-prefix-name "registeredPrefixName" --resource-group "rgName"
+    syntax: az peering registered-prefix show --peering-name "peeringName" --registered-prefix-name "registeredPrefixName" --resource-group "rgName"
   parameters:
   - isRequired: true
     name: --peering-name
@@ -107,12 +87,9 @@ items:
   name: az peering registered-prefix update
   summary: Creates a new registered prefix with the specified name under the given subscription, resource group and peering.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create or update a registered prefix for the peering
-    syntax:
-      content: az peering registered-prefix update --peering-name "peeringName" --prefix "10.22.20.0/24" --registered-prefix-name "registeredPrefixName" --resource-group "rgName"
+    syntax: az peering registered-prefix update --peering-name "peeringName" --prefix "10.22.20.0/24" --registered-prefix-name "registeredPrefixName" --resource-group "rgName"
   parameters:
   - isRequired: true
     name: --peering-name
@@ -130,21 +107,11 @@ items:
     summary: The customer's prefix from which traffic originates.
     description: ''
 commands:
-- uid: ext_peering_az_peering_registered_prefix_create
-  name: az peering registered-prefix create
-  summary: Creates a new registered prefix with the specified name under the given subscription, resource group and peering.
-- uid: ext_peering_az_peering_registered_prefix_delete
-  name: az peering registered-prefix delete
-  summary: Deletes an existing registered prefix with the specified name under the given subscription, resource group and peering.
-- uid: ext_peering_az_peering_registered_prefix_list
-  name: az peering registered-prefix list
-  summary: Lists all registered prefixes under the given subscription, resource group and peering.
-- uid: ext_peering_az_peering_registered_prefix_show
-  name: az peering registered-prefix show
-  summary: Gets an existing registered prefix with the specified name under the given subscription, resource group and peering.
-- uid: ext_peering_az_peering_registered_prefix_update
-  name: az peering registered-prefix update
-  summary: Creates a new registered prefix with the specified name under the given subscription, resource group and peering.
+- ext_peering_az_peering_registered_prefix_create
+- ext_peering_az_peering_registered_prefix_delete
+- ext_peering_az_peering_registered_prefix_list
+- ext_peering_az_peering_registered_prefix_show
+- ext_peering_az_peering_registered_prefix_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -160,4 +127,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Peering registered-prefix.
+metadata:
+  description: Peering registered-prefix.

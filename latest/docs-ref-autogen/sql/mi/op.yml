@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sql_mi_op
-  name: az sql mi op
-  summary: Manage operations on a managed instance.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sql_mi_op_cancel
-  - az_sql_mi_op_list
-  - az_sql_mi_op_show
+### YamlMime:CLIGroup
+uid: az_sql_mi_op
+name: az sql mi op
+summary: Manage operations on a managed instance.
+description: ''
+directCommands:
 - uid: az_sql_mi_op_cancel
   name: az sql mi op cancel
   summary: Cancels the asynchronous operation on the managed instance.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Cancel an operation.
-    syntax:
-      content: az sql mi op cancel -g mygroup --mi myManagedInstance -n d2896mydb-2ba8-4c84-bac1-387c430cce40
+    syntax: az sql mi op cancel -g mygroup --mi myManagedInstance -n d2896mydb-2ba8-4c84-bac1-387c430cce40
   parameters:
   - isRequired: true
     name: --name -n
@@ -47,8 +38,6 @@ items:
   name: az sql mi op list
   summary: Gets a list of operations performed on the managed instance.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -72,8 +61,6 @@ items:
   name: az sql mi op show
   summary: Gets a management operation on a managed instance.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -98,15 +85,9 @@ items:
       path: src/azure-cli/azure/cli/command_modules/sql/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_sql_mi_op_cancel
-  name: az sql mi op cancel
-  summary: Cancels the asynchronous operation on the managed instance.
-- uid: az_sql_mi_op_list
-  name: az sql mi op list
-  summary: Gets a list of operations performed on the managed instance.
-- uid: az_sql_mi_op_show
-  name: az sql mi op show
-  summary: Gets a management operation on a managed instance.
+- az_sql_mi_op_cancel
+- az_sql_mi_op_list
+- az_sql_mi_op_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -122,10 +103,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
-updated_at: 6/19/2020 1:04:35 AM
-ms.date: 06/19/2020
-description: Manage operations on a managed instance.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  updated_at: 6/19/2020 1:04:35 AM
+  ms.date: 06/19/2020
+  description: Manage operations on a managed instance.

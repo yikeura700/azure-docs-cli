@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_spring-cloud_az_spring_cloud_app_binding_mysql
-  name: az spring-cloud app binding mysql
-  summary: Commands to manage Azure Database for MySQL bindings.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_spring-cloud_az_spring_cloud_app_binding_mysql_add
-  - ext_spring-cloud_az_spring_cloud_app_binding_mysql_update
+### YamlMime:CLIGroup
+uid: ext_spring-cloud_az_spring_cloud_app_binding_mysql
+name: az spring-cloud app binding mysql
+summary: Commands to manage Azure Database for MySQL bindings.
+description: ''
+directCommands:
 - uid: ext_spring-cloud_az_spring_cloud_app_binding_mysql_add
   name: az spring-cloud app binding mysql add
   summary: Bind an Azure Database for MySQL with the app.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --app
@@ -52,8 +45,6 @@ items:
   name: az spring-cloud app binding mysql update
   summary: Update an Azure Database for MySQL service binding of the app.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --app
@@ -81,12 +72,8 @@ items:
     summary: Username of the database.
     description: ''
 commands:
-- uid: ext_spring-cloud_az_spring_cloud_app_binding_mysql_add
-  name: az spring-cloud app binding mysql add
-  summary: Bind an Azure Database for MySQL with the app.
-- uid: ext_spring-cloud_az_spring_cloud_app_binding_mysql_update
-  name: az spring-cloud app binding mysql update
-  summary: Update an Azure Database for MySQL service binding of the app.
+- ext_spring-cloud_az_spring_cloud_app_binding_mysql_add
+- ext_spring-cloud_az_spring_cloud_app_binding_mysql_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -102,4 +89,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage Azure Database for MySQL bindings.
+metadata:
+  description: Commands to manage Azure Database for MySQL bindings.

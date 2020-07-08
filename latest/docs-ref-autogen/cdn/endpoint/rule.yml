@@ -1,28 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_cdn_endpoint_rule
-  name: az cdn endpoint rule
-  summary: Manage delivery rules for an endpoint.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_cdn_endpoint_rule_add
-  - az_cdn_endpoint_rule_remove
-  - az_cdn_endpoint_rule_show
+### YamlMime:CLIGroup
+uid: az_cdn_endpoint_rule
+name: az cdn endpoint rule
+summary: Manage delivery rules for an endpoint.
+description: ''
+directCommands:
 - uid: az_cdn_endpoint_rule_add
   name: az cdn endpoint rule add
   summary: Add a delivery rule to a CDN endpoint.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a global rule to disable caching.
-    syntax:
-      content: az cdn endpoint rule add -g group -n endpoint --profile-name profile --order 0 --rule-name global --action-name CacheExpiration --cache-behavior BypassCache
+    syntax: az cdn endpoint rule add -g group -n endpoint --profile-name profile --order 0 --rule-name global --action-name CacheExpiration --cache-behavior BypassCache
   - summary: Create a rule for http to https redirect
-    syntax:
-      content: az cdn endpoint rule add -g group -n endpoint --profile-name profile --order 1 --rule-name "redirect" --match-variable RequestScheme --operator Equal --match-values HTTPS --action-name "UrlRedirect" --redirect-protocol Https --redirect-type Moved
+    syntax: az cdn endpoint rule add -g group -n endpoint --profile-name profile --order 1 --rule-name "redirect" --match-variable RequestScheme --operator Equal --match-values HTTPS --action-name "UrlRedirect" --redirect-protocol Https --redirect-type Moved
   parameters:
   - isRequired: true
     name: --order
@@ -135,12 +125,9 @@ items:
   name: az cdn endpoint rule remove
   summary: Remove a delivery rule from an endpoint.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Remove the global rule.
-    syntax:
-      content: az cdn endpoint rule remove -g group -n endpoint --profile-name profile --rule-name Global
+    syntax: az cdn endpoint rule remove -g group -n endpoint --profile-name profile --rule-name Global
   parameters:
   - isRequired: true
     name: --rule-name
@@ -171,12 +158,9 @@ items:
   name: az cdn endpoint rule show
   summary: Show delivery rules asscociate with the endpoint.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: show delivery rules asscociate with the endpoint.
-    syntax:
-      content: az cdn endpoint rule show -g group -n endpoint --profile-name profile
+    syntax: az cdn endpoint rule show -g group -n endpoint --profile-name profile
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -200,39 +184,17 @@ items:
       path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_cdn_endpoint_rule_action
-  name: az cdn endpoint rule action
-  summary: Manage delivery rule actions for an endpoint.
-- uid: az_cdn_endpoint_rule_action_add
-  name: az cdn endpoint rule action add
-  summary: Add an action to a delivery rule.
-- uid: az_cdn_endpoint_rule_action_remove
-  name: az cdn endpoint rule action remove
-  summary: Remove an action from a delivery rule.
-- uid: az_cdn_endpoint_rule_action_show
-  name: az cdn endpoint rule action show
-  summary: Show delivery rules asscociate with the endpoint.
-- uid: az_cdn_endpoint_rule_add
-  name: az cdn endpoint rule add
-  summary: Add a delivery rule to a CDN endpoint.
-- uid: az_cdn_endpoint_rule_condition
-  name: az cdn endpoint rule condition
-  summary: Manage delivery rule conditions for an endpoint.
-- uid: az_cdn_endpoint_rule_condition_add
-  name: az cdn endpoint rule condition add
-  summary: Add a condition to a delivery rule.
-- uid: az_cdn_endpoint_rule_condition_remove
-  name: az cdn endpoint rule condition remove
-  summary: Remove a condition from a delivery rule.
-- uid: az_cdn_endpoint_rule_condition_show
-  name: az cdn endpoint rule condition show
-  summary: Show delivery rules asscociate with the endpoint.
-- uid: az_cdn_endpoint_rule_remove
-  name: az cdn endpoint rule remove
-  summary: Remove a delivery rule from an endpoint.
-- uid: az_cdn_endpoint_rule_show
-  name: az cdn endpoint rule show
-  summary: Show delivery rules asscociate with the endpoint.
+- az_cdn_endpoint_rule_action
+- az_cdn_endpoint_rule_action_add
+- az_cdn_endpoint_rule_action_remove
+- az_cdn_endpoint_rule_action_show
+- az_cdn_endpoint_rule_add
+- az_cdn_endpoint_rule_condition
+- az_cdn_endpoint_rule_condition_add
+- az_cdn_endpoint_rule_condition_remove
+- az_cdn_endpoint_rule_condition_show
+- az_cdn_endpoint_rule_remove
+- az_cdn_endpoint_rule_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -248,10 +210,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/0bb45ecd541c1a6109ad67be4f45afe3ce47f2b5/src/azure-cli/azure/cli/command_modules/cdn/_help.py
-updated_at: 6/3/2020 1:56:07 AM
-ms.date: 06/03/2020
-description: Manage delivery rules for an endpoint.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/0bb45ecd541c1a6109ad67be4f45afe3ce47f2b5/src/azure-cli/azure/cli/command_modules/cdn/_help.py
+  updated_at: 6/3/2020 1:56:07 AM
+  ms.date: 06/03/2020
+  description: Manage delivery rules for an endpoint.

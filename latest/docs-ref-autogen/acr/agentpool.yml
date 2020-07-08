@@ -1,33 +1,20 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_acr_agentpool
-  name: az acr agentpool
-  summary: Manage private Tasks agent pools with Azure Container Registries.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_acr_agentpool_create
-  - az_acr_agentpool_delete
-  - az_acr_agentpool_list
-  - az_acr_agentpool_show
-  - az_acr_agentpool_update
+### YamlMime:CLIGroup
+uid: az_acr_agentpool
+name: az acr agentpool
+summary: Manage private Tasks agent pools with Azure Container Registries.
+description: ''
+directCommands:
 - uid: az_acr_agentpool_create
   name: az acr agentpool create
   summary: Create an agent pool for an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create the agent pool 'MyAgentName' associated with the registry 'MyRegistry'.
-    syntax:
-      content: az acr agentpool create -n MyAgentName -r MyRegistry
+    syntax: az acr agentpool create -n MyAgentName -r MyRegistry
   - summary: Create the agent pool 'MyAgentName' with 2 agent count.
-    syntax:
-      content: az acr agentpool create -n MyAgentName -r MyRegistry --count 2
+    syntax: az acr agentpool create -n MyAgentName -r MyRegistry --count 2
   - summary: Create the agent pool 'MyAgentName' associated with the registry 'MyRegistry' in VNET subnet.
-    syntax:
-      content: az acr agentpool create -n MyAgentName -r MyRegistry --subnet-id /subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ClassicNetwork/virtualNetworks/<myNetwork>/subnets/<subNet>
+    syntax: az acr agentpool create -n MyAgentName -r MyRegistry --subnet-id /subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ClassicNetwork/virtualNetworks/<myNetwork>/subnets/<subNet>
   parameters:
   - isRequired: true
     name: --name -n
@@ -71,12 +58,9 @@ items:
   name: az acr agentpool delete
   summary: Delete an agent pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete the agent pool 'MyAgentName'.
-    syntax:
-      content: az acr agentpool delete -n MyAgentName -r MyRegistry
+    syntax: az acr agentpool delete -n MyAgentName -r MyRegistry
   parameters:
   - isRequired: true
     name: --name -n
@@ -108,12 +92,9 @@ items:
   name: az acr agentpool list
   summary: List the agent pools for an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List agent pools and show the result in a table.
-    syntax:
-      content: az acr agentpool list -r MyRegistry -o table
+    syntax: az acr agentpool list -r MyRegistry -o table
   parameters:
   - isRequired: true
     name: --registry -r
@@ -135,12 +116,9 @@ items:
   name: az acr agentpool show
   summary: Get the properties of a specified agent pool for an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the properties of an agent pool, displaying the results in a table.
-    syntax:
-      content: az acr agentpool show -n MyAgentName -r MyRegistry -o table
+    syntax: az acr agentpool show -n MyAgentName -r MyRegistry -o table
   parameters:
   - isRequired: true
     name: --name -n
@@ -169,12 +147,9 @@ items:
   name: az acr agentpool update
   summary: Update an agent pool for an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update the agent pool 'MyAgentName' count to 5
-    syntax:
-      content: az acr agentpool update -n MyAgentName -r MyRegistry --count 5
+    syntax: az acr agentpool update -n MyAgentName -r MyRegistry --count 5
   parameters:
   - isRequired: true
     name: --name -n
@@ -203,21 +178,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/acr/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_acr_agentpool_create
-  name: az acr agentpool create
-  summary: Create an agent pool for an Azure Container Registry.
-- uid: az_acr_agentpool_delete
-  name: az acr agentpool delete
-  summary: Delete an agent pool.
-- uid: az_acr_agentpool_list
-  name: az acr agentpool list
-  summary: List the agent pools for an Azure Container Registry.
-- uid: az_acr_agentpool_show
-  name: az acr agentpool show
-  summary: Get the properties of a specified agent pool for an Azure Container Registry.
-- uid: az_acr_agentpool_update
-  name: az acr agentpool update
-  summary: Update an agent pool for an Azure Container Registry.
+- az_acr_agentpool_create
+- az_acr_agentpool_delete
+- az_acr_agentpool_list
+- az_acr_agentpool_show
+- az_acr_agentpool_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -233,10 +198,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
-updated_at: 4/15/2020 7:14:42 AM
-ms.date: 04/15/2020
-description: Manage private Tasks agent pools with Azure Container Registries.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  updated_at: 4/15/2020 7:14:42 AM
+  ms.date: 04/15/2020
+  description: Manage private Tasks agent pools with Azure Container Registries.

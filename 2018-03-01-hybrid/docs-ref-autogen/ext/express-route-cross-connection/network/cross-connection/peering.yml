@@ -1,31 +1,20 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_express-route-cross-connection_az_network_cross_connection_peering
-  name: az network cross-connection peering
-  summary: Manage ExpressRoute peering of an ExpressRoute cross-connection.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_express-route-cross-connection_az_network_cross_connection_peering_create
-  - ext_express-route-cross-connection_az_network_cross_connection_peering_delete
-  - ext_express-route-cross-connection_az_network_cross_connection_peering_list
-  - ext_express-route-cross-connection_az_network_cross_connection_peering_show
-  - ext_express-route-cross-connection_az_network_cross_connection_peering_update
+### YamlMime:CLIGroup
+uid: ext_express-route-cross-connection_az_network_cross_connection_peering
+name: az network cross-connection peering
+summary: Manage ExpressRoute peering of an ExpressRoute cross-connection.
+description: ''
+directCommands:
 - uid: ext_express-route-cross-connection_az_network_cross_connection_peering_create
   name: az network cross-connection peering create
   summary: Create peering settings for an ExpressRoute cross-connection.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create Microsoft Peering settings with IPv4 configuration.
-    syntax:
-      content: >-
-        az network cross-connection peering create -g MyResourceGroup --cross-connection-name MyCircuit \
-            --peering-type MicrosoftPeering --peer-asn 10002 --vlan-id 103 \
-            --primary-peer-subnet 101.0.0.0/30 --secondary-peer-subnet 102.0.0.0/30 \
-            --advertised-public-prefixes 101.0.0.0/30
+    syntax: >-
+      az network cross-connection peering create -g MyResourceGroup --cross-connection-name MyCircuit \
+          --peering-type MicrosoftPeering --peer-asn 10002 --vlan-id 103 \
+          --primary-peer-subnet 101.0.0.0/30 --secondary-peer-subnet 102.0.0.0/30 \
+          --advertised-public-prefixes 101.0.0.0/30
   parameters:
   - isRequired: true
     name: --cross-connection-name
@@ -73,12 +62,9 @@ items:
   name: az network cross-connection peering delete
   summary: Delete peering settings.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete private peering.
-    syntax:
-      content: az network cross-connection peering delete -g MyResourceGroup --cross-connection-name MyCircuit -n AzurePrivatePeering
+    syntax: az network cross-connection peering delete -g MyResourceGroup --cross-connection-name MyCircuit -n AzurePrivatePeering
   parameters:
   - isRequired: true
     name: --cross-connection-name
@@ -96,12 +82,9 @@ items:
   name: az network cross-connection peering list
   summary: List peering settings of an ExpressRoute cross-connection.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List peering settings of an ExpressRoute cross-connection.
-    syntax:
-      content: az network cross-connection peering list -g MyResourceGroup --cross-connection-name MyCircuit
+    syntax: az network cross-connection peering list -g MyResourceGroup --cross-connection-name MyCircuit
   parameters:
   - isRequired: true
     name: --cross-connection-name
@@ -115,12 +98,9 @@ items:
   name: az network cross-connection peering show
   summary: Get the details of an express route peering.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get private peering details of an ExpressRoute cross-connection.
-    syntax:
-      content: az network cross-connection peering show -g MyResourceGroup --cross-connection-name MyCircuit -n AzurePrivatePeering
+    syntax: az network cross-connection peering show -g MyResourceGroup --cross-connection-name MyCircuit -n AzurePrivatePeering
   parameters:
   - isRequired: true
     name: --cross-connection-name
@@ -138,8 +118,6 @@ items:
   name: az network cross-connection peering update
   summary: Update peering settings for an ExpressRoute cross-connection.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cross-connection-name
@@ -196,21 +174,11 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_express-route-cross-connection_az_network_cross_connection_peering_create
-  name: az network cross-connection peering create
-  summary: Create peering settings for an ExpressRoute cross-connection.
-- uid: ext_express-route-cross-connection_az_network_cross_connection_peering_delete
-  name: az network cross-connection peering delete
-  summary: Delete peering settings.
-- uid: ext_express-route-cross-connection_az_network_cross_connection_peering_list
-  name: az network cross-connection peering list
-  summary: List peering settings of an ExpressRoute cross-connection.
-- uid: ext_express-route-cross-connection_az_network_cross_connection_peering_show
-  name: az network cross-connection peering show
-  summary: Get the details of an express route peering.
-- uid: ext_express-route-cross-connection_az_network_cross_connection_peering_update
-  name: az network cross-connection peering update
-  summary: Update peering settings for an ExpressRoute cross-connection.
+- ext_express-route-cross-connection_az_network_cross_connection_peering_create
+- ext_express-route-cross-connection_az_network_cross_connection_peering_delete
+- ext_express-route-cross-connection_az_network_cross_connection_peering_list
+- ext_express-route-cross-connection_az_network_cross_connection_peering_show
+- ext_express-route-cross-connection_az_network_cross_connection_peering_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -226,4 +194,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage ExpressRoute peering of an ExpressRoute cross-connection.
+metadata:
+  description: Manage ExpressRoute peering of an ExpressRoute cross-connection.

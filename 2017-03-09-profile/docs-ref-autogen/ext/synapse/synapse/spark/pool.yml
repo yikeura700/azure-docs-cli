@@ -1,31 +1,19 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_synapse_az_synapse_spark_pool
-  name: az synapse spark pool
-  summary: Manage Spark pools.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_synapse_az_synapse_spark_pool_create
-  - ext_synapse_az_synapse_spark_pool_delete
-  - ext_synapse_az_synapse_spark_pool_list
-  - ext_synapse_az_synapse_spark_pool_show
-  - ext_synapse_az_synapse_spark_pool_update
-  - ext_synapse_az_synapse_spark_pool_wait
+### YamlMime:CLIGroup
+uid: ext_synapse_az_synapse_spark_pool
+name: az synapse spark pool
+summary: Manage Spark pools.
+description: ''
+directCommands:
 - uid: ext_synapse_az_synapse_spark_pool_create
   name: az synapse spark pool create
   summary: Create a Spark pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a Spark pool.
-    syntax:
-      content: >-
-        az synapse spark pool create --name testpool --workspace-name testsynapseworkspace --resource-group rg \
+    syntax: >-
+      az synapse spark pool create --name testpool --workspace-name testsynapseworkspace --resource-group rg \
 
-        --spark-version 2.4 --node-count 3 --node-size Medium
+      --spark-version 2.4 --node-count 3 --node-size Medium
   parameters:
   - isRequired: true
     name: --name -n
@@ -94,12 +82,9 @@ items:
   name: az synapse spark pool delete
   summary: Delete a Spark pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a Spark pool.
-    syntax:
-      content: az synapse spark pool delete --name testpool --workspace-name testsynapseworkspace --resource-group rg
+    syntax: az synapse spark pool delete --name testpool --workspace-name testsynapseworkspace --resource-group rg
   parameters:
   - isRequired: true
     name: --name -n
@@ -123,12 +108,9 @@ items:
   name: az synapse spark pool list
   summary: List all Spark pools.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all Spark pools.
-    syntax:
-      content: az synapse spark pool list --workspace-name testsynapseworkspace --resource-group rg
+    syntax: az synapse spark pool list --workspace-name testsynapseworkspace --resource-group rg
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -142,12 +124,9 @@ items:
   name: az synapse spark pool show
   summary: Get a Spark pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get a Spark pool.
-    syntax:
-      content: az synapse spark pool show --name testpool --workspace-name testsynapseworkspace --resource-group rg
+    syntax: az synapse spark pool show --name testpool --workspace-name testsynapseworkspace --resource-group rg
   parameters:
   - isRequired: true
     name: --name -n
@@ -165,21 +144,17 @@ items:
   name: az synapse spark pool update
   summary: Update the Spark pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update the Spark pool's tags.
-    syntax:
-      content: >-
-        az synapse spark pool update --name testpool --workspace-name testsynapseworkspace --resource-group rg \
+    syntax: >-
+      az synapse spark pool update --name testpool --workspace-name testsynapseworkspace --resource-group rg \
 
-        --tags key1=value1
+      --tags key1=value1
   - summary: Update the Spark pool's auto scale configuration.
-    syntax:
-      content: >-
-        az synapse spark pool update --name testpool --workspace-name testsynapseworkspace --resource-group rg \
+    syntax: >-
+      az synapse spark pool update --name testpool --workspace-name testsynapseworkspace --resource-group rg \
 
-        --enable-auto-scale --min-node-count 3 --max-node-count 100
+      --enable-auto-scale --min-node-count 3 --max-node-count 100
   parameters:
   - isRequired: true
     name: --name -n
@@ -234,8 +209,6 @@ items:
   name: az synapse spark pool wait
   summary: Place the CLI in a waiting state until a condition of a Spark pool is met.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --big-data-pool-name
@@ -273,24 +246,12 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_synapse_az_synapse_spark_pool_create
-  name: az synapse spark pool create
-  summary: Create a Spark pool.
-- uid: ext_synapse_az_synapse_spark_pool_delete
-  name: az synapse spark pool delete
-  summary: Delete a Spark pool.
-- uid: ext_synapse_az_synapse_spark_pool_list
-  name: az synapse spark pool list
-  summary: List all Spark pools.
-- uid: ext_synapse_az_synapse_spark_pool_show
-  name: az synapse spark pool show
-  summary: Get a Spark pool.
-- uid: ext_synapse_az_synapse_spark_pool_update
-  name: az synapse spark pool update
-  summary: Update the Spark pool.
-- uid: ext_synapse_az_synapse_spark_pool_wait
-  name: az synapse spark pool wait
-  summary: Place the CLI in a waiting state until a condition of a Spark pool is met.
+- ext_synapse_az_synapse_spark_pool_create
+- ext_synapse_az_synapse_spark_pool_delete
+- ext_synapse_az_synapse_spark_pool_list
+- ext_synapse_az_synapse_spark_pool_show
+- ext_synapse_az_synapse_spark_pool_update
+- ext_synapse_az_synapse_spark_pool_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -306,4 +267,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Spark pools.
+metadata:
+  description: Manage Spark pools.

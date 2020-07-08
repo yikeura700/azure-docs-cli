@@ -1,37 +1,29 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_timeseriesinsights_az_timeseriesinsights_event_source_eventhub
-  name: az timeseriesinsights event-source eventhub
-  summary: Create or update an event hub event source under the specified environment.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_timeseriesinsights_az_timeseriesinsights_event_source_eventhub_create
-  - ext_timeseriesinsights_az_timeseriesinsights_event_source_eventhub_update
+### YamlMime:CLIGroup
+uid: ext_timeseriesinsights_az_timeseriesinsights_event_source_eventhub
+name: az timeseriesinsights event-source eventhub
+summary: Create or update an event hub event source under the specified environment.
+description: ''
+directCommands:
 - uid: ext_timeseriesinsights_az_timeseriesinsights_event_source_eventhub_create
   name: az timeseriesinsights event-source eventhub create
   summary: Create or update an event hub event source under the specified environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an eventhub and use it for event source
-    syntax:
-      content: >-
-        rg={rg}
+    syntax: >-
+      rg={rg}
 
-        ehns={eventhub_namespace}
+      ehns={eventhub_namespace}
 
-        eh={eventhub_name}
+      eh={eventhub_name}
 
-        az eventhubs namespace create -g $rg -n $ehns
+      az eventhubs namespace create -g $rg -n $ehns
 
-        es_resource_id=$(az eventhubs eventhub create -g $rg -n $eh --namespace-name $ehns --query id --output tsv)
+      es_resource_id=$(az eventhubs eventhub create -g $rg -n $eh --namespace-name $ehns --query id --output tsv)
 
-        shared_access_key=$(az eventhubs namespace authorization-rule keys list -g $rg --namespace-name $ehns -n RootManageSharedAccessKey --query primaryKey --output tsv)
+      shared_access_key=$(az eventhubs namespace authorization-rule keys list -g $rg --namespace-name $ehns -n RootManageSharedAccessKey --query primaryKey --output tsv)
 
-        az timeseriesinsights event-source eventhub create -g $rg --environment-name {env} -n es1 --key-name RootManageSharedAccessKey --shared-access-key $shared_access_key --event-source-resource-id $es_resource_id --consumer-group-name '$Default' --timestamp-property-name DeviceId
+      az timeseriesinsights event-source eventhub create -g $rg --environment-name {env} -n es1 --key-name RootManageSharedAccessKey --shared-access-key $shared_access_key --event-source-resource-id $es_resource_id --consumer-group-name '$Default' --timestamp-property-name DeviceId
   parameters:
   - isRequired: true
     name: --consumer-group-name
@@ -74,18 +66,13 @@ items:
   name: az timeseriesinsights event-source eventhub update
   summary: Create or update an event source under the specified environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update timestampPropertyName
-    syntax:
-      content: az timeseriesinsights event-source eventhub update -g {rg} --environment-name {env} -n {es} --timestamp-property-name DeviceId1
+    syntax: az timeseriesinsights event-source eventhub update -g {rg} --environment-name {env} -n {es} --timestamp-property-name DeviceId1
   - summary: Update localTimestamp (Currently only Embedded is supported)
-    syntax:
-      content: az timeseriesinsights event-source eventhub update -g {rg} --environment-name {env} -n {es} --local-timestamp-format Embedded
+    syntax: az timeseriesinsights event-source eventhub update -g {rg} --environment-name {env} -n {es} --local-timestamp-format Embedded
   - summary: Update sharedAccessKey
-    syntax:
-      content: az timeseriesinsights event-source eventhub update -g {rg} --environment-name {env} -n {es} --shared-access-key {shared_access_key}
+    syntax: az timeseriesinsights event-source eventhub update -g {rg} --environment-name {env} -n {es} --shared-access-key {shared_access_key}
   parameters:
   - isRequired: true
     name: --environment-name
@@ -113,12 +100,8 @@ items:
     summary: An enum that represents the format of the local timestamp property that needs to be set. Currently only Embedded is supported.
     description: ''
 commands:
-- uid: ext_timeseriesinsights_az_timeseriesinsights_event_source_eventhub_create
-  name: az timeseriesinsights event-source eventhub create
-  summary: Create or update an event hub event source under the specified environment.
-- uid: ext_timeseriesinsights_az_timeseriesinsights_event_source_eventhub_update
-  name: az timeseriesinsights event-source eventhub update
-  summary: Create or update an event source under the specified environment.
+- ext_timeseriesinsights_az_timeseriesinsights_event_source_eventhub_create
+- ext_timeseriesinsights_az_timeseriesinsights_event_source_eventhub_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -134,4 +117,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Create or update an event hub event source under the specified environment.
+metadata:
+  description: Create or update an event hub event source under the specified environment.

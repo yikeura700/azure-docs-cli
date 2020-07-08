@@ -1,57 +1,41 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sig_image_version
-  name: az sig image-version
-  summary: Create a new version from an image defintion.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sig_image_version_create
-  - az_sig_image_version_delete
-  - az_sig_image_version_list
-  - az_sig_image_version_show
-  - az_sig_image_version_update
-  - az_sig_image_version_wait
+### YamlMime:CLIGroup
+uid: az_sig_image_version
+name: az sig image-version
+summary: Create a new version from an image defintion.
+description: ''
+directCommands:
 - uid: az_sig_image_version_create
   name: az sig image-version create
   summary: Create a new image version.
   description: This operation might take a long time depending on the replicate region number. Use "--no-wait" is advised.
-  langs:
-  - azurecli
   examples:
   - summary: Add a new image version
-    syntax:
-      content: az sig image-version create -g MyResourceGroup --gallery-name MyGallery --gallery-image-definition MyImage --gallery-image-version 1.0.0 --managed-image /subscriptions/00000000-0000-0000-0000-00000000xxxx/resourceGroups/imageGroups/providers/images/MyManagedImage
+    syntax: az sig image-version create -g MyResourceGroup --gallery-name MyGallery --gallery-image-definition MyImage --gallery-image-version 1.0.0 --managed-image /subscriptions/00000000-0000-0000-0000-00000000xxxx/resourceGroups/imageGroups/providers/images/MyManagedImage
   - summary: Add a new image version replicated across multiple regions with different replication counts each. Eastus2 will have it's replica count set to the default replica count.
-    syntax:
-      content: >-
-        az sig image-version create -g MyResourceGroup --gallery-name MyGallery \
+    syntax: >-
+      az sig image-version create -g MyResourceGroup --gallery-name MyGallery \
 
-        --gallery-image-definition MyImage --gallery-image-version 1.0.0 \
+      --gallery-image-definition MyImage --gallery-image-version 1.0.0 \
 
-        --managed-image image-name --target-regions eastus2 ukwest=3 southindia=2
+      --managed-image image-name --target-regions eastus2 ukwest=3 southindia=2
   - summary: Add a new image version and don't wait on it. Later you can invoke "az sig image-version wait" command when ready to create a vm from the gallery image version
-    syntax:
-      content: >-
-        az sig image-version create --no-wait -g MyResourceGroup --gallery-name MyGallery \
+    syntax: >-
+      az sig image-version create --no-wait -g MyResourceGroup --gallery-name MyGallery \
 
-        --gallery-image-definition MyImage --gallery-image-version 1.0.0 \
+      --gallery-image-definition MyImage --gallery-image-version 1.0.0 \
 
-        --managed-image imageInTheSameResourceGroup
+      --managed-image imageInTheSameResourceGroup
   - summary: Add a new image version with target regions that have different storage account types and replica counts
-    syntax:
-      content: >-
-        az sig image-version create -g MyResourceGroup --gallery-image-version 1.0.0 \
+    syntax: >-
+      az sig image-version create -g MyResourceGroup --gallery-image-version 1.0.0 \
 
-        --target-regions westus=2=standard_lrs eastus=3=standard_zrs \
+      --target-regions westus=2=standard_lrs eastus=3=standard_zrs \
 
-        --gallery-name MyGallery --gallery-image-definition MyImage \
+      --gallery-name MyGallery --gallery-image-definition MyImage \
 
-        --managed-image imageInTheSameResourceGroup
+      --managed-image imageInTheSameResourceGroup
   - summary: Add a new image version with target regions and customer managed keys for encryption.
-    syntax:
-      content: az sig image-version create -g MyResourceGroup --gallery-image-version 1.0.0 --target-regions westus=2=standard --target-region-encryption DiskEncryptionSet1,0,DiskEncryptionSet2 --gallery-name MyGallery --gallery-image-definition MyImage --managed-image imageInTheSameResourceGroup
+    syntax: az sig image-version create -g MyResourceGroup --gallery-image-version 1.0.0 --target-regions westus=2=standard --target-region-encryption DiskEncryptionSet1,0,DiskEncryptionSet2 --gallery-name MyGallery --gallery-image-definition MyImage --managed-image imageInTheSameResourceGroup
   parameters:
   - isRequired: true
     name: --gallery-image-definition -i
@@ -117,8 +101,6 @@ items:
   name: az sig image-version delete
   summary: Delete a gallery Image Version.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --gallery-image-definition -i
@@ -143,8 +125,6 @@ items:
   name: az sig image-version list
   summary: List gallery Image Versions in a gallery Image Definition.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --gallery-image-definition -i
@@ -165,8 +145,6 @@ items:
   name: az sig image-version show
   summary: Retrieves information about a gallery Image Version.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --gallery-image-definition -i
@@ -194,15 +172,11 @@ items:
   name: az sig image-version update
   summary: Update a share image version.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Replicate to a new set of regions
-    syntax:
-      content: az sig image-version update -g MyResourceGroup --gallery-name MyGallery --gallery-image-definition MyImage --gallery-image-version 1.0.0 --target-regions westcentralus=2 eastus2
+    syntax: az sig image-version update -g MyResourceGroup --gallery-name MyGallery --gallery-image-definition MyImage --gallery-image-version 1.0.0 --target-regions westcentralus=2 eastus2
   - summary: Replicate to one more region
-    syntax:
-      content: az sig image-version update -g MyResourceGroup --gallery-name MyGallery --gallery-image-definition MyImage --gallery-image-version 1.0.0 --add publishingProfile.targetRegions name=westcentralus
+    syntax: az sig image-version update -g MyResourceGroup --gallery-name MyGallery --gallery-image-definition MyImage --gallery-image-version 1.0.0 --add publishingProfile.targetRegions name=westcentralus
   parameters:
   - isRequired: true
     name: --gallery-image-definition -i
@@ -248,12 +222,9 @@ items:
   name: az sig image-version wait
   summary: Wait for image version related operation.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: wait for an image version gets updated
-    syntax:
-      content: az sig image-version wait --updated -g MyResourceGroup --gallery-name MyGallery --gallery-image-definition MyImage --gallery-image-version 1.0.0
+    syntax: az sig image-version wait --updated -g MyResourceGroup --gallery-name MyGallery --gallery-image-definition MyImage --gallery-image-version 1.0.0
   parameters:
   - isRequired: true
     name: --gallery-image-definition -i
@@ -301,24 +272,12 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_sig_image_version_create
-  name: az sig image-version create
-  summary: Create a new image version.
-- uid: az_sig_image_version_delete
-  name: az sig image-version delete
-  summary: Delete a gallery Image Version.
-- uid: az_sig_image_version_list
-  name: az sig image-version list
-  summary: List gallery Image Versions in a gallery Image Definition.
-- uid: az_sig_image_version_show
-  name: az sig image-version show
-  summary: Retrieves information about a gallery Image Version.
-- uid: az_sig_image_version_update
-  name: az sig image-version update
-  summary: Update a share image version.
-- uid: az_sig_image_version_wait
-  name: az sig image-version wait
-  summary: Wait for image version related operation.
+- az_sig_image_version_create
+- az_sig_image_version_delete
+- az_sig_image_version_list
+- az_sig_image_version_show
+- az_sig_image_version_update
+- az_sig_image_version_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -334,4 +293,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Create a new version from an image defintion.
+metadata:
+  description: Create a new version from an image defintion.

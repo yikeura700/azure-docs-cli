@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_pipelines_agent
-  name: az pipelines agent
-  summary: Manage agents.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_pipelines_agent_list
-  - ext_azure-devops_az_pipelines_agent_show
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_pipelines_agent
+name: az pipelines agent
+summary: Manage agents.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_pipelines_agent_list
   name: az pipelines agent list
   summary: Get a list of agents in a pool.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --pool-id
@@ -49,8 +42,6 @@ items:
   name: az pipelines agent show
   summary: Show agent details.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --agent-id --id
@@ -80,12 +71,8 @@ items:
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href="https://dev.azure.com/MyOrganizationName/">https://dev.azure.com/MyOrganizationName/</a>.'
     description: ''
 commands:
-- uid: ext_azure-devops_az_pipelines_agent_list
-  name: az pipelines agent list
-  summary: Get a list of agents in a pool.
-- uid: ext_azure-devops_az_pipelines_agent_show
-  name: az pipelines agent show
-  summary: Show agent details.
+- ext_azure-devops_az_pipelines_agent_list
+- ext_azure-devops_az_pipelines_agent_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -101,4 +88,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage agents.
+metadata:
+  description: Manage agents.

@@ -1,24 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-cli-iot-ext_az_iot_hub_distributed_tracing
-  name: az iot hub distributed-tracing
-  summary: Manage distributed settings per-device.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-cli-iot-ext_az_iot_hub_distributed_tracing_show
-  - ext_azure-cli-iot-ext_az_iot_hub_distributed_tracing_update
+### YamlMime:CLIGroup
+uid: ext_azure-cli-iot-ext_az_iot_hub_distributed_tracing
+name: az iot hub distributed-tracing
+summary: Manage distributed settings per-device.
+description: ''
+directCommands:
 - uid: ext_azure-cli-iot-ext_az_iot_hub_distributed_tracing_show
   name: az iot hub distributed-tracing show
   summary: Get the distributed tracing settings for a device.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the distributed tracing settings for a device
-    syntax:
-      content: az iot hub distributed-tracing show -d {device_id} -n {iothub_name}
+    syntax: az iot hub distributed-tracing show -d {device_id} -n {iothub_name}
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -35,12 +27,9 @@ items:
   name: az iot hub distributed-tracing update
   summary: Update the distributed tracing options for a device.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update the distributed tracing options for a device
-    syntax:
-      content: az iot hub distributed-tracing update -d {device_id} --sm on --sr 50 -n {iothub_name}
+    syntax: az iot hub distributed-tracing update -d {device_id} --sm on --sr 50 -n {iothub_name}
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -63,12 +52,8 @@ items:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
     description: ''
 commands:
-- uid: ext_azure-cli-iot-ext_az_iot_hub_distributed_tracing_show
-  name: az iot hub distributed-tracing show
-  summary: Get the distributed tracing settings for a device.
-- uid: ext_azure-cli-iot-ext_az_iot_hub_distributed_tracing_update
-  name: az iot hub distributed-tracing update
-  summary: Update the distributed tracing options for a device.
+- ext_azure-cli-iot-ext_az_iot_hub_distributed_tracing_show
+- ext_azure-cli-iot-ext_az_iot_hub_distributed_tracing_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -84,4 +69,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage distributed settings per-device.
+metadata:
+  description: Manage distributed settings per-device.

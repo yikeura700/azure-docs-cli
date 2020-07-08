@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_deploymentmanager_rollout
-  name: az deploymentmanager rollout
-  summary: Manage the rollouts.
-  description: View progress, restart a failed rollout, stop a running rollout. Rollouts can be created using the 'az group deployment' command.
-  langs:
-  - azurecli
-  children:
-  - az_deploymentmanager_rollout_delete
-  - az_deploymentmanager_rollout_list
-  - az_deploymentmanager_rollout_restart
-  - az_deploymentmanager_rollout_show
-  - az_deploymentmanager_rollout_stop
+### YamlMime:CLIGroup
+uid: az_deploymentmanager_rollout
+name: az deploymentmanager rollout
+summary: Manage the rollouts.
+description: View progress, restart a failed rollout, stop a running rollout. Rollouts can be created using the 'az group deployment' command.
+directCommands:
 - uid: az_deploymentmanager_rollout_delete
   name: az deploymentmanager rollout delete
   summary: Deletes a rollout resource.
   description: Only rollouts in terminal state can be deleted.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name --rollout-name -n
@@ -40,12 +30,9 @@ items:
   name: az deploymentmanager rollout list
   summary: List all rollouts in a resource group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all rollouts in the resource group
-    syntax:
-      content: az deploymentmanager rollout list -g rg1
+    syntax: az deploymentmanager rollout list -g rg1
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -64,15 +51,11 @@ items:
   name: az deploymentmanager rollout restart
   summary: Restarts the rollout.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Restart the rollout
-    syntax:
-      content: az deploymentmanager rollout restart -g rg1 -n contosoServiceRollout
+    syntax: az deploymentmanager rollout restart -g rg1 -n contosoServiceRollout
   - summary: Restart the rollout and skip all steps that have succeeded in the previous run
-    syntax:
-      content: az deploymentmanager rollout restart -g rg1 -n contosoServiceRollout --skip-succeeded
+    syntax: az deploymentmanager rollout restart -g rg1 -n contosoServiceRollout --skip-succeeded
   parameters:
   - isRequired: true
     name: --name --rollout-name -n
@@ -101,15 +84,11 @@ items:
   name: az deploymentmanager rollout show
   summary: Gets the rollout.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Gets the rollout
-    syntax:
-      content: az deploymentmanager rollout show -g rg1 -n contosoServiceRollout
+    syntax: az deploymentmanager rollout show -g rg1 -n contosoServiceRollout
   - summary: Gets the specific retry attempt of a rollout. Shows the steps run during that attempt.
-    syntax:
-      content: az deploymentmanager rollout show -g rg1 -n contosoServiceRollout --retry-attempt 1
+    syntax: az deploymentmanager rollout show -g rg1 -n contosoServiceRollout --retry-attempt 1
   parameters:
   - isRequired: true
     name: --name --rollout-name -n
@@ -135,12 +114,9 @@ items:
   name: az deploymentmanager rollout stop
   summary: Stop the rollout.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Stops the rollout
-    syntax:
-      content: az deploymentmanager rollout stop -g rg1 -n contosoServiceRollout
+    syntax: az deploymentmanager rollout stop -g rg1 -n contosoServiceRollout
   parameters:
   - isRequired: true
     name: --name --rollout-name -n
@@ -163,21 +139,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_deploymentmanager_rollout_delete
-  name: az deploymentmanager rollout delete
-  summary: Deletes a rollout resource.
-- uid: az_deploymentmanager_rollout_list
-  name: az deploymentmanager rollout list
-  summary: List all rollouts in a resource group.
-- uid: az_deploymentmanager_rollout_restart
-  name: az deploymentmanager rollout restart
-  summary: Restarts the rollout.
-- uid: az_deploymentmanager_rollout_show
-  name: az deploymentmanager rollout show
-  summary: Gets the rollout.
-- uid: az_deploymentmanager_rollout_stop
-  name: az deploymentmanager rollout stop
-  summary: Stop the rollout.
+- az_deploymentmanager_rollout_delete
+- az_deploymentmanager_rollout_list
+- az_deploymentmanager_rollout_restart
+- az_deploymentmanager_rollout_show
+- az_deploymentmanager_rollout_stop
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -193,10 +159,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/f8fcf6fe53ac8443c852afa1f4a334d732a2cea4/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-updated_at: 1/30/2020 1:38:16 PM
-ms.date: 01/30/2020
-description: View progress, restart a failed rollout, stop a running rollout. Rollouts can be created using the 'az group deployment' command.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/f8fcf6fe53ac8443c852afa1f4a334d732a2cea4/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
+  updated_at: 1/30/2020 1:38:16 PM
+  ms.date: 01/30/2020
+  description: View progress, restart a failed rollout, stop a running rollout. Rollouts can be created using the 'az group deployment' command.

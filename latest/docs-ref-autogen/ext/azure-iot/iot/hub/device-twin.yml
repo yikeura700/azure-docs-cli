@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-iot_az_iot_hub_device_twin
-  name: az iot hub device-twin
-  summary: Manage IoT device twin configuration.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-iot_az_iot_hub_device_twin_replace
-  - ext_azure-iot_az_iot_hub_device_twin_show
-  - ext_azure-iot_az_iot_hub_device_twin_update
+### YamlMime:CLIGroup
+uid: ext_azure-iot_az_iot_hub_device_twin
+name: az iot hub device-twin
+summary: Manage IoT device twin configuration.
+description: ''
+directCommands:
 - uid: ext_azure-iot_az_iot_hub_device_twin_replace
   name: az iot hub device-twin replace
   summary: Replace device twin definition with target json.
   description: Input json directly or use a file path.
-  langs:
-  - azurecli
   examples:
   - summary: Replace device twin with file contents.
-    syntax:
-      content: az iot hub device-twin replace -d {device_id} -n {iothub_name} -j ../mydevicetwin.json
+    syntax: az iot hub device-twin replace -d {device_id} -n {iothub_name} -j ../mydevicetwin.json
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -42,8 +33,6 @@ items:
   name: az iot hub device-twin show
   summary: Get a device twin definition.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -62,18 +51,13 @@ items:
   name: az iot hub device-twin update
   summary: Update device twin desired properties and tags.
   description: Provide --desired or --tags arguments for PATCH behavior. Usage of generic update args (i.e. --set) will reflect PUT behavior and are deprecated.
-  langs:
-  - azurecli
   examples:
   - summary: Patch device twin desired properties.
-    syntax:
-      content: az iot hub device-twin update -n {iothub_name} -d {device_id} --desired '{"conditions":{"temperature":{"warning":70, "critical":100}}}'
+    syntax: az iot hub device-twin update -n {iothub_name} -d {device_id} --desired '{"conditions":{"temperature":{"warning":70, "critical":100}}}'
   - summary: Patch device twin tags.
-    syntax:
-      content: "az iot hub device-twin update -n {iothub_name} -d {device_id} --tags '{\"country\": \"USA\"}'"
+    syntax: "az iot hub device-twin update -n {iothub_name} -d {device_id} --tags '{\"country\": \"USA\"}'"
   - summary: Patch removal of 'critical' desired property from parent 'temperature'
-    syntax:
-      content: "az iot hub device-twin update -n {iothub_name} -d {device_id} --desired '{\"condition\":{\"temperature\":{\"critical\": null}}}'"
+    syntax: "az iot hub device-twin update -n {iothub_name} -d {device_id} --desired '{\"condition\":{\"temperature\":{\"critical\": null}}}'"
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -107,15 +91,9 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_azure-iot_az_iot_hub_device_twin_replace
-  name: az iot hub device-twin replace
-  summary: Replace device twin definition with target json.
-- uid: ext_azure-iot_az_iot_hub_device_twin_show
-  name: az iot hub device-twin show
-  summary: Get a device twin definition.
-- uid: ext_azure-iot_az_iot_hub_device_twin_update
-  name: az iot hub device-twin update
-  summary: Update device twin desired properties and tags.
+- ext_azure-iot_az_iot_hub_device_twin_replace
+- ext_azure-iot_az_iot_hub_device_twin_show
+- ext_azure-iot_az_iot_hub_device_twin_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -131,4 +109,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage IoT device twin configuration.
+metadata:
+  description: Manage IoT device twin configuration.

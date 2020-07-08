@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_cache
-  name: az cache
-  summary: Commands to manage CLI objects cached using the `--defer` argument.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_cache_delete
-  - az_cache_list
-  - az_cache_purge
-  - az_cache_show
+### YamlMime:CLIGroup
+uid: az_cache
+name: az cache
+summary: Commands to manage CLI objects cached using the `--defer` argument.
+description: ''
+directCommands:
 - uid: az_cache_delete
   name: az cache delete
   summary: Delete an object from the cache.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -37,8 +28,6 @@ items:
   name: az cache list
   summary: List the contents of the object cache.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -47,8 +36,6 @@ items:
   name: az cache purge
   summary: Clear the entire CLI object cache.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -57,8 +44,6 @@ items:
   name: az cache show
   summary: Show the contents of a specific object in the cache.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -76,18 +61,10 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_cache_delete
-  name: az cache delete
-  summary: Delete an object from the cache.
-- uid: az_cache_list
-  name: az cache list
-  summary: List the contents of the object cache.
-- uid: az_cache_purge
-  name: az cache purge
-  summary: Clear the entire CLI object cache.
-- uid: az_cache_show
-  name: az cache show
-  summary: Show the contents of a specific object in the cache.
+- az_cache_delete
+- az_cache_list
+- az_cache_purge
+- az_cache_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -103,4 +80,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage CLI objects cached using the `--defer` argument.
+metadata:
+  description: Commands to manage CLI objects cached using the `--defer` argument.

@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group
-  name: az network firewall policy rule-collection-group
-  summary: Manage and configure Azure firewall policy rule collection group.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-firewall_az_network_firewall_policy_rule_collection_group_create
-  - ext_azure-firewall_az_network_firewall_policy_rule_collection_group_delete
-  - ext_azure-firewall_az_network_firewall_policy_rule_collection_group_list
-  - ext_azure-firewall_az_network_firewall_policy_rule_collection_group_show
-  - ext_azure-firewall_az_network_firewall_policy_rule_collection_group_update
+### YamlMime:CLIGroup
+uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group
+name: az network firewall policy rule-collection-group
+summary: Manage and configure Azure firewall policy rule collection group.
+description: ''
+directCommands:
 - uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_create
   name: az network firewall policy rule-collection-group create
   summary: Create an Azure firewall policy rule collection group.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -39,8 +29,6 @@ items:
   name: az network firewall policy rule-collection-group delete
   summary: Delete an Azure Firewall policy rule collection group.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -58,8 +46,6 @@ items:
   name: az network firewall policy rule-collection-group list
   summary: List all Azure firewall policy rule collection groups.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --policy-name
@@ -73,8 +59,6 @@ items:
   name: az network firewall policy rule-collection-group show
   summary: Show an Azure firewall policy rule collection group.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -92,8 +76,6 @@ items:
   name: az network firewall policy rule-collection-group update
   summary: Update an Azure firewall policy rule collection group.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -126,45 +108,19 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection
-  name: az network firewall policy rule-collection-group collection
-  summary: Manage and configure Azure firewall policy rule collections in the rule collection group.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_add_filter_collection
-  name: az network firewall policy rule-collection-group collection add-filter-collection
-  summary: Add a filter collection into an Azure firewall policy rule collection group.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_add_nat_collection
-  name: az network firewall policy rule-collection-group collection add-nat-collection
-  summary: Add a NAT collection into an Azure firewall policy rule collection group.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_list
-  name: az network firewall policy rule-collection-group collection list
-  summary: List all rule collections of an Azure firewall policy rule collection group.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_remove
-  name: az network firewall policy rule-collection-group collection remove
-  summary: Remove a rule collection from an Azure firewall policy rule collection group.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule
-  name: az network firewall policy rule-collection-group collection rule
-  summary: Manage and configure the rule of a filter collection in the rule collection group of Azure firewall policy.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_add
-  name: az network firewall policy rule-collection-group collection rule add
-  summary: Add a rule into an Azure firewall policy rule collection.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_remove
-  name: az network firewall policy rule-collection-group collection rule remove
-  summary: Remove a rule from an Azure firewall policy rule collection.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_create
-  name: az network firewall policy rule-collection-group create
-  summary: Create an Azure firewall policy rule collection group.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_delete
-  name: az network firewall policy rule-collection-group delete
-  summary: Delete an Azure Firewall policy rule collection group.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_list
-  name: az network firewall policy rule-collection-group list
-  summary: List all Azure firewall policy rule collection groups.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_show
-  name: az network firewall policy rule-collection-group show
-  summary: Show an Azure firewall policy rule collection group.
-- uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_update
-  name: az network firewall policy rule-collection-group update
-  summary: Update an Azure firewall policy rule collection group.
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_add_filter_collection
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_add_nat_collection
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_list
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_remove
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_add
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_remove
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_create
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_delete
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_list
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_show
+- ext_azure-firewall_az_network_firewall_policy_rule_collection_group_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -180,4 +136,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage and configure Azure firewall policy rule collection group.
+metadata:
+  description: Manage and configure Azure firewall policy rule collection group.

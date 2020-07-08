@@ -1,24 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-cli-iot-ext_az_iot_hub_module_identity
-  name: az iot hub module-identity
-  summary: Manage IoT device modules.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-cli-iot-ext_az_iot_hub_module_identity_create
-  - ext_azure-cli-iot-ext_az_iot_hub_module_identity_delete
-  - ext_azure-cli-iot-ext_az_iot_hub_module_identity_list
-  - ext_azure-cli-iot-ext_az_iot_hub_module_identity_show
-  - ext_azure-cli-iot-ext_az_iot_hub_module_identity_show_connection_string
-  - ext_azure-cli-iot-ext_az_iot_hub_module_identity_update
+### YamlMime:CLIGroup
+uid: ext_azure-cli-iot-ext_az_iot_hub_module_identity
+name: az iot hub module-identity
+summary: Manage IoT device modules.
+description: ''
+directCommands:
 - uid: ext_azure-cli-iot-ext_az_iot_hub_module_identity_create
   name: az iot hub module-identity create
   summary: Create a module on a target IoT device in an IoT Hub.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -58,8 +47,6 @@ items:
   name: az iot hub module-identity delete
   summary: Delete a device in an IoT Hub.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -82,8 +69,6 @@ items:
   name: az iot hub module-identity list
   summary: List modules located on an IoT device in an IoT Hub.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -106,8 +91,6 @@ items:
   name: az iot hub module-identity show
   summary: Get the details of an IoT device module in an IoT Hub.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -130,8 +113,6 @@ items:
   name: az iot hub module-identity show-connection-string
   summary: Show a target IoT device module connection string.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -159,12 +140,9 @@ items:
   name: az iot hub module-identity update
   summary: Update an IoT Hub device module.
   description: Use --set followed by property assignments for updating a module. Leverage properties returned from 'iot hub module-identity show'.
-  langs:
-  - azurecli
   examples:
   - summary: Regenerate module symmetric authentication keys
-    syntax:
-      content: az iot hub module-identity update -m {module_name} -d {device_id} -n {iothub_name} --set authentication.symmetricKey.primaryKey="" authentication.symmetricKey.secondaryKey=""
+    syntax: az iot hub module-identity update -m {module_name} -d {device_id} -n {iothub_name} --set authentication.symmetricKey.primaryKey="" authentication.symmetricKey.secondaryKey=""
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -196,24 +174,12 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_azure-cli-iot-ext_az_iot_hub_module_identity_create
-  name: az iot hub module-identity create
-  summary: Create a module on a target IoT device in an IoT Hub.
-- uid: ext_azure-cli-iot-ext_az_iot_hub_module_identity_delete
-  name: az iot hub module-identity delete
-  summary: Delete a device in an IoT Hub.
-- uid: ext_azure-cli-iot-ext_az_iot_hub_module_identity_list
-  name: az iot hub module-identity list
-  summary: List modules located on an IoT device in an IoT Hub.
-- uid: ext_azure-cli-iot-ext_az_iot_hub_module_identity_show
-  name: az iot hub module-identity show
-  summary: Get the details of an IoT device module in an IoT Hub.
-- uid: ext_azure-cli-iot-ext_az_iot_hub_module_identity_show_connection_string
-  name: az iot hub module-identity show-connection-string
-  summary: Show a target IoT device module connection string.
-- uid: ext_azure-cli-iot-ext_az_iot_hub_module_identity_update
-  name: az iot hub module-identity update
-  summary: Update an IoT Hub device module.
+- ext_azure-cli-iot-ext_az_iot_hub_module_identity_create
+- ext_azure-cli-iot-ext_az_iot_hub_module_identity_delete
+- ext_azure-cli-iot-ext_az_iot_hub_module_identity_list
+- ext_azure-cli-iot-ext_az_iot_hub_module_identity_show
+- ext_azure-cli-iot-ext_az_iot_hub_module_identity_show_connection_string
+- ext_azure-cli-iot-ext_az_iot_hub_module_identity_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -229,4 +195,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage IoT device modules.
+metadata:
+  description: Manage IoT device modules.

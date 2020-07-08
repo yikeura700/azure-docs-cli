@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_pipelines_folder
-  name: az pipelines folder
-  summary: Manage folders for organizing pipelines.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_pipelines_folder_create
-  - az_pipelines_folder_delete
-  - az_pipelines_folder_list
-  - az_pipelines_folder_update
+### YamlMime:CLIGroup
+uid: az_pipelines_folder
+name: az pipelines folder
+summary: Manage folders for organizing pipelines.
+description: ''
+directCommands:
 - uid: az_pipelines_folder_create
   name: az pipelines folder create
   summary: Create a folder.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --path
@@ -42,8 +33,6 @@ items:
   name: az pipelines folder delete
   summary: Delete a folder.
   description: This will delete all pipelines in the folder.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --path
@@ -69,8 +58,6 @@ items:
   name: az pipelines folder list
   summary: List all folders.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --detect
     parameterValueGroup: false, true
@@ -96,8 +83,6 @@ items:
   name: az pipelines folder update
   summary: Update a folder name or description.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --path
@@ -123,18 +108,10 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_pipelines_folder_create
-  name: az pipelines folder create
-  summary: Create a folder.
-- uid: az_pipelines_folder_delete
-  name: az pipelines folder delete
-  summary: Delete a folder.
-- uid: az_pipelines_folder_list
-  name: az pipelines folder list
-  summary: List all folders.
-- uid: az_pipelines_folder_update
-  name: az pipelines folder update
-  summary: Update a folder name or description.
+- az_pipelines_folder_create
+- az_pipelines_folder_delete
+- az_pipelines_folder_list
+- az_pipelines_folder_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -150,4 +127,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage folders for organizing pipelines.
+metadata:
+  description: Manage folders for organizing pipelines.

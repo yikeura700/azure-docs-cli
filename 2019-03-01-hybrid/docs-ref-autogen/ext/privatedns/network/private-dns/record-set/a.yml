@@ -1,31 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_privatedns_az_network_private_dns_record_set_a
-  name: az network private-dns record-set a
-  summary: Manage Private DNS A records.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_privatedns_az_network_private_dns_record_set_a_add_record
-  - ext_privatedns_az_network_private_dns_record_set_a_create
-  - ext_privatedns_az_network_private_dns_record_set_a_delete
-  - ext_privatedns_az_network_private_dns_record_set_a_list
-  - ext_privatedns_az_network_private_dns_record_set_a_remove_record
-  - ext_privatedns_az_network_private_dns_record_set_a_show
-  - ext_privatedns_az_network_private_dns_record_set_a_update
+### YamlMime:CLIGroup
+uid: ext_privatedns_az_network_private_dns_record_set_a
+name: az network private-dns record-set a
+summary: Manage Private DNS A records.
+description: ''
+directCommands:
 - uid: ext_privatedns_az_network_private_dns_record_set_a_add_record
   name: az network private-dns record-set a add-record
   summary: Add an A record.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add an A record.
-    syntax:
-      content: >-
-        az network private-dns record-set a add-record -g MyResourceGroup -z www.mysite.com \
-            -n MyRecordSet -a MyIpv4Address
+    syntax: >-
+      az network private-dns record-set a add-record -g MyResourceGroup -z www.mysite.com \
+          -n MyRecordSet -a MyIpv4Address
   parameters:
   - isRequired: true
     name: --ipv4-address -a
@@ -47,12 +34,9 @@ items:
   name: az network private-dns record-set a create
   summary: Create an empty A record set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an empty A record set.
-    syntax:
-      content: az network private-dns record-set a create -g MyResourceGroup -z www.mysite.com -n MyRecordSet
+    syntax: az network private-dns record-set a create -g MyResourceGroup -z www.mysite.com -n MyRecordSet
   parameters:
   - isRequired: true
     name: --name -n
@@ -77,12 +61,9 @@ items:
   name: az network private-dns record-set a delete
   summary: Delete an A record set and all associated records.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete an A record set and all associated records.
-    syntax:
-      content: az network private-dns record-set a delete -g MyResourceGroup -z www.mysite.com -n MyRecordSet
+    syntax: az network private-dns record-set a delete -g MyResourceGroup -z www.mysite.com -n MyRecordSet
   parameters:
   - isRequired: true
     name: --name -n
@@ -106,12 +87,9 @@ items:
   name: az network private-dns record-set a list
   summary: List all A record sets in a zone.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all A record sets in a zone.
-    syntax:
-      content: az network private-dns record-set a list -g MyResourceGroup -z www.mysite.com
+    syntax: az network private-dns record-set a list -g MyResourceGroup -z www.mysite.com
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -125,14 +103,11 @@ items:
   name: az network private-dns record-set a remove-record
   summary: Remove an A record from its record set.
   description: By default, if the last record in a set is removed, the record set is deleted. To retain the empty record set, include --keep-empty-record-set.
-  langs:
-  - azurecli
   examples:
   - summary: Remove an A record from its record set.
-    syntax:
-      content: >-
-        az network private-dns record-set a remove-record -g MyResourceGroup -z www.mysite.com \
-            -n MyRecordSet -a MyIpv4Address
+    syntax: >-
+      az network private-dns record-set a remove-record -g MyResourceGroup -z www.mysite.com \
+          -n MyRecordSet -a MyIpv4Address
   parameters:
   - isRequired: true
     name: --ipv4-address -a
@@ -157,12 +132,9 @@ items:
   name: az network private-dns record-set a show
   summary: Get the details of an A record set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the details of an A record set.
-    syntax:
-      content: az network private-dns record-set a show -g MyResourceGroup -n MyRecordSet -z www.mysite.com
+    syntax: az network private-dns record-set a show -g MyResourceGroup -n MyRecordSet -z www.mysite.com
   parameters:
   - isRequired: true
     name: --name -n
@@ -180,14 +152,11 @@ items:
   name: az network private-dns record-set a update
   summary: Update an A record set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update an A record set.
-    syntax:
-      content: >-
-        az network private-dns record-set a update -g MyResourceGroup -n MyRecordSet \
-            -z www.mysite.com --metadata owner=WebTeam
+    syntax: >-
+      az network private-dns record-set a update -g MyResourceGroup -n MyRecordSet \
+          -z www.mysite.com --metadata owner=WebTeam
   parameters:
   - isRequired: true
     name: --name -n
@@ -220,27 +189,13 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_privatedns_az_network_private_dns_record_set_a_add_record
-  name: az network private-dns record-set a add-record
-  summary: Add an A record.
-- uid: ext_privatedns_az_network_private_dns_record_set_a_create
-  name: az network private-dns record-set a create
-  summary: Create an empty A record set.
-- uid: ext_privatedns_az_network_private_dns_record_set_a_delete
-  name: az network private-dns record-set a delete
-  summary: Delete an A record set and all associated records.
-- uid: ext_privatedns_az_network_private_dns_record_set_a_list
-  name: az network private-dns record-set a list
-  summary: List all A record sets in a zone.
-- uid: ext_privatedns_az_network_private_dns_record_set_a_remove_record
-  name: az network private-dns record-set a remove-record
-  summary: Remove an A record from its record set.
-- uid: ext_privatedns_az_network_private_dns_record_set_a_show
-  name: az network private-dns record-set a show
-  summary: Get the details of an A record set.
-- uid: ext_privatedns_az_network_private_dns_record_set_a_update
-  name: az network private-dns record-set a update
-  summary: Update an A record set.
+- ext_privatedns_az_network_private_dns_record_set_a_add_record
+- ext_privatedns_az_network_private_dns_record_set_a_create
+- ext_privatedns_az_network_private_dns_record_set_a_delete
+- ext_privatedns_az_network_private_dns_record_set_a_list
+- ext_privatedns_az_network_private_dns_record_set_a_remove_record
+- ext_privatedns_az_network_private_dns_record_set_a_show
+- ext_privatedns_az_network_private_dns_record_set_a_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -256,4 +211,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Private DNS A records.
+metadata:
+  description: Manage Private DNS A records.

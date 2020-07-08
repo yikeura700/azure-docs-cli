@@ -1,24 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_storage_account_file_service_properties
-  name: az storage account file-service-properties
-  summary: Manage the properties of file service in storage account.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_storage_account_file_service_properties_show
-  - az_storage_account_file_service_properties_update
+### YamlMime:CLIGroup
+uid: az_storage_account_file_service_properties
+name: az storage account file-service-properties
+summary: Manage the properties of file service in storage account.
+description: ''
+directCommands:
 - uid: az_storage_account_file_service_properties_show
   name: az storage account file-service-properties show
   summary: Show the properties of file service in storage account.
   description: Show the properties of file service in storage account.
-  langs:
-  - azurecli
   examples:
   - summary: Show the properties of file service in storage account.
-    syntax:
-      content: az storage account file-service-properties show -n mystorageaccount -g MyResourceGroup
+    syntax: az storage account file-service-properties show -n mystorageaccount -g MyResourceGroup
   parameters:
   - isRequired: true
     name: --account-name -n
@@ -40,15 +32,11 @@ items:
   name: az storage account file-service-properties update
   summary: Update the properties of file service in storage account.
   description: Update the properties of file service in storage account.
-  langs:
-  - azurecli
   examples:
   - summary: Enable soft delete policy and set delete retention days to 100 for file service in storage account.
-    syntax:
-      content: az storage account file-service-properties update --enable-delete-retention true --delete-retention-days 100 -n mystorageaccount -g MyResourceGroup
+    syntax: az storage account file-service-properties update --enable-delete-retention true --delete-retention-days 100 -n mystorageaccount -g MyResourceGroup
   - summary: Disable soft delete policy for file service.
-    syntax:
-      content: az storage account file-service-properties update --enable-delete-retention false -n mystorageaccount -g MyResourceGroup
+    syntax: az storage account file-service-properties update --enable-delete-retention false -n mystorageaccount -g MyResourceGroup
   parameters:
   - isRequired: true
     name: --account-name -n
@@ -74,12 +62,8 @@ items:
       path: src/azure-cli/azure/cli/command_modules/storage/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_storage_account_file_service_properties_show
-  name: az storage account file-service-properties show
-  summary: Show the properties of file service in storage account.
-- uid: az_storage_account_file_service_properties_update
-  name: az storage account file-service-properties update
-  summary: Update the properties of file service in storage account.
+- az_storage_account_file_service_properties_show
+- az_storage_account_file_service_properties_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -95,10 +79,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
-updated_at: 6/4/2020 1:53:34 PM
-ms.date: 06/04/2020
-description: Manage the properties of file service in storage account.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  updated_at: 6/4/2020 1:53:34 PM
+  ms.date: 06/04/2020
+  description: Manage the properties of file service in storage account.

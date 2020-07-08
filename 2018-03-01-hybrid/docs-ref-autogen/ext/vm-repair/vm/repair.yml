@@ -1,29 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_vm-repair_az_vm_repair
-  name: az vm repair
-  summary: Auto repair commands to fix VMs.
-  description: VM repair scripts will enable Azure users to self-repair non-bootable VMs by copying the source VM's OS disk and attaching it to a newly created repair VM.
-  langs:
-  - azurecli
-  children:
-  - ext_vm-repair_az_vm_repair_create
-  - ext_vm-repair_az_vm_repair_list_scripts
-  - ext_vm-repair_az_vm_repair_restore
-  - ext_vm-repair_az_vm_repair_run
+### YamlMime:CLIGroup
+uid: ext_vm-repair_az_vm_repair
+name: az vm repair
+summary: Auto repair commands to fix VMs.
+description: VM repair scripts will enable Azure users to self-repair non-bootable VMs by copying the source VM's OS disk and attaching it to a newly created repair VM.
+directCommands:
 - uid: ext_vm-repair_az_vm_repair_create
   name: az vm repair create
   summary: Create a new repair VM and attach the source VM's copied OS disk as a data disk.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a repair VM
-    syntax:
-      content: az vm repair create -g MyResourceGroup -n myVM --verbose
+    syntax: az vm repair create -g MyResourceGroup -n myVM --verbose
   - summary: Create a repair VM and set the VM authentication
-    syntax:
-      content: az vm repair create -g MyResourceGroup -n myVM --repair-username username --repair-password password!234 --verbose
+    syntax: az vm repair create -g MyResourceGroup -n myVM --repair-username username --repair-password password!234 --verbose
   parameters:
   - isRequired: true
     name: --name -n
@@ -55,32 +44,23 @@ items:
   name: az vm repair list-scripts
   summary: List available scripts. Located <a href="https://github.com/Azure/repair-script-library">https://github.com/Azure/repair-script-library</a>.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List scripts
-    syntax:
-      content: az vm repair list-scripts --verbose
+    syntax: az vm repair list-scripts --verbose
   - summary: List windows scripts only.
-    syntax:
-      content: az vm repair list-scripts --query "[?starts_with(id, 'win')]"
+    syntax: az vm repair list-scripts --query "[?starts_with(id, 'win')]"
   - summary: List scripts with test in its description.
-    syntax:
-      content: az vm repair list-scripts --query "[?contains(description, 'test')]"
+    syntax: az vm repair list-scripts --query "[?contains(description, 'test')]"
   parameters: []
 - uid: ext_vm-repair_az_vm_repair_restore
   name: az vm repair restore
   summary: Replace source VM's OS disk with data disk from repair VM.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Restore from the repair VM, command will auto-search for repair-vm
-    syntax:
-      content: az vm repair restore -g MyResourceGroup -n MyVM --verbose
+    syntax: az vm repair restore -g MyResourceGroup -n MyVM --verbose
   - summary: Restore from the repair VM, specify the disk to restore
-    syntax:
-      content: az vm repair restore -g MyResourceGroup -n MyVM --disk-name MyDiskCopy --verbose
+    syntax: az vm repair restore -g MyResourceGroup -n MyVM --disk-name MyDiskCopy --verbose
   parameters:
   - isRequired: true
     name: --name -n
@@ -103,21 +83,15 @@ items:
   name: az vm repair run
   summary: Run verified scripts from GitHub on a VM. 'az vm repair list-scripts' to view available scripts.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Run the script with <run-id> directly on the VM.
-    syntax:
-      content: az vm repair run -g MyResourceGroup -n MySourceWinVM --run-id win-hello-world --verbose
+    syntax: az vm repair run -g MyResourceGroup -n MySourceWinVM --run-id win-hello-world --verbose
   - summary: Run the script with <run-id> on the linked repair VM.
-    syntax:
-      content: az vm repair run -g MyResourceGroup -n MySourceWinVM --run-id win-hello-world --run-on-repair --verbose
+    syntax: az vm repair run -g MyResourceGroup -n MySourceWinVM --run-id win-hello-world --run-on-repair --verbose
   - summary: Run a script with parameters on the VM.
-    syntax:
-      content: az vm repair run -g MyResourceGroup -n MySourceWinVM --run-id win-hello-world --parameters hello=hi world=earth --verbose
+    syntax: az vm repair run -g MyResourceGroup -n MySourceWinVM --run-id win-hello-world --parameters hello=hi world=earth --verbose
   - summary: Run a local custom script on the VM.
-    syntax:
-      content: az vm repair run -g MyResourceGroup -n MySourceWinVM --custom-script-file ./file.ps1 --verbose
+    syntax: az vm repair run -g MyResourceGroup -n MySourceWinVM --custom-script-file ./file.ps1 --verbose
   parameters:
   - isRequired: true
     name: --name -n
@@ -143,18 +117,10 @@ items:
     summary: Script will be run on the linked repair VM.
     description: ''
 commands:
-- uid: ext_vm-repair_az_vm_repair_create
-  name: az vm repair create
-  summary: Create a new repair VM and attach the source VM's copied OS disk as a data disk.
-- uid: ext_vm-repair_az_vm_repair_list_scripts
-  name: az vm repair list-scripts
-  summary: List available scripts. Located <a href="https://github.com/Azure/repair-script-library">https://github.com/Azure/repair-script-library</a>.
-- uid: ext_vm-repair_az_vm_repair_restore
-  name: az vm repair restore
-  summary: Replace source VM's OS disk with data disk from repair VM.
-- uid: ext_vm-repair_az_vm_repair_run
-  name: az vm repair run
-  summary: Run verified scripts from GitHub on a VM. 'az vm repair list-scripts' to view available scripts.
+- ext_vm-repair_az_vm_repair_create
+- ext_vm-repair_az_vm_repair_list_scripts
+- ext_vm-repair_az_vm_repair_restore
+- ext_vm-repair_az_vm_repair_run
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -170,4 +136,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: VM repair scripts will enable Azure users to self-repair non-bootable VMs by copying the source VM's OS disk and attaching it to a newly created repair VM.
+metadata:
+  description: VM repair scripts will enable Azure users to self-repair non-bootable VMs by copying the source VM's OS disk and attaching it to a newly created repair VM.

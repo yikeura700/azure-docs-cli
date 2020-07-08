@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-cli-ml_az_ml_environment
-  name: az ml environment
-  summary: Commands to manage environments.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-cli-ml_az_ml_environment_download
-  - ext_azure-cli-ml_az_ml_environment_list
-  - ext_azure-cli-ml_az_ml_environment_register
-  - ext_azure-cli-ml_az_ml_environment_scaffold
-  - ext_azure-cli-ml_az_ml_environment_show
+### YamlMime:CLIGroup
+uid: ext_azure-cli-ml_az_ml_environment
+name: az ml environment
+summary: Commands to manage environments.
+description: ''
+directCommands:
 - uid: ext_azure-cli-ml_az_ml_environment_download
   name: az ml environment download
   summary: Download an environment definition to a specified directory.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --directory -d
@@ -53,8 +43,6 @@ items:
   name: az ml environment list
   summary: List environments in a workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
@@ -76,8 +64,6 @@ items:
   name: az ml environment register
   summary: Register an environment definition from a specified directory.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --directory -d
@@ -103,8 +89,6 @@ items:
   name: az ml environment scaffold
   summary: Scaffold the files for a default environment definition in the specified directory.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --directory -d
@@ -134,8 +118,6 @@ items:
   name: az ml environment show
   summary: Show an environment by name and optionally version.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -161,21 +143,11 @@ items:
     summary: Workspace name.
     description: ''
 commands:
-- uid: ext_azure-cli-ml_az_ml_environment_download
-  name: az ml environment download
-  summary: Download an environment definition to a specified directory.
-- uid: ext_azure-cli-ml_az_ml_environment_list
-  name: az ml environment list
-  summary: List environments in a workspace.
-- uid: ext_azure-cli-ml_az_ml_environment_register
-  name: az ml environment register
-  summary: Register an environment definition from a specified directory.
-- uid: ext_azure-cli-ml_az_ml_environment_scaffold
-  name: az ml environment scaffold
-  summary: Scaffold the files for a default environment definition in the specified directory.
-- uid: ext_azure-cli-ml_az_ml_environment_show
-  name: az ml environment show
-  summary: Show an environment by name and optionally version.
+- ext_azure-cli-ml_az_ml_environment_download
+- ext_azure-cli-ml_az_ml_environment_list
+- ext_azure-cli-ml_az_ml_environment_register
+- ext_azure-cli-ml_az_ml_environment_scaffold
+- ext_azure-cli-ml_az_ml_environment_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -191,4 +163,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage environments.
+metadata:
+  description: Commands to manage environments.

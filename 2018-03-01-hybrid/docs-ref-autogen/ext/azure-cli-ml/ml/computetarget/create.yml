@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-cli-ml_az_ml_computetarget_create
-  name: az ml computetarget create
-  summary: Create a compute target (aks or amlcompute or computeinstance).
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-cli-ml_az_ml_computetarget_create_aks
-  - ext_azure-cli-ml_az_ml_computetarget_create_amlcompute
-  - ext_azure-cli-ml_az_ml_computetarget_create_computeinstance
-  - ext_azure-cli-ml_az_ml_computetarget_create_datafactory
+### YamlMime:CLIGroup
+uid: ext_azure-cli-ml_az_ml_computetarget_create
+name: az ml computetarget create
+summary: Create a compute target (aks or amlcompute or computeinstance).
+description: ''
+directCommands:
 - uid: ext_azure-cli-ml_az_ml_computetarget_create_aks
   name: az ml computetarget create aks
   summary: Create an AKS compute target.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -95,8 +86,6 @@ items:
   name: az ml computetarget create amlcompute
   summary: Create an AzureML compute target.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --max-nodes
@@ -171,8 +160,6 @@ items:
   name: az ml computetarget create computeinstance
   summary: Create an AzureML compute instance target.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -225,8 +212,6 @@ items:
   name: az ml computetarget create datafactory
   summary: Create a data factory compute target.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -254,18 +239,10 @@ items:
     summary: Verbosity flag.
     description: ''
 commands:
-- uid: ext_azure-cli-ml_az_ml_computetarget_create_aks
-  name: az ml computetarget create aks
-  summary: Create an AKS compute target.
-- uid: ext_azure-cli-ml_az_ml_computetarget_create_amlcompute
-  name: az ml computetarget create amlcompute
-  summary: Create an AzureML compute target.
-- uid: ext_azure-cli-ml_az_ml_computetarget_create_computeinstance
-  name: az ml computetarget create computeinstance
-  summary: Create an AzureML compute instance target.
-- uid: ext_azure-cli-ml_az_ml_computetarget_create_datafactory
-  name: az ml computetarget create datafactory
-  summary: Create a data factory compute target.
+- ext_azure-cli-ml_az_ml_computetarget_create_aks
+- ext_azure-cli-ml_az_ml_computetarget_create_amlcompute
+- ext_azure-cli-ml_az_ml_computetarget_create_computeinstance
+- ext_azure-cli-ml_az_ml_computetarget_create_datafactory
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -281,4 +258,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Create a compute target (aks or amlcompute or computeinstance).
+metadata:
+  description: Create a compute target (aks or amlcompute or computeinstance).

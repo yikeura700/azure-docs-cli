@@ -1,30 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-iot_az_dt_model
-  name: az dt model
-  summary: Manage DTDL models and definitions on a Digital Twins instance.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-iot_az_dt_model_create
-  - ext_azure-iot_az_dt_model_delete
-  - ext_azure-iot_az_dt_model_list
-  - ext_azure-iot_az_dt_model_show
-  - ext_azure-iot_az_dt_model_update
+### YamlMime:CLIGroup
+uid: ext_azure-iot_az_dt_model
+name: az dt model
+summary: Manage DTDL models and definitions on a Digital Twins instance.
+description: ''
+directCommands:
 - uid: ext_azure-iot_az_dt_model_create
   name: az dt model create
   summary: Uploads one or more models. When any error occurs, no models are uploaded.
   description: --models can be inline json or file path.
-  langs:
-  - azurecli
   examples:
   - summary: Bulk upload all .json or .dtdl model files from a target directory. Model processing is recursive.
-    syntax:
-      content: az dt model create -n {instance_name} --from-directory {directory_path}
+    syntax: az dt model create -n {instance_name} --from-directory {directory_path}
   - summary: Upload model json inline or from file path.
-    syntax:
-      content: az dt model create -n {instance_name} --models {file_path_or_inline_json}
+    syntax: az dt model create -n {instance_name} --models {file_path_or_inline_json}
   parameters:
   - isRequired: true
     name: --dt-name --dtn -n
@@ -43,12 +31,9 @@ items:
   name: az dt model delete
   summary: Delete a model. A model can only be deleted if no other models reference it.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a target model.
-    syntax:
-      content: az dt model delete -n {instance_name} --dtmi "dtmi:example:Floor;1"
+    syntax: az dt model delete -n {instance_name} --dtmi "dtmi:example:Floor;1"
   parameters:
   - isRequired: true
     name: --dt-name --dtn -n
@@ -65,18 +50,13 @@ items:
   name: az dt model list
   summary: List model metadata, definitions and dependencies.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List model metadata
-    syntax:
-      content: az dt model list -n {instance_name}
+    syntax: az dt model list -n {instance_name}
   - summary: List model definitions
-    syntax:
-      content: az dt model list -n {instance_name} --definition
+    syntax: az dt model list -n {instance_name} --definition
   - summary: List dependencies of particular pre-existing model(s). Space seperate dtmi values.
-    syntax:
-      content: az dt model list -n {instance_name} --dependencies-for {model_id0} {model_id1}
+    syntax: az dt model list -n {instance_name} --dependencies-for {model_id0} {model_id1}
   parameters:
   - isRequired: true
     name: --dt-name --dtn -n
@@ -96,15 +76,11 @@ items:
   name: az dt model show
   summary: Retrieve a target model or model definition.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show model meta data
-    syntax:
-      content: az dt model show -n {instance_name} --dtmi "dtmi:example:Floor;1"
+    syntax: az dt model show -n {instance_name} --dtmi "dtmi:example:Floor;1"
   - summary: Show model meta data and definition
-    syntax:
-      content: az dt model show -n {instance_name} --dtmi "dtmi:example:Floor;1" --definition
+    syntax: az dt model show -n {instance_name} --dtmi "dtmi:example:Floor;1" --definition
   parameters:
   - isRequired: true
     name: --dt-name --dtn -n
@@ -125,12 +101,9 @@ items:
   name: az dt model update
   summary: Updates the metadata for a model. Currently a model can only be decommisioned.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Decommision a target model
-    syntax:
-      content: az dt model update -n {instance_name} --dtmi "dtmi:example:Floor;1" --decommission
+    syntax: az dt model update -n {instance_name} --dtmi "dtmi:example:Floor;1" --decommission
   parameters:
   - isRequired: true
     name: --dt-name --dtn -n
@@ -148,21 +121,11 @@ items:
     summary: Digital Twins instance resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
     description: ''
 commands:
-- uid: ext_azure-iot_az_dt_model_create
-  name: az dt model create
-  summary: Uploads one or more models. When any error occurs, no models are uploaded.
-- uid: ext_azure-iot_az_dt_model_delete
-  name: az dt model delete
-  summary: Delete a model. A model can only be deleted if no other models reference it.
-- uid: ext_azure-iot_az_dt_model_list
-  name: az dt model list
-  summary: List model metadata, definitions and dependencies.
-- uid: ext_azure-iot_az_dt_model_show
-  name: az dt model show
-  summary: Retrieve a target model or model definition.
-- uid: ext_azure-iot_az_dt_model_update
-  name: az dt model update
-  summary: Updates the metadata for a model. Currently a model can only be decommisioned.
+- ext_azure-iot_az_dt_model_create
+- ext_azure-iot_az_dt_model_delete
+- ext_azure-iot_az_dt_model_list
+- ext_azure-iot_az_dt_model_show
+- ext_azure-iot_az_dt_model_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -178,4 +141,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage DTDL models and definitions on a Digital Twins instance.
+metadata:
+  description: Manage DTDL models and definitions on a Digital Twins instance.

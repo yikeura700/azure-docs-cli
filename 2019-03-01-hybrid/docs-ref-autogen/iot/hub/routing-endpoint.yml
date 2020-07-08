@@ -1,41 +1,29 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_iot_hub_routing_endpoint
-  name: az iot hub routing-endpoint
-  summary: Manage custom endpoints of an IoT hub.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_iot_hub_routing_endpoint_create
-  - az_iot_hub_routing_endpoint_delete
-  - az_iot_hub_routing_endpoint_list
-  - az_iot_hub_routing_endpoint_show
+### YamlMime:CLIGroup
+uid: az_iot_hub_routing_endpoint
+name: az iot hub routing-endpoint
+summary: Manage custom endpoints of an IoT hub.
+description: ''
+directCommands:
 - uid: az_iot_hub_routing_endpoint_create
   name: az iot hub routing-endpoint create
   summary: Add an endpoint to your IoT Hub.
   description: Create a new custom endpoint in your IoT Hub.
-  langs:
-  - azurecli
   examples:
   - summary: Add a new endpoint "E2" of type EventHub to "MyIotHub" IoT Hub.
-    syntax:
-      content: az iot hub routing-endpoint create --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-name E2 --endpoint-type eventhub --endpoint-resource-group {ResourceGroup} --endpoint-subscription-id {SubscriptionId} --connection-string {ConnectionString}
+    syntax: az iot hub routing-endpoint create --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-name E2 --endpoint-type eventhub --endpoint-resource-group {ResourceGroup} --endpoint-subscription-id {SubscriptionId} --connection-string {ConnectionString}
   - summary: Add a new endpoint "S1" of type AzureStorageContainer to "MyIotHub" IoT Hub.
-    syntax:
-      content: >-
-        az iot hub routing-endpoint create --resource-group MyResourceGroup --hub-name MyIotHub \
+    syntax: >-
+      az iot hub routing-endpoint create --resource-group MyResourceGroup --hub-name MyIotHub \
 
-        --endpoint-name S1 --endpoint-type azurestoragecontainer --endpoint-resource-group "[Resource Group]" \
+      --endpoint-name S1 --endpoint-type azurestoragecontainer --endpoint-resource-group "[Resource Group]" \
 
-        --endpoint-subscription-id {SubscriptionId} --connection-string {ConnectionString} \
+      --endpoint-subscription-id {SubscriptionId} --connection-string {ConnectionString} \
 
-        --container-name {ContainerName} --batch-frequency 100 --chunk-size 100 \
+      --container-name {ContainerName} --batch-frequency 100 --chunk-size 100 \
 
-        --ff {iothub}-{partition}-{YYYY}-{MM}-{DD}-{HH}-{mm}
+      --ff {iothub}-{partition}-{YYYY}-{MM}-{DD}-{HH}-{mm}
   - summary: Add a new identity-based EventHub endpoint named "EventHubIdentity"
-    syntax:
-      content: az iot hub routing-endpoint create --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-name EventHubIdentity --endpoint-type eventhub --endpoint-resource-group {ResourceGroup} --endpoint-subscription-id {SubscriptionId} --auth-type identityBased --endpoint-uri {EventHubEndpointUri} --entity-path {EntityPath}
+    syntax: az iot hub routing-endpoint create --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-name EventHubIdentity --endpoint-type eventhub --endpoint-resource-group {ResourceGroup} --endpoint-subscription-id {SubscriptionId} --auth-type identityBased --endpoint-uri {EventHubEndpointUri} --entity-path {EntityPath}
   parameters:
   - isRequired: true
     name: --endpoint-name --name -n
@@ -106,18 +94,13 @@ items:
   name: az iot hub routing-endpoint delete
   summary: Delete all or mentioned endpoint for your IoT Hub.
   description: Delete an endpoint for your IoT Hub. We recommend that you delete any routes to the endpoint, before deleting the endpoint.
-  langs:
-  - azurecli
   examples:
   - summary: Delete endpoint "E2" from "MyIotHub" IoT Hub.
-    syntax:
-      content: az iot hub routing-endpoint delete --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-name E2
+    syntax: az iot hub routing-endpoint delete --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-name E2
   - summary: Delete all the endpoints of type "EventHub" from "MyIotHub" IoT Hub.
-    syntax:
-      content: az iot hub routing-endpoint delete --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-type eventhub
+    syntax: az iot hub routing-endpoint delete --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-type eventhub
   - summary: Delete all the endpoints from "MyIotHub" IoT Hub.
-    syntax:
-      content: az iot hub routing-endpoint delete --resource-group MyResourceGroup --hub-name MyIotHub
+    syntax: az iot hub routing-endpoint delete --resource-group MyResourceGroup --hub-name MyIotHub
   parameters:
   - name: --endpoint-name --name -n
     summary: Name of the Routing Endpoint.
@@ -148,15 +131,11 @@ items:
   name: az iot hub routing-endpoint list
   summary: Get information on all the endpoints for your IoT Hub.
   description: Get information on all endpoints in your IoT Hub. You can also specify which endpoint type you want to get informaiton on.
-  langs:
-  - azurecli
   examples:
   - summary: Get all the endpoints from "MyIotHub" IoT Hub.
-    syntax:
-      content: az iot hub routing-endpoint list -g MyResourceGroup --hub-name MyIotHub
+    syntax: az iot hub routing-endpoint list -g MyResourceGroup --hub-name MyIotHub
   - summary: Get all the endpoints of type "EventHub" from "MyIotHub" IoT Hub.
-    syntax:
-      content: az iot hub routing-endpoint list -g MyResourceGroup --hub-name MyIotHub --endpoint-type eventhub
+    syntax: az iot hub routing-endpoint list -g MyResourceGroup --hub-name MyIotHub --endpoint-type eventhub
   parameters:
   - name: --endpoint-type --type -t
     parameterValueGroup: azurestoragecontainer, eventhub, servicebusqueue, servicebustopic
@@ -184,15 +163,12 @@ items:
   name: az iot hub routing-endpoint show
   summary: Get information on mentioned endpoint for your IoT Hub.
   description: Get information on a specific endpoint in your IoT Hub.
-  langs:
-  - azurecli
   examples:
   - summary: Get an endpoint information from "MyIotHub" IoT Hub.
-    syntax:
-      content: >-
-        az iot hub routing-endpoint show --resource-group MyResourceGroup --hub-name MyIotHub \
+    syntax: >-
+      az iot hub routing-endpoint show --resource-group MyResourceGroup --hub-name MyIotHub \
 
-        --endpoint-name {endpointName}
+      --endpoint-name {endpointName}
   parameters:
   - isRequired: true
     name: --endpoint-name --name -n
@@ -217,18 +193,10 @@ items:
       path: src/azure-cli/azure/cli/command_modules/iot/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_iot_hub_routing_endpoint_create
-  name: az iot hub routing-endpoint create
-  summary: Add an endpoint to your IoT Hub.
-- uid: az_iot_hub_routing_endpoint_delete
-  name: az iot hub routing-endpoint delete
-  summary: Delete all or mentioned endpoint for your IoT Hub.
-- uid: az_iot_hub_routing_endpoint_list
-  name: az iot hub routing-endpoint list
-  summary: Get information on all the endpoints for your IoT Hub.
-- uid: az_iot_hub_routing_endpoint_show
-  name: az iot hub routing-endpoint show
-  summary: Get information on mentioned endpoint for your IoT Hub.
+- az_iot_hub_routing_endpoint_create
+- az_iot_hub_routing_endpoint_delete
+- az_iot_hub_routing_endpoint_list
+- az_iot_hub_routing_endpoint_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -244,10 +212,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/a6cad9c0a7d0bd9e724f23a8123f1e504989d8db/src/azure-cli/azure/cli/command_modules/iot/_help.py
-updated_at: 6/17/2020 6:34:23 AM
-ms.date: 06/17/2020
-description: Manage custom endpoints of an IoT hub.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/a6cad9c0a7d0bd9e724f23a8123f1e504989d8db/src/azure-cli/azure/cli/command_modules/iot/_help.py
+  updated_at: 6/17/2020 6:34:23 AM
+  ms.date: 06/17/2020
+  description: Manage custom endpoints of an IoT hub.

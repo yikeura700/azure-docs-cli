@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_monitor_private_link_scope_scoped_resource
-  name: az monitor private-link-scope scoped-resource
-  summary: Manage scoped resource of a private link scope resource.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_monitor_private_link_scope_scoped_resource_create
-  - az_monitor_private_link_scope_scoped_resource_delete
-  - az_monitor_private_link_scope_scoped_resource_list
-  - az_monitor_private_link_scope_scoped_resource_show
+### YamlMime:CLIGroup
+uid: az_monitor_private_link_scope_scoped_resource
+name: az monitor private-link-scope scoped-resource
+summary: Manage scoped resource of a private link scope resource.
+description: ''
+directCommands:
 - uid: az_monitor_private_link_scope_scoped_resource_create
   name: az monitor private-link-scope scoped-resource create
   summary: Create a scoped resource for a private link scope resource.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --linked-resource
@@ -47,8 +38,6 @@ items:
   name: az monitor private-link-scope scoped-resource delete
   summary: Delete a scoped resource of a private link scope resource.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -78,8 +67,6 @@ items:
   name: az monitor private-link-scope scoped-resource list
   summary: List all scoped resource of a private link scope resource.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -102,8 +89,6 @@ items:
   name: az monitor private-link-scope scoped-resource show
   summary: Show a scoped resource of a private link scope resource.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -127,18 +112,10 @@ items:
       path: src/azure-cli/azure/cli/command_modules/monitor/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_monitor_private_link_scope_scoped_resource_create
-  name: az monitor private-link-scope scoped-resource create
-  summary: Create a scoped resource for a private link scope resource.
-- uid: az_monitor_private_link_scope_scoped_resource_delete
-  name: az monitor private-link-scope scoped-resource delete
-  summary: Delete a scoped resource of a private link scope resource.
-- uid: az_monitor_private_link_scope_scoped_resource_list
-  name: az monitor private-link-scope scoped-resource list
-  summary: List all scoped resource of a private link scope resource.
-- uid: az_monitor_private_link_scope_scoped_resource_show
-  name: az monitor private-link-scope scoped-resource show
-  summary: Show a scoped resource of a private link scope resource.
+- az_monitor_private_link_scope_scoped_resource_create
+- az_monitor_private_link_scope_scoped_resource_delete
+- az_monitor_private_link_scope_scoped_resource_list
+- az_monitor_private_link_scope_scoped_resource_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -154,10 +131,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/monitor/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/monitor/_help.py
-updated_at: 6/4/2020 1:53:34 PM
-ms.date: 06/04/2020
-description: Manage scoped resource of a private link scope resource.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/monitor/_help.py
+  updated_at: 6/4/2020 1:53:34 PM
+  ms.date: 06/04/2020
+  description: Manage scoped resource of a private link scope resource.

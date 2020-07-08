@@ -1,24 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_functionapp_deployment_user
-  name: az functionapp deployment user
-  summary: Manage user credentials for deployment.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_functionapp_deployment_user_set
-  - az_functionapp_deployment_user_show
+### YamlMime:CLIGroup
+uid: az_functionapp_deployment_user
+name: az functionapp deployment user
+summary: Manage user credentials for deployment.
+description: ''
+directCommands:
 - uid: az_functionapp_deployment_user_set
   name: az functionapp deployment user set
   summary: Update deployment credentials.
   description: All function and web apps in the subscription will be impacted since they share the same deployment credentials.
-  langs:
-  - azurecli
   examples:
   - summary: Set FTP and git deployment credentials for all apps.
-    syntax:
-      content: az functionapp deployment user set --user-name MyUserName
+    syntax: az functionapp deployment user set --user-name MyUserName
   parameters:
   - isRequired: true
     name: --user-name
@@ -40,8 +32,6 @@ items:
   name: az functionapp deployment user show
   summary: Gets publishing user.
   description: Gets publishing user.
-  langs:
-  - azurecli
   parameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -53,12 +43,8 @@ items:
       path: src/azure-cli/azure/cli/command_modules/appservice/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_functionapp_deployment_user_set
-  name: az functionapp deployment user set
-  summary: Update deployment credentials.
-- uid: az_functionapp_deployment_user_show
-  name: az functionapp deployment user show
-  summary: Gets publishing user.
+- az_functionapp_deployment_user_set
+- az_functionapp_deployment_user_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -74,10 +60,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/appservice/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/433268833f4a2e9c48736f28e34fbf8794e0a20a/src/azure-cli/azure/cli/command_modules/appservice/_help.py
-updated_at: 6/15/2020 6:19:53 PM
-ms.date: 06/15/2020
-description: Manage user credentials for deployment.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/433268833f4a2e9c48736f28e34fbf8794e0a20a/src/azure-cli/azure/cli/command_modules/appservice/_help.py
+  updated_at: 6/15/2020 6:19:53 PM
+  ms.date: 06/15/2020
+  description: Manage user credentials for deployment.

@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_postgres_server_key
-  name: az postgres server key
-  summary: Manage PostgreSQL server keys.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_postgres_server_key_create
-  - az_postgres_server_key_delete
-  - az_postgres_server_key_list
-  - az_postgres_server_key_show
+### YamlMime:CLIGroup
+uid: az_postgres_server_key
+name: az postgres server key
+summary: Manage PostgreSQL server keys.
+description: ''
+directCommands:
 - uid: az_postgres_server_key_create
   name: az postgres server key create
   summary: Create server key.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --kid -k
@@ -37,8 +28,6 @@ items:
   name: az postgres server key delete
   summary: Delete server key.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --kid -k
@@ -63,8 +52,6 @@ items:
   name: az postgres server key list
   summary: Gets a list of  Server keys.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -82,8 +69,6 @@ items:
   name: az postgres server key show
   summary: Show server key.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --kid -k
@@ -102,18 +87,10 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_postgres_server_key_create
-  name: az postgres server key create
-  summary: Create server key.
-- uid: az_postgres_server_key_delete
-  name: az postgres server key delete
-  summary: Delete server key.
-- uid: az_postgres_server_key_list
-  name: az postgres server key list
-  summary: Gets a list of  Server keys.
-- uid: az_postgres_server_key_show
-  name: az postgres server key show
-  summary: Show server key.
+- az_postgres_server_key_create
+- az_postgres_server_key_delete
+- az_postgres_server_key_list
+- az_postgres_server_key_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -129,4 +106,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage PostgreSQL server keys.
+metadata:
+  description: Manage PostgreSQL server keys.

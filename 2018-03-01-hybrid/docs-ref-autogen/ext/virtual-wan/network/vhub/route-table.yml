@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_virtual-wan_az_network_vhub_route_table
-  name: az network vhub route-table
-  summary: Manage route table in the virtual hub.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_virtual-wan_az_network_vhub_route_table_create
-  - ext_virtual-wan_az_network_vhub_route_table_delete
-  - ext_virtual-wan_az_network_vhub_route_table_list
-  - ext_virtual-wan_az_network_vhub_route_table_show
-  - ext_virtual-wan_az_network_vhub_route_table_update
+### YamlMime:CLIGroup
+uid: ext_virtual-wan_az_network_vhub_route_table
+name: az network vhub route-table
+summary: Manage route table in the virtual hub.
+description: ''
+directCommands:
 - uid: ext_virtual-wan_az_network_vhub_route_table_create
   name: az network vhub route-table create
   summary: Create a route table in the virtual hub.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a route table in the virtual hub.
-    syntax:
-      content: az network vhub route-table create -n MyRouteTable -g MyResourceGroup --vhub-name MyVhub --connections All_Vnets --destination-type CIDR --destinations "10.4.0.0/16" "10.6.0.0/16" --next-hop-type IPAddress --next-hops "10.0.0.68"
+    syntax: az network vhub route-table create -n MyRouteTable -g MyResourceGroup --vhub-name MyVhub --connections All_Vnets --destination-type CIDR --destinations "10.4.0.0/16" "10.6.0.0/16" --next-hop-type IPAddress --next-hops "10.0.0.68"
   parameters:
   - isRequired: true
     name: --connections
@@ -71,12 +60,9 @@ items:
   name: az network vhub route-table delete
   summary: Delete a route table in the virtual hub.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a route table in the virtual hub.
-    syntax:
-      content: az network vhub route-table delete -n MyRouteTable -g MyResourceGroup --vhub-name MyVhub
+    syntax: az network vhub route-table delete -n MyRouteTable -g MyResourceGroup --vhub-name MyVhub
   parameters:
   - isRequired: true
     name: --name -n
@@ -94,8 +80,6 @@ items:
   name: az network vhub route-table list
   summary: List all route tables in the virtual hub.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -109,8 +93,6 @@ items:
   name: az network vhub route-table show
   summary: Show a route table in the virtual hub.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -128,12 +110,9 @@ items:
   name: az network vhub route-table update
   summary: Update a route table in the virtual hub.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a route table in the virtual hub.
-    syntax:
-      content: az network vhub route-table update -n MyRouteTable -g MyResourceGroup --vhub-name MyVhub --connections All_Vnets All_Branches
+    syntax: az network vhub route-table update -n MyRouteTable -g MyResourceGroup --vhub-name MyVhub --connections All_Vnets All_Branches
   parameters:
   - isRequired: true
     name: --name -n
@@ -170,33 +149,15 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_virtual-wan_az_network_vhub_route_table_create
-  name: az network vhub route-table create
-  summary: Create a route table in the virtual hub.
-- uid: ext_virtual-wan_az_network_vhub_route_table_delete
-  name: az network vhub route-table delete
-  summary: Delete a route table in the virtual hub.
-- uid: ext_virtual-wan_az_network_vhub_route_table_list
-  name: az network vhub route-table list
-  summary: List all route tables in the virtual hub.
-- uid: ext_virtual-wan_az_network_vhub_route_table_route
-  name: az network vhub route-table route
-  summary: Manage routes of route table in the virtual hub.
-- uid: ext_virtual-wan_az_network_vhub_route_table_route_add
-  name: az network vhub route-table route add
-  summary: Add a route into route table of the virtual hub.
-- uid: ext_virtual-wan_az_network_vhub_route_table_route_list
-  name: az network vhub route-table route list
-  summary: List routes in the virtual hub route table.
-- uid: ext_virtual-wan_az_network_vhub_route_table_route_remove
-  name: az network vhub route-table route remove
-  summary: Remove a route from route table of the virtual hub.
-- uid: ext_virtual-wan_az_network_vhub_route_table_show
-  name: az network vhub route-table show
-  summary: Show a route table in the virtual hub.
-- uid: ext_virtual-wan_az_network_vhub_route_table_update
-  name: az network vhub route-table update
-  summary: Update a route table in the virtual hub.
+- ext_virtual-wan_az_network_vhub_route_table_create
+- ext_virtual-wan_az_network_vhub_route_table_delete
+- ext_virtual-wan_az_network_vhub_route_table_list
+- ext_virtual-wan_az_network_vhub_route_table_route
+- ext_virtual-wan_az_network_vhub_route_table_route_add
+- ext_virtual-wan_az_network_vhub_route_table_route_list
+- ext_virtual-wan_az_network_vhub_route_table_route_remove
+- ext_virtual-wan_az_network_vhub_route_table_show
+- ext_virtual-wan_az_network_vhub_route_table_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -212,4 +173,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage route table in the virtual hub.
+metadata:
+  description: Manage route table in the virtual hub.

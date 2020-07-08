@@ -1,28 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_netappfiles-preview_az_netappfiles_account
-  name: az netappfiles account
-  summary: Manage Azure NetApp Files (ANF) Account Resources.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_netappfiles-preview_az_netappfiles_account_create
-  - ext_netappfiles-preview_az_netappfiles_account_delete
-  - ext_netappfiles-preview_az_netappfiles_account_list
-  - ext_netappfiles-preview_az_netappfiles_account_set
-  - ext_netappfiles-preview_az_netappfiles_account_show
-  - ext_netappfiles-preview_az_netappfiles_account_update
+### YamlMime:CLIGroup
+uid: ext_netappfiles-preview_az_netappfiles_account
+name: az netappfiles account
+summary: Manage Azure NetApp Files (ANF) Account Resources.
+description: ''
+directCommands:
 - uid: ext_netappfiles-preview_az_netappfiles_account_create
   name: az netappfiles account create
   summary: Create a new Azure NetApp Files (ANF) account. Note that active directory can only be applied to an existing account (using set/update).
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an ANF account
-    syntax:
-      content: az netappfiles account create -g group --account-name name -l location
+    syntax: az netappfiles account create -g group --account-name name -l location
   parameters:
   - isRequired: true
     name: --account-name -a -n
@@ -46,12 +34,9 @@ items:
   name: az netappfiles account delete
   summary: Delete the specified ANF account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete an ANF account
-    syntax:
-      content: az netappfiles account delete -g group --account-name name
+    syntax: az netappfiles account delete -g group --account-name name
   parameters:
   - isRequired: true
     name: --account-name -a -n
@@ -65,12 +50,9 @@ items:
   name: az netappfiles account list
   summary: List ANF accounts.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List ANF accounts within a resource group
-    syntax:
-      content: az netappfiles account list -g group
+    syntax: az netappfiles account list -g group
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -80,15 +62,11 @@ items:
   name: az netappfiles account set
   summary: Sets the tags or the active directory details for a specified ANF account. Sets the active directory property to exactly what is provided. If none is provided then the active directory is removed, i.e. provide empty [].
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update the tags and active directory of an ANF account
-    syntax:
-      content: "az netappfiles account set -g group --account-name name --tags 'key[=value] key[=value]' --active-directories '[{\"username\": \"aduser\", \"password\": \"aduser\", \"smbservername\": \"SMBSERVER\", \"dns\": \"1.2.3.4\", \"domain\": \"westcentralus\"}]' -l westus2"
+    syntax: "az netappfiles account set -g group --account-name name --tags 'key[=value] key[=value]' --active-directories '[{\"username\": \"aduser\", \"password\": \"aduser\", \"smbservername\": \"SMBSERVER\", \"dns\": \"1.2.3.4\", \"domain\": \"westcentralus\"}]' -l westus2"
   - summary: Remove the active directory from the ANF account
-    syntax:
-      content: az netappfiles account set -g group --account-name name --active-directories '[]' -l westus2
+    syntax: az netappfiles account set -g group --account-name name --active-directories '[]' -l westus2
   parameters:
   - isRequired: true
     name: --account-name -a -n
@@ -112,12 +90,9 @@ items:
   name: az netappfiles account show
   summary: Get the specified ANF account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get an ANF account
-    syntax:
-      content: az netappfiles account show -g group --account-name name
+    syntax: az netappfiles account show -g group --account-name name
   parameters:
   - isRequired: true
     name: --account-name -a -n
@@ -131,12 +106,9 @@ items:
   name: az netappfiles account update
   summary: Set/modify the tags or the active directory details for a specified ANF account. Active directory settings are appended only - if none are present no change is made otherwise the active directory is replaced with that provided.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update the tags and active directory of an ANF account
-    syntax:
-      content: "az netappfiles account update -g group --account-name name --tags 'key[=value] key[=value]' --active-directories '[{\"username\": \"aduser\", \"password\": \"aduser\", \"smbservername\": \"SMBSERVER\", \"dns\": \"1.2.3.4\", \"domain\": \"westcentralus\"}]' -l westus2"
+    syntax: "az netappfiles account update -g group --account-name name --tags 'key[=value] key[=value]' --active-directories '[{\"username\": \"aduser\", \"password\": \"aduser\", \"smbservername\": \"SMBSERVER\", \"dns\": \"1.2.3.4\", \"domain\": \"westcentralus\"}]' -l westus2"
   parameters:
   - isRequired: true
     name: --account-name -a -n
@@ -169,24 +141,12 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_netappfiles-preview_az_netappfiles_account_create
-  name: az netappfiles account create
-  summary: Create a new Azure NetApp Files (ANF) account. Note that active directory can only be applied to an existing account (using set/update).
-- uid: ext_netappfiles-preview_az_netappfiles_account_delete
-  name: az netappfiles account delete
-  summary: Delete the specified ANF account.
-- uid: ext_netappfiles-preview_az_netappfiles_account_list
-  name: az netappfiles account list
-  summary: List ANF accounts.
-- uid: ext_netappfiles-preview_az_netappfiles_account_set
-  name: az netappfiles account set
-  summary: Sets the tags or the active directory details for a specified ANF account. Sets the active directory property to exactly what is provided. If none is provided then the active directory is removed, i.e. provide empty [].
-- uid: ext_netappfiles-preview_az_netappfiles_account_show
-  name: az netappfiles account show
-  summary: Get the specified ANF account.
-- uid: ext_netappfiles-preview_az_netappfiles_account_update
-  name: az netappfiles account update
-  summary: Set/modify the tags or the active directory details for a specified ANF account. Active directory settings are appended only - if none are present no change is made otherwise the active directory is replaced with that provided.
+- ext_netappfiles-preview_az_netappfiles_account_create
+- ext_netappfiles-preview_az_netappfiles_account_delete
+- ext_netappfiles-preview_az_netappfiles_account_list
+- ext_netappfiles-preview_az_netappfiles_account_set
+- ext_netappfiles-preview_az_netappfiles_account_show
+- ext_netappfiles-preview_az_netappfiles_account_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -202,4 +162,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Azure NetApp Files (ANF) Account Resources.
+metadata:
+  description: Manage Azure NetApp Files (ANF) Account Resources.

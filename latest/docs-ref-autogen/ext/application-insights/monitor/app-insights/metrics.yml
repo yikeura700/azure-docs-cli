@@ -1,24 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_application-insights_az_monitor_app_insights_metrics
-  name: az monitor app-insights metrics
-  summary: Retrieve metrics from an application.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_application-insights_az_monitor_app_insights_metrics_get_metadata
-  - ext_application-insights_az_monitor_app_insights_metrics_show
+### YamlMime:CLIGroup
+uid: ext_application-insights_az_monitor_app_insights_metrics
+name: az monitor app-insights metrics
+summary: Retrieve metrics from an application.
+description: ''
+directCommands:
 - uid: ext_application-insights_az_monitor_app_insights_metrics_get_metadata
   name: az monitor app-insights metrics get-metadata
   summary: Get the metadata for metrics on a particular application.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Views the metadata for the provided app.
-    syntax:
-      content: az monitor app-insights metrics get-metadata --app e292531c-eb03-4079-9bb0-fe6b56b99f8b
+    syntax: az monitor app-insights metrics get-metadata --app e292531c-eb03-4079-9bb0-fe6b56b99f8b
   parameters:
   - isRequired: true
     name: --app -a
@@ -31,12 +23,9 @@ items:
   name: az monitor app-insights metrics show
   summary: View the value of a single metric.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: View the count of availabilityResults events.
-    syntax:
-      content: az monitor app-insights metrics show --app e292531c-eb03-4079-9bb0-fe6b56b99f8b --metric availabilityResults/count
+    syntax: az monitor app-insights metrics show --app e292531c-eb03-4079-9bb0-fe6b56b99f8b --metric availabilityResults/count
   parameters:
   - isRequired: true
     name: --app -a
@@ -78,12 +67,8 @@ items:
     summary: 'The interval over which to aggregate metrics, in ##h##m format.'
     description: ''
 commands:
-- uid: ext_application-insights_az_monitor_app_insights_metrics_get_metadata
-  name: az monitor app-insights metrics get-metadata
-  summary: Get the metadata for metrics on a particular application.
-- uid: ext_application-insights_az_monitor_app_insights_metrics_show
-  name: az monitor app-insights metrics show
-  summary: View the value of a single metric.
+- ext_application-insights_az_monitor_app_insights_metrics_get_metadata
+- ext_application-insights_az_monitor_app_insights_metrics_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -99,4 +84,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Retrieve metrics from an application.
+metadata:
+  description: Retrieve metrics from an application.

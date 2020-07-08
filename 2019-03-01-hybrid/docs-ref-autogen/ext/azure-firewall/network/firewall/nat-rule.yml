@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-firewall_az_network_firewall_nat_rule
-  name: az network firewall nat-rule
-  summary: Manage and configure Azure Firewall NAT rules.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-firewall_az_network_firewall_nat_rule_create
-  - ext_azure-firewall_az_network_firewall_nat_rule_delete
-  - ext_azure-firewall_az_network_firewall_nat_rule_list
-  - ext_azure-firewall_az_network_firewall_nat_rule_show
+### YamlMime:CLIGroup
+uid: ext_azure-firewall_az_network_firewall_nat_rule
+name: az network firewall nat-rule
+summary: Manage and configure Azure Firewall NAT rules.
+description: ''
+directCommands:
 - uid: ext_azure-firewall_az_network_firewall_nat_rule_create
   name: az network firewall nat-rule create
   summary: Create an Azure Firewall NAT rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --destination-addresses
@@ -77,8 +68,6 @@ items:
   name: az network firewall nat-rule delete
   summary: Delete an Azure Firewall NAT rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -100,8 +89,6 @@ items:
   name: az network firewall nat-rule list
   summary: List Azure Firewall NAT rules.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -119,8 +106,6 @@ items:
   name: az network firewall nat-rule show
   summary: Get the details of an Azure Firewall NAT rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -139,30 +124,14 @@ items:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
     description: ''
 commands:
-- uid: ext_azure-firewall_az_network_firewall_nat_rule_collection
-  name: az network firewall nat-rule collection
-  summary: Manage and configure Azure Firewall NAT rules.
-- uid: ext_azure-firewall_az_network_firewall_nat_rule_collection_delete
-  name: az network firewall nat-rule collection delete
-  summary: Delete an Azure Firewall NAT rule collection.
-- uid: ext_azure-firewall_az_network_firewall_nat_rule_collection_list
-  name: az network firewall nat-rule collection list
-  summary: List Azure Firewall NAT rule collections.
-- uid: ext_azure-firewall_az_network_firewall_nat_rule_collection_show
-  name: az network firewall nat-rule collection show
-  summary: Get the details of an Azure Firewall NAT rule collection.
-- uid: ext_azure-firewall_az_network_firewall_nat_rule_create
-  name: az network firewall nat-rule create
-  summary: Create an Azure Firewall NAT rule.
-- uid: ext_azure-firewall_az_network_firewall_nat_rule_delete
-  name: az network firewall nat-rule delete
-  summary: Delete an Azure Firewall NAT rule.
-- uid: ext_azure-firewall_az_network_firewall_nat_rule_list
-  name: az network firewall nat-rule list
-  summary: List Azure Firewall NAT rules.
-- uid: ext_azure-firewall_az_network_firewall_nat_rule_show
-  name: az network firewall nat-rule show
-  summary: Get the details of an Azure Firewall NAT rule.
+- ext_azure-firewall_az_network_firewall_nat_rule_collection
+- ext_azure-firewall_az_network_firewall_nat_rule_collection_delete
+- ext_azure-firewall_az_network_firewall_nat_rule_collection_list
+- ext_azure-firewall_az_network_firewall_nat_rule_collection_show
+- ext_azure-firewall_az_network_firewall_nat_rule_create
+- ext_azure-firewall_az_network_firewall_nat_rule_delete
+- ext_azure-firewall_az_network_firewall_nat_rule_list
+- ext_azure-firewall_az_network_firewall_nat_rule_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -178,4 +147,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage and configure Azure Firewall NAT rules.
+metadata:
+  description: Manage and configure Azure Firewall NAT rules.

@@ -1,28 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_kusto_az_kusto_database_principal_assignment
-  name: az kusto database-principal-assignment
-  summary: Kusto database-principal-assignment.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_kusto_az_kusto_database_principal_assignment_create
-  - ext_kusto_az_kusto_database_principal_assignment_delete
-  - ext_kusto_az_kusto_database_principal_assignment_list
-  - ext_kusto_az_kusto_database_principal_assignment_show
-  - ext_kusto_az_kusto_database_principal_assignment_update
-  - ext_kusto_az_kusto_database_principal_assignment_wait
+### YamlMime:CLIGroup
+uid: ext_kusto_az_kusto_database_principal_assignment
+name: az kusto database-principal-assignment
+summary: Kusto database-principal-assignment.
+description: ''
+directCommands:
 - uid: ext_kusto_az_kusto_database_principal_assignment_create
   name: az kusto database-principal-assignment create
   summary: Creates a Kusto cluster database principalAssignment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDatabasePrincipalAssignmentsCreateOrUpdate
-    syntax:
-      content: az kusto database-principal-assignment create --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --principal-id "87654321-1234-1234-1234-123456789123" --principal-type "App" --role "Admin" --tenant-id "12345678-1234-1234-1234-123456789123" --principal-assignment-name "kustoprincipal1" --resource-group "kustorptest"
+    syntax: az kusto database-principal-assignment create --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --principal-id "87654321-1234-1234-1234-123456789123" --principal-type "App" --role "Admin" --tenant-id "12345678-1234-1234-1234-123456789123" --principal-assignment-name "kustoprincipal1" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -61,12 +49,9 @@ items:
   name: az kusto database-principal-assignment delete
   summary: Deletes a Kusto principalAssignment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDatabasePrincipalAssignmentsDelete
-    syntax:
-      content: az kusto database-principal-assignment delete --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --principal-assignment-name "kustoprincipal1" --resource-group "kustorptest"
+    syntax: az kusto database-principal-assignment delete --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --principal-assignment-name "kustoprincipal1" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -91,12 +76,9 @@ items:
   name: az kusto database-principal-assignment list
   summary: Lists all Kusto cluster database principalAssignments.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoPrincipalAssignmentsList
-    syntax:
-      content: az kusto database-principal-assignment list --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --resource-group "kustorptest"
+    syntax: az kusto database-principal-assignment list --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -114,12 +96,9 @@ items:
   name: az kusto database-principal-assignment show
   summary: Gets a Kusto cluster database principalAssignment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDatabasePrincipalAssignmentsGet
-    syntax:
-      content: az kusto database-principal-assignment show --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --principal-assignment-name "kustoprincipal1" --resource-group "kustorptest"
+    syntax: az kusto database-principal-assignment show --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --principal-assignment-name "kustoprincipal1" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -141,12 +120,9 @@ items:
   name: az kusto database-principal-assignment update
   summary: Creates a Kusto cluster database principalAssignment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDatabasePrincipalAssignmentsCreateOrUpdate
-    syntax:
-      content: az kusto database-principal-assignment update --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --principal-id "87654321-1234-1234-1234-123456789123" --principal-type "App" --role "Admin" --tenant-id "12345678-1234-1234-1234-123456789123" --principal-assignment-name "kustoprincipal1" --resource-group "kustorptest"
+    syntax: az kusto database-principal-assignment update --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --principal-id "87654321-1234-1234-1234-123456789123" --principal-type "App" --role "Admin" --tenant-id "12345678-1234-1234-1234-123456789123" --principal-assignment-name "kustoprincipal1" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -185,8 +161,6 @@ items:
   name: az kusto database-principal-assignment wait
   summary: Wait for a managed Kusto cluster to reach a desired state.
   description: If an operation on a cluster was interrupted or was started with `--no-wait`, use this command to wait for it to complete.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -228,24 +202,12 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_kusto_az_kusto_database_principal_assignment_create
-  name: az kusto database-principal-assignment create
-  summary: Creates a Kusto cluster database principalAssignment.
-- uid: ext_kusto_az_kusto_database_principal_assignment_delete
-  name: az kusto database-principal-assignment delete
-  summary: Deletes a Kusto principalAssignment.
-- uid: ext_kusto_az_kusto_database_principal_assignment_list
-  name: az kusto database-principal-assignment list
-  summary: Lists all Kusto cluster database principalAssignments.
-- uid: ext_kusto_az_kusto_database_principal_assignment_show
-  name: az kusto database-principal-assignment show
-  summary: Gets a Kusto cluster database principalAssignment.
-- uid: ext_kusto_az_kusto_database_principal_assignment_update
-  name: az kusto database-principal-assignment update
-  summary: Creates a Kusto cluster database principalAssignment.
-- uid: ext_kusto_az_kusto_database_principal_assignment_wait
-  name: az kusto database-principal-assignment wait
-  summary: Wait for a managed Kusto cluster to reach a desired state.
+- ext_kusto_az_kusto_database_principal_assignment_create
+- ext_kusto_az_kusto_database_principal_assignment_delete
+- ext_kusto_az_kusto_database_principal_assignment_list
+- ext_kusto_az_kusto_database_principal_assignment_show
+- ext_kusto_az_kusto_database_principal_assignment_update
+- ext_kusto_az_kusto_database_principal_assignment_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -261,4 +223,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Kusto database-principal-assignment.
+metadata:
+  description: Kusto database-principal-assignment.

@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_repos_policy_merge_strategy
-  name: az repos policy merge-strategy
-  summary: Manage merge strategy policy.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_repos_policy_merge_strategy_create
-  - ext_azure-devops_az_repos_policy_merge_strategy_update
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_repos_policy_merge_strategy
+name: az repos policy merge-strategy
+summary: Manage merge strategy policy.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_repos_policy_merge_strategy_create
   name: az repos policy merge-strategy create
   summary: Create merge strategy policy.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --blocking
@@ -73,8 +66,6 @@ items:
   name: az repos policy merge-strategy update
   summary: Update merge strategy policy.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id --policy-id
@@ -129,12 +120,8 @@ items:
     summary: Whether to squash merge always. This option does not work for allowing other merge types.
     description: ''
 commands:
-- uid: ext_azure-devops_az_repos_policy_merge_strategy_create
-  name: az repos policy merge-strategy create
-  summary: Create merge strategy policy.
-- uid: ext_azure-devops_az_repos_policy_merge_strategy_update
-  name: az repos policy merge-strategy update
-  summary: Update merge strategy policy.
+- ext_azure-devops_az_repos_policy_merge_strategy_create
+- ext_azure-devops_az_repos_policy_merge_strategy_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -150,4 +137,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage merge strategy policy.
+metadata:
+  description: Manage merge strategy policy.

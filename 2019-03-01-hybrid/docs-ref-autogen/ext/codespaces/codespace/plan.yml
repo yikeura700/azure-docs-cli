@@ -1,41 +1,26 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_codespaces_az_codespace_plan
-  name: az codespace plan
-  summary: Manage Codespace plans.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_codespaces_az_codespace_plan_create
-  - ext_codespaces_az_codespace_plan_delete
-  - ext_codespaces_az_codespace_plan_list
-  - ext_codespaces_az_codespace_plan_show
+### YamlMime:CLIGroup
+uid: ext_codespaces_az_codespace_plan
+name: az codespace plan
+summary: Manage Codespace plans.
+description: ''
+directCommands:
 - uid: ext_codespaces_az_codespace_plan_create
   name: az codespace plan create
   summary: Create a Codespace plan.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a plan in same region as resource group
-    syntax:
-      content: az codespace plan create -g my-rg -n my-plan
+    syntax: az codespace plan create -g my-rg -n my-plan
   - summary: Create a plan in a specific region
-    syntax:
-      content: az codespace plan create -g my-rg -n my-plan -l westus2
+    syntax: az codespace plan create -g my-rg -n my-plan -l westus2
   - summary: Create a plan with tags
-    syntax:
-      content: az codespace plan create -g my-rg -n my-plan --tags tagname=tagvalue
+    syntax: az codespace plan create -g my-rg -n my-plan --tags tagname=tagvalue
   - summary: Create a plan with a default instance type
-    syntax:
-      content: az codespace plan create -g my-rg -n my-plan --default-instance-type premiumLinux
+    syntax: az codespace plan create -g my-rg -n my-plan --default-instance-type premiumLinux
   - summary: Create a plan with a default suspend after
-    syntax:
-      content: az codespace plan create -g my-rg -n my-plan --default-suspend-after 120
+    syntax: az codespace plan create -g my-rg -n my-plan --default-suspend-after 120
   - summary: Create a plan associated with a subnet
-    syntax:
-      content: az codespace plan create -g my-rg -n my-plan --subnet /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.Network/virtualNetworks/my-vnet/subnets/default
+    syntax: az codespace plan create -g my-rg -n my-plan --subnet /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.Network/virtualNetworks/my-vnet/subnets/default
   parameters:
   - isRequired: true
     name: --name -n
@@ -65,12 +50,9 @@ items:
   name: az codespace plan delete
   summary: Delete a Codespace plan.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a plan
-    syntax:
-      content: az codespace plan delete -g my-rg -n my-plan
+    syntax: az codespace plan delete -g my-rg -n my-plan
   parameters:
   - isRequired: true
     name: --name -n
@@ -87,15 +69,11 @@ items:
   name: az codespace plan list
   summary: List Codespace plans.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List plans
-    syntax:
-      content: az codespace plan list
+    syntax: az codespace plan list
   - summary: List plans in a given resource group
-    syntax:
-      content: az codespace plan list -g my-rg
+    syntax: az codespace plan list -g my-rg
   parameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
@@ -104,12 +82,9 @@ items:
   name: az codespace plan show
   summary: Show details of a Codespace plan.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show details of a plan
-    syntax:
-      content: az codespace plan show -g my-rg -n my-plan
+    syntax: az codespace plan show -g my-rg -n my-plan
   parameters:
   - isRequired: true
     name: --name -n
@@ -120,18 +95,10 @@ items:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
     description: ''
 commands:
-- uid: ext_codespaces_az_codespace_plan_create
-  name: az codespace plan create
-  summary: Create a Codespace plan.
-- uid: ext_codespaces_az_codespace_plan_delete
-  name: az codespace plan delete
-  summary: Delete a Codespace plan.
-- uid: ext_codespaces_az_codespace_plan_list
-  name: az codespace plan list
-  summary: List Codespace plans.
-- uid: ext_codespaces_az_codespace_plan_show
-  name: az codespace plan show
-  summary: Show details of a Codespace plan.
+- ext_codespaces_az_codespace_plan_create
+- ext_codespaces_az_codespace_plan_delete
+- ext_codespaces_az_codespace_plan_list
+- ext_codespaces_az_codespace_plan_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -147,4 +114,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Codespace plans.
+metadata:
+  description: Manage Codespace plans.

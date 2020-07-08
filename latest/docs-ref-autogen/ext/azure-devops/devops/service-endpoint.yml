@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_devops_service_endpoint
-  name: az devops service-endpoint
-  summary: Manage service endpoints/connections.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_devops_service_endpoint_create
-  - ext_azure-devops_az_devops_service_endpoint_delete
-  - ext_azure-devops_az_devops_service_endpoint_list
-  - ext_azure-devops_az_devops_service_endpoint_show
-  - ext_azure-devops_az_devops_service_endpoint_update
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_devops_service_endpoint
+name: az devops service-endpoint
+summary: Manage service endpoints/connections.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_devops_service_endpoint_create
   name: az devops service-endpoint create
   summary: Create a service endpoint using configuration file.
   description: You can learn more about this at <a href="https://aka.ms/azure-devops-service-endpoint-config">https://aka.ms/azure-devops-service-endpoint-config</a>.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --service-endpoint-configuration
@@ -42,8 +32,6 @@ items:
   name: az devops service-endpoint delete
   summary: Deletes service endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -69,8 +57,6 @@ items:
   name: az devops service-endpoint list
   summary: List service endpoints in a project.
   description: rtypelist of VssJsonCollectionWrapper.
-  langs:
-  - azurecli
   parameters:
   - name: --detect
     parameterValueGroup: false, true
@@ -86,8 +72,6 @@ items:
   name: az devops service-endpoint show
   summary: Get the details of a service endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -107,8 +91,6 @@ items:
   name: az devops service-endpoint update
   summary: Update a service endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -129,33 +111,15 @@ items:
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
 commands:
-- uid: ext_azure-devops_az_devops_service_endpoint_azurerm
-  name: az devops service-endpoint azurerm
-  summary: Manage Azure RM service endpoints/connections.
-- uid: ext_azure-devops_az_devops_service_endpoint_azurerm_create
-  name: az devops service-endpoint azurerm create
-  summary: Create an Azure RM type service endpoint.
-- uid: ext_azure-devops_az_devops_service_endpoint_create
-  name: az devops service-endpoint create
-  summary: Create a service endpoint using configuration file.
-- uid: ext_azure-devops_az_devops_service_endpoint_delete
-  name: az devops service-endpoint delete
-  summary: Deletes service endpoint.
-- uid: ext_azure-devops_az_devops_service_endpoint_github
-  name: az devops service-endpoint github
-  summary: Manage GitHub service endpoints/connections.
-- uid: ext_azure-devops_az_devops_service_endpoint_github_create
-  name: az devops service-endpoint github create
-  summary: Create a GitHub service endpoint.
-- uid: ext_azure-devops_az_devops_service_endpoint_list
-  name: az devops service-endpoint list
-  summary: List service endpoints in a project.
-- uid: ext_azure-devops_az_devops_service_endpoint_show
-  name: az devops service-endpoint show
-  summary: Get the details of a service endpoint.
-- uid: ext_azure-devops_az_devops_service_endpoint_update
-  name: az devops service-endpoint update
-  summary: Update a service endpoint.
+- ext_azure-devops_az_devops_service_endpoint_azurerm
+- ext_azure-devops_az_devops_service_endpoint_azurerm_create
+- ext_azure-devops_az_devops_service_endpoint_create
+- ext_azure-devops_az_devops_service_endpoint_delete
+- ext_azure-devops_az_devops_service_endpoint_github
+- ext_azure-devops_az_devops_service_endpoint_github_create
+- ext_azure-devops_az_devops_service_endpoint_list
+- ext_azure-devops_az_devops_service_endpoint_show
+- ext_azure-devops_az_devops_service_endpoint_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -171,4 +135,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage service endpoints/connections.
+metadata:
+  description: Manage service endpoints/connections.

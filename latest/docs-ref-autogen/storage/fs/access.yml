@@ -1,33 +1,22 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_storage_fs_access
-  name: az storage fs access
-  summary: Manage file system access and permissions for Azure Data Lake Storage Gen2 account.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_storage_fs_access_set
-  - az_storage_fs_access_show
+### YamlMime:CLIGroup
+uid: az_storage_fs_access
+name: az storage fs access
+summary: Manage file system access and permissions for Azure Data Lake Storage Gen2 account.
+description: ''
+directCommands:
 - uid: az_storage_fs_access_set
   name: az storage fs access set
   summary: Set the access control properties of a path(directory or file) in Azure Data Lake Storage Gen2 account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Set the access control list of a path.
-    syntax:
-      content: az storage fs access set --acl "user::rwx,group::r--,other::---" -p dir -f myfilesystem --account-name mystorageaccount --account-key 0000-0000
+    syntax: az storage fs access set --acl "user::rwx,group::r--,other::---" -p dir -f myfilesystem --account-name mystorageaccount --account-key 0000-0000
   - summary: Set permissions of a path.
-    syntax:
-      content: az storage fs access set --permissions "rwxrwx---" -p dir -f myfilesystem --account-name mystorageaccount --account-key 0000-0000
+    syntax: az storage fs access set --permissions "rwxrwx---" -p dir -f myfilesystem --account-name mystorageaccount --account-key 0000-0000
   - summary: Set owner of a path.
-    syntax:
-      content: az storage fs access set --owner example@microsoft.com -p dir -f myfilesystem --account-name mystorageaccount --account-key 0000-0000
+    syntax: az storage fs access set --owner example@microsoft.com -p dir -f myfilesystem --account-name mystorageaccount --account-key 0000-0000
   - summary: Set owning group of a path.
-    syntax:
-      content: az storage fs access set --group 68390a19-a897-236b-b453-488abf67b4dc -p dir -f myfilesystem --account-name mystorageaccount --account-key 0000-0000
+    syntax: az storage fs access set --group 68390a19-a897-236b-b453-488abf67b4dc -p dir -f myfilesystem --account-name mystorageaccount --account-key 0000-0000
   parameters:
   - isRequired: true
     name: --file-system -f
@@ -74,12 +63,9 @@ items:
   name: az storage fs access show
   summary: Show the access control properties of a path (directory or file) in Azure Data Lake Storage Gen2 account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show the access control properties of a path.
-    syntax:
-      content: az storage fs access show -p dir -f myfilesystem --account-name myadlsaccount --account-key 0000-0000
+    syntax: az storage fs access show -p dir -f myfilesystem --account-name myadlsaccount --account-key 0000-0000
   parameters:
   - isRequired: true
     name: --file-system -f
@@ -111,12 +97,8 @@ items:
       path: src/azure-cli/azure/cli/command_modules/storage/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_storage_fs_access_set
-  name: az storage fs access set
-  summary: Set the access control properties of a path(directory or file) in Azure Data Lake Storage Gen2 account.
-- uid: az_storage_fs_access_show
-  name: az storage fs access show
-  summary: Show the access control properties of a path (directory or file) in Azure Data Lake Storage Gen2 account.
+- az_storage_fs_access_set
+- az_storage_fs_access_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -132,10 +114,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
-updated_at: 6/4/2020 1:53:34 PM
-ms.date: 06/04/2020
-description: Manage file system access and permissions for Azure Data Lake Storage Gen2 account.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  updated_at: 6/4/2020 1:53:34 PM
+  ms.date: 06/04/2020
+  description: Manage file system access and permissions for Azure Data Lake Storage Gen2 account.

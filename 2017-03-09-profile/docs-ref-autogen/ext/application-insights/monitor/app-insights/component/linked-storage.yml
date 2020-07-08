@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_application-insights_az_monitor_app_insights_component_linked_storage
-  name: az monitor app-insights component linked-storage
-  summary: Manage linked storage account for an Application Insights component.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_application-insights_az_monitor_app_insights_component_linked_storage_link
-  - ext_application-insights_az_monitor_app_insights_component_linked_storage_show
-  - ext_application-insights_az_monitor_app_insights_component_linked_storage_unlink
-  - ext_application-insights_az_monitor_app_insights_component_linked_storage_update
+### YamlMime:CLIGroup
+uid: ext_application-insights_az_monitor_app_insights_component_linked_storage
+name: az monitor app-insights component linked-storage
+summary: Manage linked storage account for an Application Insights component.
+description: ''
+directCommands:
 - uid: ext_application-insights_az_monitor_app_insights_component_linked_storage_link
   name: az monitor app-insights component linked-storage link
   summary: Link a storage account with an Application Insights component.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --app -a
@@ -34,8 +25,6 @@ items:
   name: az monitor app-insights component linked-storage show
   summary: Show the details of linked storage account for an Application Insights component.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --app -a
@@ -49,8 +38,6 @@ items:
   name: az monitor app-insights component linked-storage unlink
   summary: Unlink a storage account with an Application Insights component.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --app -a
@@ -64,8 +51,6 @@ items:
   name: az monitor app-insights component linked-storage update
   summary: Update the linked storage account for an Application Insights component.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --app -a
@@ -80,18 +65,10 @@ items:
     summary: Name or ID of a linked storage account.
     description: ''
 commands:
-- uid: ext_application-insights_az_monitor_app_insights_component_linked_storage_link
-  name: az monitor app-insights component linked-storage link
-  summary: Link a storage account with an Application Insights component.
-- uid: ext_application-insights_az_monitor_app_insights_component_linked_storage_show
-  name: az monitor app-insights component linked-storage show
-  summary: Show the details of linked storage account for an Application Insights component.
-- uid: ext_application-insights_az_monitor_app_insights_component_linked_storage_unlink
-  name: az monitor app-insights component linked-storage unlink
-  summary: Unlink a storage account with an Application Insights component.
-- uid: ext_application-insights_az_monitor_app_insights_component_linked_storage_update
-  name: az monitor app-insights component linked-storage update
-  summary: Update the linked storage account for an Application Insights component.
+- ext_application-insights_az_monitor_app_insights_component_linked_storage_link
+- ext_application-insights_az_monitor_app_insights_component_linked_storage_show
+- ext_application-insights_az_monitor_app_insights_component_linked_storage_unlink
+- ext_application-insights_az_monitor_app_insights_component_linked_storage_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -107,4 +84,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage linked storage account for an Application Insights component.
+metadata:
+  description: Manage linked storage account for an Application Insights component.

@@ -1,30 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_deployment
-  name: az deployment
-  summary: Manage Azure Resource Manager template deployment at subscription scope.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_deployment_cancel
-  - az_deployment_create
-  - az_deployment_delete
-  - az_deployment_export
-  - az_deployment_list
-  - az_deployment_show
-  - az_deployment_validate
-  - az_deployment_wait
+### YamlMime:CLIGroup
+uid: az_deployment
+name: az deployment
+summary: Manage Azure Resource Manager template deployment at subscription scope.
+description: ''
+directCommands:
 - uid: az_deployment_cancel
   name: az deployment cancel
   summary: Cancel a deployment at subscription scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Cancel a deployment at subscription scope.
-    syntax:
-      content: az deployment cancel -n deployment01
+    syntax: az deployment cancel -n deployment01
   parameters:
   - isRequired: true
     name: --name -n
@@ -43,22 +29,17 @@ items:
   name: az deployment create
   summary: Start a deployment at subscription scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a deployment at subscription scope from a remote template file, using parameters from a local JSON file.
-    syntax:
-      content: az deployment create --location WestUS --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json
+    syntax: az deployment create --location WestUS --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json
   - summary: Create a deployment at subscription scope from a local template file, using parameters from a JSON string.
-    syntax:
-      content: >-
-        az deployment create --location WestUS --template-file azuredeploy.json  \
-            --parameters "{ \"policyName\": { \"value\": \"policy2\" }}"
+    syntax: >-
+      az deployment create --location WestUS --template-file azuredeploy.json  \
+          --parameters "{ \"policyName\": { \"value\": \"policy2\" }}"
   - summary: Create a deployment at subscription scope from a local template, using a parameter file, a remote parameter file, and selectively overriding key/value pairs.
-    syntax:
-      content: >-
-        az deployment create --location WestUS --template-file azuredeploy.json  \
-            --parameters @params.json --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
+    syntax: >-
+      az deployment create --location WestUS --template-file azuredeploy.json  \
+          --parameters @params.json --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
   parameters:
   - isRequired: true
     name: --location -l
@@ -99,12 +80,9 @@ items:
   name: az deployment delete
   summary: Delete a deployment at subscription scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a deployment at subscription scope.
-    syntax:
-      content: az deployment delete -n deployment01
+    syntax: az deployment delete -n deployment01
   parameters:
   - isRequired: true
     name: --name -n
@@ -126,12 +104,9 @@ items:
   name: az deployment export
   summary: Export the template used for a deployment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Export the template used for a deployment at subscription scope.
-    syntax:
-      content: az deployment export --name MyDeployment
+    syntax: az deployment export --name MyDeployment
   parameters:
   - isRequired: true
     name: --name -n
@@ -150,12 +125,9 @@ items:
   name: az deployment list
   summary: List deployments at subscription scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List deployments at subscription scope.
-    syntax:
-      content: az deployment list
+    syntax: az deployment list
   parameters:
   - name: --filter
     summary: Filter expression using OData notation. You can use --filter "provisioningState eq '{state}'" to filter provisioningState. To get more information, please visit <a href="https://docs.microsoft.com/en-us/rest/api/resources/deployments/listatsubscriptionscope#uri-parameters">https://docs.microsoft.com/en-us/rest/api/resources/deployments/listatsubscriptionscope#uri-parameters</a>.
@@ -173,12 +145,9 @@ items:
   name: az deployment show
   summary: Show a deployment at subscription scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a deployment at subscription scope.
-    syntax:
-      content: az deployment show -n deployment01
+    syntax: az deployment show -n deployment01
   parameters:
   - isRequired: true
     name: --name -n
@@ -197,12 +166,9 @@ items:
   name: az deployment validate
   summary: Validate whether a template is valid at subscription scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Validate whether a template is valid at subscription scope.
-    syntax:
-      content: az deployment validate --location westus2 --parameters MyValue=This MyArray=@array.json --template-file azuredeploy.json
+    syntax: az deployment validate --location westus2 --parameters MyValue=This MyArray=@array.json --template-file azuredeploy.json
   parameters:
   - isRequired: true
     name: --location -l
@@ -240,12 +206,9 @@ items:
   name: az deployment wait
   summary: Place the CLI in a waiting state until a deployment condition is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Place the CLI in a waiting state until a deployment condition is met. (autogenerated)
-    syntax:
-      content: az deployment wait --deleted --name MyDeployment --subscription MySubscription
+    syntax: az deployment wait --deleted --name MyDeployment --subscription MySubscription
   parameters:
   - isRequired: true
     name: --name -n
@@ -284,111 +247,41 @@ items:
       path: src/azure-cli/azure/cli/command_modules/resource/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_deployment_cancel
-  name: az deployment cancel
-  summary: Cancel a deployment at subscription scope.
-- uid: az_deployment_create
-  name: az deployment create
-  summary: Start a deployment at subscription scope.
-- uid: az_deployment_delete
-  name: az deployment delete
-  summary: Delete a deployment at subscription scope.
-- uid: az_deployment_export
-  name: az deployment export
-  summary: Export the template used for a deployment.
-- uid: az_deployment_group
-  name: az deployment group
-  summary: Manage Azure Resource Manager template deployment at resource group.
-- uid: az_deployment_group_cancel
-  name: az deployment group cancel
-  summary: Cancel a deployment at resource group.
-- uid: az_deployment_group_create
-  name: az deployment group create
-  summary: Start a deployment at resource group.
-- uid: az_deployment_group_delete
-  name: az deployment group delete
-  summary: Delete a deployment at resource group.
-- uid: az_deployment_group_export
-  name: az deployment group export
-  summary: Export the template used for a deployment.
-- uid: az_deployment_group_list
-  name: az deployment group list
-  summary: List deployments at resource group.
-- uid: az_deployment_group_show
-  name: az deployment group show
-  summary: Show a deployment at resource group.
-- uid: az_deployment_group_validate
-  name: az deployment group validate
-  summary: Validate whether a template is valid at resource group.
-- uid: az_deployment_group_wait
-  name: az deployment group wait
-  summary: Place the CLI in a waiting state until a deployment condition is met.
-- uid: az_deployment_list
-  name: az deployment list
-  summary: List deployments at subscription scope.
-- uid: az_deployment_operation
-  name: az deployment operation
-  summary: Manage deployment operations at subscription scope.
-- uid: az_deployment_operation_group
-  name: az deployment operation group
-  summary: Manage deployment operations at resource group.
-- uid: az_deployment_operation_group_list
-  name: az deployment operation group list
-  summary: List deployment operations at resource group.
-- uid: az_deployment_operation_group_show
-  name: az deployment operation group show
-  summary: Show a deployment operation at resource group.
-- uid: az_deployment_operation_list
-  name: az deployment operation list
-  summary: List deployment operations at subscription scope.
-- uid: az_deployment_operation_show
-  name: az deployment operation show
-  summary: Show a deployment operation at subscription scope.
-- uid: az_deployment_operation_sub
-  name: az deployment operation sub
-  summary: Manage deployment operations at subscription scope.
-- uid: az_deployment_operation_sub_list
-  name: az deployment operation sub list
-  summary: List deployment operations at subscription scope.
-- uid: az_deployment_operation_sub_show
-  name: az deployment operation sub show
-  summary: Show a deployment operation at subscription scope.
-- uid: az_deployment_show
-  name: az deployment show
-  summary: Show a deployment at subscription scope.
-- uid: az_deployment_sub
-  name: az deployment sub
-  summary: Manage Azure Resource Manager template deployment at subscription scope.
-- uid: az_deployment_sub_cancel
-  name: az deployment sub cancel
-  summary: Cancel a deployment at subscription scope.
-- uid: az_deployment_sub_create
-  name: az deployment sub create
-  summary: Start a deployment at subscription scope.
-- uid: az_deployment_sub_delete
-  name: az deployment sub delete
-  summary: Delete a deployment at subscription scope.
-- uid: az_deployment_sub_export
-  name: az deployment sub export
-  summary: Export the template used for a deployment.
-- uid: az_deployment_sub_list
-  name: az deployment sub list
-  summary: List deployments at subscription scope.
-- uid: az_deployment_sub_show
-  name: az deployment sub show
-  summary: Show a deployment at subscription scope.
-- uid: az_deployment_sub_validate
-  name: az deployment sub validate
-  summary: Validate whether a template is valid at subscription scope.
-- uid: az_deployment_sub_wait
-  name: az deployment sub wait
-  summary: Place the CLI in a waiting state until a deployment condition is met.
-- uid: az_deployment_validate
-  name: az deployment validate
-  summary: Validate whether a template is valid at subscription scope.
-- uid: az_deployment_wait
-  name: az deployment wait
-  summary: Place the CLI in a waiting state until a deployment condition is met.
+- az_deployment_cancel
+- az_deployment_create
+- az_deployment_delete
+- az_deployment_export
+- az_deployment_group
+- az_deployment_group_cancel
+- az_deployment_group_create
+- az_deployment_group_delete
+- az_deployment_group_export
+- az_deployment_group_list
+- az_deployment_group_show
+- az_deployment_group_validate
+- az_deployment_group_wait
+- az_deployment_list
+- az_deployment_operation
+- az_deployment_operation_group
+- az_deployment_operation_group_list
+- az_deployment_operation_group_show
+- az_deployment_operation_list
+- az_deployment_operation_show
+- az_deployment_operation_sub
+- az_deployment_operation_sub_list
+- az_deployment_operation_sub_show
+- az_deployment_show
+- az_deployment_sub
+- az_deployment_sub_cancel
+- az_deployment_sub_create
+- az_deployment_sub_delete
+- az_deployment_sub_export
+- az_deployment_sub_list
+- az_deployment_sub_show
+- az_deployment_sub_validate
+- az_deployment_sub_wait
+- az_deployment_validate
+- az_deployment_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -404,10 +297,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
-updated_at: 6/16/2020 5:44:37 AM
-ms.date: 06/16/2020
-description: Manage Azure Resource Manager template deployment at subscription scope.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  updated_at: 6/16/2020 5:44:37 AM
+  ms.date: 06/16/2020
+  description: Manage Azure Resource Manager template deployment at subscription scope.

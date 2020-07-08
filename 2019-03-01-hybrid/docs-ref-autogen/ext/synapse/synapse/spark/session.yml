@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_synapse_az_synapse_spark_session
-  name: az synapse spark session
-  summary: Manage Synapse Spark sessions.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_synapse_az_synapse_spark_session_cancel
-  - ext_synapse_az_synapse_spark_session_create
-  - ext_synapse_az_synapse_spark_session_list
-  - ext_synapse_az_synapse_spark_session_reset_timeout
-  - ext_synapse_az_synapse_spark_session_show
+### YamlMime:CLIGroup
+uid: ext_synapse_az_synapse_spark_session
+name: az synapse spark session
+summary: Manage Synapse Spark sessions.
+description: ''
+directCommands:
 - uid: ext_synapse_az_synapse_spark_session_cancel
   name: az synapse spark session cancel
   summary: Cancel a Spark session.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Cancel a Spark session.
-    syntax:
-      content: az synapse spark session cancel  --livy-id 1 --workspace-name testsynapseworkspace --spark-pool-name testsparkpool
+    syntax: az synapse spark session cancel  --livy-id 1 --workspace-name testsynapseworkspace --spark-pool-name testsparkpool
   parameters:
   - isRequired: true
     name: --spark-pool-name
@@ -42,15 +31,12 @@ items:
   name: az synapse spark session create
   summary: Create a Spark session.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a Spark session.
-    syntax:
-      content: >-
-        az synapse spark session create --name testsession  --workspace-name testsynapseworkspace \
+    syntax: >-
+      az synapse spark session create --name testsession  --workspace-name testsynapseworkspace \
 
-        --spark-pool-name testsparkpool --executor-size Small --executors 4
+      --spark-pool-name testsparkpool --executor-size Small --executors 4
   parameters:
   - isRequired: true
     name: --executor-size
@@ -86,12 +72,9 @@ items:
   name: az synapse spark session list
   summary: List all Spark sessions.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all Spark sessions.
-    syntax:
-      content: az synapse spark session list --workspace-name testsynapseworkspace --spark-pool-name testsparkpool
+    syntax: az synapse spark session list --workspace-name testsynapseworkspace --spark-pool-name testsparkpool
   parameters:
   - isRequired: true
     name: --spark-pool-name
@@ -111,12 +94,9 @@ items:
   name: az synapse spark session reset-timeout
   summary: Reset a Spark session timeout time.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Reset a Spark session's timeout time.
-    syntax:
-      content: az synapse spark session reset-timeout --livy-id 1 --workspace-name testsynapseworkspace --spark-pool-name testsparkpool
+    syntax: az synapse spark session reset-timeout --livy-id 1 --workspace-name testsynapseworkspace --spark-pool-name testsparkpool
   parameters:
   - isRequired: true
     name: --spark-pool-name
@@ -134,12 +114,9 @@ items:
   name: az synapse spark session show
   summary: Get a Spark session.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get a Spark session.
-    syntax:
-      content: az synapse spark session show --livy-id 1 --workspace-name testsynapseworkspace --spark-pool-name testsparkpool
+    syntax: az synapse spark session show --livy-id 1 --workspace-name testsynapseworkspace --spark-pool-name testsparkpool
   parameters:
   - isRequired: true
     name: --spark-pool-name
@@ -154,21 +131,11 @@ items:
     summary: The id of the Spark session job.
     description: ''
 commands:
-- uid: ext_synapse_az_synapse_spark_session_cancel
-  name: az synapse spark session cancel
-  summary: Cancel a Spark session.
-- uid: ext_synapse_az_synapse_spark_session_create
-  name: az synapse spark session create
-  summary: Create a Spark session.
-- uid: ext_synapse_az_synapse_spark_session_list
-  name: az synapse spark session list
-  summary: List all Spark sessions.
-- uid: ext_synapse_az_synapse_spark_session_reset_timeout
-  name: az synapse spark session reset-timeout
-  summary: Reset a Spark session timeout time.
-- uid: ext_synapse_az_synapse_spark_session_show
-  name: az synapse spark session show
-  summary: Get a Spark session.
+- ext_synapse_az_synapse_spark_session_cancel
+- ext_synapse_az_synapse_spark_session_create
+- ext_synapse_az_synapse_spark_session_list
+- ext_synapse_az_synapse_spark_session_reset_timeout
+- ext_synapse_az_synapse_spark_session_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -184,4 +151,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Synapse Spark sessions.
+metadata:
+  description: Manage Synapse Spark sessions.

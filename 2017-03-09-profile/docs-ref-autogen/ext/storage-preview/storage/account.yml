@@ -1,26 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_storage-preview_az_storage_account
-  name: az storage account
-  summary: Manage storage accounts.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_storage-preview_az_storage_account_check_name
-  - ext_storage-preview_az_storage_account_create
-  - ext_storage-preview_az_storage_account_delete
-  - ext_storage-preview_az_storage_account_failover
-  - ext_storage-preview_az_storage_account_list
-  - ext_storage-preview_az_storage_account_show
-  - ext_storage-preview_az_storage_account_show_usage
-  - ext_storage-preview_az_storage_account_update
+### YamlMime:CLIGroup
+uid: ext_storage-preview_az_storage_account
+name: az storage account
+summary: Manage storage accounts.
+description: ''
+directCommands:
 - uid: ext_storage-preview_az_storage_account_check_name
   name: az storage account check-name
   summary: Checks that the storage account name is valid and is not already in use.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -30,12 +17,9 @@ items:
   name: az storage account create
   summary: Create a storage account.
   description: The SKU of the storage account defaults to 'Standard_RAGRS'.
-  langs:
-  - azurecli
   examples:
   - summary: Create a storage account 'MyStorageAccount' in resource group 'MyResourceGroup' in the West US region with locally redundant storage.
-    syntax:
-      content: az storage account create -n MyStorageAccount -g MyResourceGroup -l westus --sku Standard_LRS
+    syntax: az storage account create -n MyStorageAccount -g MyResourceGroup -l westus --sku Standard_LRS
   parameters:
   - isRequired: true
     name: --name -n
@@ -95,15 +79,11 @@ items:
   name: az storage account delete
   summary: Delete a storage account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a storage account using a resource ID.
-    syntax:
-      content: az storage account delete --ids /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Storage/storageAccounts/{StorageAccount}
+    syntax: az storage account delete --ids /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Storage/storageAccounts/{StorageAccount}
   - summary: Delete a storage account using an account name and resource group.
-    syntax:
-      content: az storage account delete -n MyStorageAccount -g MyResourceGroup
+    syntax: az storage account delete -n MyStorageAccount -g MyResourceGroup
   parameters:
   - isRequired: true
     name: --name -n
@@ -124,18 +104,14 @@ items:
     cluster will become primary after failover. For more information, please refer to
 
     <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-disaster-recovery-guidance">https://docs.microsoft.com/en-us/azure/storage/common/storage-disaster-recovery-guidance</a>.
-  langs:
-  - azurecli
   examples:
   - summary: Failover a storage account.
-    syntax:
-      content: az storage account failover -n mystorageaccount -g MyResourceGroup
+    syntax: az storage account failover -n mystorageaccount -g MyResourceGroup
   - summary: Failover a storage account without waiting for complete.
-    syntax:
-      content: >-
-        az storage account failover -n mystorageaccount -g MyResourceGroup --no-wait
+    syntax: >-
+      az storage account failover -n mystorageaccount -g MyResourceGroup --no-wait
 
-        az storage account show -n mystorageaccount --expand geoReplicationStats
+      az storage account show -n mystorageaccount --expand geoReplicationStats
   parameters:
   - isRequired: true
     name: --name -n
@@ -154,15 +130,11 @@ items:
   name: az storage account list
   summary: List storage accounts.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all storage accounts in a subscription.
-    syntax:
-      content: az storage account list
+    syntax: az storage account list
   - summary: List all storage accounts in a resource group.
-    syntax:
-      content: az storage account list -g MyResourceGroup
+    syntax: az storage account list -g MyResourceGroup
   parameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
@@ -171,15 +143,11 @@ items:
   name: az storage account show
   summary: Show storage account properties.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show properties for a storage account by resource ID.
-    syntax:
-      content: az storage account show --ids /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Storage/storageAccounts/{StorageAccount}
+    syntax: az storage account show --ids /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Storage/storageAccounts/{StorageAccount}
   - summary: Show properties for a storage account using an account name and resource group.
-    syntax:
-      content: az storage account show -g MyResourceGroup -n MyStorageAccount
+    syntax: az storage account show -g MyResourceGroup -n MyStorageAccount
   parameters:
   - isRequired: true
     name: --name -n
@@ -196,12 +164,9 @@ items:
   name: az storage account show-usage
   summary: Show the current count and limit of the storage accounts under the subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show the current count and limit of the storage accounts under the subscription. (autogenerated)
-    syntax:
-      content: az storage account show-usage --location westus2
+    syntax: az storage account show-usage --location westus2
   parameters:
   - isRequired: true
     name: --location -l
@@ -211,8 +176,6 @@ items:
   name: az storage account update
   summary: Update the properties of a storage account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -285,66 +248,26 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_storage-preview_az_storage_account_check_name
-  name: az storage account check-name
-  summary: Checks that the storage account name is valid and is not already in use.
-- uid: ext_storage-preview_az_storage_account_create
-  name: az storage account create
-  summary: Create a storage account.
-- uid: ext_storage-preview_az_storage_account_delete
-  name: az storage account delete
-  summary: Delete a storage account.
-- uid: ext_storage-preview_az_storage_account_failover
-  name: az storage account failover
-  summary: Failover request can be triggered for a storage account in case of availability issues.
-- uid: ext_storage-preview_az_storage_account_keys
-  name: az storage account keys
-  summary: Manage storage account keys.
-- uid: ext_storage-preview_az_storage_account_keys_list
-  name: az storage account keys list
-  summary: List the access keys or Kerberos keys (if active directory enabled) for a storage account.
-- uid: ext_storage-preview_az_storage_account_keys_renew
-  name: az storage account keys renew
-  summary: Regenerate one of the access keys or Kerberos keys (if active directory enabled) for a storage account.
-- uid: ext_storage-preview_az_storage_account_list
-  name: az storage account list
-  summary: List storage accounts.
-- uid: ext_storage-preview_az_storage_account_management_policy
-  name: az storage account management-policy
-  summary: Manage storage account management policies.
-- uid: ext_storage-preview_az_storage_account_management_policy_create
-  name: az storage account management-policy create
-  summary: Creates the data policy rules associated with the specified storage account.
-- uid: ext_storage-preview_az_storage_account_management_policy_delete
-  name: az storage account management-policy delete
-  summary: Deletes the data policy rules associated with the specified storage account.
-- uid: ext_storage-preview_az_storage_account_management_policy_show
-  name: az storage account management-policy show
-  summary: Gets the data policy rules associated with the specified storage account.
-- uid: ext_storage-preview_az_storage_account_management_policy_update
-  name: az storage account management-policy update
-  summary: Updates the data policy rules associated with the specified storage account.
-- uid: ext_storage-preview_az_storage_account_network_rule
-  name: az storage account network-rule
-  summary: Manage network rules.
-- uid: ext_storage-preview_az_storage_account_network_rule_add
-  name: az storage account network-rule add
-  summary: Add a network rule.
-- uid: ext_storage-preview_az_storage_account_network_rule_list
-  name: az storage account network-rule list
-  summary: List network rules.
-- uid: ext_storage-preview_az_storage_account_network_rule_remove
-  name: az storage account network-rule remove
-  summary: Remove a network rule.
-- uid: ext_storage-preview_az_storage_account_show
-  name: az storage account show
-  summary: Show storage account properties.
-- uid: ext_storage-preview_az_storage_account_show_usage
-  name: az storage account show-usage
-  summary: Show the current count and limit of the storage accounts under the subscription.
-- uid: ext_storage-preview_az_storage_account_update
-  name: az storage account update
-  summary: Update the properties of a storage account.
+- ext_storage-preview_az_storage_account_check_name
+- ext_storage-preview_az_storage_account_create
+- ext_storage-preview_az_storage_account_delete
+- ext_storage-preview_az_storage_account_failover
+- ext_storage-preview_az_storage_account_keys
+- ext_storage-preview_az_storage_account_keys_list
+- ext_storage-preview_az_storage_account_keys_renew
+- ext_storage-preview_az_storage_account_list
+- ext_storage-preview_az_storage_account_management_policy
+- ext_storage-preview_az_storage_account_management_policy_create
+- ext_storage-preview_az_storage_account_management_policy_delete
+- ext_storage-preview_az_storage_account_management_policy_show
+- ext_storage-preview_az_storage_account_management_policy_update
+- ext_storage-preview_az_storage_account_network_rule
+- ext_storage-preview_az_storage_account_network_rule_add
+- ext_storage-preview_az_storage_account_network_rule_list
+- ext_storage-preview_az_storage_account_network_rule_remove
+- ext_storage-preview_az_storage_account_show
+- ext_storage-preview_az_storage_account_show_usage
+- ext_storage-preview_az_storage_account_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -360,4 +283,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage storage accounts.
+metadata:
+  description: Manage storage accounts.

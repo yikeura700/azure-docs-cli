@@ -1,24 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_ams_streaming_locator
-  name: az ams streaming-locator
-  summary: Manage streaming locators for an Azure Media Services account.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_ams_streaming_locator_create
-  - az_ams_streaming_locator_delete
-  - az_ams_streaming_locator_get_paths
-  - az_ams_streaming_locator_list
-  - az_ams_streaming_locator_list_content_keys
-  - az_ams_streaming_locator_show
+### YamlMime:CLIGroup
+uid: az_ams_streaming_locator
+name: az ams streaming-locator
+summary: Manage streaming locators for an Azure Media Services account.
+description: ''
+directCommands:
 - uid: az_ams_streaming_locator_create
   name: az ams streaming-locator create
   summary: Create a streaming locator.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -74,8 +63,6 @@ items:
   name: az ams streaming-locator delete
   summary: Delete a Streaming Locator.
   description: Deletes a Streaming Locator in the Media Services account.
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -102,8 +89,6 @@ items:
   name: az ams streaming-locator get-paths
   summary: List paths supported by a streaming locator.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -130,8 +115,6 @@ items:
   name: az ams streaming-locator list
   summary: List all the streaming locators within an Azure Media Services account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -163,8 +146,6 @@ items:
   name: az ams streaming-locator list-content-keys
   summary: List content keys used by a streaming locator.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -191,8 +172,6 @@ items:
   name: az ams streaming-locator show
   summary: Show the details of a streaming locator.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -216,24 +195,12 @@ items:
       path: src/azure-cli/azure/cli/command_modules/ams/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_ams_streaming_locator_create
-  name: az ams streaming-locator create
-  summary: Create a streaming locator.
-- uid: az_ams_streaming_locator_delete
-  name: az ams streaming-locator delete
-  summary: Delete a Streaming Locator.
-- uid: az_ams_streaming_locator_get_paths
-  name: az ams streaming-locator get-paths
-  summary: List paths supported by a streaming locator.
-- uid: az_ams_streaming_locator_list
-  name: az ams streaming-locator list
-  summary: List all the streaming locators within an Azure Media Services account.
-- uid: az_ams_streaming_locator_list_content_keys
-  name: az ams streaming-locator list-content-keys
-  summary: List content keys used by a streaming locator.
-- uid: az_ams_streaming_locator_show
-  name: az ams streaming-locator show
-  summary: Show the details of a streaming locator.
+- az_ams_streaming_locator_create
+- az_ams_streaming_locator_delete
+- az_ams_streaming_locator_get_paths
+- az_ams_streaming_locator_list
+- az_ams_streaming_locator_list_content_keys
+- az_ams_streaming_locator_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -249,10 +216,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
-updated_at: 3/25/2020 2:12:45 AM
-ms.date: 03/25/2020
-description: Manage streaming locators for an Azure Media Services account.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
+  updated_at: 3/25/2020 2:12:45 AM
+  ms.date: 03/25/2020
+  description: Manage streaming locators for an Azure Media Services account.

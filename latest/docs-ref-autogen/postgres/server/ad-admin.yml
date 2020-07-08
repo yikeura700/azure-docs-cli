@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_postgres_server_ad_admin
-  name: az postgres server ad-admin
-  summary: Manage a postgres server's Active Directory administrator.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_postgres_server_ad_admin_create
-  - az_postgres_server_ad_admin_delete
-  - az_postgres_server_ad_admin_list
-  - az_postgres_server_ad_admin_show
-  - az_postgres_server_ad_admin_wait
+### YamlMime:CLIGroup
+uid: az_postgres_server_ad_admin
+name: az postgres server ad-admin
+summary: Manage a postgres server's Active Directory administrator.
+description: ''
+directCommands:
 - uid: az_postgres_server_ad_admin_create
   name: az postgres server ad-admin create
   summary: Create an Active Directory Administrator for PostgreSQL server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Crate Active Directory Administrator username@domain.com in server testsvr.
-    syntax:
-      content: az postgres server ad-admin create --server-name testsvr -g testgroup --display-name username@domain.com --object-id 1FCD6583-267B-4484-BF9B-507E4B62DE79
+    syntax: az postgres server ad-admin create --server-name testsvr -g testgroup --display-name username@domain.com --object-id 1FCD6583-267B-4484-BF9B-507E4B62DE79
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -47,12 +36,9 @@ items:
   name: az postgres server ad-admin delete
   summary: Delete an Active Directory Administrator for PostgreSQL server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete Active Directory Administrator in server testsvr.
-    syntax:
-      content: az postgres server ad-admin delete --server-name testsvr -g testgroup
+    syntax: az postgres server ad-admin delete --server-name testsvr -g testgroup
   parameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
@@ -73,12 +59,9 @@ items:
   name: az postgres server ad-admin list
   summary: List all Active Directory Administrators for PostgreSQL server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all Active Directory Administrators in server testsvr.
-    syntax:
-      content: az postgres server ad-admin list --server-name testsvr -g testgroup
+    syntax: az postgres server ad-admin list --server-name testsvr -g testgroup
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -96,12 +79,9 @@ items:
   name: az postgres server ad-admin show
   summary: Get Active Directory Administrator information for a PostgreSQL server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get Active Directory Administrator in server testsvr.
-    syntax:
-      content: az postgres server ad-admin show --server-name testsvr -g testgroup
+    syntax: az postgres server ad-admin show --server-name testsvr -g testgroup
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -119,12 +99,9 @@ items:
   name: az postgres server ad-admin wait
   summary: Place the CLI in a waiting state until a condition of the PostgreSQL server Active Directory Administrator is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Place the CLI in a waiting state until a creation of Active Directory Administrator in server testsvr.
-    syntax:
-      content: az postgres server ad-admin wait --server-name testsvr -g testgroup --created
+    syntax: az postgres server ad-admin wait --server-name testsvr -g testgroup --created
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -162,21 +139,11 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: az_postgres_server_ad_admin_create
-  name: az postgres server ad-admin create
-  summary: Create an Active Directory Administrator for PostgreSQL server.
-- uid: az_postgres_server_ad_admin_delete
-  name: az postgres server ad-admin delete
-  summary: Delete an Active Directory Administrator for PostgreSQL server.
-- uid: az_postgres_server_ad_admin_list
-  name: az postgres server ad-admin list
-  summary: List all Active Directory Administrators for PostgreSQL server.
-- uid: az_postgres_server_ad_admin_show
-  name: az postgres server ad-admin show
-  summary: Get Active Directory Administrator information for a PostgreSQL server.
-- uid: az_postgres_server_ad_admin_wait
-  name: az postgres server ad-admin wait
-  summary: Place the CLI in a waiting state until a condition of the PostgreSQL server Active Directory Administrator is met.
+- az_postgres_server_ad_admin_create
+- az_postgres_server_ad_admin_delete
+- az_postgres_server_ad_admin_list
+- az_postgres_server_ad_admin_show
+- az_postgres_server_ad_admin_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -192,4 +159,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage a postgres server's Active Directory administrator.
+metadata:
+  description: Manage a postgres server's Active Directory administrator.

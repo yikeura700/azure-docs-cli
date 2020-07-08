@@ -1,29 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_eventgrid_az_eventgrid_partner_registration
-  name: az eventgrid partner registration
-  summary: Manage partner registrations.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_eventgrid_az_eventgrid_partner_registration_create
-  - ext_eventgrid_az_eventgrid_partner_registration_delete
-  - ext_eventgrid_az_eventgrid_partner_registration_list
-  - ext_eventgrid_az_eventgrid_partner_registration_show
+### YamlMime:CLIGroup
+uid: ext_eventgrid_az_eventgrid_partner_registration
+name: az eventgrid partner registration
+summary: Manage partner registrations.
+description: ''
+directCommands:
 - uid: ext_eventgrid_az_eventgrid_partner_registration_create
   name: az eventgrid partner registration create
   summary: Create a new partner registration.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a new partner registration with basic information.
-    syntax:
-      content: az eventgrid partner registration create -g rg1 --name partnerRegistrationName1 --partner-name Contoso --resource-type-name Accounts --authorized-subscription-ids 533ad9de-25db-46e2-b94a-d00c37cf022b 05aa2228-7d34-4635-922d-2b582c422445
+    syntax: az eventgrid partner registration create -g rg1 --name partnerRegistrationName1 --partner-name Contoso --resource-type-name Accounts --authorized-subscription-ids 533ad9de-25db-46e2-b94a-d00c37cf022b 05aa2228-7d34-4635-922d-2b582c422445
   - summary: Create a new partner registration with partner information.
-    syntax:
-      content: az eventgrid partner registration create -g rg1 --name partnerRegistrationName1 --partner-name Contoso --resource-type-name Accounts --authorized-subscription-ids 533ad9de-25db-46e2-b94a-d00c37cf022b 05aa2228-7d34-4635-922d-2b582c422445 --description ExampleDescription --display-name ExampleDisplayName1 --logo-uri 'https://www.example.com/logo.png' --setup-uri 'https://www.example.com' --long-description 'This is sample description}' --customer-service-number '+1 800 123 4567' --customer-service-extension '125' --customer-service-uri 'https://www.example.com/customerservice'
+    syntax: az eventgrid partner registration create -g rg1 --name partnerRegistrationName1 --partner-name Contoso --resource-type-name Accounts --authorized-subscription-ids 533ad9de-25db-46e2-b94a-d00c37cf022b 05aa2228-7d34-4635-922d-2b582c422445 --description ExampleDescription --display-name ExampleDisplayName1 --logo-uri 'https://www.example.com/logo.png' --setup-uri 'https://www.example.com' --long-description 'This is sample description}' --customer-service-number '+1 800 123 4567' --customer-service-extension '125' --customer-service-uri 'https://www.example.com/customerservice'
   parameters:
   - isRequired: true
     name: --name -n
@@ -75,8 +64,6 @@ items:
   name: az eventgrid partner registration delete
   summary: Delete a partner registration.
   description: Deletes a partner registration with the specified parameters.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -90,21 +77,15 @@ items:
   name: az eventgrid partner registration list
   summary: List all partner registrations in specific resource group or all under the specified azure subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all partner registrations in the current Azure subscription.
-    syntax:
-      content: az eventgrid partner registration list
+    syntax: az eventgrid partner registration list
   - summary: List all partner registrations in a resource group.
-    syntax:
-      content: az eventgrid partner registration list -g rg1
+    syntax: az eventgrid partner registration list -g rg1
   - summary: List all partner registrations in a resource group whose name contains the pattern "XYZ"
-    syntax:
-      content: az eventgrid partner registration list -g rg1 --odata-query "Contains(name, 'XYZ')"
+    syntax: az eventgrid partner registration list -g rg1 --odata-query "Contains(name, 'XYZ')"
   - summary: List all partner registrations in a resource group except the partner registration with name "name1"
-    syntax:
-      content: az eventgrid partner registration list -g rg1 --odata-query "NOT (name eq 'name1')"
+    syntax: az eventgrid partner registration list -g rg1 --odata-query "NOT (name eq 'name1')"
   parameters:
   - name: --odata-query
     summary: The query used to filter the results using OData syntax.
@@ -116,8 +97,6 @@ items:
   name: az eventgrid partner registration show
   summary: Get a partner registration.
   description: Gets a partner registration with the specified parameters.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -128,18 +107,10 @@ items:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
     description: ''
 commands:
-- uid: ext_eventgrid_az_eventgrid_partner_registration_create
-  name: az eventgrid partner registration create
-  summary: Create a new partner registration.
-- uid: ext_eventgrid_az_eventgrid_partner_registration_delete
-  name: az eventgrid partner registration delete
-  summary: Delete a partner registration.
-- uid: ext_eventgrid_az_eventgrid_partner_registration_list
-  name: az eventgrid partner registration list
-  summary: List all partner registrations in specific resource group or all under the specified azure subscription.
-- uid: ext_eventgrid_az_eventgrid_partner_registration_show
-  name: az eventgrid partner registration show
-  summary: Get a partner registration.
+- ext_eventgrid_az_eventgrid_partner_registration_create
+- ext_eventgrid_az_eventgrid_partner_registration_delete
+- ext_eventgrid_az_eventgrid_partner_registration_list
+- ext_eventgrid_az_eventgrid_partner_registration_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -155,4 +126,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage partner registrations.
+metadata:
+  description: Manage partner registrations.

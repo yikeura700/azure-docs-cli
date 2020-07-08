@@ -1,23 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sf_cluster_upgrade_type
-  name: az sf cluster upgrade-type
-  summary: Manage the upgrade type of a cluster.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sf_cluster_upgrade_type_set
+### YamlMime:CLIGroup
+uid: az_sf_cluster_upgrade_type
+name: az sf cluster upgrade-type
+summary: Manage the upgrade type of a cluster.
+description: ''
+directCommands:
 - uid: az_sf_cluster_upgrade_type_set
   name: az sf cluster upgrade-type set
   summary: Change the  upgrade type for a cluster.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Set a cluster to use the 'Automatic' upgrade mode.
-    syntax:
-      content: az sf cluster upgrade-type set -g group-name -c cluster1 --upgrade-mode Automatic
+    syntax: az sf cluster upgrade-type set -g group-name -c cluster1 --upgrade-mode Automatic
   parameters:
   - isRequired: true
     name: --cluster-name -c
@@ -39,9 +32,7 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_sf_cluster_upgrade_type_set
-  name: az sf cluster upgrade-type set
-  summary: Change the  upgrade type for a cluster.
+- az_sf_cluster_upgrade_type_set
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -57,4 +48,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage the upgrade type of a cluster.
+metadata:
+  description: Manage the upgrade type of a cluster.

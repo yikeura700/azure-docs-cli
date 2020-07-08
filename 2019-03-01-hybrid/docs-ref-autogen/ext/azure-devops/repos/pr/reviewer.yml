@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_repos_pr_reviewer
-  name: az repos pr reviewer
-  summary: Manage pull request reviewers.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_repos_pr_reviewer_add
-  - ext_azure-devops_az_repos_pr_reviewer_list
-  - ext_azure-devops_az_repos_pr_reviewer_remove
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_repos_pr_reviewer
+name: az repos pr reviewer
+summary: Manage pull request reviewers.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_repos_pr_reviewer_add
   name: az repos pr reviewer add
   summary: Add one or more reviewers to a pull request.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -36,8 +28,6 @@ items:
   name: az repos pr reviewer list
   summary: List reviewers of a pull request.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -54,8 +44,6 @@ items:
   name: az repos pr reviewer remove
   summary: Remove one or more reviewers from a pull request.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -73,15 +61,9 @@ items:
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href="https://dev.azure.com/MyOrganizationName/">https://dev.azure.com/MyOrganizationName/</a>.'
     description: ''
 commands:
-- uid: ext_azure-devops_az_repos_pr_reviewer_add
-  name: az repos pr reviewer add
-  summary: Add one or more reviewers to a pull request.
-- uid: ext_azure-devops_az_repos_pr_reviewer_list
-  name: az repos pr reviewer list
-  summary: List reviewers of a pull request.
-- uid: ext_azure-devops_az_repos_pr_reviewer_remove
-  name: az repos pr reviewer remove
-  summary: Remove one or more reviewers from a pull request.
+- ext_azure-devops_az_repos_pr_reviewer_add
+- ext_azure-devops_az_repos_pr_reviewer_list
+- ext_azure-devops_az_repos_pr_reviewer_remove
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -97,4 +79,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage pull request reviewers.
+metadata:
+  description: Manage pull request reviewers.

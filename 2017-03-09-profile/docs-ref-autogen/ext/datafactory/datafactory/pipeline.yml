@@ -1,28 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_datafactory_az_datafactory_pipeline
-  name: az datafactory pipeline
-  summary: Datafactory pipeline.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_datafactory_az_datafactory_pipeline_create
-  - ext_datafactory_az_datafactory_pipeline_create_run
-  - ext_datafactory_az_datafactory_pipeline_delete
-  - ext_datafactory_az_datafactory_pipeline_list
-  - ext_datafactory_az_datafactory_pipeline_show
-  - ext_datafactory_az_datafactory_pipeline_update
+### YamlMime:CLIGroup
+uid: ext_datafactory_az_datafactory_pipeline
+name: az datafactory pipeline
+summary: Datafactory pipeline.
+description: ''
+directCommands:
 - uid: ext_datafactory_az_datafactory_pipeline_create
   name: az datafactory pipeline create
   summary: Creates or updates a pipeline.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pipelines_Create
-    syntax:
-      content: az datafactory pipeline create --factory-name "myFactoryName" --pipeline "{\"activities\":[{\"name\":\"ExampleForeachActivity\",\"type\":\"ForEach\",\"typeProperties\":{\"activities\":[{\"name\":\"ExampleCopyActivity\",\"type\":\"Copy\",\"inputs\":[{\"type\":\"DatasetReference\",\"parameters\":{\"MyFileName\":\"examplecontainer.csv\",\"MyFolderPath\":\"examplecontainer\"},\"referenceName\":\"myDataset\"}],\"outputs\":[{\"type\":\"DatasetReference\",\"parameters\":{\"MyFileName\":{\"type\":\"Expression\",\"value\":\"@item()\"},\"MyFolderPath\":\"examplecontainer\"},\"referenceName\":\"myDataset\"}],\"typeProperties\":{\"dataIntegrationUnits\":32,\"sink\":{\"type\":\"BlobSink\"},\"source\":{\"type\":\"BlobSource\"}}}],\"isSequential\":true,\"items\":{\"type\":\"Expression\",\"value\":\"@pipeline().parameters.OutputBlobNameList\"}}}],\"parameters\":{\"JobId\":{\"type\":\"String\"},\"OutputBlobNameList\":{\"type\":\"Array\"}},\"variables\":{\"TestVariableArray\":{\"type\":\"Array\"}},\"runDimensions\":{\"JobId\":{\"type\":\"Expression\",\"value\":\"@pipeline().parameters.JobId\"}}}" --name "myPipeline" --resource-group "myResourceGroup"
+    syntax: az datafactory pipeline create --factory-name "myFactoryName" --pipeline "{\"activities\":[{\"name\":\"ExampleForeachActivity\",\"type\":\"ForEach\",\"typeProperties\":{\"activities\":[{\"name\":\"ExampleCopyActivity\",\"type\":\"Copy\",\"inputs\":[{\"type\":\"DatasetReference\",\"parameters\":{\"MyFileName\":\"examplecontainer.csv\",\"MyFolderPath\":\"examplecontainer\"},\"referenceName\":\"myDataset\"}],\"outputs\":[{\"type\":\"DatasetReference\",\"parameters\":{\"MyFileName\":{\"type\":\"Expression\",\"value\":\"@item()\"},\"MyFolderPath\":\"examplecontainer\"},\"referenceName\":\"myDataset\"}],\"typeProperties\":{\"dataIntegrationUnits\":32,\"sink\":{\"type\":\"BlobSink\"},\"source\":{\"type\":\"BlobSource\"}}}],\"isSequential\":true,\"items\":{\"type\":\"Expression\",\"value\":\"@pipeline().parameters.OutputBlobNameList\"}}}],\"parameters\":{\"JobId\":{\"type\":\"String\"},\"OutputBlobNameList\":{\"type\":\"Array\"}},\"variables\":{\"TestVariableArray\":{\"type\":\"Array\"}},\"runDimensions\":{\"JobId\":{\"type\":\"Expression\",\"value\":\"@pipeline().parameters.JobId\"}}}" --name "myPipeline" --resource-group "myResourceGroup"
   parameters:
   - isRequired: true
     name: --factory-name
@@ -47,12 +35,9 @@ items:
   name: az datafactory pipeline create-run
   summary: Creates a run of a pipeline.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pipelines_CreateRun
-    syntax:
-      content: az datafactory pipeline create-run --factory-name "myFactoryName" --parameters "{\"OutputBlobNameList\":[\"exampleoutput.csv\"]}" --name "myPipeline" --resource-group "myResourceGroup"
+    syntax: az datafactory pipeline create-run --factory-name "myFactoryName" --parameters "{\"OutputBlobNameList\":[\"exampleoutput.csv\"]}" --name "myPipeline" --resource-group "myResourceGroup"
   parameters:
   - isRequired: true
     name: --factory-name
@@ -87,12 +72,9 @@ items:
   name: az datafactory pipeline delete
   summary: Deletes a pipeline.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pipelines_Delete
-    syntax:
-      content: az datafactory pipeline delete --factory-name "myFactoryName" --name "myPipeline" --resource-group "myResourceGroup"
+    syntax: az datafactory pipeline delete --factory-name "myFactoryName" --name "myPipeline" --resource-group "myResourceGroup"
   parameters:
   - isRequired: true
     name: --factory-name
@@ -110,12 +92,9 @@ items:
   name: az datafactory pipeline list
   summary: Lists pipelines.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pipelines_ListByFactory
-    syntax:
-      content: az datafactory pipeline list --factory-name "myFactoryName" --resource-group "myResourceGroup"
+    syntax: az datafactory pipeline list --factory-name "myFactoryName" --resource-group "myResourceGroup"
   parameters:
   - isRequired: true
     name: --factory-name
@@ -129,12 +108,9 @@ items:
   name: az datafactory pipeline show
   summary: Gets a pipeline.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pipelines_Get
-    syntax:
-      content: az datafactory pipeline show --factory-name "myFactoryName" --name "myPipeline" --resource-group "myResourceGroup"
+    syntax: az datafactory pipeline show --factory-name "myFactoryName" --name "myPipeline" --resource-group "myResourceGroup"
   parameters:
   - isRequired: true
     name: --factory-name
@@ -155,12 +131,9 @@ items:
   name: az datafactory pipeline update
   summary: Creates or updates a pipeline.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pipelines_Update
-    syntax:
-      content: az datafactory pipeline update --factory-name "myFactoryName" --description "Example description" --activities "[{\"name\":\"ExampleForeachActivity\",\"type\":\"ForEach\",\"typeProperties\":{\"activities\":[{\"name\":\"ExampleCopyActivity\",\"type\":\"Copy\",\"inputs\":[{\"type\":\"DatasetReference\",\"parameters\":{\"MyFileName\":\"examplecontainer.csv\",\"MyFolderPath\":\"examplecontainer\"},\"referenceName\":\"myDataset\"}],\"outputs\":[{\"type\":\"DatasetReference\",\"parameters\":{\"MyFileName\":{\"type\":\"Expression\",\"value\":\"@item()\"},\"MyFolderPath\":\"examplecontainer\"},\"referenceName\":\"myDataset\"}],\"typeProperties\":{\"dataIntegrationUnits\":32,\"sink\":{\"type\":\"BlobSink\"},\"source\":{\"type\":\"BlobSource\"}}}],\"isSequential\":true,\"items\":{\"type\":\"Expression\",\"value\":\"@pipeline().parameters.OutputBlobNameList\"}}}]" --parameters "{\"OutputBlobNameList\":{\"type\":\"Array\"}}" --name "myPipeline" --resource-group "myResourceGroup"
+    syntax: az datafactory pipeline update --factory-name "myFactoryName" --description "Example description" --activities "[{\"name\":\"ExampleForeachActivity\",\"type\":\"ForEach\",\"typeProperties\":{\"activities\":[{\"name\":\"ExampleCopyActivity\",\"type\":\"Copy\",\"inputs\":[{\"type\":\"DatasetReference\",\"parameters\":{\"MyFileName\":\"examplecontainer.csv\",\"MyFolderPath\":\"examplecontainer\"},\"referenceName\":\"myDataset\"}],\"outputs\":[{\"type\":\"DatasetReference\",\"parameters\":{\"MyFileName\":{\"type\":\"Expression\",\"value\":\"@item()\"},\"MyFolderPath\":\"examplecontainer\"},\"referenceName\":\"myDataset\"}],\"typeProperties\":{\"dataIntegrationUnits\":32,\"sink\":{\"type\":\"BlobSink\"},\"source\":{\"type\":\"BlobSource\"}}}],\"isSequential\":true,\"items\":{\"type\":\"Expression\",\"value\":\"@pipeline().parameters.OutputBlobNameList\"}}}]" --parameters "{\"OutputBlobNameList\":{\"type\":\"Array\"}}" --name "myPipeline" --resource-group "myResourceGroup"
   parameters:
   - isRequired: true
     name: --factory-name
@@ -217,24 +190,12 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_datafactory_az_datafactory_pipeline_create
-  name: az datafactory pipeline create
-  summary: Creates or updates a pipeline.
-- uid: ext_datafactory_az_datafactory_pipeline_create_run
-  name: az datafactory pipeline create-run
-  summary: Creates a run of a pipeline.
-- uid: ext_datafactory_az_datafactory_pipeline_delete
-  name: az datafactory pipeline delete
-  summary: Deletes a pipeline.
-- uid: ext_datafactory_az_datafactory_pipeline_list
-  name: az datafactory pipeline list
-  summary: Lists pipelines.
-- uid: ext_datafactory_az_datafactory_pipeline_show
-  name: az datafactory pipeline show
-  summary: Gets a pipeline.
-- uid: ext_datafactory_az_datafactory_pipeline_update
-  name: az datafactory pipeline update
-  summary: Creates or updates a pipeline.
+- ext_datafactory_az_datafactory_pipeline_create
+- ext_datafactory_az_datafactory_pipeline_create_run
+- ext_datafactory_az_datafactory_pipeline_delete
+- ext_datafactory_az_datafactory_pipeline_list
+- ext_datafactory_az_datafactory_pipeline_show
+- ext_datafactory_az_datafactory_pipeline_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -250,4 +211,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Datafactory pipeline.
+metadata:
+  description: Datafactory pipeline.

@@ -1,31 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_network_private_dns_record_set_mx
-  name: az network private-dns record-set mx
-  summary: Manage Private DNS MX records.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_network_private_dns_record_set_mx_add_record
-  - az_network_private_dns_record_set_mx_create
-  - az_network_private_dns_record_set_mx_delete
-  - az_network_private_dns_record_set_mx_list
-  - az_network_private_dns_record_set_mx_remove_record
-  - az_network_private_dns_record_set_mx_show
-  - az_network_private_dns_record_set_mx_update
+### YamlMime:CLIGroup
+uid: az_network_private_dns_record_set_mx
+name: az network private-dns record-set mx
+summary: Manage Private DNS MX records.
+description: ''
+directCommands:
 - uid: az_network_private_dns_record_set_mx_add_record
   name: az network private-dns record-set mx add-record
   summary: Add an MX record.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add an MX record.
-    syntax:
-      content: >-
-        az network private-dns record-set mx add-record -g MyResourceGroup -z www.mysite.com \
-            -n MyRecordSet -e mail.mysite.com -p 10
+    syntax: >-
+      az network private-dns record-set mx add-record -g MyResourceGroup -z www.mysite.com \
+          -n MyRecordSet -e mail.mysite.com -p 10
   parameters:
   - isRequired: true
     name: --exchange -e
@@ -60,12 +47,9 @@ items:
   name: az network private-dns record-set mx create
   summary: Create an empty MX record set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an empty MX record set.
-    syntax:
-      content: az network private-dns record-set mx create -g MyResourceGroup -z www.mysite.com -n MyRecordSet
+    syntax: az network private-dns record-set mx create -g MyResourceGroup -z www.mysite.com -n MyRecordSet
   parameters:
   - isRequired: true
     name: --name -n
@@ -99,12 +83,9 @@ items:
   name: az network private-dns record-set mx delete
   summary: Delete an MX record set and all associated records.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete an MX record set and all associated records.
-    syntax:
-      content: az network private-dns record-set mx delete -g MyResourceGroup -z www.mysite.com -n MyRecordSet
+    syntax: az network private-dns record-set mx delete -g MyResourceGroup -z www.mysite.com -n MyRecordSet
   parameters:
   - isRequired: true
     name: --name -n
@@ -137,12 +118,9 @@ items:
   name: az network private-dns record-set mx list
   summary: List all MX record sets in a zone.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all MX record sets in a zone.
-    syntax:
-      content: az network private-dns record-set mx list -g MyResourceGroup -z www.mysite.com
+    syntax: az network private-dns record-set mx list -g MyResourceGroup -z www.mysite.com
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -165,14 +143,11 @@ items:
   name: az network private-dns record-set mx remove-record
   summary: Remove an MX record from its record set.
   description: By default, if the last record in a set is removed, the record set is deleted. To retain the empty record set, include --keep-empty-record-set.
-  langs:
-  - azurecli
   examples:
   - summary: Remove an MX record from its record set.
-    syntax:
-      content: >-
-        az network private-dns record-set mx remove-record -g MyResourceGroup -z www.mysite.com \
-            -n MyRecordSet -e mail.mysite.com -p 10
+    syntax: >-
+      az network private-dns record-set mx remove-record -g MyResourceGroup -z www.mysite.com \
+          -n MyRecordSet -e mail.mysite.com -p 10
   parameters:
   - isRequired: true
     name: --exchange -e
@@ -210,12 +185,9 @@ items:
   name: az network private-dns record-set mx show
   summary: Get the details of an MX record set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the details of an MX record set.
-    syntax:
-      content: az network private-dns record-set mx show -g MyResourceGroup -z www.mysite.com -n MyRecordSet
+    syntax: az network private-dns record-set mx show -g MyResourceGroup -z www.mysite.com -n MyRecordSet
   parameters:
   - isRequired: true
     name: --name -n
@@ -242,14 +214,11 @@ items:
   name: az network private-dns record-set mx update
   summary: Update an MX record set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update an MX record set.
-    syntax:
-      content: >-
-        az network private-dns record-set mx update -g MyResourceGroup -z www.mysite.com \
-            -n MyRecordSet --metadata owner=WebTeam
+    syntax: >-
+      az network private-dns record-set mx update -g MyResourceGroup -z www.mysite.com \
+          -n MyRecordSet --metadata owner=WebTeam
   parameters:
   - isRequired: true
     name: --name -n
@@ -291,27 +260,13 @@ items:
       path: src/azure-cli/azure/cli/command_modules/network/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_network_private_dns_record_set_mx_add_record
-  name: az network private-dns record-set mx add-record
-  summary: Add an MX record.
-- uid: az_network_private_dns_record_set_mx_create
-  name: az network private-dns record-set mx create
-  summary: Create an empty MX record set.
-- uid: az_network_private_dns_record_set_mx_delete
-  name: az network private-dns record-set mx delete
-  summary: Delete an MX record set and all associated records.
-- uid: az_network_private_dns_record_set_mx_list
-  name: az network private-dns record-set mx list
-  summary: List all MX record sets in a zone.
-- uid: az_network_private_dns_record_set_mx_remove_record
-  name: az network private-dns record-set mx remove-record
-  summary: Remove an MX record from its record set.
-- uid: az_network_private_dns_record_set_mx_show
-  name: az network private-dns record-set mx show
-  summary: Get the details of an MX record set.
-- uid: az_network_private_dns_record_set_mx_update
-  name: az network private-dns record-set mx update
-  summary: Update an MX record set.
+- az_network_private_dns_record_set_mx_add_record
+- az_network_private_dns_record_set_mx_create
+- az_network_private_dns_record_set_mx_delete
+- az_network_private_dns_record_set_mx_list
+- az_network_private_dns_record_set_mx_remove_record
+- az_network_private_dns_record_set_mx_show
+- az_network_private_dns_record_set_mx_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -327,10 +282,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/network/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
-updated_at: 6/18/2020 6:20:50 AM
-ms.date: 06/18/2020
-description: Manage Private DNS MX records.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
+  updated_at: 6/18/2020 6:20:50 AM
+  ms.date: 06/18/2020
+  description: Manage Private DNS MX records.

@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-firewall_az_network_firewall_application_rule_collection
-  name: az network firewall application-rule collection
-  summary: Manage and configure Azure Firewall application rule collections.
-  description: Collections are created as part of the `az network firewall application-rule create` command.
-  langs:
-  - azurecli
-  children:
-  - ext_azure-firewall_az_network_firewall_application_rule_collection_delete
-  - ext_azure-firewall_az_network_firewall_application_rule_collection_list
-  - ext_azure-firewall_az_network_firewall_application_rule_collection_show
+### YamlMime:CLIGroup
+uid: ext_azure-firewall_az_network_firewall_application_rule_collection
+name: az network firewall application-rule collection
+summary: Manage and configure Azure Firewall application rule collections.
+description: Collections are created as part of the `az network firewall application-rule create` command.
+directCommands:
 - uid: ext_azure-firewall_az_network_firewall_application_rule_collection_delete
   name: az network firewall application-rule collection delete
   summary: Delete an Azure Firewall application rule collection.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -33,8 +25,6 @@ items:
   name: az network firewall application-rule collection list
   summary: List Azure Firewall application rule collections.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --firewall-name -f
@@ -48,8 +38,6 @@ items:
   name: az network firewall application-rule collection show
   summary: Get the details of an Azure Firewall application rule collection.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -64,15 +52,9 @@ items:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
     description: ''
 commands:
-- uid: ext_azure-firewall_az_network_firewall_application_rule_collection_delete
-  name: az network firewall application-rule collection delete
-  summary: Delete an Azure Firewall application rule collection.
-- uid: ext_azure-firewall_az_network_firewall_application_rule_collection_list
-  name: az network firewall application-rule collection list
-  summary: List Azure Firewall application rule collections.
-- uid: ext_azure-firewall_az_network_firewall_application_rule_collection_show
-  name: az network firewall application-rule collection show
-  summary: Get the details of an Azure Firewall application rule collection.
+- ext_azure-firewall_az_network_firewall_application_rule_collection_delete
+- ext_azure-firewall_az_network_firewall_application_rule_collection_list
+- ext_azure-firewall_az_network_firewall_application_rule_collection_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -88,4 +70,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Collections are created as part of the `az network firewall application-rule create` command.
+metadata:
+  description: Collections are created as part of the `az network firewall application-rule create` command.

@@ -1,26 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_netappfiles-preview_az_netappfiles_snapshot
-  name: az netappfiles snapshot
-  summary: Manage Azure NetApp Files (ANF) Snapshot Resources.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_netappfiles-preview_az_netappfiles_snapshot_create
-  - ext_netappfiles-preview_az_netappfiles_snapshot_delete
-  - ext_netappfiles-preview_az_netappfiles_snapshot_list
-  - ext_netappfiles-preview_az_netappfiles_snapshot_show
+### YamlMime:CLIGroup
+uid: ext_netappfiles-preview_az_netappfiles_snapshot
+name: az netappfiles snapshot
+summary: Manage Azure NetApp Files (ANF) Snapshot Resources.
+description: ''
+directCommands:
 - uid: ext_netappfiles-preview_az_netappfiles_snapshot_create
   name: az netappfiles snapshot create
   summary: Create a new Azure NetApp Files (ANF) snapshot.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an ANF snapshot
-    syntax:
-      content: az netappfiles snapshot create -g group --account-name account-name --pool-name pname --volume-name vname --snapshot-name sname -l location --file-system-id volume-uuid
+    syntax: az netappfiles snapshot create -g group --account-name account-name --pool-name pname --volume-name vname --snapshot-name sname -l location --file-system-id volume-uuid
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -53,12 +43,9 @@ items:
   name: az netappfiles snapshot delete
   summary: Delete the specified ANF snapshot.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete an ANF snapshot
-    syntax:
-      content: az netappfiles snapshot delete -g group --account-name aname --pool-name pname --volume-name vname --snapshot-name sname
+    syntax: az netappfiles snapshot delete -g group --account-name aname --pool-name pname --volume-name vname --snapshot-name sname
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -84,12 +71,9 @@ items:
   name: az netappfiles snapshot list
   summary: List the snapshots of an ANF volume.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: list the snapshots of an ANF volume
-    syntax:
-      content: az netappfiles snapshot list -g group --account-name aname --pool-name pname --volume-name vname
+    syntax: az netappfiles snapshot list -g group --account-name aname --pool-name pname --volume-name vname
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -111,12 +95,9 @@ items:
   name: az netappfiles snapshot show
   summary: Get the specified ANF snapshot.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Return the specified ANF snapshot
-    syntax:
-      content: az netappfiles snapshot show -g group --account-name aname --pool-name pname --volume-name vname --snapshot-name sname
+    syntax: az netappfiles snapshot show -g group --account-name aname --pool-name pname --volume-name vname --snapshot-name sname
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -139,18 +120,10 @@ items:
     summary: The name of the ANF volume.
     description: ''
 commands:
-- uid: ext_netappfiles-preview_az_netappfiles_snapshot_create
-  name: az netappfiles snapshot create
-  summary: Create a new Azure NetApp Files (ANF) snapshot.
-- uid: ext_netappfiles-preview_az_netappfiles_snapshot_delete
-  name: az netappfiles snapshot delete
-  summary: Delete the specified ANF snapshot.
-- uid: ext_netappfiles-preview_az_netappfiles_snapshot_list
-  name: az netappfiles snapshot list
-  summary: List the snapshots of an ANF volume.
-- uid: ext_netappfiles-preview_az_netappfiles_snapshot_show
-  name: az netappfiles snapshot show
-  summary: Get the specified ANF snapshot.
+- ext_netappfiles-preview_az_netappfiles_snapshot_create
+- ext_netappfiles-preview_az_netappfiles_snapshot_delete
+- ext_netappfiles-preview_az_netappfiles_snapshot_list
+- ext_netappfiles-preview_az_netappfiles_snapshot_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -166,4 +139,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Azure NetApp Files (ANF) Snapshot Resources.
+metadata:
+  description: Manage Azure NetApp Files (ANF) Snapshot Resources.

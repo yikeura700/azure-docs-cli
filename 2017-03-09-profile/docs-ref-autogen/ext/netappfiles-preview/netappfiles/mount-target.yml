@@ -1,23 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_netappfiles-preview_az_netappfiles_mount_target
-  name: az netappfiles mount-target
-  summary: Manage Azure NetApp Files (ANF) Mount Target Resources.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_netappfiles-preview_az_netappfiles_mount_target_list
+### YamlMime:CLIGroup
+uid: ext_netappfiles-preview_az_netappfiles_mount_target
+name: az netappfiles mount-target
+summary: Manage Azure NetApp Files (ANF) Mount Target Resources.
+description: ''
+directCommands:
 - uid: ext_netappfiles-preview_az_netappfiles_mount_target_list
   name: az netappfiles mount-target list
   summary: List the mount targets of an ANF volume.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: list the mount targets of an ANF volume
-    syntax:
-      content: az netappfiles mount-target list -g group --account-name aname --pool-name pname --volume-name vname
+    syntax: az netappfiles mount-target list -g group --account-name aname --pool-name pname --volume-name vname
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -36,9 +29,7 @@ items:
     summary: The name of the ANF pool.
     description: ''
 commands:
-- uid: ext_netappfiles-preview_az_netappfiles_mount_target_list
-  name: az netappfiles mount-target list
-  summary: List the mount targets of an ANF volume.
+- ext_netappfiles-preview_az_netappfiles_mount_target_list
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -54,4 +45,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Azure NetApp Files (ANF) Mount Target Resources.
+metadata:
+  description: Manage Azure NetApp Files (ANF) Mount Target Resources.

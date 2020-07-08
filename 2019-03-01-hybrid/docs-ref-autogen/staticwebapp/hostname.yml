@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_staticwebapp_hostname
-  name: az staticwebapp hostname
-  summary: Manage custom hostnames of Functions of the static app.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_staticwebapp_hostname_delete
-  - az_staticwebapp_hostname_list
-  - az_staticwebapp_hostname_set
+### YamlMime:CLIGroup
+uid: az_staticwebapp_hostname
+name: az staticwebapp hostname
+summary: Manage custom hostnames of Functions of the static app.
+description: ''
+directCommands:
 - uid: az_staticwebapp_hostname_delete
   name: az staticwebapp hostname delete
   summary: Delete given hostname of the static app.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete given hostname of the static app.
-    syntax:
-      content: az staticwebapp hostname delete -n MyStaticAppName --hostname HostnameToDelete
+    syntax: az staticwebapp hostname delete -n MyStaticAppName --hostname HostnameToDelete
   parameters:
   - isRequired: true
     name: --hostname
@@ -45,12 +36,9 @@ items:
   name: az staticwebapp hostname list
   summary: List custom hostnames of the static app.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List custom hostnames of the static app.
-    syntax:
-      content: az staticwebapp hostname list -n MyStaticAppName
+    syntax: az staticwebapp hostname list -n MyStaticAppName
   parameters:
   - isRequired: true
     name: --name -n
@@ -66,12 +54,9 @@ items:
   name: az staticwebapp hostname set
   summary: Set given sub-domain hostname to the static app. Please configure a CNAME record with your DNS provider.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Set hostname to the static app.
-    syntax:
-      content: az staticwebapp hostname set -n MyStaticAppName --hostname www.example.com
+    syntax: az staticwebapp hostname set -n MyStaticAppName --hostname www.example.com
   parameters:
   - isRequired: true
     name: --hostname
@@ -91,15 +76,9 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_staticwebapp_hostname_delete
-  name: az staticwebapp hostname delete
-  summary: Delete given hostname of the static app.
-- uid: az_staticwebapp_hostname_list
-  name: az staticwebapp hostname list
-  summary: List custom hostnames of the static app.
-- uid: az_staticwebapp_hostname_set
-  name: az staticwebapp hostname set
-  summary: Set given sub-domain hostname to the static app. Please configure a CNAME record with your DNS provider.
+- az_staticwebapp_hostname_delete
+- az_staticwebapp_hostname_list
+- az_staticwebapp_hostname_set
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -115,4 +94,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage custom hostnames of Functions of the static app.
+metadata:
+  description: Manage custom hostnames of Functions of the static app.

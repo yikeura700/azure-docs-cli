@@ -1,46 +1,32 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_blueprint_az_blueprint
-  name: az blueprint
-  summary: Commands to manage blueprint.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_blueprint_az_blueprint_create
-  - ext_blueprint_az_blueprint_delete
-  - ext_blueprint_az_blueprint_import
-  - ext_blueprint_az_blueprint_list
-  - ext_blueprint_az_blueprint_publish
-  - ext_blueprint_az_blueprint_show
-  - ext_blueprint_az_blueprint_update
+### YamlMime:CLIGroup
+uid: ext_blueprint_az_blueprint
+name: az blueprint
+summary: Commands to manage blueprint.
+description: ''
+directCommands:
 - uid: ext_blueprint_az_blueprint_create
   name: az blueprint create
   summary: Create a blueprint definition.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a subscription blueprint
-    syntax:
-      content: >-
-        az blueprint create --subscription MySubscription --name \
+    syntax: >-
+      az blueprint create --subscription MySubscription --name \
 
-        MyBlueprint --description \
+      MyBlueprint --description \
 
-        "blueprint contains all artifacts" --target-scope \
+      "blueprint contains all artifacts" --target-scope \
 
-        subscription
+      subscription
   - summary: Create a management group blueprint
-    syntax:
-      content: >-
-        az blueprint create --management-group MyManagementGroup --name \
+    syntax: >-
+      az blueprint create --management-group MyManagementGroup --name \
 
-        MyBlueprint --description \
+      MyBlueprint --description \
 
-        "blueprint contains all artifact" --target-scope \
+      "blueprint contains all artifact" --target-scope \
 
-        subscription
+      subscription
   parameters:
   - isRequired: true
     name: --name -n
@@ -70,21 +56,17 @@ items:
   name: az blueprint delete
   summary: Delete a blueprint definition.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a management group blueprint
-    syntax:
-      content: >-
-        az blueprint delete --management-group MyManagementGroup --name \
+    syntax: >-
+      az blueprint delete --management-group MyManagementGroup --name \
 
-        MyBlueprint
+      MyBlueprint
   - summary: Delete a subscription blueprint
-    syntax:
-      content: >-
-        az blueprint delete --subscription MySubscription --name \
+    syntax: >-
+      az blueprint delete --subscription MySubscription --name \
 
-        MyBlueprint
+      MyBlueprint
   parameters:
   - isRequired: true
     name: --name -n
@@ -103,15 +85,12 @@ items:
   name: az blueprint import
   summary: Import a blueprint definition and artifacts from a directoy of json files.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Import a blueprint definition and artifacts
-    syntax:
-      content: >-
-        az blueprint import --name MyBlueprint \
+    syntax: >-
+      az blueprint import --name MyBlueprint \
 
-        --input-path "path/to/blueprint/directory"
+      --input-path "path/to/blueprint/directory"
   parameters:
   - isRequired: true
     name: --input-path
@@ -134,15 +113,11 @@ items:
   name: az blueprint list
   summary: List blueprint definitions.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List blueprints in a management group
-    syntax:
-      content: az blueprint list --management-group MyManagementGroup
+    syntax: az blueprint list --management-group MyManagementGroup
   - summary: List blueprints in a subscription
-    syntax:
-      content: az blueprint list --subscription MySubscription
+    syntax: az blueprint list --subscription MySubscription
   parameters:
   - name: --management-group -m
     summary: Use management group for the scope of the blueprint.
@@ -154,23 +129,19 @@ items:
   name: az blueprint publish
   summary: Publish a new version of the blueprint definition with the latest artifacts. Published blueprint definitions are immutable.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Publish a management group blueprint
-    syntax:
-      content: >-
-        az blueprint publish --management-group MyManagementGroup --blueprint-name \
+    syntax: >-
+      az blueprint publish --management-group MyManagementGroup --blueprint-name \
 
-        MyBlueprint --version v2
+      MyBlueprint --version v2
   - summary: Publish a subscription blueprint
-    syntax:
-      content: >-
-        az blueprint publish --subscription MySubscription \
+    syntax: >-
+      az blueprint publish --subscription MySubscription \
 
-        --blueprint-name MyBlueprint \
+      --blueprint-name MyBlueprint \
 
-        --version v2
+      --version v2
   parameters:
   - isRequired: true
     name: --blueprint-name
@@ -193,21 +164,17 @@ items:
   name: az blueprint show
   summary: Get a blueprint definition.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a management group blueprint
-    syntax:
-      content: >-
-        az blueprint show --management-group MyManagementGroup --name \
+    syntax: >-
+      az blueprint show --management-group MyManagementGroup --name \
 
-        MyBlueprint
+      MyBlueprint
   - summary: Show a subscription blueprint
-    syntax:
-      content: >-
-        az blueprint show --subscription MySubscription --name \
+    syntax: >-
+      az blueprint show --subscription MySubscription --name \
 
-        MyBlueprint
+      MyBlueprint
   parameters:
   - isRequired: true
     name: --name -n
@@ -223,8 +190,6 @@ items:
   name: az blueprint update
   summary: Update a blueprint definition.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -255,129 +220,47 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_blueprint_az_blueprint_artifact
-  name: az blueprint artifact
-  summary: Commands to manage blueprint artifact.
-- uid: ext_blueprint_az_blueprint_artifact_delete
-  name: az blueprint artifact delete
-  summary: Delete a blueprint artifact.
-- uid: ext_blueprint_az_blueprint_artifact_list
-  name: az blueprint artifact list
-  summary: List artifacts for a given blueprint definition.
-- uid: ext_blueprint_az_blueprint_artifact_policy
-  name: az blueprint artifact policy
-  summary: Commands to manage blueprint policy assignment artifact.
-- uid: ext_blueprint_az_blueprint_artifact_policy_create
-  name: az blueprint artifact policy create
-  summary: Create blueprint policy artifact.
-- uid: ext_blueprint_az_blueprint_artifact_policy_update
-  name: az blueprint artifact policy update
-  summary: Update blueprint policy artifact.
-- uid: ext_blueprint_az_blueprint_artifact_role
-  name: az blueprint artifact role
-  summary: Commands to manage blueprint role assignment artifact.
-- uid: ext_blueprint_az_blueprint_artifact_role_create
-  name: az blueprint artifact role create
-  summary: Create blueprint role artifact.
-- uid: ext_blueprint_az_blueprint_artifact_role_update
-  name: az blueprint artifact role update
-  summary: Update blueprint role artifact.
-- uid: ext_blueprint_az_blueprint_artifact_show
-  name: az blueprint artifact show
-  summary: Get a blueprint artifact.
-- uid: ext_blueprint_az_blueprint_artifact_template
-  name: az blueprint artifact template
-  summary: Commands to manage blueprint ARM template artifact.
-- uid: ext_blueprint_az_blueprint_artifact_template_create
-  name: az blueprint artifact template create
-  summary: Create blueprint arm artifact.
-- uid: ext_blueprint_az_blueprint_artifact_template_update
-  name: az blueprint artifact template update
-  summary: Update blueprint arm artifact.
-- uid: ext_blueprint_az_blueprint_assignment
-  name: az blueprint assignment
-  summary: Commands to manage blueprint assignment.
-- uid: ext_blueprint_az_blueprint_assignment_create
-  name: az blueprint assignment create
-  summary: Create a blueprint assignment.
-- uid: ext_blueprint_az_blueprint_assignment_delete
-  name: az blueprint assignment delete
-  summary: Delete a blueprint assignment.
-- uid: ext_blueprint_az_blueprint_assignment_list
-  name: az blueprint assignment list
-  summary: List blueprint assignments within a subscription.
-- uid: ext_blueprint_az_blueprint_assignment_show
-  name: az blueprint assignment show
-  summary: Get a blueprint assignment.
-- uid: ext_blueprint_az_blueprint_assignment_update
-  name: az blueprint assignment update
-  summary: Update a blueprint assignment.
-- uid: ext_blueprint_az_blueprint_assignment_wait
-  name: az blueprint assignment wait
-  summary: Place the CLI in a waiting state until a condition of the Blueprint Assignment is met.
-- uid: ext_blueprint_az_blueprint_assignment_who
-  name: az blueprint assignment who
-  summary: Get Blueprint Servie Principal Name objectId.
-- uid: ext_blueprint_az_blueprint_create
-  name: az blueprint create
-  summary: Create a blueprint definition.
-- uid: ext_blueprint_az_blueprint_delete
-  name: az blueprint delete
-  summary: Delete a blueprint definition.
-- uid: ext_blueprint_az_blueprint_import
-  name: az blueprint import
-  summary: Import a blueprint definition and artifacts from a directoy of json files.
-- uid: ext_blueprint_az_blueprint_list
-  name: az blueprint list
-  summary: List blueprint definitions.
-- uid: ext_blueprint_az_blueprint_publish
-  name: az blueprint publish
-  summary: Publish a new version of the blueprint definition with the latest artifacts. Published blueprint definitions are immutable.
-- uid: ext_blueprint_az_blueprint_resource_group
-  name: az blueprint resource-group
-  summary: Commands to manage blueprint resource group artifact.
-- uid: ext_blueprint_az_blueprint_resource_group_add
-  name: az blueprint resource-group add
-  summary: Add a resource group artifact to the blueprint.
-- uid: ext_blueprint_az_blueprint_resource_group_list
-  name: az blueprint resource-group list
-  summary: List blueprint resource group artifact.
-- uid: ext_blueprint_az_blueprint_resource_group_remove
-  name: az blueprint resource-group remove
-  summary: Remove a blueprint resource group artifact.
-- uid: ext_blueprint_az_blueprint_resource_group_show
-  name: az blueprint resource-group show
-  summary: Show blueprint resource group artifact.
-- uid: ext_blueprint_az_blueprint_resource_group_update
-  name: az blueprint resource-group update
-  summary: Update blueprint resource group artifact.
-- uid: ext_blueprint_az_blueprint_show
-  name: az blueprint show
-  summary: Get a blueprint definition.
-- uid: ext_blueprint_az_blueprint_update
-  name: az blueprint update
-  summary: Update a blueprint definition.
-- uid: ext_blueprint_az_blueprint_version
-  name: az blueprint version
-  summary: Commands to manage published blueprint versions.
-- uid: ext_blueprint_az_blueprint_version_artifact
-  name: az blueprint version artifact
-  summary: Commands to manage published blueprint artifacts.
-- uid: ext_blueprint_az_blueprint_version_artifact_list
-  name: az blueprint version artifact list
-  summary: List artifacts for a version of a published blueprint.
-- uid: ext_blueprint_az_blueprint_version_artifact_show
-  name: az blueprint version artifact show
-  summary: Show an artifact for a published blueprint.
-- uid: ext_blueprint_az_blueprint_version_delete
-  name: az blueprint version delete
-  summary: Delete a published version of a blueprint.
-- uid: ext_blueprint_az_blueprint_version_list
-  name: az blueprint version list
-  summary: List published versions of given blueprint definition.
-- uid: ext_blueprint_az_blueprint_version_show
-  name: az blueprint version show
-  summary: Get a published version of a blueprint.
+- ext_blueprint_az_blueprint_artifact
+- ext_blueprint_az_blueprint_artifact_delete
+- ext_blueprint_az_blueprint_artifact_list
+- ext_blueprint_az_blueprint_artifact_policy
+- ext_blueprint_az_blueprint_artifact_policy_create
+- ext_blueprint_az_blueprint_artifact_policy_update
+- ext_blueprint_az_blueprint_artifact_role
+- ext_blueprint_az_blueprint_artifact_role_create
+- ext_blueprint_az_blueprint_artifact_role_update
+- ext_blueprint_az_blueprint_artifact_show
+- ext_blueprint_az_blueprint_artifact_template
+- ext_blueprint_az_blueprint_artifact_template_create
+- ext_blueprint_az_blueprint_artifact_template_update
+- ext_blueprint_az_blueprint_assignment
+- ext_blueprint_az_blueprint_assignment_create
+- ext_blueprint_az_blueprint_assignment_delete
+- ext_blueprint_az_blueprint_assignment_list
+- ext_blueprint_az_blueprint_assignment_show
+- ext_blueprint_az_blueprint_assignment_update
+- ext_blueprint_az_blueprint_assignment_wait
+- ext_blueprint_az_blueprint_assignment_who
+- ext_blueprint_az_blueprint_create
+- ext_blueprint_az_blueprint_delete
+- ext_blueprint_az_blueprint_import
+- ext_blueprint_az_blueprint_list
+- ext_blueprint_az_blueprint_publish
+- ext_blueprint_az_blueprint_resource_group
+- ext_blueprint_az_blueprint_resource_group_add
+- ext_blueprint_az_blueprint_resource_group_list
+- ext_blueprint_az_blueprint_resource_group_remove
+- ext_blueprint_az_blueprint_resource_group_show
+- ext_blueprint_az_blueprint_resource_group_update
+- ext_blueprint_az_blueprint_show
+- ext_blueprint_az_blueprint_update
+- ext_blueprint_az_blueprint_version
+- ext_blueprint_az_blueprint_version_artifact
+- ext_blueprint_az_blueprint_version_artifact_list
+- ext_blueprint_az_blueprint_version_artifact_show
+- ext_blueprint_az_blueprint_version_delete
+- ext_blueprint_az_blueprint_version_list
+- ext_blueprint_az_blueprint_version_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -393,4 +276,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage blueprint.
+metadata:
+  description: Commands to manage blueprint.

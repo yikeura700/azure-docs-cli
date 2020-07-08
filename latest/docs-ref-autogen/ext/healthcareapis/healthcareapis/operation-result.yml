@@ -1,23 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_healthcareapis_az_healthcareapis_operation_result
-  name: az healthcareapis operation-result
-  summary: Healthcareapis operation-result.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_healthcareapis_az_healthcareapis_operation_result_show
+### YamlMime:CLIGroup
+uid: ext_healthcareapis_az_healthcareapis_operation_result
+name: az healthcareapis operation-result
+summary: Healthcareapis operation-result.
+description: ''
+directCommands:
 - uid: ext_healthcareapis_az_healthcareapis_operation_result_show
   name: az healthcareapis operation-result show
   summary: Get the operation result for a long running operation.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get operation result
-    syntax:
-      content: az healthcareapis operation-result show --location-name "westus" --operation-result-id "exampleid"
+    syntax: az healthcareapis operation-result show --location-name "westus" --operation-result-id "exampleid"
   parameters:
   - isRequired: true
     name: --location-name
@@ -28,9 +21,7 @@ items:
     summary: The ID of the operation result to get.
     description: ''
 commands:
-- uid: ext_healthcareapis_az_healthcareapis_operation_result_show
-  name: az healthcareapis operation-result show
-  summary: Get the operation result for a long running operation.
+- ext_healthcareapis_az_healthcareapis_operation_result_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -46,4 +37,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Healthcareapis operation-result.
+metadata:
+  description: Healthcareapis operation-result.

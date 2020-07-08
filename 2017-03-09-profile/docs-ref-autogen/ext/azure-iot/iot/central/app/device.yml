@@ -1,31 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-iot_az_iot_central_app_device
-  name: az iot central app device
-  summary: Manage and configure IoT Central devices.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-iot_az_iot_central_app_device_create
-  - ext_azure-iot_az_iot_central_app_device_delete
-  - ext_azure-iot_az_iot_central_app_device_list
-  - ext_azure-iot_az_iot_central_app_device_registration_info
-  - ext_azure-iot_az_iot_central_app_device_registration_summary
-  - ext_azure-iot_az_iot_central_app_device_show
+### YamlMime:CLIGroup
+uid: ext_azure-iot_az_iot_central_app_device
+name: az iot central app device
+summary: Manage and configure IoT Central devices.
+description: ''
+directCommands:
 - uid: ext_azure-iot_az_iot_central_app_device_create
   name: az iot central app device create
   summary: Create a device in IoT Central.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a device
-    syntax:
-      content: az iot central app device create --app-id {appid} --device-id {deviceid}
+    syntax: az iot central app device create --app-id {appid} --device-id {deviceid}
   - summary: Create a simulated device
-    syntax:
-      content: az iot central app device create --app-id {appid} --device-id {deviceid} --instance-of {devicetemplateid} --simulated
+    syntax: az iot central app device create --app-id {appid} --device-id {deviceid} --instance-of {devicetemplateid} --simulated
   parameters:
   - isRequired: true
     name: --app-id
@@ -56,12 +43,9 @@ items:
   name: az iot central app device delete
   summary: Delete a device from IoT Central.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a device
-    syntax:
-      content: az iot central app device delete --app-id {appid} --device-id {deviceid}
+    syntax: az iot central app device delete --app-id {appid} --device-id {deviceid}
   parameters:
   - isRequired: true
     name: --app-id
@@ -82,12 +66,9 @@ items:
   name: az iot central app device list
   summary: List all devices in IoT Central.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all devices in IoT Central
-    syntax:
-      content: az iot central app device list --app-id {appid}
+    syntax: az iot central app device list --app-id {appid}
   parameters:
   - isRequired: true
     name: --app-id
@@ -107,12 +88,9 @@ items:
     Note: This command can take a significant amount of time to return
 
     if no device id is specified and your app contains a lot of devices.
-  langs:
-  - azurecli
   examples:
   - summary: Get registration info on specified device
-    syntax:
-      content: az iot central app device registration-info --app-id {appid} --device-id {deviceid}
+    syntax: az iot central app device registration-info --app-id {appid} --device-id {deviceid}
   parameters:
   - isRequired: true
     name: --app-id
@@ -136,12 +114,9 @@ items:
     Note: This command can take a significant amount of time to return
 
     if your app contains a lot of devices.
-  langs:
-  - azurecli
   examples:
   - summary: Registration summary
-    syntax:
-      content: az iot central app device registration-summary --app-id {appid}
+    syntax: az iot central app device registration-summary --app-id {appid}
   parameters:
   - isRequired: true
     name: --app-id
@@ -158,12 +133,9 @@ items:
   name: az iot central app device show
   summary: Get a device from IoT Central.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get a device
-    syntax:
-      content: az iot central app device show --app-id {appid} --device-id {deviceid}
+    syntax: az iot central app device show --app-id {appid} --device-id {deviceid}
   parameters:
   - isRequired: true
     name: --app-id
@@ -181,24 +153,12 @@ items:
     summary: "Authorization token for request. More info available here: <a href=\"https://docs.microsoft.com/en-us/learn/modules/manage-iot-central-apps-with-rest-api/\">https://docs.microsoft.com/en-us/learn/modules/manage-iot-central-apps-with-rest-api/</a> MUST INCLUDE type (e.g. 'SharedAccessToken ...', 'Bearer ...'). Example: 'Bearer someBearerTokenHere'."
     description: ''
 commands:
-- uid: ext_azure-iot_az_iot_central_app_device_create
-  name: az iot central app device create
-  summary: Create a device in IoT Central.
-- uid: ext_azure-iot_az_iot_central_app_device_delete
-  name: az iot central app device delete
-  summary: Delete a device from IoT Central.
-- uid: ext_azure-iot_az_iot_central_app_device_list
-  name: az iot central app device list
-  summary: List all devices in IoT Central.
-- uid: ext_azure-iot_az_iot_central_app_device_registration_info
-  name: az iot central app device registration-info
-  summary: Get registration info on device(s) from IoT Central.
-- uid: ext_azure-iot_az_iot_central_app_device_registration_summary
-  name: az iot central app device registration-summary
-  summary: Provides a registration summary of all the devices in an app.
-- uid: ext_azure-iot_az_iot_central_app_device_show
-  name: az iot central app device show
-  summary: Get a device from IoT Central.
+- ext_azure-iot_az_iot_central_app_device_create
+- ext_azure-iot_az_iot_central_app_device_delete
+- ext_azure-iot_az_iot_central_app_device_list
+- ext_azure-iot_az_iot_central_app_device_registration_info
+- ext_azure-iot_az_iot_central_app_device_registration_summary
+- ext_azure-iot_az_iot_central_app_device_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -214,4 +174,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage and configure IoT Central devices.
+metadata:
+  description: Manage and configure IoT Central devices.

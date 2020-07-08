@@ -1,35 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_appconfig_kv
-  name: az appconfig kv
-  summary: Manage key-values stored in an App Configuration.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_appconfig_kv_delete
-  - az_appconfig_kv_export
-  - az_appconfig_kv_import
-  - az_appconfig_kv_list
-  - az_appconfig_kv_lock
-  - az_appconfig_kv_restore
-  - az_appconfig_kv_set
-  - az_appconfig_kv_set_keyvault
-  - az_appconfig_kv_show
-  - az_appconfig_kv_unlock
+### YamlMime:CLIGroup
+uid: az_appconfig_kv
+name: az appconfig kv
+summary: Manage key-values stored in an App Configuration.
+description: ''
+directCommands:
 - uid: az_appconfig_kv_delete
   name: az appconfig kv delete
   summary: Delete key-values.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a key using App Configuration name without confirmation.
-    syntax:
-      content: az appconfig kv delete -n MyAppConfiguration --key color --label MyLabel --yes
+    syntax: az appconfig kv delete -n MyAppConfiguration --key color --label MyLabel --yes
   - summary: Delete a key using connection string.
-    syntax:
-      content: az appconfig kv delete --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key color --label MyLabel
+    syntax: az appconfig kv delete --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key color --label MyLabel
   parameters:
   - isRequired: true
     name: --key
@@ -60,24 +43,17 @@ items:
   name: az appconfig kv export
   summary: Export configurations to another place from your App Configuration.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Export all keys and feature flags with label test to a json file.
-    syntax:
-      content: az appconfig kv export -n MyAppConfiguration --label test -d file --path D:/abc.json --format json
+    syntax: az appconfig kv export -n MyAppConfiguration --label test -d file --path D:/abc.json --format json
   - summary: Export all keys with null label to an App Service application.
-    syntax:
-      content: az appconfig kv export -n MyAppConfiguration -d appservice  --appservice-account MyAppService
+    syntax: az appconfig kv export -n MyAppConfiguration -d appservice  --appservice-account MyAppService
   - summary: Export all keys with label test excluding feature flags to a json file.
-    syntax:
-      content: az appconfig kv export -n MyAppConfiguration --label test -d file --path D:/abc.json --format json --skip-features
+    syntax: az appconfig kv export -n MyAppConfiguration --label test -d file --path D:/abc.json --format json --skip-features
   - summary: Export all keys and feature flags with all labels to another App Configuration.
-    syntax:
-      content: az appconfig kv export -n MyAppConfiguration -d appconfig --dest-name AnotherAppConfiguration --key * --label * --preserve-labels
+    syntax: az appconfig kv export -n MyAppConfiguration -d appconfig --dest-name AnotherAppConfiguration --key * --label * --preserve-labels
   - summary: Export all keys and feature flags with all labels to another App Configuration and overwrite destination labels.
-    syntax:
-      content: az appconfig kv export -n MyAppConfiguration -d appconfig --dest-name AnotherAppConfiguration --key * --label * --dest-label ExportedKeys
+    syntax: az appconfig kv export -n MyAppConfiguration -d appconfig --dest-name AnotherAppConfiguration --key * --label * --dest-label ExportedKeys
   parameters:
   - isRequired: true
     name: --destination -d
@@ -158,24 +134,17 @@ items:
   name: az appconfig kv import
   summary: Import configurations into your App Configuration from another place.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Import all keys and feature flags from a file and apply test label.
-    syntax:
-      content: az appconfig kv import -n MyAppConfiguration --label test -s file --path D:/abc.json --format json
+    syntax: az appconfig kv import -n MyAppConfiguration --label test -s file --path D:/abc.json --format json
   - summary: Import all keys and feature flags with null label and apply new label from an App Configuration.
-    syntax:
-      content: az appconfig kv import -n MyAppConfiguration -s appconfig --src-name AnotherAppConfiguration --label ImportedKeys
+    syntax: az appconfig kv import -n MyAppConfiguration -s appconfig --src-name AnotherAppConfiguration --label ImportedKeys
   - summary: Import all keys and apply null label from an App Service appliaction.
-    syntax:
-      content: az appconfig kv import -n MyAppConfiguration -s appservice --appservice-account MyAppService
+    syntax: az appconfig kv import -n MyAppConfiguration -s appservice --appservice-account MyAppService
   - summary: Import all keys with label test and apply test2 label excluding feature flags from an App Configuration.
-    syntax:
-      content: az appconfig kv import -n MyAppConfiguration -s appconfig --src-label test --label test2 --src-name AnotherAppConfiguration --skip-features
+    syntax: az appconfig kv import -n MyAppConfiguration -s appconfig --src-label test --label test2 --src-name AnotherAppConfiguration --skip-features
   - summary: Import all keys and feature flags with all labels to another App Configuration.
-    syntax:
-      content: az appconfig kv import -n MyAppConfiguration -s appconfig --src-name AnotherAppConfiguration --src-key * --src-label * --preserve-labels
+    syntax: az appconfig kv import -n MyAppConfiguration -s appconfig --src-name AnotherAppConfiguration --src-key * --src-label * --preserve-labels
   parameters:
   - isRequired: true
     name: --source -s
@@ -249,24 +218,17 @@ items:
   name: az appconfig kv list
   summary: List key-values.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all key-values with null label.
-    syntax:
-      content: az appconfig kv list -n MyAppConfiguration --label \0
+    syntax: az appconfig kv list -n MyAppConfiguration --label \0
   - summary: List a specific key for any label start with v1. using connection string.
-    syntax:
-      content: az appconfig kv list --key color --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --label v1.*
+    syntax: az appconfig kv list --key color --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --label v1.*
   - summary: List all keys with any labels and query only key, value and tags.
-    syntax:
-      content: az appconfig kv list --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --fields key value tags --datetime "2019-05-01T11:24:12Z"
+    syntax: az appconfig kv list --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --fields key value tags --datetime "2019-05-01T11:24:12Z"
   - summary: List content of key vault reference with key prefix 'KVRef_' and only select key and value.
-    syntax:
-      content: az appconfig kv list -n MyAppConfiguration --key "KVRef_*" --resolve-keyvault --query "[*].{key:key, value:value}"
+    syntax: az appconfig kv list -n MyAppConfiguration --key "KVRef_*" --resolve-keyvault --query "[*].{key:key, value:value}"
   - summary: List key-values with multiple labels.
-    syntax:
-      content: az appconfig kv list --label test,prod,\0 -n MyAppConfiguration
+    syntax: az appconfig kv list --label test,prod,\0 -n MyAppConfiguration
   parameters:
   - name: --all
     summary: List all items.
@@ -310,15 +272,11 @@ items:
   name: az appconfig kv lock
   summary: Lock a key-value to prohibit write operations.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Lock a key-value using App Configuration name.
-    syntax:
-      content: az appconfig kv lock -n MyAppConfiguration --key color --label test
+    syntax: az appconfig kv lock -n MyAppConfiguration --key color --label test
   - summary: Force locking a key-value using connection string.
-    syntax:
-      content: az appconfig kv lock --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key color --label test --yes
+    syntax: az appconfig kv lock --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key color --label test --yes
   parameters:
   - isRequired: true
     name: --key
@@ -349,15 +307,11 @@ items:
   name: az appconfig kv restore
   summary: Restore key-values.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Restore all key-values to a specific point in time.
-    syntax:
-      content: az appconfig kv restore -n MyAppConfiguration --datetime "2019-05-01T11:24:12Z"
+    syntax: az appconfig kv restore -n MyAppConfiguration --datetime "2019-05-01T11:24:12Z"
   - summary: Restore a specific key for any label start with v1. using connection string to a specific point in time.
-    syntax:
-      content: az appconfig kv restore --key color --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --label v1.* --datetime "2019-05-01T11:24:12Z"
+    syntax: az appconfig kv restore --key color --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --label v1.* --datetime "2019-05-01T11:24:12Z"
   parameters:
   - isRequired: true
     name: --datetime
@@ -391,15 +345,11 @@ items:
   name: az appconfig kv set
   summary: Set a key-value.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Set a key-value with label MyLabel.
-    syntax:
-      content: az appconfig kv set -n MyAppConfiguration --key color --label MyLabel --value red
+    syntax: az appconfig kv set -n MyAppConfiguration --key color --label MyLabel --value red
   - summary: Set a key with null label using connection string.
-    syntax:
-      content: az appconfig kv set --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key color --value red --tags key1=value1 key2=value2
+    syntax: az appconfig kv set --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key color --value red --tags key1=value1 key2=value2
   parameters:
   - isRequired: true
     name: --key
@@ -439,15 +389,11 @@ items:
   name: az appconfig kv set-keyvault
   summary: Set a keyvault reference.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Set a keyvault reference with label MyLabel.
-    syntax:
-      content: az appconfig kv set-keyvault -n MyAppConfiguration --key HostSecret --label MyLabel --secret-identifier https://contoso.vault.azure.net/Secrets/DummySecret/Dummyversion
+    syntax: az appconfig kv set-keyvault -n MyAppConfiguration --key HostSecret --label MyLabel --secret-identifier https://contoso.vault.azure.net/Secrets/DummySecret/Dummyversion
   - summary: Set a keyvault reference with null label and multiple tags using connection string.
-    syntax:
-      content: az appconfig kv set-keyvault --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key HostSecret --secret-identifier https://contoso.vault.azure.net/Secrets/DummySecret --tags tag1=value1 tag2=value2
+    syntax: az appconfig kv set-keyvault --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key HostSecret --secret-identifier https://contoso.vault.azure.net/Secrets/DummySecret --tags tag1=value1 tag2=value2
   parameters:
   - isRequired: true
     name: --key
@@ -485,15 +431,11 @@ items:
   name: az appconfig kv show
   summary: Show all attributes of a key-value.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a key-value using App Configuration name with a specific label and datetime
-    syntax:
-      content: az appconfig kv show -n MyAppConfiguration --key color --label MyLabel --datetime "2019-05-01T11:24:12Z"
+    syntax: az appconfig kv show -n MyAppConfiguration --key color --label MyLabel --datetime "2019-05-01T11:24:12Z"
   - summary: Show a key-value using connection string with label
-    syntax:
-      content: az appconfig kv show --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key color --label MyLabel
+    syntax: az appconfig kv show --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key color --label MyLabel
   parameters:
   - isRequired: true
     name: --key
@@ -524,15 +466,11 @@ items:
   name: az appconfig kv unlock
   summary: Unlock a key-value to gain write operations.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Unlock a key-value using App Configuration name.
-    syntax:
-      content: az appconfig kv unlock -n MyAppConfiguration --key color --label test
+    syntax: az appconfig kv unlock -n MyAppConfiguration --key color --label test
   - summary: Force unlocking a key-value using connection string.
-    syntax:
-      content: az appconfig kv unlock --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key color --label test --yes
+    syntax: az appconfig kv unlock --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key color --label test --yes
   parameters:
   - isRequired: true
     name: --key
@@ -560,36 +498,16 @@ items:
       path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_appconfig_kv_delete
-  name: az appconfig kv delete
-  summary: Delete key-values.
-- uid: az_appconfig_kv_export
-  name: az appconfig kv export
-  summary: Export configurations to another place from your App Configuration.
-- uid: az_appconfig_kv_import
-  name: az appconfig kv import
-  summary: Import configurations into your App Configuration from another place.
-- uid: az_appconfig_kv_list
-  name: az appconfig kv list
-  summary: List key-values.
-- uid: az_appconfig_kv_lock
-  name: az appconfig kv lock
-  summary: Lock a key-value to prohibit write operations.
-- uid: az_appconfig_kv_restore
-  name: az appconfig kv restore
-  summary: Restore key-values.
-- uid: az_appconfig_kv_set
-  name: az appconfig kv set
-  summary: Set a key-value.
-- uid: az_appconfig_kv_set_keyvault
-  name: az appconfig kv set-keyvault
-  summary: Set a keyvault reference.
-- uid: az_appconfig_kv_show
-  name: az appconfig kv show
-  summary: Show all attributes of a key-value.
-- uid: az_appconfig_kv_unlock
-  name: az appconfig kv unlock
-  summary: Unlock a key-value to gain write operations.
+- az_appconfig_kv_delete
+- az_appconfig_kv_export
+- az_appconfig_kv_import
+- az_appconfig_kv_list
+- az_appconfig_kv_lock
+- az_appconfig_kv_restore
+- az_appconfig_kv_set
+- az_appconfig_kv_set_keyvault
+- az_appconfig_kv_show
+- az_appconfig_kv_unlock
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -605,10 +523,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/26e341bd9ce989aa68defdb81ceede36b6c5ba6f/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-updated_at: 5/7/2020 7:45:43 AM
-ms.date: 05/07/2020
-description: Manage key-values stored in an App Configuration.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/26e341bd9ce989aa68defdb81ceede36b6c5ba6f/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
+  updated_at: 5/7/2020 7:45:43 AM
+  ms.date: 05/07/2020
+  description: Manage key-values stored in an App Configuration.

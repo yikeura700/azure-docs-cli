@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_pipelines_release
-  name: az pipelines release
-  summary: Manage releases.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_pipelines_release_create
-  - az_pipelines_release_list
-  - az_pipelines_release_show
+### YamlMime:CLIGroup
+uid: az_pipelines_release
+name: az pipelines release
+summary: Manage releases.
+description: ''
+directCommands:
 - uid: az_pipelines_release_create
   name: az pipelines release create
   summary: Request (create) a release.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --artifact-metadata-list
     summary: Space separated "alias=version_id" pairs.
@@ -49,8 +41,6 @@ items:
   name: az pipelines release list
   summary: List release results.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --definition-id
     summary: ID of definition to list releases for.
@@ -81,8 +71,6 @@ items:
   name: az pipelines release show
   summary: Get the details of a release.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -105,24 +93,12 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_pipelines_release_create
-  name: az pipelines release create
-  summary: Request (create) a release.
-- uid: az_pipelines_release_definition
-  name: az pipelines release definition
-  summary: Manage release definitions.
-- uid: az_pipelines_release_definition_list
-  name: az pipelines release definition list
-  summary: List release definitions.
-- uid: az_pipelines_release_definition_show
-  name: az pipelines release definition show
-  summary: Get the details of a release definition.
-- uid: az_pipelines_release_list
-  name: az pipelines release list
-  summary: List release results.
-- uid: az_pipelines_release_show
-  name: az pipelines release show
-  summary: Get the details of a release.
+- az_pipelines_release_create
+- az_pipelines_release_definition
+- az_pipelines_release_definition_list
+- az_pipelines_release_definition_show
+- az_pipelines_release_list
+- az_pipelines_release_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -138,4 +114,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage releases.
+metadata:
+  description: Manage releases.

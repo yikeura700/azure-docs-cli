@@ -1,29 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_csvmware_az_csvmware_vm_disk
-  name: az csvmware vm disk
-  summary: Manage VMware virtual machine's disks.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_csvmware_az_csvmware_vm_disk_add
-  - ext_csvmware_az_csvmware_vm_disk_delete
-  - ext_csvmware_az_csvmware_vm_disk_list
-  - ext_csvmware_az_csvmware_vm_disk_show
+### YamlMime:CLIGroup
+uid: ext_csvmware_az_csvmware_vm_disk
+name: az csvmware vm disk
+summary: Manage VMware virtual machine's disks.
+description: ''
+directCommands:
 - uid: ext_csvmware_az_csvmware_vm_disk_add
   name: az csvmware vm disk add
   summary: Add disk to a VMware virtual machine.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add a disk with default parameters in a VM.
-    syntax:
-      content: az csvmware vm disk add --vm-name MyVm -g MyResourceGroup
+    syntax: az csvmware vm disk add --vm-name MyVm -g MyResourceGroup
   - summary: Add a disk with SATA controller 0 and 64 GB memory in a VM.
-    syntax:
-      content: az csvmware vm disk add --vm-name MyVm -g MyResourceGroup --controller 15000 --size 67108864
+    syntax: az csvmware vm disk add --vm-name MyVm -g MyResourceGroup --controller 15000 --size 67108864
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -50,12 +39,9 @@ items:
   name: az csvmware vm disk delete
   summary: Delete disks from a VM.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete two disks from a VM.
-    syntax:
-      content: az csvmware vm disk delete --vm-name MyVm -g MyResourceGroup --disks "My Disk Name 1" "My Disk Name 2"
+    syntax: az csvmware vm disk delete --vm-name MyVm -g MyResourceGroup --disks "My Disk Name 1" "My Disk Name 2"
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -73,12 +59,9 @@ items:
   name: az csvmware vm disk list
   summary: List details of disks available on a VMware virtual machine.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List details of disks in a VM.
-    syntax:
-      content: az csvmware vm disk list --vm-name MyVm -g MyResourceGroup
+    syntax: az csvmware vm disk list --vm-name MyVm -g MyResourceGroup
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -92,12 +75,9 @@ items:
   name: az csvmware vm disk show
   summary: Get the details of a VMware virtual machine's disk.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the details of a disk in a VM.
-    syntax:
-      content: az csvmware vm disk show --vm-name MyVm -g MyResourceGroup -n "My Disk Name"
+    syntax: az csvmware vm disk show --vm-name MyVm -g MyResourceGroup -n "My Disk Name"
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -112,18 +92,10 @@ items:
     summary: Name of the disk.
     description: ''
 commands:
-- uid: ext_csvmware_az_csvmware_vm_disk_add
-  name: az csvmware vm disk add
-  summary: Add disk to a VMware virtual machine.
-- uid: ext_csvmware_az_csvmware_vm_disk_delete
-  name: az csvmware vm disk delete
-  summary: Delete disks from a VM.
-- uid: ext_csvmware_az_csvmware_vm_disk_list
-  name: az csvmware vm disk list
-  summary: List details of disks available on a VMware virtual machine.
-- uid: ext_csvmware_az_csvmware_vm_disk_show
-  name: az csvmware vm disk show
-  summary: Get the details of a VMware virtual machine's disk.
+- ext_csvmware_az_csvmware_vm_disk_add
+- ext_csvmware_az_csvmware_vm_disk_delete
+- ext_csvmware_az_csvmware_vm_disk_list
+- ext_csvmware_az_csvmware_vm_disk_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -139,4 +111,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage VMware virtual machine's disks.
+metadata:
+  description: Manage VMware virtual machine's disks.

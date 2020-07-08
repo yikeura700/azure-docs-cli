@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_webapp_vnet_integration
-  name: az webapp vnet-integration
-  summary: Methods that list, add, and remove virtual network integrations from a webapp.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_webapp_vnet_integration_add
-  - az_webapp_vnet_integration_list
-  - az_webapp_vnet_integration_remove
+### YamlMime:CLIGroup
+uid: az_webapp_vnet_integration
+name: az webapp vnet-integration
+summary: Methods that list, add, and remove virtual network integrations from a webapp.
+description: ''
+directCommands:
 - uid: az_webapp_vnet_integration_add
   name: az webapp vnet-integration add
   summary: Add a regional virtual network integration to a webapp.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: add a regional virtual network integration to a webapp
-    syntax:
-      content: az webapp vnet-integration add -g MyResourceGroup -n MyWebapp --vnet MyVnetName --subnet MySubnetName -s [slot]
+    syntax: az webapp vnet-integration add -g MyResourceGroup -n MyWebapp --vnet MyVnetName --subnet MySubnetName -s [slot]
   parameters:
   - isRequired: true
     name: --name -n
@@ -47,12 +38,9 @@ items:
   name: az webapp vnet-integration list
   summary: List the virtual network integrations on a webapp.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: list the virtual network integrations on a webapp
-    syntax:
-      content: az webapp vnet-integration list -g MyResourceGroup -n MyWebapp -s [slot]
+    syntax: az webapp vnet-integration list -g MyResourceGroup -n MyWebapp -s [slot]
   parameters:
   - isRequired: true
     name: --name -n
@@ -72,12 +60,9 @@ items:
   name: az webapp vnet-integration remove
   summary: Remove a regional virtual network integration from webapp.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: remove a regional virtual network integration from webapp
-    syntax:
-      content: az webapp vnet-integration remove -g MyResourceGroup -n MyWebapp -s [slot]
+    syntax: az webapp vnet-integration remove -g MyResourceGroup -n MyWebapp -s [slot]
   parameters:
   - isRequired: true
     name: --name -n
@@ -94,15 +79,9 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_webapp_vnet_integration_add
-  name: az webapp vnet-integration add
-  summary: Add a regional virtual network integration to a webapp.
-- uid: az_webapp_vnet_integration_list
-  name: az webapp vnet-integration list
-  summary: List the virtual network integrations on a webapp.
-- uid: az_webapp_vnet_integration_remove
-  name: az webapp vnet-integration remove
-  summary: Remove a regional virtual network integration from webapp.
+- az_webapp_vnet_integration_add
+- az_webapp_vnet_integration_list
+- az_webapp_vnet_integration_remove
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -118,4 +97,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Methods that list, add, and remove virtual network integrations from a webapp.
+metadata:
+  description: Methods that list, add, and remove virtual network integrations from a webapp.

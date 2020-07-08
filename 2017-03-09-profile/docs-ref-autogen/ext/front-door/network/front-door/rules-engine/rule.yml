@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_front-door_az_network_front_door_rules_engine_rule
-  name: az network front-door rules-engine rule
-  summary: Manage Rules Engine rules.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_front-door_az_network_front_door_rules_engine_rule_create
-  - ext_front-door_az_network_front_door_rules_engine_rule_delete
-  - ext_front-door_az_network_front_door_rules_engine_rule_list
-  - ext_front-door_az_network_front_door_rules_engine_rule_show
-  - ext_front-door_az_network_front_door_rules_engine_rule_update
+### YamlMime:CLIGroup
+uid: ext_front-door_az_network_front_door_rules_engine_rule
+name: az network front-door rules-engine rule
+summary: Manage Rules Engine rules.
+description: ''
+directCommands:
 - uid: ext_front-door_az_network_front_door_rules_engine_rule_create
   name: az network front-door rules-engine rule create
   summary: Create a Rules Engine rule for a Front Door.
   description: This command allows creating Rules Engine configuration with Header action type. To add additional actions like Route overrides, use the `az network front-door rules-engine rule action add` command.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --front-door-name -f
@@ -84,8 +74,6 @@ items:
   name: az network front-door rules-engine rule delete
   summary: Delete a Rules Engine rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --front-door-name -f
@@ -107,8 +95,6 @@ items:
   name: az network front-door rules-engine rule list
   summary: List rules of a Rules Engine configuration.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --front-door-name -f
@@ -126,8 +112,6 @@ items:
   name: az network front-door rules-engine rule show
   summary: Get the details of a Rules Engine rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --front-door-name -f
@@ -149,8 +133,6 @@ items:
   name: az network front-door rules-engine rule update
   summary: Update Rules Engine configuration of a rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --front-door-name -f
@@ -176,45 +158,19 @@ items:
     summary: The priority number must start from 0 and consecutive. Rule with greater priority value will be applied later.
     description: ''
 commands:
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_action
-  name: az network front-door rules-engine rule action
-  summary: Manage Rules Engine actions for Front Door.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_action_add
-  name: az network front-door rules-engine rule action add
-  summary: Add an action to a Rules Engine rule.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_action_list
-  name: az network front-door rules-engine rule action list
-  summary: Show all actions that apply for a Rules Engine rule.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_action_remove
-  name: az network front-door rules-engine rule action remove
-  summary: Remove an action from a Rules Engine rule.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_condition
-  name: az network front-door rules-engine rule condition
-  summary: Manage Rules Engine match conditions for Front Door.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_condition_add
-  name: az network front-door rules-engine rule condition add
-  summary: Add a match condition to a Rules Engine rule.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_condition_list
-  name: az network front-door rules-engine rule condition list
-  summary: Show all match conditions associated with a Rules Engine rule.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_condition_remove
-  name: az network front-door rules-engine rule condition remove
-  summary: Remove a match condition from a Rules Engine rule.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_create
-  name: az network front-door rules-engine rule create
-  summary: Create a Rules Engine rule for a Front Door.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_delete
-  name: az network front-door rules-engine rule delete
-  summary: Delete a Rules Engine rule.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_list
-  name: az network front-door rules-engine rule list
-  summary: List rules of a Rules Engine configuration.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_show
-  name: az network front-door rules-engine rule show
-  summary: Get the details of a Rules Engine rule.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_update
-  name: az network front-door rules-engine rule update
-  summary: Update Rules Engine configuration of a rule.
+- ext_front-door_az_network_front_door_rules_engine_rule_action
+- ext_front-door_az_network_front_door_rules_engine_rule_action_add
+- ext_front-door_az_network_front_door_rules_engine_rule_action_list
+- ext_front-door_az_network_front_door_rules_engine_rule_action_remove
+- ext_front-door_az_network_front_door_rules_engine_rule_condition
+- ext_front-door_az_network_front_door_rules_engine_rule_condition_add
+- ext_front-door_az_network_front_door_rules_engine_rule_condition_list
+- ext_front-door_az_network_front_door_rules_engine_rule_condition_remove
+- ext_front-door_az_network_front_door_rules_engine_rule_create
+- ext_front-door_az_network_front_door_rules_engine_rule_delete
+- ext_front-door_az_network_front_door_rules_engine_rule_list
+- ext_front-door_az_network_front_door_rules_engine_rule_show
+- ext_front-door_az_network_front_door_rules_engine_rule_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -230,4 +186,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Rules Engine rules.
+metadata:
+  description: Manage Rules Engine rules.

@@ -1,30 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_privatedns_az_network_private_dns_link_vnet
-  name: az network private-dns link vnet
-  summary: Manage virtual network links to the specified Private DNS zone.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_privatedns_az_network_private_dns_link_vnet_create
-  - ext_privatedns_az_network_private_dns_link_vnet_delete
-  - ext_privatedns_az_network_private_dns_link_vnet_list
-  - ext_privatedns_az_network_private_dns_link_vnet_show
-  - ext_privatedns_az_network_private_dns_link_vnet_update
-  - ext_privatedns_az_network_private_dns_link_vnet_wait
+### YamlMime:CLIGroup
+uid: ext_privatedns_az_network_private_dns_link_vnet
+name: az network private-dns link vnet
+summary: Manage virtual network links to the specified Private DNS zone.
+description: ''
+directCommands:
 - uid: ext_privatedns_az_network_private_dns_link_vnet_create
   name: az network private-dns link vnet create
   summary: Create a virtual network link to the specified Private DNS zone.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a virtual network link to the specified Private DNS zone.
-    syntax:
-      content: >-
-        az network private-dns link vnet create -g MyResourceGroup -n MyLinkName -z www.mysite.com \
-            -v MyVirtualNetworkId -e False
+    syntax: >-
+      az network private-dns link vnet create -g MyResourceGroup -n MyLinkName -z www.mysite.com \
+          -v MyVirtualNetworkId -e False
   parameters:
   - isRequired: true
     name: --name -n
@@ -57,12 +45,9 @@ items:
   name: az network private-dns link vnet delete
   summary: Delete a virtual network link to the specified Private DNS zone.
   description: In case of a registration virtual network, all auto-registered DNS records in the zone for the virtual network will also be deleted. This operation cannot be undone.
-  langs:
-  - azurecli
   examples:
   - summary: Delete a virtual network link to the specified Private DNS zone.
-    syntax:
-      content: az network private-dns link vnet delete -g MyResourceGroup -z www.mysite.com -n MyLinkName
+    syntax: az network private-dns link vnet delete -g MyResourceGroup -z www.mysite.com -n MyLinkName
   parameters:
   - isRequired: true
     name: --name -n
@@ -89,12 +74,9 @@ items:
   name: az network private-dns link vnet list
   summary: List the virtual network links to the specified Private DNS zone.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List virtual network links to the specified Private DNS zone in a resource group.
-    syntax:
-      content: az network private-dns link vnet list -g MyResourceGroup -z www.mysite.com
+    syntax: az network private-dns link vnet list -g MyResourceGroup -z www.mysite.com
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -111,12 +93,9 @@ items:
   name: az network private-dns link vnet show
   summary: Get a virtual network link to the specified Private DNS zone.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get a virtual network link to the specified Private DNS zone..
-    syntax:
-      content: az network private-dns link vnet show -g MyResourceGroup -n MyLinkName -z www.mysite.com
+    syntax: az network private-dns link vnet show -g MyResourceGroup -n MyLinkName -z www.mysite.com
   parameters:
   - isRequired: true
     name: --name -n
@@ -134,12 +113,9 @@ items:
   name: az network private-dns link vnet update
   summary: Update a virtual network link's properties. Does not modify virtual network within the link.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update a virtual network link properties to enable registration.
-    syntax:
-      content: az network private-dns link vnet update -g MyResourceGroup -n MyLinkName -z www.mysite.com -e True
+    syntax: az network private-dns link vnet update -g MyResourceGroup -n MyLinkName -z www.mysite.com -e True
   parameters:
   - isRequired: true
     name: --name -n
@@ -182,12 +158,9 @@ items:
   name: az network private-dns link vnet wait
   summary: Place the CLI in a waiting state until a condition of the virtual network link to the specified Private DNS zone is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pause executing next line of CLI script until the virtual network link to the specified Private DNS zone is successfully provisioned.
-    syntax:
-      content: az network private-dns link vnet wait -g MyResourceGroup -n MyLinkName -z www.mysite.com --created
+    syntax: az network private-dns link vnet wait -g MyResourceGroup -n MyLinkName -z www.mysite.com --created
   parameters:
   - isRequired: true
     name: --name -n
@@ -225,24 +198,12 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_privatedns_az_network_private_dns_link_vnet_create
-  name: az network private-dns link vnet create
-  summary: Create a virtual network link to the specified Private DNS zone.
-- uid: ext_privatedns_az_network_private_dns_link_vnet_delete
-  name: az network private-dns link vnet delete
-  summary: Delete a virtual network link to the specified Private DNS zone.
-- uid: ext_privatedns_az_network_private_dns_link_vnet_list
-  name: az network private-dns link vnet list
-  summary: List the virtual network links to the specified Private DNS zone.
-- uid: ext_privatedns_az_network_private_dns_link_vnet_show
-  name: az network private-dns link vnet show
-  summary: Get a virtual network link to the specified Private DNS zone.
-- uid: ext_privatedns_az_network_private_dns_link_vnet_update
-  name: az network private-dns link vnet update
-  summary: Update a virtual network link's properties. Does not modify virtual network within the link.
-- uid: ext_privatedns_az_network_private_dns_link_vnet_wait
-  name: az network private-dns link vnet wait
-  summary: Place the CLI in a waiting state until a condition of the virtual network link to the specified Private DNS zone is met.
+- ext_privatedns_az_network_private_dns_link_vnet_create
+- ext_privatedns_az_network_private_dns_link_vnet_delete
+- ext_privatedns_az_network_private_dns_link_vnet_list
+- ext_privatedns_az_network_private_dns_link_vnet_show
+- ext_privatedns_az_network_private_dns_link_vnet_update
+- ext_privatedns_az_network_private_dns_link_vnet_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -258,4 +219,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage virtual network links to the specified Private DNS zone.
+metadata:
+  description: Manage virtual network links to the specified Private DNS zone.

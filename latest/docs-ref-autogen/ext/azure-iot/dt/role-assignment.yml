@@ -1,39 +1,28 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-iot_az_dt_role_assignment
-  name: az dt role-assignment
-  summary: Manage RBAC role assignments for a Digital Twins instance.
-  description: >-
-    Note that in order to perform role assignments, the logged in principal needs permissions
+### YamlMime:CLIGroup
+uid: ext_azure-iot_az_dt_role_assignment
+name: az dt role-assignment
+summary: Manage RBAC role assignments for a Digital Twins instance.
+description: >-
+  Note that in order to perform role assignments, the logged in principal needs permissions
 
-    such as Owner or User Access Administrator at the assigned scope.
+  such as Owner or User Access Administrator at the assigned scope.
 
 
-    This command group is provided for convenience. For more complex role assignment scenarios
+  This command group is provided for convenience. For more complex role assignment scenarios
 
-    use the 'az role assignment' command group.
-  langs:
-  - azurecli
-  children:
-  - ext_azure-iot_az_dt_role_assignment_create
-  - ext_azure-iot_az_dt_role_assignment_delete
-  - ext_azure-iot_az_dt_role_assignment_list
+  use the 'az role assignment' command group.
+directCommands:
 - uid: ext_azure-iot_az_dt_role_assignment_create
   name: az dt role-assignment create
   summary: Assign a user, group or service principal to a role against a Digital Twins instance.
   description: Note that in order to perform role assignments, the logged in principal needs permissions such as Owner or User Access Administrator at the assigned scope.
-  langs:
-  - azurecli
   examples:
   - summary: Assign a user (by email) the built-in Digital Twins Owner role against a target instance.
-    syntax:
-      content: az dt role-assignment create -n {instance_name} --assignee "owneruser@microsoft.com" --role "Azure Digital Twins Owner (Preview)"
+    syntax: az dt role-assignment create -n {instance_name} --assignee "owneruser@microsoft.com" --role "Azure Digital Twins Owner (Preview)"
   - summary: Assign a user (by object Id) the built-in Digital Twins Reader role against a target instance.
-    syntax:
-      content: az dt role-assignment create -n {instance_name} --assignee "97a89267-0966-4054-a156-b7d86ef8e216" --role "Azure Digital Twins Reader (Preview)"
+    syntax: az dt role-assignment create -n {instance_name} --assignee "97a89267-0966-4054-a156-b7d86ef8e216" --role "Azure Digital Twins Reader (Preview)"
   - summary: Assign a service principal a custom role against a target instance.
-    syntax:
-      content: az dt role-assignment create -n {instance_name} --assignee {service_principal_name_or_id} --role {role_name_or_id}
+    syntax: az dt role-assignment create -n {instance_name} --assignee {service_principal_name_or_id} --role {role_name_or_id}
   parameters:
   - isRequired: true
     name: --assignee
@@ -54,15 +43,11 @@ items:
   name: az dt role-assignment delete
   summary: Remove a user, group or service principal role assignment from a Digital Twins instance.
   description: Note that in order to perform role assignments, the logged in principal needs permissions such as Owner or User Access Administrator at the assigned scope.
-  langs:
-  - azurecli
   examples:
   - summary: Remove a user from a specific role assignment of a Digital Twins instance.
-    syntax:
-      content: az dt role-assignment delete -n {instance_name} --assignee "removeuser@microsoft.com" --role "Azure Digital Twins Reader (Preview)"
+    syntax: az dt role-assignment delete -n {instance_name} --assignee "removeuser@microsoft.com" --role "Azure Digital Twins Reader (Preview)"
   - summary: Remove a user from all assigned roles of a Digital Twins instance.
-    syntax:
-      content: az dt role-assignment delete -n {instance_name} --assignee "removeuser@microsoft.com"
+    syntax: az dt role-assignment delete -n {instance_name} --assignee "removeuser@microsoft.com"
   parameters:
   - isRequired: true
     name: --dt-name --dtn -n
@@ -81,15 +66,11 @@ items:
   name: az dt role-assignment list
   summary: List the existing role assignments of a Digital Twins instance.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List the role assignments on a target instance.
-    syntax:
-      content: az dt role-assignment list -n {instance_name}
+    syntax: az dt role-assignment list -n {instance_name}
   - summary: List the role assignments on a target instance and filter by role.
-    syntax:
-      content: az dt role-assignment list -n {instance_name} --role {role_name_or_id}
+    syntax: az dt role-assignment list -n {instance_name} --role {role_name_or_id}
   parameters:
   - isRequired: true
     name: --dt-name --dtn -n
@@ -106,15 +87,9 @@ items:
     summary: Role name or Id.
     description: ''
 commands:
-- uid: ext_azure-iot_az_dt_role_assignment_create
-  name: az dt role-assignment create
-  summary: Assign a user, group or service principal to a role against a Digital Twins instance.
-- uid: ext_azure-iot_az_dt_role_assignment_delete
-  name: az dt role-assignment delete
-  summary: Remove a user, group or service principal role assignment from a Digital Twins instance.
-- uid: ext_azure-iot_az_dt_role_assignment_list
-  name: az dt role-assignment list
-  summary: List the existing role assignments of a Digital Twins instance.
+- ext_azure-iot_az_dt_role_assignment_create
+- ext_azure-iot_az_dt_role_assignment_delete
+- ext_azure-iot_az_dt_role_assignment_list
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -130,12 +105,13 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: >-
-  Note that in order to perform role assignments, the logged in principal needs permissions
+metadata:
+  description: >-
+    Note that in order to perform role assignments, the logged in principal needs permissions
 
-  such as Owner or User Access Administrator at the assigned scope.
+    such as Owner or User Access Administrator at the assigned scope.
 
 
-  This command group is provided for convenience. For more complex role assignment scenarios
+    This command group is provided for convenience. For more complex role assignment scenarios
 
-  use the 'az role assignment' command group.
+    use the 'az role assignment' command group.

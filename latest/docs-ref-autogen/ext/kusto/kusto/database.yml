@@ -1,31 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_kusto_az_kusto_database
-  name: az kusto database
-  summary: Kusto database.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_kusto_az_kusto_database_add_principal
-  - ext_kusto_az_kusto_database_create
-  - ext_kusto_az_kusto_database_delete
-  - ext_kusto_az_kusto_database_list
-  - ext_kusto_az_kusto_database_list_principal
-  - ext_kusto_az_kusto_database_remove_principal
-  - ext_kusto_az_kusto_database_show
-  - ext_kusto_az_kusto_database_update
-  - ext_kusto_az_kusto_database_wait
+### YamlMime:CLIGroup
+uid: ext_kusto_az_kusto_database
+name: az kusto database
+summary: Kusto database.
+description: ''
+directCommands:
 - uid: ext_kusto_az_kusto_database_add_principal
   name: az kusto database add-principal
   summary: Add Database principals permissions.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDatabaseAddPrincipals
-    syntax:
-      content: az kusto database add-principal --cluster-name "KustoClusterRPTest4" --database-name "databaseName1" --value name="Some User" type="User" app-id="" email="user@microsoft.com" fqn="aaduser=some_guid" role="Admin" --value name="Kusto" type="Group" app-id="" email="kusto@microsoft.com" fqn="aadgroup=some_guid" role="Viewer" --value name="SomeApp" type="App" app-id="some_guid_app_id" email="" fqn="aadapp=some_guid_app_id" role="Admin" --resource-group "kustorptest"
+    syntax: az kusto database add-principal --cluster-name "KustoClusterRPTest4" --database-name "databaseName1" --value name="Some User" type="User" app-id="" email="user@microsoft.com" fqn="aaduser=some_guid" role="Admin" --value name="Kusto" type="Group" app-id="" email="kusto@microsoft.com" fqn="aadgroup=some_guid" role="Viewer" --value name="SomeApp" type="App" app-id="some_guid_app_id" email="" fqn="aadapp=some_guid_app_id" role="Admin" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -46,12 +31,9 @@ items:
   name: az kusto database create
   summary: Creates or updates a database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDatabasesCreateOrUpdate
-    syntax:
-      content: az kusto database create --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --read-write-database location="westus" soft-delete-period="P1D" --resource-group "kustorptest"
+    syntax: az kusto database create --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --read-write-database location="westus" soft-delete-period="P1D" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -78,12 +60,9 @@ items:
   name: az kusto database delete
   summary: Deletes the database with the given name.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDatabasesDelete
-    syntax:
-      content: az kusto database delete --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --resource-group "kustorptest"
+    syntax: az kusto database delete --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -104,12 +83,9 @@ items:
   name: az kusto database list
   summary: Returns the list of databases of the given Kusto cluster.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDatabasesListByCluster
-    syntax:
-      content: az kusto database list --cluster-name "KustoClusterRPTest4" --resource-group "kustorptest"
+    syntax: az kusto database list --cluster-name "KustoClusterRPTest4" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -123,12 +99,9 @@ items:
   name: az kusto database list-principal
   summary: Returns a list of database principals of the given Kusto cluster and database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDatabaseListPrincipals
-    syntax:
-      content: az kusto database list-principal --cluster-name "KustoClusterRPTest4" --database-name "Kustodatabase8" --resource-group "kustorptest"
+    syntax: az kusto database list-principal --cluster-name "KustoClusterRPTest4" --database-name "Kustodatabase8" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -146,12 +119,9 @@ items:
   name: az kusto database remove-principal
   summary: Remove Database principals permissions.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDatabaseRemovePrincipals
-    syntax:
-      content: az kusto database remove-principal --cluster-name "KustoClusterRPTest4" --database-name "databaseName1" --value name="Some User" type="User" app-id="" email="user@microsoft.com" fqn="aaduser=some_guid" role="Admin" --value name="Kusto" type="Group" app-id="" email="kusto@microsoft.com" fqn="aadgroup=some_guid" role="Viewer" --value name="SomeApp" type="App" app-id="some_guid_app_id" email="" fqn="aadapp=some_guid_app_id" role="Admin" --resource-group "kustorptest"
+    syntax: az kusto database remove-principal --cluster-name "KustoClusterRPTest4" --database-name "databaseName1" --value name="Some User" type="User" app-id="" email="user@microsoft.com" fqn="aaduser=some_guid" role="Admin" --value name="Kusto" type="Group" app-id="" email="kusto@microsoft.com" fqn="aadgroup=some_guid" role="Viewer" --value name="SomeApp" type="App" app-id="some_guid_app_id" email="" fqn="aadapp=some_guid_app_id" role="Admin" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -172,12 +142,9 @@ items:
   name: az kusto database show
   summary: Returns a database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDatabasesGet
-    syntax:
-      content: az kusto database show --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --resource-group "kustorptest"
+    syntax: az kusto database show --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -195,12 +162,9 @@ items:
   name: az kusto database update
   summary: Updates a database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: KustoDatabasesUpdate
-    syntax:
-      content: az kusto database update --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --read-write-database soft-delete-period="P1D" --resource-group "kustorptest"
+    syntax: az kusto database update --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --read-write-database soft-delete-period="P1D" --resource-group "kustorptest"
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -227,8 +191,6 @@ items:
   name: az kusto database wait
   summary: Wait for a managed Kusto database to reach a desired state.
   description: If an operation on a database was interrupted or was started with `--no-wait`, use this command to wait for it to complete.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -266,33 +228,15 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_kusto_az_kusto_database_add_principal
-  name: az kusto database add-principal
-  summary: Add Database principals permissions.
-- uid: ext_kusto_az_kusto_database_create
-  name: az kusto database create
-  summary: Creates or updates a database.
-- uid: ext_kusto_az_kusto_database_delete
-  name: az kusto database delete
-  summary: Deletes the database with the given name.
-- uid: ext_kusto_az_kusto_database_list
-  name: az kusto database list
-  summary: Returns the list of databases of the given Kusto cluster.
-- uid: ext_kusto_az_kusto_database_list_principal
-  name: az kusto database list-principal
-  summary: Returns a list of database principals of the given Kusto cluster and database.
-- uid: ext_kusto_az_kusto_database_remove_principal
-  name: az kusto database remove-principal
-  summary: Remove Database principals permissions.
-- uid: ext_kusto_az_kusto_database_show
-  name: az kusto database show
-  summary: Returns a database.
-- uid: ext_kusto_az_kusto_database_update
-  name: az kusto database update
-  summary: Updates a database.
-- uid: ext_kusto_az_kusto_database_wait
-  name: az kusto database wait
-  summary: Wait for a managed Kusto database to reach a desired state.
+- ext_kusto_az_kusto_database_add_principal
+- ext_kusto_az_kusto_database_create
+- ext_kusto_az_kusto_database_delete
+- ext_kusto_az_kusto_database_list
+- ext_kusto_az_kusto_database_list_principal
+- ext_kusto_az_kusto_database_remove_principal
+- ext_kusto_az_kusto_database_show
+- ext_kusto_az_kusto_database_update
+- ext_kusto_az_kusto_database_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -308,4 +252,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Kusto database.
+metadata:
+  description: Kusto database.

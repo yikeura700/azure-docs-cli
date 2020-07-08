@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_pipelines_variable
-  name: az pipelines variable
-  summary: Manage pipeline variables.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_pipelines_variable_create
-  - az_pipelines_variable_delete
-  - az_pipelines_variable_list
-  - az_pipelines_variable_update
+### YamlMime:CLIGroup
+uid: az_pipelines_variable
+name: az pipelines variable
+summary: Manage pipeline variables.
+description: ''
+directCommands:
 - uid: az_pipelines_variable_create
   name: az pipelines variable create
   summary: Add a variable to a pipeline.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name
@@ -56,8 +47,6 @@ items:
   name: az pipelines variable delete
   summary: Delete a variable from pipeline.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name
@@ -89,8 +78,6 @@ items:
   name: az pipelines variable list
   summary: List the variables in a pipeline.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --detect
     parameterValueGroup: false, true
@@ -115,8 +102,6 @@ items:
   name: az pipelines variable update
   summary: Update a variable in a pipeline.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name
@@ -160,18 +145,10 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_pipelines_variable_create
-  name: az pipelines variable create
-  summary: Add a variable to a pipeline.
-- uid: az_pipelines_variable_delete
-  name: az pipelines variable delete
-  summary: Delete a variable from pipeline.
-- uid: az_pipelines_variable_list
-  name: az pipelines variable list
-  summary: List the variables in a pipeline.
-- uid: az_pipelines_variable_update
-  name: az pipelines variable update
-  summary: Update a variable in a pipeline.
+- az_pipelines_variable_create
+- az_pipelines_variable_delete
+- az_pipelines_variable_list
+- az_pipelines_variable_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -187,4 +164,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage pipeline variables.
+metadata:
+  description: Manage pipeline variables.

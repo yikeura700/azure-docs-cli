@@ -1,19 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_policy_remediation_deployment
-  name: az policy remediation deployment
-  summary: Manage resource policy remediation deployments.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_policy_remediation_deployment_list
+### YamlMime:CLIGroup
+uid: az_policy_remediation_deployment
+name: az policy remediation deployment
+summary: Manage resource policy remediation deployments.
+description: ''
+directCommands:
 - uid: az_policy_remediation_deployment_list
   name: az policy remediation deployment list
   summary: Lists deployments for a resource policy remediation.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -47,9 +41,7 @@ items:
       path: src/azure-cli/azure/cli/command_modules/resource/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_policy_remediation_deployment_list
-  name: az policy remediation deployment list
-  summary: Lists deployments for a resource policy remediation.
+- az_policy_remediation_deployment_list
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -65,10 +57,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
-updated_at: 6/16/2020 5:44:37 AM
-ms.date: 06/16/2020
-description: Manage resource policy remediation deployments.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  updated_at: 6/16/2020 5:44:37 AM
+  ms.date: 06/16/2020
+  description: Manage resource policy remediation deployments.

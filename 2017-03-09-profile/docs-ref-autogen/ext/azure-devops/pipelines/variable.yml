@@ -1,22 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_pipelines_variable
-  name: az pipelines variable
-  summary: Manage pipeline variables.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_pipelines_variable_create
-  - ext_azure-devops_az_pipelines_variable_delete
-  - ext_azure-devops_az_pipelines_variable_list
-  - ext_azure-devops_az_pipelines_variable_update
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_pipelines_variable
+name: az pipelines variable
+summary: Manage pipeline variables.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_pipelines_variable_create
   name: az pipelines variable create
   summary: Add a variable to a pipeline.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name
@@ -53,8 +44,6 @@ items:
   name: az pipelines variable delete
   summary: Delete a variable from pipeline.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name
@@ -83,8 +72,6 @@ items:
   name: az pipelines variable list
   summary: List the variables in a pipeline.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --detect
     parameterValueGroup: false, true
@@ -106,8 +93,6 @@ items:
   name: az pipelines variable update
   summary: Update a variable in a pipeline.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name
@@ -148,18 +133,10 @@ items:
     summary: New value of the variable. For secret variables, use --prompt-value parameter, to be prompted to enter it via standard input. For non-interactive consoles it can be picked from environment variable prefixed with <problematic ids="id12" refid="id11">AZURE_DEVOPS_EXT_PIPELINE_VAR_</problematic> e.g. A variable nameed `MySecret` can be input using environment variable AZURE_DEVOPS_EXT_PIPELINE_VAR_MySecret.
     description: ''
 commands:
-- uid: ext_azure-devops_az_pipelines_variable_create
-  name: az pipelines variable create
-  summary: Add a variable to a pipeline.
-- uid: ext_azure-devops_az_pipelines_variable_delete
-  name: az pipelines variable delete
-  summary: Delete a variable from pipeline.
-- uid: ext_azure-devops_az_pipelines_variable_list
-  name: az pipelines variable list
-  summary: List the variables in a pipeline.
-- uid: ext_azure-devops_az_pipelines_variable_update
-  name: az pipelines variable update
-  summary: Update a variable in a pipeline.
+- ext_azure-devops_az_pipelines_variable_create
+- ext_azure-devops_az_pipelines_variable_delete
+- ext_azure-devops_az_pipelines_variable_list
+- ext_azure-devops_az_pipelines_variable_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -175,4 +152,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage pipeline variables.
+metadata:
+  description: Manage pipeline variables.

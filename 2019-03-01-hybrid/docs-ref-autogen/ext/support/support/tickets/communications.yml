@@ -1,30 +1,21 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_support_az_support_tickets_communications
-  name: az support tickets communications
-  summary: Manage support ticket communications.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_support_az_support_tickets_communications_create
-  - ext_support_az_support_tickets_communications_list
-  - ext_support_az_support_tickets_communications_show
+### YamlMime:CLIGroup
+uid: ext_support_az_support_tickets_communications
+name: az support tickets communications
+summary: Manage support ticket communications.
+description: ''
+directCommands:
 - uid: ext_support_az_support_tickets_communications_create
   name: az support tickets communications create
   summary: Adds a new customer communication to an Azure support ticket.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add communication to subscription ticket.
-    syntax:
-      content: >-
-        az support tickets communications create \
-          --ticket-name "TestTicketName" \
-          --communication-name "TestTicketCommunicationName" \
-          --communication-body "TicketCommunicationBody" \
-          --communication-subject "TicketCommunicationSubject"
+    syntax: >-
+      az support tickets communications create \
+        --ticket-name "TestTicketName" \
+        --communication-name "TestTicketCommunicationName" \
+        --communication-body "TicketCommunicationBody" \
+        --communication-subject "TicketCommunicationSubject"
   parameters:
   - isRequired: true
     name: --communication-name
@@ -49,24 +40,19 @@ items:
   name: az support tickets communications list
   summary: Lists all communications (attachments not included) for a support ticket.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List communications for a subscription support ticket.
-    syntax:
-      content: az support tickets communications list --ticket-name "TestTicketName"
+    syntax: az support tickets communications list --ticket-name "TestTicketName"
   - summary: List web communications for a subscription support ticket.
-    syntax:
-      content: >-
-        az support tickets communications list \
-          --ticket-name "TestTicketName" \
-          --filters "communicationType eq 'Web'"
+    syntax: >-
+      az support tickets communications list \
+        --ticket-name "TestTicketName" \
+        --filters "communicationType eq 'Web'"
   - summary: List web communication created on or after a specific date for a subscription support ticket.
-    syntax:
-      content: >-
-        az support tickets communications list \
-          --ticket-name "TestTicketName" \
-          --filters "CreatedDate ge 2020-01-01 and communicationType eq 'Web'"
+    syntax: >-
+      az support tickets communications list \
+        --ticket-name "TestTicketName" \
+        --filters "CreatedDate ge 2020-01-01 and communicationType eq 'Web'"
   parameters:
   - isRequired: true
     name: --ticket-name
@@ -79,15 +65,12 @@ items:
   name: az support tickets communications show
   summary: Gets communication details for a support ticket.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get communication details for a subscription support ticket.
-    syntax:
-      content: >-
-        az support tickets communications show \
-          --ticket-name "TestTicketName" \
-          --communication-name "TestTicketCommunicationName"
+    syntax: >-
+      az support tickets communications show \
+        --ticket-name "TestTicketName" \
+        --communication-name "TestTicketCommunicationName"
   parameters:
   - isRequired: true
     name: --communication-name
@@ -98,15 +81,9 @@ items:
     summary: Support ticket name.
     description: ''
 commands:
-- uid: ext_support_az_support_tickets_communications_create
-  name: az support tickets communications create
-  summary: Adds a new customer communication to an Azure support ticket.
-- uid: ext_support_az_support_tickets_communications_list
-  name: az support tickets communications list
-  summary: Lists all communications (attachments not included) for a support ticket.
-- uid: ext_support_az_support_tickets_communications_show
-  name: az support tickets communications show
-  summary: Gets communication details for a support ticket.
+- ext_support_az_support_tickets_communications_create
+- ext_support_az_support_tickets_communications_list
+- ext_support_az_support_tickets_communications_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -122,4 +99,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage support ticket communications.
+metadata:
+  description: Manage support ticket communications.

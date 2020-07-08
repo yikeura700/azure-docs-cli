@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_repos_ref
-  name: az repos ref
-  summary: Manage Git references.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_repos_ref_create
-  - az_repos_ref_delete
-  - az_repos_ref_list
-  - az_repos_ref_lock
-  - az_repos_ref_unlock
+### YamlMime:CLIGroup
+uid: az_repos_ref
+name: az repos ref
+summary: Manage Git references.
+description: ''
+directCommands:
 - uid: az_repos_ref_create
   name: az repos ref create
   summary: Create a reference.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name
@@ -47,8 +37,6 @@ items:
   name: az repos ref delete
   summary: Delete a reference.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name
@@ -78,8 +66,6 @@ items:
   name: az repos ref list
   summary: List the references.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --detect
     parameterValueGroup: false, true
@@ -104,8 +90,6 @@ items:
   name: az repos ref lock
   summary: Lock a reference.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name
@@ -131,8 +115,6 @@ items:
   name: az repos ref unlock
   summary: Unlock a reference.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name
@@ -155,21 +137,11 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_repos_ref_create
-  name: az repos ref create
-  summary: Create a reference.
-- uid: az_repos_ref_delete
-  name: az repos ref delete
-  summary: Delete a reference.
-- uid: az_repos_ref_list
-  name: az repos ref list
-  summary: List the references.
-- uid: az_repos_ref_lock
-  name: az repos ref lock
-  summary: Lock a reference.
-- uid: az_repos_ref_unlock
-  name: az repos ref unlock
-  summary: Unlock a reference.
+- az_repos_ref_create
+- az_repos_ref_delete
+- az_repos_ref_list
+- az_repos_ref_lock
+- az_repos_ref_unlock
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -185,4 +157,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Git references.
+metadata:
+  description: Manage Git references.

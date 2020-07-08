@@ -1,29 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_synapse_az_synapse_workspace
-  name: az synapse workspace
-  summary: Manage Synapse workspaces.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_synapse_az_synapse_workspace_check_name
-  - ext_synapse_az_synapse_workspace_create
-  - ext_synapse_az_synapse_workspace_delete
-  - ext_synapse_az_synapse_workspace_list
-  - ext_synapse_az_synapse_workspace_show
-  - ext_synapse_az_synapse_workspace_update
-  - ext_synapse_az_synapse_workspace_wait
+### YamlMime:CLIGroup
+uid: ext_synapse_az_synapse_workspace
+name: az synapse workspace
+summary: Manage Synapse workspaces.
+description: ''
+directCommands:
 - uid: ext_synapse_az_synapse_workspace_check_name
   name: az synapse workspace check-name
   summary: Check if a Synapse workspace name is available or not.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Check if a Synapse workspace name is available or not.
-    syntax:
-      content: az synapse workspace check-name --name testsynapseworkspace
+    syntax: az synapse workspace check-name --name testsynapseworkspace
   parameters:
   - isRequired: true
     name: --name -n
@@ -33,21 +20,17 @@ items:
   name: az synapse workspace create
   summary: Create a Synapse workspace.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a Synapse workspace
-    syntax:
-      content: >-
-        az synapse workspace create --name fromcli4 --resource-group rg \
-          --storage-account testadlsgen2 --file-system testfilesystem \
-          --sql-admin-login-user cliuser1 --sql-admin-login-password Password123! --location "East US"
+    syntax: >-
+      az synapse workspace create --name fromcli4 --resource-group rg \
+        --storage-account testadlsgen2 --file-system testfilesystem \
+        --sql-admin-login-user cliuser1 --sql-admin-login-password Password123! --location "East US"
   - summary: Create a Synapse workspace with storage resource id
-    syntax:
-      content: >-
-        az synapse workspace create --name fromcli4 --resource-group rg \
-          --storage-account /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Storage/storageAccounts/testadlsgen2 --file-system testfilesystem \
-          --sql-admin-login-user cliuser1 --sql-admin-login-password Password123! --location "East US"
+    syntax: >-
+      az synapse workspace create --name fromcli4 --resource-group rg \
+        --storage-account /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.Storage/storageAccounts/testadlsgen2 --file-system testfilesystem \
+        --sql-admin-login-user cliuser1 --sql-admin-login-password Password123! --location "East US"
   parameters:
   - isRequired: true
     name: --file-system
@@ -87,12 +70,9 @@ items:
   name: az synapse workspace delete
   summary: Delete a Synapse workspace.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a Synapse workspace.
-    syntax:
-      content: az synapse workspace delete --name testsynapseworkspace --resource-group rg
+    syntax: az synapse workspace delete --name testsynapseworkspace --resource-group rg
   parameters:
   - isRequired: true
     name: --name -n
@@ -112,15 +92,11 @@ items:
   name: az synapse workspace list
   summary: List all Synapse workspaces.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all Synapse workspaces under a subscription
-    syntax:
-      content: az synapse workspace list
+    syntax: az synapse workspace list
   - summary: List all Synapse workspaces under a specific resource group
-    syntax:
-      content: az synapse workspace list --resource-group rg
+    syntax: az synapse workspace list --resource-group rg
   parameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
@@ -129,12 +105,9 @@ items:
   name: az synapse workspace show
   summary: Get a Synapse workspace.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get a Synapse workspace.
-    syntax:
-      content: az synapse workspace show --name testsynapseworkspace --resource-group rg
+    syntax: az synapse workspace show --name testsynapseworkspace --resource-group rg
   parameters:
   - isRequired: true
     name: --name -n
@@ -148,14 +121,11 @@ items:
   name: az synapse workspace update
   summary: Update a Synapse workspace.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update a Synapse workspace
-    syntax:
-      content: >-
-        az synapse workspace update --name fromcli4 --resource-group rg \
-          --tags key1=value1
+    syntax: >-
+      az synapse workspace update --name fromcli4 --resource-group rg \
+        --tags key1=value1
   parameters:
   - isRequired: true
     name: --name -n
@@ -178,8 +148,6 @@ items:
   name: az synapse workspace wait
   summary: Place the CLI in a waiting state until a condition of the workspace is met.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -213,45 +181,19 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_synapse_az_synapse_workspace_check_name
-  name: az synapse workspace check-name
-  summary: Check if a Synapse workspace name is available or not.
-- uid: ext_synapse_az_synapse_workspace_create
-  name: az synapse workspace create
-  summary: Create a Synapse workspace.
-- uid: ext_synapse_az_synapse_workspace_delete
-  name: az synapse workspace delete
-  summary: Delete a Synapse workspace.
-- uid: ext_synapse_az_synapse_workspace_firewall_rule
-  name: az synapse workspace firewall-rule
-  summary: Manage a workspace's firewall rules.
-- uid: ext_synapse_az_synapse_workspace_firewall_rule_create
-  name: az synapse workspace firewall-rule create
-  summary: Create a firewall rule.
-- uid: ext_synapse_az_synapse_workspace_firewall_rule_delete
-  name: az synapse workspace firewall-rule delete
-  summary: Delete a firewall rule.
-- uid: ext_synapse_az_synapse_workspace_firewall_rule_list
-  name: az synapse workspace firewall-rule list
-  summary: List all firewall rules.
-- uid: ext_synapse_az_synapse_workspace_firewall_rule_show
-  name: az synapse workspace firewall-rule show
-  summary: Get a firewall rule.
-- uid: ext_synapse_az_synapse_workspace_firewall_rule_wait
-  name: az synapse workspace firewall-rule wait
-  summary: Place the CLI in a waiting state until a condition of a firewall rule is met.
-- uid: ext_synapse_az_synapse_workspace_list
-  name: az synapse workspace list
-  summary: List all Synapse workspaces.
-- uid: ext_synapse_az_synapse_workspace_show
-  name: az synapse workspace show
-  summary: Get a Synapse workspace.
-- uid: ext_synapse_az_synapse_workspace_update
-  name: az synapse workspace update
-  summary: Update a Synapse workspace.
-- uid: ext_synapse_az_synapse_workspace_wait
-  name: az synapse workspace wait
-  summary: Place the CLI in a waiting state until a condition of the workspace is met.
+- ext_synapse_az_synapse_workspace_check_name
+- ext_synapse_az_synapse_workspace_create
+- ext_synapse_az_synapse_workspace_delete
+- ext_synapse_az_synapse_workspace_firewall_rule
+- ext_synapse_az_synapse_workspace_firewall_rule_create
+- ext_synapse_az_synapse_workspace_firewall_rule_delete
+- ext_synapse_az_synapse_workspace_firewall_rule_list
+- ext_synapse_az_synapse_workspace_firewall_rule_show
+- ext_synapse_az_synapse_workspace_firewall_rule_wait
+- ext_synapse_az_synapse_workspace_list
+- ext_synapse_az_synapse_workspace_show
+- ext_synapse_az_synapse_workspace_update
+- ext_synapse_az_synapse_workspace_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -267,4 +209,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Synapse workspaces.
+metadata:
+  description: Manage Synapse workspaces.

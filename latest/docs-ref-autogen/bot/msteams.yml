@@ -1,28 +1,19 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_bot_msteams
-  name: az bot msteams
-  summary: Manage the Microsoft Teams Channel on a bot.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_bot_msteams_create
-  - az_bot_msteams_delete
-  - az_bot_msteams_show
+### YamlMime:CLIGroup
+uid: az_bot_msteams
+name: az bot msteams
+summary: Manage the Microsoft Teams Channel on a bot.
+description: ''
+directCommands:
 - uid: az_bot_msteams_create
   name: az bot msteams create
   summary: Create the Microsoft Teams Channel on a bot.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create the Microsoft Teams Channel for a bot with calling enabled
-    syntax:
-      content: >-
-        az bot msteams create -n botName -g MyResourceGroup --enable-calling
+    syntax: >-
+      az bot msteams create -n botName -g MyResourceGroup --enable-calling
 
-        --calling-web-hook https://www.myapp.com/
+      --calling-web-hook https://www.myapp.com/
   parameters:
   - isRequired: true
     name: --name -n
@@ -56,8 +47,6 @@ items:
   name: az bot msteams delete
   summary: Delete the Microsoft Teams Channel on a bot.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -80,8 +69,6 @@ items:
   name: az bot msteams show
   summary: Get details of the Microsoft Teams Channel on a bot.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -105,15 +92,9 @@ items:
       path: src/azure-cli/azure/cli/command_modules/botservice/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_bot_msteams_create
-  name: az bot msteams create
-  summary: Create the Microsoft Teams Channel on a bot.
-- uid: az_bot_msteams_delete
-  name: az bot msteams delete
-  summary: Delete the Microsoft Teams Channel on a bot.
-- uid: az_bot_msteams_show
-  name: az bot msteams show
-  summary: Get details of the Microsoft Teams Channel on a bot.
+- az_bot_msteams_create
+- az_bot_msteams_delete
+- az_bot_msteams_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -129,10 +110,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/botservice/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/botservice/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/56dc0661067496e28575bd9cd99eb7f362479a0c/src/azure-cli/azure/cli/command_modules/botservice/_help.py
-updated_at: 12/11/2019 6:25:45 AM
-ms.date: 12/11/2019
-description: Manage the Microsoft Teams Channel on a bot.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/botservice/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/56dc0661067496e28575bd9cd99eb7f362479a0c/src/azure-cli/azure/cli/command_modules/botservice/_help.py
+  updated_at: 12/11/2019 6:25:45 AM
+  ms.date: 12/11/2019
+  description: Manage the Microsoft Teams Channel on a bot.

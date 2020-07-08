@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_express-route_az_network_express_route_gateway
-  name: az network express-route gateway
-  summary: Manage ExpressRoute gateways.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_express-route_az_network_express_route_gateway_create
-  - ext_express-route_az_network_express_route_gateway_delete
-  - ext_express-route_az_network_express_route_gateway_list
-  - ext_express-route_az_network_express_route_gateway_show
-  - ext_express-route_az_network_express_route_gateway_update
+### YamlMime:CLIGroup
+uid: ext_express-route_az_network_express_route_gateway
+name: az network express-route gateway
+summary: Manage ExpressRoute gateways.
+description: ''
+directCommands:
 - uid: ext_express-route_az_network_express_route_gateway_create
   name: az network express-route gateway create
   summary: Create an ExpressRoute gateway.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -47,8 +37,6 @@ items:
   name: az network express-route gateway delete
   summary: Delete an ExpressRoute gateway.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -62,8 +50,6 @@ items:
   name: az network express-route gateway list
   summary: List ExpressRoute gateways.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
@@ -72,8 +58,6 @@ items:
   name: az network express-route gateway show
   summary: Get the details of an ExpressRoute gateway.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -87,8 +71,6 @@ items:
   name: az network express-route gateway update
   summary: Update settings of an ExpressRoute gateway.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -120,39 +102,17 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_express-route_az_network_express_route_gateway_connection
-  name: az network express-route gateway connection
-  summary: Manage ExpressRoute gateway connections.
-- uid: ext_express-route_az_network_express_route_gateway_connection_create
-  name: az network express-route gateway connection create
-  summary: Create an ExpressRoute gateway connection.
-- uid: ext_express-route_az_network_express_route_gateway_connection_delete
-  name: az network express-route gateway connection delete
-  summary: Delete an ExpressRoute gateway connection.
-- uid: ext_express-route_az_network_express_route_gateway_connection_list
-  name: az network express-route gateway connection list
-  summary: List ExpressRoute gateway connections.
-- uid: ext_express-route_az_network_express_route_gateway_connection_show
-  name: az network express-route gateway connection show
-  summary: Get the details of an ExpressRoute gateway connection.
-- uid: ext_express-route_az_network_express_route_gateway_connection_update
-  name: az network express-route gateway connection update
-  summary: Update an ExpressRoute gateway connection.
-- uid: ext_express-route_az_network_express_route_gateway_create
-  name: az network express-route gateway create
-  summary: Create an ExpressRoute gateway.
-- uid: ext_express-route_az_network_express_route_gateway_delete
-  name: az network express-route gateway delete
-  summary: Delete an ExpressRoute gateway.
-- uid: ext_express-route_az_network_express_route_gateway_list
-  name: az network express-route gateway list
-  summary: List ExpressRoute gateways.
-- uid: ext_express-route_az_network_express_route_gateway_show
-  name: az network express-route gateway show
-  summary: Get the details of an ExpressRoute gateway.
-- uid: ext_express-route_az_network_express_route_gateway_update
-  name: az network express-route gateway update
-  summary: Update settings of an ExpressRoute gateway.
+- ext_express-route_az_network_express_route_gateway_connection
+- ext_express-route_az_network_express_route_gateway_connection_create
+- ext_express-route_az_network_express_route_gateway_connection_delete
+- ext_express-route_az_network_express_route_gateway_connection_list
+- ext_express-route_az_network_express_route_gateway_connection_show
+- ext_express-route_az_network_express_route_gateway_connection_update
+- ext_express-route_az_network_express_route_gateway_create
+- ext_express-route_az_network_express_route_gateway_delete
+- ext_express-route_az_network_express_route_gateway_list
+- ext_express-route_az_network_express_route_gateway_show
+- ext_express-route_az_network_express_route_gateway_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -168,4 +128,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage ExpressRoute gateways.
+metadata:
+  description: Manage ExpressRoute gateways.

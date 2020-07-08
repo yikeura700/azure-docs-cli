@@ -1,24 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sql_midb_ltr_policy
-  name: az sql midb ltr-policy
-  summary: Manage SQL Managed Instance database long term retention policy.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sql_midb_ltr_policy_set
-  - az_sql_midb_ltr_policy_show
+### YamlMime:CLIGroup
+uid: az_sql_midb_ltr_policy
+name: az sql midb ltr-policy
+summary: Manage SQL Managed Instance database long term retention policy.
+description: ''
+directCommands:
 - uid: az_sql_midb_ltr_policy_set
   name: az sql midb ltr-policy set
   summary: Update long term retention settings for a managed database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Set long term retention for a managed database.
-    syntax:
-      content: az sql midb ltr-policy set -g mygroup --mi myinstance -n mymanageddb --weekly-retention "P1W" --monthly-retention "P6M" --yearly-retention "P1Y" --week-of-year 26
+    syntax: az sql midb ltr-policy set -g mygroup --mi myinstance -n mymanageddb --weekly-retention "P1W" --monthly-retention "P6M" --yearly-retention "P1Y" --week-of-year 26
   parameters:
   - name: --monthly-retention
     summary: Retention for the monthly backup. If just a number is passed instead of an ISO 8601 string, days will be assumed as the units.There is a minimum of 7 days and a maximum of 10 years.
@@ -57,12 +49,9 @@ items:
   name: az sql midb ltr-policy show
   summary: Show the long term retention policy for a managed database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show long term retention policy for a managed database.
-    syntax:
-      content: az sql midb ltr-policy show -g mygroup --mi myinstance -n mymanageddb
+    syntax: az sql midb ltr-policy show -g mygroup --mi myinstance -n mymanageddb
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -86,12 +75,8 @@ items:
       path: src/azure-cli/azure/cli/command_modules/sql/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_sql_midb_ltr_policy_set
-  name: az sql midb ltr-policy set
-  summary: Update long term retention settings for a managed database.
-- uid: az_sql_midb_ltr_policy_show
-  name: az sql midb ltr-policy show
-  summary: Show the long term retention policy for a managed database.
+- az_sql_midb_ltr_policy_set
+- az_sql_midb_ltr_policy_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -107,10 +92,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
-updated_at: 6/19/2020 1:04:35 AM
-ms.date: 06/19/2020
-description: Manage SQL Managed Instance database long term retention policy.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  updated_at: 6/19/2020 1:04:35 AM
+  ms.date: 06/19/2020
+  description: Manage SQL Managed Instance database long term retention policy.

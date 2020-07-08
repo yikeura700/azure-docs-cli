@@ -1,34 +1,22 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sql_server_vnet_rule
-  name: az sql server vnet-rule
-  summary: Manage a server's virtual network rules.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sql_server_vnet_rule_create
-  - az_sql_server_vnet_rule_delete
-  - az_sql_server_vnet_rule_list
-  - az_sql_server_vnet_rule_show
-  - az_sql_server_vnet_rule_update
+### YamlMime:CLIGroup
+uid: az_sql_server_vnet_rule
+name: az sql server vnet-rule
+summary: Manage a server's virtual network rules.
+description: ''
+directCommands:
 - uid: az_sql_server_vnet_rule_create
   name: az sql server vnet-rule create
   summary: Create a virtual network rule to allows access to an Azure SQL server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a vnet rule by providing the subnet id.
-    syntax:
-      content: >-
-        az sql server vnet-rule create --server MyAzureSqlServer --name MyVNetRule \
-          -g MyResourceGroup --subnet /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Network/virtualNetworks/{VNETName}/subnets/{SubnetName}
+    syntax: >-
+      az sql server vnet-rule create --server MyAzureSqlServer --name MyVNetRule \
+        -g MyResourceGroup --subnet /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Network/virtualNetworks/{VNETName}/subnets/{SubnetName}
   - summary: Create a vnet rule by providing the vnet and subnet name. The subnet id is created by taking the resource group name and subscription id of the SQL server.
-    syntax:
-      content: >-
-        az sql server vnet-rule create --server MyAzureSqlServer --name MyVNetRule \
-            -g MyResourceGroup --subnet subnetName --vnet-name vnetName
+    syntax: >-
+      az sql server vnet-rule create --server MyAzureSqlServer --name MyVNetRule \
+          -g MyResourceGroup --subnet subnetName --vnet-name vnetName
   parameters:
   - isRequired: true
     name: --name -n
@@ -66,8 +54,6 @@ items:
   name: az sql server vnet-rule delete
   summary: Deletes the virtual network rule with the given name.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -95,8 +81,6 @@ items:
   name: az sql server vnet-rule list
   summary: Gets a list of virtual network rules in a server.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -120,8 +104,6 @@ items:
   name: az sql server vnet-rule show
   summary: Gets a virtual network rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -149,8 +131,6 @@ items:
   name: az sql server vnet-rule update
   summary: Update a virtual network rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -195,21 +175,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/sql/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_sql_server_vnet_rule_create
-  name: az sql server vnet-rule create
-  summary: Create a virtual network rule to allows access to an Azure SQL server.
-- uid: az_sql_server_vnet_rule_delete
-  name: az sql server vnet-rule delete
-  summary: Deletes the virtual network rule with the given name.
-- uid: az_sql_server_vnet_rule_list
-  name: az sql server vnet-rule list
-  summary: Gets a list of virtual network rules in a server.
-- uid: az_sql_server_vnet_rule_show
-  name: az sql server vnet-rule show
-  summary: Gets a virtual network rule.
-- uid: az_sql_server_vnet_rule_update
-  name: az sql server vnet-rule update
-  summary: Update a virtual network rule.
+- az_sql_server_vnet_rule_create
+- az_sql_server_vnet_rule_delete
+- az_sql_server_vnet_rule_list
+- az_sql_server_vnet_rule_show
+- az_sql_server_vnet_rule_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -225,10 +195,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
-updated_at: 6/19/2020 1:04:35 AM
-ms.date: 06/19/2020
-description: Manage a server's virtual network rules.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  updated_at: 6/19/2020 1:04:35 AM
+  ms.date: 06/19/2020
+  description: Manage a server's virtual network rules.

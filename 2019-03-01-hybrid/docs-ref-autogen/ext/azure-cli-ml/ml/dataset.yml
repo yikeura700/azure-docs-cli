@@ -1,25 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-cli-ml_az_ml_dataset
-  name: az ml dataset
-  summary: Commands for managing datasets in Azure Machine Learning Workspace.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-cli-ml_az_ml_dataset_archive
-  - ext_azure-cli-ml_az_ml_dataset_deprecate
-  - ext_azure-cli-ml_az_ml_dataset_list
-  - ext_azure-cli-ml_az_ml_dataset_reactivate
-  - ext_azure-cli-ml_az_ml_dataset_register
-  - ext_azure-cli-ml_az_ml_dataset_show
-  - ext_azure-cli-ml_az_ml_dataset_unregister
+### YamlMime:CLIGroup
+uid: ext_azure-cli-ml_az_ml_dataset
+name: az ml dataset
+summary: Commands for managing datasets in Azure Machine Learning Workspace.
+description: ''
+directCommands:
 - uid: ext_azure-cli-ml_az_ml_dataset_archive
   name: az ml dataset archive
   summary: Archive an active or deprecated dataset.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --id -i
     summary: Dataset ID (guid).
@@ -47,8 +35,6 @@ items:
   name: az ml dataset deprecate
   summary: Deprecate an active dataset in a workspace by another dataset.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --deprecate-by-id -d
@@ -80,8 +66,6 @@ items:
   name: az ml dataset list
   summary: List all datasets in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
@@ -103,8 +87,6 @@ items:
   name: az ml dataset reactivate
   summary: Reactivate an archived or deprecated dataset.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --id -i
     summary: Dataset ID (guid).
@@ -132,8 +114,6 @@ items:
   name: az ml dataset register
   summary: Register a new dataset from the specified file.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --file -f
     summary: Specification file for dataset.
@@ -164,8 +144,6 @@ items:
   name: az ml dataset show
   summary: Get details of a dataset by its id or registration name.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --id -i
     summary: ID of the dataset saved to workspace.
@@ -197,8 +175,6 @@ items:
   name: az ml dataset unregister
   summary: Unregister all versions under the specified registration name.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --name -n
     summary: Registration name of the dataset.
@@ -220,27 +196,13 @@ items:
     summary: Workspace name.
     description: ''
 commands:
-- uid: ext_azure-cli-ml_az_ml_dataset_archive
-  name: az ml dataset archive
-  summary: Archive an active or deprecated dataset.
-- uid: ext_azure-cli-ml_az_ml_dataset_deprecate
-  name: az ml dataset deprecate
-  summary: Deprecate an active dataset in a workspace by another dataset.
-- uid: ext_azure-cli-ml_az_ml_dataset_list
-  name: az ml dataset list
-  summary: List all datasets in the workspace.
-- uid: ext_azure-cli-ml_az_ml_dataset_reactivate
-  name: az ml dataset reactivate
-  summary: Reactivate an archived or deprecated dataset.
-- uid: ext_azure-cli-ml_az_ml_dataset_register
-  name: az ml dataset register
-  summary: Register a new dataset from the specified file.
-- uid: ext_azure-cli-ml_az_ml_dataset_show
-  name: az ml dataset show
-  summary: Get details of a dataset by its id or registration name.
-- uid: ext_azure-cli-ml_az_ml_dataset_unregister
-  name: az ml dataset unregister
-  summary: Unregister all versions under the specified registration name.
+- ext_azure-cli-ml_az_ml_dataset_archive
+- ext_azure-cli-ml_az_ml_dataset_deprecate
+- ext_azure-cli-ml_az_ml_dataset_list
+- ext_azure-cli-ml_az_ml_dataset_reactivate
+- ext_azure-cli-ml_az_ml_dataset_register
+- ext_azure-cli-ml_az_ml_dataset_show
+- ext_azure-cli-ml_az_ml_dataset_unregister
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -256,4 +218,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands for managing datasets in Azure Machine Learning Workspace.
+metadata:
+  description: Commands for managing datasets in Azure Machine Learning Workspace.

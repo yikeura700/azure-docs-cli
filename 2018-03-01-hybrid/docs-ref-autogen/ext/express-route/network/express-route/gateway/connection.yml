@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_express-route_az_network_express_route_gateway_connection
-  name: az network express-route gateway connection
-  summary: Manage ExpressRoute gateway connections.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_express-route_az_network_express_route_gateway_connection_create
-  - ext_express-route_az_network_express_route_gateway_connection_delete
-  - ext_express-route_az_network_express_route_gateway_connection_list
-  - ext_express-route_az_network_express_route_gateway_connection_show
-  - ext_express-route_az_network_express_route_gateway_connection_update
+### YamlMime:CLIGroup
+uid: ext_express-route_az_network_express_route_gateway_connection
+name: az network express-route gateway connection
+summary: Manage ExpressRoute gateway connections.
+description: ''
+directCommands:
 - uid: ext_express-route_az_network_express_route_gateway_connection_create
   name: az network express-route gateway connection create
   summary: Create an ExpressRoute gateway connection.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --gateway-name
@@ -48,8 +38,6 @@ items:
   name: az network express-route gateway connection delete
   summary: Delete an ExpressRoute gateway connection.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --gateway-name
@@ -67,8 +55,6 @@ items:
   name: az network express-route gateway connection list
   summary: List ExpressRoute gateway connections.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --gateway-name
@@ -82,8 +68,6 @@ items:
   name: az network express-route gateway connection show
   summary: Get the details of an ExpressRoute gateway connection.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --gateway-name
@@ -101,8 +85,6 @@ items:
   name: az network express-route gateway connection update
   summary: Update an ExpressRoute gateway connection.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --gateway-name
@@ -141,21 +123,11 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_express-route_az_network_express_route_gateway_connection_create
-  name: az network express-route gateway connection create
-  summary: Create an ExpressRoute gateway connection.
-- uid: ext_express-route_az_network_express_route_gateway_connection_delete
-  name: az network express-route gateway connection delete
-  summary: Delete an ExpressRoute gateway connection.
-- uid: ext_express-route_az_network_express_route_gateway_connection_list
-  name: az network express-route gateway connection list
-  summary: List ExpressRoute gateway connections.
-- uid: ext_express-route_az_network_express_route_gateway_connection_show
-  name: az network express-route gateway connection show
-  summary: Get the details of an ExpressRoute gateway connection.
-- uid: ext_express-route_az_network_express_route_gateway_connection_update
-  name: az network express-route gateway connection update
-  summary: Update an ExpressRoute gateway connection.
+- ext_express-route_az_network_express_route_gateway_connection_create
+- ext_express-route_az_network_express_route_gateway_connection_delete
+- ext_express-route_az_network_express_route_gateway_connection_list
+- ext_express-route_az_network_express_route_gateway_connection_show
+- ext_express-route_az_network_express_route_gateway_connection_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -171,4 +143,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage ExpressRoute gateway connections.
+metadata:
+  description: Manage ExpressRoute gateway connections.

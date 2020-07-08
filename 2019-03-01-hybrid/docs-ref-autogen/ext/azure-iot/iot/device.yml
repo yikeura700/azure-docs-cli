@@ -1,34 +1,22 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-iot_az_iot_device
-  name: az iot device
-  summary: Leverage device-to-cloud and cloud-to-device messaging capabilities.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-iot_az_iot_device_send_d2c_message
-  - ext_azure-iot_az_iot_device_simulate
-  - ext_azure-iot_az_iot_device_upload_file
+### YamlMime:CLIGroup
+uid: ext_azure-iot_az_iot_device
+name: az iot device
+summary: Leverage device-to-cloud and cloud-to-device messaging capabilities.
+description: ''
+directCommands:
 - uid: ext_azure-iot_az_iot_device_send_d2c_message
   name: az iot device send-d2c-message
   summary: Send an mqtt device-to-cloud message. The command supports sending messages with application and system properties.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Basic usage
-    syntax:
-      content: az iot device send-d2c-message -n {iothub_name} -d {device_id}
+    syntax: az iot device send-d2c-message -n {iothub_name} -d {device_id}
   - summary: Basic usage with custom data
-    syntax:
-      content: az iot device send-d2c-message -n {iothub_name} -d {device_id} --data {message_body}
+    syntax: az iot device send-d2c-message -n {iothub_name} -d {device_id} --data {message_body}
   - summary: Send application properties
-    syntax:
-      content: az iot device send-d2c-message -n {iothub_name} -d {device_id} --props 'key0=value0;key1=value1'
+    syntax: az iot device send-d2c-message -n {iothub_name} -d {device_id} --props 'key0=value0;key1=value1'
   - summary: Send system properties (Message Id and Correlation Id)
-    syntax:
-      content: az iot device send-d2c-message -n {iothub_name} -d {device_id} --props '$.mid=<id>;$.cid=<id>'
+    syntax: az iot device send-d2c-message -n {iothub_name} -d {device_id} --props '$.mid=<id>;$.cid=<id>'
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -78,30 +66,21 @@ items:
 
     to utf-8. This can be overriden.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Basic usage (mqtt)
-    syntax:
-      content: az iot device simulate -n {iothub_name} -d {device_id}
+    syntax: az iot device simulate -n {iothub_name} -d {device_id}
   - summary: Basic usage (mqtt) with sending mixed properties
-    syntax:
-      content: az iot device simulate -n {iothub_name} -d {device_id} --properties "myprop=myvalue;$.ct=application/json"
+    syntax: az iot device simulate -n {iothub_name} -d {device_id} --properties "myprop=myvalue;$.ct=application/json"
   - summary: Basic usage (http)
-    syntax:
-      content: az iot device simulate -n {iothub_name} -d {device_id} --protocol http
+    syntax: az iot device simulate -n {iothub_name} -d {device_id} --protocol http
   - summary: Basic usage (http) with sending mixed properties
-    syntax:
-      content: az iot device simulate -n {iothub_name} -d {device_id} --protocol http --properties "iothub-app-myprop=myvalue;content-type=application/json;iothub-correlationid=12345"
+    syntax: az iot device simulate -n {iothub_name} -d {device_id} --protocol http --properties "iothub-app-myprop=myvalue;content-type=application/json;iothub-correlationid=12345"
   - summary: Choose total message count and interval between messages
-    syntax:
-      content: az iot device simulate -n {iothub_name} -d {device_id} --msg-count 1000 --msg-interval 5
+    syntax: az iot device simulate -n {iothub_name} -d {device_id} --msg-count 1000 --msg-interval 5
   - summary: Reject c2d messages (http only)
-    syntax:
-      content: az iot device simulate -n {iothub_name} -d {device_id} --rs reject --protocol http
+    syntax: az iot device simulate -n {iothub_name} -d {device_id} --rs reject --protocol http
   - summary: Abandon c2d messages (http only)
-    syntax:
-      content: az iot device simulate -n {iothub_name} -d {device_id} --rs abandon --protocol http
+    syntax: az iot device simulate -n {iothub_name} -d {device_id} --rs abandon --protocol http
   parameters:
   - isRequired: true
     name: --device-id -d
@@ -145,8 +124,6 @@ items:
   name: az iot device upload-file
   summary: Upload a local file as a device to a pre-configured blob storage container.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --content-type --ct
@@ -170,48 +147,15 @@ items:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
     description: ''
 commands:
-- uid: ext_azure-iot_az_iot_device_c2d_message
-  name: az iot device c2d-message
-  summary: Cloud-to-device messaging commands.
-- uid: ext_azure-iot_az_iot_device_c2d_message_abandon
-  name: az iot device c2d-message abandon
-  summary: Abandon a cloud-to-device message.
-- uid: ext_azure-iot_az_iot_device_c2d_message_complete
-  name: az iot device c2d-message complete
-  summary: Complete a cloud-to-device message.
-- uid: ext_azure-iot_az_iot_device_c2d_message_receive
-  name: az iot device c2d-message receive
-  summary: Receive a cloud-to-device message.
-- uid: ext_azure-iot_az_iot_device_c2d_message_reject
-  name: az iot device c2d-message reject
-  summary: Reject or deadletter a cloud-to-device message.
-- uid: ext_azure-iot_az_iot_device_c2d_message_send
-  name: az iot device c2d-message send
-  summary: Send a cloud-to-device message.
-- uid: ext_azure-iot_az_iot_device_send_d2c_message
-  name: az iot device send-d2c-message
-  summary: Send an mqtt device-to-cloud message. The command supports sending messages with application and system properties.
-- uid: ext_azure-iot_az_iot_device_simulate
-  name: az iot device simulate
-  summary: >-
-    Simulate a device in an Azure IoT Hub.
-
-
-    While the device simulation is running, the device will automatically receive
-
-    and acknowledge cloud-to-device (c2d) messages. For mqtt simulation, all c2d messages will
-
-    be acknowledged with completion. For http simulation c2d acknowledgement is based on user
-
-    selection which can be complete, reject or abandon.
-
-
-    Note: The command by default will set content-type to application/json and content-encoding
-
-    to utf-8. This can be overriden.
-- uid: ext_azure-iot_az_iot_device_upload_file
-  name: az iot device upload-file
-  summary: Upload a local file as a device to a pre-configured blob storage container.
+- ext_azure-iot_az_iot_device_c2d_message
+- ext_azure-iot_az_iot_device_c2d_message_abandon
+- ext_azure-iot_az_iot_device_c2d_message_complete
+- ext_azure-iot_az_iot_device_c2d_message_receive
+- ext_azure-iot_az_iot_device_c2d_message_reject
+- ext_azure-iot_az_iot_device_c2d_message_send
+- ext_azure-iot_az_iot_device_send_d2c_message
+- ext_azure-iot_az_iot_device_simulate
+- ext_azure-iot_az_iot_device_upload_file
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -227,4 +171,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Leverage device-to-cloud and cloud-to-device messaging capabilities.
+metadata:
+  description: Leverage device-to-cloud and cloud-to-device messaging capabilities.

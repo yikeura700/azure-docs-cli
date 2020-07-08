@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_override
-  name: az network front-door waf-policy managed-rules override
-  summary: View and alter overrides on managed rules within a managed rule set.
-  description: Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
-  langs:
-  - azurecli
-  children:
-  - ext_front-door_az_network_front_door_waf_policy_managed_rules_override_add
-  - ext_front-door_az_network_front_door_waf_policy_managed_rules_override_list
-  - ext_front-door_az_network_front_door_waf_policy_managed_rules_override_remove
+### YamlMime:CLIGroup
+uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_override
+name: az network front-door waf-policy managed-rules override
+summary: View and alter overrides on managed rules within a managed rule set.
+description: Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
+directCommands:
 - uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_override_add
   name: az network front-door waf-policy managed-rules override add
   summary: Add an override on a managed rule within a managed rule set.
   description: Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --policy-name
@@ -49,8 +41,6 @@ items:
   name: az network front-door waf-policy managed-rules override list
   summary: List the overrides on managed rules within a managed rule set.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --policy-name
@@ -68,8 +58,6 @@ items:
   name: az network front-door waf-policy managed-rules override remove
   summary: Remove an override on a managed rule within a managed rule set.
   description: After this command, the standard behavior for the rule within the managed rule set will apply. Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --policy-name
@@ -92,15 +80,9 @@ items:
     summary: ID of the ruleset with the override to remove.
     description: ''
 commands:
-- uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_override_add
-  name: az network front-door waf-policy managed-rules override add
-  summary: Add an override on a managed rule within a managed rule set.
-- uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_override_list
-  name: az network front-door waf-policy managed-rules override list
-  summary: List the overrides on managed rules within a managed rule set.
-- uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_override_remove
-  name: az network front-door waf-policy managed-rules override remove
-  summary: Remove an override on a managed rule within a managed rule set.
+- ext_front-door_az_network_front_door_waf_policy_managed_rules_override_add
+- ext_front-door_az_network_front_door_waf_policy_managed_rules_override_list
+- ext_front-door_az_network_front_door_waf_policy_managed_rules_override_remove
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -116,4 +98,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
+metadata:
+  description: Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.

@@ -1,29 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_mixed-reality_az_spatial_anchors_account
-  name: az spatial-anchors-account
-  summary: Manage Spatial Anchors Accounts.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_mixed-reality_az_spatial_anchors_account_create
-  - ext_mixed-reality_az_spatial_anchors_account_delete
-  - ext_mixed-reality_az_spatial_anchors_account_list
-  - ext_mixed-reality_az_spatial_anchors_account_show
+### YamlMime:CLIGroup
+uid: ext_mixed-reality_az_spatial_anchors_account
+name: az spatial-anchors-account
+summary: Manage Spatial Anchors Accounts.
+description: ''
+directCommands:
 - uid: ext_mixed-reality_az_spatial_anchors_account_create
   name: az spatial-anchors-account create
   summary: Create a Spatial Anchors Account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a Spatial Anchors Account.
-    syntax:
-      content: az spatial-anchors-account create -g example -n example -l eastus2
+    syntax: az spatial-anchors-account create -g example -n example -l eastus2
   - summary: Create a Spatial Anchors Account without Location specified.
-    syntax:
-      content: az spatial-anchors-account create -g example -n example
+    syntax: az spatial-anchors-account create -g example -n example
   parameters:
   - isRequired: true
     name: --name -n
@@ -43,12 +32,9 @@ items:
   name: az spatial-anchors-account delete
   summary: Delete a Spatial Anchors Account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete of a Spatial Anchors Account.
-    syntax:
-      content: az spatial-anchors-account delete -g example -n example
+    syntax: az spatial-anchors-account delete -g example -n example
   parameters:
   - isRequired: true
     name: --name -n
@@ -62,15 +48,11 @@ items:
   name: az spatial-anchors-account list
   summary: List Spatial Anchors Accounts.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all Spatial Anchors Accounts in Resource Group 'example'.
-    syntax:
-      content: az spatial-anchors-account list -g example
+    syntax: az spatial-anchors-account list -g example
   - summary: List all Spatial Anchors Accounts in current Subscription.
-    syntax:
-      content: az spatial-anchors-account list
+    syntax: az spatial-anchors-account list
   parameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
@@ -79,12 +61,9 @@ items:
   name: az spatial-anchors-account show
   summary: Show a Spatial Anchors Account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show properties of a Spatial Anchors Account.
-    syntax:
-      content: az spatial-anchors-account show -g example -n example
+    syntax: az spatial-anchors-account show -g example -n example
   parameters:
   - isRequired: true
     name: --name -n
@@ -95,27 +74,13 @@ items:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
     description: ''
 commands:
-- uid: ext_mixed-reality_az_spatial_anchors_account_create
-  name: az spatial-anchors-account create
-  summary: Create a Spatial Anchors Account.
-- uid: ext_mixed-reality_az_spatial_anchors_account_delete
-  name: az spatial-anchors-account delete
-  summary: Delete a Spatial Anchors Account.
-- uid: ext_mixed-reality_az_spatial_anchors_account_key
-  name: az spatial-anchors-account key
-  summary: Manage developer keys of a Spatial Anchors Account.
-- uid: ext_mixed-reality_az_spatial_anchors_account_key_renew
-  name: az spatial-anchors-account key renew
-  summary: Renew one of the keys of a Spatial Anchors Account.
-- uid: ext_mixed-reality_az_spatial_anchors_account_key_show
-  name: az spatial-anchors-account key show
-  summary: Show keys of a Spatial Anchors Account.
-- uid: ext_mixed-reality_az_spatial_anchors_account_list
-  name: az spatial-anchors-account list
-  summary: List Spatial Anchors Accounts.
-- uid: ext_mixed-reality_az_spatial_anchors_account_show
-  name: az spatial-anchors-account show
-  summary: Show a Spatial Anchors Account.
+- ext_mixed-reality_az_spatial_anchors_account_create
+- ext_mixed-reality_az_spatial_anchors_account_delete
+- ext_mixed-reality_az_spatial_anchors_account_key
+- ext_mixed-reality_az_spatial_anchors_account_key_renew
+- ext_mixed-reality_az_spatial_anchors_account_key_show
+- ext_mixed-reality_az_spatial_anchors_account_list
+- ext_mixed-reality_az_spatial_anchors_account_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -131,4 +96,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Spatial Anchors Accounts.
+metadata:
+  description: Manage Spatial Anchors Accounts.

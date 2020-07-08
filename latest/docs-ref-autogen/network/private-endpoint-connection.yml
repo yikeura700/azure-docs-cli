@@ -1,33 +1,20 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_network_private_endpoint_connection
-  name: az network private-endpoint-connection
-  summary: Manage private endpoint connections.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_network_private_endpoint_connection_approve
-  - az_network_private_endpoint_connection_delete
-  - az_network_private_endpoint_connection_list
-  - az_network_private_endpoint_connection_reject
-  - az_network_private_endpoint_connection_show
+### YamlMime:CLIGroup
+uid: az_network_private_endpoint_connection
+name: az network private-endpoint-connection
+summary: Manage private endpoint connections.
+description: ''
+directCommands:
 - uid: az_network_private_endpoint_connection_approve
   name: az network private-endpoint-connection approve
   summary: Approve a private endpoint connection.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Approve a private endpoint connection for a storage account.
-    syntax:
-      content: az network private-endpoint-connection approve -g MyResourceGroup -n MyPrivateEndpoint --resource-name MySA --type Microsoft.Storage/storageAccounts --description "Approved"
+    syntax: az network private-endpoint-connection approve -g MyResourceGroup -n MyPrivateEndpoint --resource-name MySA --type Microsoft.Storage/storageAccounts --description "Approved"
   - summary: Approve a private endpoint connection for a keyvault.
-    syntax:
-      content: az network private-endpoint-connection approve -g MyResourceGroup -n MyPrivateEndpoint --resource-name MyKV --type Microsoft.Keyvault/vaults --description "Approved"
+    syntax: az network private-endpoint-connection approve -g MyResourceGroup -n MyPrivateEndpoint --resource-name MyKV --type Microsoft.Keyvault/vaults --description "Approved"
   - summary: Approve a private endpoint connection for an ACR.
-    syntax:
-      content: az network private-endpoint-connection approve --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002/privateEndpointConnections/testreg000002.6e6bf72bc59d41cc89c698d4cc5ee79d --description "Approved"
+    syntax: az network private-endpoint-connection approve --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002/privateEndpointConnections/testreg000002.6e6bf72bc59d41cc89c698d4cc5ee79d --description "Approved"
   parameters:
   - name: --description -d
     summary: Comments for the approval.
@@ -61,18 +48,13 @@ items:
   name: az network private-endpoint-connection delete
   summary: Delete a private endpoint connection.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a private endpoint connection for a storage account.
-    syntax:
-      content: az network private-endpoint-connection delete -g MyResourceGroup -n MyPrivateEndpoint --resource-name MySA --type Microsoft.Storage/storageAccounts
+    syntax: az network private-endpoint-connection delete -g MyResourceGroup -n MyPrivateEndpoint --resource-name MySA --type Microsoft.Storage/storageAccounts
   - summary: Delete a private endpoint connection for a keyvault.
-    syntax:
-      content: az network private-endpoint-connection delete -g MyResourceGroup -n MyPrivateEndpoint --resource-name MyKV --type Microsoft.Keyvault/vaults
+    syntax: az network private-endpoint-connection delete -g MyResourceGroup -n MyPrivateEndpoint --resource-name MyKV --type Microsoft.Keyvault/vaults
   - summary: Delete a private endpoint connection for an ACR.
-    syntax:
-      content: az network private-endpoint-connection delete --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002/privateEndpointConnections/testreg000002.6e6bf72bc59d41cc89c698d4cc5ee79d
+    syntax: az network private-endpoint-connection delete --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002/privateEndpointConnections/testreg000002.6e6bf72bc59d41cc89c698d4cc5ee79d
   parameters:
   - name: --id
     summary: ID of the private endpoint connection.
@@ -106,18 +88,13 @@ items:
   name: az network private-endpoint-connection list
   summary: List all private endpoint connections.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all private endpoint connections for a storage account.
-    syntax:
-      content: az network private-endpoint-connection list -g MyResourceGroup -n MySA --type Microsoft.Storage/storageAccounts
+    syntax: az network private-endpoint-connection list -g MyResourceGroup -n MySA --type Microsoft.Storage/storageAccounts
   - summary: List all private endpoint connections for a keyvault.
-    syntax:
-      content: az network private-endpoint-connection list -g MyResourceGroup -n MyKV --type Microsoft.Keyvault/vaults
+    syntax: az network private-endpoint-connection list -g MyResourceGroup -n MyKV --type Microsoft.Keyvault/vaults
   - summary: List all private endpoint connections for an ACR.
-    syntax:
-      content: az network private-endpoint-connection list --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002
+    syntax: az network private-endpoint-connection list --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002
   parameters:
   - name: --id
     summary: ID of the resource.
@@ -145,18 +122,13 @@ items:
   name: az network private-endpoint-connection reject
   summary: Reject a private endpoint connection.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Reject a private endpoint connection for a storage account.
-    syntax:
-      content: az network private-endpoint-connection reject -g MyResourceGroup -n MyPrivateEndpoint --resource-name MySA --type Microsoft.Storage/storageAccounts --description "Rejected"
+    syntax: az network private-endpoint-connection reject -g MyResourceGroup -n MyPrivateEndpoint --resource-name MySA --type Microsoft.Storage/storageAccounts --description "Rejected"
   - summary: Reject a private endpoint connection for a keyvault.
-    syntax:
-      content: az network private-endpoint-connection reject -g MyResourceGroup -n MyPrivateEndpoint --resource-name MyKV --type Microsoft.Keyvault/vaults --description "Rejected"
+    syntax: az network private-endpoint-connection reject -g MyResourceGroup -n MyPrivateEndpoint --resource-name MyKV --type Microsoft.Keyvault/vaults --description "Rejected"
   - summary: Reject a private endpoint connection for an ACR.
-    syntax:
-      content: az network private-endpoint-connection reject --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002/privateEndpointConnections/testreg000002.6e6bf72bc59d41cc89c698d4cc5ee79d --description "Rejected"
+    syntax: az network private-endpoint-connection reject --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002/privateEndpointConnections/testreg000002.6e6bf72bc59d41cc89c698d4cc5ee79d --description "Rejected"
   parameters:
   - name: --description -d
     summary: Comments for the rejection.
@@ -190,18 +162,13 @@ items:
   name: az network private-endpoint-connection show
   summary: Show a private endpoint connection.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a private endpoint connection for a storage account.
-    syntax:
-      content: az network private-endpoint-connection show -g MyResourceGroup -n MyPrivateEndpoint --resource-name MySA --type Microsoft.Storage/storageAccounts
+    syntax: az network private-endpoint-connection show -g MyResourceGroup -n MyPrivateEndpoint --resource-name MySA --type Microsoft.Storage/storageAccounts
   - summary: Show a private endpoint connection for a keyvault.
-    syntax:
-      content: az network private-endpoint-connection show -g MyResourceGroup -n MyPrivateEndpoint --resource-name MyKV --type Microsoft.Keyvault/vaults
+    syntax: az network private-endpoint-connection show -g MyResourceGroup -n MyPrivateEndpoint --resource-name MyKV --type Microsoft.Keyvault/vaults
   - summary: Show a private endpoint connection for an ACR.
-    syntax:
-      content: az network private-endpoint-connection show --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002/privateEndpointConnections/testreg000002.6e6bf72bc59d41cc89c698d4cc5ee79d
+    syntax: az network private-endpoint-connection show --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002/privateEndpointConnections/testreg000002.6e6bf72bc59d41cc89c698d4cc5ee79d
   parameters:
   - name: --id
     summary: ID of the private endpoint connection.
@@ -229,21 +196,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/network/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_network_private_endpoint_connection_approve
-  name: az network private-endpoint-connection approve
-  summary: Approve a private endpoint connection.
-- uid: az_network_private_endpoint_connection_delete
-  name: az network private-endpoint-connection delete
-  summary: Delete a private endpoint connection.
-- uid: az_network_private_endpoint_connection_list
-  name: az network private-endpoint-connection list
-  summary: List all private endpoint connections.
-- uid: az_network_private_endpoint_connection_reject
-  name: az network private-endpoint-connection reject
-  summary: Reject a private endpoint connection.
-- uid: az_network_private_endpoint_connection_show
-  name: az network private-endpoint-connection show
-  summary: Show a private endpoint connection.
+- az_network_private_endpoint_connection_approve
+- az_network_private_endpoint_connection_delete
+- az_network_private_endpoint_connection_list
+- az_network_private_endpoint_connection_reject
+- az_network_private_endpoint_connection_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -259,10 +216,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/network/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
-updated_at: 6/18/2020 6:20:50 AM
-ms.date: 06/18/2020
-description: Manage private endpoint connections.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
+  updated_at: 6/18/2020 6:20:50 AM
+  ms.date: 06/18/2020
+  description: Manage private endpoint connections.

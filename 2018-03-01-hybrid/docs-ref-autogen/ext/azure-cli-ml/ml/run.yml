@@ -1,28 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-cli-ml_az_ml_run
-  name: az ml run
-  summary: Commands for submitting, updating, and monitoring runs.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-cli-ml_az_ml_run_cancel
-  - ext_azure-cli-ml_az_ml_run_download_logs
-  - ext_azure-cli-ml_az_ml_run_list
-  - ext_azure-cli-ml_az_ml_run_monitor_logs
-  - ext_azure-cli-ml_az_ml_run_monitor_tensorboard
-  - ext_azure-cli-ml_az_ml_run_show
-  - ext_azure-cli-ml_az_ml_run_submit_hyperdrive
-  - ext_azure-cli-ml_az_ml_run_submit_pipeline
-  - ext_azure-cli-ml_az_ml_run_submit_script
-  - ext_azure-cli-ml_az_ml_run_update
+### YamlMime:CLIGroup
+uid: ext_azure-cli-ml_az_ml_run
+name: az ml run
+summary: Commands for submitting, updating, and monitoring runs.
+description: ''
+directCommands:
 - uid: ext_azure-cli-ml_az_ml_run_cancel
   name: az ml run cancel
   summary: Cancel run.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --run -r
@@ -51,8 +36,6 @@ items:
   name: az ml run download-logs
   summary: Download log files.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --output-dir -d
@@ -85,8 +68,6 @@ items:
   name: az ml run list
   summary: List runs.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --compute-target-name
     summary: The compute target name.
@@ -134,8 +115,6 @@ items:
   name: az ml run monitor-logs
   summary: Monitor the logs for an existing run.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --run -r
@@ -164,8 +143,6 @@ items:
   name: az ml run monitor-tensorboard
   summary: Monitor an existing run using tensorboard.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --run -r
@@ -197,8 +174,6 @@ items:
   name: az ml run show
   summary: Show run.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --run -r
@@ -227,8 +202,6 @@ items:
   name: az ml run submit-hyperdrive
   summary: Submit a hyper parameter sweep using run config.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --hyperdrive-configuration-name
@@ -275,8 +248,6 @@ items:
   name: az ml run submit-pipeline
   summary: Submit a pipeline for execution, from a published pipeline ID or pipeline YAML file.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --datapaths -d
     summary: Comma-separated list of name=datastore/path pairs for datapath parameter assignments.
@@ -316,8 +287,6 @@ items:
   name: az ml run submit-script
   summary: Submit a script for execution.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --async
     summary: Disable output streaming.
@@ -360,8 +329,6 @@ items:
   name: az ml run update
   summary: Update the run by adding tags.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --run -r
@@ -390,36 +357,16 @@ items:
     summary: Workspace name.
     description: ''
 commands:
-- uid: ext_azure-cli-ml_az_ml_run_cancel
-  name: az ml run cancel
-  summary: Cancel run.
-- uid: ext_azure-cli-ml_az_ml_run_download_logs
-  name: az ml run download-logs
-  summary: Download log files.
-- uid: ext_azure-cli-ml_az_ml_run_list
-  name: az ml run list
-  summary: List runs.
-- uid: ext_azure-cli-ml_az_ml_run_monitor_logs
-  name: az ml run monitor-logs
-  summary: Monitor the logs for an existing run.
-- uid: ext_azure-cli-ml_az_ml_run_monitor_tensorboard
-  name: az ml run monitor-tensorboard
-  summary: Monitor an existing run using tensorboard.
-- uid: ext_azure-cli-ml_az_ml_run_show
-  name: az ml run show
-  summary: Show run.
-- uid: ext_azure-cli-ml_az_ml_run_submit_hyperdrive
-  name: az ml run submit-hyperdrive
-  summary: Submit a hyper parameter sweep using run config.
-- uid: ext_azure-cli-ml_az_ml_run_submit_pipeline
-  name: az ml run submit-pipeline
-  summary: Submit a pipeline for execution, from a published pipeline ID or pipeline YAML file.
-- uid: ext_azure-cli-ml_az_ml_run_submit_script
-  name: az ml run submit-script
-  summary: Submit a script for execution.
-- uid: ext_azure-cli-ml_az_ml_run_update
-  name: az ml run update
-  summary: Update the run by adding tags.
+- ext_azure-cli-ml_az_ml_run_cancel
+- ext_azure-cli-ml_az_ml_run_download_logs
+- ext_azure-cli-ml_az_ml_run_list
+- ext_azure-cli-ml_az_ml_run_monitor_logs
+- ext_azure-cli-ml_az_ml_run_monitor_tensorboard
+- ext_azure-cli-ml_az_ml_run_show
+- ext_azure-cli-ml_az_ml_run_submit_hyperdrive
+- ext_azure-cli-ml_az_ml_run_submit_pipeline
+- ext_azure-cli-ml_az_ml_run_submit_script
+- ext_azure-cli-ml_az_ml_run_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -435,4 +382,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands for submitting, updating, and monitoring runs.
+metadata:
+  description: Commands for submitting, updating, and monitoring runs.

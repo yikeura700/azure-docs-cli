@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_ip-group_az_network_ip_group
-  name: az network ip-group
-  summary: Commands to manage IpGroup.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_ip-group_az_network_ip_group_create
-  - ext_ip-group_az_network_ip_group_delete
-  - ext_ip-group_az_network_ip_group_list
-  - ext_ip-group_az_network_ip_group_show
-  - ext_ip-group_az_network_ip_group_update
+### YamlMime:CLIGroup
+uid: ext_ip-group_az_network_ip_group
+name: az network ip-group
+summary: Commands to manage IpGroup.
+description: ''
+directCommands:
 - uid: ext_ip-group_az_network_ip_group_create
   name: az network ip-group create
   summary: Create an IpGroup.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --ip-addresses
@@ -41,8 +31,6 @@ items:
   name: az network ip-group delete
   summary: Delete an IpGroup.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -56,8 +44,6 @@ items:
   name: az network ip-group list
   summary: List all of IpGroup.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
@@ -66,8 +52,6 @@ items:
   name: az network ip-group show
   summary: Show details of an IpGroup.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -84,8 +68,6 @@ items:
   name: az network ip-group update
   summary: Update an IpGroup.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -114,21 +96,11 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_ip-group_az_network_ip_group_create
-  name: az network ip-group create
-  summary: Create an IpGroup.
-- uid: ext_ip-group_az_network_ip_group_delete
-  name: az network ip-group delete
-  summary: Delete an IpGroup.
-- uid: ext_ip-group_az_network_ip_group_list
-  name: az network ip-group list
-  summary: List all of IpGroup.
-- uid: ext_ip-group_az_network_ip_group_show
-  name: az network ip-group show
-  summary: Show details of an IpGroup.
-- uid: ext_ip-group_az_network_ip_group_update
-  name: az network ip-group update
-  summary: Update an IpGroup.
+- ext_ip-group_az_network_ip_group_create
+- ext_ip-group_az_network_ip_group_delete
+- ext_ip-group_az_network_ip_group_list
+- ext_ip-group_az_network_ip_group_show
+- ext_ip-group_az_network_ip_group_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -144,4 +116,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage IpGroup.
+metadata:
+  description: Commands to manage IpGroup.

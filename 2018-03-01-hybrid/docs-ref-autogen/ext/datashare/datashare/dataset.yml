@@ -1,39 +1,24 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_datashare_az_datashare_dataset
-  name: az datashare dataset
-  summary: Commands for providers to manage datashare datasets.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_datashare_az_datashare_dataset_create
-  - ext_datashare_az_datashare_dataset_delete
-  - ext_datashare_az_datashare_dataset_list
-  - ext_datashare_az_datashare_dataset_show
-  - ext_datashare_az_datashare_dataset_wait
+### YamlMime:CLIGroup
+uid: ext_datashare_az_datashare_dataset
+name: az datashare dataset
+summary: Commands for providers to manage datashare datasets.
+description: ''
+directCommands:
 - uid: ext_datashare_az_datashare_dataset_create
   name: az datashare dataset create
   summary: Create a dataset.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a Blob dataset
-    syntax:
-      content: 'az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"Blob\",\"properties\":{\"containerName\":\"C1\",\"filePath\":\"file21\",\"resourceGroup\": \"SampleResourceGroup\",\"storageAccountName\":\"storage2\",\"subscriptionId\":\"00000000-0000-0000-0000-000000000000\"}}"'
+    syntax: 'az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"Blob\",\"properties\":{\"containerName\":\"C1\",\"filePath\":\"file21\",\"resourceGroup\": \"SampleResourceGroup\",\"storageAccountName\":\"storage2\",\"subscriptionId\":\"00000000-0000-0000-0000-000000000000\"}}"'
   - summary: Create a KustoCluster dataset
-    syntax:
-      content: 'az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"KustoCluster\",\"properties\":{\"kustoClusterResourceId\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroup/providers/Microsoft.Kusto/clusters/Cluster1\"}}"'
+    syntax: 'az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"KustoCluster\",\"properties\":{\"kustoClusterResourceId\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroup/providers/Microsoft.Kusto/clusters/Cluster1\"}}"'
   - summary: Create a KustoDatabase dataset
-    syntax:
-      content: 'az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"KustoDatabase\",\"properties\":{\"kustoDatabaseResourceId\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroup/providers/Microsoft.Kusto/clusters/Cluster1/databases/Database1\"}}"'
+    syntax: 'az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"KustoDatabase\",\"properties\":{\"kustoDatabaseResourceId\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroup/providers/Microsoft.Kusto/clusters/Cluster1/databases/Database1\"}}"'
   - summary: Create a SqlDBTable dataset
-    syntax:
-      content: az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"SqlDBTable\",\"properties\":{\"databaseName\":\"MySqlDB\",\"schemaName\":\"dbo\", \"sqlServerResourceId\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroup/providers/Microsoft.Sql/servers/Server1\", \"tableName\":\"Table1\"}}"
+    syntax: az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"SqlDBTable\",\"properties\":{\"databaseName\":\"MySqlDB\",\"schemaName\":\"dbo\", \"sqlServerResourceId\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroup/providers/Microsoft.Sql/servers/Server1\", \"tableName\":\"Table1\"}}"
   - summary: Create a SqlDWTable dataset
-    syntax:
-      content: az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"SqlDWTable\",\"properties\":{\"dataWarehouseName\":\"MyDataWarehouse\",\"schemaName\":\"dbo\", \"sqlServerResourceId\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyResourceGroup/providers/Microsoft.Sql/servers/MyServer\",\"tableName\":\"MyTable\"}}"
+    syntax: az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"SqlDWTable\",\"properties\":{\"dataWarehouseName\":\"MyDataWarehouse\",\"schemaName\":\"dbo\", \"sqlServerResourceId\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyResourceGroup/providers/Microsoft.Sql/servers/MyServer\",\"tableName\":\"MyTable\"}}"
   parameters:
   - isRequired: true
     name: --account-name
@@ -59,12 +44,9 @@ items:
   name: az datashare dataset delete
   summary: Delete a dataset in a share.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a dataset
-    syntax:
-      content: az datashare dataset delete --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare
+    syntax: az datashare dataset delete --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare
   parameters:
   - isRequired: true
     name: --account-name
@@ -92,12 +74,9 @@ items:
   name: az datashare dataset list
   summary: List datasets in a share.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List datasets
-    syntax:
-      content: az datashare dataset list --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare
+    syntax: az datashare dataset list --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare
   parameters:
   - isRequired: true
     name: --account-name
@@ -115,12 +94,9 @@ items:
   name: az datashare dataset show
   summary: Show a dataset.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a dataset
-    syntax:
-      content: az datashare dataset show --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare
+    syntax: az datashare dataset show --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare
   parameters:
   - isRequired: true
     name: --account-name
@@ -142,12 +118,9 @@ items:
   name: az datashare dataset wait
   summary: Place the CLI in a waiting state until a condition of the datashare dataset is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pause executing next line of CLI script until the datashare dataset is successfully provisioned.
-    syntax:
-      content: az datashare dataset wait --account-name MyAccount --share-name MyShare --name MyDataset --resource-group MyResourceGroup --created
+    syntax: az datashare dataset wait --account-name MyAccount --share-name MyShare --name MyDataset --resource-group MyResourceGroup --created
   parameters:
   - isRequired: true
     name: --account-name
@@ -189,21 +162,11 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_datashare_az_datashare_dataset_create
-  name: az datashare dataset create
-  summary: Create a dataset.
-- uid: ext_datashare_az_datashare_dataset_delete
-  name: az datashare dataset delete
-  summary: Delete a dataset in a share.
-- uid: ext_datashare_az_datashare_dataset_list
-  name: az datashare dataset list
-  summary: List datasets in a share.
-- uid: ext_datashare_az_datashare_dataset_show
-  name: az datashare dataset show
-  summary: Show a dataset.
-- uid: ext_datashare_az_datashare_dataset_wait
-  name: az datashare dataset wait
-  summary: Place the CLI in a waiting state until a condition of the datashare dataset is met.
+- ext_datashare_az_datashare_dataset_create
+- ext_datashare_az_datashare_dataset_delete
+- ext_datashare_az_datashare_dataset_list
+- ext_datashare_az_datashare_dataset_show
+- ext_datashare_az_datashare_dataset_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -219,4 +182,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands for providers to manage datashare datasets.
+metadata:
+  description: Commands for providers to manage datashare datasets.

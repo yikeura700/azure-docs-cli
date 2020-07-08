@@ -1,28 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-iot_az_iot_pnp_capability_model
-  name: az iot pnp capability-model
-  summary: Manage device capability models in an IoT Plug and Play model repository.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-iot_az_iot_pnp_capability_model_create
-  - ext_azure-iot_az_iot_pnp_capability_model_delete
-  - ext_azure-iot_az_iot_pnp_capability_model_list
-  - ext_azure-iot_az_iot_pnp_capability_model_publish
-  - ext_azure-iot_az_iot_pnp_capability_model_show
-  - ext_azure-iot_az_iot_pnp_capability_model_update
+### YamlMime:CLIGroup
+uid: ext_azure-iot_az_iot_pnp_capability_model
+name: az iot pnp capability-model
+summary: Manage device capability models in an IoT Plug and Play model repository.
+description: ''
+directCommands:
 - uid: ext_azure-iot_az_iot_pnp_capability_model_create
   name: az iot pnp capability-model create
   summary: Create a capability-model in the company repository.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a capability-model in the company repository.
-    syntax:
-      content: az iot pnp capability-model create --def {plug_and_play_capability_model_file_path} -r {pnp_repository}
+    syntax: az iot pnp capability-model create --def {plug_and_play_capability_model_file_path} -r {pnp_repository}
   parameters:
   - isRequired: true
     name: --def --definition
@@ -42,12 +30,9 @@ items:
   name: az iot pnp capability-model delete
   summary: Delete the capability-model in the company repository.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete the capability-model in the company repository.
-    syntax:
-      content: az iot pnp capability-model delete -r {pnp_repository} --model {plug_and_play_capability_model_id}
+    syntax: az iot pnp capability-model delete -r {pnp_repository} --model {plug_and_play_capability_model_id}
   parameters:
   - isRequired: true
     name: --model -m
@@ -67,15 +52,11 @@ items:
   name: az iot pnp capability-model list
   summary: List all capability-model.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all company repository's capability-model.
-    syntax:
-      content: az iot pnp capability-model list -r {pnp_repository}
+    syntax: az iot pnp capability-model list -r {pnp_repository}
   - summary: List all public capability-model.
-    syntax:
-      content: az iot pnp capability-model list
+    syntax: az iot pnp capability-model list
   parameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
@@ -98,12 +79,9 @@ items:
   name: az iot pnp capability-model publish
   summary: Publish the capability-model to public repository.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Publish the capability-model to public repository.
-    syntax:
-      content: az iot pnp capability-model publish -r {pnp_repository} --model {plug_and_play_capability_model_id}
+    syntax: az iot pnp capability-model publish -r {pnp_repository} --model {plug_and_play_capability_model_id}
   parameters:
   - isRequired: true
     name: --model -m
@@ -123,15 +101,11 @@ items:
   name: az iot pnp capability-model show
   summary: Get the details of a capability-model.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the details of a company repository capability-model.
-    syntax:
-      content: az iot pnp capability-model show -r {pnp_repository} --model {plug_and_play_capability_model_id}
+    syntax: az iot pnp capability-model show -r {pnp_repository} --model {plug_and_play_capability_model_id}
   - summary: Get the details of public capability-model.
-    syntax:
-      content: az iot pnp capability-model show --model {plug_and_play_capability_model_id}
+    syntax: az iot pnp capability-model show --model {plug_and_play_capability_model_id}
   parameters:
   - isRequired: true
     name: --model -m
@@ -154,12 +128,9 @@ items:
   name: az iot pnp capability-model update
   summary: Update the capability-model in the company repository.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update the capability-model in the company repository.
-    syntax:
-      content: az iot pnp capability-model update --def {updated_plug_and_play_capability_model_file_path} -r {pnp_repository}
+    syntax: az iot pnp capability-model update --def {updated_plug_and_play_capability_model_file_path} -r {pnp_repository}
   parameters:
   - isRequired: true
     name: --def --definition
@@ -176,24 +147,12 @@ items:
     summary: IoT Plug and Play repository Id.
     description: ''
 commands:
-- uid: ext_azure-iot_az_iot_pnp_capability_model_create
-  name: az iot pnp capability-model create
-  summary: Create a capability-model in the company repository.
-- uid: ext_azure-iot_az_iot_pnp_capability_model_delete
-  name: az iot pnp capability-model delete
-  summary: Delete the capability-model in the company repository.
-- uid: ext_azure-iot_az_iot_pnp_capability_model_list
-  name: az iot pnp capability-model list
-  summary: List all capability-model.
-- uid: ext_azure-iot_az_iot_pnp_capability_model_publish
-  name: az iot pnp capability-model publish
-  summary: Publish the capability-model to public repository.
-- uid: ext_azure-iot_az_iot_pnp_capability_model_show
-  name: az iot pnp capability-model show
-  summary: Get the details of a capability-model.
-- uid: ext_azure-iot_az_iot_pnp_capability_model_update
-  name: az iot pnp capability-model update
-  summary: Update the capability-model in the company repository.
+- ext_azure-iot_az_iot_pnp_capability_model_create
+- ext_azure-iot_az_iot_pnp_capability_model_delete
+- ext_azure-iot_az_iot_pnp_capability_model_list
+- ext_azure-iot_az_iot_pnp_capability_model_publish
+- ext_azure-iot_az_iot_pnp_capability_model_show
+- ext_azure-iot_az_iot_pnp_capability_model_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -209,4 +168,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage device capability models in an IoT Plug and Play model repository.
+metadata:
+  description: Manage device capability models in an IoT Plug and Play model repository.

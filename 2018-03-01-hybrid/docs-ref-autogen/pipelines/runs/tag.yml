@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_pipelines_runs_tag
-  name: az pipelines runs tag
-  summary: Manage pipeline run tags.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_pipelines_runs_tag_add
-  - az_pipelines_runs_tag_delete
-  - az_pipelines_runs_tag_list
+### YamlMime:CLIGroup
+uid: az_pipelines_runs_tag
+name: az pipelines runs tag
+summary: Manage pipeline run tags.
+description: ''
+directCommands:
 - uid: az_pipelines_runs_tag_add
   name: az pipelines runs tag add
   summary: Add tag(s) for a pipeline run.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --run-id
@@ -42,8 +34,6 @@ items:
   name: az pipelines runs tag delete
   summary: Delete a pipeline run tag.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --run-id
@@ -70,8 +60,6 @@ items:
   name: az pipelines runs tag list
   summary: Get tags for a pipeline run.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --run-id
@@ -91,15 +79,9 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_pipelines_runs_tag_add
-  name: az pipelines runs tag add
-  summary: Add tag(s) for a pipeline run.
-- uid: az_pipelines_runs_tag_delete
-  name: az pipelines runs tag delete
-  summary: Delete a pipeline run tag.
-- uid: az_pipelines_runs_tag_list
-  name: az pipelines runs tag list
-  summary: Get tags for a pipeline run.
+- az_pipelines_runs_tag_add
+- az_pipelines_runs_tag_delete
+- az_pipelines_runs_tag_list
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -115,4 +97,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage pipeline run tags.
+metadata:
+  description: Manage pipeline run tags.

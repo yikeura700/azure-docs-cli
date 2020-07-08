@@ -1,31 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_deployment_group
-  name: az deployment group
-  summary: Manage Azure Resource Manager template deployment at resource group.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_deployment_group_cancel
-  - az_deployment_group_create
-  - az_deployment_group_delete
-  - az_deployment_group_export
-  - az_deployment_group_list
-  - az_deployment_group_show
-  - az_deployment_group_validate
-  - az_deployment_group_wait
-  - az_deployment_group_what_if
+### YamlMime:CLIGroup
+uid: az_deployment_group
+name: az deployment group
+summary: Manage Azure Resource Manager template deployment at resource group.
+description: ''
+directCommands:
 - uid: az_deployment_group_cancel
   name: az deployment group cancel
   summary: Cancel a deployment at resource group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Cancel a deployment at resource group.
-    syntax:
-      content: az deployment group cancel -g testrg -n deployment01
+    syntax: az deployment group cancel -g testrg -n deployment01
   parameters:
   - isRequired: true
     name: --name -n
@@ -48,29 +33,23 @@ items:
   name: az deployment group create
   summary: Start a deployment at resource group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a deployment at resource group from a remote template file, using parameters from a local JSON file.
-    syntax:
-      content: >-
-        az deployment group create --resource-group testrg --name rollout01 \
-            --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json
+    syntax: >-
+      az deployment group create --resource-group testrg --name rollout01 \
+          --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json
   - summary: Create a deployment at resource group from a local template file, using parameters from a JSON string.
-    syntax:
-      content: >-
-        az deployment group create --resource-group testrg --name rollout01 \
-            --template-file azuredeploy.json  \
-            --parameters '{ \"policyName\": { \"value\": \"policy2\" } }'
+    syntax: >-
+      az deployment group create --resource-group testrg --name rollout01 \
+          --template-file azuredeploy.json  \
+          --parameters '{ \"policyName\": { \"value\": \"policy2\" } }'
   - summary: Create a deployment at resource group from a local template file, using parameters from an array string.
-    syntax:
-      content: az deployment group create --resource-group testgroup --template-file demotemplate.json --parameters exampleString='inline string' exampleArray='("value1", "value2")'
+    syntax: az deployment group create --resource-group testgroup --template-file demotemplate.json --parameters exampleString='inline string' exampleArray='("value1", "value2")'
   - summary: Create a deployment at resource group from a local template, using a parameter file, a remote parameter file, and selectively overriding key/value pairs.
-    syntax:
-      content: >-
-        az deployment group create --resource-group testrg --name rollout01 \
-            --template-file azuredeploy.json  --parameters @params.json \
-            --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
+    syntax: >-
+      az deployment group create --resource-group testrg --name rollout01 \
+          --template-file azuredeploy.json  --parameters @params.json \
+          --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -137,12 +116,9 @@ items:
   name: az deployment group delete
   summary: Delete a deployment at resource group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a deployment at resource group.
-    syntax:
-      content: az deployment group delete -g testrg -n deployment01
+    syntax: az deployment group delete -g testrg -n deployment01
   parameters:
   - isRequired: true
     name: --name -n
@@ -168,12 +144,9 @@ items:
   name: az deployment group export
   summary: Export the template used for a deployment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Export the template used for a deployment at resource group.
-    syntax:
-      content: az deployment group export --resource-group testrg --name MyDeployment
+    syntax: az deployment group export --resource-group testrg --name MyDeployment
   parameters:
   - isRequired: true
     name: --name -n
@@ -196,12 +169,9 @@ items:
   name: az deployment group list
   summary: List deployments at resource group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List deployments at resource group.
-    syntax:
-      content: az deployment group list -g testrg
+    syntax: az deployment group list -g testrg
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -223,12 +193,9 @@ items:
   name: az deployment group show
   summary: Show a deployment at resource group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a deployment at resource group.
-    syntax:
-      content: az deployment group show -g testrg -n deployment01
+    syntax: az deployment group show -g testrg -n deployment01
   parameters:
   - isRequired: true
     name: --name -n
@@ -251,15 +218,11 @@ items:
   name: az deployment group validate
   summary: Validate whether a template is valid at resource group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Validate whether a template is valid at resource group.
-    syntax:
-      content: az deployment group validate --resource-group testrg --template-file {template-file}
+    syntax: az deployment group validate --resource-group testrg --template-file {template-file}
   - summary: Validate whether a template is valid at resource group. (autogenerated)
-    syntax:
-      content: az deployment group validate --parameters MyValue=This MyArray=@array.json --resource-group testrg --template-file azuredeploy.json
+    syntax: az deployment group validate --parameters MyValue=This MyArray=@array.json --resource-group testrg --template-file azuredeploy.json
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -305,12 +268,9 @@ items:
   name: az deployment group wait
   summary: Place the CLI in a waiting state until a deployment condition is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Place the CLI in a waiting state until a deployment condition is met. (autogenerated)
-    syntax:
-      content: az deployment group wait --created --name MyDeployment --resource-group MyResourceGroup
+    syntax: az deployment group wait --created --name MyDeployment --resource-group MyResourceGroup
   parameters:
   - isRequired: true
     name: --name -n
@@ -356,18 +316,13 @@ items:
   name: az deployment group what-if
   summary: Execute a deployment What-If operation at resource group scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Execute a deployment What-If operation at a resource group.
-    syntax:
-      content: az deployment group what-if --resource-group testrg --name rollout01 --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json
+    syntax: az deployment group what-if --resource-group testrg --name rollout01 --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json
   - summary: Execute a deployment What-If operation at a resource group with ResourceIdOnly format.
-    syntax:
-      content: az deployment group what-if --resource-group testrg --name rollout01 --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json --result-format ResourceIdOnly
+    syntax: az deployment group what-if --resource-group testrg --name rollout01 --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json --result-format ResourceIdOnly
   - summary: Execute a deployment What-If operation at a resource group without pretty-printing the result.
-    syntax:
-      content: az deployment group what-if --resource-group testrg --name rollout01 --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json --no-pretty-print
+    syntax: az deployment group what-if --resource-group testrg --name rollout01 --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json --no-pretty-print
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -419,33 +374,15 @@ items:
       path: src/azure-cli/azure/cli/command_modules/resource/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_deployment_group_cancel
-  name: az deployment group cancel
-  summary: Cancel a deployment at resource group.
-- uid: az_deployment_group_create
-  name: az deployment group create
-  summary: Start a deployment at resource group.
-- uid: az_deployment_group_delete
-  name: az deployment group delete
-  summary: Delete a deployment at resource group.
-- uid: az_deployment_group_export
-  name: az deployment group export
-  summary: Export the template used for a deployment.
-- uid: az_deployment_group_list
-  name: az deployment group list
-  summary: List deployments at resource group.
-- uid: az_deployment_group_show
-  name: az deployment group show
-  summary: Show a deployment at resource group.
-- uid: az_deployment_group_validate
-  name: az deployment group validate
-  summary: Validate whether a template is valid at resource group.
-- uid: az_deployment_group_wait
-  name: az deployment group wait
-  summary: Place the CLI in a waiting state until a deployment condition is met.
-- uid: az_deployment_group_what_if
-  name: az deployment group what-if
-  summary: Execute a deployment What-If operation at resource group scope.
+- az_deployment_group_cancel
+- az_deployment_group_create
+- az_deployment_group_delete
+- az_deployment_group_export
+- az_deployment_group_list
+- az_deployment_group_show
+- az_deployment_group_validate
+- az_deployment_group_wait
+- az_deployment_group_what_if
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -461,10 +398,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
-updated_at: 6/16/2020 5:44:37 AM
-ms.date: 06/16/2020
-description: Manage Azure Resource Manager template deployment at resource group.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  updated_at: 6/16/2020 5:44:37 AM
+  ms.date: 06/16/2020
+  description: Manage Azure Resource Manager template deployment at resource group.

@@ -1,30 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_deploymentmanager_step
-  name: az deploymentmanager step
-  summary: Manage the steps.
-  description: Allows you to manage the steps that can be used in rollouts.
-  langs:
-  - azurecli
-  children:
-  - az_deploymentmanager_step_create
-  - az_deploymentmanager_step_delete
-  - az_deploymentmanager_step_list
-  - az_deploymentmanager_step_show
-  - az_deploymentmanager_step_update
+### YamlMime:CLIGroup
+uid: az_deploymentmanager_step
+name: az deploymentmanager step
+summary: Manage the steps.
+description: Allows you to manage the steps that can be used in rollouts.
+directCommands:
 - uid: az_deploymentmanager_step_create
   name: az deploymentmanager step create
   summary: Creates the step.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Creates a wait step.
-    syntax:
-      content: az deploymentmanager step create -g rg1 -l location -n contosoServiceWaitStep --duration PT30M
+    syntax: az deploymentmanager step create -g rg1 -l location -n contosoServiceWaitStep --duration PT30M
   - summary: Creates a health check step from a JSON file. The step information is read from the file.
-    syntax:
-      content: az deploymentmanager step create -g rg1 --step healthcheck_step.json
+    syntax: az deploymentmanager step create -g rg1 --step healthcheck_step.json
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -58,8 +46,6 @@ items:
   name: az deploymentmanager step delete
   summary: Deletes the step.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name --step-name -n
@@ -82,12 +68,9 @@ items:
   name: az deploymentmanager step list
   summary: List all steps in a resource group.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List available steps in the given resource group.
-    syntax:
-      content: az deploymentmanager step list -g rg1
+    syntax: az deploymentmanager step list -g rg1
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -106,12 +89,9 @@ items:
   name: az deploymentmanager step show
   summary: Get the details of the step.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the step.
-    syntax:
-      content: az deploymentmanager step show -g rg1 -n contosoServiceWaitStep
+    syntax: az deploymentmanager step show -g rg1 -n contosoServiceWaitStep
   parameters:
   - isRequired: true
     name: --name --step-name -n
@@ -134,12 +114,9 @@ items:
   name: az deploymentmanager step update
   summary: Updates the step.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Updates a step.
-    syntax:
-      content: az deploymentmanager step update -g rg1 -n contosoServiceWaitStep --duration PT20M
+    syntax: az deploymentmanager step update -g rg1 -n contosoServiceWaitStep --duration PT20M
   parameters:
   - isRequired: true
     name: --name --step-name -n
@@ -180,21 +157,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_deploymentmanager_step_create
-  name: az deploymentmanager step create
-  summary: Creates the step.
-- uid: az_deploymentmanager_step_delete
-  name: az deploymentmanager step delete
-  summary: Deletes the step.
-- uid: az_deploymentmanager_step_list
-  name: az deploymentmanager step list
-  summary: List all steps in a resource group.
-- uid: az_deploymentmanager_step_show
-  name: az deploymentmanager step show
-  summary: Get the details of the step.
-- uid: az_deploymentmanager_step_update
-  name: az deploymentmanager step update
-  summary: Updates the step.
+- az_deploymentmanager_step_create
+- az_deploymentmanager_step_delete
+- az_deploymentmanager_step_list
+- az_deploymentmanager_step_show
+- az_deploymentmanager_step_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -210,10 +177,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/f8fcf6fe53ac8443c852afa1f4a334d732a2cea4/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-updated_at: 1/30/2020 1:38:16 PM
-ms.date: 01/30/2020
-description: Allows you to manage the steps that can be used in rollouts.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/f8fcf6fe53ac8443c852afa1f4a334d732a2cea4/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
+  updated_at: 1/30/2020 1:38:16 PM
+  ms.date: 01/30/2020
+  description: Allows you to manage the steps that can be used in rollouts.

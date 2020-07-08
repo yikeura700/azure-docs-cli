@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_condition
-  name: az network front-door rules-engine rule condition
-  summary: Manage Rules Engine match conditions for Front Door.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_front-door_az_network_front_door_rules_engine_rule_condition_add
-  - ext_front-door_az_network_front_door_rules_engine_rule_condition_list
-  - ext_front-door_az_network_front_door_rules_engine_rule_condition_remove
+### YamlMime:CLIGroup
+uid: ext_front-door_az_network_front_door_rules_engine_rule_condition
+name: az network front-door rules-engine rule condition
+summary: Manage Rules Engine match conditions for Front Door.
+description: ''
+directCommands:
 - uid: ext_front-door_az_network_front_door_rules_engine_rule_condition_add
   name: az network front-door rules-engine rule condition add
   summary: Add a match condition to a Rules Engine rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --front-door-name -f
@@ -59,8 +51,6 @@ items:
   name: az network front-door rules-engine rule condition list
   summary: Show all match conditions associated with a Rules Engine rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --front-door-name -f
@@ -82,8 +72,6 @@ items:
   name: az network front-door rules-engine rule condition remove
   summary: Remove a match condition from a Rules Engine rule.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --front-door-name -f
@@ -106,15 +94,9 @@ items:
     summary: Name of the Rules Engine.
     description: ''
 commands:
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_condition_add
-  name: az network front-door rules-engine rule condition add
-  summary: Add a match condition to a Rules Engine rule.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_condition_list
-  name: az network front-door rules-engine rule condition list
-  summary: Show all match conditions associated with a Rules Engine rule.
-- uid: ext_front-door_az_network_front_door_rules_engine_rule_condition_remove
-  name: az network front-door rules-engine rule condition remove
-  summary: Remove a match condition from a Rules Engine rule.
+- ext_front-door_az_network_front_door_rules_engine_rule_condition_add
+- ext_front-door_az_network_front_door_rules_engine_rule_condition_list
+- ext_front-door_az_network_front_door_rules_engine_rule_condition_remove
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -130,4 +112,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Rules Engine match conditions for Front Door.
+metadata:
+  description: Manage Rules Engine match conditions for Front Door.

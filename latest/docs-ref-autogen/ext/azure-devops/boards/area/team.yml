@@ -1,26 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_boards_area_team
-  name: az boards area team
-  summary: Manage areas for a team.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_boards_area_team_add
-  - ext_azure-devops_az_boards_area_team_list
-  - ext_azure-devops_az_boards_area_team_remove
-  - ext_azure-devops_az_boards_area_team_update
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_boards_area_team
+name: az boards area team
+summary: Manage areas for a team.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_boards_area_team_add
   name: az boards area team add
   summary: Add area to a team.
   description: Every team needs to have a default area configured which can't be empty. Hence, you need to pass --set-as-default while adding first area to your team. You can later configure any other area which already added to team as default by using `az boards area team update -h` command.
-  langs:
-  - azurecli
   examples:
   - summary: Add area to a team.
-    syntax:
-      content: az boards area team add --team 'ContosoTeam' --path '\ContosoProject\MyProjectAreaName'
+    syntax: az boards area team add --team 'ContosoTeam' --path '\ContosoProject\MyProjectAreaName'
   parameters:
   - isRequired: true
     name: --path
@@ -51,8 +41,6 @@ items:
   name: az boards area team list
   summary: List areas for a team.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --team
@@ -72,8 +60,6 @@ items:
   name: az boards area team remove
   summary: Remove area from a team.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --path
@@ -97,8 +83,6 @@ items:
   name: az boards area team update
   summary: Update team area.
   description: Update any area to include/exclude sub areas OR Set already added area as default.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --path
@@ -126,18 +110,10 @@ items:
     summary: 'Set as default team area path. Default: False.'
     description: ''
 commands:
-- uid: ext_azure-devops_az_boards_area_team_add
-  name: az boards area team add
-  summary: Add area to a team.
-- uid: ext_azure-devops_az_boards_area_team_list
-  name: az boards area team list
-  summary: List areas for a team.
-- uid: ext_azure-devops_az_boards_area_team_remove
-  name: az boards area team remove
-  summary: Remove area from a team.
-- uid: ext_azure-devops_az_boards_area_team_update
-  name: az boards area team update
-  summary: Update team area.
+- ext_azure-devops_az_boards_area_team_add
+- ext_azure-devops_az_boards_area_team_list
+- ext_azure-devops_az_boards_area_team_remove
+- ext_azure-devops_az_boards_area_team_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -153,4 +129,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage areas for a team.
+metadata:
+  description: Manage areas for a team.

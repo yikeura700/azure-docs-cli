@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_aem_az_vm_aem
-  name: az vm aem
-  summary: Manage Azure Enhanced Monitoring Extension for SAP.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_aem_az_vm_aem_delete
-  - ext_aem_az_vm_aem_set
-  - ext_aem_az_vm_aem_verify
+### YamlMime:CLIGroup
+uid: ext_aem_az_vm_aem
+name: az vm aem
+summary: Manage Azure Enhanced Monitoring Extension for SAP.
+description: ''
+directCommands:
 - uid: ext_aem_az_vm_aem_delete
   name: az vm aem delete
   summary: Remove Azure Enhanced Monitoring Extension.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -29,8 +21,6 @@ items:
   name: az vm aem set
   summary: Configure Azure Enhanced Monitoring Extension.
   description: It can take up to 15 minutes for the monitoring data to appear in the SAP system.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -47,8 +37,6 @@ items:
   name: az vm aem verify
   summary: Verify Azure Enhanced Monitoring Extensions configured correctly.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -66,15 +54,9 @@ items:
     summary: Maximum minutes to wait for the storage metrics to be available.
     description: ''
 commands:
-- uid: ext_aem_az_vm_aem_delete
-  name: az vm aem delete
-  summary: Remove Azure Enhanced Monitoring Extension.
-- uid: ext_aem_az_vm_aem_set
-  name: az vm aem set
-  summary: Configure Azure Enhanced Monitoring Extension.
-- uid: ext_aem_az_vm_aem_verify
-  name: az vm aem verify
-  summary: Verify Azure Enhanced Monitoring Extensions configured correctly.
+- ext_aem_az_vm_aem_delete
+- ext_aem_az_vm_aem_set
+- ext_aem_az_vm_aem_verify
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -90,4 +72,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Azure Enhanced Monitoring Extension for SAP.
+metadata:
+  description: Manage Azure Enhanced Monitoring Extension for SAP.

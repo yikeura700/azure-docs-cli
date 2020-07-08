@@ -1,28 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_cosmosdb_gremlin_graph
-  name: az cosmosdb gremlin graph
-  summary: Manage Azure Cosmos DB Gremlin graphs.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_cosmosdb_gremlin_graph_create
-  - az_cosmosdb_gremlin_graph_delete
-  - az_cosmosdb_gremlin_graph_exists
-  - az_cosmosdb_gremlin_graph_list
-  - az_cosmosdb_gremlin_graph_show
-  - az_cosmosdb_gremlin_graph_update
+### YamlMime:CLIGroup
+uid: az_cosmosdb_gremlin_graph
+name: az cosmosdb gremlin graph
+summary: Manage Azure Cosmos DB Gremlin graphs.
+description: ''
+directCommands:
 - uid: az_cosmosdb_gremlin_graph_create
   name: az cosmosdb gremlin graph create
   summary: Create an Gremlin graph under an Azure Cosmos DB Gremlin database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an Azure Cosmos DB Gremlin graph.
-    syntax:
-      content: az cosmosdb gremlin graph create -g MyResourceGroup -a MyAccount -d MyDatabase -n MyGraph --partition-key-path "/my/path" --idx @policy-file.json --ttl 1000 --throughput "700"
+    syntax: az cosmosdb gremlin graph create -g MyResourceGroup -a MyAccount -d MyDatabase -n MyGraph --partition-key-path "/my/path" --idx @policy-file.json --ttl 1000 --throughput "700"
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -84,8 +72,6 @@ items:
   name: az cosmosdb gremlin graph delete
   summary: Delete the Gremlin graph under an Azure Cosmos DB Gremlin database.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -119,8 +105,6 @@ items:
   name: az cosmosdb gremlin graph exists
   summary: Checks if an Azure Cosmos DB Gremlin graph exists.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -151,8 +135,6 @@ items:
   name: az cosmosdb gremlin graph list
   summary: List the Gremlin graphs under an Azure Cosmos DB Gremlin database.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -179,8 +161,6 @@ items:
   name: az cosmosdb gremlin graph show
   summary: Show the details of a Gremlin graph under an Azure Cosmos DB Gremlin database.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -211,8 +191,6 @@ items:
   name: az cosmosdb gremlin graph update
   summary: Update an Gremlin graph under an Azure Cosmos DB Gremlin database.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -246,33 +224,15 @@ items:
       path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_cosmosdb_gremlin_graph_create
-  name: az cosmosdb gremlin graph create
-  summary: Create an Gremlin graph under an Azure Cosmos DB Gremlin database.
-- uid: az_cosmosdb_gremlin_graph_delete
-  name: az cosmosdb gremlin graph delete
-  summary: Delete the Gremlin graph under an Azure Cosmos DB Gremlin database.
-- uid: az_cosmosdb_gremlin_graph_exists
-  name: az cosmosdb gremlin graph exists
-  summary: Checks if an Azure Cosmos DB Gremlin graph exists.
-- uid: az_cosmosdb_gremlin_graph_list
-  name: az cosmosdb gremlin graph list
-  summary: List the Gremlin graphs under an Azure Cosmos DB Gremlin database.
-- uid: az_cosmosdb_gremlin_graph_show
-  name: az cosmosdb gremlin graph show
-  summary: Show the details of a Gremlin graph under an Azure Cosmos DB Gremlin database.
-- uid: az_cosmosdb_gremlin_graph_throughput
-  name: az cosmosdb gremlin graph throughput
-  summary: Manage throughput of Gremlin graph under an Azure Cosmos DB account.
-- uid: az_cosmosdb_gremlin_graph_throughput_show
-  name: az cosmosdb gremlin graph throughput show
-  summary: Get the throughput of the Gremlin graph under an Azure Cosmos DB Gremlin database.
-- uid: az_cosmosdb_gremlin_graph_throughput_update
-  name: az cosmosdb gremlin graph throughput update
-  summary: Update the throughput of the Gremlin graph under an Azure Cosmos DB Gremlin database.
-- uid: az_cosmosdb_gremlin_graph_update
-  name: az cosmosdb gremlin graph update
-  summary: Update an Gremlin graph under an Azure Cosmos DB Gremlin database.
+- az_cosmosdb_gremlin_graph_create
+- az_cosmosdb_gremlin_graph_delete
+- az_cosmosdb_gremlin_graph_exists
+- az_cosmosdb_gremlin_graph_list
+- az_cosmosdb_gremlin_graph_show
+- az_cosmosdb_gremlin_graph_throughput
+- az_cosmosdb_gremlin_graph_throughput_show
+- az_cosmosdb_gremlin_graph_throughput_update
+- az_cosmosdb_gremlin_graph_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -288,10 +248,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/1a803c49df1c2a27dfcdc079168f3bc2baf02c81/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-updated_at: 4/17/2020 2:16:59 AM
-ms.date: 04/17/2020
-description: Manage Azure Cosmos DB Gremlin graphs.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/1a803c49df1c2a27dfcdc079168f3bc2baf02c81/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
+  updated_at: 4/17/2020 2:16:59 AM
+  ms.date: 04/17/2020
+  description: Manage Azure Cosmos DB Gremlin graphs.

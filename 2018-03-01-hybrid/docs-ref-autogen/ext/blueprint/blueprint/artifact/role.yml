@@ -1,31 +1,23 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_blueprint_az_blueprint_artifact_role
-  name: az blueprint artifact role
-  summary: Commands to manage blueprint role assignment artifact.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_blueprint_az_blueprint_artifact_role_create
-  - ext_blueprint_az_blueprint_artifact_role_update
+### YamlMime:CLIGroup
+uid: ext_blueprint_az_blueprint_artifact_role
+name: az blueprint artifact role
+summary: Commands to manage blueprint role assignment artifact.
+description: ''
+directCommands:
 - uid: ext_blueprint_az_blueprint_artifact_role_create
   name: az blueprint artifact role create
   summary: Create blueprint role artifact.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a role artifact
-    syntax:
-      content: >-
-        az blueprint artifact role create \
+    syntax: >-
+      az blueprint artifact role create \
 
-        --blueprint-name MyBlueprint --artifact-name MyRole --role-definition-id \
+      --blueprint-name MyBlueprint --artifact-name MyRole --role-definition-id \
 
-        "/providers/Microsoft.Authorization/roleDefinitions/00000000-0000-0000-0000-000000000000" \
+      "/providers/Microsoft.Authorization/roleDefinitions/00000000-0000-0000-0000-000000000000" \
 
-        --principal-ids "[parameters('[Usergrouporapplicationname]:MyRoleAssignmentName')]"
+      --principal-ids "[parameters('[Usergrouporapplicationname]:MyRoleAssignmentName')]"
   parameters:
   - isRequired: true
     name: --artifact-name
@@ -65,15 +57,12 @@ items:
   name: az blueprint artifact role update
   summary: Update blueprint role artifact.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update a role artifact
-    syntax:
-      content: >-
-        az blueprint artifact role update \
+    syntax: >-
+      az blueprint artifact role update \
 
-        --blueprint-name MyBlueprint --artifact-name MyRole --display-name "My Big Role"
+      --blueprint-name MyBlueprint --artifact-name MyRole --display-name "My Big Role"
   parameters:
   - isRequired: true
     name: --artifact-name
@@ -102,12 +91,8 @@ items:
     summary: Use subscription for the scope of the blueprint. If --management-group is not specified, --subscription value or the default subscription will be used as the scope.
     description: ''
 commands:
-- uid: ext_blueprint_az_blueprint_artifact_role_create
-  name: az blueprint artifact role create
-  summary: Create blueprint role artifact.
-- uid: ext_blueprint_az_blueprint_artifact_role_update
-  name: az blueprint artifact role update
-  summary: Update blueprint role artifact.
+- ext_blueprint_az_blueprint_artifact_role_create
+- ext_blueprint_az_blueprint_artifact_role_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -123,4 +108,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage blueprint role assignment artifact.
+metadata:
+  description: Commands to manage blueprint role assignment artifact.

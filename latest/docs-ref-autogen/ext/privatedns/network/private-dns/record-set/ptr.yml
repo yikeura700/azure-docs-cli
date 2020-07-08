@@ -1,31 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_privatedns_az_network_private_dns_record_set_ptr
-  name: az network private-dns record-set ptr
-  summary: Manage Private DNS PTR records.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_privatedns_az_network_private_dns_record_set_ptr_add_record
-  - ext_privatedns_az_network_private_dns_record_set_ptr_create
-  - ext_privatedns_az_network_private_dns_record_set_ptr_delete
-  - ext_privatedns_az_network_private_dns_record_set_ptr_list
-  - ext_privatedns_az_network_private_dns_record_set_ptr_remove_record
-  - ext_privatedns_az_network_private_dns_record_set_ptr_show
-  - ext_privatedns_az_network_private_dns_record_set_ptr_update
+### YamlMime:CLIGroup
+uid: ext_privatedns_az_network_private_dns_record_set_ptr
+name: az network private-dns record-set ptr
+summary: Manage Private DNS PTR records.
+description: ''
+directCommands:
 - uid: ext_privatedns_az_network_private_dns_record_set_ptr_add_record
   name: az network private-dns record-set ptr add-record
   summary: Add a PTR record.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add a PTR record.
-    syntax:
-      content: >-
-        az network private-dns record-set ptr add-record -g MyResourceGroup -z www.mysite.com \
-            -n MyRecordSet -d another.site.com
+    syntax: >-
+      az network private-dns record-set ptr add-record -g MyResourceGroup -z www.mysite.com \
+          -n MyRecordSet -d another.site.com
   parameters:
   - isRequired: true
     name: --ptrdname -d
@@ -47,12 +34,9 @@ items:
   name: az network private-dns record-set ptr create
   summary: Create an empty PTR record set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an empty PTR record set.
-    syntax:
-      content: az network private-dns record-set ptr create -g MyResourceGroup -z www.mysite.com -n MyRecordSet
+    syntax: az network private-dns record-set ptr create -g MyResourceGroup -z www.mysite.com -n MyRecordSet
   parameters:
   - isRequired: true
     name: --name -n
@@ -77,12 +61,9 @@ items:
   name: az network private-dns record-set ptr delete
   summary: Delete a PTR record set and all associated records.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a PTR record set and all associated records.
-    syntax:
-      content: az network private-dns record-set ptr delete -g MyResourceGroup -z www.mysite.com -n MyRecordSet
+    syntax: az network private-dns record-set ptr delete -g MyResourceGroup -z www.mysite.com -n MyRecordSet
   parameters:
   - isRequired: true
     name: --name -n
@@ -106,12 +87,9 @@ items:
   name: az network private-dns record-set ptr list
   summary: List all PTR record sets in a zone.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all PTR record sets in a zone.
-    syntax:
-      content: az network private-dns record-set ptr list -g MyResourceGroup -z www.mysite.com
+    syntax: az network private-dns record-set ptr list -g MyResourceGroup -z www.mysite.com
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -125,14 +103,11 @@ items:
   name: az network private-dns record-set ptr remove-record
   summary: Remove a PTR record from its record set.
   description: By default, if the last record in a set is removed, the record set is deleted. To retain the empty record set, include --keep-empty-record-set.
-  langs:
-  - azurecli
   examples:
   - summary: Remove a PTR record from its record set.
-    syntax:
-      content: >-
-        az network private-dns record-set ptr remove-record -g MyResourceGroup -z www.mysite.com \
-            -n MyRecordSet -d another.site.com
+    syntax: >-
+      az network private-dns record-set ptr remove-record -g MyResourceGroup -z www.mysite.com \
+          -n MyRecordSet -d another.site.com
   parameters:
   - isRequired: true
     name: --ptrdname -d
@@ -157,12 +132,9 @@ items:
   name: az network private-dns record-set ptr show
   summary: Get the details of a PTR record set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the details of a PTR record set.
-    syntax:
-      content: az network private-dns record-set ptr show -g MyResourceGroup -z www.mysite.com -n MyRecordSet
+    syntax: az network private-dns record-set ptr show -g MyResourceGroup -z www.mysite.com -n MyRecordSet
   parameters:
   - isRequired: true
     name: --name -n
@@ -180,14 +152,11 @@ items:
   name: az network private-dns record-set ptr update
   summary: Update a PTR record set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update a PTR record set.
-    syntax:
-      content: >-
-        az network private-dns record-set ptr update -g MyResourceGroup -z www.mysite.com \
-            -n MyRecordSet --metadata owner=WebTeam
+    syntax: >-
+      az network private-dns record-set ptr update -g MyResourceGroup -z www.mysite.com \
+          -n MyRecordSet --metadata owner=WebTeam
   parameters:
   - isRequired: true
     name: --name -n
@@ -220,27 +189,13 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_privatedns_az_network_private_dns_record_set_ptr_add_record
-  name: az network private-dns record-set ptr add-record
-  summary: Add a PTR record.
-- uid: ext_privatedns_az_network_private_dns_record_set_ptr_create
-  name: az network private-dns record-set ptr create
-  summary: Create an empty PTR record set.
-- uid: ext_privatedns_az_network_private_dns_record_set_ptr_delete
-  name: az network private-dns record-set ptr delete
-  summary: Delete a PTR record set and all associated records.
-- uid: ext_privatedns_az_network_private_dns_record_set_ptr_list
-  name: az network private-dns record-set ptr list
-  summary: List all PTR record sets in a zone.
-- uid: ext_privatedns_az_network_private_dns_record_set_ptr_remove_record
-  name: az network private-dns record-set ptr remove-record
-  summary: Remove a PTR record from its record set.
-- uid: ext_privatedns_az_network_private_dns_record_set_ptr_show
-  name: az network private-dns record-set ptr show
-  summary: Get the details of a PTR record set.
-- uid: ext_privatedns_az_network_private_dns_record_set_ptr_update
-  name: az network private-dns record-set ptr update
-  summary: Update a PTR record set.
+- ext_privatedns_az_network_private_dns_record_set_ptr_add_record
+- ext_privatedns_az_network_private_dns_record_set_ptr_create
+- ext_privatedns_az_network_private_dns_record_set_ptr_delete
+- ext_privatedns_az_network_private_dns_record_set_ptr_list
+- ext_privatedns_az_network_private_dns_record_set_ptr_remove_record
+- ext_privatedns_az_network_private_dns_record_set_ptr_show
+- ext_privatedns_az_network_private_dns_record_set_ptr_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -256,4 +211,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Private DNS PTR records.
+metadata:
+  description: Manage Private DNS PTR records.

@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_repos_policy_case_enforcement
-  name: az repos policy case-enforcement
-  summary: Manage case enforcement policy.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_repos_policy_case_enforcement_create
-  - az_repos_policy_case_enforcement_update
+### YamlMime:CLIGroup
+uid: az_repos_policy_case_enforcement
+name: az repos policy case-enforcement
+summary: Manage case enforcement policy.
+description: ''
+directCommands:
 - uid: az_repos_policy_case_enforcement_create
   name: az repos policy case-enforcement create
   summary: Create case enforcement policy.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --blocking
@@ -47,8 +40,6 @@ items:
   name: az repos policy case-enforcement update
   summary: Update case enforcement policy.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id --policy-id
@@ -79,12 +70,8 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_repos_policy_case_enforcement_create
-  name: az repos policy case-enforcement create
-  summary: Create case enforcement policy.
-- uid: az_repos_policy_case_enforcement_update
-  name: az repos policy case-enforcement update
-  summary: Update case enforcement policy.
+- az_repos_policy_case_enforcement_create
+- az_repos_policy_case_enforcement_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -100,4 +87,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage case enforcement policy.
+metadata:
+  description: Manage case enforcement policy.

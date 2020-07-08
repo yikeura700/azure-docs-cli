@@ -1,28 +1,19 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_network_vpn_connection_ipsec_policy
-  name: az network vpn-connection ipsec-policy
-  summary: Manage VPN connection IPSec policies.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_network_vpn_connection_ipsec_policy_add
-  - az_network_vpn_connection_ipsec_policy_clear
-  - az_network_vpn_connection_ipsec_policy_list
+### YamlMime:CLIGroup
+uid: az_network_vpn_connection_ipsec_policy
+name: az network vpn-connection ipsec-policy
+summary: Manage VPN connection IPSec policies.
+description: ''
+directCommands:
 - uid: az_network_vpn_connection_ipsec_policy_add
   name: az network vpn-connection ipsec-policy add
   summary: Add a VPN connection IPSec policy.
   description: Set all IPsec policies of a VPN connection. If you want to set any IPsec policy, you must set them all.
-  langs:
-  - azurecli
   examples:
   - summary: Add specified IPsec policies to a connection instead of relying on defaults.
-    syntax:
-      content: >-
-        az network vpn-connection ipsec-policy add -g MyResourceGroup --connection-name MyConnection \
-            --dh-group DHGroup14 --ike-encryption AES256 --ike-integrity SHA384 --ipsec-encryption DES3 \
-            --ipsec-integrity GCMAES256 --pfs-group PFS2048 --sa-lifetime 27000 --sa-max-size 102400000
+    syntax: >-
+      az network vpn-connection ipsec-policy add -g MyResourceGroup --connection-name MyConnection \
+          --dh-group DHGroup14 --ike-encryption AES256 --ike-integrity SHA384 --ipsec-encryption DES3 \
+          --ipsec-integrity GCMAES256 --pfs-group PFS2048 --sa-lifetime 27000 --sa-max-size 102400000
   parameters:
   - isRequired: true
     name: --connection-name
@@ -86,12 +77,9 @@ items:
   name: az network vpn-connection ipsec-policy clear
   summary: Delete all IPsec policies on a VPN connection.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Remove all previously specified IPsec policies from a connection.
-    syntax:
-      content: az network vpn-connection ipsec-policy clear -g MyResourceGroup --connection-name MyConnection
+    syntax: az network vpn-connection ipsec-policy clear -g MyResourceGroup --connection-name MyConnection
   parameters:
   - isRequired: true
     name: --connection-name
@@ -117,12 +105,9 @@ items:
   name: az network vpn-connection ipsec-policy list
   summary: List IPSec policies associated with a VPN connection.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List the IPsec policies set on a connection.
-    syntax:
-      content: az network vpn-connection ipsec-policy list -g MyResourceGroup --connection-name MyConnection
+    syntax: az network vpn-connection ipsec-policy list -g MyResourceGroup --connection-name MyConnection
   parameters:
   - isRequired: true
     name: --connection-name
@@ -142,15 +127,9 @@ items:
       path: src/azure-cli/azure/cli/command_modules/network/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_network_vpn_connection_ipsec_policy_add
-  name: az network vpn-connection ipsec-policy add
-  summary: Add a VPN connection IPSec policy.
-- uid: az_network_vpn_connection_ipsec_policy_clear
-  name: az network vpn-connection ipsec-policy clear
-  summary: Delete all IPsec policies on a VPN connection.
-- uid: az_network_vpn_connection_ipsec_policy_list
-  name: az network vpn-connection ipsec-policy list
-  summary: List IPSec policies associated with a VPN connection.
+- az_network_vpn_connection_ipsec_policy_add
+- az_network_vpn_connection_ipsec_policy_clear
+- az_network_vpn_connection_ipsec_policy_list
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -166,10 +145,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/network/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
-updated_at: 6/18/2020 6:20:50 AM
-ms.date: 06/18/2020
-description: Manage VPN connection IPSec policies.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
+  updated_at: 6/18/2020 6:20:50 AM
+  ms.date: 06/18/2020
+  description: Manage VPN connection IPSec policies.

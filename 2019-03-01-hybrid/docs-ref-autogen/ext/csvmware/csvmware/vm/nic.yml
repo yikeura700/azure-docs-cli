@@ -1,29 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_csvmware_az_csvmware_vm_nic
-  name: az csvmware vm nic
-  summary: Manage VMware virtual machine's Network Interface Cards.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_csvmware_az_csvmware_vm_nic_add
-  - ext_csvmware_az_csvmware_vm_nic_delete
-  - ext_csvmware_az_csvmware_vm_nic_list
-  - ext_csvmware_az_csvmware_vm_nic_show
+### YamlMime:CLIGroup
+uid: ext_csvmware_az_csvmware_vm_nic
+name: az csvmware vm nic
+summary: Manage VMware virtual machine's Network Interface Cards.
+description: ''
+directCommands:
 - uid: ext_csvmware_az_csvmware_vm_nic_add
   name: az csvmware vm nic add
   summary: Add NIC to a VMware virtual machine.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add a NIC with default parameters in a VM.
-    syntax:
-      content: az csvmware vm nic add --vm-name MyVm -g MyResourceGroup --virtual-network MyVirtualNetwork
+    syntax: az csvmware vm nic add --vm-name MyVm -g MyResourceGroup --virtual-network MyVirtualNetwork
   - summary: Add a NIC with E1000E adapter that powers on boot in a VM.
-    syntax:
-      content: az csvmware vm nic add --vm-name MyVm -g MyResourceGroup --virtual-network MyVirtualNetwork --adapter E1000E --power-on-boot true
+    syntax: az csvmware vm nic add --vm-name MyVm -g MyResourceGroup --virtual-network MyVirtualNetwork --adapter E1000E --power-on-boot true
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -50,12 +39,9 @@ items:
   name: az csvmware vm nic delete
   summary: Delete NICs from a VM.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete two NICs from a VM.
-    syntax:
-      content: az csvmware vm nic delete --vm-name MyVm -g MyResourceGroup --nics "My NIC Name 1" "My NIC Name 2"
+    syntax: az csvmware vm nic delete --vm-name MyVm -g MyResourceGroup --nics "My NIC Name 1" "My NIC Name 2"
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -73,12 +59,9 @@ items:
   name: az csvmware vm nic list
   summary: List details of NICs available on a VMware virtual machine.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List details of NICs in a VM.
-    syntax:
-      content: az csvmware vm nic list --vm-name MyVm -g MyResourceGroup
+    syntax: az csvmware vm nic list --vm-name MyVm -g MyResourceGroup
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -92,12 +75,9 @@ items:
   name: az csvmware vm nic show
   summary: Get the details of a VMware virtual machine's NIC.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the details of a NIC in a VM.
-    syntax:
-      content: az csvmware vm nic show --vm-name MyVm -g MyResourceGroup -n "My NIC Name"
+    syntax: az csvmware vm nic show --vm-name MyVm -g MyResourceGroup -n "My NIC Name"
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -112,18 +92,10 @@ items:
     summary: Name of the NIC.
     description: ''
 commands:
-- uid: ext_csvmware_az_csvmware_vm_nic_add
-  name: az csvmware vm nic add
-  summary: Add NIC to a VMware virtual machine.
-- uid: ext_csvmware_az_csvmware_vm_nic_delete
-  name: az csvmware vm nic delete
-  summary: Delete NICs from a VM.
-- uid: ext_csvmware_az_csvmware_vm_nic_list
-  name: az csvmware vm nic list
-  summary: List details of NICs available on a VMware virtual machine.
-- uid: ext_csvmware_az_csvmware_vm_nic_show
-  name: az csvmware vm nic show
-  summary: Get the details of a VMware virtual machine's NIC.
+- ext_csvmware_az_csvmware_vm_nic_add
+- ext_csvmware_az_csvmware_vm_nic_delete
+- ext_csvmware_az_csvmware_vm_nic_list
+- ext_csvmware_az_csvmware_vm_nic_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -139,4 +111,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage VMware virtual machine's Network Interface Cards.
+metadata:
+  description: Manage VMware virtual machine's Network Interface Cards.

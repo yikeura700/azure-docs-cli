@@ -1,36 +1,22 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_account_management_group
-  name: az account management-group
-  summary: Manage Azure Management Groups.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_account_management_group_create
-  - az_account_management_group_delete
-  - az_account_management_group_list
-  - az_account_management_group_show
-  - az_account_management_group_update
+### YamlMime:CLIGroup
+uid: az_account_management_group
+name: az account management-group
+summary: Manage Azure Management Groups.
+description: ''
+directCommands:
 - uid: az_account_management_group_create
   name: az account management-group create
   summary: Create a new management group.
   description: Create a new management group.
-  langs:
-  - azurecli
   examples:
   - summary: Create a new management group.
-    syntax:
-      content: az account management-group create --name GroupName
+    syntax: az account management-group create --name GroupName
   - summary: Create a new management group with a specific display name.
-    syntax:
-      content: az account management-group create --name GroupName --display-name DisplayName
+    syntax: az account management-group create --name GroupName --display-name DisplayName
   - summary: Create a new management group with a specific parent.
-    syntax:
-      content: az account management-group create --name GroupName --parent ParentId/ParentName
+    syntax: az account management-group create --name GroupName --parent ParentId/ParentName
   - summary: Create a new management group with a specific display name and parent.
-    syntax:
-      content: az account management-group create --name GroupName --display-name DisplayName --parent ParentId/ParentName
+    syntax: az account management-group create --name GroupName --display-name DisplayName --parent ParentId/ParentName
   parameters:
   - isRequired: true
     name: --name -n
@@ -52,12 +38,9 @@ items:
   name: az account management-group delete
   summary: Delete an existing management group.
   description: Delete an existing management group.
-  langs:
-  - azurecli
   examples:
   - summary: Delete an existing management group
-    syntax:
-      content: az account management-group delete --name GroupName
+    syntax: az account management-group delete --name GroupName
   parameters:
   - isRequired: true
     name: --name -n
@@ -73,12 +56,9 @@ items:
   name: az account management-group list
   summary: List all management groups.
   description: List of all management groups in the current tenant.
-  langs:
-  - azurecli
   examples:
   - summary: List all management groups
-    syntax:
-      content: az account management-group list
+    syntax: az account management-group list
   parameters: []
   source:
     path: src/azure-cli/azure/cli/command_modules/profile/_help.py
@@ -90,18 +70,13 @@ items:
   name: az account management-group show
   summary: Get a specific management group.
   description: Get the details of the management group.
-  langs:
-  - azurecli
   examples:
   - summary: Get a management group.
-    syntax:
-      content: az account management-group show --name GroupName
+    syntax: az account management-group show --name GroupName
   - summary: Get a management group with children in the first level of hierarchy.
-    syntax:
-      content: az account management-group show --name GroupName -e
+    syntax: az account management-group show --name GroupName -e
   - summary: Get a management group with children in all levels of hierarchy.
-    syntax:
-      content: az account management-group show --name GroupName -e -r
+    syntax: az account management-group show --name GroupName -e -r
   parameters:
   - isRequired: true
     name: --name -n
@@ -123,18 +98,13 @@ items:
   name: az account management-group update
   summary: Update an existing management group.
   description: Update an existing management group.
-  langs:
-  - azurecli
   examples:
   - summary: Update an existing management group with a specific display name.
-    syntax:
-      content: az account management-group update --name GroupName --display-name DisplayName
+    syntax: az account management-group update --name GroupName --display-name DisplayName
   - summary: Update an existing management group with a specific parent.
-    syntax:
-      content: az account management-group update --name GroupName --parent ParentId/ParentName
+    syntax: az account management-group update --name GroupName --parent ParentId/ParentName
   - summary: Update an existing management group with a specific display name and parent.
-    syntax:
-      content: az account management-group update --name GroupName --display-name DisplayName --parent ParentId/ParentName
+    syntax: az account management-group update --name GroupName --display-name DisplayName --parent ParentId/ParentName
   parameters:
   - isRequired: true
     name: --name -n
@@ -165,30 +135,14 @@ items:
       path: src/azure-cli/azure/cli/command_modules/profile/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_account_management_group_create
-  name: az account management-group create
-  summary: Create a new management group.
-- uid: az_account_management_group_delete
-  name: az account management-group delete
-  summary: Delete an existing management group.
-- uid: az_account_management_group_list
-  name: az account management-group list
-  summary: List all management groups.
-- uid: az_account_management_group_show
-  name: az account management-group show
-  summary: Get a specific management group.
-- uid: az_account_management_group_subscription
-  name: az account management-group subscription
-  summary: Subscription operations for Management Groups.
-- uid: az_account_management_group_subscription_add
-  name: az account management-group subscription add
-  summary: Add a subscription to a management group.
-- uid: az_account_management_group_subscription_remove
-  name: az account management-group subscription remove
-  summary: Remove an existing subscription from a management group.
-- uid: az_account_management_group_update
-  name: az account management-group update
-  summary: Update an existing management group.
+- az_account_management_group_create
+- az_account_management_group_delete
+- az_account_management_group_list
+- az_account_management_group_show
+- az_account_management_group_subscription
+- az_account_management_group_subscription_add
+- az_account_management_group_subscription_remove
+- az_account_management_group_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -204,10 +158,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/10b5e966121d2b7fda114bcbdfad5b6f6aa0aae8/src/azure-cli/azure/cli/command_modules/profile/_help.py
-updated_at: 3/16/2020 9:14:21 AM
-ms.date: 03/16/2020
-description: Manage Azure Management Groups.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/10b5e966121d2b7fda114bcbdfad5b6f6aa0aae8/src/azure-cli/azure/cli/command_modules/profile/_help.py
+  updated_at: 3/16/2020 9:14:21 AM
+  ms.date: 03/16/2020
+  description: Manage Azure Management Groups.

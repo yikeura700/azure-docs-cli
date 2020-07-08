@@ -1,29 +1,21 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_blueprint_az_blueprint_artifact_template
-  name: az blueprint artifact template
-  summary: Commands to manage blueprint ARM template artifact.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_blueprint_az_blueprint_artifact_template_create
-  - ext_blueprint_az_blueprint_artifact_template_update
+### YamlMime:CLIGroup
+uid: ext_blueprint_az_blueprint_artifact_template
+name: az blueprint artifact template
+summary: Commands to manage blueprint ARM template artifact.
+description: ''
+directCommands:
 - uid: ext_blueprint_az_blueprint_artifact_template_create
   name: az blueprint artifact template create
   summary: Create blueprint arm artifact.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an arm artifact
-    syntax:
-      content: >-
-        az blueprint artifact template create \
+    syntax: >-
+      az blueprint artifact template create \
 
-        --blueprint-name MyBlueprint --artifact-name MyTemplate \
+      --blueprint-name MyBlueprint --artifact-name MyTemplate \
 
-        --parameters path/to/parameter/file --template path/to/template
+      --parameters path/to/parameter/file --template path/to/template
   parameters:
   - isRequired: true
     name: --artifact-name
@@ -62,15 +54,12 @@ items:
   name: az blueprint artifact template update
   summary: Update blueprint arm artifact.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update a arm artifact
-    syntax:
-      content: >-
-        az blueprint artifact template update \
+    syntax: >-
+      az blueprint artifact template update \
 
-        --blueprint-name MyBlueprint --artifact-name MyTemplate --display-name "My Template"
+      --blueprint-name MyBlueprint --artifact-name MyTemplate --display-name "My Template"
   parameters:
   - isRequired: true
     name: --artifact-name
@@ -105,12 +94,8 @@ items:
     summary: Use subscription for the scope of the blueprint. If --management-group is not specified, --subscription value or the default subscription will be used as the scope.
     description: ''
 commands:
-- uid: ext_blueprint_az_blueprint_artifact_template_create
-  name: az blueprint artifact template create
-  summary: Create blueprint arm artifact.
-- uid: ext_blueprint_az_blueprint_artifact_template_update
-  name: az blueprint artifact template update
-  summary: Update blueprint arm artifact.
+- ext_blueprint_az_blueprint_artifact_template_create
+- ext_blueprint_az_blueprint_artifact_template_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -126,4 +111,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage blueprint ARM template artifact.
+metadata:
+  description: Commands to manage blueprint ARM template artifact.

@@ -1,24 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_acr_config_retention
-  name: az acr config retention
-  summary: Manage retention policy for Azure Container Registries.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_acr_config_retention_show
-  - az_acr_config_retention_update
+### YamlMime:CLIGroup
+uid: az_acr_config_retention
+name: az acr config retention
+summary: Manage retention policy for Azure Container Registries.
+description: ''
+directCommands:
 - uid: az_acr_config_retention_show
   name: az acr config retention show
   summary: Show the configured retention policy for an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show the configured retention policy for an Azure Container Registry
-    syntax:
-      content: az acr config retention show -r MyRegistry
+    syntax: az acr config retention show -r MyRegistry
   parameters:
   - isRequired: true
     name: --registry -r
@@ -40,15 +32,11 @@ items:
   name: az acr config retention update
   summary: Update retention policy for an Azure Container Registry.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Enable retention policy for an Azure Container Registry to delete an untagged manifest after 30 days.
-    syntax:
-      content: az acr config retention update -r MyRegistry --status Enabled --days 30 --type UntaggedManifests
+    syntax: az acr config retention update -r MyRegistry --status Enabled --days 30 --type UntaggedManifests
   - summary: Enable retention policy for an Azure Container Registry to delete a manifest as soon as it gets untagged.
-    syntax:
-      content: az acr config retention update -r MyRegistry --status Enabled --days 0 --type UntaggedManifests
+    syntax: az acr config retention update -r MyRegistry --status Enabled --days 0 --type UntaggedManifests
   parameters:
   - isRequired: true
     name: --registry -r
@@ -80,12 +68,8 @@ items:
       path: src/azure-cli/azure/cli/command_modules/acr/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_acr_config_retention_show
-  name: az acr config retention show
-  summary: Show the configured retention policy for an Azure Container Registry.
-- uid: az_acr_config_retention_update
-  name: az acr config retention update
-  summary: Update retention policy for an Azure Container Registry.
+- az_acr_config_retention_show
+- az_acr_config_retention_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -101,10 +85,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
-updated_at: 4/15/2020 7:14:42 AM
-ms.date: 04/15/2020
-description: Manage retention policy for Azure Container Registries.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
+  updated_at: 4/15/2020 7:14:42 AM
+  ms.date: 04/15/2020
+  description: Manage retention policy for Azure Container Registries.

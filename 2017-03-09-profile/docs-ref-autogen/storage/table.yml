@@ -1,23 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_storage_table
-  name: az storage table
-  summary: Manage NoSQL key-value storage.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_storage_table_create
-  - az_storage_table_delete
-  - az_storage_table_exists
-  - az_storage_table_generate_sas
-  - az_storage_table_list
+### YamlMime:CLIGroup
+uid: az_storage_table
+name: az storage table
+summary: Manage NoSQL key-value storage.
+description: ''
+directCommands:
 - uid: az_storage_table_create
   name: az storage table create
   summary: Creates a new table in the storage account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -54,8 +44,6 @@ items:
   name: az storage table delete
   summary: Deletes the specified table and any data it contains.
   description: When a table is successfully deleted, it is immediately marked for deletion  and is no longer accessible to clients. The table is later removed from  the Table service during garbage collection.  Note that deleting a table is likely to take at least 40 seconds to complete.  If an operation is attempted against the table while it was being deleted,  an AzureConflictHttpError will be thrown.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -92,8 +80,6 @@ items:
   name: az storage table exists
   summary: Returns a boolean indicating whether the table exists.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -127,8 +113,6 @@ items:
   name: az storage table generate-sas
   summary: Generates a shared access signature for the table.
   description: Use the returned signature with the sas_token parameter of TableService.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --expiry
@@ -190,8 +174,6 @@ items:
   name: az storage table list
   summary: List tables in a storage account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --marker
     summary: An opaque continuation object. This value can be retrieved from the next_marker field of a previous generator object if num_results was specified and that generator has finished enumerating results. If specified, this generator will begin returning results from the point where the previous generator stopped.
@@ -224,39 +206,17 @@ items:
       path: src/azure-cli/azure/cli/command_modules/storage/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_storage_table_create
-  name: az storage table create
-  summary: Creates a new table in the storage account.
-- uid: az_storage_table_delete
-  name: az storage table delete
-  summary: Deletes the specified table and any data it contains.
-- uid: az_storage_table_exists
-  name: az storage table exists
-  summary: Returns a boolean indicating whether the table exists.
-- uid: az_storage_table_generate_sas
-  name: az storage table generate-sas
-  summary: Generates a shared access signature for the table.
-- uid: az_storage_table_list
-  name: az storage table list
-  summary: List tables in a storage account.
-- uid: az_storage_table_policy
-  name: az storage table policy
-  summary: Manage shared access policies of a storage table.
-- uid: az_storage_table_policy_create
-  name: az storage table policy create
-  summary: Create a stored access policy on the containing object.
-- uid: az_storage_table_policy_delete
-  name: az storage table policy delete
-  summary: Delete a stored access policy on a containing object.
-- uid: az_storage_table_policy_list
-  name: az storage table policy list
-  summary: List stored access policies on a containing object.
-- uid: az_storage_table_policy_show
-  name: az storage table policy show
-  summary: Show a stored access policy on a containing object.
-- uid: az_storage_table_policy_update
-  name: az storage table policy update
-  summary: Set a stored access policy on a containing object.
+- az_storage_table_create
+- az_storage_table_delete
+- az_storage_table_exists
+- az_storage_table_generate_sas
+- az_storage_table_list
+- az_storage_table_policy
+- az_storage_table_policy_create
+- az_storage_table_policy_delete
+- az_storage_table_policy_list
+- az_storage_table_policy_show
+- az_storage_table_policy_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -272,10 +232,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
-updated_at: 6/4/2020 1:53:34 PM
-ms.date: 06/04/2020
-description: Manage NoSQL key-value storage.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  updated_at: 6/4/2020 1:53:34 PM
+  ms.date: 06/04/2020
+  description: Manage NoSQL key-value storage.

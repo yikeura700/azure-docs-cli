@@ -1,26 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_datafactory_az_datafactory_integration_runtime_node
-  name: az datafactory integration-runtime-node
-  summary: Datafactory integration-runtime-node.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_datafactory_az_datafactory_integration_runtime_node_delete
-  - ext_datafactory_az_datafactory_integration_runtime_node_get_ip_address
-  - ext_datafactory_az_datafactory_integration_runtime_node_show
-  - ext_datafactory_az_datafactory_integration_runtime_node_update
+### YamlMime:CLIGroup
+uid: ext_datafactory_az_datafactory_integration_runtime_node
+name: az datafactory integration-runtime-node
+summary: Datafactory integration-runtime-node.
+description: ''
+directCommands:
 - uid: ext_datafactory_az_datafactory_integration_runtime_node_delete
   name: az datafactory integration-runtime-node delete
   summary: Deletes a self-hosted integration runtime node.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: IntegrationRuntimesNodes_Delete
-    syntax:
-      content: az datafactory integration-runtime-node delete --factory-name "myFactoryName" --integration-runtime-name "myIntegrationRuntime" --node-name "Node_1" --resource-group "myResourceGroup"
+    syntax: az datafactory integration-runtime-node delete --factory-name "myFactoryName" --integration-runtime-name "myIntegrationRuntime" --node-name "Node_1" --resource-group "myResourceGroup"
   parameters:
   - isRequired: true
     name: --factory-name
@@ -42,12 +32,9 @@ items:
   name: az datafactory integration-runtime-node get-ip-address
   summary: Get the IP address of self-hosted integration runtime node.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: IntegrationRuntimeNodes_GetIpAddress
-    syntax:
-      content: az datafactory integration-runtime-node get-ip-address --factory-name "myFactoryName" --integration-runtime-name "myIntegrationRuntime" --node-name "Node_1" --resource-group "myResourceGroup"
+    syntax: az datafactory integration-runtime-node get-ip-address --factory-name "myFactoryName" --integration-runtime-name "myIntegrationRuntime" --node-name "Node_1" --resource-group "myResourceGroup"
   parameters:
   - isRequired: true
     name: --factory-name
@@ -69,12 +56,9 @@ items:
   name: az datafactory integration-runtime-node show
   summary: Gets a self-hosted integration runtime node.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: IntegrationRuntimeNodes_Get
-    syntax:
-      content: az datafactory integration-runtime-node show --factory-name "myFactoryName" --integration-runtime-name "myIntegrationRuntime" --node-name "Node_1" --resource-group "myResourceGroup"
+    syntax: az datafactory integration-runtime-node show --factory-name "myFactoryName" --integration-runtime-name "myIntegrationRuntime" --node-name "Node_1" --resource-group "myResourceGroup"
   parameters:
   - isRequired: true
     name: --factory-name
@@ -96,12 +80,9 @@ items:
   name: az datafactory integration-runtime-node update
   summary: Updates a self-hosted integration runtime node.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: IntegrationRuntimeNodes_Update
-    syntax:
-      content: az datafactory integration-runtime-node update --factory-name "myFactoryName" --integration-runtime-name "myIntegrationRuntime" --node-name "Node_1" --resource-group "myResourceGroup" --concurrent-jobs-limit 2
+    syntax: az datafactory integration-runtime-node update --factory-name "myFactoryName" --integration-runtime-name "myIntegrationRuntime" --node-name "Node_1" --resource-group "myResourceGroup" --concurrent-jobs-limit 2
   parameters:
   - isRequired: true
     name: --factory-name
@@ -123,18 +104,10 @@ items:
     summary: The number of concurrent jobs permitted to run on the integration runtime node. Values between 1 and maxConcurrentJobs(inclusive) are allowed.
     description: ''
 commands:
-- uid: ext_datafactory_az_datafactory_integration_runtime_node_delete
-  name: az datafactory integration-runtime-node delete
-  summary: Deletes a self-hosted integration runtime node.
-- uid: ext_datafactory_az_datafactory_integration_runtime_node_get_ip_address
-  name: az datafactory integration-runtime-node get-ip-address
-  summary: Get the IP address of self-hosted integration runtime node.
-- uid: ext_datafactory_az_datafactory_integration_runtime_node_show
-  name: az datafactory integration-runtime-node show
-  summary: Gets a self-hosted integration runtime node.
-- uid: ext_datafactory_az_datafactory_integration_runtime_node_update
-  name: az datafactory integration-runtime-node update
-  summary: Updates a self-hosted integration runtime node.
+- ext_datafactory_az_datafactory_integration_runtime_node_delete
+- ext_datafactory_az_datafactory_integration_runtime_node_get_ip_address
+- ext_datafactory_az_datafactory_integration_runtime_node_show
+- ext_datafactory_az_datafactory_integration_runtime_node_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -150,4 +123,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Datafactory integration-runtime-node.
+metadata:
+  description: Datafactory integration-runtime-node.

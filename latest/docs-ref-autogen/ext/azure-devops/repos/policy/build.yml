@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_repos_policy_build
-  name: az repos policy build
-  summary: Manage build policy.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_repos_policy_build_create
-  - ext_azure-devops_az_repos_policy_build_update
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_repos_policy_build
+name: az repos policy build
+summary: Manage build policy.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_repos_policy_build_create
   name: az repos policy build create
   summary: Create build policy.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --blocking
@@ -78,8 +71,6 @@ items:
   name: az repos policy build update
   summary: Update build policy.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id --policy-id
@@ -134,12 +125,8 @@ items:
     summary: Policy validity duration (in minutes).
     description: ''
 commands:
-- uid: ext_azure-devops_az_repos_policy_build_create
-  name: az repos policy build create
-  summary: Create build policy.
-- uid: ext_azure-devops_az_repos_policy_build_update
-  name: az repos policy build update
-  summary: Update build policy.
+- ext_azure-devops_az_repos_policy_build_create
+- ext_azure-devops_az_repos_policy_build_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -155,4 +142,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage build policy.
+metadata:
+  description: Manage build policy.

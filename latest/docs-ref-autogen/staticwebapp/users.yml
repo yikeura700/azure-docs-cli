@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_staticwebapp_users
-  name: az staticwebapp users
-  summary: Manage users of the static app.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_staticwebapp_users_invite
-  - az_staticwebapp_users_list
-  - az_staticwebapp_users_update
+### YamlMime:CLIGroup
+uid: az_staticwebapp_users
+name: az staticwebapp users
+summary: Manage users of the static app.
+description: ''
+directCommands:
 - uid: az_staticwebapp_users_invite
   name: az staticwebapp users invite
   summary: Create invitation link for specified user to the static app.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create invitation link for specified user to the static app.
-    syntax:
-      content: az staticwebapp users invite -n MyStaticAppName --authentication-provider GitHub --user-details JohnDoe --role Contributor --domain static-app-001.azurestaticapps.net --invitation-expiration-in-hours 1
+    syntax: az staticwebapp users invite -n MyStaticAppName --authentication-provider GitHub --user-details JohnDoe --role Contributor --domain static-app-001.azurestaticapps.net --invitation-expiration-in-hours 1
   parameters:
   - isRequired: true
     name: --authentication-provider
@@ -55,12 +46,9 @@ items:
   name: az staticwebapp users list
   summary: Lists users and assigned roles, limited to users who accepted their invites.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Lists users and assigned roles.
-    syntax:
-      content: az staticwebapp users list -n MyStaticAppName
+    syntax: az staticwebapp users list -n MyStaticAppName
   parameters:
   - isRequired: true
     name: --name -n
@@ -80,12 +68,9 @@ items:
   name: az staticwebapp users update
   summary: Updates a user entry with the listed roles. Either user details or user id is required.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Updates a user entry with the listed roles.
-    syntax:
-      content: az staticwebapp users update -n MyStaticAppName --user-details JohnDoe --role Contributor
+    syntax: az staticwebapp users update -n MyStaticAppName --user-details JohnDoe --role Contributor
   parameters:
   - isRequired: true
     name: --name -n
@@ -111,15 +96,9 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_staticwebapp_users_invite
-  name: az staticwebapp users invite
-  summary: Create invitation link for specified user to the static app.
-- uid: az_staticwebapp_users_list
-  name: az staticwebapp users list
-  summary: Lists users and assigned roles, limited to users who accepted their invites.
-- uid: az_staticwebapp_users_update
-  name: az staticwebapp users update
-  summary: Updates a user entry with the listed roles. Either user details or user id is required.
+- az_staticwebapp_users_invite
+- az_staticwebapp_users_list
+- az_staticwebapp_users_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -135,4 +114,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage users of the static app.
+metadata:
+  description: Manage users of the static app.

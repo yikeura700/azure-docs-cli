@@ -1,27 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_ams_streaming_endpoint
-  name: az ams streaming-endpoint
-  summary: Manage streaming endpoints for an Azure Media Service account.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_ams_streaming_endpoint_create
-  - az_ams_streaming_endpoint_delete
-  - az_ams_streaming_endpoint_list
-  - az_ams_streaming_endpoint_scale
-  - az_ams_streaming_endpoint_show
-  - az_ams_streaming_endpoint_start
-  - az_ams_streaming_endpoint_stop
-  - az_ams_streaming_endpoint_update
-  - az_ams_streaming_endpoint_wait
+### YamlMime:CLIGroup
+uid: az_ams_streaming_endpoint
+name: az ams streaming-endpoint
+summary: Manage streaming endpoints for an Azure Media Service account.
+description: ''
+directCommands:
 - uid: az_ams_streaming_endpoint_create
   name: az ams streaming-endpoint create
   summary: Create a streaming endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -88,8 +74,6 @@ items:
   name: az ams streaming-endpoint delete
   summary: Delete a streaming endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -116,8 +100,6 @@ items:
   name: az ams streaming-endpoint list
   summary: List all the streaming endpoints within an Azure Media Services account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -140,8 +122,6 @@ items:
   name: az ams streaming-endpoint scale
   summary: Set the scale of a streaming endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --scale-units
     summary: The number of scale units for Premium StreamingEndpoints.
@@ -171,8 +151,6 @@ items:
   name: az ams streaming-endpoint show
   summary: Show the details of a streaming endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -199,8 +177,6 @@ items:
   name: az ams streaming-endpoint start
   summary: Start a streaming endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -230,8 +206,6 @@ items:
   name: az ams streaming-endpoint stop
   summary: Stop a streaming endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -261,8 +235,6 @@ items:
   name: az ams streaming-endpoint update
   summary: Update the details of a streaming endpoint.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --custom-host-names
     summary: Space-separated list of custom host names for the streaming endpoint. Use "" to clear existing list.
@@ -334,12 +306,9 @@ items:
   name: az ams streaming-endpoint wait
   summary: Place the CLI in a waiting state until a condition of the streaming endpoint is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Place the CLI in a waiting state until the streaming endpoint is created.
-    syntax:
-      content: az ams streaming-endpoint wait -g MyResourceGroup -a MyAmsAccount -n MyStreamingEndpoint --created
+    syntax: az ams streaming-endpoint wait -g MyResourceGroup -a MyAmsAccount -n MyStreamingEndpoint --created
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -386,42 +355,18 @@ items:
       path: src/azure-cli/azure/cli/command_modules/ams/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_ams_streaming_endpoint_akamai
-  name: az ams streaming-endpoint akamai
-  summary: Manage AkamaiAccessControl objects to be used on streaming endpoints.
-- uid: az_ams_streaming_endpoint_akamai_add
-  name: az ams streaming-endpoint akamai add
-  summary: Add an AkamaiAccessControl to an existing streaming endpoint.
-- uid: az_ams_streaming_endpoint_akamai_remove
-  name: az ams streaming-endpoint akamai remove
-  summary: Remove an AkamaiAccessControl from an existing streaming endpoint.
-- uid: az_ams_streaming_endpoint_create
-  name: az ams streaming-endpoint create
-  summary: Create a streaming endpoint.
-- uid: az_ams_streaming_endpoint_delete
-  name: az ams streaming-endpoint delete
-  summary: Delete a streaming endpoint.
-- uid: az_ams_streaming_endpoint_list
-  name: az ams streaming-endpoint list
-  summary: List all the streaming endpoints within an Azure Media Services account.
-- uid: az_ams_streaming_endpoint_scale
-  name: az ams streaming-endpoint scale
-  summary: Set the scale of a streaming endpoint.
-- uid: az_ams_streaming_endpoint_show
-  name: az ams streaming-endpoint show
-  summary: Show the details of a streaming endpoint.
-- uid: az_ams_streaming_endpoint_start
-  name: az ams streaming-endpoint start
-  summary: Start a streaming endpoint.
-- uid: az_ams_streaming_endpoint_stop
-  name: az ams streaming-endpoint stop
-  summary: Stop a streaming endpoint.
-- uid: az_ams_streaming_endpoint_update
-  name: az ams streaming-endpoint update
-  summary: Update the details of a streaming endpoint.
-- uid: az_ams_streaming_endpoint_wait
-  name: az ams streaming-endpoint wait
-  summary: Place the CLI in a waiting state until a condition of the streaming endpoint is met.
+- az_ams_streaming_endpoint_akamai
+- az_ams_streaming_endpoint_akamai_add
+- az_ams_streaming_endpoint_akamai_remove
+- az_ams_streaming_endpoint_create
+- az_ams_streaming_endpoint_delete
+- az_ams_streaming_endpoint_list
+- az_ams_streaming_endpoint_scale
+- az_ams_streaming_endpoint_show
+- az_ams_streaming_endpoint_start
+- az_ams_streaming_endpoint_stop
+- az_ams_streaming_endpoint_update
+- az_ams_streaming_endpoint_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -437,10 +382,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
-updated_at: 3/25/2020 2:12:45 AM
-ms.date: 03/25/2020
-description: Manage streaming endpoints for an Azure Media Service account.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
+  updated_at: 3/25/2020 2:12:45 AM
+  ms.date: 03/25/2020
+  description: Manage streaming endpoints for an Azure Media Service account.

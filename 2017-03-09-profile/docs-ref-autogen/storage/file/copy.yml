@@ -1,21 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_storage_file_copy
-  name: az storage file copy
-  summary: Manage file copy operations.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_storage_file_copy_cancel
-  - az_storage_file_copy_start
-  - az_storage_file_copy_start_batch
+### YamlMime:CLIGroup
+uid: az_storage_file_copy
+name: az storage file copy
+summary: Manage file copy operations.
+description: ''
+directCommands:
 - uid: az_storage_file_copy_cancel
   name: az storage file copy cancel
   summary: Aborts a pending copy_file operation, and leaves a destination file  with zero length and full metadata.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --copy-id
@@ -57,18 +49,13 @@ items:
   name: az storage file copy start
   summary: Copy a file asynchronously.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Copy a file asynchronously.
-    syntax:
-      content: az storage file copy start --source-account-name srcaccount --source-account-key 00000000 --source-path <srcpath-to-file> --source-share srcshare --destination-path <destpath-to-file> --destination-share destshare --account-name destaccount --account-key 00000000
+    syntax: az storage file copy start --source-account-name srcaccount --source-account-key 00000000 --source-path <srcpath-to-file> --source-share srcshare --destination-path <destpath-to-file> --destination-share destshare --account-name destaccount --account-key 00000000
   - summary: Copy a file asynchronously from source uri to destination storage account with sas token.
-    syntax:
-      content: az storage file copy start --source-uri "https://srcaccount.file.core.windows.net/myshare/mydir/myfile?<sastoken>" --destination-path <destpath-to-file> --destination-share destshare --account-name destaccount --sas-token <destinaition-sas>
+    syntax: az storage file copy start --source-uri "https://srcaccount.file.core.windows.net/myshare/mydir/myfile?<sastoken>" --destination-path <destpath-to-file> --destination-share destshare --account-name destaccount --sas-token <destinaition-sas>
   - summary: Copy a file asynchronously from file snapshot to destination storage account with sas token.
-    syntax:
-      content: az storage file copy start --source-account-name srcaccount --source-account-key 00000000 --source-path <srcpath-to-file> --source-share srcshare --file-snapshot "2020-03-02T13:51:54.0000000Z" --destination-path <destpath-to-file> --destination-share destshare --account-name destaccount --sas-token <destinaition-sas>
+    syntax: az storage file copy start --source-account-name srcaccount --source-account-key 00000000 --source-path <srcpath-to-file> --source-share srcshare --file-snapshot "2020-03-02T13:51:54.0000000Z" --destination-path <destpath-to-file> --destination-share destshare --account-name destaccount --sas-token <destinaition-sas>
   parameters:
   - isRequired: true
     name: --destination-path -p
@@ -139,15 +126,11 @@ items:
   name: az storage file copy start-batch
   summary: Copy multiple files or blobs to a file share.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Copy all files in a file share to another storage account.
-    syntax:
-      content: az storage file copy start-batch --source-account-name srcaccount --source-account-key 00000000 --source-share srcshare --destination-path <destpath-to-directory> --destination-share destshare --account-name destaccount --account-key 00000000
+    syntax: az storage file copy start-batch --source-account-name srcaccount --source-account-key 00000000 --source-share srcshare --destination-path <destpath-to-directory> --destination-share destshare --account-name destaccount --account-key 00000000
   - summary: Copy all files in a file share to another storage account. with sas token.
-    syntax:
-      content: az storage file copy start-batch --source-uri "https://srcaccount.file.core.windows.net/myshare?<sastoken>" --destination-path <destpath-to-directory> --destination-share destshare --account-name destaccount --sas-token <destinaition-sas>
+    syntax: az storage file copy start-batch --source-uri "https://srcaccount.file.core.windows.net/myshare?<sastoken>" --destination-path <destpath-to-directory> --destination-share destshare --account-name destaccount --sas-token <destinaition-sas>
   parameters:
   - name: --destination-path
     summary: The directory where the source data is copied to. If omitted, data is copied to the root directory.
@@ -207,15 +190,9 @@ items:
       path: src/azure-cli/azure/cli/command_modules/storage/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_storage_file_copy_cancel
-  name: az storage file copy cancel
-  summary: Aborts a pending copy_file operation, and leaves a destination file  with zero length and full metadata.
-- uid: az_storage_file_copy_start
-  name: az storage file copy start
-  summary: Copy a file asynchronously.
-- uid: az_storage_file_copy_start_batch
-  name: az storage file copy start-batch
-  summary: Copy multiple files or blobs to a file share.
+- az_storage_file_copy_cancel
+- az_storage_file_copy_start
+- az_storage_file_copy_start_batch
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -231,10 +208,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
-updated_at: 6/4/2020 1:53:34 PM
-ms.date: 06/04/2020
-description: Manage file copy operations.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  updated_at: 6/4/2020 1:53:34 PM
+  ms.date: 06/04/2020
+  description: Manage file copy operations.

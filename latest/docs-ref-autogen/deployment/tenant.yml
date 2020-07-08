@@ -1,30 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_deployment_tenant
-  name: az deployment tenant
-  summary: Manage Azure Resource Manager template deployment at tenant scope.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_deployment_tenant_cancel
-  - az_deployment_tenant_create
-  - az_deployment_tenant_delete
-  - az_deployment_tenant_export
-  - az_deployment_tenant_list
-  - az_deployment_tenant_show
-  - az_deployment_tenant_validate
-  - az_deployment_tenant_wait
+### YamlMime:CLIGroup
+uid: az_deployment_tenant
+name: az deployment tenant
+summary: Manage Azure Resource Manager template deployment at tenant scope.
+description: ''
+directCommands:
 - uid: az_deployment_tenant_cancel
   name: az deployment tenant cancel
   summary: Cancel a deployment at tenant scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Cancel a deployment at tenant scope.
-    syntax:
-      content: az deployment tenant cancel -n deployment01
+    syntax: az deployment tenant cancel -n deployment01
   parameters:
   - isRequired: true
     name: --name -n
@@ -43,26 +29,21 @@ items:
   name: az deployment tenant create
   summary: Start a deployment at tenant scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a deployment at tenant scope from a remote template file, using parameters from a local JSON file.
-    syntax:
-      content: >-
-        az deployment tenant create --name rollout01 --location WestUS \
-            --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json
+    syntax: >-
+      az deployment tenant create --name rollout01 --location WestUS \
+          --template-uri https://myresource/azuredeploy.json --parameters @myparameters.json
   - summary: Create a deployment at tenant scope from a local template file, using parameters from a JSON string.
-    syntax:
-      content: >-
-        az deployment tenant create --name rollout01 --location WestUS \
-            --template-file azuredeploy.json \
-            --parameters '{ \"policyName\": { \"value\": \"policy2\" } }'
+    syntax: >-
+      az deployment tenant create --name rollout01 --location WestUS \
+          --template-file azuredeploy.json \
+          --parameters '{ \"policyName\": { \"value\": \"policy2\" } }'
   - summary: Create a deployment at tenant scope from a local template, using a parameter file, a remote parameter file, and selectively overriding key/value pairs.
-    syntax:
-      content: >-
-        az deployment tenant create --name rollout01 --location WestUS \
-            --template-file azuredeploy.json  --parameters @params.json \
-            --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
+    syntax: >-
+      az deployment tenant create --name rollout01 --location WestUS \
+          --template-file azuredeploy.json  --parameters @params.json \
+          --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
   parameters:
   - isRequired: true
     name: --location -l
@@ -103,12 +84,9 @@ items:
   name: az deployment tenant delete
   summary: Delete a deployment at tenant scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a deployment at tenant scope.
-    syntax:
-      content: az deployment tenant delete -n deployment01
+    syntax: az deployment tenant delete -n deployment01
   parameters:
   - isRequired: true
     name: --name -n
@@ -130,12 +108,9 @@ items:
   name: az deployment tenant export
   summary: Export the template used for a deployment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Export the template used for a deployment at tenant scope.
-    syntax:
-      content: az deployment tenant export --name MyDeployment
+    syntax: az deployment tenant export --name MyDeployment
   parameters:
   - isRequired: true
     name: --name -n
@@ -154,12 +129,9 @@ items:
   name: az deployment tenant list
   summary: List deployments at tenant scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List deployments at tenant scope.
-    syntax:
-      content: az deployment tenant list
+    syntax: az deployment tenant list
   parameters:
   - name: --filter
     summary: Filter expression using OData notation. You can use --filter "provisioningState eq '{state}'" to filter provisioningState. To get more information, please visit <a href="https://docs.microsoft.com/en-us/rest/api/resources/deployments/listatsubscriptionscope#uri-parameters">https://docs.microsoft.com/en-us/rest/api/resources/deployments/listatsubscriptionscope#uri-parameters</a>.
@@ -177,12 +149,9 @@ items:
   name: az deployment tenant show
   summary: Show a deployment at tenant scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a deployment at tenant scope.
-    syntax:
-      content: az deployment tenant show -n deployment01
+    syntax: az deployment tenant show -n deployment01
   parameters:
   - isRequired: true
     name: --name -n
@@ -201,12 +170,9 @@ items:
   name: az deployment tenant validate
   summary: Validate whether a template is valid at tenant scope.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Validate whether a template is valid at tenant scope.
-    syntax:
-      content: az deployment tenant validate --location WestUS --template-file {template-file}
+    syntax: az deployment tenant validate --location WestUS --template-file {template-file}
   parameters:
   - isRequired: true
     name: --location -l
@@ -244,12 +210,9 @@ items:
   name: az deployment tenant wait
   summary: Place the CLI in a waiting state until a deployment condition is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Place the CLI in a waiting state until a deployment condition is met. (autogenerated)
-    syntax:
-      content: az deployment tenant wait --deleted --name MyDeployment
+    syntax: az deployment tenant wait --deleted --name MyDeployment
   parameters:
   - isRequired: true
     name: --name -n
@@ -288,30 +251,14 @@ items:
       path: src/azure-cli/azure/cli/command_modules/resource/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_deployment_tenant_cancel
-  name: az deployment tenant cancel
-  summary: Cancel a deployment at tenant scope.
-- uid: az_deployment_tenant_create
-  name: az deployment tenant create
-  summary: Start a deployment at tenant scope.
-- uid: az_deployment_tenant_delete
-  name: az deployment tenant delete
-  summary: Delete a deployment at tenant scope.
-- uid: az_deployment_tenant_export
-  name: az deployment tenant export
-  summary: Export the template used for a deployment.
-- uid: az_deployment_tenant_list
-  name: az deployment tenant list
-  summary: List deployments at tenant scope.
-- uid: az_deployment_tenant_show
-  name: az deployment tenant show
-  summary: Show a deployment at tenant scope.
-- uid: az_deployment_tenant_validate
-  name: az deployment tenant validate
-  summary: Validate whether a template is valid at tenant scope.
-- uid: az_deployment_tenant_wait
-  name: az deployment tenant wait
-  summary: Place the CLI in a waiting state until a deployment condition is met.
+- az_deployment_tenant_cancel
+- az_deployment_tenant_create
+- az_deployment_tenant_delete
+- az_deployment_tenant_export
+- az_deployment_tenant_list
+- az_deployment_tenant_show
+- az_deployment_tenant_validate
+- az_deployment_tenant_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -327,10 +274,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
-updated_at: 6/16/2020 5:44:37 AM
-ms.date: 06/16/2020
-description: Manage Azure Resource Manager template deployment at tenant scope.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
+  updated_at: 6/16/2020 5:44:37 AM
+  ms.date: 06/16/2020
+  description: Manage Azure Resource Manager template deployment at tenant scope.

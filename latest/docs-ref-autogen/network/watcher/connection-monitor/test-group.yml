@@ -1,32 +1,20 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_network_watcher_connection_monitor_test_group
-  name: az network watcher connection-monitor test-group
-  summary: Manage a test group of a connection monitor.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_network_watcher_connection_monitor_test_group_add
-  - az_network_watcher_connection_monitor_test_group_list
-  - az_network_watcher_connection_monitor_test_group_remove
-  - az_network_watcher_connection_monitor_test_group_show
+### YamlMime:CLIGroup
+uid: az_network_watcher_connection_monitor_test_group
+name: az network watcher connection-monitor test-group
+summary: Manage a test group of a connection monitor.
+description: ''
+directCommands:
 - uid: az_network_watcher_connection_monitor_test_group_add
   name: az network watcher connection-monitor test-group add
   summary: Add a test group along with new-added/existing endpoint and test configuration to a connection monitor.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add a test group along with existing endpoint and test configuration via their names
-    syntax:
-      content: az network watcher connection-monitor test-group add --connection-monitor MyConnectionMonitor --location westus --name MyHTTPTestGroup --endpoint-source-name MySourceEndpoint --endpoint-dest-name MyDestinationEndpoint --test-config-name MyTestConfiguration
+    syntax: az network watcher connection-monitor test-group add --connection-monitor MyConnectionMonitor --location westus --name MyHTTPTestGroup --endpoint-source-name MySourceEndpoint --endpoint-dest-name MyDestinationEndpoint --test-config-name MyTestConfiguration
   - summary: Add a test group long with new-added source endpoint and existing test configuration via its name
-    syntax:
-      content: az network watcher connection-monitor test-group add --connection-monitor MyConnectionMonitor --location westus --name MyAccessibilityTestGroup --endpoint-source-name MySourceEndpoint --endpoint-source-resource-id MyLogAnalysisWorkspaceID --endpoint-dest-name MyExistingDestinationEndpoint --test-config-name MyExistingTestConfiguration
+    syntax: az network watcher connection-monitor test-group add --connection-monitor MyConnectionMonitor --location westus --name MyAccessibilityTestGroup --endpoint-source-name MySourceEndpoint --endpoint-source-resource-id MyLogAnalysisWorkspaceID --endpoint-dest-name MyExistingDestinationEndpoint --test-config-name MyExistingTestConfiguration
   - summary: Add a test group along with new-added endpoints and test configuration
-    syntax:
-      content: az network watcher connection-monitor test-group add --connection-monitor MyConnectionMonitor --location westus --name MyAccessibilityTestGroup --endpoint-source-name MySourceEndpoint --endpoint-source-resource-id MyVMResourceID --endpoint-dest-name bing --endpoint-dest-address bing.com --test-config-name MyNewTestConfiguration --protocol Tcp --tcp-port 4096
+    syntax: az network watcher connection-monitor test-group add --connection-monitor MyConnectionMonitor --location westus --name MyAccessibilityTestGroup --endpoint-source-name MySourceEndpoint --endpoint-source-resource-id MyVMResourceID --endpoint-dest-name bing --endpoint-dest-address bing.com --test-config-name MyNewTestConfiguration --protocol Tcp --tcp-port 4096
   parameters:
   - isRequired: true
     name: --connection-monitor
@@ -127,8 +115,6 @@ items:
   name: az network watcher connection-monitor test-group list
   summary: List all test groups of a connection monitor.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --connection-monitor
@@ -151,8 +137,6 @@ items:
   name: az network watcher connection-monitor test-group remove
   summary: Remove test group from a connection monitor.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --connection-monitor
@@ -179,8 +163,6 @@ items:
   name: az network watcher connection-monitor test-group show
   summary: Show a test group of a connection monitor.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --connection-monitor
@@ -204,18 +186,10 @@ items:
       path: src/azure-cli/azure/cli/command_modules/network/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_network_watcher_connection_monitor_test_group_add
-  name: az network watcher connection-monitor test-group add
-  summary: Add a test group along with new-added/existing endpoint and test configuration to a connection monitor.
-- uid: az_network_watcher_connection_monitor_test_group_list
-  name: az network watcher connection-monitor test-group list
-  summary: List all test groups of a connection monitor.
-- uid: az_network_watcher_connection_monitor_test_group_remove
-  name: az network watcher connection-monitor test-group remove
-  summary: Remove test group from a connection monitor.
-- uid: az_network_watcher_connection_monitor_test_group_show
-  name: az network watcher connection-monitor test-group show
-  summary: Show a test group of a connection monitor.
+- az_network_watcher_connection_monitor_test_group_add
+- az_network_watcher_connection_monitor_test_group_list
+- az_network_watcher_connection_monitor_test_group_remove
+- az_network_watcher_connection_monitor_test_group_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -231,10 +205,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/network/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
-updated_at: 6/18/2020 6:20:50 AM
-ms.date: 06/18/2020
-description: Manage a test group of a connection monitor.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
+  updated_at: 6/18/2020 6:20:50 AM
+  ms.date: 06/18/2020
+  description: Manage a test group of a connection monitor.

@@ -1,31 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_privatedns_az_network_private_dns_record_set_srv
-  name: az network private-dns record-set srv
-  summary: Manage Private DNS SRV records.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_privatedns_az_network_private_dns_record_set_srv_add_record
-  - ext_privatedns_az_network_private_dns_record_set_srv_create
-  - ext_privatedns_az_network_private_dns_record_set_srv_delete
-  - ext_privatedns_az_network_private_dns_record_set_srv_list
-  - ext_privatedns_az_network_private_dns_record_set_srv_remove_record
-  - ext_privatedns_az_network_private_dns_record_set_srv_show
-  - ext_privatedns_az_network_private_dns_record_set_srv_update
+### YamlMime:CLIGroup
+uid: ext_privatedns_az_network_private_dns_record_set_srv
+name: az network private-dns record-set srv
+summary: Manage Private DNS SRV records.
+description: ''
+directCommands:
 - uid: ext_privatedns_az_network_private_dns_record_set_srv_add_record
   name: az network private-dns record-set srv add-record
   summary: Add an SRV record.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add an SRV record.
-    syntax:
-      content: >-
-        az network private-dns record-set srv add-record -g MyResourceGroup -z www.mysite.com \
-            -n MyRecordSet -t webserver.mysite.com -r 8081 -p 10 -w 10
+    syntax: >-
+      az network private-dns record-set srv add-record -g MyResourceGroup -z www.mysite.com \
+          -n MyRecordSet -t webserver.mysite.com -r 8081 -p 10 -w 10
   parameters:
   - isRequired: true
     name: --port -r
@@ -59,14 +46,11 @@ items:
   name: az network private-dns record-set srv create
   summary: Create an empty SRV record set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an empty SRV record set.
-    syntax:
-      content: >-
-        az network private-dns record-set srv create -g MyResourceGroup -z www.mysite.com \
-            -n MyRecordSet
+    syntax: >-
+      az network private-dns record-set srv create -g MyResourceGroup -z www.mysite.com \
+          -n MyRecordSet
   parameters:
   - isRequired: true
     name: --name -n
@@ -91,12 +75,9 @@ items:
   name: az network private-dns record-set srv delete
   summary: Delete an SRV record set and all associated records.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete an SRV record set and all associated records.
-    syntax:
-      content: az network private-dns record-set srv delete -g MyResourceGroup -z www.mysite.com -n MyRecordSet
+    syntax: az network private-dns record-set srv delete -g MyResourceGroup -z www.mysite.com -n MyRecordSet
   parameters:
   - isRequired: true
     name: --name -n
@@ -120,12 +101,9 @@ items:
   name: az network private-dns record-set srv list
   summary: List all SRV record sets in a zone.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all SRV record sets in a zone.
-    syntax:
-      content: az network private-dns record-set srv list -g MyResourceGroup -z www.mysite.com
+    syntax: az network private-dns record-set srv list -g MyResourceGroup -z www.mysite.com
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -139,14 +117,11 @@ items:
   name: az network private-dns record-set srv remove-record
   summary: Remove an SRV record from its record set.
   description: By default, if the last record in a set is removed, the record set is deleted. To retain the empty record set, include --keep-empty-record-set.
-  langs:
-  - azurecli
   examples:
   - summary: Remove an SRV record from its record set.
-    syntax:
-      content: >-
-        az network private-dns record-set srv remove-record -g MyResourceGroup -z www.mysite.com \
-            -n MyRecordSet -t webserver.mysite.com -r 8081 -p 10 -w 10
+    syntax: >-
+      az network private-dns record-set srv remove-record -g MyResourceGroup -z www.mysite.com \
+          -n MyRecordSet -t webserver.mysite.com -r 8081 -p 10 -w 10
   parameters:
   - isRequired: true
     name: --port -r
@@ -183,12 +158,9 @@ items:
   name: az network private-dns record-set srv show
   summary: Get the details of an SRV record set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the details of an SRV record set.
-    syntax:
-      content: az network private-dns record-set srv show -g MyResourceGroup -z www.mysite.com -n MyRecordSet
+    syntax: az network private-dns record-set srv show -g MyResourceGroup -z www.mysite.com -n MyRecordSet
   parameters:
   - isRequired: true
     name: --name -n
@@ -206,14 +178,11 @@ items:
   name: az network private-dns record-set srv update
   summary: Update an SRV record set.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update an SRV record set.
-    syntax:
-      content: >-
-        az network private-dns record-set srv update -g MyResourceGroup -z www.mysite.com \
-            -n MyRecordSet --metadata owner=WebTeam
+    syntax: >-
+      az network private-dns record-set srv update -g MyResourceGroup -z www.mysite.com \
+          -n MyRecordSet --metadata owner=WebTeam
   parameters:
   - isRequired: true
     name: --name -n
@@ -246,27 +215,13 @@ items:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- uid: ext_privatedns_az_network_private_dns_record_set_srv_add_record
-  name: az network private-dns record-set srv add-record
-  summary: Add an SRV record.
-- uid: ext_privatedns_az_network_private_dns_record_set_srv_create
-  name: az network private-dns record-set srv create
-  summary: Create an empty SRV record set.
-- uid: ext_privatedns_az_network_private_dns_record_set_srv_delete
-  name: az network private-dns record-set srv delete
-  summary: Delete an SRV record set and all associated records.
-- uid: ext_privatedns_az_network_private_dns_record_set_srv_list
-  name: az network private-dns record-set srv list
-  summary: List all SRV record sets in a zone.
-- uid: ext_privatedns_az_network_private_dns_record_set_srv_remove_record
-  name: az network private-dns record-set srv remove-record
-  summary: Remove an SRV record from its record set.
-- uid: ext_privatedns_az_network_private_dns_record_set_srv_show
-  name: az network private-dns record-set srv show
-  summary: Get the details of an SRV record set.
-- uid: ext_privatedns_az_network_private_dns_record_set_srv_update
-  name: az network private-dns record-set srv update
-  summary: Update an SRV record set.
+- ext_privatedns_az_network_private_dns_record_set_srv_add_record
+- ext_privatedns_az_network_private_dns_record_set_srv_create
+- ext_privatedns_az_network_private_dns_record_set_srv_delete
+- ext_privatedns_az_network_private_dns_record_set_srv_list
+- ext_privatedns_az_network_private_dns_record_set_srv_remove_record
+- ext_privatedns_az_network_private_dns_record_set_srv_show
+- ext_privatedns_az_network_private_dns_record_set_srv_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -282,4 +237,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Private DNS SRV records.
+metadata:
+  description: Manage Private DNS SRV records.

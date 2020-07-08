@@ -1,25 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-cli-ml_az_ml_workspace
-  name: az ml workspace
-  summary: Workspace subgroup commands.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-cli-ml_az_ml_workspace_create
-  - ext_azure-cli-ml_az_ml_workspace_delete
-  - ext_azure-cli-ml_az_ml_workspace_list
-  - ext_azure-cli-ml_az_ml_workspace_share
-  - ext_azure-cli-ml_az_ml_workspace_show
-  - ext_azure-cli-ml_az_ml_workspace_sync_keys
-  - ext_azure-cli-ml_az_ml_workspace_update
+### YamlMime:CLIGroup
+uid: ext_azure-cli-ml_az_ml_workspace
+name: az ml workspace
+summary: Workspace subgroup commands.
+description: ''
+directCommands:
 - uid: ext_azure-cli-ml_az_ml_workspace_create
   name: az ml workspace create
   summary: Create a workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --workspace-name -w
@@ -88,8 +76,6 @@ items:
   name: az ml workspace delete
   summary: Delete a workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --all-resources
     summary: Deletes resources which this workspace depends on like storage, acr, kv and app insights.
@@ -117,8 +103,6 @@ items:
   name: az ml workspace list
   summary: List workspaces.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --resource-group -g
     summary: Resource group name.
@@ -127,8 +111,6 @@ items:
   name: az ml workspace share
   summary: Share a workspace with another user with a given role.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --role
@@ -158,8 +140,6 @@ items:
   name: az ml workspace show
   summary: Show a workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
@@ -181,8 +161,6 @@ items:
   name: az ml workspace sync-keys
   summary: Sync workspace keys  for dependent resources such as storage, acr, and app insights.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
@@ -204,8 +182,6 @@ items:
   name: az ml workspace update
   summary: Update a workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --description -d
     summary: Description of this workspace.
@@ -236,39 +212,17 @@ items:
     summary: Workspace name.
     description: ''
 commands:
-- uid: ext_azure-cli-ml_az_ml_workspace_create
-  name: az ml workspace create
-  summary: Create a workspace.
-- uid: ext_azure-cli-ml_az_ml_workspace_delete
-  name: az ml workspace delete
-  summary: Delete a workspace.
-- uid: ext_azure-cli-ml_az_ml_workspace_list
-  name: az ml workspace list
-  summary: List workspaces.
-- uid: ext_azure-cli-ml_az_ml_workspace_private_endpoint
-  name: az ml workspace private-endpoint
-  summary: Workspace private endpoint subgroup commands.
-- uid: ext_azure-cli-ml_az_ml_workspace_private_endpoint_add
-  name: az ml workspace private-endpoint add
-  summary: Add private endpoint to a workspace.
-- uid: ext_azure-cli-ml_az_ml_workspace_private_endpoint_delete
-  name: az ml workspace private-endpoint delete
-  summary: Delete the specified private endpoint Connection in the workspace.
-- uid: ext_azure-cli-ml_az_ml_workspace_private_endpoint_list
-  name: az ml workspace private-endpoint list
-  summary: List all private endpoints in a workspace.
-- uid: ext_azure-cli-ml_az_ml_workspace_share
-  name: az ml workspace share
-  summary: Share a workspace with another user with a given role.
-- uid: ext_azure-cli-ml_az_ml_workspace_show
-  name: az ml workspace show
-  summary: Show a workspace.
-- uid: ext_azure-cli-ml_az_ml_workspace_sync_keys
-  name: az ml workspace sync-keys
-  summary: Sync workspace keys  for dependent resources such as storage, acr, and app insights.
-- uid: ext_azure-cli-ml_az_ml_workspace_update
-  name: az ml workspace update
-  summary: Update a workspace.
+- ext_azure-cli-ml_az_ml_workspace_create
+- ext_azure-cli-ml_az_ml_workspace_delete
+- ext_azure-cli-ml_az_ml_workspace_list
+- ext_azure-cli-ml_az_ml_workspace_private_endpoint
+- ext_azure-cli-ml_az_ml_workspace_private_endpoint_add
+- ext_azure-cli-ml_az_ml_workspace_private_endpoint_delete
+- ext_azure-cli-ml_az_ml_workspace_private_endpoint_list
+- ext_azure-cli-ml_az_ml_workspace_share
+- ext_azure-cli-ml_az_ml_workspace_show
+- ext_azure-cli-ml_az_ml_workspace_sync_keys
+- ext_azure-cli-ml_az_ml_workspace_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -284,4 +238,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Workspace subgroup commands.
+metadata:
+  description: Workspace subgroup commands.

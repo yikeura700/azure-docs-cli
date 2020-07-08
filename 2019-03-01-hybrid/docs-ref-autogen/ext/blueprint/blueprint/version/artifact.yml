@@ -1,35 +1,26 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_blueprint_az_blueprint_version_artifact
-  name: az blueprint version artifact
-  summary: Commands to manage published blueprint artifacts.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_blueprint_az_blueprint_version_artifact_list
-  - ext_blueprint_az_blueprint_version_artifact_show
+### YamlMime:CLIGroup
+uid: ext_blueprint_az_blueprint_version_artifact
+name: az blueprint version artifact
+summary: Commands to manage published blueprint artifacts.
+description: ''
+directCommands:
 - uid: ext_blueprint_az_blueprint_version_artifact_list
   name: az blueprint version artifact list
   summary: List artifacts for a version of a published blueprint.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List artifacts of a published management group blueprint
-    syntax:
-      content: >-
-        az blueprint version artifact list --management-group MyManagementGroup --blueprint-name \
+    syntax: >-
+      az blueprint version artifact list --management-group MyManagementGroup --blueprint-name \
 
-        MyBlueprint --version v2
+      MyBlueprint --version v2
   - summary: List artifacts of a published subscription blueprint
-    syntax:
-      content: >-
-        az blueprint version artifact list --subscription MySubscription \
+    syntax: >-
+      az blueprint version artifact list --subscription MySubscription \
 
-        --blueprint-name MyBlueprint \
+      --blueprint-name MyBlueprint \
 
-        --version v2
+      --version v2
   parameters:
   - isRequired: true
     name: --blueprint-name
@@ -49,23 +40,19 @@ items:
   name: az blueprint version artifact show
   summary: Show an artifact for a published blueprint.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a role assignment artifact
-    syntax:
-      content: >-
-        az blueprint version artifact show --subscription MySubscription \
+    syntax: >-
+      az blueprint version artifact show --subscription MySubscription \
 
-        --blueprint-name MyBlueprint \
+      --blueprint-name MyBlueprint \
 
-        --version v2 --artifact-name OwnerAssignment
+      --version v2 --artifact-name OwnerAssignment
   - summary: Show a template artifact
-    syntax:
-      content: >-
-        az blueprint version artifact show --management-group MyManagementGroup --blueprint-name \
+    syntax: >-
+      az blueprint version artifact show --management-group MyManagementGroup --blueprint-name \
 
-        MyBlueprint --version v2 --artifact-name StorageTemplate
+      MyBlueprint --version v2 --artifact-name StorageTemplate
   parameters:
   - isRequired: true
     name: --artifact-name
@@ -86,12 +73,8 @@ items:
     summary: Use subscription for the scope of the blueprint. If --management-group is not specified, --subscription value or the default subscription will be used as the scope.
     description: ''
 commands:
-- uid: ext_blueprint_az_blueprint_version_artifact_list
-  name: az blueprint version artifact list
-  summary: List artifacts for a version of a published blueprint.
-- uid: ext_blueprint_az_blueprint_version_artifact_show
-  name: az blueprint version artifact show
-  summary: Show an artifact for a published blueprint.
+- ext_blueprint_az_blueprint_version_artifact_list
+- ext_blueprint_az_blueprint_version_artifact_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -107,4 +90,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage published blueprint artifacts.
+metadata:
+  description: Commands to manage published blueprint artifacts.

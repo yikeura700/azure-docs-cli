@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_artifacts_universal
-  name: az artifacts universal
-  summary: Manage Universal Packages.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_artifacts_universal_download
-  - ext_azure-devops_az_artifacts_universal_publish
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_artifacts_universal
+name: az artifacts universal
+summary: Manage Universal Packages.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_artifacts_universal_download
   name: az artifacts universal download
   summary: Download a package.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --feed
@@ -54,8 +47,6 @@ items:
   name: az artifacts universal publish
   summary: Publish a package to a feed.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --feed
@@ -92,12 +83,8 @@ items:
     summary: "Scope of the feed: 'project' if the feed was created in a project, and 'organization' otherwise."
     description: ''
 commands:
-- uid: ext_azure-devops_az_artifacts_universal_download
-  name: az artifacts universal download
-  summary: Download a package.
-- uid: ext_azure-devops_az_artifacts_universal_publish
-  name: az artifacts universal publish
-  summary: Publish a package to a feed.
+- ext_azure-devops_az_artifacts_universal_download
+- ext_azure-devops_az_artifacts_universal_publish
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -113,4 +100,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Universal Packages.
+metadata:
+  description: Manage Universal Packages.

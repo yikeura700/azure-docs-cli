@@ -1,23 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sf_cluster_reliability
-  name: az sf cluster reliability
-  summary: Manage the reliability of a cluster.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sf_cluster_reliability_update
+### YamlMime:CLIGroup
+uid: az_sf_cluster_reliability
+name: az sf cluster reliability
+summary: Manage the reliability of a cluster.
+description: ''
+directCommands:
 - uid: az_sf_cluster_reliability_update
   name: az sf cluster reliability update
   summary: Update the reliability tier for the primary node in a cluster.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Change the cluster reliability level to 'Silver'.
-    syntax:
-      content: az sf cluster reliability update -g group-name -c cluster1 --reliability-level Silver
+    syntax: az sf cluster reliability update -g group-name -c cluster1 --reliability-level Silver
   parameters:
   - isRequired: true
     name: --cluster-name -c
@@ -39,9 +32,7 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_sf_cluster_reliability_update
-  name: az sf cluster reliability update
-  summary: Update the reliability tier for the primary node in a cluster.
+- az_sf_cluster_reliability_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -57,4 +48,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage the reliability of a cluster.
+metadata:
+  description: Manage the reliability of a cluster.

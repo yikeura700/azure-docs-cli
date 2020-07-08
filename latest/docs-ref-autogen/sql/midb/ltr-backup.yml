@@ -1,30 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sql_midb_ltr_backup
-  name: az sql midb ltr-backup
-  summary: Manage SQL Managed Instance database long term retention backups.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sql_midb_ltr_backup_delete
-  - az_sql_midb_ltr_backup_list
-  - az_sql_midb_ltr_backup_restore
-  - az_sql_midb_ltr_backup_show
-  - az_sql_midb_ltr_backup_wait
+### YamlMime:CLIGroup
+uid: az_sql_midb_ltr_backup
+name: az sql midb ltr-backup
+summary: Manage SQL Managed Instance database long term retention backups.
+description: ''
+directCommands:
 - uid: az_sql_midb_ltr_backup_delete
   name: az sql midb ltr-backup delete
   summary: Delete a long term retention backup.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete long term retention backup for a managed database.
-    syntax:
-      content: az sql midb ltr-backup delete -l southeastasia --mi myinstance -d mymanageddb --name "3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000"
+    syntax: az sql midb ltr-backup delete -l southeastasia --mi myinstance -d mymanageddb --name "3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000"
   - summary: Delete long term retention backup for a managed database.
-    syntax:
-      content: az sql midb ltr-backup delete --backup-id '/subscriptions/6caa113c-794c-42f8-ab9d-878d8aa104dc/resourceGroups/mygroup/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionManagedInstances/myinstance/longTermRetentionDatabases/mymanageddb/longTermRetentionManagedInstanceBackups/3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000'
+    syntax: az sql midb ltr-backup delete --backup-id '/subscriptions/6caa113c-794c-42f8-ab9d-878d8aa104dc/resourceGroups/mygroup/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionManagedInstances/myinstance/longTermRetentionDatabases/mymanageddb/longTermRetentionManagedInstanceBackups/3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000'
   parameters:
   - name: --backup-id --id
     summary: The resource id of the backups. Use 'az sql midb ltr-backup show' or 'az sql midb ltr-backup list' for backup id. If provided, other arguments are not required.
@@ -57,24 +45,17 @@ items:
   name: az sql midb ltr-backup list
   summary: List the long term retention backups for a location, instance or database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List long term retention backups for a managed database.
-    syntax:
-      content: az sql midb ltr-backup list -l southeastasia --mi myinstance -d mymanageddb
+    syntax: az sql midb ltr-backup list -l southeastasia --mi myinstance -d mymanageddb
   - summary: List long term retention backups for a managed instance (list only the latest LTR backups, which belong to live databases).
-    syntax:
-      content: az sql midb ltr-backup list -l southeastasia --mi myinstance --database-state Live --only-latest-per-database
+    syntax: az sql midb ltr-backup list -l southeastasia --mi myinstance --database-state Live --only-latest-per-database
   - summary: List long term retention backups for a managed instance (with resource group argument).
-    syntax:
-      content: az sql midb ltr-backup list -l southeastasia -g mygroup --mi myinstance
+    syntax: az sql midb ltr-backup list -l southeastasia -g mygroup --mi myinstance
   - summary: List long term retention backups for a location (list only the latest LTR backups, which belong to live databases).
-    syntax:
-      content: az sql midb ltr-backup list -l southeastasia --database-state Live --only-latest-per-database
+    syntax: az sql midb ltr-backup list -l southeastasia --database-state Live --only-latest-per-database
   - summary: List long term retention backups for a location (with resource group argument).
-    syntax:
-      content: az sql midb ltr-backup list -l southeastasia -g mygroup
+    syntax: az sql midb ltr-backup list -l southeastasia -g mygroup
   parameters:
   - isRequired: true
     name: --location -l
@@ -108,15 +89,12 @@ items:
   name: az sql midb ltr-backup restore
   summary: Restore a long term retention backup to a new database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Restore a managed database using LTR backup.
-    syntax:
-      content: >-
-        az sql midb ltr-backup restore \
-            --dest-database targetmidb --dest-mi myinstance --dest-resource-group mygroup \
-            --backup-id "/subscriptions/6caa113c-794c-42f8-ab9d-878d8aa104dc/resourceGroups/mygroup/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionManagedInstances/myinstance/longTermRetentionDatabases/sourcemidb/longTermRetentionManagedInstanceBackups/3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000"
+    syntax: >-
+      az sql midb ltr-backup restore \
+          --dest-database targetmidb --dest-mi myinstance --dest-resource-group mygroup \
+          --backup-id "/subscriptions/6caa113c-794c-42f8-ab9d-878d8aa104dc/resourceGroups/mygroup/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionManagedInstances/myinstance/longTermRetentionDatabases/sourcemidb/longTermRetentionManagedInstanceBackups/3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000"
   parameters:
   - isRequired: true
     name: --backup-id --id
@@ -150,12 +128,9 @@ items:
   name: az sql midb ltr-backup show
   summary: Get a long term retention backup for a managed database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show long term retention backup for a managed database.
-    syntax:
-      content: az sql midb ltr-backup show --backup-id '/subscriptions/6caa113c-794c-42f8-ab9d-878d8aa104dc/resourceGroups/mygroup/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionManagedInstances/myinstance/longTermRetentionDatabases/mymanageddb/longTermRetentionManagedInstanceBackups/3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000'
+    syntax: az sql midb ltr-backup show --backup-id '/subscriptions/6caa113c-794c-42f8-ab9d-878d8aa104dc/resourceGroups/mygroup/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionManagedInstances/myinstance/longTermRetentionDatabases/mymanageddb/longTermRetentionManagedInstanceBackups/3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000'
   parameters:
   - name: --backup-id --id
     summary: The resource id of the backups. Use 'az sql midb ltr-backup show' or 'az sql midb ltr-backup list' for backup id. If provided, other arguments are not required.
@@ -185,8 +160,6 @@ items:
   name: az sql midb ltr-backup wait
   summary: Place the CLI in a waiting state until a condition of the managed database is met.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --database -d
@@ -233,21 +206,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/sql/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_sql_midb_ltr_backup_delete
-  name: az sql midb ltr-backup delete
-  summary: Delete a long term retention backup.
-- uid: az_sql_midb_ltr_backup_list
-  name: az sql midb ltr-backup list
-  summary: List the long term retention backups for a location, instance or database.
-- uid: az_sql_midb_ltr_backup_restore
-  name: az sql midb ltr-backup restore
-  summary: Restore a long term retention backup to a new database.
-- uid: az_sql_midb_ltr_backup_show
-  name: az sql midb ltr-backup show
-  summary: Get a long term retention backup for a managed database.
-- uid: az_sql_midb_ltr_backup_wait
-  name: az sql midb ltr-backup wait
-  summary: Place the CLI in a waiting state until a condition of the managed database is met.
+- az_sql_midb_ltr_backup_delete
+- az_sql_midb_ltr_backup_list
+- az_sql_midb_ltr_backup_restore
+- az_sql_midb_ltr_backup_show
+- az_sql_midb_ltr_backup_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -263,10 +226,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
-updated_at: 6/19/2020 1:04:35 AM
-ms.date: 06/19/2020
-description: Manage SQL Managed Instance database long term retention backups.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  updated_at: 6/19/2020 1:04:35 AM
+  ms.date: 06/19/2020
+  description: Manage SQL Managed Instance database long term retention backups.

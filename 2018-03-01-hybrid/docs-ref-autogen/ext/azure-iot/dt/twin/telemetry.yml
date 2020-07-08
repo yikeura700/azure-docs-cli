@@ -1,23 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-iot_az_dt_twin_telemetry
-  name: az dt twin telemetry
-  summary: Test and validate the event routes and endpoints of a Digital Twins instance.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-iot_az_dt_twin_telemetry_send
+### YamlMime:CLIGroup
+uid: ext_azure-iot_az_dt_twin_telemetry
+name: az dt twin telemetry
+summary: Test and validate the event routes and endpoints of a Digital Twins instance.
+description: ''
+directCommands:
 - uid: ext_azure-iot_az_dt_twin_telemetry_send
   name: az dt twin telemetry send
   summary: Sends telemetry on behalf of a digital twin. If component path is provided the emitted telemetry is on behalf of the component.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Send twin telemetry
-    syntax:
-      content: az dt twin telemetry send -n {instance_name} --twin-id {twin_id}
+    syntax: az dt twin telemetry send -n {instance_name} --twin-id {twin_id}
   parameters:
   - isRequired: true
     name: --dt-name --dtn -n
@@ -40,9 +33,7 @@ items:
     summary: 'Inline telemetry JSON or file path to telemetry JSON. Default payload is an empty object: {}.'
     description: ''
 commands:
-- uid: ext_azure-iot_az_dt_twin_telemetry_send
-  name: az dt twin telemetry send
-  summary: Sends telemetry on behalf of a digital twin. If component path is provided the emitted telemetry is on behalf of the component.
+- ext_azure-iot_az_dt_twin_telemetry_send
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -58,4 +49,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Test and validate the event routes and endpoints of a Digital Twins instance.
+metadata:
+  description: Test and validate the event routes and endpoints of a Digital Twins instance.

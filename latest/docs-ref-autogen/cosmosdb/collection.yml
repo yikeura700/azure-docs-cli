@@ -1,24 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_cosmosdb_collection
-  name: az cosmosdb collection
-  summary: Manage Azure Cosmos DB collections.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_cosmosdb_collection_create
-  - az_cosmosdb_collection_delete
-  - az_cosmosdb_collection_exists
-  - az_cosmosdb_collection_list
-  - az_cosmosdb_collection_show
-  - az_cosmosdb_collection_update
+### YamlMime:CLIGroup
+uid: az_cosmosdb_collection
+name: az cosmosdb collection
+summary: Manage Azure Cosmos DB collections.
+description: ''
+directCommands:
 - uid: az_cosmosdb_collection_create
   name: az cosmosdb collection create
   summary: Creates an Azure Cosmos DB collection.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -80,8 +69,6 @@ items:
   name: az cosmosdb collection delete
   summary: Deletes an Azure Cosmos DB collection.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -119,8 +106,6 @@ items:
   name: az cosmosdb collection exists
   summary: Returns a boolean indicating whether the collection exists.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -155,8 +140,6 @@ items:
   name: az cosmosdb collection list
   summary: Lists all Azure Cosmos DB collections.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --db-name -d
@@ -187,8 +170,6 @@ items:
   name: az cosmosdb collection show
   summary: Shows an Azure Cosmos DB collection and its offer.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -223,8 +204,6 @@ items:
   name: az cosmosdb collection update
   summary: Updates an Azure Cosmos DB collection.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --collection-name -c
@@ -265,24 +244,12 @@ items:
       path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_cosmosdb_collection_create
-  name: az cosmosdb collection create
-  summary: Creates an Azure Cosmos DB collection.
-- uid: az_cosmosdb_collection_delete
-  name: az cosmosdb collection delete
-  summary: Deletes an Azure Cosmos DB collection.
-- uid: az_cosmosdb_collection_exists
-  name: az cosmosdb collection exists
-  summary: Returns a boolean indicating whether the collection exists.
-- uid: az_cosmosdb_collection_list
-  name: az cosmosdb collection list
-  summary: Lists all Azure Cosmos DB collections.
-- uid: az_cosmosdb_collection_show
-  name: az cosmosdb collection show
-  summary: Shows an Azure Cosmos DB collection and its offer.
-- uid: az_cosmosdb_collection_update
-  name: az cosmosdb collection update
-  summary: Updates an Azure Cosmos DB collection.
+- az_cosmosdb_collection_create
+- az_cosmosdb_collection_delete
+- az_cosmosdb_collection_exists
+- az_cosmosdb_collection_list
+- az_cosmosdb_collection_show
+- az_cosmosdb_collection_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -298,10 +265,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/1a803c49df1c2a27dfcdc079168f3bc2baf02c81/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-updated_at: 4/17/2020 2:16:59 AM
-ms.date: 04/17/2020
-description: Manage Azure Cosmos DB collections.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/1a803c49df1c2a27dfcdc079168f3bc2baf02c81/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
+  updated_at: 4/17/2020 2:16:59 AM
+  ms.date: 04/17/2020
+  description: Manage Azure Cosmos DB collections.

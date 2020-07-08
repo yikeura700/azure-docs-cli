@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_repos_policy_required_reviewer
-  name: az repos policy required-reviewer
-  summary: Manage required reviewer policy.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_repos_policy_required_reviewer_create
-  - ext_azure-devops_az_repos_policy_required_reviewer_update
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_repos_policy_required_reviewer
+name: az repos policy required-reviewer
+summary: Manage required reviewer policy.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_repos_policy_required_reviewer_create
   name: az repos policy required-reviewer create
   summary: Create required reviewer policy.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --blocking
@@ -64,8 +57,6 @@ items:
   name: az repos policy required-reviewer update
   summary: Update required reviewer policy.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id --policy-id
@@ -109,12 +100,8 @@ items:
     summary: "Required reviewers email addresses separated by ';'. For example: john@contoso.com;alice@contoso.com."
     description: ''
 commands:
-- uid: ext_azure-devops_az_repos_policy_required_reviewer_create
-  name: az repos policy required-reviewer create
-  summary: Create required reviewer policy.
-- uid: ext_azure-devops_az_repos_policy_required_reviewer_update
-  name: az repos policy required-reviewer update
-  summary: Update required reviewer policy.
+- ext_azure-devops_az_repos_policy_required_reviewer_create
+- ext_azure-devops_az_repos_policy_required_reviewer_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -130,4 +117,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage required reviewer policy.
+metadata:
+  description: Manage required reviewer policy.

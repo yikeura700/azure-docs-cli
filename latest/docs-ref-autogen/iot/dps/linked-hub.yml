@@ -1,30 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_iot_dps_linked_hub
-  name: az iot dps linked-hub
-  summary: Manage Azure IoT Hub Device Provisioning Service linked IoT hubs.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_iot_dps_linked_hub_create
-  - az_iot_dps_linked_hub_delete
-  - az_iot_dps_linked_hub_list
-  - az_iot_dps_linked_hub_show
-  - az_iot_dps_linked_hub_update
+### YamlMime:CLIGroup
+uid: az_iot_dps_linked_hub
+name: az iot dps linked-hub
+summary: Manage Azure IoT Hub Device Provisioning Service linked IoT hubs.
+description: ''
+directCommands:
 - uid: az_iot_dps_linked_hub_create
   name: az iot dps linked-hub create
   summary: Create a linked IoT hub in an Azure IoT Hub device provisioning service.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a linked IoT hub in an Azure IoT Hub device provisioning service
-    syntax:
-      content: az iot dps linked-hub create --dps-name MyDps --resource-group MyResourceGroup --connection-string HostName=test.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=XNBhoasdfhqRlgGnasdfhivtshcwh4bJwe7c0RIGuWsirW0= --location westus
+    syntax: az iot dps linked-hub create --dps-name MyDps --resource-group MyResourceGroup --connection-string HostName=test.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=XNBhoasdfhqRlgGnasdfhivtshcwh4bJwe7c0RIGuWsirW0= --location westus
   - summary: Create a linked IoT hub in an Azure IoT Hub device provisioning service which applies allocation weight and weight being 10
-    syntax:
-      content: az iot dps linked-hub create --dps-name MyDps --resource-group MyResourceGroup --connection-string HostName=test.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=XNBhoasdfhqRlgGnasdfhivtshcwh4bJwe7c0RIGuWsirW0= --location westus --allocation-weight 10 --apply-allocation-policy True
+    syntax: az iot dps linked-hub create --dps-name MyDps --resource-group MyResourceGroup --connection-string HostName=test.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=XNBhoasdfhqRlgGnasdfhivtshcwh4bJwe7c0RIGuWsirW0= --location westus --allocation-weight 10 --apply-allocation-policy True
   parameters:
   - isRequired: true
     name: --connection-string
@@ -65,12 +53,9 @@ items:
   name: az iot dps linked-hub delete
   summary: Update a linked IoT hub in an Azure IoT Hub device provisioning service.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete linked IoT hub 'MyLinkedHub' in an Azure IoT Hub device provisioning service
-    syntax:
-      content: az iot dps linked-hub delete --dps-name MyDps --resource-group MyResourceGroup --linked-hub MyLinkedHub
+    syntax: az iot dps linked-hub delete --dps-name MyDps --resource-group MyResourceGroup --linked-hub MyLinkedHub
   parameters:
   - isRequired: true
     name: --dps-name
@@ -100,12 +85,9 @@ items:
   name: az iot dps linked-hub list
   summary: List all linked IoT hubs in an Azure IoT Hub device provisioning service.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all linked IoT hubs in MyDps
-    syntax:
-      content: az iot dps linked-hub list --dps-name MyDps --resource-group MyResourceGroup
+    syntax: az iot dps linked-hub list --dps-name MyDps --resource-group MyResourceGroup
   parameters:
   - isRequired: true
     name: --dps-name
@@ -128,12 +110,9 @@ items:
   name: az iot dps linked-hub show
   summary: Show details of a linked IoT hub in an Azure IoT Hub device provisioning service.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show details of linked IoT hub 'MyLinkedHub' in an Azure IoT Hub device provisioning service
-    syntax:
-      content: az iot dps linked-hub show --dps-name MyDps --resource-group MyResourceGroup --linked-hub MyLinkedHub
+    syntax: az iot dps linked-hub show --dps-name MyDps --resource-group MyResourceGroup --linked-hub MyLinkedHub
   parameters:
   - isRequired: true
     name: --dps-name
@@ -160,12 +139,9 @@ items:
   name: az iot dps linked-hub update
   summary: Update a linked IoT hub in an Azure IoT Hub device provisioning service.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update linked IoT hub 'MyLinkedHub.azure-devices.net' in an Azure IoT Hub device provisioning service
-    syntax:
-      content: az iot dps linked-hub update --dps-name MyDps --resource-group MyResourceGroup --linked-hub MyLinkedHub.azure-devices.net --allocation-weight 10 --apply-allocation-policy True
+    syntax: az iot dps linked-hub update --dps-name MyDps --resource-group MyResourceGroup --linked-hub MyLinkedHub.azure-devices.net --allocation-weight 10 --apply-allocation-policy True
   parameters:
   - isRequired: true
     name: --dps-name
@@ -199,21 +175,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/iot/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_iot_dps_linked_hub_create
-  name: az iot dps linked-hub create
-  summary: Create a linked IoT hub in an Azure IoT Hub device provisioning service.
-- uid: az_iot_dps_linked_hub_delete
-  name: az iot dps linked-hub delete
-  summary: Update a linked IoT hub in an Azure IoT Hub device provisioning service.
-- uid: az_iot_dps_linked_hub_list
-  name: az iot dps linked-hub list
-  summary: List all linked IoT hubs in an Azure IoT Hub device provisioning service.
-- uid: az_iot_dps_linked_hub_show
-  name: az iot dps linked-hub show
-  summary: Show details of a linked IoT hub in an Azure IoT Hub device provisioning service.
-- uid: az_iot_dps_linked_hub_update
-  name: az iot dps linked-hub update
-  summary: Update a linked IoT hub in an Azure IoT Hub device provisioning service.
+- az_iot_dps_linked_hub_create
+- az_iot_dps_linked_hub_delete
+- az_iot_dps_linked_hub_list
+- az_iot_dps_linked_hub_show
+- az_iot_dps_linked_hub_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -229,10 +195,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/a6cad9c0a7d0bd9e724f23a8123f1e504989d8db/src/azure-cli/azure/cli/command_modules/iot/_help.py
-updated_at: 6/17/2020 6:34:23 AM
-ms.date: 06/17/2020
-description: Manage Azure IoT Hub Device Provisioning Service linked IoT hubs.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/a6cad9c0a7d0bd9e724f23a8123f1e504989d8db/src/azure-cli/azure/cli/command_modules/iot/_help.py
+  updated_at: 6/17/2020 6:34:23 AM
+  ms.date: 06/17/2020
+  description: Manage Azure IoT Hub Device Provisioning Service linked IoT hubs.

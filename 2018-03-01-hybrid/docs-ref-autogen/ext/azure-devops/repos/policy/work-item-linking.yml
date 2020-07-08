@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_repos_policy_work_item_linking
-  name: az repos policy work-item-linking
-  summary: Manage work item linking policy.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_repos_policy_work_item_linking_create
-  - ext_azure-devops_az_repos_policy_work_item_linking_update
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_repos_policy_work_item_linking
+name: az repos policy work-item-linking
+summary: Manage work item linking policy.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_repos_policy_work_item_linking_create
   name: az repos policy work-item-linking create
   summary: Create work item linking policy.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --blocking
@@ -53,8 +46,6 @@ items:
   name: az repos policy work-item-linking update
   summary: Update work item linking policy.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id --policy-id
@@ -89,12 +80,8 @@ items:
     summary: Id of the repository on which to apply the policy.
     description: ''
 commands:
-- uid: ext_azure-devops_az_repos_policy_work_item_linking_create
-  name: az repos policy work-item-linking create
-  summary: Create work item linking policy.
-- uid: ext_azure-devops_az_repos_policy_work_item_linking_update
-  name: az repos policy work-item-linking update
-  summary: Update work item linking policy.
+- ext_azure-devops_az_repos_policy_work_item_linking_create
+- ext_azure-devops_az_repos_policy_work_item_linking_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -110,4 +97,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage work item linking policy.
+metadata:
+  description: Manage work item linking policy.

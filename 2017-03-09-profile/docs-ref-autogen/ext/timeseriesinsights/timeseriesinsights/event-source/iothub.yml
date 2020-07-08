@@ -1,33 +1,25 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_timeseriesinsights_az_timeseriesinsights_event_source_iothub
-  name: az timeseriesinsights event-source iothub
-  summary: Create or update an iothub event source under the specified environment.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_timeseriesinsights_az_timeseriesinsights_event_source_iothub_create
-  - ext_timeseriesinsights_az_timeseriesinsights_event_source_iothub_update
+### YamlMime:CLIGroup
+uid: ext_timeseriesinsights_az_timeseriesinsights_event_source_iothub
+name: az timeseriesinsights event-source iothub
+summary: Create or update an iothub event source under the specified environment.
+description: ''
+directCommands:
 - uid: ext_timeseriesinsights_az_timeseriesinsights_event_source_iothub_create
   name: az timeseriesinsights event-source iothub create
   summary: Create or update an iothub event source under the specified environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an iothub and use it for event source
-    syntax:
-      content: >-
-        rg={rg}
+    syntax: >-
+      rg={rg}
 
-        iothub={iothub_name}
+      iothub={iothub_name}
 
-        es_resource_id=$(az iot hub create -g $rg -n $iothub --query id --output tsv)
+      es_resource_id=$(az iot hub create -g $rg -n $iothub --query id --output tsv)
 
-        shared_access_key=$(az iot hub policy list -g $rg --hub-name $iothub --query "[?keyName=='iothubowner'].primaryKey" --output tsv)
+      shared_access_key=$(az iot hub policy list -g $rg --hub-name $iothub --query "[?keyName=='iothubowner'].primaryKey" --output tsv)
 
-        az timeseriesinsights event-source iothub create -g $rg --environment-name {env} -n es2 --consumer-group-name '$Default' --key-name iothubowner --shared-access-key $shared_access_key --event-source-resource-id $es_resource_id --timestamp-property-name DeviceId
+      az timeseriesinsights event-source iothub create -g $rg --environment-name {env} -n es2 --consumer-group-name '$Default' --key-name iothubowner --shared-access-key $shared_access_key --event-source-resource-id $es_resource_id --timestamp-property-name DeviceId
   parameters:
   - isRequired: true
     name: --consumer-group-name
@@ -70,18 +62,13 @@ items:
   name: az timeseriesinsights event-source iothub update
   summary: Create or update an event source under the specified environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update timestampPropertyName
-    syntax:
-      content: az timeseriesinsights event-source iothub update -g {rg} --environment-name {env} -n {es} --timestamp-property-name DeviceId1
+    syntax: az timeseriesinsights event-source iothub update -g {rg} --environment-name {env} -n {es} --timestamp-property-name DeviceId1
   - summary: Update localTimestamp (Currently only Embedded is supported)
-    syntax:
-      content: az timeseriesinsights event-source iothub update -g {rg} --environment-name {env} -n {es} --local-timestamp-format Embedded
+    syntax: az timeseriesinsights event-source iothub update -g {rg} --environment-name {env} -n {es} --local-timestamp-format Embedded
   - summary: Update sharedAccessKey
-    syntax:
-      content: az timeseriesinsights event-source iothub update -g {rg} --environment-name {env} -n {es} --shared-access-key {shared_access_key}
+    syntax: az timeseriesinsights event-source iothub update -g {rg} --environment-name {env} -n {es} --shared-access-key {shared_access_key}
   parameters:
   - isRequired: true
     name: --environment-name
@@ -109,12 +96,8 @@ items:
     summary: An enum that represents the format of the local timestamp property that needs to be set. Currently only Embedded is supported.
     description: ''
 commands:
-- uid: ext_timeseriesinsights_az_timeseriesinsights_event_source_iothub_create
-  name: az timeseriesinsights event-source iothub create
-  summary: Create or update an iothub event source under the specified environment.
-- uid: ext_timeseriesinsights_az_timeseriesinsights_event_source_iothub_update
-  name: az timeseriesinsights event-source iothub update
-  summary: Create or update an event source under the specified environment.
+- ext_timeseriesinsights_az_timeseriesinsights_event_source_iothub_create
+- ext_timeseriesinsights_az_timeseriesinsights_event_source_iothub_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -130,4 +113,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Create or update an iothub event source under the specified environment.
+metadata:
+  description: Create or update an iothub event source under the specified environment.

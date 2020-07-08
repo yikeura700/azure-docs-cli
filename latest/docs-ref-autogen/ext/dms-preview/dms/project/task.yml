@@ -1,25 +1,15 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_dms-preview_az_dms_project_task
-  name: az dms project task
-  summary: Manage Tasks for a Data Migration Service instance's Project.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_dms-preview_az_dms_project_task_cancel
-  - ext_dms-preview_az_dms_project_task_create
-  - ext_dms-preview_az_dms_project_task_cutover
-  - ext_dms-preview_az_dms_project_task_restart
-  - ext_dms-preview_az_dms_project_task_stop
+### YamlMime:CLIGroup
+uid: ext_dms-preview_az_dms_project_task
+name: az dms project task
+summary: Manage Tasks for a Data Migration Service instance's Project.
+description: ''
+directCommands:
 - uid: ext_dms-preview_az_dms_project_task_cancel
   name: az dms project task cancel
   summary: This command is being deprecated. Use the stop command instead.
   description: >-
     To keep a more consistent experience with Azure's portal UI use:
         az dms project task stop.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -50,15 +40,11 @@ items:
         2) MySQL -> AzureDbForMySql :: OnlineMigration
         3) PostgreSQL -> AzureDbForPostgreSQL :: OnlineMigration
         4) MongoDB -> MongoDB (for migrating to Cosmos DB via their MongoDB API) :: OfflineMigration.
-  langs:
-  - azurecli
   examples:
   - summary: Create and start a SQL Task which performs no validation checks.
-    syntax:
-      content: "az dms project task create --database-options-json C:\\CliFiles\\databaseOptions.json -n mytask --project-name myproject -g myresourcegroup --service-name mydms --source-connection-json '{'dataSource': 'myserver', 'authentication': 'SqlAuthentication', 'encryptConnection': 'true', 'trustServerCertificate': 'true'}' --target-connection-json C:\\CliFiles\\targetConnection.json --task-type offlinemigration"
+    syntax: "az dms project task create --database-options-json C:\\CliFiles\\databaseOptions.json -n mytask --project-name myproject -g myresourcegroup --service-name mydms --source-connection-json '{'dataSource': 'myserver', 'authentication': 'SqlAuthentication', 'encryptConnection': 'true', 'trustServerCertificate': 'true'}' --target-connection-json C:\\CliFiles\\targetConnection.json --task-type offlinemigration"
   - summary: Create and start a SQL Task which performs all validation checks.
-    syntax:
-      content: az dms project task create --database-options-json C:\CliFiles\databaseOptions.json -n mytask --project-name myproject -g myresourcegroup --service-name mydms --source-connection-json C:\CliFiles\sourceConnection.json --target-connection-json C:\CliFiles\targetConnection.json --enable-data-integrity-validation --enable-query-analysis-validation --enable-schema-validation --task-type offlinemigration
+    syntax: az dms project task create --database-options-json C:\CliFiles\databaseOptions.json -n mytask --project-name myproject -g myresourcegroup --service-name mydms --source-connection-json C:\CliFiles\sourceConnection.json --target-connection-json C:\CliFiles\targetConnection.json --enable-data-integrity-validation --enable-query-analysis-validation --enable-schema-validation --task-type offlinemigration
   parameters:
   - isRequired: true
     name: --database-options-json
@@ -290,8 +276,6 @@ items:
   description: >-
     To see the result of the request, please use the 'task show' command:
         az dms project task show ... --expand command.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -321,8 +305,6 @@ items:
   description: >-
     To see the result of the request, please use the 'task show' command:
         az dms project task show ... --expand command.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -349,8 +331,6 @@ items:
   description: >-
     To see the result of the request, please use the 'task show' command:
         az dms project task show ... --expand command.
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -372,23 +352,11 @@ items:
     summary: Supported by MongoDB migrations only. The qualified name of the database or collection you wish to stop. Leave blank to stop the entire migration.
     description: ''
 commands:
-- uid: ext_dms-preview_az_dms_project_task_cancel
-  name: az dms project task cancel
-  summary: This command is being deprecated. Use the stop command instead.
-- uid: ext_dms-preview_az_dms_project_task_create
-  name: az dms project task create
-  summary: Create and start a migration Task.
-- uid: ext_dms-preview_az_dms_project_task_cutover
-  name: az dms project task cutover
-  summary: For an online migration task, complete the migration by performing a cutover.
-- uid: ext_dms-preview_az_dms_project_task_restart
-  name: az dms project task restart
-  summary: >-
-    To see the result of the request, please use the 'task show' command:
-        az dms project task show ... --expand command.
-- uid: ext_dms-preview_az_dms_project_task_stop
-  name: az dms project task stop
-  summary: Stops the task, or stops migration on the specified object (MongoDB migrations only).
+- ext_dms-preview_az_dms_project_task_cancel
+- ext_dms-preview_az_dms_project_task_create
+- ext_dms-preview_az_dms_project_task_cutover
+- ext_dms-preview_az_dms_project_task_restart
+- ext_dms-preview_az_dms_project_task_stop
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -404,4 +372,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Tasks for a Data Migration Service instance's Project.
+metadata:
+  description: Manage Tasks for a Data Migration Service instance's Project.

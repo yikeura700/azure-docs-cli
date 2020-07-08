@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_ams_asset_filter
-  name: az ams asset-filter
-  summary: Manage asset filters for an Azure Media Services account.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_ams_asset_filter_create
-  - az_ams_asset_filter_delete
-  - az_ams_asset_filter_list
-  - az_ams_asset_filter_show
-  - az_ams_asset_filter_update
+### YamlMime:CLIGroup
+uid: az_ams_asset_filter
+name: az ams asset-filter
+summary: Manage asset filters for an Azure Media Services account.
+description: ''
+directCommands:
 - uid: az_ams_asset_filter_create
   name: az ams asset-filter create
   summary: Create an asset filter.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an asset filter with filter track selections.
-    syntax:
-      content: az ams asset-filter create -a amsAccount -g resourceGroup -n filterName --force-end-timestamp=False --end-timestamp 200000 --start-timestamp 100000 --live-backoff-duration 60 --presentation-window-duration 600000 --timescale 1000 --first-quality 720 --asset-name assetName --tracks @C:\tracks.json
+    syntax: az ams asset-filter create -a amsAccount -g resourceGroup -n filterName --force-end-timestamp=False --end-timestamp 200000 --start-timestamp 100000 --live-backoff-duration 60 --presentation-window-duration 600000 --timescale 1000 --first-quality 720 --asset-name assetName --tracks @C:\tracks.json
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -80,8 +69,6 @@ items:
   name: az ams asset-filter delete
   summary: Delete an asset filter.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -111,8 +98,6 @@ items:
   name: az ams asset-filter list
   summary: List all the asset filters of an Azure Media Services account.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -139,8 +124,6 @@ items:
   name: az ams asset-filter show
   summary: Show the details of an asset filter.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -170,8 +153,6 @@ items:
   name: az ams asset-filter update
   summary: Update the details of an asset filter.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --bitrate
     summary: The first quality bitrate.
@@ -238,21 +219,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/ams/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_ams_asset_filter_create
-  name: az ams asset-filter create
-  summary: Create an asset filter.
-- uid: az_ams_asset_filter_delete
-  name: az ams asset-filter delete
-  summary: Delete an asset filter.
-- uid: az_ams_asset_filter_list
-  name: az ams asset-filter list
-  summary: List all the asset filters of an Azure Media Services account.
-- uid: az_ams_asset_filter_show
-  name: az ams asset-filter show
-  summary: Show the details of an asset filter.
-- uid: az_ams_asset_filter_update
-  name: az ams asset-filter update
-  summary: Update the details of an asset filter.
+- az_ams_asset_filter_create
+- az_ams_asset_filter_delete
+- az_ams_asset_filter_list
+- az_ams_asset_filter_show
+- az_ams_asset_filter_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -268,10 +239,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
-updated_at: 3/25/2020 2:12:45 AM
-ms.date: 03/25/2020
-description: Manage asset filters for an Azure Media Services account.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
+  updated_at: 3/25/2020 2:12:45 AM
+  ms.date: 03/25/2020
+  description: Manage asset filters for an Azure Media Services account.

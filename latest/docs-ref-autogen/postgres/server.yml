@@ -1,40 +1,24 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_postgres_server
-  name: az postgres server
-  summary: Manage PostgreSQL servers.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_postgres_server_create
-  - az_postgres_server_delete
-  - az_postgres_server_georestore
-  - az_postgres_server_list
-  - az_postgres_server_restart
-  - az_postgres_server_restore
-  - az_postgres_server_show
-  - az_postgres_server_update
-  - az_postgres_server_wait
+### YamlMime:CLIGroup
+uid: az_postgres_server
+name: az postgres server
+summary: Manage PostgreSQL servers.
+description: ''
+directCommands:
 - uid: az_postgres_server_create
   name: az postgres server create
   summary: Create a server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a PostgreSQL server in North Europe with sku GP_Gen5_2 (General Purpose, Gen 5 hardware, 2 vCores).
-    syntax:
-      content: >-
-        az postgres server create -l northeurope -g testgroup -n testsvr -u username -p password \
-            --sku-name GP_Gen5_2
+    syntax: >-
+      az postgres server create -l northeurope -g testgroup -n testsvr -u username -p password \
+          --sku-name GP_Gen5_2
   - summary: Create a PostgreSQL server with all paramaters set.
-    syntax:
-      content: >-
-        az postgres server create -l northeurope -g testgroup -n testsvr -u username -p password \
-            --sku-name B_Gen5_1 --ssl-enforcement Enabled --public-network-access Disabled \
-            --backup-retention 10 --geo-redundant-backup Enabled --storage-size 51200 \
-            --tags "key=value" --version 11.0
+    syntax: >-
+      az postgres server create -l northeurope -g testgroup -n testsvr -u username -p password \
+          --sku-name B_Gen5_1 --ssl-enforcement Enabled --public-network-access Disabled \
+          --backup-retention 10 --geo-redundant-backup Enabled --storage-size 51200 \
+          --tags "key=value" --version 11.0
   parameters:
   - isRequired: true
     name: --name -n
@@ -98,12 +82,9 @@ items:
   name: az postgres server delete
   summary: Delete a server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a server.
-    syntax:
-      content: az postgres server delete -g testgroup -n testsvr
+    syntax: az postgres server delete -g testgroup -n testsvr
   parameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
@@ -124,21 +105,16 @@ items:
   name: az postgres server georestore
   summary: Geo-restore a server from backup.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Geo-restore 'testsvr' into a new server 'testsvrnew' located in West US 2.
-    syntax:
-      content: az postgres server georestore -g testgroup -n testsvrnew --source-server testsvr -l westus2
+    syntax: az postgres server georestore -g testgroup -n testsvrnew --source-server testsvr -l westus2
   - summary: Geo-restore 'testsvr' into a new server 'testsvrnew' located in West US 2 with sku GP_Gen5_2.
-    syntax:
-      content: az postgres server georestore -g testgroup -n testsvrnew --source-server testsvr -l westus2 --sku-name GP_Gen5_2
+    syntax: az postgres server georestore -g testgroup -n testsvrnew --source-server testsvr -l westus2 --sku-name GP_Gen5_2
   - summary: Geo-restore 'testsvr2' into a new server 'testsvrnew', where 'testsvrnew' is in a different resource group from 'testsvr2'.
-    syntax:
-      content: >-
-        az postgres server georestore -g testgroup -n testsvrnew \
-            -s "/subscriptions/${SubID}/resourceGroups/${ResourceGroup}/providers/Microsoft.DBforPostgreSQL/servers/testsvr2" \
-            -l westus2
+    syntax: >-
+      az postgres server georestore -g testgroup -n testsvrnew \
+          -s "/subscriptions/${SubID}/resourceGroups/${ResourceGroup}/providers/Microsoft.DBforPostgreSQL/servers/testsvr2" \
+          -l westus2
   parameters:
   - isRequired: true
     name: --location -l
@@ -176,15 +152,11 @@ items:
   name: az postgres server list
   summary: List available servers.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all PostgreSQL servers in a subscription.
-    syntax:
-      content: az postgres server list
+    syntax: az postgres server list
   - summary: List all PostgreSQL servers in a resource group.
-    syntax:
-      content: az postgres server list -g testgroup
+    syntax: az postgres server list -g testgroup
   parameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
@@ -196,12 +168,9 @@ items:
   name: az postgres server restart
   summary: Restart a server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Restart a server.
-    syntax:
-      content: az postgres server restart -g testgroup -n testsvr
+    syntax: az postgres server restart -g testgroup -n testsvr
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -219,18 +188,14 @@ items:
   name: az postgres server restore
   summary: Restore a server from backup.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Restore 'testsvr' to a specific point-in-time as a new server 'testsvrnew'.
-    syntax:
-      content: az postgres server restore -g testgroup -n testsvrnew --source-server testsvr --restore-point-in-time "2017-06-15T13:10:00Z"
+    syntax: az postgres server restore -g testgroup -n testsvrnew --source-server testsvr --restore-point-in-time "2017-06-15T13:10:00Z"
   - summary: Restore 'testsvr2' to 'testsvrnew', where 'testsvrnew' is in a different resource group from 'testsvr2'.
-    syntax:
-      content: >-
-        az postgres server restore -g testgroup -n testsvrnew \
-            -s "/subscriptions/${SubID}/resourceGroups/${ResourceGroup}/providers/Microsoft.DBforPostgreSQL/servers/testsvr2" \
-            --restore-point-in-time "2017-06-15T13:10:00Z"
+    syntax: >-
+      az postgres server restore -g testgroup -n testsvrnew \
+          -s "/subscriptions/${SubID}/resourceGroups/${ResourceGroup}/providers/Microsoft.DBforPostgreSQL/servers/testsvr2" \
+          --restore-point-in-time "2017-06-15T13:10:00Z"
   parameters:
   - isRequired: true
     name: --restore-point-in-time
@@ -259,12 +224,9 @@ items:
   name: az postgres server show
   summary: Get the details of a server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the details of a server. (autogenerated)
-    syntax:
-      content: az postgres server show --name MyServer --resource-group MyResourceGroup
+    syntax: az postgres server show --name MyServer --resource-group MyResourceGroup
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -282,18 +244,13 @@ items:
   name: az postgres server update
   summary: Update a server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update a server's sku.
-    syntax:
-      content: az postgres server update -g testgroup -n testsvrnew --sku-name GP_Gen5_4
+    syntax: az postgres server update -g testgroup -n testsvrnew --sku-name GP_Gen5_4
   - summary: Update a server's tags.
-    syntax:
-      content: az postgres server update -g testgroup -n testsvrnew --tags "k1=v1" "k2=v2"
+    syntax: az postgres server update -g testgroup -n testsvrnew --tags "k1=v1" "k2=v2"
   - summary: Update a server. (autogenerated)
-    syntax:
-      content: az postgres server update --name testsvrnew --resource-group testgroup --ssl-enforcement Enabled
+    syntax: az postgres server update --name testsvrnew --resource-group testgroup --ssl-enforcement Enabled
   parameters:
   - name: --admin-password -p
     summary: 'The password of the administrator. Minimum 8 characters and maximum 128 characters. Password must contain characters from three of the following categories: English uppercase letters, English lowercase letters, numbers, and non-alphanumeric characters.'
@@ -353,8 +310,6 @@ items:
   name: az postgres server wait
   summary: Wait for server to satisfy certain conditions.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -383,147 +338,53 @@ items:
     summary: Maximum wait in seconds.
     description: ''
 commands:
-- uid: az_postgres_server_ad_admin
-  name: az postgres server ad-admin
-  summary: Manage a postgres server's Active Directory administrator.
-- uid: az_postgres_server_ad_admin_create
-  name: az postgres server ad-admin create
-  summary: Create an Active Directory Administrator for PostgreSQL server.
-- uid: az_postgres_server_ad_admin_delete
-  name: az postgres server ad-admin delete
-  summary: Delete an Active Directory Administrator for PostgreSQL server.
-- uid: az_postgres_server_ad_admin_list
-  name: az postgres server ad-admin list
-  summary: List all Active Directory Administrators for PostgreSQL server.
-- uid: az_postgres_server_ad_admin_show
-  name: az postgres server ad-admin show
-  summary: Get Active Directory Administrator information for a PostgreSQL server.
-- uid: az_postgres_server_ad_admin_wait
-  name: az postgres server ad-admin wait
-  summary: Place the CLI in a waiting state until a condition of the PostgreSQL server Active Directory Administrator is met.
-- uid: az_postgres_server_configuration
-  name: az postgres server configuration
-  summary: Manage configuration values for a server.
-- uid: az_postgres_server_configuration_list
-  name: az postgres server configuration list
-  summary: List the configuration values for a server.
-- uid: az_postgres_server_configuration_set
-  name: az postgres server configuration set
-  summary: Update the configuration of a server.
-- uid: az_postgres_server_configuration_show
-  name: az postgres server configuration show
-  summary: Get the configuration for a server.".
-- uid: az_postgres_server_create
-  name: az postgres server create
-  summary: Create a server.
-- uid: az_postgres_server_delete
-  name: az postgres server delete
-  summary: Delete a server.
-- uid: az_postgres_server_firewall_rule
-  name: az postgres server firewall-rule
-  summary: Manage firewall rules for a server.
-- uid: az_postgres_server_firewall_rule_create
-  name: az postgres server firewall-rule create
-  summary: Create a new firewall rule for a server.
-- uid: az_postgres_server_firewall_rule_delete
-  name: az postgres server firewall-rule delete
-  summary: Delete a firewall rule.
-- uid: az_postgres_server_firewall_rule_list
-  name: az postgres server firewall-rule list
-  summary: List all firewall rules for a server.
-- uid: az_postgres_server_firewall_rule_show
-  name: az postgres server firewall-rule show
-  summary: Get the details of a firewall rule.
-- uid: az_postgres_server_firewall_rule_update
-  name: az postgres server firewall-rule update
-  summary: Update a firewall rule.
-- uid: az_postgres_server_georestore
-  name: az postgres server georestore
-  summary: Geo-restore a server from backup.
-- uid: az_postgres_server_key
-  name: az postgres server key
-  summary: Manage PostgreSQL server keys.
-- uid: az_postgres_server_key_create
-  name: az postgres server key create
-  summary: Create server key.
-- uid: az_postgres_server_key_delete
-  name: az postgres server key delete
-  summary: Delete server key.
-- uid: az_postgres_server_key_list
-  name: az postgres server key list
-  summary: Gets a list of  Server keys.
-- uid: az_postgres_server_key_show
-  name: az postgres server key show
-  summary: Show server key.
-- uid: az_postgres_server_list
-  name: az postgres server list
-  summary: List available servers.
-- uid: az_postgres_server_private_endpoint_connection
-  name: az postgres server private-endpoint-connection
-  summary: Manage PostgreSQL server private endpoint connections.
-- uid: az_postgres_server_private_endpoint_connection_approve
-  name: az postgres server private-endpoint-connection approve
-  summary: Approve the specified private endpoint connection associated with a PostgreSQL server.
-- uid: az_postgres_server_private_endpoint_connection_delete
-  name: az postgres server private-endpoint-connection delete
-  summary: Delete the specified private endpoint connection associated with a PostgreSQL server.
-- uid: az_postgres_server_private_endpoint_connection_reject
-  name: az postgres server private-endpoint-connection reject
-  summary: Reject the specified private endpoint connection associated with a PostgreSQL server.
-- uid: az_postgres_server_private_endpoint_connection_show
-  name: az postgres server private-endpoint-connection show
-  summary: Show details of a private endpoint connection associated with a PostgreSQL server.
-- uid: az_postgres_server_private_link_resource
-  name: az postgres server private-link-resource
-  summary: Manage PostgreSQL server private link resources.
-- uid: az_postgres_server_private_link_resource_list
-  name: az postgres server private-link-resource list
-  summary: List the private link resources supported for a PostgreSQL server.
-- uid: az_postgres_server_replica
-  name: az postgres server replica
-  summary: Manage read replicas.
-- uid: az_postgres_server_replica_create
-  name: az postgres server replica create
-  summary: Create a read replica for a server.
-- uid: az_postgres_server_replica_list
-  name: az postgres server replica list
-  summary: List all read replicas for a given server.
-- uid: az_postgres_server_replica_stop
-  name: az postgres server replica stop
-  summary: Stop replication to a read replica and make it a read/write server.
-- uid: az_postgres_server_restart
-  name: az postgres server restart
-  summary: Restart a server.
-- uid: az_postgres_server_restore
-  name: az postgres server restore
-  summary: Restore a server from backup.
-- uid: az_postgres_server_show
-  name: az postgres server show
-  summary: Get the details of a server.
-- uid: az_postgres_server_update
-  name: az postgres server update
-  summary: Update a server.
-- uid: az_postgres_server_vnet_rule
-  name: az postgres server vnet-rule
-  summary: Manage a server's virtual network rules.
-- uid: az_postgres_server_vnet_rule_create
-  name: az postgres server vnet-rule create
-  summary: Create a virtual network rule to allows access to a PostgreSQL server.
-- uid: az_postgres_server_vnet_rule_delete
-  name: az postgres server vnet-rule delete
-  summary: Deletes the virtual network rule with the given name.
-- uid: az_postgres_server_vnet_rule_list
-  name: az postgres server vnet-rule list
-  summary: Gets a list of virtual network rules in a server.
-- uid: az_postgres_server_vnet_rule_show
-  name: az postgres server vnet-rule show
-  summary: Gets a virtual network rule.
-- uid: az_postgres_server_vnet_rule_update
-  name: az postgres server vnet-rule update
-  summary: Update a virtual network rule.
-- uid: az_postgres_server_wait
-  name: az postgres server wait
-  summary: Wait for server to satisfy certain conditions.
+- az_postgres_server_ad_admin
+- az_postgres_server_ad_admin_create
+- az_postgres_server_ad_admin_delete
+- az_postgres_server_ad_admin_list
+- az_postgres_server_ad_admin_show
+- az_postgres_server_ad_admin_wait
+- az_postgres_server_configuration
+- az_postgres_server_configuration_list
+- az_postgres_server_configuration_set
+- az_postgres_server_configuration_show
+- az_postgres_server_create
+- az_postgres_server_delete
+- az_postgres_server_firewall_rule
+- az_postgres_server_firewall_rule_create
+- az_postgres_server_firewall_rule_delete
+- az_postgres_server_firewall_rule_list
+- az_postgres_server_firewall_rule_show
+- az_postgres_server_firewall_rule_update
+- az_postgres_server_georestore
+- az_postgres_server_key
+- az_postgres_server_key_create
+- az_postgres_server_key_delete
+- az_postgres_server_key_list
+- az_postgres_server_key_show
+- az_postgres_server_list
+- az_postgres_server_private_endpoint_connection
+- az_postgres_server_private_endpoint_connection_approve
+- az_postgres_server_private_endpoint_connection_delete
+- az_postgres_server_private_endpoint_connection_reject
+- az_postgres_server_private_endpoint_connection_show
+- az_postgres_server_private_link_resource
+- az_postgres_server_private_link_resource_list
+- az_postgres_server_replica
+- az_postgres_server_replica_create
+- az_postgres_server_replica_list
+- az_postgres_server_replica_stop
+- az_postgres_server_restart
+- az_postgres_server_restore
+- az_postgres_server_show
+- az_postgres_server_update
+- az_postgres_server_vnet_rule
+- az_postgres_server_vnet_rule_create
+- az_postgres_server_vnet_rule_delete
+- az_postgres_server_vnet_rule_list
+- az_postgres_server_vnet_rule_show
+- az_postgres_server_vnet_rule_update
+- az_postgres_server_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -539,4 +400,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage PostgreSQL servers.
+metadata:
+  description: Manage PostgreSQL servers.

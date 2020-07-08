@@ -1,34 +1,22 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_deploymentmanager_service_unit
-  name: az deploymentmanager service-unit
-  summary: Manage the service units.
-  description: Service units combine to form a service in a service topology.
-  langs:
-  - azurecli
-  children:
-  - az_deploymentmanager_service_unit_create
-  - az_deploymentmanager_service_unit_delete
-  - az_deploymentmanager_service_unit_list
-  - az_deploymentmanager_service_unit_show
-  - az_deploymentmanager_service_unit_update
+### YamlMime:CLIGroup
+uid: az_deploymentmanager_service_unit
+name: az deploymentmanager service-unit
+summary: Manage the service units.
+description: Service units combine to form a service in a service topology.
+directCommands:
 - uid: az_deploymentmanager_service_unit_create
   name: az deploymentmanager service-unit create
   summary: Creates a service unit under the specified service and service topology.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a new service unit using relative paths into the artifact source.
-    syntax:
-      content: az deploymentmanager service-unit create -g rg1 -l location --service-topology-name contosoServiceTopology --service-name contosoService1 -n ContosoService1Storage --target-resource-group service1ResourceGroup --deployment-mode Incremental --template-path "Templates/Service1.Storage.json" --parameters-path "Parameters/Service1.Storage.Parameters.json"
+    syntax: az deploymentmanager service-unit create -g rg1 -l location --service-topology-name contosoServiceTopology --service-name contosoService1 -n ContosoService1Storage --target-resource-group service1ResourceGroup --deployment-mode Incremental --template-path "Templates/Service1.Storage.json" --parameters-path "Parameters/Service1.Storage.Parameters.json"
   - summary: Create a new service unit using SAS Uri for template and parameters.
-    syntax:
-      content: >-
-        az deploymentmanager service-unit create -g rg1 -l location --service-topology-name contosoServiceTopology --service-name contosoService1 -n ContosoService1Storage \
-            --target-resource-group service1ResourceGroup --deployment-mode Incremental \
-            --template-path "https://ContosoStorage.blob.core.windows.net/ContosoArtifacts/Templates/Service2.Storage.json?sasParameters" \
-            --parameters-path "https://ContosoStorage.blob.core.windows.net/ContosoArtifacts/Parameters/Service2Storage.Parameters.json?sasParameters"
+    syntax: >-
+      az deploymentmanager service-unit create -g rg1 -l location --service-topology-name contosoServiceTopology --service-name contosoService1 -n ContosoService1Storage \
+          --target-resource-group service1ResourceGroup --deployment-mode Incremental \
+          --template-path "https://ContosoStorage.blob.core.windows.net/ContosoArtifacts/Templates/Service2.Storage.json?sasParameters" \
+          --parameters-path "https://ContosoStorage.blob.core.windows.net/ContosoArtifacts/Parameters/Service2Storage.Parameters.json?sasParameters"
   parameters:
   - isRequired: true
     name: --parameters-path
@@ -83,12 +71,9 @@ items:
   name: az deploymentmanager service-unit delete
   summary: Deletes the service unit.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Deletes a service unit.
-    syntax:
-      content: az deploymentmanager service-unit delete -g rg1 --service-topology-name contosoServiceTopology --service-name contosoService1 -n ContosoService1Storage
+    syntax: az deploymentmanager service-unit delete -g rg1 --service-topology-name contosoServiceTopology --service-name contosoService1 -n ContosoService1Storage
   parameters:
   - isRequired: true
     name: --name --service-unit-name -n
@@ -119,12 +104,9 @@ items:
   name: az deploymentmanager service-unit list
   summary: List all service units in a service.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List the service units in the given service topology and service.
-    syntax:
-      content: az deploymentmanager service-unit list -g rg1 --service-topology-name contosoServiceTopology --service-name contosoService1
+    syntax: az deploymentmanager service-unit list -g rg1 --service-topology-name contosoServiceTopology --service-name contosoService1
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -151,12 +133,9 @@ items:
   name: az deploymentmanager service-unit show
   summary: Get the details of a service unit.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get the service unit.
-    syntax:
-      content: az deploymentmanager service-unit show -g rg1 --service-topology-name contosoServiceTopology --service-name contosoService1 -n ContosoService1Storage
+    syntax: az deploymentmanager service-unit show -g rg1 --service-topology-name contosoServiceTopology --service-name contosoService1 -n ContosoService1Storage
   parameters:
   - isRequired: true
     name: --name --service-unit-name -n
@@ -187,15 +166,11 @@ items:
   name: az deploymentmanager service-unit update
   summary: Updates the service unit.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Updates the service unit.
-    syntax:
-      content: az deploymentmanager service-unit update -g rg1 --service-topology-name contosoServiceTopology --service-name contosoService1 -n ContosoService1Storage --target-resource-group service1ResourceGroupUpdated
+    syntax: az deploymentmanager service-unit update -g rg1 --service-topology-name contosoServiceTopology --service-name contosoService1 -n ContosoService1Storage --target-resource-group service1ResourceGroupUpdated
   - summary: Updates the service unit. (autogenerated)
-    syntax:
-      content: az deploymentmanager service-unit update --deployment-mode Incremental --resource-group rg1 --service-name contosoService1 --service-topology-name contosoServiceTopology --service-unit-name ContosoService1Storage
+    syntax: az deploymentmanager service-unit update --deployment-mode Incremental --resource-group rg1 --service-name contosoService1 --service-topology-name contosoServiceTopology --service-unit-name ContosoService1Storage
   parameters:
   - isRequired: true
     name: --name --service-unit-name -n
@@ -252,21 +227,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_deploymentmanager_service_unit_create
-  name: az deploymentmanager service-unit create
-  summary: Creates a service unit under the specified service and service topology.
-- uid: az_deploymentmanager_service_unit_delete
-  name: az deploymentmanager service-unit delete
-  summary: Deletes the service unit.
-- uid: az_deploymentmanager_service_unit_list
-  name: az deploymentmanager service-unit list
-  summary: List all service units in a service.
-- uid: az_deploymentmanager_service_unit_show
-  name: az deploymentmanager service-unit show
-  summary: Get the details of a service unit.
-- uid: az_deploymentmanager_service_unit_update
-  name: az deploymentmanager service-unit update
-  summary: Updates the service unit.
+- az_deploymentmanager_service_unit_create
+- az_deploymentmanager_service_unit_delete
+- az_deploymentmanager_service_unit_list
+- az_deploymentmanager_service_unit_show
+- az_deploymentmanager_service_unit_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -282,10 +247,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/f8fcf6fe53ac8443c852afa1f4a334d732a2cea4/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-updated_at: 1/30/2020 1:38:16 PM
-ms.date: 01/30/2020
-description: Service units combine to form a service in a service topology.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/f8fcf6fe53ac8443c852afa1f4a334d732a2cea4/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
+  updated_at: 1/30/2020 1:38:16 PM
+  ms.date: 01/30/2020
+  description: Service units combine to form a service in a service topology.

@@ -1,19 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_repos_import
-  name: az repos import
-  summary: Manage Git repositories import.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_repos_import_create
+### YamlMime:CLIGroup
+uid: az_repos_import
+name: az repos import
+summary: Manage Git repositories import.
+description: ''
+directCommands:
 - uid: az_repos_import_create
   name: az repos import create
   summary: Create a git import request.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --git-source-url --git-url
@@ -45,9 +39,7 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_repos_import_create
-  name: az repos import create
-  summary: Create a git import request.
+- az_repos_import_create
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -63,4 +55,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage Git repositories import.
+metadata:
+  description: Manage Git repositories import.

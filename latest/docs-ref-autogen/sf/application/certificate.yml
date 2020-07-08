@@ -1,23 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_sf_application_certificate
-  name: az sf application certificate
-  summary: Manage the certificate of an application.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_sf_application_certificate_add
+### YamlMime:CLIGroup
+uid: az_sf_application_certificate
+name: az sf application certificate
+summary: Manage the certificate of an application.
+description: ''
+directCommands:
 - uid: az_sf_application_certificate_add
   name: az sf application certificate add
   summary: Add a new certificate to the Virtual Machine Scale Sets that make up the cluster to be used by hosted applications.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add an application certificate.
-    syntax:
-      content: az sf application certificate add -g group-name -c cluster1  --secret-identifier 'https://{KeyVault}.vault.azure.net/secrets/{Secret}'
+    syntax: az sf application certificate add -g group-name -c cluster1  --secret-identifier 'https://{KeyVault}.vault.azure.net/secrets/{Secret}'
   parameters:
   - isRequired: true
     name: --cluster-name -c
@@ -52,9 +45,7 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_sf_application_certificate_add
-  name: az sf application certificate add
-  summary: Add a new certificate to the Virtual Machine Scale Sets that make up the cluster to be used by hosted applications.
+- az_sf_application_certificate_add
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -70,4 +61,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage the certificate of an application.
+metadata:
+  description: Manage the certificate of an application.

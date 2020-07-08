@@ -1,30 +1,19 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_synapse_az_synapse_workspace_firewall_rule
-  name: az synapse workspace firewall-rule
-  summary: Manage a workspace's firewall rules.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_synapse_az_synapse_workspace_firewall_rule_create
-  - ext_synapse_az_synapse_workspace_firewall_rule_delete
-  - ext_synapse_az_synapse_workspace_firewall_rule_list
-  - ext_synapse_az_synapse_workspace_firewall_rule_show
-  - ext_synapse_az_synapse_workspace_firewall_rule_wait
+### YamlMime:CLIGroup
+uid: ext_synapse_az_synapse_workspace_firewall_rule
+name: az synapse workspace firewall-rule
+summary: Manage a workspace's firewall rules.
+description: ''
+directCommands:
 - uid: ext_synapse_az_synapse_workspace_firewall_rule_create
   name: az synapse workspace firewall-rule create
   summary: Create a firewall rule.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a firewall rule.
-    syntax:
-      content: >-
-        az synapse workspace firewall-rule create --name allowAll --workspace-name testsynapseworkspace \
+    syntax: >-
+      az synapse workspace firewall-rule create --name allowAll --workspace-name testsynapseworkspace \
 
-        --resource-group rg --start-ip-address 0.0.0.0 --end-ip-address 255.255.255.255
+      --resource-group rg --start-ip-address 0.0.0.0 --end-ip-address 255.255.255.255
   parameters:
   - isRequired: true
     name: --end-ip-address
@@ -53,12 +42,9 @@ items:
   name: az synapse workspace firewall-rule delete
   summary: Delete a firewall rule.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a firewall rule.
-    syntax:
-      content: az synapse workspace firewall-rule delete --name rule1 --workspace-name testsynapseworkspace --resource-group rg
+    syntax: az synapse workspace firewall-rule delete --name rule1 --workspace-name testsynapseworkspace --resource-group rg
   parameters:
   - isRequired: true
     name: --name -n
@@ -82,12 +68,9 @@ items:
   name: az synapse workspace firewall-rule list
   summary: List all firewall rules.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all firewall rules.
-    syntax:
-      content: az synapse workspace firewall-rule list --workspace-name testsynapseworkspace --resource-group rg
+    syntax: az synapse workspace firewall-rule list --workspace-name testsynapseworkspace --resource-group rg
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -101,12 +84,9 @@ items:
   name: az synapse workspace firewall-rule show
   summary: Get a firewall rule.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get a firewall rule.
-    syntax:
-      content: az synapse workspace firewall-rule show --name rule1 --workspace-name testsynapseworkspace --resource-group rg
+    syntax: az synapse workspace firewall-rule show --name rule1 --workspace-name testsynapseworkspace --resource-group rg
   parameters:
   - isRequired: true
     name: --name -n
@@ -124,8 +104,6 @@ items:
   name: az synapse workspace firewall-rule wait
   summary: Place the CLI in a waiting state until a condition of a firewall rule is met.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -163,21 +141,11 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_synapse_az_synapse_workspace_firewall_rule_create
-  name: az synapse workspace firewall-rule create
-  summary: Create a firewall rule.
-- uid: ext_synapse_az_synapse_workspace_firewall_rule_delete
-  name: az synapse workspace firewall-rule delete
-  summary: Delete a firewall rule.
-- uid: ext_synapse_az_synapse_workspace_firewall_rule_list
-  name: az synapse workspace firewall-rule list
-  summary: List all firewall rules.
-- uid: ext_synapse_az_synapse_workspace_firewall_rule_show
-  name: az synapse workspace firewall-rule show
-  summary: Get a firewall rule.
-- uid: ext_synapse_az_synapse_workspace_firewall_rule_wait
-  name: az synapse workspace firewall-rule wait
-  summary: Place the CLI in a waiting state until a condition of a firewall rule is met.
+- ext_synapse_az_synapse_workspace_firewall_rule_create
+- ext_synapse_az_synapse_workspace_firewall_rule_delete
+- ext_synapse_az_synapse_workspace_firewall_rule_list
+- ext_synapse_az_synapse_workspace_firewall_rule_show
+- ext_synapse_az_synapse_workspace_firewall_rule_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -193,4 +161,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage a workspace's firewall rules.
+metadata:
+  description: Manage a workspace's firewall rules.

@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_logic_az_logic_workflow
-  name: az logic workflow
-  summary: Logic workflow.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_logic_az_logic_workflow_create
-  - ext_logic_az_logic_workflow_delete
-  - ext_logic_az_logic_workflow_list
-  - ext_logic_az_logic_workflow_show
-  - ext_logic_az_logic_workflow_update
+### YamlMime:CLIGroup
+uid: ext_logic_az_logic_workflow
+name: az logic workflow
+summary: Logic workflow.
+description: ''
+directCommands:
 - uid: ext_logic_az_logic_workflow_create
   name: az logic workflow create
   summary: Creates or updates a workflow using a JSON file for the defintion.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create or update a workflow
-    syntax:
-      content: az logic workflow create --resource-group "test_resource_group" --location "centralus" --name "test_workflow" --definition "workflow.json"
+    syntax: az logic workflow create --resource-group "test_resource_group" --location "centralus" --name "test_workflow" --definition "workflow.json"
   parameters:
   - isRequired: true
     name: --definition
@@ -62,12 +51,9 @@ items:
   name: az logic workflow delete
   summary: Deletes a workflow.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a workflow
-    syntax:
-      content: az logic workflow delete --resource-group "test_resource_group" --name "test_workflow"
+    syntax: az logic workflow delete --resource-group "test_resource_group" --name "test_workflow"
   parameters:
   - isRequired: true
     name: --name -n
@@ -84,15 +70,11 @@ items:
   name: az logic workflow list
   summary: Gets a list of workflows by subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all workflows in a resource group
-    syntax:
-      content: az logic workflow list --resource-group "test_resource_group"
+    syntax: az logic workflow list --resource-group "test_resource_group"
   - summary: List all workflows in a subscription
-    syntax:
-      content: az logic workflow list
+    syntax: az logic workflow list
   parameters:
   - name: --filter
     summary: 'The filter to apply on the operation. Options for filters include: State, Trigger, and ReferencedResourceId.'
@@ -107,12 +89,9 @@ items:
   name: az logic workflow show
   summary: Gets a workflow.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get a workflow
-    syntax:
-      content: az logic workflow show --resource-group "test_resource_group" --name "test_workflow"
+    syntax: az logic workflow show --resource-group "test_resource_group" --name "test_workflow"
   parameters:
   - isRequired: true
     name: --name -n
@@ -126,12 +105,9 @@ items:
   name: az logic workflow update
   summary: Updates a workflow.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Patch a workflow
-    syntax:
-      content: az logic workflow update --resource-group "test_resource_group" --definition workflow.json --name "test_workflow"
+    syntax: az logic workflow update --resource-group "test_resource_group" --definition workflow.json --name "test_workflow"
   parameters:
   - isRequired: true
     name: --definition
@@ -153,21 +129,11 @@ items:
     summary: The resource tags.
     description: ''
 commands:
-- uid: ext_logic_az_logic_workflow_create
-  name: az logic workflow create
-  summary: Creates or updates a workflow using a JSON file for the defintion.
-- uid: ext_logic_az_logic_workflow_delete
-  name: az logic workflow delete
-  summary: Deletes a workflow.
-- uid: ext_logic_az_logic_workflow_list
-  name: az logic workflow list
-  summary: Gets a list of workflows by subscription.
-- uid: ext_logic_az_logic_workflow_show
-  name: az logic workflow show
-  summary: Gets a workflow.
-- uid: ext_logic_az_logic_workflow_update
-  name: az logic workflow update
-  summary: Updates a workflow.
+- ext_logic_az_logic_workflow_create
+- ext_logic_az_logic_workflow_delete
+- ext_logic_az_logic_workflow_list
+- ext_logic_az_logic_workflow_show
+- ext_logic_az_logic_workflow_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -183,4 +149,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Logic workflow.
+metadata:
+  description: Logic workflow.

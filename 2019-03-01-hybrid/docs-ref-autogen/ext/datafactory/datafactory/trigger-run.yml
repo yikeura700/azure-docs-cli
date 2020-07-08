@@ -1,24 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_datafactory_az_datafactory_trigger_run
-  name: az datafactory trigger-run
-  summary: Datafactory trigger-run.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_datafactory_az_datafactory_trigger_run_query_by_factory
-  - ext_datafactory_az_datafactory_trigger_run_rerun
+### YamlMime:CLIGroup
+uid: ext_datafactory_az_datafactory_trigger_run
+name: az datafactory trigger-run
+summary: Datafactory trigger-run.
+description: ''
+directCommands:
 - uid: ext_datafactory_az_datafactory_trigger_run_query_by_factory
   name: az datafactory trigger-run query-by-factory
   summary: Query trigger runs.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: TriggerRuns_QueryByFactory
-    syntax:
-      content: az datafactory trigger-run query-by-factory --factory-name "myFactoryName" --filters operand="TriggerName" operator="Equals" values="myTrigger" --last-updated-after "2018-06-16T00:36:44.3345758Z" --last-updated-before "2018-06-16T00:49:48.3686473Z" --resource-group "myResourceGroup"
+    syntax: az datafactory trigger-run query-by-factory --factory-name "myFactoryName" --filters operand="TriggerName" operator="Equals" values="myTrigger" --last-updated-after "2018-06-16T00:36:44.3345758Z" --last-updated-before "2018-06-16T00:49:48.3686473Z" --resource-group "myResourceGroup"
   parameters:
   - isRequired: true
     name: --factory-name
@@ -69,12 +61,9 @@ items:
   name: az datafactory trigger-run rerun
   summary: Rerun single trigger instance by runId.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Triggers_Rerun
-    syntax:
-      content: az datafactory trigger-run rerun --factory-name "myFactoryName" --resource-group "myResourceGroup" --run-id "2f7fdb90-5df1-4b8e-ac2f-064cfa58202b" --trigger-name "myTrigger"
+    syntax: az datafactory trigger-run rerun --factory-name "myFactoryName" --resource-group "myResourceGroup" --run-id "2f7fdb90-5df1-4b8e-ac2f-064cfa58202b" --trigger-name "myTrigger"
   parameters:
   - isRequired: true
     name: --factory-name
@@ -93,12 +82,8 @@ items:
     summary: The trigger name.
     description: ''
 commands:
-- uid: ext_datafactory_az_datafactory_trigger_run_query_by_factory
-  name: az datafactory trigger-run query-by-factory
-  summary: Query trigger runs.
-- uid: ext_datafactory_az_datafactory_trigger_run_rerun
-  name: az datafactory trigger-run rerun
-  summary: Rerun single trigger instance by runId.
+- ext_datafactory_az_datafactory_trigger_run_query_by_factory
+- ext_datafactory_az_datafactory_trigger_run_rerun
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -114,4 +99,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Datafactory trigger-run.
+metadata:
+  description: Datafactory trigger-run.

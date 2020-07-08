@@ -1,23 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_maintenance_az_maintenance_update
-  name: az maintenance update
-  summary: Azure Maintenance updates.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_maintenance_az_maintenance_update_list
+### YamlMime:CLIGroup
+uid: ext_maintenance_az_maintenance_update
+name: az maintenance update
+summary: Azure Maintenance updates.
+description: ''
+directCommands:
 - uid: ext_maintenance_az_maintenance_update_list
   name: az maintenance update list
   summary: List pending a Maintenance Updates.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List pending a Maintenance Updates.
-    syntax:
-      content: az maintenance update list -g smdtest --resource-name smdVM --resource-type virtualMachines --provider-name Microsoft.Compute
+    syntax: az maintenance update list -g smdtest --resource-name smdVM --resource-type virtualMachines --provider-name Microsoft.Compute
   parameters:
   - isRequired: true
     name: --provider-name
@@ -42,9 +35,7 @@ items:
     summary: Type of the parent resource e.g. for dedicated hosts this would be hostGroups, for VMSS VMs this would be virtualmachinescalesets.
     description: ''
 commands:
-- uid: ext_maintenance_az_maintenance_update_list
-  name: az maintenance update list
-  summary: List pending a Maintenance Updates.
+- ext_maintenance_az_maintenance_update_list
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -60,4 +51,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Azure Maintenance updates.
+metadata:
+  description: Azure Maintenance updates.

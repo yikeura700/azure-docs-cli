@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_repos_policy_comment_required
-  name: az repos policy comment-required
-  summary: Manage comment required policy.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_repos_policy_comment_required_create
-  - ext_azure-devops_az_repos_policy_comment_required_update
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_repos_policy_comment_required
+name: az repos policy comment-required
+summary: Manage comment required policy.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_repos_policy_comment_required_create
   name: az repos policy comment-required create
   summary: Create comment resolution required policy.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --blocking
@@ -53,8 +46,6 @@ items:
   name: az repos policy comment-required update
   summary: Update comment resolution required policy.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id --policy-id
@@ -89,12 +80,8 @@ items:
     summary: Id of the repository on which to apply the policy.
     description: ''
 commands:
-- uid: ext_azure-devops_az_repos_policy_comment_required_create
-  name: az repos policy comment-required create
-  summary: Create comment resolution required policy.
-- uid: ext_azure-devops_az_repos_policy_comment_required_update
-  name: az repos policy comment-required update
-  summary: Update comment resolution required policy.
+- ext_azure-devops_az_repos_policy_comment_required_create
+- ext_azure-devops_az_repos_policy_comment_required_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -110,4 +97,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage comment required policy.
+metadata:
+  description: Manage comment required policy.

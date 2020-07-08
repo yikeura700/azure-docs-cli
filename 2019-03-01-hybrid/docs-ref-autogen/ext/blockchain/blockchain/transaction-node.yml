@@ -1,30 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_blockchain_az_blockchain_transaction_node
-  name: az blockchain transaction-node
-  summary: Blockchain transaction-node.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_blockchain_az_blockchain_transaction_node_create
-  - ext_blockchain_az_blockchain_transaction_node_delete
-  - ext_blockchain_az_blockchain_transaction_node_list
-  - ext_blockchain_az_blockchain_transaction_node_list_api_key
-  - ext_blockchain_az_blockchain_transaction_node_regenerate_api_key
-  - ext_blockchain_az_blockchain_transaction_node_show
-  - ext_blockchain_az_blockchain_transaction_node_update
-  - ext_blockchain_az_blockchain_transaction_node_wait
+### YamlMime:CLIGroup
+uid: ext_blockchain_az_blockchain_transaction_node
+name: az blockchain transaction-node
+summary: Blockchain transaction-node.
+description: ''
+directCommands:
 - uid: ext_blockchain_az_blockchain_transaction_node_create
   name: az blockchain transaction-node create
   summary: Create a transaction node.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a transaction node.
-    syntax:
-      content: az blockchain transaction-node create --member-name "contosemember1" --resource-group "mygroup" --location "southeastasia" --password "1234abcdEFG1" --name "txnode2"
+    syntax: az blockchain transaction-node create --member-name "contosemember1" --resource-group "mygroup" --location "southeastasia" --password "1234abcdEFG1" --name "txnode2"
   parameters:
   - isRequired: true
     name: --member-name
@@ -58,12 +44,9 @@ items:
   name: az blockchain transaction-node delete
   summary: Delete the transaction node.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete the transaction node.
-    syntax:
-      content: az blockchain transaction-node delete --member-name "contosemember1" --resource-group "mygroup" --name "txNode2"
+    syntax: az blockchain transaction-node delete --member-name "contosemember1" --resource-group "mygroup" --name "txNode2"
   parameters:
   - isRequired: true
     name: --member-name
@@ -87,12 +70,9 @@ items:
   name: az blockchain transaction-node list
   summary: List the transaction nodes for a blockchain member.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List the transaction nodes for a blockchain member.
-    syntax:
-      content: az blockchain transaction-node list --member-name "contosemember1" --resource-group "mygroup"
+    syntax: az blockchain transaction-node list --member-name "contosemember1" --resource-group "mygroup"
   parameters:
   - isRequired: true
     name: --member-name
@@ -106,12 +86,9 @@ items:
   name: az blockchain transaction-node list-api-key
   summary: List the API keys for the transaction node.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List the API keys for the transaction node.
-    syntax:
-      content: az blockchain transaction-node list-api-key --member-name "contosemember1" --resource-group "mygroup" --name "txnode2"
+    syntax: az blockchain transaction-node list-api-key --member-name "contosemember1" --resource-group "mygroup" --name "txnode2"
   parameters:
   - isRequired: true
     name: --member-name
@@ -129,12 +106,9 @@ items:
   name: az blockchain transaction-node regenerate-api-key
   summary: Regenerate the API keys for the blockchain member.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Regenerate the API keys for the blockchain member.
-    syntax:
-      content: az blockchain transaction-node regenerate-api-key --key-name "key1" --member-name "contosemember1" --resource-group "mygroup" --name "txnode2"
+    syntax: az blockchain transaction-node regenerate-api-key --key-name "key1" --member-name "contosemember1" --resource-group "mygroup" --name "txnode2"
   parameters:
   - isRequired: true
     name: --member-name
@@ -159,12 +133,9 @@ items:
   name: az blockchain transaction-node show
   summary: Show the details of the transaction node.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show the details of the transaction node.
-    syntax:
-      content: az blockchain transaction-node show --member-name "contosemember1" --resource-group "mygroup" --name "txnode2"
+    syntax: az blockchain transaction-node show --member-name "contosemember1" --resource-group "mygroup" --name "txnode2"
   parameters:
   - isRequired: true
     name: --member-name
@@ -182,12 +153,9 @@ items:
   name: az blockchain transaction-node update
   summary: Update the transaction node.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update the transaction node.
-    syntax:
-      content: az blockchain transaction-node update --member-name "contosemember1" --resource-group "mygroup" --password "1234abcdEFG1" --name "txnode2"
+    syntax: az blockchain transaction-node update --member-name "contosemember1" --resource-group "mygroup" --password "1234abcdEFG1" --name "txnode2"
   parameters:
   - isRequired: true
     name: --member-name
@@ -215,12 +183,9 @@ items:
   name: az blockchain transaction-node wait
   summary: Wait until the transaction node is created or deleted.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Wait until the transaction node is created.
-    syntax:
-      content: az blockchain transaction-node wait --member-name "contosemember1" --resource-group "mygroup" --name "txNode2" --created
+    syntax: az blockchain transaction-node wait --member-name "contosemember1" --resource-group "mygroup" --name "txNode2" --created
   parameters:
   - isRequired: true
     name: --member-name
@@ -258,30 +223,14 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_blockchain_az_blockchain_transaction_node_create
-  name: az blockchain transaction-node create
-  summary: Create a transaction node.
-- uid: ext_blockchain_az_blockchain_transaction_node_delete
-  name: az blockchain transaction-node delete
-  summary: Delete the transaction node.
-- uid: ext_blockchain_az_blockchain_transaction_node_list
-  name: az blockchain transaction-node list
-  summary: List the transaction nodes for a blockchain member.
-- uid: ext_blockchain_az_blockchain_transaction_node_list_api_key
-  name: az blockchain transaction-node list-api-key
-  summary: List the API keys for the transaction node.
-- uid: ext_blockchain_az_blockchain_transaction_node_regenerate_api_key
-  name: az blockchain transaction-node regenerate-api-key
-  summary: Regenerate the API keys for the blockchain member.
-- uid: ext_blockchain_az_blockchain_transaction_node_show
-  name: az blockchain transaction-node show
-  summary: Show the details of the transaction node.
-- uid: ext_blockchain_az_blockchain_transaction_node_update
-  name: az blockchain transaction-node update
-  summary: Update the transaction node.
-- uid: ext_blockchain_az_blockchain_transaction_node_wait
-  name: az blockchain transaction-node wait
-  summary: Wait until the transaction node is created or deleted.
+- ext_blockchain_az_blockchain_transaction_node_create
+- ext_blockchain_az_blockchain_transaction_node_delete
+- ext_blockchain_az_blockchain_transaction_node_list
+- ext_blockchain_az_blockchain_transaction_node_list_api_key
+- ext_blockchain_az_blockchain_transaction_node_regenerate_api_key
+- ext_blockchain_az_blockchain_transaction_node_show
+- ext_blockchain_az_blockchain_transaction_node_update
+- ext_blockchain_az_blockchain_transaction_node_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -297,4 +246,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Blockchain transaction-node.
+metadata:
+  description: Blockchain transaction-node.

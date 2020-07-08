@@ -1,30 +1,19 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_blueprint_az_blueprint_resource_group
-  name: az blueprint resource-group
-  summary: Commands to manage blueprint resource group artifact.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_blueprint_az_blueprint_resource_group_add
-  - ext_blueprint_az_blueprint_resource_group_list
-  - ext_blueprint_az_blueprint_resource_group_remove
-  - ext_blueprint_az_blueprint_resource_group_show
-  - ext_blueprint_az_blueprint_resource_group_update
+### YamlMime:CLIGroup
+uid: ext_blueprint_az_blueprint_resource_group
+name: az blueprint resource-group
+summary: Commands to manage blueprint resource group artifact.
+description: ''
+directCommands:
 - uid: ext_blueprint_az_blueprint_resource_group_add
   name: az blueprint resource-group add
   summary: Add a resource group artifact to the blueprint.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Add a resource group artifact
-    syntax:
-      content: >-
-        az blueprint resource-group add \
+    syntax: >-
+      az blueprint resource-group add \
 
-        --blueprint-name MyBlueprint --artifact-name MyResourceGroupArt
+      --blueprint-name MyBlueprint --artifact-name MyResourceGroupArt
   parameters:
   - isRequired: true
     name: --blueprint-name
@@ -61,15 +50,12 @@ items:
   name: az blueprint resource-group list
   summary: List blueprint resource group artifact.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List resource group artifacts
-    syntax:
-      content: >-
-        az blueprint resource-group list \
+    syntax: >-
+      az blueprint resource-group list \
 
-        --blueprint-name MyBlueprint
+      --blueprint-name MyBlueprint
   parameters:
   - isRequired: true
     name: --blueprint-name
@@ -85,15 +71,12 @@ items:
   name: az blueprint resource-group remove
   summary: Remove a blueprint resource group artifact.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Remove a resource group artifact
-    syntax:
-      content: >-
-        az blueprint resource-group remove \
+    syntax: >-
+      az blueprint resource-group remove \
 
-        --blueprint-name MyBlueprint --artifact-name MyResourceGroupArt
+      --blueprint-name MyBlueprint --artifact-name MyResourceGroupArt
   parameters:
   - isRequired: true
     name: --artifact-name
@@ -116,15 +99,12 @@ items:
   name: az blueprint resource-group show
   summary: Show blueprint resource group artifact.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a resource group artifact
-    syntax:
-      content: >-
-        az blueprint resource-group show \
+    syntax: >-
+      az blueprint resource-group show \
 
-        --blueprint-name MyBlueprint --artifact-name MyResourceGroupArt
+      --blueprint-name MyBlueprint --artifact-name MyResourceGroupArt
   parameters:
   - isRequired: true
     name: --artifact-name
@@ -144,15 +124,12 @@ items:
   name: az blueprint resource-group update
   summary: Update blueprint resource group artifact.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update a resource group artifact
-    syntax:
-      content: >-
-        az blueprint resource-group update \
+    syntax: >-
+      az blueprint resource-group update \
 
-        --blueprint-name MyBlueprint --artifact-name MyResourceGroupArt --display-name "My Resource Group"
+      --blueprint-name MyBlueprint --artifact-name MyResourceGroupArt --display-name "My Resource Group"
   parameters:
   - isRequired: true
     name: --artifact-name
@@ -187,21 +164,11 @@ items:
     summary: Use subscription for the scope of the blueprint. If --management-group is not specified, --subscription value or the default subscription will be used as the scope.
     description: ''
 commands:
-- uid: ext_blueprint_az_blueprint_resource_group_add
-  name: az blueprint resource-group add
-  summary: Add a resource group artifact to the blueprint.
-- uid: ext_blueprint_az_blueprint_resource_group_list
-  name: az blueprint resource-group list
-  summary: List blueprint resource group artifact.
-- uid: ext_blueprint_az_blueprint_resource_group_remove
-  name: az blueprint resource-group remove
-  summary: Remove a blueprint resource group artifact.
-- uid: ext_blueprint_az_blueprint_resource_group_show
-  name: az blueprint resource-group show
-  summary: Show blueprint resource group artifact.
-- uid: ext_blueprint_az_blueprint_resource_group_update
-  name: az blueprint resource-group update
-  summary: Update blueprint resource group artifact.
+- ext_blueprint_az_blueprint_resource_group_add
+- ext_blueprint_az_blueprint_resource_group_list
+- ext_blueprint_az_blueprint_resource_group_remove
+- ext_blueprint_az_blueprint_resource_group_show
+- ext_blueprint_az_blueprint_resource_group_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -217,4 +184,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage blueprint resource group artifact.
+metadata:
+  description: Commands to manage blueprint resource group artifact.

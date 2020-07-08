@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-devops_az_pipelines_queue
-  name: az pipelines queue
-  summary: Manage agent queues.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-devops_az_pipelines_queue_list
-  - ext_azure-devops_az_pipelines_queue_show
+### YamlMime:CLIGroup
+uid: ext_azure-devops_az_pipelines_queue
+name: az pipelines queue
+summary: Manage agent queues.
+description: ''
+directCommands:
 - uid: ext_azure-devops_az_pipelines_queue_list
   name: az pipelines queue list
   summary: List agent queues.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --action
     parameterValueGroup: manage, none, use
@@ -37,8 +30,6 @@ items:
   name: az pipelines queue show
   summary: Show details of agent queue.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id --queue-id
@@ -59,12 +50,8 @@ items:
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
 commands:
-- uid: ext_azure-devops_az_pipelines_queue_list
-  name: az pipelines queue list
-  summary: List agent queues.
-- uid: ext_azure-devops_az_pipelines_queue_show
-  name: az pipelines queue show
-  summary: Show details of agent queue.
+- ext_azure-devops_az_pipelines_queue_list
+- ext_azure-devops_az_pipelines_queue_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -80,4 +67,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage agent queues.
+metadata:
+  description: Manage agent queues.

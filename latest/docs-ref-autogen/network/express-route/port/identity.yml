@@ -1,32 +1,23 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_network_express_route_port_identity
-  name: az network express-route port identity
-  summary: Manage the managed service identity of an ExpressRoute Port.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_network_express_route_port_identity_assign
-  - az_network_express_route_port_identity_remove
-  - az_network_express_route_port_identity_show
+### YamlMime:CLIGroup
+uid: az_network_express_route_port_identity
+name: az network express-route port identity
+summary: Manage the managed service identity of an ExpressRoute Port.
+description: ''
+directCommands:
 - uid: az_network_express_route_port_identity_assign
   name: az network express-route port identity assign
   summary: Assign a managed service identity to an ExpressRoute Port.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Assign an identity to the ExpressRoute Port
-    syntax:
-      content: >-
-        az network express-route port identity assign \
+    syntax: >-
+      az network express-route port identity assign \
 
-        --resource-group MyResourceGroupg \
+      --resource-group MyResourceGroupg \
 
-        --name MyExpressRoutePort \
+      --name MyExpressRoutePort \
 
-        --identity MyUserAssignedManagedServiceIdentity
+      --identity MyUserAssignedManagedServiceIdentity
   parameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -57,12 +48,9 @@ items:
   name: az network express-route port identity remove
   summary: Remove the managed service identity of an ExpressRoute Port.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Remove an identity of the ExpressRoute Port
-    syntax:
-      content: az network express-route port identity remove -g MyResourceGroup --name MyExpressRoutePort
+    syntax: az network express-route port identity remove -g MyResourceGroup --name MyExpressRoutePort
   parameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -89,12 +77,9 @@ items:
   name: az network express-route port identity show
   summary: Show the managed service identity of an ExpressRoute Port.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show an identity of the ExpressRoute Port
-    syntax:
-      content: az network express-route port identity show -g MyResourceGroup --name MyExpressRoutePort
+    syntax: az network express-route port identity show -g MyResourceGroup --name MyExpressRoutePort
   parameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -115,15 +100,9 @@ items:
       path: src/azure-cli/azure/cli/command_modules/network/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_network_express_route_port_identity_assign
-  name: az network express-route port identity assign
-  summary: Assign a managed service identity to an ExpressRoute Port.
-- uid: az_network_express_route_port_identity_remove
-  name: az network express-route port identity remove
-  summary: Remove the managed service identity of an ExpressRoute Port.
-- uid: az_network_express_route_port_identity_show
-  name: az network express-route port identity show
-  summary: Show the managed service identity of an ExpressRoute Port.
+- az_network_express_route_port_identity_assign
+- az_network_express_route_port_identity_remove
+- az_network_express_route_port_identity_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -139,10 +118,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/network/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
-updated_at: 6/18/2020 6:20:50 AM
-ms.date: 06/18/2020
-description: Manage the managed service identity of an ExpressRoute Port.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
+  updated_at: 6/18/2020 6:20:50 AM
+  ms.date: 06/18/2020
+  description: Manage the managed service identity of an ExpressRoute Port.

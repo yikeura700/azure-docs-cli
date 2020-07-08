@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_netappfiles_pool
-  name: az netappfiles pool
-  summary: Manage Azure NetApp Files (ANF) Pool Resources.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_netappfiles_pool_create
-  - az_netappfiles_pool_delete
-  - az_netappfiles_pool_list
-  - az_netappfiles_pool_show
-  - az_netappfiles_pool_update
+### YamlMime:CLIGroup
+uid: az_netappfiles_pool
+name: az netappfiles pool
+summary: Manage Azure NetApp Files (ANF) Pool Resources.
+description: ''
+directCommands:
 - uid: az_netappfiles_pool_create
   name: az netappfiles pool create
   summary: Create a new Azure NetApp Files (ANF) pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an ANF pool
-    syntax:
-      content: az netappfiles pool create -g mygroup --account-name myaccountname --name mypoolname -l westus2 --size 8 --service-level premium
+    syntax: az netappfiles pool create -g mygroup --account-name myaccountname --name mypoolname -l westus2 --size 8 --service-level premium
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -64,12 +53,9 @@ items:
   name: az netappfiles pool delete
   summary: Delete the specified ANF pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete an ANF pool
-    syntax:
-      content: az netappfiles pool delete -g mygroup --account-name myaccname --name mypoolname
+    syntax: az netappfiles pool delete -g mygroup --account-name myaccname --name mypoolname
   parameters:
   - name: --account-name -a
     summary: The name of the ANF account.
@@ -96,12 +82,9 @@ items:
   name: az netappfiles pool list
   summary: L:ist the ANF pools for the specified account.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List the pools for the ANF account
-    syntax:
-      content: az netappfiles pool list -g mygroup --account-name myname
+    syntax: az netappfiles pool list -g mygroup --account-name myname
   parameters:
   - isRequired: true
     name: --account-name -a
@@ -124,12 +107,9 @@ items:
   name: az netappfiles pool show
   summary: Get the specified ANF pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get an ANF pool
-    syntax:
-      content: az netappfiles pool show -g mygroup --account-name myaccname --name mypoolname
+    syntax: az netappfiles pool show -g mygroup --account-name myaccname --name mypoolname
   parameters:
   - name: --account-name -a
     summary: The name of the ANF account.
@@ -156,12 +136,9 @@ items:
   name: az netappfiles pool update
   summary: Update the tags of the specified ANF pool.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update specific values for an ANF pool
-    syntax:
-      content: az netappfiles pool update -g mygroup --account-name myaccname --name mypoolname --service-level ultra --tags mytag1=abcd mytag2=efgh
+    syntax: az netappfiles pool update -g mygroup --account-name myaccname --name mypoolname --service-level ultra --tags mytag1=abcd mytag2=efgh
   parameters:
   - name: --service-level
     parameterValueGroup: Premium, Standard, Ultra
@@ -207,21 +184,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_netappfiles_pool_create
-  name: az netappfiles pool create
-  summary: Create a new Azure NetApp Files (ANF) pool.
-- uid: az_netappfiles_pool_delete
-  name: az netappfiles pool delete
-  summary: Delete the specified ANF pool.
-- uid: az_netappfiles_pool_list
-  name: az netappfiles pool list
-  summary: L:ist the ANF pools for the specified account.
-- uid: az_netappfiles_pool_show
-  name: az netappfiles pool show
-  summary: Get the specified ANF pool.
-- uid: az_netappfiles_pool_update
-  name: az netappfiles pool update
-  summary: Update the tags of the specified ANF pool.
+- az_netappfiles_pool_create
+- az_netappfiles_pool_delete
+- az_netappfiles_pool_list
+- az_netappfiles_pool_show
+- az_netappfiles_pool_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -237,10 +204,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/ee84afb7c3604c924b225b79095feee55c466a1b/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-updated_at: 5/15/2020 10:20:28 AM
-ms.date: 05/15/2020
-description: Manage Azure NetApp Files (ANF) Pool Resources.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/ee84afb7c3604c924b225b79095feee55c466a1b/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
+  updated_at: 5/15/2020 10:20:28 AM
+  ms.date: 05/15/2020
+  description: Manage Azure NetApp Files (ANF) Pool Resources.

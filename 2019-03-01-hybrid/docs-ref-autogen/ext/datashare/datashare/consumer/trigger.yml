@@ -1,27 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_datashare_az_datashare_consumer_trigger
-  name: az datashare consumer trigger
-  summary: Commands for consumers to manage datashare consumer triggers.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_datashare_az_datashare_consumer_trigger_create
-  - ext_datashare_az_datashare_consumer_trigger_delete
-  - ext_datashare_az_datashare_consumer_trigger_list
-  - ext_datashare_az_datashare_consumer_trigger_show
-  - ext_datashare_az_datashare_consumer_trigger_wait
+### YamlMime:CLIGroup
+uid: ext_datashare_az_datashare_consumer_trigger
+name: az datashare consumer trigger
+summary: Commands for consumers to manage datashare consumer triggers.
+description: ''
+directCommands:
 - uid: ext_datashare_az_datashare_consumer_trigger_create
   name: az datashare consumer trigger create
   summary: Create a trigger.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a trigger
-    syntax:
-      content: az datashare consumer trigger create --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --name MyTrigger --recurrence-interval Day --synchronization-time "2020-04-05 10:50:00 +00:00" --kind ScheduleBased
+    syntax: az datashare consumer trigger create --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --name MyTrigger --recurrence-interval Day --synchronization-time "2020-04-05 10:50:00 +00:00" --kind ScheduleBased
   parameters:
   - isRequired: true
     name: --account-name
@@ -60,12 +49,9 @@ items:
   name: az datashare consumer trigger delete
   summary: Delete a trigger in a share subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete a trigger
-    syntax:
-      content: az datashare consumer trigger delete --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --name MyTrigger
+    syntax: az datashare consumer trigger delete --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --name MyTrigger
   parameters:
   - isRequired: true
     name: --account-name
@@ -93,12 +79,9 @@ items:
   name: az datashare consumer trigger list
   summary: List triggers in a share subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List triggers
-    syntax:
-      content: az datashare consumer trigger list --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription
+    syntax: az datashare consumer trigger list --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription
   parameters:
   - isRequired: true
     name: --account-name
@@ -116,12 +99,9 @@ items:
   name: az datashare consumer trigger show
   summary: Show a trigger in a share subscription.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a trigger
-    syntax:
-      content: az datashare consumer trigger show --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --name MyTrigger
+    syntax: az datashare consumer trigger show --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --name MyTrigger
   parameters:
   - isRequired: true
     name: --account-name
@@ -143,12 +123,9 @@ items:
   name: az datashare consumer trigger wait
   summary: Place the CLI in a waiting state until a condition of the datashare trigger is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pause executing next line of CLI script until the datashare trigger is successfully provisioned.
-    syntax:
-      content: az datashare consumer trigger wait --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --name MyTrigger --created
+    syntax: az datashare consumer trigger wait --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --name MyTrigger --created
   parameters:
   - isRequired: true
     name: --account-name
@@ -190,21 +167,11 @@ items:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- uid: ext_datashare_az_datashare_consumer_trigger_create
-  name: az datashare consumer trigger create
-  summary: Create a trigger.
-- uid: ext_datashare_az_datashare_consumer_trigger_delete
-  name: az datashare consumer trigger delete
-  summary: Delete a trigger in a share subscription.
-- uid: ext_datashare_az_datashare_consumer_trigger_list
-  name: az datashare consumer trigger list
-  summary: List triggers in a share subscription.
-- uid: ext_datashare_az_datashare_consumer_trigger_show
-  name: az datashare consumer trigger show
-  summary: Show a trigger in a share subscription.
-- uid: ext_datashare_az_datashare_consumer_trigger_wait
-  name: az datashare consumer trigger wait
-  summary: Place the CLI in a waiting state until a condition of the datashare trigger is met.
+- ext_datashare_az_datashare_consumer_trigger_create
+- ext_datashare_az_datashare_consumer_trigger_delete
+- ext_datashare_az_datashare_consumer_trigger_list
+- ext_datashare_az_datashare_consumer_trigger_show
+- ext_datashare_az_datashare_consumer_trigger_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -220,4 +187,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands for consumers to manage datashare consumer triggers.
+metadata:
+  description: Commands for consumers to manage datashare consumer triggers.

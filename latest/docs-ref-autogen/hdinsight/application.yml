@@ -1,66 +1,53 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_hdinsight_application
-  name: az hdinsight application
-  summary: Manage HDInsight applications.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_hdinsight_application_create
-  - az_hdinsight_application_delete
-  - az_hdinsight_application_list
-  - az_hdinsight_application_show
-  - az_hdinsight_application_wait
+### YamlMime:CLIGroup
+uid: az_hdinsight_application
+name: az hdinsight application
+summary: Manage HDInsight applications.
+description: ''
+directCommands:
 - uid: az_hdinsight_application_create
   name: az hdinsight application create
   summary: Create an application for a HDInsight cluster.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create an application with a script URI.
-    syntax:
-      content: >-
-        az hdinsight application create -g MyResourceGroup -n MyApplication \
+    syntax: >-
+      az hdinsight application create -g MyResourceGroup -n MyApplication \
 
-        --cluster-name MyCluster \
+      --cluster-name MyCluster \
 
-        --script-uri https://hdiconfigactions.blob.core.windows.net/linuxhueconfigactionv02/install-hue-uber-v02.sh \
+      --script-uri https://hdiconfigactions.blob.core.windows.net/linuxhueconfigactionv02/install-hue-uber-v02.sh \
 
-        --script-action-name MyScriptAction \
+      --script-action-name MyScriptAction \
 
-        --script-parameters '"-version latest -port 20000"'
+      --script-parameters '"-version latest -port 20000"'
   - summary: Create an application with a script URI and specified edge node size.
-    syntax:
-      content: >-
-        az hdinsight application create -g MyResourceGroup -n MyApplication \
+    syntax: >-
+      az hdinsight application create -g MyResourceGroup -n MyApplication \
 
-        --cluster-name MyCluster \
+      --cluster-name MyCluster \
 
-        --script-uri https://hdiconfigactions.blob.core.windows.net/linuxhueconfigactionv02/install-hue-uber-v02.sh \
+      --script-uri https://hdiconfigactions.blob.core.windows.net/linuxhueconfigactionv02/install-hue-uber-v02.sh \
 
-        --script-action-name MyScriptAction \
+      --script-action-name MyScriptAction \
 
-        --script-parameters "-version latest -port 20000" \
+      --script-parameters "-version latest -port 20000" \
 
-        --edgenode-size Standard_D4_v2
+      --edgenode-size Standard_D4_v2
   - summary: Create an application with HTTPS Endpoint.
-    syntax:
-      content: >-
-        az hdinsight application create -g MyResourceGroup -n MyApplication \
+    syntax: >-
+      az hdinsight application create -g MyResourceGroup -n MyApplication \
 
-        --cluster-name MyCluster \
+      --cluster-name MyCluster \
 
-        --script-uri https://hdiconfigactions.blob.core.windows.net/linuxhueconfigactionv02/install-hue-uber-v02.sh \
+      --script-uri https://hdiconfigactions.blob.core.windows.net/linuxhueconfigactionv02/install-hue-uber-v02.sh \
 
-        --script-action-name MyScriptAction \
+      --script-action-name MyScriptAction \
 
-        --script-parameters "-version latest -port 20000" \
+      --script-parameters "-version latest -port 20000" \
 
-        --destination-port 8888 \
+      --destination-port 8888 \
 
-        --sub-domain-suffix was
+      --sub-domain-suffix was
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -147,8 +134,6 @@ items:
   name: az hdinsight application delete
   summary: Deletes the specified application on the HDInsight cluster.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -181,8 +166,6 @@ items:
   name: az hdinsight application list
   summary: Lists all of the applications for the HDInsight cluster.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -205,8 +188,6 @@ items:
   name: az hdinsight application show
   summary: Gets properties of the specified application.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -233,8 +214,6 @@ items:
   name: az hdinsight application wait
   summary: Place the CLI in a waiting state until an operation is complete.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --cluster-name
@@ -281,21 +260,11 @@ items:
       path: src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_hdinsight_application_create
-  name: az hdinsight application create
-  summary: Create an application for a HDInsight cluster.
-- uid: az_hdinsight_application_delete
-  name: az hdinsight application delete
-  summary: Deletes the specified application on the HDInsight cluster.
-- uid: az_hdinsight_application_list
-  name: az hdinsight application list
-  summary: Lists all of the applications for the HDInsight cluster.
-- uid: az_hdinsight_application_show
-  name: az hdinsight application show
-  summary: Gets properties of the specified application.
-- uid: az_hdinsight_application_wait
-  name: az hdinsight application wait
-  summary: Place the CLI in a waiting state until an operation is complete.
+- az_hdinsight_application_create
+- az_hdinsight_application_delete
+- az_hdinsight_application_list
+- az_hdinsight_application_show
+- az_hdinsight_application_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -311,10 +280,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/f55047618be302f17adc2cfe6c0953637d70ef2c/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-updated_at: 3/23/2020 8:14:59 AM
-ms.date: 03/23/2020
-description: Manage HDInsight applications.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/f55047618be302f17adc2cfe6c0953637d70ef2c/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
+  updated_at: 3/23/2020 8:14:59 AM
+  ms.date: 03/23/2020
+  description: Manage HDInsight applications.

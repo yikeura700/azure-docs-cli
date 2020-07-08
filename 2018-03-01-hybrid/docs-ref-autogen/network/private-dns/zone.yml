@@ -1,30 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_network_private_dns_zone
-  name: az network private-dns zone
-  summary: Manage Private DNS zones.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_network_private_dns_zone_create
-  - az_network_private_dns_zone_delete
-  - az_network_private_dns_zone_export
-  - az_network_private_dns_zone_import
-  - az_network_private_dns_zone_list
-  - az_network_private_dns_zone_show
-  - az_network_private_dns_zone_update
-  - az_network_private_dns_zone_wait
+### YamlMime:CLIGroup
+uid: az_network_private_dns_zone
+name: az network private-dns zone
+summary: Manage Private DNS zones.
+description: ''
+directCommands:
 - uid: az_network_private_dns_zone_create
   name: az network private-dns zone create
   summary: Create a Private DNS zone.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create a Private DNS zone using a fully qualified domain name.
-    syntax:
-      content: az network private-dns zone create -g MyResourceGroup -n www.mysite.com
+    syntax: az network private-dns zone create -g MyResourceGroup -n www.mysite.com
   parameters:
   - isRequired: true
     name: --name -n
@@ -53,12 +39,9 @@ items:
   name: az network private-dns zone delete
   summary: Delete a Private DNS zone.
   description: All DNS records in the zone will also be deleted. This operation cannot be undone. Private DNS zone cannot be deleted unless all virtual network links to it are removed.
-  langs:
-  - azurecli
   examples:
   - summary: Delete a Private DNS zone using a fully qualified domain name.
-    syntax:
-      content: az network private-dns zone delete -g MyResourceGroup -n www.mysite.com
+    syntax: az network private-dns zone delete -g MyResourceGroup -n www.mysite.com
   parameters:
   - isRequired: true
     name: --name -n
@@ -90,12 +73,9 @@ items:
   name: az network private-dns zone export
   summary: Export a Private DNS zone as a DNS zone file.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Export a Private DNS zone as a DNS zone file.
-    syntax:
-      content: az network private-dns zone export -g MyResourceGroup -n www.mysite.com -f mysite_com_zone.txt
+    syntax: az network private-dns zone export -g MyResourceGroup -n www.mysite.com -f mysite_com_zone.txt
   parameters:
   - isRequired: true
     name: --name -n
@@ -121,12 +101,9 @@ items:
   name: az network private-dns zone import
   summary: Create a Private DNS zone using a DNS zone file.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Import a local zone file into a Private DNS zone resource.
-    syntax:
-      content: az network private-dns zone import -g MyResourceGroup -n MyZone -f /path/to/zone/file
+    syntax: az network private-dns zone import -g MyResourceGroup -n MyZone -f /path/to/zone/file
   parameters:
   - isRequired: true
     name: --file-name -f
@@ -153,12 +130,9 @@ items:
   name: az network private-dns zone list
   summary: List Private DNS zones.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List Private DNS zones in a resource group.
-    syntax:
-      content: az network private-dns zone list -g MyResourceGroup
+    syntax: az network private-dns zone list -g MyResourceGroup
   parameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
@@ -176,12 +150,9 @@ items:
   name: az network private-dns zone show
   summary: Get a Private DNS zone.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Get a Private DNS zone using a fully qualified domain name.
-    syntax:
-      content: az network private-dns zone show -g MyResourceGroup -n www.mysite.com
+    syntax: az network private-dns zone show -g MyResourceGroup -n www.mysite.com
   parameters:
   - isRequired: true
     name: --name -n
@@ -204,12 +175,9 @@ items:
   name: az network private-dns zone update
   summary: Update a Private DNS zone's properties. Does not modify Private DNS records or virtual network links within the zone.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Update a Private DNS zone properties to change the user-defined value of a previously set tag.
-    syntax:
-      content: az network private-dns zone update -g MyResourceGroup -n www.mysite.com --tags CostCenter=Marketing
+    syntax: az network private-dns zone update -g MyResourceGroup -n www.mysite.com --tags CostCenter=Marketing
   parameters:
   - isRequired: true
     name: --name -n
@@ -253,12 +221,9 @@ items:
   name: az network private-dns zone wait
   summary: Place the CLI in a waiting state until a condition of the Private DNS zone is met.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Pause executing next line of CLI script until the Private DNS zone is successfully provisioned.
-    syntax:
-      content: az network private-dns zone wait -g MyResourceGroup -n www.mysite.com --created
+    syntax: az network private-dns zone wait -g MyResourceGroup -n www.mysite.com --created
   parameters:
   - isRequired: true
     name: --name -n
@@ -301,30 +266,14 @@ items:
       path: src/azure-cli/azure/cli/command_modules/network/_help.py
       repo: https://github.com/Azure/azure-cli.git
 commands:
-- uid: az_network_private_dns_zone_create
-  name: az network private-dns zone create
-  summary: Create a Private DNS zone.
-- uid: az_network_private_dns_zone_delete
-  name: az network private-dns zone delete
-  summary: Delete a Private DNS zone.
-- uid: az_network_private_dns_zone_export
-  name: az network private-dns zone export
-  summary: Export a Private DNS zone as a DNS zone file.
-- uid: az_network_private_dns_zone_import
-  name: az network private-dns zone import
-  summary: Create a Private DNS zone using a DNS zone file.
-- uid: az_network_private_dns_zone_list
-  name: az network private-dns zone list
-  summary: List Private DNS zones.
-- uid: az_network_private_dns_zone_show
-  name: az network private-dns zone show
-  summary: Get a Private DNS zone.
-- uid: az_network_private_dns_zone_update
-  name: az network private-dns zone update
-  summary: Update a Private DNS zone's properties. Does not modify Private DNS records or virtual network links within the zone.
-- uid: az_network_private_dns_zone_wait
-  name: az network private-dns zone wait
-  summary: Place the CLI in a waiting state until a condition of the Private DNS zone is met.
+- az_network_private_dns_zone_create
+- az_network_private_dns_zone_delete
+- az_network_private_dns_zone_export
+- az_network_private_dns_zone_import
+- az_network_private_dns_zone_list
+- az_network_private_dns_zone_show
+- az_network_private_dns_zone_update
+- az_network_private_dns_zone_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -340,10 +289,9 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-doc_source_url_path: src/azure-cli/azure/cli/command_modules/network/_help.py
-original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
-gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
-updated_at: 6/18/2020 6:20:50 AM
-ms.date: 06/18/2020
-description: Manage Private DNS zones.
+metadata:
+  original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
+  gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
+  updated_at: 6/18/2020 6:20:50 AM
+  ms.date: 06/18/2020
+  description: Manage Private DNS zones.

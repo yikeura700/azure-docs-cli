@@ -1,26 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_spring-cloud_az_spring_cloud_certificate
-  name: az spring-cloud certificate
-  summary: Commands to manage certificates.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_spring-cloud_az_spring_cloud_certificate_add
-  - ext_spring-cloud_az_spring_cloud_certificate_list
-  - ext_spring-cloud_az_spring_cloud_certificate_remove
-  - ext_spring-cloud_az_spring_cloud_certificate_show
+### YamlMime:CLIGroup
+uid: ext_spring-cloud_az_spring_cloud_certificate
+name: az spring-cloud certificate
+summary: Commands to manage certificates.
+description: ''
+directCommands:
 - uid: ext_spring-cloud_az_spring_cloud_certificate_add
   name: az spring-cloud certificate add
   summary: Add a certificate in Azure Spring Cloud.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Import certificate from key vault.
-    syntax:
-      content: az spring-cloud certificate add --name MyCertName --vault-uri MyKeyVaultUri --vault-certificate-name MyKeyVaultCertName --service MyCluster --resource-group MyResourceGroup
+    syntax: az spring-cloud certificate add --name MyCertName --vault-uri MyKeyVaultUri --vault-certificate-name MyKeyVaultCertName --service MyCluster --resource-group MyResourceGroup
   parameters:
   - isRequired: true
     name: --name -n
@@ -46,12 +36,9 @@ items:
   name: az spring-cloud certificate list
   summary: List all certificates in Azure Spring Cloud.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List all certificates in spring cloud service.
-    syntax:
-      content: az spring-cloud certificate list --service MyCluster --resource-group MyResourceGroup -o table
+    syntax: az spring-cloud certificate list --service MyCluster --resource-group MyResourceGroup -o table
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -65,8 +52,6 @@ items:
   name: az spring-cloud certificate remove
   summary: Remove a certificate in Azure Spring Cloud.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -84,8 +69,6 @@ items:
   name: az spring-cloud certificate show
   summary: Show a certificate in Azure Spring Cloud.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -100,18 +83,10 @@ items:
     summary: Name of Azure Spring Cloud, you can configure the default service using az configure --defaults spring-cloud=<name>.
     description: ''
 commands:
-- uid: ext_spring-cloud_az_spring_cloud_certificate_add
-  name: az spring-cloud certificate add
-  summary: Add a certificate in Azure Spring Cloud.
-- uid: ext_spring-cloud_az_spring_cloud_certificate_list
-  name: az spring-cloud certificate list
-  summary: List all certificates in Azure Spring Cloud.
-- uid: ext_spring-cloud_az_spring_cloud_certificate_remove
-  name: az spring-cloud certificate remove
-  summary: Remove a certificate in Azure Spring Cloud.
-- uid: ext_spring-cloud_az_spring_cloud_certificate_show
-  name: az spring-cloud certificate show
-  summary: Show a certificate in Azure Spring Cloud.
+- ext_spring-cloud_az_spring_cloud_certificate_add
+- ext_spring-cloud_az_spring_cloud_certificate_list
+- ext_spring-cloud_az_spring_cloud_certificate_remove
+- ext_spring-cloud_az_spring_cloud_certificate_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -127,4 +102,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage certificates.
+metadata:
+  description: Commands to manage certificates.

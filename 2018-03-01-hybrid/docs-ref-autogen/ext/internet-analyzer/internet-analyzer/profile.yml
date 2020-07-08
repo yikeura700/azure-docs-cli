@@ -1,30 +1,19 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_internet-analyzer_az_internet_analyzer_profile
-  name: az internet-analyzer profile
-  summary: Commands to manage internet analyzer profile.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_internet-analyzer_az_internet_analyzer_profile_create
-  - ext_internet-analyzer_az_internet_analyzer_profile_delete
-  - ext_internet-analyzer_az_internet_analyzer_profile_list
-  - ext_internet-analyzer_az_internet_analyzer_profile_show
-  - ext_internet-analyzer_az_internet_analyzer_profile_update
+### YamlMime:CLIGroup
+uid: ext_internet-analyzer_az_internet_analyzer_profile
+name: az internet-analyzer profile
+summary: Commands to manage internet analyzer profile.
+description: ''
+directCommands:
 - uid: ext_internet-analyzer_az_internet_analyzer_profile_create
   name: az internet-analyzer profile create
   summary: Create internet analyzer profile.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Creates an Internet Analyzer Profile in a Resource Group
-    syntax:
-      content: >-
-        az internet-analyzer profile create --resource-group "MyResourceGroup" --name "MyProfile" \
+    syntax: >-
+      az internet-analyzer profile create --resource-group "MyResourceGroup" --name "MyProfile" \
 
-        --location "WestUs" --enabled-state "Enabled"
+      --location "WestUs" --enabled-state "Enabled"
   parameters:
   - isRequired: true
     name: --name
@@ -48,12 +37,9 @@ items:
   name: az internet-analyzer profile delete
   summary: Delete internet analyzer profile.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Deletes an Internet Analyzer Profile in a Resource Group
-    syntax:
-      content: az internet-analyzer profile delete --resource-group "MyResourceGroup" --name "MyProfile"
+    syntax: az internet-analyzer profile delete --resource-group "MyResourceGroup" --name "MyProfile"
   parameters:
   - isRequired: true
     name: --name
@@ -67,12 +53,9 @@ items:
   name: az internet-analyzer profile list
   summary: List internet analyzer profiles.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List Internet Analyzer Profiles in a Resource Group
-    syntax:
-      content: az internet-analyzer profile list --resource-group "MyResourceGroup"
+    syntax: az internet-analyzer profile list --resource-group "MyResourceGroup"
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -82,12 +65,9 @@ items:
   name: az internet-analyzer profile show
   summary: Show internet analyzer profile.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Gets an Internet Analyzer Profile by Profile Id
-    syntax:
-      content: az internet-analyzer profile show --resource-group "MyResourceGroup" --name "MyProfile"
+    syntax: az internet-analyzer profile show --resource-group "MyResourceGroup" --name "MyProfile"
   parameters:
   - isRequired: true
     name: --name
@@ -101,15 +81,12 @@ items:
   name: az internet-analyzer profile update
   summary: Update internet analyzer profile.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Updates an Internet Analyzer Profile in a Resource Group
-    syntax:
-      content: >-
-        az internet-analyzer profile update --resource-group "MyResourceGroup" --name "MyProfile" \
+    syntax: >-
+      az internet-analyzer profile update --resource-group "MyResourceGroup" --name "MyProfile" \
 
-        --enabled-state "Enabled"
+      --enabled-state "Enabled"
   parameters:
   - isRequired: true
     name: --name
@@ -130,21 +107,11 @@ items:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
 commands:
-- uid: ext_internet-analyzer_az_internet_analyzer_profile_create
-  name: az internet-analyzer profile create
-  summary: Create internet analyzer profile.
-- uid: ext_internet-analyzer_az_internet_analyzer_profile_delete
-  name: az internet-analyzer profile delete
-  summary: Delete internet analyzer profile.
-- uid: ext_internet-analyzer_az_internet_analyzer_profile_list
-  name: az internet-analyzer profile list
-  summary: List internet analyzer profiles.
-- uid: ext_internet-analyzer_az_internet_analyzer_profile_show
-  name: az internet-analyzer profile show
-  summary: Show internet analyzer profile.
-- uid: ext_internet-analyzer_az_internet_analyzer_profile_update
-  name: az internet-analyzer profile update
-  summary: Update internet analyzer profile.
+- ext_internet-analyzer_az_internet_analyzer_profile_create
+- ext_internet-analyzer_az_internet_analyzer_profile_delete
+- ext_internet-analyzer_az_internet_analyzer_profile_list
+- ext_internet-analyzer_az_internet_analyzer_profile_show
+- ext_internet-analyzer_az_internet_analyzer_profile_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -160,4 +127,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Commands to manage internet analyzer profile.
+metadata:
+  description: Commands to manage internet analyzer profile.

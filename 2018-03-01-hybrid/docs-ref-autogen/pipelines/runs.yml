@@ -1,20 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_pipelines_runs
-  name: az pipelines runs
-  summary: Manage pipeline runs.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_pipelines_runs_list
-  - az_pipelines_runs_show
+### YamlMime:CLIGroup
+uid: az_pipelines_runs
+name: az pipelines runs
+summary: Manage pipeline runs.
+description: ''
+directCommands:
 - uid: az_pipelines_runs_list
   name: az pipelines runs list
   summary: List the pipeline runs in a project.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --branch
     summary: Filter by builds for this branch.
@@ -64,8 +57,6 @@ items:
   name: az pipelines runs show
   summary: Show details of a pipeline run.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --id
@@ -88,36 +79,16 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_pipelines_runs_artifact
-  name: az pipelines runs artifact
-  summary: Manage pipeline run artifacts.
-- uid: az_pipelines_runs_artifact_download
-  name: az pipelines runs artifact download
-  summary: Download a pipeline artifact.
-- uid: az_pipelines_runs_artifact_list
-  name: az pipelines runs artifact list
-  summary: List artifacts associated with a run.
-- uid: az_pipelines_runs_artifact_upload
-  name: az pipelines runs artifact upload
-  summary: Upload a pipeline artifact.
-- uid: az_pipelines_runs_list
-  name: az pipelines runs list
-  summary: List the pipeline runs in a project.
-- uid: az_pipelines_runs_show
-  name: az pipelines runs show
-  summary: Show details of a pipeline run.
-- uid: az_pipelines_runs_tag
-  name: az pipelines runs tag
-  summary: Manage pipeline run tags.
-- uid: az_pipelines_runs_tag_add
-  name: az pipelines runs tag add
-  summary: Add tag(s) for a pipeline run.
-- uid: az_pipelines_runs_tag_delete
-  name: az pipelines runs tag delete
-  summary: Delete a pipeline run tag.
-- uid: az_pipelines_runs_tag_list
-  name: az pipelines runs tag list
-  summary: Get tags for a pipeline run.
+- az_pipelines_runs_artifact
+- az_pipelines_runs_artifact_download
+- az_pipelines_runs_artifact_list
+- az_pipelines_runs_artifact_upload
+- az_pipelines_runs_list
+- az_pipelines_runs_show
+- az_pipelines_runs_tag
+- az_pipelines_runs_tag_add
+- az_pipelines_runs_tag_delete
+- az_pipelines_runs_tag_list
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -133,4 +104,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage pipeline runs.
+metadata:
+  description: Manage pipeline runs.

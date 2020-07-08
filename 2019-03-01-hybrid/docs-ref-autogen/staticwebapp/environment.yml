@@ -1,25 +1,16 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_staticwebapp_environment
-  name: az staticwebapp environment
-  summary: Manage environment of the static app.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_staticwebapp_environment_functions
-  - az_staticwebapp_environment_list
-  - az_staticwebapp_environment_show
+### YamlMime:CLIGroup
+uid: az_staticwebapp_environment
+name: az staticwebapp environment
+summary: Manage environment of the static app.
+description: ''
+directCommands:
 - uid: az_staticwebapp_environment_functions
   name: az staticwebapp environment functions
   summary: Show information about functions.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show static app functions.
-    syntax:
-      content: az staticwebapp environment functions -n MyStaticAppName
+    syntax: az staticwebapp environment functions -n MyStaticAppName
   parameters:
   - isRequired: true
     name: --name -n
@@ -39,12 +30,9 @@ items:
   name: az staticwebapp environment list
   summary: List all environment of the static app including production.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List static app environment.
-    syntax:
-      content: az staticwebapp environment list -n MyStaticAppName
+    syntax: az staticwebapp environment list -n MyStaticAppName
   parameters:
   - isRequired: true
     name: --name -n
@@ -60,12 +48,9 @@ items:
   name: az staticwebapp environment show
   summary: Show information about the production environment or the specified environment.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show a static app environment.
-    syntax:
-      content: az staticwebapp environment show -n MyStaticAppName
+    syntax: az staticwebapp environment show -n MyStaticAppName
   parameters:
   - isRequired: true
     name: --name -n
@@ -82,15 +67,9 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_staticwebapp_environment_functions
-  name: az staticwebapp environment functions
-  summary: Show information about functions.
-- uid: az_staticwebapp_environment_list
-  name: az staticwebapp environment list
-  summary: List all environment of the static app including production.
-- uid: az_staticwebapp_environment_show
-  name: az staticwebapp environment show
-  summary: Show information about the production environment or the specified environment.
+- az_staticwebapp_environment_functions
+- az_staticwebapp_environment_list
+- az_staticwebapp_environment_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -106,4 +85,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage environment of the static app.
+metadata:
+  description: Manage environment of the static app.

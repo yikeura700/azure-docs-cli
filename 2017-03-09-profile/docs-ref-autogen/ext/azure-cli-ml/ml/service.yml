@@ -1,27 +1,13 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: ext_azure-cli-ml_az_ml_service
-  name: az ml service
-  summary: Manage operationalized services.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - ext_azure-cli-ml_az_ml_service_delete
-  - ext_azure-cli-ml_az_ml_service_get_access_token
-  - ext_azure-cli-ml_az_ml_service_get_keys
-  - ext_azure-cli-ml_az_ml_service_get_logs
-  - ext_azure-cli-ml_az_ml_service_list
-  - ext_azure-cli-ml_az_ml_service_regen_key
-  - ext_azure-cli-ml_az_ml_service_run
-  - ext_azure-cli-ml_az_ml_service_show
-  - ext_azure-cli-ml_az_ml_service_update
+### YamlMime:CLIGroup
+uid: ext_azure-cli-ml_az_ml_service
+name: az ml service
+summary: Manage operationalized services.
+description: ''
+directCommands:
 - uid: ext_azure-cli-ml_az_ml_service_delete
   name: az ml service delete
   summary: Delete a service from the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -46,8 +32,6 @@ items:
   name: az ml service get-access-token
   summary: Get a token to issue requests a service.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -72,8 +56,6 @@ items:
   name: az ml service get-keys
   summary: Get keys to issue requests against a service.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -98,8 +80,6 @@ items:
   name: az ml service get-logs
   summary: Get logs for a service.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -131,8 +111,6 @@ items:
   name: az ml service list
   summary: List services in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - name: --compute-type -c
     summary: If provided, will only show services that have the specified compute type. (Options are 'ACI', 'AKS').
@@ -171,8 +149,6 @@ items:
   name: az ml service regen-key
   summary: Regenerate keys for a service.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --key -k
@@ -204,8 +180,6 @@ items:
   name: az ml service run
   summary: Run a service in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -233,8 +207,6 @@ items:
   name: az ml service show
   summary: Show details for a service in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -259,8 +231,6 @@ items:
   name: az ml service update
   summary: Update a service in the workspace.
   description: ''
-  langs:
-  - azurecli
   parameters:
   - isRequired: true
     name: --name -n
@@ -435,33 +405,15 @@ items:
     summary: Verbosity flag.
     description: ''
 commands:
-- uid: ext_azure-cli-ml_az_ml_service_delete
-  name: az ml service delete
-  summary: Delete a service from the workspace.
-- uid: ext_azure-cli-ml_az_ml_service_get_access_token
-  name: az ml service get-access-token
-  summary: Get a token to issue requests a service.
-- uid: ext_azure-cli-ml_az_ml_service_get_keys
-  name: az ml service get-keys
-  summary: Get keys to issue requests against a service.
-- uid: ext_azure-cli-ml_az_ml_service_get_logs
-  name: az ml service get-logs
-  summary: Get logs for a service.
-- uid: ext_azure-cli-ml_az_ml_service_list
-  name: az ml service list
-  summary: List services in the workspace.
-- uid: ext_azure-cli-ml_az_ml_service_regen_key
-  name: az ml service regen-key
-  summary: Regenerate keys for a service.
-- uid: ext_azure-cli-ml_az_ml_service_run
-  name: az ml service run
-  summary: Run a service in the workspace.
-- uid: ext_azure-cli-ml_az_ml_service_show
-  name: az ml service show
-  summary: Show details for a service in the workspace.
-- uid: ext_azure-cli-ml_az_ml_service_update
-  name: az ml service update
-  summary: Update a service in the workspace.
+- ext_azure-cli-ml_az_ml_service_delete
+- ext_azure-cli-ml_az_ml_service_get_access_token
+- ext_azure-cli-ml_az_ml_service_get_keys
+- ext_azure-cli-ml_az_ml_service_get_logs
+- ext_azure-cli-ml_az_ml_service_list
+- ext_azure-cli-ml_az_ml_service_regen_key
+- ext_azure-cli-ml_az_ml_service_run
+- ext_azure-cli-ml_az_ml_service_show
+- ext_azure-cli-ml_az_ml_service_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -477,4 +429,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage operationalized services.
+metadata:
+  description: Manage operationalized services.

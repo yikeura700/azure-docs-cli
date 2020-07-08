@@ -1,29 +1,18 @@
-### YamlMime:AzureCLISDP
-items:
-- uid: az_mariadb_db
-  name: az mariadb db
-  summary: Manage MariaDB databases on a server.
-  description: ''
-  langs:
-  - azurecli
-  children:
-  - az_mariadb_db_create
-  - az_mariadb_db_delete
-  - az_mariadb_db_list
-  - az_mariadb_db_show
+### YamlMime:CLIGroup
+uid: az_mariadb_db
+name: az mariadb db
+summary: Manage MariaDB databases on a server.
+description: ''
+directCommands:
 - uid: az_mariadb_db_create
   name: az mariadb db create
   summary: Create a MariaDB database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Create database 'testdb' in the server 'testsvr' with the default parameters.
-    syntax:
-      content: az mariadb db create -g testgroup -s testsvr -n testdb
+    syntax: az mariadb db create -g testgroup -s testsvr -n testdb
   - summary: Create database 'testdb' in server 'testsvr' with a given character set and collation rules.
-    syntax:
-      content: az mariadb db create -g testgroup -s testsvr -n testdb --charset {valid_charset} --collation {valid_collation}
+    syntax: az mariadb db create -g testgroup -s testsvr -n testdb --charset {valid_charset} --collation {valid_collation}
   parameters:
   - isRequired: true
     name: --name -n
@@ -50,12 +39,9 @@ items:
   name: az mariadb db delete
   summary: Delete a database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Delete database 'testdb' in the server 'testsvr'.
-    syntax:
-      content: az mariadb db delete -g testgroup -s testsvr -n testdb
+    syntax: az mariadb db delete -g testgroup -s testsvr -n testdb
   parameters:
   - isRequired: true
     name: --name -n
@@ -79,12 +65,9 @@ items:
   name: az mariadb db list
   summary: List the databases for a server.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: List databases in the server 'testsvr'.
-    syntax:
-      content: az mariadb db list -g testgroup -s testsvr
+    syntax: az mariadb db list -g testgroup -s testsvr
   parameters:
   - isRequired: true
     name: --resource-group -g
@@ -101,12 +84,9 @@ items:
   name: az mariadb db show
   summary: Show the details of a database.
   description: ''
-  langs:
-  - azurecli
   examples:
   - summary: Show database 'testdb' in the server 'testsvr'.
-    syntax:
-      content: az mariadb db show -g testgroup -s testsvr -n testdb
+    syntax: az mariadb db show -g testgroup -s testsvr -n testdb
   parameters:
   - isRequired: true
     name: --name -n
@@ -124,18 +104,10 @@ items:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
-- uid: az_mariadb_db_create
-  name: az mariadb db create
-  summary: Create a MariaDB database.
-- uid: az_mariadb_db_delete
-  name: az mariadb db delete
-  summary: Delete a database.
-- uid: az_mariadb_db_list
-  name: az mariadb db list
-  summary: List the databases for a server.
-- uid: az_mariadb_db_show
-  name: az mariadb db show
-  summary: Show the details of a database.
+- az_mariadb_db_create
+- az_mariadb_db_delete
+- az_mariadb_db_list
+- az_mariadb_db_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -151,4 +123,5 @@ globalParameters:
   summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
-description: Manage MariaDB databases on a server.
+metadata:
+  description: Manage MariaDB databases on a server.
