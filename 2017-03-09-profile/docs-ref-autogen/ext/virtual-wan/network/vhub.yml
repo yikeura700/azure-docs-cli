@@ -19,14 +19,14 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --vwan
     summary: Name or ID of the virtual WAN.
     description: ''
   - name: --location -l
-    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&lt;location&gt;`.'
+    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -49,7 +49,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: ext_virtual-wan_az_network_vhub_list
   name: az network vhub list
@@ -57,7 +57,7 @@ directCommands:
   description: ''
   parameters:
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: ext_virtual-wan_az_network_vhub_show
   name: az network vhub show
@@ -70,7 +70,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: ext_virtual-wan_az_network_vhub_update
   name: az network vhub update
@@ -83,7 +83,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --address-prefix
     summary: CIDR address prefix for the virtual hub.

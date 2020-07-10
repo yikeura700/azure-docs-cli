@@ -18,7 +18,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
@@ -34,7 +34,7 @@ directCommands:
     syntax: az timeseriesinsights environment list
   parameters:
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: ext_timeseriesinsights_az_timeseriesinsights_environment_show
   name: az timeseriesinsights environment show
@@ -50,7 +50,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --expand
     summary: Setting $expand=status will include the status of the internal services of the environment in the Time Series Insights service.

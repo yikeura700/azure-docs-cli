@@ -149,7 +149,7 @@ directCommands:
     summary: Maximum number of delivery attempts. Must be a number between 1 and 30.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --resource-id
     summary: Fully qualified identifier of the Azure resource.
@@ -227,7 +227,7 @@ directCommands:
     summary: Name of the event subscription.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --resource-id
     summary: Fully qualified identifier of the Azure resource.
@@ -308,13 +308,13 @@ directCommands:
     syntax: az eventgrid event-subscription list --source-resource-id /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/domains/d1 --odata-query "NOT (name eq 'name1')"
   parameters:
   - name: --location -l
-    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&lt;location&gt;`.'
+    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --odata-query
     summary: 'The OData query used for filtering the list results. Filtering is currently allowed on the Name property only. The supported operations include: CONTAINS, eq (for equal), ne (for not equal), AND, OR and NOT.'
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --resource-id
     summary: Fully qualified identifier of the Azure resource.
@@ -385,7 +385,7 @@ directCommands:
     summary: Specify to indicate whether the full endpoint URL should be returned. True if flag present.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --resource-id
     summary: Fully qualified identifier of the Azure resource.
@@ -472,7 +472,7 @@ directCommands:
     summary: A space-separated list of labels to associate with this event subscription.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --resource-id
     summary: Fully qualified identifier of the Azure resource.

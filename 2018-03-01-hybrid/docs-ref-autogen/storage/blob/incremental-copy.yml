@@ -97,7 +97,7 @@ directCommands:
     summary: The blob snapshot for the source storage account.
     description: ''
   - name: --source-uri -u
-    summary: 'A URL of up to 2 KB in length that specifies an Azure page blob. The value should be URL-encoded as it would appear in a request URI. The copy source must be a snapshot and include a valid SAS token or be public. Example: <a href="https://myaccount.blob.core.windows.net/mycontainer/myblob">https://myaccount.blob.core.windows.net/mycontainer/myblob</a>?snapshot=&lt;DateTime&gt;&amp;sastoken.'
+    summary: 'A URL of up to 2 KB in length that specifies an Azure page blob. The value should be URL-encoded as it would appear in a request URI. The copy source must be a snapshot and include a valid SAS token or be public. Example: <a href="https://myaccount.blob.core.windows.net/mycontainer/myblob">https://myaccount.blob.core.windows.net/mycontainer/myblob</a>?snapshot=<DateTime>&sastoken.'
     description: ''
   - name: --destination-if-match
     summary: An ETag value, or the wildcard character (\*). Specify an ETag value for this conditional header to copy the blob only if the specified ETag value matches the ETag value for an existing destination blob. If the ETag for the destination blob does not match the ETag specified for If-Match, the Blob service returns status code 412 (Precondition Failed).

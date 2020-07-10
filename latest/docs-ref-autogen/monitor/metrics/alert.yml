@@ -37,7 +37,7 @@ directCommands:
     name: --condition
     summary: The condition which triggers the rule.
     description: >-
-      Usage:  --condition {avg,min,max,total,count} [NAMESPACE.]METRIC {=,!=,&gt;,&gt;=,&lt;,&lt;=} THRESHOLD
+      Usage:  --condition {avg,min,max,total,count} [NAMESPACE.]METRIC {=,!=,>,>=,<,<=} THRESHOLD
                          [where DIMENSION {includes,excludes} VALUE [or VALUE ...]
                          [and   DIMENSION {includes,excludes} VALUE [or VALUE ...] ...]]
 
@@ -57,7 +57,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --scopes
@@ -120,7 +120,7 @@ directCommands:
     summary: Name of the alert rule.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -140,7 +140,7 @@ directCommands:
     syntax: az monitor metrics alert list --resource-group MyResourceGroup
   parameters:
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -166,7 +166,7 @@ directCommands:
     summary: Name of the alert rule.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -220,7 +220,7 @@ directCommands:
     summary: Name of the alert rule.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -238,7 +238,7 @@ directCommands:
   - name: --add-condition
     summary: Add a condition which triggers the rule.
     description: >-
-      Usage:  --add-condition {avg,min,max,total,count} [NAMESPACE.]METRIC {=,!=,&gt;,&gt;=,&lt;,&lt;=} THRESHOLD
+      Usage:  --add-condition {avg,min,max,total,count} [NAMESPACE.]METRIC {=,!=,>,>=,<,<=} THRESHOLD
                              [where DIMENSION {includes,excludes} VALUE [or VALUE ...]
                              [and   DIMENSION {includes,excludes} VALUE [or VALUE ...] ...]]
 

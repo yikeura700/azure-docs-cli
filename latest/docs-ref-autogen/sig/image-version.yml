@@ -43,7 +43,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --gallery-image-version -e
-    summary: Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. `&lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;`.
+    summary: Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. `<MajorVersion>.<MinorVersion>.<Patch>`.
     description: ''
   - isRequired: true
     name: --gallery-name -r
@@ -51,7 +51,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --data-snapshot-luns
     summary: Logical unit numbers (space-delimited) of data disk snapshots.
@@ -67,7 +67,7 @@ directCommands:
     summary: The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.
     description: ''
   - name: --location -l
-    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&lt;location&gt;`.'
+    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --managed-image
     summary: Image name(if in the same resource group) or resource id.
@@ -89,10 +89,10 @@ directCommands:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
   - name: --target-region-encryption
-    summary: 'Space-separated list of customer managed keys for encrypting the OS and data disks in the gallery artifact for each region. Format for each region: `&lt;os_des&gt;,&lt;lun1&gt;,&lt;lun1_des&gt;,&lt;lun2&gt;,&lt;lun2_des&gt;`. Use "null" as a placeholder.'
+    summary: 'Space-separated list of customer managed keys for encrypting the OS and data disks in the gallery artifact for each region. Format for each region: `<os_des>,<lun1>,<lun1_des>,<lun2>,<lun2_des>`. Use "null" as a placeholder.'
     description: ''
   - name: --target-regions
-    summary: Space-separated list of regions and their replica counts. Use `&lt;region&gt;[=&lt;replica count&gt;][=&lt;storage account type&gt;]` to optionally set the replica count and/or storage account type for each region. If a replica count is not specified, the default replica count will be used. If a storage account type is not specified, the default storage account type will be used.
+    summary: Space-separated list of regions and their replica counts. Use `<region>[=<replica count>][=<storage account type>]` to optionally set the replica count and/or storage account type for each region. If a replica count is not specified, the default replica count will be used. If a storage account type is not specified, the default storage account type will be used.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -116,7 +116,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -136,7 +136,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -160,7 +160,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --expand
     summary: The expand expression to apply on the operation, e.g. 'ReplicationStatus'.
@@ -192,7 +192,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -201,7 +201,7 @@ directCommands:
     summary: The default number of replicas to be created per region. To set regional replication counts, use --target-regions.
     description: ''
   - name: --target-regions
-    summary: Space-separated list of regions and their replica counts. Use `&lt;region&gt;[=&lt;replica count&gt;][=&lt;storage account type&gt;]` to optionally set the replica count and/or storage account type for each region. If a replica count is not specified, the default replica count will be used. If a storage account type is not specified, the default storage account type will be used.
+    summary: Space-separated list of regions and their replica counts. Use `<region>[=<replica count>][=<storage account type>]` to optionally set the replica count and/or storage account type for each region. If a replica count is not specified, the default replica count will be used. If a storage account type is not specified, the default storage account type will be used.
     description: ''
   - name: --add
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
@@ -240,7 +240,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --expand
     summary: The expand expression to apply on the operation.

@@ -18,11 +18,11 @@ directCommands:
     description: ''
   - isRequired: true
     name: --location -l
-    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&lt;location&gt;`.'
+    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --active-directories
     summary: Active Directories.
@@ -44,7 +44,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: ext_netappfiles-preview_az_netappfiles_account_list
   name: az netappfiles account list
@@ -56,7 +56,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: ext_netappfiles-preview_az_netappfiles_account_set
   name: az netappfiles account set
@@ -74,11 +74,11 @@ directCommands:
     description: ''
   - isRequired: true
     name: --location -l
-    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&lt;location&gt;`.'
+    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --active-directories
     summary: An array of active directory (AD) settings in json format. Limitation one AD/subscription. Consists of the fields username (Username of Active Directory domain administrator), password (Plain text password of Active Directory domain administrator), domain (Name of the Active Directory domain), dns (Comma separated list of DNS server IP addresses for the Active Directory domain), smb_server_name (NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes. Must be 10 characters or less), organizational_unit (The Organizational Unit (OU) within the Windows Active Directory).
@@ -100,7 +100,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: ext_netappfiles-preview_az_netappfiles_account_update
   name: az netappfiles account update
@@ -116,11 +116,11 @@ directCommands:
     description: ''
   - isRequired: true
     name: --location -l
-    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&lt;location&gt;`.'
+    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --active-directories
     summary: An array of active directory (AD) settings in json format. Limitation one AD/subscription. Consists of the fields username (Username of Active Directory domain administrator), password (Plain text password of Active Directory domain administrator), domain (Name of the Active Directory domain), dns (Comma separated list of DNS server IP addresses for the Active Directory domain), smb_server_name (NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes. Must be 10 characters or less), organizational_unit (The Organizational Unit (OU) within the Windows Active Directory).

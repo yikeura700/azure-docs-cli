@@ -29,7 +29,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --vm-name
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --caching
     parameterValueGroup: None, ReadOnly, ReadWrite
@@ -59,7 +59,7 @@ directCommands:
     summary: The name or ID of the managed disk.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -84,11 +84,11 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --vm-name
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.

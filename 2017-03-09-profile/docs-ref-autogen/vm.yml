@@ -18,7 +18,7 @@ directCommands:
     summary: The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
     description: ''
   - name: --location -l
-    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&lt;location&gt;`.'
+    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --off
     summary: Turn off auto-shutdown for VM. Configuration will be cleared.
@@ -33,10 +33,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -85,10 +85,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -154,7 +154,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --availability-set
     summary: Name or ID of an existing availability set to add the VM to. None by default.
@@ -294,7 +294,7 @@ directCommands:
     summary: Attach an existing OS disk to the VM. Can use the name or ID of a managed disk or the URI to an unmanaged disk VHD.
     description: ''
   - name: --data-disk-caching
-    summary: Storage caching type for data disk(s), including 'None', 'ReadOnly', 'ReadWrite', etc. Use a singular value to apply on all disks, or use `&lt;lun&gt;=&lt;vaule1&gt; &lt;lun&gt;=&lt;value2&gt;` to configure individual disk.
+    summary: Storage caching type for data disk(s), including 'None', 'ReadOnly', 'ReadWrite', etc. Use a singular value to apply on all disks, or use `<lun>=<vaule1> <lun>=<value2>` to configure individual disk.
     description: ''
   - name: --data-disk-sizes-gb
     summary: Space-separated empty managed data disk sizes in GB to create.
@@ -369,10 +369,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -403,10 +403,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -446,10 +446,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -474,10 +474,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -501,7 +501,7 @@ directCommands:
     syntax: az vm list -g MyResourceGroup -d
   parameters:
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --show-details -d
     summary: Show public ip address, FQDN, and power states. command will run slow.
@@ -529,10 +529,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -553,7 +553,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --location -l
-    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&lt;location&gt;`.'
+    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -574,7 +574,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --location -l
-    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&lt;location&gt;`.'
+    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -599,10 +599,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -646,7 +646,7 @@ directCommands:
     summary: The name of the virtual machine to open inbound traffic on.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -674,10 +674,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -710,10 +710,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -744,10 +744,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -775,10 +775,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -808,10 +808,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -841,10 +841,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -885,10 +885,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -928,10 +928,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.

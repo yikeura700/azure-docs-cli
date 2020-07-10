@@ -122,13 +122,13 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --vm-name
-    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&lt;name&gt;`.
+    summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   source:
     path: src/azure-cli/azure/cli/command_modules/vm/_help.py

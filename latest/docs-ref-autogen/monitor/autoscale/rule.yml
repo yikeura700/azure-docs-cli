@@ -23,7 +23,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --source-schedule
     defaultValue: default
@@ -65,7 +65,7 @@ directCommands:
   - isRequired: true
     name: --condition
     summary: The condition which triggers the scaling action.
-    description: The form of a condition is "METRIC {==,!=,&gt;,&gt;=,&lt;,&lt;=} THRESHOLD {avg,min,max,total,count} PERIOD". Values for METRIC and appropriate THRESHOLD values can be obtained from the `az monitor metric` command. Format of PERIOD is "##h##m##s".
+    description: The form of a condition is "METRIC {==,!=,>,>=,<,<=} THRESHOLD {avg,min,max,total,count} PERIOD". Values for METRIC and appropriate THRESHOLD values can be obtained from the `az monitor metric` command. Format of PERIOD is "##h##m##s".
   - isRequired: true
     name: --scale
     summary: The direction and amount to scale.
@@ -93,7 +93,7 @@ directCommands:
     summary: Name or ID of the target resource.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --resource-namespace
     summary: Target resource provider namespace.
@@ -128,7 +128,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --profile-name
     defaultValue: default
@@ -157,7 +157,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --profile-name
     defaultValue: default

@@ -45,7 +45,7 @@ directCommands:
     summary: Quality of Service. 0 = At most once, 1 = At least once. 2 (Exactly once) is not supported.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: ext_azure-iot_az_iot_device_simulate
   name: az iot device simulate
@@ -118,7 +118,7 @@ directCommands:
     summary: Indicates how to settle received cloud-to-device messages. Supported with HTTP only.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: ext_azure-iot_az_iot_device_upload_file
   name: az iot device upload-file
@@ -144,7 +144,7 @@ directCommands:
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 commands:
 - ext_azure-iot_az_iot_device_c2d_message

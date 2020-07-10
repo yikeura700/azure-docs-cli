@@ -24,11 +24,11 @@ directCommands:
     description: ''
   - isRequired: true
     name: --name -n
-    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&lt;name&gt;`.
+    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=<name>`.
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --assign-identity -i
     summary: Generate and assign an Azure Active Directory Identity for this serverfor use with key management services like Azure KeyVault.
@@ -38,7 +38,7 @@ directCommands:
     summary: Set whether public network access to server is allowed or not. When false,only connections made through Private Links can reach this server.
     description: ''
   - name: --location -l
-    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&lt;location&gt;`.'
+    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --minimal-tls-version
     parameterValueGroup: 1.0, 1.1, 1.2
@@ -68,10 +68,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&lt;name&gt;`.
+    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -93,7 +93,7 @@ directCommands:
     syntax: az sql server list -g mygroup
   parameters:
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -113,10 +113,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&lt;name&gt;`.
+    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -136,10 +136,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&lt;name&gt;`.
+    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -179,10 +179,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&lt;name&gt;`.
+    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -214,10 +214,10 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=&lt;name&gt;`.
+    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=<name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.

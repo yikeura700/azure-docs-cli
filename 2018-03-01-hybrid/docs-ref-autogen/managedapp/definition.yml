@@ -22,7 +22,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --authorizations -a
-    summary: Space-separated authorization pairs in a format of `&lt;principalId&gt;:&lt;roleDefinitionId&gt;`.
+    summary: Space-separated authorization pairs in a format of `<principalId>:<roleDefinitionId>`.
     description: ''
   - isRequired: true
     name: --description
@@ -49,7 +49,7 @@ directCommands:
     summary: The managed application definition create ui definition.
     description: ''
   - name: --location -l
-    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&lt;location&gt;`.'
+    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --main-template
     summary: The managed application definition main template.

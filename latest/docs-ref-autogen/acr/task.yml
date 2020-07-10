@@ -14,14 +14,14 @@ directCommands:
   parameters:
   - isRequired: true
     name: --registry -r
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - isRequired: true
     name: --run-id
     summary: The unique run identifier.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -82,7 +82,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --registry -r
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --agent-pool
     summary: The name of the agent pool.
@@ -122,7 +122,7 @@ directCommands:
     summary: The platform where build/task is run, Eg, 'windows' and 'linux'. When it's used in build commands, it also can be specified in 'os/arch/variant' format for the resulting image. Eg, linux/arm/v7. The 'arch' and 'variant' parts are optional.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --secret-arg
     summary: Secret build argument in '--secret-arg name[=value]' format. Multiples supported by passing --secret-arg multiple times.
@@ -212,10 +212,10 @@ directCommands:
     description: ''
   - isRequired: true
     name: --registry -r
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
@@ -239,10 +239,10 @@ directCommands:
   parameters:
   - isRequired: true
     name: --registry -r
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -269,7 +269,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --registry -r
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --image -t
     summary: The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.
@@ -278,7 +278,7 @@ directCommands:
     summary: The name of the task.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --run-status
     parameterValueGroup: Canceled, Error, Failed, Queued, Running, Started, Succeeded, Timeout
@@ -313,7 +313,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --registry -r
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --image -t
     summary: The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.
@@ -322,7 +322,7 @@ directCommands:
     summary: The name of the task.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --run-id
     summary: The unique run identifier.
@@ -356,7 +356,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --registry -r
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --agent-pool
     summary: The name of the agent pool.
@@ -377,7 +377,7 @@ directCommands:
     summary: Do not wait for the run to complete and return immediately after queuing the run.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --secret-arg
     summary: Secret build argument in '--secret-arg name[=value]' format. Multiples supported by passing --secret-arg multiple times.
@@ -419,10 +419,10 @@ directCommands:
     description: ''
   - isRequired: true
     name: --registry -r
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --with-secure-properties
     summary: Indicates whether the secure properties of a task should be returned.
@@ -446,14 +446,14 @@ directCommands:
   parameters:
   - isRequired: true
     name: --registry -r
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - isRequired: true
     name: --run-id
     summary: The unique run identifier.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -489,7 +489,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --registry -r
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --agent-pool
     summary: The name of the agent pool.
@@ -525,7 +525,7 @@ directCommands:
     summary: The platform where build/task is run, Eg, 'windows' and 'linux'. When it's used in build commands, it also can be specified in 'os/arch/variant' format for the resulting image. Eg, linux/arm/v7. The 'arch' and 'variant' parts are optional.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --secret-arg
     summary: Secret build argument in '--secret-arg name[=value]' format. Multiples supported by passing --secret-arg multiple times.
@@ -594,7 +594,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --registry -r
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - isRequired: true
     name: --run-id
@@ -605,7 +605,7 @@ directCommands:
     summary: Indicates whether the run should be archived.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.

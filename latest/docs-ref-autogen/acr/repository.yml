@@ -18,7 +18,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --name -n
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --image -t
     summary: The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.
@@ -30,7 +30,7 @@ directCommands:
     summary: The name of the repository.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --suffix
     summary: The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource.
@@ -60,13 +60,13 @@ directCommands:
   parameters:
   - isRequired: true
     name: --name -n
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --password -p
     summary: The password used to log into a container registry.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --suffix
     summary: The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource.
@@ -100,7 +100,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --name -n
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --image -t
     summary: The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'.
@@ -112,7 +112,7 @@ directCommands:
     summary: The name of the repository.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --suffix
     summary: The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource.
@@ -143,7 +143,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --name -n
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - isRequired: true
     name: --repository
@@ -160,7 +160,7 @@ directCommands:
     summary: The password used to log into a container registry.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --suffix
     summary: The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource.
@@ -194,7 +194,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --name -n
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - isRequired: true
     name: --repository
@@ -211,7 +211,7 @@ directCommands:
     summary: The password used to log into a container registry.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --suffix
     summary: The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource.
@@ -245,13 +245,13 @@ directCommands:
     description: ''
   - isRequired: true
     name: --name -n
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --password -p
     summary: The password used to log into a container registry.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --suffix
     summary: The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource.
@@ -282,7 +282,7 @@ directCommands:
   parameters:
   - isRequired: true
     name: --name -n
-    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&lt;registry name&gt;`.
+    summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   - name: --delete-enabled
     parameterValueGroup: false, true
@@ -306,7 +306,7 @@ directCommands:
     summary: The name of the repository.
     description: ''
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --suffix
     summary: The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource.

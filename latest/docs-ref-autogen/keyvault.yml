@@ -28,7 +28,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --enable-purge-protection
     parameterValueGroup: false, true
@@ -55,7 +55,7 @@ directCommands:
     summary: Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
     description: ''
   - name: --location -l
-    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&lt;location&gt;`.'
+    summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --no-self-perms
     parameterValueGroup: false, true
@@ -82,7 +82,7 @@ directCommands:
     summary: Default action to apply when no rule matches.
     description: ''
   - name: --network-acls
-    summary: 'Network ACLs. It accepts a JSON filename or a JSON string. JSON format: `{"ip":[&lt;ip1&gt;, &lt;ip2&gt;...],"vnet":[&lt;vnet_name_1&gt;/&lt;subnet_name_1&gt;,&lt;subnet_id2&gt;...]}`.'
+    summary: 'Network ACLs. It accepts a JSON filename or a JSON string. JSON format: `{"ip":[<ip1>, <ip2>...],"vnet":[<vnet_name_1>/<subnet_name_1>,<subnet_id2>...]}`.'
     description: ''
   - name: --network-acls-ips
     summary: Network ACLs IP rules. Space-separated list of IP addresses.
@@ -159,7 +159,7 @@ directCommands:
   description: ''
   parameters:
   - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=&lt;name&gt;`.
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.

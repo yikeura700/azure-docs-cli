@@ -19,13 +19,13 @@ directCommands:
     summary: Support star sign as filters, for instance \* means all key and abc\* means keys with abc as prefix.
     description: ''
   - name: --connection-string
-    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&lt;connection_string&gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
+    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
   - name: --label
     summary: If no label specified, delete entry with null label. Support star sign as filters, for instance \* means all label and abc\* means labels with abc as prefix.
     description: ''
   - name: --name -n
-    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&lt;name&gt;`.
+    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
@@ -61,7 +61,7 @@ directCommands:
     summary: The destination of exporting. Note that exporting feature flags to appservice is not supported.
     description: ''
   - name: --connection-string
-    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&lt;connection_string&gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
+    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
   - name: --key
     summary: If no key specified, return all keys by default. Support star sign as filters, for instance abc\* means keys with abc as prefix. Key filtering not applicable for feature flags. By default, all feature flags with specified label will be exported.
@@ -70,7 +70,7 @@ directCommands:
     summary: Only keys and feature flags with this label will be exported. If no label specified, export keys and feature flags with null label by default. Only when export destination is appconfig, we support star sign as filters, for instance \* means all labels and abc\* means labels with abc as prefix. Label filters are not supported when exporting to file or appservice.
     description: ''
   - name: --name -n
-    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&lt;name&gt;`.
+    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --prefix
     summary: Prefix to be trimmed from keys. Prefix will be ignored for feature flags.
@@ -152,7 +152,7 @@ directCommands:
     summary: The source of importing. Note that importing feature flags from appservice is not supported.
     description: ''
   - name: --connection-string
-    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&lt;connection_string&gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
+    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
   - name: --content-type
     summary: Content type of all imported items.
@@ -161,7 +161,7 @@ directCommands:
     summary: Imported KVs and feature flags will be assigned with this label. If no label specified, will assign null label.
     description: ''
   - name: --name -n
-    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&lt;name&gt;`.
+    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --prefix
     summary: This prefix will be appended to the front of imported keys. Prefix will be ignored for feature flags.
@@ -234,7 +234,7 @@ directCommands:
     summary: List all items.
     description: ''
   - name: --connection-string
-    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&lt;connection_string&gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
+    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
   - name: --datetime
     summary: 'Format: "YYYY-MM-DDThh:mm:ssZ". If no time zone specified, use UTC by default.'
@@ -250,7 +250,7 @@ directCommands:
     summary: If no label specified, list all labels. Support star sign as filters, for instance abc\* means labels with abc as prefix. Use '0' for null label.
     description: ''
   - name: --name -n
-    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&lt;name&gt;`.
+    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --resolve-keyvault
     parameterValueGroup: false, true
@@ -283,13 +283,13 @@ directCommands:
     summary: Key to be locked.
     description: ''
   - name: --connection-string
-    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&lt;connection_string&gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
+    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
   - name: --label
     summary: If no label specified, lock entry with null label. Filtering is not supported.
     description: ''
   - name: --name -n
-    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&lt;name&gt;`.
+    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
@@ -318,7 +318,7 @@ directCommands:
     summary: 'Format: "YYYY-MM-DDThh:mm:ssZ". If no time zone specified, use UTC by default.'
     description: ''
   - name: --connection-string
-    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&lt;connection_string&gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
+    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
   - name: --key
     summary: If no key specified, restore all keys by default. Support star sign as filters, for instance abc\* means keys with abc as prefix.
@@ -327,7 +327,7 @@ directCommands:
     summary: If no label specified, restore all key-value pairs with all labels. Support star sign as filters, for instance abc\* means labels with abc as prefix.
     description: ''
   - name: --name -n
-    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&lt;name&gt;`.
+    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
@@ -356,7 +356,7 @@ directCommands:
     summary: Key to be set. Key cannot be a '.' or '..', or contain the '%' character.
     description: ''
   - name: --connection-string
-    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&lt;connection_string&gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
+    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
   - name: --content-type
     summary: Content type of the keyvalue to be set.
@@ -365,7 +365,7 @@ directCommands:
     summary: If no label specified, set the key with null label by default.
     description: ''
   - name: --name -n
-    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&lt;name&gt;`.
+    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
@@ -404,13 +404,13 @@ directCommands:
     summary: ID of the Key Vault object. Can be found using 'az keyvault {collection} show' command, where collection is key, secret or certificate. To set reference to the latest version of your secret, remove version information from secret identifier.
     description: ''
   - name: --connection-string
-    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&lt;connection_string&gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
+    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
   - name: --label
     summary: If no label specified, set the key with null label by default.
     description: ''
   - name: --name -n
-    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&lt;name&gt;`.
+    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
@@ -442,7 +442,7 @@ directCommands:
     summary: Key to be showed.
     description: ''
   - name: --connection-string
-    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&lt;connection_string&gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
+    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
   - name: --datetime
     summary: 'Format: "YYYY-MM-DDThh:mm:ssZ". If no time zone specified, use UTC by default.'
@@ -451,7 +451,7 @@ directCommands:
     summary: If no label specified, show entry with null label. Filtering is not supported.
     description: ''
   - name: --name -n
-    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&lt;name&gt;`.
+    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -477,13 +477,13 @@ directCommands:
     summary: Key to be unlocked.
     description: ''
   - name: --connection-string
-    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&lt;connection_string&gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
+    summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
   - name: --label
     summary: If no label specified, unlock entry with null label. Filtering is not supported.
     description: ''
   - name: --name -n
-    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&lt;name&gt;`.
+    summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
