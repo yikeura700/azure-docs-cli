@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_eventgrid_az_eventgrid_partner_topic_event_subscription
 name: az eventgrid partner topic event-subscription
 summary: Manage event subscriptions of partner topic.
@@ -8,6 +8,27 @@ directCommands:
   name: az eventgrid partner topic event-subscription create
   summary: Create a new event subscription for a partner topic.
   description: ''
+  syntax: >-
+    az eventgrid partner topic event-subscription create --name
+                                                         --partner-topic-name
+                                                         --resource-group
+                                                         [--advanced-filter]
+                                                         [--azure-active-directory-application-id-or-uri]
+                                                         [--azure-active-directory-tenant-id]
+                                                         [--deadletter-endpoint]
+                                                         [--endpoint]
+                                                         [--endpoint-type {azurefunction, eventhub, hybridconnection, servicebusqueue, servicebustopic, storagequeue, webhook}]
+                                                         [--event-delivery-schema {cloudeventschemav1_0, custominputschema, eventgridschema}]
+                                                         [--event-ttl]
+                                                         [--expiration-date]
+                                                         [--included-event-types]
+                                                         [--labels]
+                                                         [--max-delivery-attempts]
+                                                         [--max-events-per-batch]
+                                                         [--preferred-batch-size-in-kilobytes]
+                                                         [--subject-begins-with]
+                                                         [--subject-case-sensitive {false, true}]
+                                                         [--subject-ends-with]
   examples:
   - summary: Create a new event subscription for an Event Grid partner topic, using default filters.
     syntax: >-
@@ -45,7 +66,7 @@ directCommands:
       az eventgrid partner topic event-subscription create -n es1 \
           -g rg1 --partner-topic-name partnertopic1 \
           --endpoint /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.Web/sites/{functionappname}/functions/{functionname} --endpoint-type azurefunction
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the event subscription.
@@ -58,6 +79,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --advanced-filter
     summary: An advanced filter enables filtering of events based on a specific event property.
     description: >-
@@ -146,12 +168,16 @@ directCommands:
   name: az eventgrid partner topic event-subscription delete
   summary: Delete an event subscription of a partner topic.
   description: ''
+  syntax: >-
+    az eventgrid partner topic event-subscription delete --name
+                                                         --partner-topic-name
+                                                         --resource-group
   examples:
   - summary: Delete an event subscription for an Event Grid partner topic.
     syntax: >-
       az eventgrid partner topic event-subscription delete --name es1 \
           -g rg1 --partner-topic-name partnertopic1 \
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the event subscription.
@@ -168,10 +194,14 @@ directCommands:
   name: az eventgrid partner topic event-subscription list
   summary: List event subscriptions of a specific partner topic.
   description: ''
+  syntax: >-
+    az eventgrid partner topic event-subscription list --partner-topic-name
+                                                       --resource-group
+                                                       [--odata-query]
   examples:
   - summary: List all event subscriptions created for an Event Grid partner topic.
     syntax: az eventgrid partner topic event-subscription list -g rg1 --partner-topic-name partnertopic1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --partner-topic-name
     summary: Name of the partner topic.
@@ -180,6 +210,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --odata-query
     summary: The query used to filter the results using OData syntax.
     description: ''
@@ -187,12 +218,17 @@ directCommands:
   name: az eventgrid partner topic event-subscription show
   summary: Get the details of an event subscription of a partner topic.
   description: ''
+  syntax: >-
+    az eventgrid partner topic event-subscription show --name
+                                                       --partner-topic-name
+                                                       --resource-group
+                                                       [--include-full-endpoint-url {false, true}]
   examples:
   - summary: Show the details of an event subscription for an Event Grid partner topic.
     syntax: >-
       az eventgrid partner topic event-subscription show --name es1 \
            -g rg1 --partner-topic-name partnertopic1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the event subscription.
@@ -205,6 +241,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --include-full-endpoint-url
     parameterValueGroup: false, true
     summary: Specify to indicate whether the full endpoint URL should be returned. True if flag present.
@@ -213,6 +250,18 @@ directCommands:
   name: az eventgrid partner topic event-subscription update
   summary: Update an event subscription of a partner topic.
   description: ''
+  syntax: >-
+    az eventgrid partner topic event-subscription update --name
+                                                         --partner-topic-name
+                                                         --resource-group
+                                                         [--advanced-filter]
+                                                         [--deadletter-endpoint]
+                                                         [--endpoint]
+                                                         [--endpoint-type {azurefunction, eventhub, hybridconnection, servicebusqueue, servicebustopic, storagequeue, webhook}]
+                                                         [--included-event-types]
+                                                         [--labels]
+                                                         [--subject-begins-with]
+                                                         [--subject-ends-with]
   examples:
   - summary: Update an event subscription for an Event Grid partner topic to specify a new endpoint.
     syntax: >-
@@ -242,7 +291,7 @@ directCommands:
           --endpoint https://contoso.azurewebsites.net/api/f1?code=code
           --advanced-filter data.blobType StringIn BlockBlob
           --advanced-filter data.url StringBeginsWith https://myaccount.blob.core.windows.net
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the event subscription.
@@ -255,6 +304,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --advanced-filter
     summary: An advanced filter enables filtering of events based on a specific event property.
     description: >-

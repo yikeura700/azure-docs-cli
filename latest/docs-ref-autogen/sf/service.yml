@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_sf_service
 name: az sf service
 summary: Manage services running on an Azure Service Fabric cluster.
@@ -8,6 +8,19 @@ directCommands:
   name: az sf service create
   summary: Create a new service on an Azure Service Fabric cluster.
   description: ''
+  syntax: >-
+    az sf service create --application
+                         --cluster-name
+                         --name
+                         --resource-group
+                         --service-type
+                         --state {stateful, stateless}
+                         [--default-move-cost {High, Low, Medium, Zero}]
+                         [--instance-count]
+                         [--min-replica-set-size]
+                         [--partition-scheme {named, singleton, uniformInt64}]
+                         [--subscription]
+                         [--target-replica-set-size]
   examples:
   - summary: Create a new stateless service "testApp~testService1" with instance count -1 (on all the nodes).
     syntax: >-
@@ -17,7 +30,7 @@ directCommands:
     syntax: >-
       az sf service create -g testRG -c testCluster --application-name testApp --state stateful --service-name testApp~testService2 \
         --service-type testStatefulType --min-replica-set-size 3 --target-replica-set-size 5
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --application --application-name
     summary: 'Specify the name of the service. The application name must be a prefix of the service name, for example: appName~serviceName.'
@@ -43,6 +56,7 @@ directCommands:
     parameterValueGroup: stateful, stateless
     summary: Specify if the service is stateless or stateful.
     description: ''
+  optionalParameters:
   - name: --default-move-cost
     parameterValueGroup: High, Low, Medium, Zero
     summary: Specify the default cost for a move. Higher costs make it less likely that the Cluster Resource Manager will move the replica when trying to balance the cluster.
@@ -58,20 +72,26 @@ directCommands:
     parameterValueGroup: named, singleton, uniformInt64
     summary: Specify what partition scheme to use. Singleton partitions are typically used when the service does not require any additional routing. UniformInt64 means that each partition owns a range of int64 keys. Named is usually for services with data that can be bucketed, within a bounded set. Some common examples of data fields used as named partition keys would be regions, postal codes, customer groups, or other business boundaries.
     description: ''
-  - name: --target-replica-set-size
-    summary: Specify the target replica set size for the stateful service.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --target-replica-set-size
+    summary: Specify the target replica set size for the stateful service.
     description: ''
 - uid: az_sf_service_delete
   name: az sf service delete
   summary: Delete a service.
   description: ''
+  syntax: >-
+    az sf service delete --application-name
+                         --cluster-name
+                         --name
+                         --resource-group
+                         [--subscription]
   examples:
   - summary: Delete service.
     syntax: az sf service delete -g testRG -c testCluster --application-name testApp --service-name testApp~testService
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --application-name
     summary: The name of the application resource.
@@ -88,6 +108,7 @@ directCommands:
     name: --resource-group -g
     summary: Specify the resource group name. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
@@ -95,10 +116,15 @@ directCommands:
   name: az sf service list
   summary: List services of a given application.
   description: ''
+  syntax: >-
+    az sf service list --application-name
+                       --cluster-name
+                       --resource-group
+                       [--subscription]
   examples:
   - summary: List services.
     syntax: az sf service list -g testRG -c testCluster --application-name testApp
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --application-name
     summary: The name of the application resource.
@@ -111,6 +137,7 @@ directCommands:
     name: --resource-group -g
     summary: Specify the resource group name. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
@@ -118,10 +145,16 @@ directCommands:
   name: az sf service show
   summary: Get a service.
   description: ''
+  syntax: >-
+    az sf service show --application-name
+                       --cluster-name
+                       --name
+                       --resource-group
+                       [--subscription]
   examples:
   - summary: Show the properties of a service on an Azure Service Fabric cluster.
     syntax: az sf service show -g testRG -c testCluster --application-name testApp --service-name testApp~testService
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --application-name
     summary: The name of the application resource.
@@ -138,6 +171,7 @@ directCommands:
     name: --resource-group -g
     summary: Specify the resource group name. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''

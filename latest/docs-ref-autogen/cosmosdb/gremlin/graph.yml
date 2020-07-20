@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_cosmosdb_gremlin_graph
 name: az cosmosdb gremlin graph
 summary: Manage Azure Cosmos DB Gremlin graphs.
@@ -8,10 +8,21 @@ directCommands:
   name: az cosmosdb gremlin graph create
   summary: Create an Gremlin graph under an Azure Cosmos DB Gremlin database.
   description: ''
+  syntax: >-
+    az cosmosdb gremlin graph create --account-name
+                                     --database-name
+                                     --name
+                                     --partition-key-path
+                                     --resource-group
+                                     [--conflict-resolution-policy]
+                                     [--idx]
+                                     [--subscription]
+                                     [--throughput]
+                                     [--ttl]
   examples:
   - summary: Create an Azure Cosmos DB Gremlin graph.
     syntax: az cosmosdb gremlin graph create -g MyResourceGroup -a MyAccount -d MyDatabase -n MyGraph --partition-key-path "/my/path" --idx @policy-file.json --ttl 1000 --throughput "700"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -32,6 +43,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --conflict-resolution-policy -c
     summary: 'Conflict Resolution Policy, you can enter it as a string or as a file, e.g., --conflict-resolution-policy @policy-file.json or --conflict-resolution-policy "{"mode": "lastWriterWins", "conflictResolutionPath": "/path"}".'
     description: ''
@@ -53,26 +65,28 @@ directCommands:
       }
     summary: 'Indexing Policy, you can enter it as a string or as a file, e.g., --idx @policy-file.json or --idx "{"indexingMode": "consistent", "automatic": true, "includedPaths": [{"path": "/\*"}], "excludedPaths": [{ "path": "/headquarters/employees/?"}, { "path": "/\"_etag\"/?"}]}".'
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --throughput
     summary: The throughput of Gremlin graph (RU/s). Default value is 400. Omit this parameter if the database has shared throughput unless the graph should have dedicated throughput.
     description: ''
   - name: --ttl
     summary: Default TTL. If the value is missing or set to "-1", items don’t expire. If the value is set to "n", items will expire "n" seconds after last modified time.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_gremlin_graph_delete
   name: az cosmosdb gremlin graph delete
   summary: Delete the Gremlin graph under an Azure Cosmos DB Gremlin database.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb gremlin graph delete --account-name
+                                     --database-name
+                                     --name
+                                     --resource-group
+                                     [--subscription]
+                                     [--yes]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -88,24 +102,26 @@ directCommands:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  optionalParameters:
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_gremlin_graph_exists
   name: az cosmosdb gremlin graph exists
   summary: Checks if an Azure Cosmos DB Gremlin graph exists.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb gremlin graph exists --account-name
+                                     --database-name
+                                     --name
+                                     --resource-group
+                                     [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -122,20 +138,21 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_gremlin_graph_list
   name: az cosmosdb gremlin graph list
   summary: List the Gremlin graphs under an Azure Cosmos DB Gremlin database.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb gremlin graph list --account-name
+                                   --database-name
+                                   --resource-group
+                                   [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -148,20 +165,22 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_gremlin_graph_show
   name: az cosmosdb gremlin graph show
   summary: Show the details of a Gremlin graph under an Azure Cosmos DB Gremlin database.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb gremlin graph show --account-name
+                                   --database-name
+                                   --name
+                                   --resource-group
+                                   [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -178,20 +197,24 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_gremlin_graph_update
   name: az cosmosdb gremlin graph update
   summary: Update an Gremlin graph under an Azure Cosmos DB Gremlin database.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb gremlin graph update --account-name
+                                     --database-name
+                                     --name
+                                     --resource-group
+                                     [--idx]
+                                     [--subscription]
+                                     [--ttl]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -208,21 +231,17 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --idx
     summary: 'Indexing Policy, you can enter it as a string or as a file, e.g., --idx @policy-file.json or --idx "{"indexingMode": "consistent", "automatic": true, "includedPaths": [{"path": "/\*"}], "excludedPaths": [{ "path": "/headquarters/employees/?"}, { "path": "/\"_etag\"/?"}]}".'
-    description: ''
-  - name: --ttl
-    summary: Default TTL. If the value is missing or set to "-1", items don’t expire. If the value is set to "n", items will expire "n" seconds after last modified time.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --ttl
+    summary: Default TTL. If the value is missing or set to "-1", items don’t expire. If the value is set to "n", items will expire "n" seconds after last modified time.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 commands:
 - az_cosmosdb_gremlin_graph_create
 - az_cosmosdb_gremlin_graph_delete
@@ -249,6 +268,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/1a803c49df1c2a27dfcdc079168f3bc2baf02c81/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   updated_at: 4/17/2020 2:16:59 AM

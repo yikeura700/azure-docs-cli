@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_timeseriesinsights_az_timeseriesinsights_event_source
 name: az timeseriesinsights event-source
 summary: Commands to manage timeseriesinsights event source.
@@ -8,10 +8,15 @@ directCommands:
   name: az timeseriesinsights event-source delete
   summary: Delete the event source with the specified name in the specified subscription, resource group, and environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights event-source delete --environment-name
+                                              --name
+                                              --resource-group
+                                              [--yes]
   examples:
   - summary: Delete event-source
     syntax: az timeseriesinsights event-source delete -g {rg} --environment-name {env} -n es1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.
@@ -24,6 +29,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -31,10 +37,13 @@ directCommands:
   name: az timeseriesinsights event-source list
   summary: List all the available event sources associated with the subscription and within the specified resource group and environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights event-source list --environment-name
+                                            --resource-group
   examples:
   - summary: List event-source by environment
     syntax: az timeseriesinsights event-source list -g {rg} --environment-name {env}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.
@@ -47,10 +56,14 @@ directCommands:
   name: az timeseriesinsights event-source show
   summary: Show the event source with the specified name in the specified environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights event-source show --environment-name
+                                            --name
+                                            --resource-group
   examples:
   - summary: Show event-source
     syntax: az timeseriesinsights event-source show -g {rg} --environment-name {env} -n es1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.

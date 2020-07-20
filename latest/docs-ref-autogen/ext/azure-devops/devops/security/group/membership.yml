@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_devops_security_group_membership
 name: az devops security group membership
 summary: Manage memberships for security groups.
@@ -8,7 +8,12 @@ directCommands:
   name: az devops security group membership add
   summary: Add membership.
   description: ''
-  parameters:
+  syntax: >-
+    az devops security group membership add --group-id
+                                            --member-id
+                                            [--detect {false, true}]
+                                            [--org]
+  requiredParameters:
   - isRequired: true
     name: --group-id
     summary: Descriptor of the group to which member needs to be added.
@@ -17,6 +22,7 @@ directCommands:
     name: --member-id
     summary: Descriptor of the group or Email Id of the user to be added. User should already be a part of the organization. Use `az devops user add` command to add an user to organization.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -28,11 +34,17 @@ directCommands:
   name: az devops security group membership list
   summary: List memberships for a group or user.
   description: ''
-  parameters:
+  syntax: >-
+    az devops security group membership list --id
+                                             [--detect {false, true}]
+                                             [--org]
+                                             [--relationship {memberof, members}]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: Group descriptor or User Email whose membership details are required.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -49,7 +61,13 @@ directCommands:
   name: az devops security group membership remove
   summary: Remove membership.
   description: ''
-  parameters:
+  syntax: >-
+    az devops security group membership remove --group-id
+                                               --member-id
+                                               [--detect {false, true}]
+                                               [--org]
+                                               [--yes]
+  requiredParameters:
   - isRequired: true
     name: --group-id
     summary: Descriptor of the group from which member needs to be removed.
@@ -58,6 +76,7 @@ directCommands:
     name: --member-id
     summary: Descriptor of the group or Email Id of the user to be removed.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

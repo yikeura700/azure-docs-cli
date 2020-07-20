@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_sql_db_classification
 name: az sql db classification
 summary: Manage sensitivity classifications.
@@ -8,10 +8,19 @@ directCommands:
   name: az sql db classification delete
   summary: Delete the sensitivity classification of a given column.
   description: ''
+  syntax: >-
+    az sql db classification delete --column
+                                    --schema
+                                    --table
+                                    [--ids]
+                                    [--name]
+                                    [--resource-group]
+                                    [--server]
+                                    [--subscription]
   examples:
   - summary: Delete the sensitivity classification of a given column.
     syntax: az sql db classification delete -g mygroup -s myserver -n mydb --schema dbo --table mytable --column mycolumn
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --column
     summary: The name of the column.
@@ -24,6 +33,7 @@ directCommands:
     name: --table
     summary: The name of the table.
     description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -39,20 +49,22 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_db_classification_list
   name: az sql db classification list
   summary: Get the sensitivity classifications of a given database.
   description: ''
+  syntax: >-
+    az sql db classification list [--filter]
+                                  [--ids]
+                                  [--name]
+                                  [--resource-group]
+                                  [--server]
+                                  [--subscription]
   examples:
   - summary: List the sensitivity classification of a given database.
     syntax: az sql db classification list -g mygroup -s myserver -n mydb
-  parameters:
+  optionalParameters:
   - name: --filter
     summary: An OData filter expression that filters elements in the collection.
     description: ''
@@ -71,20 +83,24 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_db_classification_show
   name: az sql db classification show
   summary: Get the sensitivity classification of a given column.
   description: ''
+  syntax: >-
+    az sql db classification show --column
+                                  --schema
+                                  --table
+                                  [--ids]
+                                  [--name]
+                                  [--resource-group]
+                                  [--server]
+                                  [--subscription]
   examples:
   - summary: Get the sensitivity classification of a given column.
     syntax: az sql db classification show -g mygroup -s myserver -n mydb --schema dbo --table mytable --column mycolumn
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --column
     summary: The name of the column.
@@ -97,6 +113,7 @@ directCommands:
     name: --table
     summary: The name of the table.
     description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -112,20 +129,26 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_db_classification_update
   name: az sql db classification update
   summary: Update a columns's sensitivity classification.
   description: ''
+  syntax: >-
+    az sql db classification update --column
+                                    --schema
+                                    --table
+                                    [--ids]
+                                    [--information-type]
+                                    [--label]
+                                    [--name]
+                                    [--resource-group]
+                                    [--server]
+                                    [--subscription]
   examples:
   - summary: Update sensitivity classification for a given column.
     syntax: az sql db classification update -g mygroup -s myserver -n mydb --schema dbo --table mytable --column mycolumn --information-type Name --label "Confidential - GDPR"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --column
     summary: The name of the column.
@@ -137,6 +160,10 @@ directCommands:
   - isRequired: true
     name: --table
     summary: The name of the table.
+    description: ''
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --information-type
     summary: The information type.
@@ -144,9 +171,6 @@ directCommands:
   - name: --label
     summary: The label name.
     description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
   - name: --name -n
     summary: Name of the Azure SQL Database.
     description: ''
@@ -159,12 +183,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 commands:
 - az_sql_db_classification_delete
 - az_sql_db_classification_list
@@ -190,6 +209,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
   updated_at: 6/19/2020 1:04:35 AM

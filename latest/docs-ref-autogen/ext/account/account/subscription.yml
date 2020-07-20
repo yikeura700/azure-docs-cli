@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_account_az_account_subscription
 name: az account subscription
 summary: Manage subscriptions.
@@ -8,14 +8,18 @@ directCommands:
   name: az account subscription cancel
   summary: Cancel subscription.
   description: ''
+  syntax: >-
+    az account subscription cancel --subscription-id
+                                   [--yes]
   examples:
   - summary: Cancel subscription
     syntax: az account subscription cancel --subscription-id "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --subscription-id
     summary: Subscription Id.
     description: ''
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -23,6 +27,16 @@ directCommands:
   name: az account subscription create
   summary: Create a new WebDirect or EA Azure subscription.
   description: ''
+  syntax: >-
+    az account subscription create --billing-account-name
+                                   --billing-profile-name
+                                   --display-name
+                                   --invoice-section-name
+                                   --sku-id
+                                   [--cost-center]
+                                   [--management-group-id]
+                                   [--no-wait]
+                                   [--owner]
   examples:
   - summary: Create subscription
     syntax: >-
@@ -35,7 +49,7 @@ directCommands:
       "Contoso MCA subscription" --owner xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx \
 
       --sku-id "0001" --invoice-section-name "JGF7-NSBG-PJA-TGB"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --billing-account-name
     summary: The name of the Microsoft Customer Agreement billing account for which you want to create the subscription.
@@ -56,6 +70,7 @@ directCommands:
     name: --sku-id
     summary: The SKU ID of the Azure plan. Azure plan determines the pricing and service-level agreement of the subscription.  Use 001 for Microsoft Azure Plan and 002 for Microsoft Azure Plan for DevTest.
     description: ''
+  optionalParameters:
   - name: --cost-center
     summary: If set, the cost center will show up on the Azure usage and charges file.
     description: ''
@@ -72,6 +87,13 @@ directCommands:
   name: az account subscription create-csp
   summary: Create a new CSP subscription.
   description: ''
+  syntax: >-
+    az account subscription create-csp --billing-account-name
+                                       --customer-name
+                                       --display-name
+                                       --sku-id
+                                       [--no-wait]
+                                       [--reseller-id]
   examples:
   - summary: Create CSP subscription
     syntax: >-
@@ -82,7 +104,7 @@ directCommands:
       --display-name "Contoso MCA subscription" --sku-id "0001" --customer-name \
 
       "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --billing-account-name
     summary: The name of the Microsoft Customer Agreement billing account for which you want to create the subscription.
@@ -99,6 +121,7 @@ directCommands:
     name: --sku-id
     summary: The SKU ID of the Azure plan. Azure plan determines the pricing and service-level agreement of the subscription.  Use 001 for Microsoft Azure Plan and 002 for Microsoft Azure Plan for DevTest.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -109,6 +132,13 @@ directCommands:
   name: az account subscription create-in-enrollment-account
   summary: Create subscription in enrolment account.
   description: ''
+  syntax: >-
+    az account subscription create-in-enrollment-account --enrollment-account-name
+                                                         [--display-name]
+                                                         [--management-group-id]
+                                                         [--no-wait]
+                                                         [--offer-type {MS-AZR-0017P, MS-AZR-0148P}]
+                                                         [--owners]
   examples:
   - summary: Create subscription in enrollment account
     syntax: >-
@@ -121,11 +151,12 @@ directCommands:
       xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --enrollment-account-name \
 
       "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --enrollment-account-name
     summary: The name of the enrollment account to which the subscription will be billed.
     description: ''
+  optionalParameters:
   - name: --display-name
     summary: The display name of the subscription.
     description: ''
@@ -146,10 +177,11 @@ directCommands:
   name: az account subscription enable
   summary: Enable subscription.
   description: ''
+  syntax: az account subscription enable --subscription-id
   examples:
   - summary: Enable subscription
     syntax: az account subscription enable --subscription-id "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --subscription-id
     summary: Subscription Id.
@@ -158,14 +190,18 @@ directCommands:
   name: az account subscription rename
   summary: Rename subscription.
   description: ''
+  syntax: >-
+    az account subscription rename --subscription-id
+                                   [--subscription-name]
   examples:
   - summary: Rename subscription
     syntax: az account subscription rename --subscription-id "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --subscription-id
     summary: Subscription Id.
     description: ''
+  optionalParameters:
   - name: --subscription-name
     summary: New subscription name.
     description: ''

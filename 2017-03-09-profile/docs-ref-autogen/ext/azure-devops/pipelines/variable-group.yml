@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_pipelines_variable_group
 name: az pipelines variable-group
 summary: Manage variable groups.
@@ -8,7 +8,15 @@ directCommands:
   name: az pipelines variable-group create
   summary: Create a variable group.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group create --name
+                                       --variables
+                                       [--authorize {false, true}]
+                                       [--description]
+                                       [--detect {false, true}]
+                                       [--org]
+                                       [--project]
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: Name of the variable group.
@@ -17,6 +25,7 @@ directCommands:
     name: --variables
     summary: Variables in format key=value space separated pairs. Secret variables should be managed using `az pipelines variable-group variable` commands.
     description: ''
+  optionalParameters:
   - name: --authorize
     parameterValueGroup: false, true
     summary: Whether the variable group should be accessible by all pipelines.
@@ -38,11 +47,18 @@ directCommands:
   name: az pipelines variable-group delete
   summary: Delete a variable group.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group delete --group-id
+                                       [--detect {false, true}]
+                                       [--org]
+                                       [--project]
+                                       [--yes]
+  requiredParameters:
   - isRequired: true
     name: --group-id --id
     summary: Id of the variable group.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -60,7 +76,16 @@ directCommands:
   name: az pipelines variable-group list
   summary: List variable groups.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group list [--action {manage, none, use}]
+                                     [--continuation-token]
+                                     [--detect {false, true}]
+                                     [--group-name]
+                                     [--org]
+                                     [--project]
+                                     [--query-order {Asc, Desc}]
+                                     [--top]
+  optionalParameters:
   - name: --action --action-filter
     parameterValueGroup: manage, none, use
     summary: Action filter for the variable group. It specifies the action which can be performed on the variable groups.
@@ -93,11 +118,17 @@ directCommands:
   name: az pipelines variable-group show
   summary: Show variable group details.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group show --group-id
+                                     [--detect {false, true}]
+                                     [--org]
+                                     [--project]
+  requiredParameters:
   - isRequired: true
     name: --group-id --id
     summary: ID of the variable group.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -112,11 +143,20 @@ directCommands:
   name: az pipelines variable-group update
   summary: Update a variable group.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group update --group-id
+                                       [--authorize {false, true}]
+                                       [--description]
+                                       [--detect {false, true}]
+                                       [--name]
+                                       [--org]
+                                       [--project]
+  requiredParameters:
   - isRequired: true
     name: --group-id --id
     summary: Id of the variable group.
     description: ''
+  optionalParameters:
   - name: --authorize
     parameterValueGroup: false, true
     summary: Whether the variable group should be accessible by all pipelines.

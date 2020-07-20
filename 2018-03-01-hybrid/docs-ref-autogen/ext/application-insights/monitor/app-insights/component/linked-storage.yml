@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_application-insights_az_monitor_app_insights_component_linked_storage
 name: az monitor app-insights component linked-storage
 summary: Manage linked storage account for an Application Insights component.
@@ -8,7 +8,11 @@ directCommands:
   name: az monitor app-insights component linked-storage link
   summary: Link a storage account with an Application Insights component.
   description: ''
-  parameters:
+  syntax: >-
+    az monitor app-insights component linked-storage link --app
+                                                          --resource-group
+                                                          --storage-account
+  requiredParameters:
   - isRequired: true
     name: --app -a
     summary: GUID, app name, or fully-qualified Azure resource name of Application Insights component. The application GUID may be acquired from the API Access menu item on any Application Insights resource in the Azure portal. If using an application name, please specify resource group.
@@ -25,7 +29,10 @@ directCommands:
   name: az monitor app-insights component linked-storage show
   summary: Show the details of linked storage account for an Application Insights component.
   description: ''
-  parameters:
+  syntax: >-
+    az monitor app-insights component linked-storage show --app
+                                                          --resource-group
+  requiredParameters:
   - isRequired: true
     name: --app -a
     summary: GUID, app name, or fully-qualified Azure resource name of Application Insights component. The application GUID may be acquired from the API Access menu item on any Application Insights resource in the Azure portal. If using an application name, please specify resource group.
@@ -38,7 +45,10 @@ directCommands:
   name: az monitor app-insights component linked-storage unlink
   summary: Unlink a storage account with an Application Insights component.
   description: ''
-  parameters:
+  syntax: >-
+    az monitor app-insights component linked-storage unlink --app
+                                                            --resource-group
+  requiredParameters:
   - isRequired: true
     name: --app -a
     summary: GUID, app name, or fully-qualified Azure resource name of Application Insights component. The application GUID may be acquired from the API Access menu item on any Application Insights resource in the Azure portal. If using an application name, please specify resource group.
@@ -51,7 +61,11 @@ directCommands:
   name: az monitor app-insights component linked-storage update
   summary: Update the linked storage account for an Application Insights component.
   description: ''
-  parameters:
+  syntax: >-
+    az monitor app-insights component linked-storage update --app
+                                                            --resource-group
+                                                            --storage-account
+  requiredParameters:
   - isRequired: true
     name: --app -a
     summary: GUID, app name, or fully-qualified Azure resource name of Application Insights component. The application GUID may be acquired from the API Access menu item on any Application Insights resource in the Azure portal. If using an application name, please specify resource group.

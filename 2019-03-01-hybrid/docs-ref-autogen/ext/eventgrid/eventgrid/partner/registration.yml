@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_eventgrid_az_eventgrid_partner_registration
 name: az eventgrid partner registration
 summary: Manage partner registrations.
@@ -8,12 +8,27 @@ directCommands:
   name: az eventgrid partner registration create
   summary: Create a new partner registration.
   description: ''
+  syntax: >-
+    az eventgrid partner registration create --name
+                                             --partner-name
+                                             --resource-group
+                                             --resource-type-name
+                                             [--authorized-subscription-ids]
+                                             [--customer-service-extension]
+                                             [--customer-service-number]
+                                             [--customer-service-uri]
+                                             [--description]
+                                             [--display-name]
+                                             [--logo-uri]
+                                             [--long-description]
+                                             [--setup-uri]
+                                             [--tags]
   examples:
   - summary: Create a new partner registration with basic information.
     syntax: az eventgrid partner registration create -g rg1 --name partnerRegistrationName1 --partner-name Contoso --resource-type-name Accounts --authorized-subscription-ids 533ad9de-25db-46e2-b94a-d00c37cf022b 05aa2228-7d34-4635-922d-2b582c422445
   - summary: Create a new partner registration with partner information.
     syntax: az eventgrid partner registration create -g rg1 --name partnerRegistrationName1 --partner-name Contoso --resource-type-name Accounts --authorized-subscription-ids 533ad9de-25db-46e2-b94a-d00c37cf022b 05aa2228-7d34-4635-922d-2b582c422445 --description ExampleDescription --display-name ExampleDisplayName1 --logo-uri 'https://www.example.com/logo.png' --setup-uri 'https://www.example.com' --long-description 'This is sample description}' --customer-service-number '+1 800 123 4567' --customer-service-extension '125' --customer-service-uri 'https://www.example.com/customerservice'
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the partner registration.
@@ -30,6 +45,7 @@ directCommands:
     name: --resource-type-name
     summary: Name of the partner topic resource type. This name should be unique among all partner topic types names.
     description: ''
+  optionalParameters:
   - name: --authorized-subscription-ids
     summary: A space-separated list of Azure subscription Ids that are authorized to create a partner namespace associated with this partner registration. This is an optional property. Creating partner namespaces is always permitted under the same Azure subscription as the one used for creating the partner registration.
     description: ''
@@ -64,7 +80,10 @@ directCommands:
   name: az eventgrid partner registration delete
   summary: Delete a partner registration.
   description: Deletes a partner registration with the specified parameters.
-  parameters:
+  syntax: >-
+    az eventgrid partner registration delete --name
+                                             --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the partner registration.
@@ -77,6 +96,9 @@ directCommands:
   name: az eventgrid partner registration list
   summary: List all partner registrations in specific resource group or all under the specified azure subscription.
   description: ''
+  syntax: >-
+    az eventgrid partner registration list [--odata-query]
+                                           [--resource-group]
   examples:
   - summary: List all partner registrations in the current Azure subscription.
     syntax: az eventgrid partner registration list
@@ -86,7 +108,7 @@ directCommands:
     syntax: az eventgrid partner registration list -g rg1 --odata-query "Contains(name, 'XYZ')"
   - summary: List all partner registrations in a resource group except the partner registration with name "name1"
     syntax: az eventgrid partner registration list -g rg1 --odata-query "NOT (name eq 'name1')"
-  parameters:
+  optionalParameters:
   - name: --odata-query
     summary: The query used to filter the results using OData syntax.
     description: ''
@@ -97,7 +119,10 @@ directCommands:
   name: az eventgrid partner registration show
   summary: Get a partner registration.
   description: Gets a partner registration with the specified parameters.
-  parameters:
+  syntax: >-
+    az eventgrid partner registration show --name
+                                           --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the partner registration.

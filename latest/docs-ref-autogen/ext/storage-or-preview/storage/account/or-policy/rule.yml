@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_storage-or-preview_az_storage_account_or_policy_rule
 name: az storage account or-policy rule
 summary: Manage Object Replication Service Policy Rules.
@@ -8,10 +8,18 @@ directCommands:
   name: az storage account or-policy rule add
   summary: Add rule to the specified Object Replication Service Policy.
   description: ''
+  syntax: >-
+    az storage account or-policy rule add --account-name
+                                          --destination-container
+                                          --policy-id
+                                          --resource-group
+                                          --source-container
+                                          [--min-creation-time]
+                                          [--prefix-match]
   examples:
   - summary: Add rule to the specified Object Replication Service Policy.
     syntax: az storage account or-policy rule add -g ResourceGroupName -n StorageAccountName --policy-id "04344ea7-aa3c-4846-bfb9-e908e32d3bf8" -d destContainer -s srcContainer
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -n
     summary: The storage account name.
@@ -32,6 +40,7 @@ directCommands:
     name: --source-container -s
     summary: The source storage container name.
     description: ''
+  optionalParameters:
   - name: --min-creation-time -t
     summary: "Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z."
     description: ''
@@ -42,10 +51,14 @@ directCommands:
   name: az storage account or-policy rule list
   summary: List all the rules in the specified Object Replication Service Policy.
   description: ''
+  syntax: >-
+    az storage account or-policy rule list --account-name
+                                           --policy-id
+                                           --resource-group
   examples:
   - summary: List all the rules in the specified Object Replication Service Policy.
     syntax: az storage account or-policy rule list -g ResourceGroupName -n StorageAccountName --policy-id "04344ea7-aa3c-4846-bfb9-e908e32d3bf8"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -n
     summary: The storage account name.
@@ -62,10 +75,15 @@ directCommands:
   name: az storage account or-policy rule remove
   summary: Remove the specified rule from the specified Object Replication Service Policy.
   description: ''
+  syntax: >-
+    az storage account or-policy rule remove --account-name
+                                             --policy-id
+                                             --resource-group
+                                             --rule-id
   examples:
   - summary: Remove the specified rule from the specified Object Replication Service Policy.
     syntax: az storage account or-policy rule remove -g ResourceGroupName -n StorageAccountName --policy-id "04344ea7-aa3c-4846-bfb9-e908e32d3bf8" --rule-id "78746d86-d3b7-4397-a99c-0837e6741332"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -n
     summary: The storage account name.
@@ -86,10 +104,15 @@ directCommands:
   name: az storage account or-policy rule show
   summary: Show the properties of specified rule in Object Replication Service Policy.
   description: ''
+  syntax: >-
+    az storage account or-policy rule show --account-name
+                                           --policy-id
+                                           --resource-group
+                                           --rule-id
   examples:
   - summary: Show the properties of specified rule in Object Replication Service Policy.
     syntax: az storage account or-policy rule show -g ResourceGroupName -n StorageAccountName --policy-id "04344ea7-aa3c-4846-bfb9-e908e32d3bf8" --rule-id "78746d86-d3b7-4397-a99c-0837e6741332"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -n
     summary: The storage account name.
@@ -110,10 +133,19 @@ directCommands:
   name: az storage account or-policy rule update
   summary: Update rule properties to Object Replication Service Policy.
   description: ''
+  syntax: >-
+    az storage account or-policy rule update --account-name
+                                             --policy-id
+                                             --resource-group
+                                             --rule-id
+                                             [--destination-container]
+                                             [--min-creation-time]
+                                             [--prefix-match]
+                                             [--source-container]
   examples:
   - summary: Update rule properties to Object Replication Service Policy.
     syntax: az storage account or-policy rule update -g ResourceGroupName -n StorageAccountName --policy-id "04344ea7-aa3c-4846-bfb9-e908e32d3bf8" --rule-id "78746d86-d3b7-4397-a99c-0837e6741332" --prefix-match blobA blobB
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -n
     summary: The storage account name.
@@ -130,17 +162,18 @@ directCommands:
     name: --rule-id -r
     summary: Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
     description: ''
+  optionalParameters:
   - name: --destination-container -d
     summary: The destination storage container name.
-    description: ''
-  - name: --source-container -s
-    summary: The source storage container name.
     description: ''
   - name: --min-creation-time -t
     summary: "Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z."
     description: ''
   - name: --prefix-match
     summary: Optional. Filter the results to replicate only blobs whose names begin with the specified prefix.
+    description: ''
+  - name: --source-container -s
+    summary: The source storage container name.
     description: ''
 commands:
 - ext_storage-or-preview_az_storage_account_or_policy_rule_add

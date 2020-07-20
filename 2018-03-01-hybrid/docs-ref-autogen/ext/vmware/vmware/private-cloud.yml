@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_vmware_az_vmware_private_cloud
 name: az vmware private-cloud
 summary: Commands to manage private clouds.
@@ -8,7 +8,11 @@ directCommands:
   name: az vmware private-cloud addauthorization
   summary: Add an authorization to the ExpressRoute for a private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware private-cloud addauthorization --name
+                                             --private-cloud
+                                             --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the authorization.
@@ -25,7 +29,20 @@ directCommands:
   name: az vmware private-cloud addidentitysource
   summary: Add a vCenter Single Sign On Identity Source to a private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware private-cloud addidentitysource --alias
+                                              --base-group-dn
+                                              --base-user-dn
+                                              --domain
+                                              --name
+                                              --password
+                                              --primary-server
+                                              --private-cloud
+                                              --resource-group
+                                              --username
+                                              [--secondary-server]
+                                              [--ssl]
+  requiredParameters:
   - isRequired: true
     name: --alias
     summary: The domain's NetBIOS name.
@@ -66,6 +83,7 @@ directCommands:
     name: --username
     summary: The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group.
     description: ''
+  optionalParameters:
   - name: --secondary-server
     summary: Secondary server URL.
     description: ''
@@ -77,7 +95,20 @@ directCommands:
   name: az vmware private-cloud create
   summary: Create a private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware private-cloud create --cluster-size
+                                   --location
+                                   --name
+                                   --network-block
+                                   --resource-group
+                                   --sku
+                                   [--circuit-primary-subnet]
+                                   [--circuit-secondary-subnet]
+                                   [--internet]
+                                   [--nsxt-password]
+                                   [--tags]
+                                   [--vcenter-password]
+  requiredParameters:
   - isRequired: true
     name: --cluster-size
     summary: Number of hosts for the default management cluster. Minimum of 3 and maximum of 16.
@@ -102,6 +133,7 @@ directCommands:
     name: --sku
     summary: The product SKU.
     description: ''
+  optionalParameters:
   - name: --circuit-primary-subnet
     summary: A /30 subnet for the primary circuit in the Express Route to configure routing between your network and Microsoft's Enterprise edge (MSEEs) routers.
     description: ''
@@ -124,7 +156,10 @@ directCommands:
   name: az vmware private-cloud delete
   summary: Delete a private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware private-cloud delete --name
+                                   --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the private cloud.
@@ -137,7 +172,11 @@ directCommands:
   name: az vmware private-cloud deleteauthorization
   summary: Delete an authorization to the ExpressRoute for a private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware private-cloud deleteauthorization --name
+                                                --private-cloud
+                                                --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the authorization.
@@ -154,7 +193,13 @@ directCommands:
   name: az vmware private-cloud deleteidentitysource
   summary: Delete a vCenter Single Sign On Identity Source for a private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware private-cloud deleteidentitysource --alias
+                                                 --domain
+                                                 --name
+                                                 --private-cloud
+                                                 --resource-group
+  requiredParameters:
   - isRequired: true
     name: --alias
     summary: The domain's NetBIOS name.
@@ -179,7 +224,8 @@ directCommands:
   name: az vmware private-cloud list
   summary: List the private clouds.
   description: ''
-  parameters:
+  syntax: az vmware private-cloud list [--resource-group]
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -187,7 +233,10 @@ directCommands:
   name: az vmware private-cloud listadmincredentials
   summary: List the admin credentials for the private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware private-cloud listadmincredentials --private-cloud
+                                                 --resource-group
+  requiredParameters:
   - isRequired: true
     name: --private-cloud -c
     summary: Name of the private cloud.
@@ -200,7 +249,10 @@ directCommands:
   name: az vmware private-cloud show
   summary: Show details of a private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware private-cloud show --name
+                                 --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the private cloud.
@@ -213,7 +265,12 @@ directCommands:
   name: az vmware private-cloud update
   summary: Update a private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware private-cloud update --name
+                                   --resource-group
+                                   [--cluster-size]
+                                   [--internet]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the private cloud.
@@ -222,6 +279,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --cluster-size
     summary: Number of hosts for the default management cluster. Minimum of 3 and maximum of 16.
     description: ''

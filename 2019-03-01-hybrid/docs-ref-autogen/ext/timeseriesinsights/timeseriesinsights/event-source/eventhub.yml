@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_timeseriesinsights_az_timeseriesinsights_event_source_eventhub
 name: az timeseriesinsights event-source eventhub
 summary: Create or update an event hub event source under the specified environment.
@@ -8,6 +8,17 @@ directCommands:
   name: az timeseriesinsights event-source eventhub create
   summary: Create or update an event hub event source under the specified environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights event-source eventhub create --consumer-group-name
+                                                       --environment-name
+                                                       --event-source-resource-id
+                                                       --key-name
+                                                       --name
+                                                       --resource-group
+                                                       --shared-access-key
+                                                       [--location]
+                                                       [--tags]
+                                                       [--timestamp-property-name]
   examples:
   - summary: Create an eventhub and use it for event source
     syntax: >-
@@ -24,7 +35,7 @@ directCommands:
       shared_access_key=$(az eventhubs namespace authorization-rule keys list -g $rg --namespace-name $ehns -n RootManageSharedAccessKey --query primaryKey --output tsv)
 
       az timeseriesinsights event-source eventhub create -g $rg --environment-name {env} -n es1 --key-name RootManageSharedAccessKey --shared-access-key $shared_access_key --event-source-resource-id $es_resource_id --consumer-group-name '$Default' --timestamp-property-name DeviceId
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --consumer-group-name
     summary: Required. The name of the event hub's consumer group that holds the partitions from which events will be read.
@@ -53,6 +64,7 @@ directCommands:
     name: --shared-access-key
     summary: Required. The value of the shared access key that grants the Time Series Insights service read access to the event hub. This property is not shown in event source responses.
     description: ''
+  optionalParameters:
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
@@ -66,6 +78,14 @@ directCommands:
   name: az timeseriesinsights event-source eventhub update
   summary: Create or update an event source under the specified environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights event-source eventhub update --environment-name
+                                                       --name
+                                                       --resource-group
+                                                       [--local-timestamp-format {Embedded, Iana, TimeSpan}]
+                                                       [--shared-access-key]
+                                                       [--tags]
+                                                       [--timestamp-property-name]
   examples:
   - summary: Update timestampPropertyName
     syntax: az timeseriesinsights event-source eventhub update -g {rg} --environment-name {env} -n {es} --timestamp-property-name DeviceId1
@@ -73,7 +93,7 @@ directCommands:
     syntax: az timeseriesinsights event-source eventhub update -g {rg} --environment-name {env} -n {es} --local-timestamp-format Embedded
   - summary: Update sharedAccessKey
     syntax: az timeseriesinsights event-source eventhub update -g {rg} --environment-name {env} -n {es} --shared-access-key {shared_access_key}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.
@@ -86,6 +106,11 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
+  - name: --local-timestamp-format
+    parameterValueGroup: Embedded, Iana, TimeSpan
+    summary: An enum that represents the format of the local timestamp property that needs to be set. Currently only Embedded is supported.
+    description: ''
   - name: --shared-access-key
     summary: The value of the shared access key that grants the Time Series Insights service read access to the event hub. This property is not shown in event source responses.
     description: ''
@@ -94,10 +119,6 @@ directCommands:
     description: ''
   - name: --timestamp-property-name
     summary: The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
-    description: ''
-  - name: --local-timestamp-format
-    parameterValueGroup: Embedded, Iana, TimeSpan
-    summary: An enum that represents the format of the local timestamp property that needs to be set. Currently only Embedded is supported.
     description: ''
 commands:
 - ext_timeseriesinsights_az_timeseriesinsights_event_source_eventhub_create

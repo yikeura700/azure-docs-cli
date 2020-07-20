@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_sql_db_ltr_backup
 name: az sql db ltr-backup
 summary: Manage SQL database long term retention backups.
@@ -8,10 +8,17 @@ directCommands:
   name: az sql db ltr-backup delete
   summary: Delete a long term retention backup.
   description: ''
+  syntax: >-
+    az sql db ltr-backup delete --database
+                                --location
+                                --name
+                                --server
+                                [--subscription]
+                                [--yes]
   examples:
   - summary: Delete long term retention backup for database.
     syntax: az sql db ltr-backup delete -l southeastasia -s myserver -d mydb -n "3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --database -d
     summary: Name of the Azure SQL Database. If specified (along with server name), retrieves all requested backups under this database.
@@ -28,22 +35,26 @@ directCommands:
     name: --server -s
     summary: Name of the Azure SQL Server. If specified, retrieves all requested backups under this server.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_db_ltr_backup_list
   name: az sql db ltr-backup list
   summary: List the long term retention backups for a location, server or database.
   description: ''
+  syntax: >-
+    az sql db ltr-backup list --location
+                              [--database]
+                              [--database-state]
+                              [--latest]
+                              [--resource-group]
+                              [--server]
+                              [--subscription]
   examples:
   - summary: List long term retention backups for a database.
     syntax: az sql db ltr-backup list -l southeastasia -s myserver -d mydb
@@ -55,11 +66,12 @@ directCommands:
     syntax: az sql db ltr-backup list -l southeastasia --database-state Live --only-latest-per-database True
   - summary: List long term retention backups for a location (with resource group argument).
     syntax: az sql db ltr-backup list -l southeastasia -g mygroup
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: The location of the desired backups.
     description: ''
+  optionalParameters:
   - name: --database -d
     summary: Name of the Azure SQL Database. If specified (along with server name), retrieves all requested backups under this database.
     description: ''
@@ -78,16 +90,18 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_db_ltr_backup_restore
   name: az sql db ltr-backup restore
   summary: Restore a long term retention backup to a new database.
   description: ''
+  syntax: >-
+    az sql db ltr-backup restore --backup-id
+                                 --dest-database
+                                 --dest-resource-group
+                                 --dest-server
+                                 [--no-wait]
+                                 [--subscription]
   examples:
   - summary: Restore LTR backup.
     syntax: >-
@@ -96,7 +110,7 @@ directCommands:
       --dest-database targetdb --dest-server myserver --dest-resource-group mygroup \
 
       --backup-id "/subscriptions/6caa113c-794c-42f8-ab9d-878d8aa104dc/resourceGroups/mygroup/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionServers/myserver/longTermRetentionDatabases/sourcedb/longTermRetentionBackups/3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --backup-id
     summary: The resource id of the long term retention backup to be restored. Use 'az sql db ltr-backup show' or 'az sql db ltr-backup list' for backup id.
@@ -113,26 +127,28 @@ directCommands:
     name: --dest-server
     summary: Name of the server to restore database to.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_db_ltr_backup_show
   name: az sql db ltr-backup show
   summary: Get a long term retention backup for a database.
   description: ''
+  syntax: >-
+    az sql db ltr-backup show --database
+                              --location
+                              --name
+                              --server
+                              [--subscription]
   examples:
   - summary: Show long term retention backup for a database.
     syntax: az sql db ltr-backup show -l southeastasia -s myserver -d mydb -n "3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --database -d
     summary: Name of the Azure SQL Database. If specified (along with server name), retrieves all requested backups under this database.
@@ -149,22 +165,47 @@ directCommands:
     name: --server -s
     summary: Name of the Azure SQL Server. If specified, retrieves all requested backups under this server.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_db_ltr_backup_wait
   name: az sql db ltr-backup wait
   summary: Place the CLI in a waiting state until a condition of the database is met.
   description: ''
-  parameters:
+  syntax: >-
+    az sql db ltr-backup wait [--created]
+                              [--custom]
+                              [--deleted]
+                              [--exists]
+                              [--ids]
+                              [--interval]
+                              [--name]
+                              [--resource-group]
+                              [--server]
+                              [--subscription]
+                              [--timeout]
+                              [--updated]
+  optionalParameters:
+  - name: --created
+    summary: Wait until created with 'provisioningState' at 'Succeeded'.
+    description: ''
+  - name: --custom
+    summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
+    description: ''
+  - name: --deleted
+    summary: Wait until deleted.
+    description: ''
+  - name: --exists
+    summary: Wait until the resource exists.
+    description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --interval
+    defaultValue: "30"
+    summary: Polling interval in seconds.
     description: ''
   - name: --name -n
     summary: Name of the Azure SQL Database.
@@ -178,22 +219,6 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  - name: --created
-    summary: Wait until created with 'provisioningState' at 'Succeeded'.
-    description: ''
-  - name: --custom
-    summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
-    description: ''
-  - name: --deleted
-    summary: Wait until deleted.
-    description: ''
-  - name: --exists
-    summary: Wait until the resource exists.
-    description: ''
-  - name: --interval
-    defaultValue: "30"
-    summary: Polling interval in seconds.
-    description: ''
   - name: --timeout
     defaultValue: "3600"
     summary: Maximum wait in seconds.
@@ -201,12 +226,7 @@ directCommands:
   - name: --updated
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 commands:
 - az_sql_db_ltr_backup_delete
 - az_sql_db_ltr_backup_list
@@ -229,6 +249,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
   updated_at: 6/19/2020 1:04:35 AM

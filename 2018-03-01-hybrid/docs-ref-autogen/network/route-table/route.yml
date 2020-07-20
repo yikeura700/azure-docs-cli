@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_route_table_route
 name: az network route-table route
 summary: Manage routes in a route table.
@@ -8,12 +8,20 @@ directCommands:
   name: az network route-table route create
   summary: Create a route in a route table.
   description: ''
+  syntax: >-
+    az network route-table route create --address-prefix
+                                        --name
+                                        --next-hop-type {Internet, None, VirtualAppliance, VirtualNetworkGateway, VnetLocal}
+                                        --resource-group
+                                        --route-table-name
+                                        [--next-hop-ip-address]
+                                        [--subscription]
   examples:
   - summary: Create a route that forces all inbound traffic to a Network Virtual Appliance.
     syntax: >-
       az network route-table route create -g MyResourceGroup --route-table-name MyRouteTable -n MyRoute \
           --next-hop-type VirtualAppliance --address-prefix 10.0.0.0/16 --next-hop-ip-address 10.0.100.4
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --address-prefix
     summary: The destination CIDR to which the route applies.
@@ -35,26 +43,28 @@ directCommands:
     name: --route-table-name
     summary: Route table name.
     description: ''
+  optionalParameters:
   - name: --next-hop-ip-address
     summary: The IP address packets should be forwarded to when using the VirtualAppliance hop type.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_route_table_route_delete
   name: az network route-table route delete
   summary: Delete a route from a route table.
   description: ''
+  syntax: >-
+    az network route-table route delete [--ids]
+                                        [--name]
+                                        [--resource-group]
+                                        [--route-table-name]
+                                        [--subscription]
   examples:
   - summary: Delete a route from a route table.
     syntax: az network route-table route delete -g MyResourceGroup --route-table-name MyRouteTable -n MyRoute
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -70,20 +80,19 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_route_table_route_list
   name: az network route-table route list
   summary: List routes in a route table.
   description: ''
+  syntax: >-
+    az network route-table route list --resource-group
+                                      --route-table-name
+                                      [--subscription]
   examples:
   - summary: List routes in a route table.
     syntax: az network route-table route list -g MyResourceGroup --route-table-name MyRouteTable
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -92,23 +101,25 @@ directCommands:
     name: --route-table-name
     summary: Route table name.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_route_table_route_show
   name: az network route-table route show
   summary: Get the details of a route in a route table.
   description: ''
+  syntax: >-
+    az network route-table route show [--ids]
+                                      [--name]
+                                      [--resource-group]
+                                      [--route-table-name]
+                                      [--subscription]
   examples:
   - summary: Get the details of a route in a route table.
     syntax: az network route-table route show -g MyResourceGroup --route-table-name MyRouteTable -n MyRoute -o table
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -124,24 +135,44 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_route_table_route_update
   name: az network route-table route update
   summary: Update a route in a route table.
   description: ''
+  syntax: >-
+    az network route-table route update [--add]
+                                        [--address-prefix]
+                                        [--force-string]
+                                        [--ids]
+                                        [--name]
+                                        [--next-hop-ip-address]
+                                        [--next-hop-type {Internet, None, VirtualAppliance, VirtualNetworkGateway, VnetLocal}]
+                                        [--remove]
+                                        [--resource-group]
+                                        [--route-table-name]
+                                        [--set]
+                                        [--subscription]
   examples:
   - summary: Update a route in a route table to change the next hop ip address.
     syntax: az network route-table route update -g MyResourceGroup --route-table-name MyRouteTable \ -n MyRoute --next-hop-ip-address 10.0.100.5
   - summary: Update a route in a route table. (autogenerated)
     syntax: az network route-table route update --address-prefix 10.0.0.0/16 --name MyRoute --next-hop-ip-address 10.0.100.5 --next-hop-type VirtualNetworkGateway --route-table-name MyRouteTable
-  parameters:
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
   - name: --address-prefix
     summary: The destination CIDR to which the route applies.
+    description: ''
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: Route name.
     description: ''
   - name: --next-hop-ip-address
     summary: The IP address packets should be forwarded to when using the VirtualAppliance hop type.
@@ -150,11 +181,8 @@ directCommands:
     parameterValueGroup: Internet, None, VirtualAppliance, VirtualNetworkGateway, VnetLocal
     summary: The type of Azure hop the packet should be sent to.
     description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --name -n
-    summary: Route name.
+  - name: --remove
+    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -162,27 +190,13 @@ directCommands:
   - name: --route-table-name
     summary: Route table name.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-    description: ''
-  - name: --remove
-    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
-    description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_route_table_route_create
 - az_network_route_table_route_delete
@@ -205,6 +219,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

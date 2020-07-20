@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_image_builder
 name: az image builder
 summary: Manage and build image builder templates.
@@ -8,10 +8,15 @@ directCommands:
   name: az image builder cancel
   summary: Cancel the long running image build based on the image template.
   description: ''
+  syntax: >-
+    az image builder cancel [--ids]
+                            [--name]
+                            [--resource-group]
+                            [--subscription]
   examples:
   - summary: Cancel an image build.
     syntax: az image builder cancel -n mytemplate -g my-group
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -28,6 +33,22 @@ directCommands:
   name: az image builder create
   summary: Create an image builder template.
   description: ''
+  syntax: >-
+    az image builder create --name
+                            --resource-group
+                            [--build-timeout]
+                            [--checksum]
+                            [--defer]
+                            [--identity]
+                            [--image-source]
+                            [--image-template]
+                            [--location]
+                            [--managed-image-destinations]
+                            [--no-wait]
+                            [--scripts]
+                            [--shared-image-destinations]
+                            [--subscription]
+                            [--tags]
   examples:
   - summary: Create an image builder template from an UbuntuLTS 18.04 image. Distribute it as a managed image and a shared image gallery image version
     syntax: >-
@@ -83,7 +104,7 @@ directCommands:
       # Cache object will be deleted.
 
       az image builder update -n mytemplate -g my-group
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the image template.
@@ -92,8 +113,12 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --build-timeout
     summary: The Maximum duration to wait while building the image template, in minutes. Default is 60.
+    description: ''
+  - name: --checksum
+    summary: The SHA256 checksum of the Red Hat ISO image.
     description: ''
   - name: --defer
     summary: Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.
@@ -101,30 +126,24 @@ directCommands:
   - name: --identity
     summary: List of user assigned identities (name or ID, space delimited) of the image template.
     description: ''
+  - name: --image-source -i
+    summary: The base image to customize. Must be a valid platform image URN, platform image alias, Red Hat ISO image URI, managed image name/ID, or shared image version ID.
+    description: ''
+    valueFrom: az vm image list, az vm image show
   - name: --image-template
     summary: 'Local path or URL to an image template file. When using --image-template, all other parameters are ignored except -g and -n. Reference: <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/image-builder-json">https://docs.microsoft.com/en-us/azure/virtual-machines/linux/image-builder-json</a>.'
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
+  - name: --managed-image-destinations
+    summary: Managed image output distributor information. Space-separated list of key-value pairs. E.g "image_1=westus2 image_2=westus". Each key is the name or resource ID of the managed image to be created. Each value is the location of the image.
+    description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
   - name: --scripts
     summary: "Space-separated list of shell or powershell scripts to customize the image with. Each script must be a publicly accessible URL. Infers type of script from file extension ('.sh' or'.ps1') or from source type. More more customizer options and flexibility, see: 'az image template customizer add'."
-    description: ''
-  - name: --checksum
-    summary: The SHA256 checksum of the Red Hat ISO image.
-    description: ''
-  - name: --image-source -i
-    summary: The base image to customize. Must be a valid platform image URN, platform image alias, Red Hat ISO image URI, managed image name/ID, or shared image version ID.
-    description: ''
-    valueFrom: az vm image list, az vm image show
-  - name: --managed-image-destinations
-    summary: Managed image output distributor information. Space-separated list of key-value pairs. E.g "image_1=westus2 image_2=westus". Each key is the name or resource ID of the managed image to be created. Each value is the location of the image.
     description: ''
   - name: --shared-image-destinations
     summary: Shared image gallery (sig) output distributor information. Space-separated list of key-value pairs. E.g "my_gallery_1/image_def_1=eastus,westus  my_gallery_2/image_def_2=uksouth,canadaeast,francesouth." Each key is the sig image definition ID or sig gallery name and sig image definition delimited by a "/". Each value is a comma-delimited list of replica locations.
@@ -132,14 +151,22 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
 - uid: az_image_builder_delete
   name: az image builder delete
   summary: Delete image builder template.
   description: ''
+  syntax: >-
+    az image builder delete [--ids]
+                            [--name]
+                            [--resource-group]
+                            [--subscription]
   examples:
   - summary: Delete image builder template. (autogenerated)
     syntax: az image builder delete --name MyImageTemplate --resource-group MyResourceGroup
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -156,7 +183,10 @@ directCommands:
   name: az image builder list
   summary: List image builder templates.
   description: ''
-  parameters:
+  syntax: >-
+    az image builder list [--resource-group]
+                          [--subscription]
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -167,6 +197,12 @@ directCommands:
   name: az image builder run
   summary: Build an image builder template.
   description: ''
+  syntax: >-
+    az image builder run [--ids]
+                         [--name]
+                         [--no-wait]
+                         [--resource-group]
+                         [--subscription]
   examples:
   - summary: Start a template build run and then wait for it to finish.
     syntax: >-
@@ -177,15 +213,15 @@ directCommands:
           --custom "lastRunStatus.runState!='running'"
 
       az image builder show -n mytemplate -g my-group
-  parameters:
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
     summary: The name of the image template.
+    description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -197,10 +233,15 @@ directCommands:
   name: az image builder show
   summary: Show an image builder template.
   description: ''
+  syntax: >-
+    az image builder show [--ids]
+                          [--name]
+                          [--resource-group]
+                          [--subscription]
   examples:
   - summary: Show an image builder template (autogenerated)
     syntax: az image builder show --name mytemplate  --resource-group my-group
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -217,6 +258,12 @@ directCommands:
   name: az image builder show-runs
   summary: Show an image builder template's run outputs.
   description: ''
+  syntax: >-
+    az image builder show-runs [--ids]
+                               [--name]
+                               [--output-name]
+                               [--resource-group]
+                               [--subscription]
   examples:
   - summary: Run a template build run and then view its run outputs.
     syntax: >-
@@ -227,15 +274,15 @@ directCommands:
           --custom "lastRunStatus.runState!='running'"
 
       az image builder show-runs -n mytemplate -g my-group
-  parameters:
-  - name: --output-name
-    summary: Name of the image builder run output.
-    description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
     summary: The name of the image template.
+    description: ''
+  - name: --output-name
+    summary: Name of the image builder run output.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -247,6 +294,16 @@ directCommands:
   name: az image builder update
   summary: Update an image builder template.
   description: Updating an image builder templates is currently unsupported. This command can be used in conjunction with --defer to update an image template object within the CLI cache. Without --defer it retrieves the specified image template from the cache and sends a request to Azure to create the image template.
+  syntax: >-
+    az image builder update [--add]
+                            [--defer]
+                            [--force-string]
+                            [--ids]
+                            [--name]
+                            [--remove]
+                            [--resource-group]
+                            [--set]
+                            [--subscription]
   examples:
   - summary: Create a template resource from a template object in the cli cache.
     syntax: >-
@@ -265,9 +322,15 @@ directCommands:
       # send template create request to azure to create template resource
 
       az image builder update -n mytemplate -g my-group
-  parameters:
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
   - name: --defer
     summary: Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.
+    description: ''
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -275,28 +338,34 @@ directCommands:
   - name: --name -n
     summary: The name of the image template.
     description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-    description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 - uid: az_image_builder_wait
   name: az image builder wait
   summary: Place the CLI in a waiting state until a condition of the template is met.
   description: ''
+  syntax: >-
+    az image builder wait [--created]
+                          [--custom]
+                          [--deleted]
+                          [--exists]
+                          [--ids]
+                          [--interval]
+                          [--name]
+                          [--resource-group]
+                          [--subscription]
+                          [--timeout]
+                          [--updated]
   examples:
   - summary: Start a template build run and then wait for it to finish.
     syntax: >-
@@ -307,19 +376,7 @@ directCommands:
           --custom "lastRunStatus.runState!='running'"
 
       az image builder show -n mytemplate -g my-group
-  parameters:
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --name -n
-    summary: The name of the image template.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
@@ -332,9 +389,21 @@ directCommands:
   - name: --exists
     summary: Wait until the resource exists.
     description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --interval
     defaultValue: "30"
     summary: Polling interval in seconds.
+    description: ''
+  - name: --name -n
+    summary: The name of the image template.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --timeout
     defaultValue: "3600"

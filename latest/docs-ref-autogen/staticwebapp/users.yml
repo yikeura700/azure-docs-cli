@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_staticwebapp_users
 name: az staticwebapp users
 summary: Manage users of the static app.
@@ -8,10 +8,19 @@ directCommands:
   name: az staticwebapp users invite
   summary: Create invitation link for specified user to the static app.
   description: ''
+  syntax: >-
+    az staticwebapp users invite --authentication-provider
+                                 --domain
+                                 --invitation-expiration-in-hours
+                                 --name
+                                 --roles
+                                 --user-details
+                                 [--resource-group]
+                                 [--subscription]
   examples:
   - summary: Create invitation link for specified user to the static app.
     syntax: az staticwebapp users invite -n MyStaticAppName --authentication-provider GitHub --user-details JohnDoe --role Contributor --domain static-app-001.azurestaticapps.net --invitation-expiration-in-hours 1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --authentication-provider
     summary: Authentication provider of the user identity such as AAD, Facebook, GitHub, Google, Twitter.
@@ -36,6 +45,7 @@ directCommands:
     name: --user-details
     summary: Email for AAD, Facebook, and Google. Account name (handle) for GitHub and Twitter.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -46,14 +56,20 @@ directCommands:
   name: az staticwebapp users list
   summary: Lists users and assigned roles, limited to users who accepted their invites.
   description: ''
+  syntax: >-
+    az staticwebapp users list --name
+                               [--authentication-provider]
+                               [--resource-group]
+                               [--subscription]
   examples:
   - summary: Lists users and assigned roles.
     syntax: az staticwebapp users list -n MyStaticAppName
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the static site.
     description: ''
+  optionalParameters:
   - name: --authentication-provider
     defaultValue: all
     summary: Authentication provider of the user identity such as AAD, Facebook, GitHub, Google, Twitter.
@@ -68,10 +84,18 @@ directCommands:
   name: az staticwebapp users update
   summary: Updates a user entry with the listed roles. Either user details or user id is required.
   description: ''
+  syntax: >-
+    az staticwebapp users update --name
+                                 --roles
+                                 [--authentication-provider]
+                                 [--resource-group]
+                                 [--subscription]
+                                 [--user-details]
+                                 [--user-id]
   examples:
   - summary: Updates a user entry with the listed roles.
     syntax: az staticwebapp users update -n MyStaticAppName --user-details JohnDoe --role Contributor
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the static site.
@@ -80,20 +104,21 @@ directCommands:
     name: --roles
     summary: Comma-separated default or user-defined role names. Roles that can be assigned to a user are comma separated and case-insensitive (at most 50 roles up to 25 characters each and restricted to 0-9,A-Z,a-z, and _). Define roles in routes.json during root directory of your GitHub repo.
     description: ''
+  optionalParameters:
   - name: --authentication-provider
     summary: Authentication provider of the user identity such as AAD, Facebook, GitHub, Google, Twitter.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --user-details
     summary: Email for AAD, Facebook, and Google. Account name (handle) for GitHub and Twitter.
     description: ''
   - name: --user-id
     summary: Given id of registered user.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
 - az_staticwebapp_users_invite

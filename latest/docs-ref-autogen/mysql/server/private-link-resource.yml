@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_mysql_server_private_link_resource
 name: az mysql server private-link-resource
 summary: Manage MySQL server private link resources.
@@ -8,7 +8,12 @@ directCommands:
   name: az mysql server private-link-resource list
   summary: List the private link resources supported for a MySQL server.
   description: ''
-  parameters:
+  syntax: >-
+    az mysql server private-link-resource list [--ids]
+                                               [--resource-group]
+                                               [--server-name]
+                                               [--subscription]
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''

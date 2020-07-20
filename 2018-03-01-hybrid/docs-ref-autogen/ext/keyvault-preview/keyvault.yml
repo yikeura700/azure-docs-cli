@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_keyvault-preview_az_keyvault
 name: az keyvault
 summary: Safeguard and maintain control of keys, secrets, and certificates.
@@ -8,7 +8,21 @@ directCommands:
   name: az keyvault create
   summary: Create a key vault.
   description: Default permissions are created for the current user or service principal unless the `--no-self-perms` flag is specified.
-  parameters:
+  syntax: >-
+    az keyvault create --name
+                       --resource-group
+                       [--bypass {AzureServices, None}]
+                       [--default-action {Allow, Deny}]
+                       [--enabled-for-deployment {false, true}]
+                       [--enabled-for-disk-encryption {false, true}]
+                       [--enabled-for-template-deployment {false, true}]
+                       [--enable-purge-protection {false, true}]
+                       [--enable-soft-delete {false, true}]
+                       [--location]
+                       [--no-self-perms {false, true}]
+                       [--sku {premium, standard}]
+                       [--tags]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the key vault.
@@ -17,13 +31,14 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --enable-purge-protection
-    parameterValueGroup: false, true
-    summary: Prevents manual purging of deleted vault, and all contained entities.
+  optionalParameters:
+  - name: --bypass
+    parameterValueGroup: AzureServices, None
+    summary: Bypass traffic for space-separated uses.
     description: ''
-  - name: --enable-soft-delete
-    parameterValueGroup: false, true
-    summary: Enable vault deletion recovery for the vault, and all contained entities.
+  - name: --default-action
+    parameterValueGroup: Allow, Deny
+    summary: Default action to apply when no rule matches.
     description: ''
   - name: --enabled-for-deployment
     parameterValueGroup: false, true
@@ -36,6 +51,14 @@ directCommands:
   - name: --enabled-for-template-deployment
     parameterValueGroup: false, true
     summary: Allow Resource Manager to retrieve secrets from the vault.
+    description: ''
+  - name: --enable-purge-protection
+    parameterValueGroup: false, true
+    summary: Prevents manual purging of deleted vault, and all contained entities.
+    description: ''
+  - name: --enable-soft-delete
+    parameterValueGroup: false, true
+    summary: Enable vault deletion recovery for the vault, and all contained entities.
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -52,23 +75,19 @@ directCommands:
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
-  - name: --bypass
-    parameterValueGroup: AzureServices, None
-    summary: Bypass traffic for space-separated uses.
-    description: ''
-  - name: --default-action
-    parameterValueGroup: Allow, Deny
-    summary: Default action to apply when no rule matches.
-    description: ''
 - uid: ext_keyvault-preview_az_keyvault_delete
   name: az keyvault delete
   summary: Delete a key vault.
   description: ''
-  parameters:
+  syntax: >-
+    az keyvault delete --name
+                       [--resource-group]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the key vault.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Proceed only if Key Vault belongs to the specified resource group.
     description: ''
@@ -76,11 +95,18 @@ directCommands:
   name: az keyvault delete-policy
   summary: Delete security policy settings for a Key Vault.
   description: ''
-  parameters:
+  syntax: >-
+    az keyvault delete-policy --name
+                              [--object-id]
+                              [--resource-group]
+                              [--spn]
+                              [--upn]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the key vault.
     description: ''
+  optionalParameters:
   - name: --object-id
     summary: A GUID that identifies the principal that will receive permissions.
     description: ''
@@ -97,7 +123,8 @@ directCommands:
   name: az keyvault list
   summary: List key vaults.
   description: ''
-  parameters:
+  syntax: az keyvault list [--resource-group]
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -105,12 +132,15 @@ directCommands:
   name: az keyvault list-deleted
   summary: Gets information about the deleted vaults in a subscription.
   description: ''
-  parameters: []
+  syntax: az keyvault list-deleted
 - uid: ext_keyvault-preview_az_keyvault_purge
   name: az keyvault purge
   summary: Permanently deletes the specified vault.
   description: Aka Purges the deleted Azure key vault.
-  parameters:
+  syntax: >-
+    az keyvault purge --location
+                      --name
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -123,7 +153,11 @@ directCommands:
   name: az keyvault recover
   summary: Recover a key vault.
   description: Recovers a previously deleted key vault for which soft delete was enabled.
-  parameters:
+  syntax: >-
+    az keyvault recover --location
+                        --name
+                        [--resource-group]
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -132,6 +166,7 @@ directCommands:
     name: --name -n
     summary: Name of the key vault.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Proceed only if Key Vault belongs to the specified resource group.
     description: ''
@@ -139,23 +174,22 @@ directCommands:
   name: az keyvault set-policy
   summary: Update security policy settings for a Key Vault.
   description: ''
-  parameters:
+  syntax: >-
+    az keyvault set-policy --name
+                           [--certificate-permissions {backup, create, delete, deleteissuers, get, getissuers, import, list, listissuers, managecontacts, manageissuers, purge, recover, restore, setissuers, update}]
+                           [--key-permissions {backup, create, decrypt, delete, encrypt, get, import, list, purge, recover, restore, sign, unwrapKey, update, verify, wrapKey}]
+                           [--object-id]
+                           [--resource-group]
+                           [--secret-permissions {backup, delete, get, list, purge, recover, restore, set}]
+                           [--spn]
+                           [--storage-permissions {backup, delete, deletesas, get, getsas, list, listsas, purge, recover, regeneratekey, restore, set, setsas, update}]
+                           [--upn]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the key vault.
     description: ''
-  - name: --object-id
-    summary: A GUID that identifies the principal that will receive permissions.
-    description: ''
-  - name: --resource-group -g
-    summary: Proceed only if Key Vault belongs to the specified resource group.
-    description: ''
-  - name: --spn
-    summary: Name of a service principal that will receive permissions.
-    description: ''
-  - name: --upn
-    summary: Name of a user principal that will receive permissions.
-    description: ''
+  optionalParameters:
   - name: --certificate-permissions
     parameterValueGroup: backup, create, delete, deleteissuers, get, getissuers, import, list, listissuers, managecontacts, manageissuers, purge, recover, restore, setissuers, update
     summary: Space-separated list of certificate permissions to assign.
@@ -164,23 +198,39 @@ directCommands:
     parameterValueGroup: backup, create, decrypt, delete, encrypt, get, import, list, purge, recover, restore, sign, unwrapKey, update, verify, wrapKey
     summary: Space-separated list of key permissions to assign.
     description: ''
+  - name: --object-id
+    summary: A GUID that identifies the principal that will receive permissions.
+    description: ''
+  - name: --resource-group -g
+    summary: Proceed only if Key Vault belongs to the specified resource group.
+    description: ''
   - name: --secret-permissions
     parameterValueGroup: backup, delete, get, list, purge, recover, restore, set
     summary: Space-separated list of secret permissions to assign.
+    description: ''
+  - name: --spn
+    summary: Name of a service principal that will receive permissions.
     description: ''
   - name: --storage-permissions
     parameterValueGroup: backup, delete, deletesas, get, getsas, list, listsas, purge, recover, regeneratekey, restore, set, setsas, update
     summary: Space-separated list of storage permissions to assign.
     description: ''
+  - name: --upn
+    summary: Name of a user principal that will receive permissions.
+    description: ''
 - uid: ext_keyvault-preview_az_keyvault_show
   name: az keyvault show
   summary: Show details of a key vault.
   description: ''
-  parameters:
+  syntax: >-
+    az keyvault show --name
+                     [--resource-group]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the key vault.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Proceed only if Key Vault belongs to the specified resource group.
     description: ''
@@ -188,18 +238,36 @@ directCommands:
   name: az keyvault update
   summary: Update the properties of a key vault.
   description: ''
-  parameters:
+  syntax: >-
+    az keyvault update --name
+                       [--add]
+                       [--bypass {AzureServices, None}]
+                       [--default-action {Allow, Deny}]
+                       [--enabled-for-deployment {false, true}]
+                       [--enabled-for-disk-encryption {false, true}]
+                       [--enabled-for-template-deployment {false, true}]
+                       [--enable-purge-protection {false, true}]
+                       [--enable-soft-delete {false, true}]
+                       [--force-string]
+                       [--remove]
+                       [--resource-group]
+                       [--set]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the key vault.
     description: ''
-  - name: --enable-purge-protection
-    parameterValueGroup: false, true
-    summary: Prevents manual purging of deleted vault, and all contained entities.
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
-  - name: --enable-soft-delete
-    parameterValueGroup: false, true
-    summary: Enable vault deletion recovery for the vault, and all contained entities.
+  - name: --bypass
+    parameterValueGroup: AzureServices, None
+    summary: Bypass traffic for space-separated uses.
+    description: ''
+  - name: --default-action
+    parameterValueGroup: Allow, Deny
+    summary: Default action to apply when no rule matches.
     description: ''
   - name: --enabled-for-deployment
     parameterValueGroup: false, true
@@ -213,25 +281,22 @@ directCommands:
     parameterValueGroup: false, true
     summary: Allow Resource Manager to retrieve secrets from the vault.
     description: ''
-  - name: --resource-group -g
-    summary: Proceed only if Key Vault belongs to the specified resource group.
+  - name: --enable-purge-protection
+    parameterValueGroup: false, true
+    summary: Prevents manual purging of deleted vault, and all contained entities.
     description: ''
-  - name: --bypass
-    parameterValueGroup: AzureServices, None
-    summary: Bypass traffic for space-separated uses.
-    description: ''
-  - name: --default-action
-    parameterValueGroup: Allow, Deny
-    summary: Default action to apply when no rule matches.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+  - name: --enable-soft-delete
+    parameterValueGroup: false, true
+    summary: Enable vault deletion recovery for the vault, and all contained entities.
     description: ''
   - name: --force-string
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
+    description: ''
+  - name: --resource-group -g
+    summary: Proceed only if Key Vault belongs to the specified resource group.
     description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'

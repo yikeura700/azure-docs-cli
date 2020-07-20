@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_repos_policy_file_size
 name: az repos policy file-size
 summary: Manage file size policy.
@@ -8,7 +8,16 @@ directCommands:
   name: az repos policy file-size create
   summary: Create file size policy.
   description: ''
-  parameters:
+  syntax: >-
+    az repos policy file-size create --blocking {false, true}
+                                     --enabled {false, true}
+                                     --maximum-git-blob-size
+                                     --repository-id
+                                     --use-uncompressed-size {false, true}
+                                     [--detect {false, true}]
+                                     [--org]
+                                     [--project]
+  requiredParameters:
   - isRequired: true
     name: --blocking
     parameterValueGroup: false, true
@@ -32,6 +41,7 @@ directCommands:
     parameterValueGroup: false, true
     summary: Whether to use uncompressed size.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -46,11 +56,22 @@ directCommands:
   name: az repos policy file-size update
   summary: Update file size policy.
   description: ''
-  parameters:
+  syntax: >-
+    az repos policy file-size update --id
+                                     [--blocking {false, true}]
+                                     [--detect {false, true}]
+                                     [--enabled {false, true}]
+                                     [--maximum-git-blob-size]
+                                     [--org]
+                                     [--project]
+                                     [--repository-id]
+                                     [--use-uncompressed-size {false, true}]
+  requiredParameters:
   - isRequired: true
     name: --id --policy-id
     summary: ID of the policy.
     description: ''
+  optionalParameters:
   - name: --blocking
     parameterValueGroup: false, true
     summary: Whether the policy should be blocking or not.

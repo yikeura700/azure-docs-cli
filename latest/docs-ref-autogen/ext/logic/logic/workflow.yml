@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_logic_az_logic_workflow
 name: az logic workflow
 summary: Logic workflow.
@@ -8,10 +8,21 @@ directCommands:
   name: az logic workflow create
   summary: Creates or updates a workflow using a JSON file for the defintion.
   description: ''
+  syntax: >-
+    az logic workflow create --definition
+                             --location
+                             --name
+                             --resource-group
+                             [--access-control]
+                             [--endpoints-configuration]
+                             [--integration-account]
+                             [--integration-service-environment]
+                             [--state {Completed, Deleted, Disabled, Enabled, NotSpecified, Suspended}]
+                             [--tags]
   examples:
   - summary: Create or update a workflow
     syntax: az logic workflow create --resource-group "test_resource_group" --location "centralus" --name "test_workflow" --definition "workflow.json"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --definition
     summary: Path to a workflow defintion JSON file (see README.md for more info on this). This JSON format should match what the logic app design tool exports.
@@ -28,6 +39,7 @@ directCommands:
     name: --resource-group -g
     summary: The resource group name.
     description: ''
+  optionalParameters:
   - name: --access-control
     summary: The access control configuration controls access to this workflow. See README.md for more information.
     description: ''
@@ -51,10 +63,14 @@ directCommands:
   name: az logic workflow delete
   summary: Deletes a workflow.
   description: ''
+  syntax: >-
+    az logic workflow delete --name
+                             --resource-group
+                             [--yes]
   examples:
   - summary: Delete a workflow
     syntax: az logic workflow delete --resource-group "test_resource_group" --name "test_workflow"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The workflow name.
@@ -63,6 +79,7 @@ directCommands:
     name: --resource-group -g
     summary: The resource group name.
     description: ''
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -70,12 +87,16 @@ directCommands:
   name: az logic workflow list
   summary: Gets a list of workflows by subscription.
   description: ''
+  syntax: >-
+    az logic workflow list [--filter]
+                           [--resource-group]
+                           [--top]
   examples:
   - summary: List all workflows in a resource group
     syntax: az logic workflow list --resource-group "test_resource_group"
   - summary: List all workflows in a subscription
     syntax: az logic workflow list
-  parameters:
+  optionalParameters:
   - name: --filter
     summary: 'The filter to apply on the operation. Options for filters include: State, Trigger, and ReferencedResourceId.'
     description: ''
@@ -89,10 +110,13 @@ directCommands:
   name: az logic workflow show
   summary: Gets a workflow.
   description: ''
+  syntax: >-
+    az logic workflow show --name
+                           --resource-group
   examples:
   - summary: Get a workflow
     syntax: az logic workflow show --resource-group "test_resource_group" --name "test_workflow"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The workflow name.
@@ -105,10 +129,16 @@ directCommands:
   name: az logic workflow update
   summary: Updates a workflow.
   description: ''
+  syntax: >-
+    az logic workflow update --definition
+                             --name
+                             --resource-group
+                             [--state {Completed, Deleted, Disabled, Enabled, NotSpecified, Suspended}]
+                             [--tags]
   examples:
   - summary: Patch a workflow
     syntax: az logic workflow update --resource-group "test_resource_group" --definition workflow.json --name "test_workflow"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --definition
     summary: Path to a workflow defintion JSON file (see README.md for more info on this). This JSON format should match what the logic app design tool exports.
@@ -121,6 +151,7 @@ directCommands:
     name: --resource-group -g
     summary: The resource group name.
     description: ''
+  optionalParameters:
   - name: --state
     parameterValueGroup: Completed, Deleted, Disabled, Enabled, NotSpecified, Suspended
     summary: The state.

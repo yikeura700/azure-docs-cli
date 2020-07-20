@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datashare_az_datashare_dataset
 name: az datashare dataset
 summary: Commands for providers to manage datashare datasets.
@@ -8,6 +8,12 @@ directCommands:
   name: az datashare dataset create
   summary: Create a dataset.
   description: ''
+  syntax: >-
+    az datashare dataset create --account-name
+                                --dataset
+                                --name
+                                --resource-group
+                                --share-name
   examples:
   - summary: Create a Blob dataset
     syntax: 'az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"Blob\",\"properties\":{\"containerName\":\"C1\",\"filePath\":\"file21\",\"resourceGroup\": \"SampleResourceGroup\",\"storageAccountName\":\"storage2\",\"subscriptionId\":\"00000000-0000-0000-0000-000000000000\"}}"'
@@ -19,7 +25,7 @@ directCommands:
     syntax: az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"SqlDBTable\",\"properties\":{\"databaseName\":\"MySqlDB\",\"schemaName\":\"dbo\", \"sqlServerResourceId\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroup/providers/Microsoft.Sql/servers/Server1\", \"tableName\":\"Table1\"}}"
   - summary: Create a SqlDWTable dataset
     syntax: az datashare dataset create --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare --dataset "{\"kind\":\"SqlDWTable\",\"properties\":{\"dataWarehouseName\":\"MyDataWarehouse\",\"schemaName\":\"dbo\", \"sqlServerResourceId\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyResourceGroup/providers/Microsoft.Sql/servers/MyServer\",\"tableName\":\"MyTable\"}}"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -44,10 +50,17 @@ directCommands:
   name: az datashare dataset delete
   summary: Delete a dataset in a share.
   description: ''
+  syntax: >-
+    az datashare dataset delete --account-name
+                                --name
+                                --resource-group
+                                --share-name
+                                [--no-wait]
+                                [--yes]
   examples:
   - summary: Delete a dataset
     syntax: az datashare dataset delete --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -64,6 +77,7 @@ directCommands:
     name: --share-name
     summary: The name of the share.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -74,10 +88,14 @@ directCommands:
   name: az datashare dataset list
   summary: List datasets in a share.
   description: ''
+  syntax: >-
+    az datashare dataset list --account-name
+                              --resource-group
+                              --share-name
   examples:
   - summary: List datasets
     syntax: az datashare dataset list --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -94,10 +112,15 @@ directCommands:
   name: az datashare dataset show
   summary: Show a dataset.
   description: ''
+  syntax: >-
+    az datashare dataset show --account-name
+                              --name
+                              --resource-group
+                              --share-name
   examples:
   - summary: Show a dataset
     syntax: az datashare dataset show --account-name MyAccount --name MyDataset --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -118,10 +141,22 @@ directCommands:
   name: az datashare dataset wait
   summary: Place the CLI in a waiting state until a condition of the datashare dataset is met.
   description: ''
+  syntax: >-
+    az datashare dataset wait --account-name
+                              --name
+                              --resource-group
+                              --share-name
+                              [--created]
+                              [--custom]
+                              [--deleted]
+                              [--exists]
+                              [--interval]
+                              [--timeout]
+                              [--updated]
   examples:
   - summary: Pause executing next line of CLI script until the datashare dataset is successfully provisioned.
     syntax: az datashare dataset wait --account-name MyAccount --share-name MyShare --name MyDataset --resource-group MyResourceGroup --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -138,6 +173,7 @@ directCommands:
     name: --share-name
     summary: The name of the share.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

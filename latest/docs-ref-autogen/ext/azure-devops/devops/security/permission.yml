@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_devops_security_permission
 name: az devops security permission
 summary: Manage security permissions.
@@ -8,7 +8,14 @@ directCommands:
   name: az devops security permission list
   summary: List tokens for given user/group and namespace.
   description: ''
-  parameters:
+  syntax: >-
+    az devops security permission list --id
+                                       --subject
+                                       [--detect {false, true}]
+                                       [--org]
+                                       [--recurse]
+                                       [--token]
+  requiredParameters:
   - isRequired: true
     name: --id --namespace-id
     summary: ID of security namespace.
@@ -17,6 +24,7 @@ directCommands:
     name: --subject
     summary: User Email ID or Group descriptor.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -34,7 +42,14 @@ directCommands:
   name: az devops security permission reset
   summary: Reset permission for given permission bit(s).
   description: ''
-  parameters:
+  syntax: >-
+    az devops security permission reset --id
+                                        --permission-bit
+                                        --subject
+                                        --token
+                                        [--detect {false, true}]
+                                        [--org]
+  requiredParameters:
   - isRequired: true
     name: --id --namespace-id
     summary: ID of security namespace.
@@ -51,6 +66,7 @@ directCommands:
     name: --token
     summary: Security token.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -62,7 +78,14 @@ directCommands:
   name: az devops security permission reset-all
   summary: Clear all permissions of this token for a user/group.
   description: ''
-  parameters:
+  syntax: >-
+    az devops security permission reset-all --id
+                                            --subject
+                                            --token
+                                            [--detect {false, true}]
+                                            [--org]
+                                            [--yes]
+  requiredParameters:
   - isRequired: true
     name: --id --namespace-id
     summary: ID of security namespace.
@@ -75,6 +98,7 @@ directCommands:
     name: --token
     summary: Security token.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -89,7 +113,13 @@ directCommands:
   name: az devops security permission show
   summary: Show permissions for given token, namespace and user/group.
   description: ''
-  parameters:
+  syntax: >-
+    az devops security permission show --id
+                                       --subject
+                                       --token
+                                       [--detect {false, true}]
+                                       [--org]
+  requiredParameters:
   - isRequired: true
     name: --id --namespace-id
     summary: ID of security namespace.
@@ -102,6 +132,7 @@ directCommands:
     name: --token
     summary: Security token.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -113,6 +144,15 @@ directCommands:
   name: az devops security permission update
   summary: Assign allow or deny permission to given user/group.
   description: Learn more at <a href="https://aka.ms/azure-devops-cli-security-permission">https://aka.ms/azure-devops-cli-security-permission</a>.
+  syntax: >-
+    az devops security permission update --id
+                                         --subject
+                                         --token
+                                         [--allow-bit]
+                                         [--deny-bit]
+                                         [--detect {false, true}]
+                                         [--merge {false, true}]
+                                         [--org]
   examples:
   - summary: Assign view, edit and delete permission for team projects.
     syntax: >-
@@ -122,7 +162,7 @@ directCommands:
       You would need to add the bit value of the various permission bits to
 
       simultaneously allow/deny multiple permissions.
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --id --namespace-id
     summary: ID of security namespace.
@@ -135,6 +175,7 @@ directCommands:
     name: --token
     summary: Security token.
     description: ''
+  optionalParameters:
   - name: --allow-bit
     summary: Allow bit or addition of bits. Required if --deny-bit is missing.
     description: ''

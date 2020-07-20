@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_boards_area_project
 name: az boards area project
 summary: Manage areas for a project.
@@ -8,11 +8,19 @@ directCommands:
   name: az boards area project create
   summary: Create area.
   description: ''
-  parameters:
+  syntax: >-
+    az boards area project create --name
+                                  [--detect {false, true}]
+                                  [--org]
+                                  [--path]
+                                  [--project]
+                                  [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: Name of the area.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -33,11 +41,19 @@ directCommands:
   name: az boards area project delete
   summary: Delete area.
   description: ''
-  parameters:
+  syntax: >-
+    az boards area project delete --path
+                                  [--detect {false, true}]
+                                  [--org]
+                                  [--project]
+                                  [--subscription]
+                                  [--yes]
+  requiredParameters:
   - isRequired: true
     name: --path
     summary: Absolute path of an area. Example:ProjectNameAreaAreaName.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -48,17 +64,24 @@ directCommands:
   - name: --project -p
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
     description: ''
 - uid: az_boards_area_project_list
   name: az boards area project list
   summary: List areas for a project.
   description: ''
-  parameters:
+  syntax: >-
+    az boards area project list [--depth]
+                                [--detect {false, true}]
+                                [--org]
+                                [--path]
+                                [--project]
+                                [--subscription]
+  optionalParameters:
   - name: --depth
     defaultValue: "1"
     summary: 'Depth of child nodes to be fetched. Example: --depth 3.'
@@ -83,11 +106,18 @@ directCommands:
   name: az boards area project show
   summary: Show area details for a project.
   description: ''
-  parameters:
+  syntax: >-
+    az boards area project show --id
+                                [--detect {false, true}]
+                                [--org]
+                                [--project]
+                                [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: Area ID.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -105,11 +135,20 @@ directCommands:
   name: az boards area project update
   summary: Update area.
   description: Move area or update area name.
-  parameters:
+  syntax: >-
+    az boards area project update --path
+                                  [--child-id]
+                                  [--detect {false, true}]
+                                  [--name]
+                                  [--org]
+                                  [--project]
+                                  [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --path
     summary: Absolute path of an area. Example:ProjectNameAreaAreaName.
     description: ''
+  optionalParameters:
   - name: --child-id
     summary: Move an existing area and add as child node for this area.
     description: ''

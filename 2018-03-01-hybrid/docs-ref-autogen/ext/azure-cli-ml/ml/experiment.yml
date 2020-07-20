@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-ml_az_ml_experiment
 name: az ml experiment
 summary: Commands to manage experiments.
@@ -8,7 +8,13 @@ directCommands:
   name: az ml experiment list
   summary: List experiments in a workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml experiment list [--output-metadata-file]
+                          [--path]
+                          [--resource-group]
+                          [--subscription-id]
+                          [--workspace-name]
+  optionalParameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
     description: ''

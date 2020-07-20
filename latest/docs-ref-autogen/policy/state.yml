@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_policy_state
 name: az policy state
 summary: Manage policy compliance states.
@@ -8,6 +8,26 @@ directCommands:
   name: az policy state list
   summary: List policy compliance states.
   description: ''
+  syntax: >-
+    az policy state list [--all]
+                         [--apply]
+                         [--expand]
+                         [--filter]
+                         [--from]
+                         [--management-group]
+                         [--namespace]
+                         [--order-by]
+                         [--parent]
+                         [--policy-assignment]
+                         [--policy-definition]
+                         [--policy-set-definition]
+                         [--resource]
+                         [--resource-group]
+                         [--resource-type]
+                         [--select]
+                         [--subscription]
+                         [--to]
+                         [--top]
   examples:
   - summary: Get latest policy states at current subscription scope.
     syntax: az policy state list
@@ -47,7 +67,7 @@ directCommands:
     syntax: az policy state list --apply "groupby((policyAssignmentId, policySetDefinitionId, policyDefinitionReferenceId, policyDefinitionId, resourceId))/groupby((policyAssignmentId, policySetDefinitionId, policyDefinitionReferenceId, policyDefinitionId), aggregate($count as numNonCompliantResources))"
   - summary: Get latest policy states for a resource including policy evaluation details.
     syntax: az policy state list --resource "myKeyVault" --namespace "Microsoft.KeyVault" --resource-type "vaults" -g "myresourcegroup" --expand PolicyEvaluationDetails
-  parameters:
+  optionalParameters:
   - name: --all
     summary: Within the specified time interval, get all policy states instead of the latest only.
     description: ''
@@ -63,32 +83,17 @@ directCommands:
   - name: --from
     summary: ISO 8601 formatted timestamp specifying the start time of the interval to query.
     description: ''
-  - name: --order-by
-    summary: Ordering expression using OData notation.
-    description: ''
-  - name: --select
-    summary: Select expression using OData notation.
-    description: ''
-  - name: --to
-    summary: ISO 8601 formatted timestamp specifying the end time of the interval to query.
-    description: ''
-  - name: --top
-    summary: Maximum number of records to return.
+  - name: --management-group -m
+    summary: Name of management group.
     description: ''
   - name: --namespace
     summary: 'Provider namespace (Ex: Microsoft.Provider).'
     description: ''
+  - name: --order-by
+    summary: Ordering expression using OData notation.
+    description: ''
   - name: --parent
     summary: 'The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB).'
-    description: ''
-  - name: --resource
-    summary: Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.
-    description: ''
-  - name: --resource-type
-    summary: 'Resource type (Ex: resourceTypeC).'
-    description: ''
-  - name: --management-group -m
-    summary: Name of management group.
     description: ''
   - name: --policy-assignment -a
     summary: Name of policy assignment.
@@ -99,22 +104,47 @@ directCommands:
   - name: --policy-set-definition -s
     summary: Name of policy set definition.
     description: ''
+  - name: --resource
+    summary: Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.
+    description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --resource-type
+    summary: 'Resource type (Ex: resourceTypeC).'
+    description: ''
+  - name: --select
+    summary: Select expression using OData notation.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --to
+    summary: ISO 8601 formatted timestamp specifying the end time of the interval to query.
+    description: ''
+  - name: --top
+    summary: Maximum number of records to return.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
 - uid: az_policy_state_summarize
   name: az policy state summarize
   summary: Summarize policy compliance states.
   description: ''
+  syntax: >-
+    az policy state summarize [--filter]
+                              [--from]
+                              [--management-group]
+                              [--namespace]
+                              [--parent]
+                              [--policy-assignment]
+                              [--policy-definition]
+                              [--policy-set-definition]
+                              [--resource]
+                              [--resource-group]
+                              [--resource-type]
+                              [--subscription]
+                              [--to]
+                              [--top]
   examples:
   - summary: Get latest non-compliant policy states summary at current subscription scope.
     syntax: az policy state summarize
@@ -142,33 +172,21 @@ directCommands:
     syntax: az policy state summarize --from "2018-03-08T00:00:00Z" --to "2018-03-15T00:00:00Z"
   - summary: Get latest non-compliant policy states summary in current subscription filtering results based on some property values.
     syntax: az policy state summarize --filter "(policyDefinitionAction eq 'deny' or policyDefinitionAction eq 'audit') and resourceLocation ne 'eastus'"
-  parameters:
+  optionalParameters:
   - name: --filter
     summary: Filter expression using OData notation.
     description: ''
   - name: --from
     summary: ISO 8601 formatted timestamp specifying the start time of the interval to query.
     description: ''
-  - name: --to
-    summary: ISO 8601 formatted timestamp specifying the end time of the interval to query.
-    description: ''
-  - name: --top
-    summary: Maximum number of records to return.
+  - name: --management-group -m
+    summary: Name of management group.
     description: ''
   - name: --namespace
     summary: 'Provider namespace (Ex: Microsoft.Provider).'
     description: ''
   - name: --parent
     summary: 'The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB).'
-    description: ''
-  - name: --resource
-    summary: Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.
-    description: ''
-  - name: --resource-type
-    summary: 'Resource type (Ex: resourceTypeC).'
-    description: ''
-  - name: --management-group -m
-    summary: Name of management group.
     description: ''
   - name: --policy-assignment -a
     summary: Name of policy assignment.
@@ -179,18 +197,25 @@ directCommands:
   - name: --policy-set-definition -s
     summary: Name of policy set definition.
     description: ''
+  - name: --resource
+    summary: Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments.
+    description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --resource-type
+    summary: 'Resource type (Ex: resourceTypeC).'
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --to
+    summary: ISO 8601 formatted timestamp specifying the end time of the interval to query.
+    description: ''
+  - name: --top
+    summary: Maximum number of records to return.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
 commands:
 - az_policy_state_list
 - az_policy_state_summarize
@@ -210,6 +235,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
   updated_at: 6/16/2020 5:44:37 AM

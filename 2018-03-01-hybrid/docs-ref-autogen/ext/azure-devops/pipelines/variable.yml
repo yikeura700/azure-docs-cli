@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_pipelines_variable
 name: az pipelines variable
 summary: Manage pipeline variables.
@@ -8,11 +8,22 @@ directCommands:
   name: az pipelines variable create
   summary: Add a variable to a pipeline.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable create --name
+                                 [--allow-override {false, true}]
+                                 [--detect {false, true}]
+                                 [--org]
+                                 [--pipeline-id]
+                                 [--pipeline-name]
+                                 [--project]
+                                 [--secret {false, true}]
+                                 [--value]
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: Name of the variable.
     description: ''
+  optionalParameters:
   - name: --allow-override
     parameterValueGroup: false, true
     summary: Indicates whether the value can be set at queue time.
@@ -44,11 +55,20 @@ directCommands:
   name: az pipelines variable delete
   summary: Delete a variable from pipeline.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable delete --name
+                                 [--detect {false, true}]
+                                 [--org]
+                                 [--pipeline-id]
+                                 [--pipeline-name]
+                                 [--project]
+                                 [--yes]
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: Name of the variable to delete.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -72,7 +92,13 @@ directCommands:
   name: az pipelines variable list
   summary: List the variables in a pipeline.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable list [--detect {false, true}]
+                               [--org]
+                               [--pipeline-id]
+                               [--pipeline-name]
+                               [--project]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -93,11 +119,24 @@ directCommands:
   name: az pipelines variable update
   summary: Update a variable in a pipeline.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable update --name
+                                 [--allow-override {false, true}]
+                                 [--detect {false, true}]
+                                 [--new-name]
+                                 [--org]
+                                 [--pipeline-id]
+                                 [--pipeline-name]
+                                 [--project]
+                                 [--prompt-value {false, true}]
+                                 [--secret {false, true}]
+                                 [--value]
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: Name of the variable.
     description: ''
+  optionalParameters:
   - name: --allow-override
     parameterValueGroup: false, true
     summary: Indicates whether the value can be set at queue time.

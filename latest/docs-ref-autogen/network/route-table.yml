@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_route_table
 name: az network route-table
 summary: Manage route tables.
@@ -8,10 +8,17 @@ directCommands:
   name: az network route-table create
   summary: Create a route table.
   description: ''
+  syntax: >-
+    az network route-table create --name
+                                  --resource-group
+                                  [--disable-bgp-route-propagation {false, true}]
+                                  [--location]
+                                  [--subscription]
+                                  [--tags]
   examples:
   - summary: Create a route table.
     syntax: az network route-table create -g MyResourceGroup -n MyRouteTable
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the route table.
@@ -20,6 +27,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --disable-bgp-route-propagation
     parameterValueGroup: false, true
     summary: Disable routes learned by BGP.
@@ -27,26 +35,26 @@ directCommands:
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_route_table_delete
   name: az network route-table delete
   summary: Delete a route table.
   description: ''
+  syntax: >-
+    az network route-table delete [--ids]
+                                  [--name]
+                                  [--resource-group]
+                                  [--subscription]
   examples:
   - summary: Delete a route table.
     syntax: az network route-table delete -g MyResourceGroup -n MyRouteTable
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -59,40 +67,39 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_route_table_list
   name: az network route-table list
   summary: List route tables.
   description: ''
+  syntax: >-
+    az network route-table list [--resource-group]
+                                [--subscription]
   examples:
   - summary: List all route tables in a subscription.
     syntax: az network route-table list -g MyResourceGroup
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_route_table_show
   name: az network route-table show
   summary: Get the details of a route table.
   description: ''
+  syntax: >-
+    az network route-table show [--expand]
+                                [--ids]
+                                [--name]
+                                [--resource-group]
+                                [--subscription]
   examples:
   - summary: Get the details of a route table.
     syntax: az network route-table show -g MyResourceGroup -n MyRouteTable
-  parameters:
+  optionalParameters:
   - name: --expand
     summary: Expands referenced resources.
     description: ''
@@ -108,26 +115,35 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_route_table_update
   name: az network route-table update
   summary: Update a route table.
   description: ''
+  syntax: >-
+    az network route-table update [--add]
+                                  [--disable-bgp-route-propagation {false, true}]
+                                  [--force-string]
+                                  [--ids]
+                                  [--name]
+                                  [--remove]
+                                  [--resource-group]
+                                  [--set]
+                                  [--subscription]
+                                  [--tags]
   examples:
   - summary: Update a route table to disable BGP route propogation.
     syntax: az network route-table update -g MyResourceGroup -n MyRouteTable --disable-bgp-route-propagation true
-  parameters:
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
   - name: --disable-bgp-route-propagation
     parameterValueGroup: false, true
     summary: Disable routes learned by BGP.
     description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -135,30 +151,22 @@ directCommands:
   - name: --name -n
     summary: Name of the route table.
     description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-    description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_route_table_create
 - az_network_route_table_delete
@@ -187,6 +195,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

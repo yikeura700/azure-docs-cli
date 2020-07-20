@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_devops_extension
 name: az devops extension
 summary: Manage extensions.
@@ -8,7 +8,12 @@ directCommands:
   name: az devops extension disable
   summary: Disable an extension.
   description: ''
-  parameters:
+  syntax: >-
+    az devops extension disable --extension-id
+                                --publisher-id
+                                [--detect {false, true}]
+                                [--org]
+  requiredParameters:
   - isRequired: true
     name: --extension-id
     summary: Extension Id. This will map to extension-name                           in the az devops extension search output.
@@ -17,6 +22,7 @@ directCommands:
     name: --publisher-id
     summary: Publisher Id. This will map to publisher-name                           in the az devops extension search output.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -28,7 +34,12 @@ directCommands:
   name: az devops extension enable
   summary: Enable an extension.
   description: ''
-  parameters:
+  syntax: >-
+    az devops extension enable --extension-id
+                               --publisher-id
+                               [--detect {false, true}]
+                               [--org]
+  requiredParameters:
   - isRequired: true
     name: --extension-id
     summary: Extension Id. This will map to extension-name                           in the az devops extension search output.
@@ -37,6 +48,7 @@ directCommands:
     name: --publisher-id
     summary: Publisher Id. This will map to publisher-name                           in the az devops extension search output.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -48,7 +60,12 @@ directCommands:
   name: az devops extension install
   summary: Install an extension.
   description: ''
-  parameters:
+  syntax: >-
+    az devops extension install --extension-id
+                                --publisher-id
+                                [--detect {false, true}]
+                                [--org]
+  requiredParameters:
   - isRequired: true
     name: --extension-id
     summary: Extension Id. This will map to extension-name                           in the az devops extension search output.
@@ -57,6 +74,7 @@ directCommands:
     name: --publisher-id
     summary: Publisher Id. This will map to publisher-name                           in the az devops extension search output.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -68,7 +86,12 @@ directCommands:
   name: az devops extension list
   summary: List extensions installed in an organization.
   description: ''
-  parameters:
+  syntax: >-
+    az devops extension list [--detect {false, true}]
+                             [--include-built-in {false, true}]
+                             [--include-disabled {false, true}]
+                             [--org]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -88,7 +111,8 @@ directCommands:
   name: az devops extension search
   summary: Search extensions from marketplace.
   description: ''
-  parameters:
+  syntax: az devops extension search --search-query
+  requiredParameters:
   - isRequired: true
     name: --search-query -q
     summary: Search term.
@@ -97,7 +121,12 @@ directCommands:
   name: az devops extension show
   summary: Get detail of single extension.
   description: ''
-  parameters:
+  syntax: >-
+    az devops extension show --extension-id
+                             --publisher-id
+                             [--detect {false, true}]
+                             [--org]
+  requiredParameters:
   - isRequired: true
     name: --extension-id
     summary: Extension Id. This will map to extension-name                           in the az devops extension search output.
@@ -106,6 +135,7 @@ directCommands:
     name: --publisher-id
     summary: Publisher Id. This will map to publisher-name                           in the az devops extension search output.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -117,7 +147,13 @@ directCommands:
   name: az devops extension uninstall
   summary: Uninstall an extension.
   description: ''
-  parameters:
+  syntax: >-
+    az devops extension uninstall --extension-id
+                                  --publisher-id
+                                  [--detect {false, true}]
+                                  [--org]
+                                  [--yes]
+  requiredParameters:
   - isRequired: true
     name: --extension-id
     summary: Extension Id. This will map to extension-name                           in the az devops extension search output.
@@ -126,6 +162,7 @@ directCommands:
     name: --publisher-id
     summary: Publisher Id. This will map to publisher-name                           in the az devops extension search output.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

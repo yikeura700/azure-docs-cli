@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_cosmosdb_mongodb_collection_throughput
 name: az cosmosdb mongodb collection throughput
 summary: Manage throughput of MongoDB collection under an Azure Cosmos DB account.
@@ -8,7 +8,13 @@ directCommands:
   name: az cosmosdb mongodb collection throughput show
   summary: Get the throughput of the MongoDB collection under an Azure Cosmos DB MongoDB database.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb mongodb collection throughput show --account-name
+                                                   --database-name
+                                                   --name
+                                                   --resource-group
+                                                   [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -25,20 +31,23 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_mongodb_collection_throughput_update
   name: az cosmosdb mongodb collection throughput update
   summary: Update the throughput of the MongoDB collection under an Azure Cosmos DB MongoDB database.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb mongodb collection throughput update --account-name
+                                                     --database-name
+                                                     --name
+                                                     --resource-group
+                                                     --throughput
+                                                     [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -59,15 +68,11 @@ directCommands:
     name: --throughput
     summary: The throughput of MongoDB collection (RU/s).
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 commands:
 - az_cosmosdb_mongodb_collection_throughput_show
 - az_cosmosdb_mongodb_collection_throughput_update
@@ -87,6 +92,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/1a803c49df1c2a27dfcdc079168f3bc2baf02c81/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   updated_at: 4/17/2020 2:16:59 AM

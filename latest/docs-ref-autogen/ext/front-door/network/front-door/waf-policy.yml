@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_front-door_az_network_front_door_waf_policy
 name: az network front-door waf-policy
 summary: Manage WebApplication Firewall (WAF) policies.
@@ -8,7 +8,16 @@ directCommands:
   name: az network front-door waf-policy create
   summary: Create a WAF policy.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door waf-policy create --name
+                                            --resource-group
+                                            [--custom-block-response-body]
+                                            [--custom-block-response-status-code]
+                                            [--disabled {false, true}]
+                                            [--mode {Detection, Prevention}]
+                                            [--redirect-url]
+                                            [--tags]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the WAF policy.
@@ -17,6 +26,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --custom-block-response-body
     summary: Body to return for blocked requests.
     description: ''
@@ -41,7 +51,10 @@ directCommands:
   name: az network front-door waf-policy delete
   summary: Delete a WAF policy.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door waf-policy delete --name
+                                            --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the WAF policy.
@@ -54,7 +67,8 @@ directCommands:
   name: az network front-door waf-policy list
   summary: List WAF policies.
   description: ''
-  parameters:
+  syntax: az network front-door waf-policy list --resource-group
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -63,7 +77,10 @@ directCommands:
   name: az network front-door waf-policy show
   summary: Get the details of a WAF policy.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door waf-policy show --name
+                                          --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the WAF policy.
@@ -76,7 +93,20 @@ directCommands:
   name: az network front-door waf-policy update
   summary: Update settings of a WAF policy.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door waf-policy update --name
+                                            --resource-group
+                                            [--add]
+                                            [--custom-block-response-body]
+                                            [--custom-block-response-status-code]
+                                            [--disabled {false, true}]
+                                            [--force-string]
+                                            [--mode {Detection, Prevention}]
+                                            [--redirect-url]
+                                            [--remove]
+                                            [--set]
+                                            [--tags]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the WAF policy.
@@ -84,6 +114,10 @@ directCommands:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --custom-block-response-body
     summary: Body to return for blocked requests.
@@ -95,6 +129,9 @@ directCommands:
     parameterValueGroup: false, true
     summary: Create in a disabled state.
     description: ''
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+    description: ''
   - name: --mode
     parameterValueGroup: Detection, Prevention
     summary: Firewall policy mode.
@@ -102,20 +139,14 @@ directCommands:
   - name: --redirect-url
     summary: URL used for redirect rule action.
     description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-    description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
+    description: ''
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
 commands:
 - ext_front-door_az_network_front_door_waf_policy_create

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_internet-analyzer_az_internet_analyzer_preconfigured_endpoint
 name: az internet-analyzer preconfigured-endpoint
 summary: Commands to manage preconfigured endpoints.
@@ -8,13 +8,16 @@ directCommands:
   name: az internet-analyzer preconfigured-endpoint list
   summary: List preconfigured endpoints.
   description: ''
+  syntax: >-
+    az internet-analyzer preconfigured-endpoint list --profile-name
+                                                     --resource-group
   examples:
   - summary: Gets a list of Preconfigured Endpoints
     syntax: >-
       az internet-analyzer preconfigured-endpoint list --resource-group "MyResourceGroup" \
 
       --profile-name "MyProfile"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --profile-name
     summary: The name of the Internet Analyzer profile for which to list preconfigured endpoints.

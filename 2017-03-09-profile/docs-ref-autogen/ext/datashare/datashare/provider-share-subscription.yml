@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datashare_az_datashare_provider_share_subscription
 name: az datashare provider-share-subscription
 summary: Commands for providers to manage datashare share subscriptions.
@@ -8,10 +8,14 @@ directCommands:
   name: az datashare provider-share-subscription list
   summary: List share subscriptions in a provider share.
   description: ''
+  syntax: >-
+    az datashare provider-share-subscription list --account-name
+                                                  --resource-group
+                                                  --share-name
   examples:
   - summary: List share subscriptions
     syntax: az datashare provider-share-subscription list --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -28,10 +32,15 @@ directCommands:
   name: az datashare provider-share-subscription reinstate
   summary: Reinstate a share subscription in a provider share.
   description: ''
+  syntax: >-
+    az datashare provider-share-subscription reinstate --account-name
+                                                       --resource-group
+                                                       --share-name
+                                                       --share-subscription
   examples:
   - summary: Reinstate a share subscription
     syntax: az datashare provider-share-subscription reinstate --account-name MyAccount --share-subscription 00000000-0000-0000-0000-000000000000 --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -52,10 +61,16 @@ directCommands:
   name: az datashare provider-share-subscription revoke
   summary: Revoke a share subscription in a provider share.
   description: ''
+  syntax: >-
+    az datashare provider-share-subscription revoke --account-name
+                                                    --resource-group
+                                                    --share-name
+                                                    --share-subscription
+                                                    [--no-wait]
   examples:
   - summary: Revoke a share subscription
     syntax: az datashare provider-share-subscription revoke --account-name MyAccount --share-subscription 00000000-0000-0000-0000-000000000000 --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -72,6 +87,7 @@ directCommands:
     name: --share-subscription
     summary: To locate share subscription.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -79,10 +95,15 @@ directCommands:
   name: az datashare provider-share-subscription show
   summary: Show a share subscription in a provider share.
   description: ''
+  syntax: >-
+    az datashare provider-share-subscription show --account-name
+                                                  --resource-group
+                                                  --share-name
+                                                  --share-subscription
   examples:
   - summary: Show a share subscription
     syntax: az datashare provider-share-subscription show --account-name MyAccount --share-subscription 00000000-0000-0000-0000-000000000000 --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -103,10 +124,22 @@ directCommands:
   name: az datashare provider-share-subscription wait
   summary: Place the CLI in a waiting state until a condition of the datashare provider share subscription is met.
   description: ''
+  syntax: >-
+    az datashare provider-share-subscription wait --account-name
+                                                  --resource-group
+                                                  --share-name
+                                                  --share-subscription
+                                                  [--created]
+                                                  [--custom]
+                                                  [--deleted]
+                                                  [--exists]
+                                                  [--interval]
+                                                  [--timeout]
+                                                  [--updated]
   examples:
   - summary: Pause executing next line of CLI script until the datashare provider share subscription is successfully provisioned.
     syntax: az datashare provider-share-subscription wait --account-name MyAccount --share-subscription 00000000-0000-0000-0000-000000000000 --resource-group MyResourceGroup --share-name MyShare --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -123,6 +156,7 @@ directCommands:
     name: --share-subscription
     summary: To locate share subscription.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

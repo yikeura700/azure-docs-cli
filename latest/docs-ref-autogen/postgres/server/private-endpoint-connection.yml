@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_postgres_server_private_endpoint_connection
 name: az postgres server private-endpoint-connection
 summary: Manage PostgreSQL server private endpoint connections.
@@ -8,18 +8,26 @@ directCommands:
   name: az postgres server private-endpoint-connection approve
   summary: Approve the specified private endpoint connection associated with a PostgreSQL server.
   description: ''
-  parameters:
+  syntax: >-
+    az postgres server private-endpoint-connection approve [--description]
+                                                           [--id]
+                                                           [--ids]
+                                                           [--name]
+                                                           [--resource-group]
+                                                           [--server-name]
+                                                           [--subscription]
+  optionalParameters:
   - name: --description
     summary: Comments for approve operation.
     description: ''
   - name: --id
     summary: The ID of the private endpoint connection associated with the Server. If specified --server-name/-s and --name/-n, this should be omitted.
     description: ''
-  - name: --name -n
-    summary: The name of the private endpoint connection associated with the Server. Required if --id is not specified.
-    description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: The name of the private endpoint connection associated with the Server. Required if --id is not specified.
     description: ''
   - name: --resource-group -g
     summary: The resource group name of specified server.
@@ -34,15 +42,22 @@ directCommands:
   name: az postgres server private-endpoint-connection delete
   summary: Delete the specified private endpoint connection associated with a PostgreSQL server.
   description: ''
-  parameters:
+  syntax: >-
+    az postgres server private-endpoint-connection delete [--id]
+                                                          [--ids]
+                                                          [--name]
+                                                          [--resource-group]
+                                                          [--server-name]
+                                                          [--subscription]
+  optionalParameters:
   - name: --id
     summary: The ID of the private endpoint connection associated with the Server. If specified --server-name/-s and --name/-n, this should be omitted.
     description: ''
-  - name: --name -n
-    summary: The name of the private endpoint connection associated with the Server. Required if --id is not specified.
-    description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: The name of the private endpoint connection associated with the Server. Required if --id is not specified.
     description: ''
   - name: --resource-group -g
     summary: The resource group name of specified server.
@@ -57,18 +72,26 @@ directCommands:
   name: az postgres server private-endpoint-connection reject
   summary: Reject the specified private endpoint connection associated with a PostgreSQL server.
   description: ''
-  parameters:
+  syntax: >-
+    az postgres server private-endpoint-connection reject [--description]
+                                                          [--id]
+                                                          [--ids]
+                                                          [--name]
+                                                          [--resource-group]
+                                                          [--server-name]
+                                                          [--subscription]
+  optionalParameters:
   - name: --description
     summary: Comments for reject operation.
     description: ''
   - name: --id
     summary: The ID of the private endpoint connection associated with the Server. If specified --server-name/-s and --name/-n, this should be omitted.
     description: ''
-  - name: --name -n
-    summary: The name of the private endpoint connection associated with the Server. Required if --id is not specified.
-    description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: The name of the private endpoint connection associated with the Server. Required if --id is not specified.
     description: ''
   - name: --resource-group -g
     summary: The resource group name of specified server.
@@ -83,15 +106,22 @@ directCommands:
   name: az postgres server private-endpoint-connection show
   summary: Show details of a private endpoint connection associated with a PostgreSQL server.
   description: ''
-  parameters:
+  syntax: >-
+    az postgres server private-endpoint-connection show [--id]
+                                                        [--ids]
+                                                        [--name]
+                                                        [--resource-group]
+                                                        [--server-name]
+                                                        [--subscription]
+  optionalParameters:
   - name: --id
     summary: The ID of the private endpoint connection associated with the Server. If specified --server-name/-s and --name/-n, this should be omitted.
     description: ''
-  - name: --name -n
-    summary: The name of the private endpoint connection associated with the Server. Required if --id is not specified.
-    description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: The name of the private endpoint connection associated with the Server. Required if --id is not specified.
     description: ''
   - name: --resource-group -g
     summary: The resource group name of specified server.

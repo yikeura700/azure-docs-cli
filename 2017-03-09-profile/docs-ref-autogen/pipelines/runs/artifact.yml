@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_pipelines_runs_artifact
 name: az pipelines runs artifact
 summary: Manage pipeline run artifacts.
@@ -8,7 +8,15 @@ directCommands:
   name: az pipelines runs artifact download
   summary: Download a pipeline artifact.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines runs artifact download --artifact-name
+                                        --path
+                                        --run-id
+                                        [--detect {false, true}]
+                                        [--org]
+                                        [--project]
+                                        [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --artifact-name
     summary: Name of the artifact to download.
@@ -21,6 +29,7 @@ directCommands:
     name: --run-id
     summary: ID of the run that the artifact is associated to.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -38,11 +47,18 @@ directCommands:
   name: az pipelines runs artifact list
   summary: List artifacts associated with a run.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines runs artifact list --run-id
+                                    [--detect {false, true}]
+                                    [--org]
+                                    [--project]
+                                    [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --run-id
     summary: ID of the run that the artifact is associated to.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -60,7 +76,15 @@ directCommands:
   name: az pipelines runs artifact upload
   summary: Upload a pipeline artifact.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines runs artifact upload --artifact-name
+                                      --path
+                                      --run-id
+                                      [--detect {false, true}]
+                                      [--org]
+                                      [--project]
+                                      [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --artifact-name
     summary: Name of the artifact to upload.
@@ -73,6 +97,7 @@ directCommands:
     name: --run-id
     summary: ID of the run that the artifact is associated to.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

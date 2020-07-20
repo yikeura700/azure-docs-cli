@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_storage_fs_directory
 name: az storage fs directory
 summary: Manage directories in Azure Data Lake Storage Gen2 account.
@@ -8,12 +8,25 @@ directCommands:
   name: az storage fs directory create
   summary: Create a directory in ADLS Gen2 file system.
   description: ''
+  syntax: >-
+    az storage fs directory create --file-system
+                                   --name
+                                   [--account-key]
+                                   [--account-name]
+                                   [--auth-mode {key, login}]
+                                   [--connection-string]
+                                   [--metadata]
+                                   [--permissions]
+                                   [--sas-token]
+                                   [--subscription]
+                                   [--timeout]
+                                   [--umask]
   examples:
   - summary: Create a directory in ADLS Gen2 file system.
     syntax: az storage fs directory create -n dir -f myfilesystem --account-name myadlsaccount --account-key 0000-0000
   - summary: Create a directory in ADLS Gen2 file system through connection string.
     syntax: az storage fs directory create -n dir -f myfilesystem --connection-string myconnectionstring
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --file-system -f
     summary: File system name.
@@ -22,9 +35,19 @@ directCommands:
     name: --name -n
     summary: The name of directory.
     description: ''
+  optionalParameters:
+  - name: --account-key
+    summary: 'Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.'
+    description: ''
+  - name: --account-name
+    summary: 'Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.'
+    description: ''
   - name: --auth-mode
     parameterValueGroup: key, login
     summary: 'The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.'
+    description: ''
+  - name: --connection-string
+    summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --metadata
     summary: Metadata in space-separated key=value pairs. This overwrites any existing metadata.
@@ -32,17 +55,56 @@ directCommands:
   - name: --permissions
     summary: POSIX access permissions for the file owner, the file owning group, and others. Each class may be granted read, write, or execute permission. The sticky bit is also supported. Both symbolic (rwxrw-rw-) and 4-digit octal notation (e.g. 0766) are supported. For more information, please refer to <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control#levels-of-permission">https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control#levels-of-permission</a>.
     description: ''
+  - name: --sas-token
+    summary: 'A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.'
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --timeout
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   - name: --umask
     summary: When creating a file or directory and the parent folder does not have a default ACL, the umask restricts the permissions of the file or directory to be created. The resulting permission is given by p & ^u, where p is the permission and u is the umask. For more information, please refer to <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control#umask">https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control#umask</a>.
     description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
+- uid: az_storage_fs_directory_delete
+  name: az storage fs directory delete
+  summary: Delete a directory in ADLS Gen2 file system.
+  description: ''
+  syntax: >-
+    az storage fs directory delete --file-system
+                                   --name
+                                   [--account-key]
+                                   [--account-name]
+                                   [--auth-mode {key, login}]
+                                   [--connection-string]
+                                   [--sas-token]
+                                   [--subscription]
+                                   [--timeout]
+                                   [--yes]
+  examples:
+  - summary: Delete a directory in ADLS Gen2 file system.
+    syntax: az storage fs directory delete -n dir -f myfilesystem --account-name myadlsaccount --account-key 0000-0000
+  requiredParameters:
+  - isRequired: true
+    name: --file-system -f
+    summary: File system name.
+    description: ''
+  - isRequired: true
+    name: --name -n
+    summary: The name of directory.
+    description: ''
+  optionalParameters:
   - name: --account-key
     summary: 'Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.'
     description: ''
   - name: --account-name
     summary: 'Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.'
+    description: ''
+  - name: --auth-mode
+    parameterValueGroup: key, login
+    summary: 'The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.'
     description: ''
   - name: --connection-string
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
@@ -52,32 +114,6 @@ directCommands:
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
-- uid: az_storage_fs_directory_delete
-  name: az storage fs directory delete
-  summary: Delete a directory in ADLS Gen2 file system.
-  description: ''
-  examples:
-  - summary: Delete a directory in ADLS Gen2 file system.
-    syntax: az storage fs directory delete -n dir -f myfilesystem --account-name myadlsaccount --account-key 0000-0000
-  parameters:
-  - isRequired: true
-    name: --file-system -f
-    summary: File system name.
-    description: ''
-  - isRequired: true
-    name: --name -n
-    summary: The name of directory.
-    description: ''
-  - name: --auth-mode
-    parameterValueGroup: key, login
-    summary: 'The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.'
     description: ''
   - name: --timeout
     summary: Request timeout in seconds. Applies to each call to the service.
@@ -85,35 +121,25 @@ directCommands:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
-  - name: --account-key
-    summary: 'Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.'
-    description: ''
-  - name: --account-name
-    summary: 'Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.'
-    description: ''
-  - name: --connection-string
-    summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
-    description: ''
-  - name: --sas-token
-    summary: 'A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.'
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_fs_directory_exists
   name: az storage fs directory exists
   summary: Check for the existence of a directory in ADLS Gen2 file system.
   description: ''
+  syntax: >-
+    az storage fs directory exists --file-system
+                                   --name
+                                   [--account-key]
+                                   [--account-name]
+                                   [--auth-mode {key, login}]
+                                   [--connection-string]
+                                   [--sas-token]
+                                   [--subscription]
+                                   [--timeout]
   examples:
   - summary: Check for the existence of a directory in ADLS Gen2 file system.
     syntax: az storage fs directory exists -n dir -f myfilesystem --account-name myadlsaccount --account-key 0000-0000
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --file-system -f
     summary: File system name.
@@ -122,18 +148,16 @@ directCommands:
     name: --name -n
     summary: The name of directory.
     description: ''
-  - name: --auth-mode
-    parameterValueGroup: key, login
-    summary: 'The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.'
-    description: ''
-  - name: --timeout
-    summary: Request timeout in seconds. Applies to each call to the service.
-    description: ''
+  optionalParameters:
   - name: --account-key
     summary: 'Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.'
     description: ''
   - name: --account-name
     summary: 'Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.'
+    description: ''
+  - name: --auth-mode
+    parameterValueGroup: key, login
+    summary: 'The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.'
     description: ''
   - name: --connection-string
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
@@ -144,29 +168,49 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --timeout
+    summary: Request timeout in seconds. Applies to each call to the service.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_fs_directory_list
   name: az storage fs directory list
   summary: List directories in ADLS Gen2 file system.
   description: ''
+  syntax: >-
+    az storage fs directory list --file-system
+                                 [--account-key]
+                                 [--account-name]
+                                 [--auth-mode {key, login}]
+                                 [--connection-string]
+                                 [--num-results]
+                                 [--path]
+                                 [--recursive {false, true}]
+                                 [--sas-token]
+                                 [--subscription]
+                                 [--timeout]
   examples:
   - summary: List directories in ADLS Gen2 file system.
     syntax: az storage fs directory list -f myfilesystem --account-name myadlsaccount --account-key 0000-0000
   - summary: List directories in "dir/" for ADLS Gen2 file system.
     syntax: az storage fs directory list --path dir -f myfilesystem --account-name myadlsaccount --account-key 0000-0000
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --file-system -f
     summary: File system name.
     description: ''
+  optionalParameters:
+  - name: --account-key
+    summary: 'Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.'
+    description: ''
+  - name: --account-name
+    summary: 'Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.'
+    description: ''
   - name: --auth-mode
     parameterValueGroup: key, login
     summary: 'The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.'
+    description: ''
+  - name: --connection-string
+    summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --num-results
     summary: Specify the maximum number of results to return.
@@ -179,38 +223,35 @@ directCommands:
     parameterValueGroup: false, true
     summary: Look into sub-directories recursively when set to true.
     description: ''
-  - name: --timeout
-    summary: Request timeout in seconds. Applies to each call to the service.
-    description: ''
-  - name: --account-key
-    summary: 'Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.'
-    description: ''
-  - name: --account-name
-    summary: 'Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.'
-    description: ''
-  - name: --connection-string
-    summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
-    description: ''
   - name: --sas-token
     summary: 'A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.'
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --timeout
+    summary: Request timeout in seconds. Applies to each call to the service.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_fs_directory_move
   name: az storage fs directory move
   summary: Move a directory in ADLS Gen2 file system.
   description: ''
+  syntax: >-
+    az storage fs directory move --file-system
+                                 --name
+                                 --new-directory
+                                 [--account-key]
+                                 [--account-name]
+                                 [--auth-mode {key, login}]
+                                 [--connection-string]
+                                 [--sas-token]
+                                 [--subscription]
+                                 [--timeout]
   examples:
   - summary: Move a directory a directory in ADLS Gen2 file system.
     syntax: az storage fs directory move --new-directory newfs/dir -n dir -f myfilesystem --account-name myadlsaccount --account-key 0000-0000
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --file-system -f
     summary: File system name.
@@ -223,18 +264,16 @@ directCommands:
     name: --new-directory -d
     summary: 'The new directory name the users want to move to. The value must have the following format: "{filesystem}/{directory}/{subdirectory}".'
     description: ''
-  - name: --auth-mode
-    parameterValueGroup: key, login
-    summary: 'The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.'
-    description: ''
-  - name: --timeout
-    summary: Request timeout in seconds. Applies to each call to the service.
-    description: ''
+  optionalParameters:
   - name: --account-key
     summary: 'Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.'
     description: ''
   - name: --account-name
     summary: 'Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.'
+    description: ''
+  - name: --auth-mode
+    parameterValueGroup: key, login
+    summary: 'The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.'
     description: ''
   - name: --connection-string
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
@@ -245,22 +284,30 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --timeout
+    summary: Request timeout in seconds. Applies to each call to the service.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_fs_directory_show
   name: az storage fs directory show
   summary: Show properties of a directory in ADLS Gen2 file system.
   description: ''
+  syntax: >-
+    az storage fs directory show --file-system
+                                 --name
+                                 [--account-key]
+                                 [--account-name]
+                                 [--auth-mode {key, login}]
+                                 [--connection-string]
+                                 [--sas-token]
+                                 [--subscription]
+                                 [--timeout]
   examples:
   - summary: Show properties of a directory in ADLS Gen2 file system.
     syntax: az storage fs directory show -n dir -f myfilesystem --account-name myadlsaccount --account-key 0000-0000
   - summary: Show properties of a subdirectory in ADLS Gen2 file system.
     syntax: az storage fs directory show -n dir/subdir -f myfilesystem --account-name myadlsaccount --account-key 0000-0000
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --file-system -f
     summary: File system name.
@@ -269,18 +316,16 @@ directCommands:
     name: --name -n
     summary: The name of directory.
     description: ''
-  - name: --auth-mode
-    parameterValueGroup: key, login
-    summary: 'The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.'
-    description: ''
-  - name: --timeout
-    summary: Request timeout in seconds. Applies to each call to the service.
-    description: ''
+  optionalParameters:
   - name: --account-key
     summary: 'Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.'
     description: ''
   - name: --account-name
     summary: 'Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.'
+    description: ''
+  - name: --auth-mode
+    parameterValueGroup: key, login
+    summary: 'The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.'
     description: ''
   - name: --connection-string
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
@@ -291,12 +336,10 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --timeout
+    summary: Request timeout in seconds. Applies to each call to the service.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 commands:
 - az_storage_fs_directory_create
 - az_storage_fs_directory_delete
@@ -323,6 +366,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
   updated_at: 6/4/2020 1:53:34 PM

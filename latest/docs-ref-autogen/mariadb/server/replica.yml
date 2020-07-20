@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_mariadb_server_replica
 name: az mariadb server replica
 summary: Manage read replicas.
@@ -8,6 +8,14 @@ directCommands:
   name: az mariadb server replica create
   summary: Create a read replica for a server.
   description: ''
+  syntax: >-
+    az mariadb server replica create --name
+                                     --resource-group
+                                     --source-server
+                                     [--location]
+                                     [--no-wait]
+                                     [--sku-name]
+                                     [--subscription]
   examples:
   - summary: Create a read replica 'testreplsvr' for 'testsvr'.
     syntax: az mariadb server replica create -n testreplsvr -g testgroup -s testsvr
@@ -15,7 +23,7 @@ directCommands:
     syntax: >-
       az mariadb server replica create -n testreplsvr -g testgroup \
           -s "/subscriptions/${SubID}/resourceGroups/${ResourceGroup}/providers/Microsoft.DBforMariaDB/servers/testsvr2"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
@@ -28,6 +36,7 @@ directCommands:
     name: --source-server -s
     summary: The name or resource ID of the master server to the create replica for.
     description: ''
+  optionalParameters:
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. If not provided, the create replica will be in the same location as the master server.'
     description: ''
@@ -44,10 +53,15 @@ directCommands:
   name: az mariadb server replica list
   summary: List all read replicas for a given server.
   description: ''
+  syntax: >-
+    az mariadb server replica list [--ids]
+                                   [--resource-group]
+                                   [--server-name]
+                                   [--subscription]
   examples:
   - summary: List all read replicas for master server 'testsvr'.
     syntax: az mariadb server replica list -g testgroup -s testsvr
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -64,13 +78,16 @@ directCommands:
   name: az mariadb server replica stop
   summary: Stop replication to a read replica and make it a read/write server.
   description: ''
+  syntax: >-
+    az mariadb server replica stop [--ids]
+                                   [--name]
+                                   [--resource-group]
+                                   [--subscription]
+                                   [--yes]
   examples:
   - summary: Stop replication to 'testreplsvr' and make it a read/write server.
     syntax: az mariadb server replica stop -g testgroup -n testreplsvr
-  parameters:
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -82,6 +99,9 @@ directCommands:
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
     description: ''
 commands:
 - az_mariadb_server_replica_create

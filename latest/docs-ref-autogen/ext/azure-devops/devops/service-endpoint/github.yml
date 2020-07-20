@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_devops_service_endpoint_github
 name: az devops service-endpoint github
 summary: Manage GitHub service endpoints/connections.
@@ -8,7 +8,13 @@ directCommands:
   name: az devops service-endpoint github create
   summary: Create a GitHub service endpoint.
   description: For automation, set GitHub PAT token in AZURE_DEVOPS_EXT_GITHUB_PAT environment variable. You can learn more about this at <a href="https://aka.ms/azure-devops-cli-service-endpoint">https://aka.ms/azure-devops-cli-service-endpoint</a>.
-  parameters:
+  syntax: >-
+    az devops service-endpoint github create --github-url
+                                             --name
+                                             [--detect {false, true}]
+                                             [--org]
+                                             [--project]
+  requiredParameters:
   - isRequired: true
     name: --github-url
     summary: Url for github for creating service endpoint.
@@ -17,6 +23,7 @@ directCommands:
     name: --name
     summary: Name of service endpoint to create.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

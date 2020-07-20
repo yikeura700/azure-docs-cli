@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_boards_work_item_relation
 name: az boards work-item relation
 summary: Manage work item relations.
@@ -8,7 +8,14 @@ directCommands:
   name: az boards work-item relation add
   summary: Add relation(s) to work item.
   description: ''
-  parameters:
+  syntax: >-
+    az boards work-item relation add --id
+                                     --relation-type
+                                     --target-id
+                                     [--detect {false, true}]
+                                     [--org]
+                                     [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: The ID of the work item.
@@ -21,6 +28,7 @@ directCommands:
     name: --target-id
     summary: 'ID(s) of work-items to create relation with.                          Multiple values can be passed comma separated. Example: 1,2.'
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -35,7 +43,11 @@ directCommands:
   name: az boards work-item relation list-type
   summary: List work item relations supported in the organization.
   description: ''
-  parameters:
+  syntax: >-
+    az boards work-item relation list-type [--detect {false, true}]
+                                           [--org]
+                                           [--subscription]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -50,7 +62,15 @@ directCommands:
   name: az boards work-item relation remove
   summary: Remove relation(s) from work item.
   description: ''
-  parameters:
+  syntax: >-
+    az boards work-item relation remove --id
+                                        --relation-type
+                                        --target-id
+                                        [--detect {false, true}]
+                                        [--org]
+                                        [--subscription]
+                                        [--yes]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: The ID of the work item.
@@ -63,6 +83,7 @@ directCommands:
     name: --target-id
     summary: 'ID(s) of work-items to remove relation from.                          Multiple values can be passed comma separated. Example: 1,2.'
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -70,21 +91,27 @@ directCommands:
   - name: --org --organization
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href="https://dev.azure.com/MyOrganizationName/">https://dev.azure.com/MyOrganizationName/</a>.'
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
     description: ''
 - uid: az_boards_work_item_relation_show
   name: az boards work-item relation show
   summary: Get work item, fill relations with friendly name.
   description: ''
-  parameters:
+  syntax: >-
+    az boards work-item relation show --id
+                                      [--detect {false, true}]
+                                      [--org]
+                                      [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: The ID of the work item.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

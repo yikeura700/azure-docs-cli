@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_csvmware_az_csvmware_resource_pool
 name: az csvmware resource-pool
 summary: Manage VMware resource pools.
@@ -8,10 +8,13 @@ directCommands:
   name: az csvmware resource-pool list
   summary: List details of resource pools in a private cloud.
   description: ''
+  syntax: >-
+    az csvmware resource-pool list --location
+                                   --private-cloud
   examples:
   - summary: List details of resource pools.
     syntax: az csvmware resource-pool list -p MyPrivateCloud --location eastus
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: Region in which the private cloud is present.
@@ -24,10 +27,14 @@ directCommands:
   name: az csvmware resource-pool show
   summary: Get the details of a resource pool in a private cloud.
   description: ''
+  syntax: >-
+    az csvmware resource-pool show --location
+                                   --name
+                                   --private-cloud
   examples:
   - summary: Get the details of a resource pool.
     syntax: az csvmware resource-pool show -n MyResourcePool -p MyPrivateCloud --location eastus
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: Region in which the private cloud is present.

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_support_az_support_services
 name: az support services
 summary: Azure services and related problem categories.
@@ -8,18 +8,19 @@ directCommands:
   name: az support services list
   summary: Lists all the Azure services available for support ticket creation. Always use the service and it's corresponding problem classification(s) obtained programmatically for support ticket creation. This practice ensures that you always have the most recent set of service and problem classification Ids.
   description: ''
+  syntax: az support services list
   examples:
   - summary: Gets list of services for which a support ticket can be created.
     syntax: az support services list
-  parameters: []
 - uid: ext_support_az_support_services_show
   name: az support services show
   summary: Gets a specific Azure service for support ticket creation.
   description: ''
+  syntax: az support services show --service-name
   examples:
   - summary: Gets details of Azure service.
     syntax: az support services show --service-name "ServiceNameGuid"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --service-name
     summary: Name of Azure service.

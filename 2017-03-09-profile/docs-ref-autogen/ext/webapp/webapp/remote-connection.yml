@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_webapp_az_webapp_remote_connection
 name: az webapp remote-connection
 summary: Create a remote connection using a tcp tunnel to your web app.
@@ -8,7 +8,12 @@ directCommands:
   name: az webapp remote-connection create
   summary: Creates a remote connection using a tcp tunnel to your web app.
   description: ''
-  parameters:
+  syntax: >-
+    az webapp remote-connection create --name
+                                       --resource-group
+                                       [--port]
+                                       [--slot]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the webapp to connect to.
@@ -17,6 +22,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --port -p
     summary: 'Port for the remote connection. Default: Random available port.'
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_codespaces_az_codespace_location
 name: az codespace location
 summary: Information on available regions.
@@ -8,12 +8,13 @@ directCommands:
   name: az codespace location list
   summary: List available regions.
   description: ''
-  parameters: []
+  syntax: az codespace location list
 - uid: ext_codespaces_az_codespace_location_show
   name: az codespace location show
   summary: Show details of a region.
   description: ''
-  parameters:
+  syntax: az codespace location show --name
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the region.

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-firewall_az_network_firewall_application_rule_collection
 name: az network firewall application-rule collection
 summary: Manage and configure Azure Firewall application rule collections.
@@ -8,7 +8,11 @@ directCommands:
   name: az network firewall application-rule collection delete
   summary: Delete an Azure Firewall application rule collection.
   description: ''
-  parameters:
+  syntax: >-
+    az network firewall application-rule collection delete --collection-name
+                                                           --firewall-name
+                                                           --resource-group
+  requiredParameters:
   - isRequired: true
     name: --collection-name -c
     summary: Name of the rule collection.
@@ -25,7 +29,10 @@ directCommands:
   name: az network firewall application-rule collection list
   summary: List Azure Firewall application rule collections.
   description: ''
-  parameters:
+  syntax: >-
+    az network firewall application-rule collection list --firewall-name
+                                                         --resource-group
+  requiredParameters:
   - isRequired: true
     name: --firewall-name -f
     summary: Azure Firewall name.
@@ -38,7 +45,11 @@ directCommands:
   name: az network firewall application-rule collection show
   summary: Get the details of an Azure Firewall application rule collection.
   description: ''
-  parameters:
+  syntax: >-
+    az network firewall application-rule collection show --collection-name
+                                                         --firewall-name
+                                                         --resource-group
+  requiredParameters:
   - isRequired: true
     name: --collection-name -c
     summary: Name of the rule collection.

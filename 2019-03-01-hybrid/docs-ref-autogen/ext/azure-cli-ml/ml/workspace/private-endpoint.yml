@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-ml_az_ml_workspace_private_endpoint
 name: az ml workspace private-endpoint
 summary: Workspace private endpoint subgroup commands.
@@ -8,7 +8,19 @@ directCommands:
   name: az ml workspace private-endpoint add
   summary: Add private endpoint to a workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml workspace private-endpoint add [--output-metadata-file]
+                                         [--path]
+                                         [--pe-auto-approval]
+                                         [--pe-name]
+                                         [--pe-resource-group]
+                                         [--pe-subnet-name]
+                                         [--pe-subscription-id]
+                                         [--pe-vnet-name]
+                                         [--resource-group]
+                                         [--subscription-id]
+                                         [--workspace-name]
+  optionalParameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
     description: ''
@@ -48,7 +60,10 @@ directCommands:
   name: az ml workspace private-endpoint delete
   summary: Delete the specified private endpoint Connection in the workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml workspace private-endpoint delete [--output-metadata-file]
+                                            [--resource-id]
+  optionalParameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
     description: ''
@@ -59,7 +74,13 @@ directCommands:
   name: az ml workspace private-endpoint list
   summary: List all private endpoints in a workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml workspace private-endpoint list [--output-metadata-file]
+                                          [--path]
+                                          [--resource-group]
+                                          [--subscription-id]
+                                          [--workspace-name]
+  optionalParameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
     description: ''

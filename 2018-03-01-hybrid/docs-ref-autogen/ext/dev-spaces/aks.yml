@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_dev-spaces_az_aks
 name: az aks
 summary: Manage Azure Kubernetes Services.
@@ -8,6 +8,13 @@ directCommands:
   name: az aks use-dev-spaces
   summary: Use Azure Dev Spaces with a managed Kubernetes cluster.
   description: ''
+  syntax: >-
+    az aks use-dev-spaces --name
+                          --resource-group
+                          [--endpoint {None, Private, Public}]
+                          [--space]
+                          [--update]
+                          [--yes]
   examples:
   - summary: Use Azure Dev Spaces with a managed Kubernetes cluster, interactively selecting a dev space.
     syntax: az aks use-dev-spaces -g my-aks-group -n my-aks
@@ -17,7 +24,7 @@ directCommands:
     syntax: az aks use-dev-spaces -g my-aks-group -n my-aks -s develop/my-space -y
   - summary: Use Azure Dev Spaces with a managed Kubernetes cluster with a private endpoint.
     syntax: az aks use-dev-spaces -g my-aks-group -n my-aks -e private
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the managed cluster.
@@ -26,6 +33,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: Public
     parameterValueGroup: None, Private, Public

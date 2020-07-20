@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_pipelines_variable_group_variable
 name: az pipelines variable-group variable
 summary: Manage variables in a variable group.
@@ -8,7 +8,16 @@ directCommands:
   name: az pipelines variable-group variable create
   summary: Add a variable to a variable group.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group variable create --group-id
+                                                --name
+                                                [--detect {false, true}]
+                                                [--org]
+                                                [--project]
+                                                [--secret {false, true}]
+                                                [--subscription]
+                                                [--value]
+  requiredParameters:
   - isRequired: true
     name: --group-id --id
     summary: Id of the variable group.
@@ -17,6 +26,7 @@ directCommands:
     name: --name
     summary: Name of the variable.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -31,17 +41,25 @@ directCommands:
     parameterValueGroup: false, true
     summary: If the value of the variable is a secret.
     description: ''
-  - name: --value
-    summary: Value of the variable. For secret variables, if --value parameter is not given, it will be picked from environment variable prefixed with AZURE_DEVOPS_EXT_PIPELINE_VAR_ or user will be prompted to enter it via standard input. e.g. PersonalAccessToken can be input using environment variable AZURE_DEVOPS_EXT_PIPELINE_VAR_PersonalAccessToken.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --value
+    summary: Value of the variable. For secret variables, if --value parameter is not given, it will be picked from environment variable prefixed with AZURE_DEVOPS_EXT_PIPELINE_VAR_ or user will be prompted to enter it via standard input. e.g. PersonalAccessToken can be input using environment variable AZURE_DEVOPS_EXT_PIPELINE_VAR_PersonalAccessToken.
     description: ''
 - uid: az_pipelines_variable_group_variable_delete
   name: az pipelines variable-group variable delete
   summary: Delete a variable from variable group.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group variable delete --group-id
+                                                --name
+                                                [--detect {false, true}]
+                                                [--org]
+                                                [--project]
+                                                [--subscription]
+                                                [--yes]
+  requiredParameters:
   - isRequired: true
     name: --group-id --id
     summary: Id of the variable group.
@@ -50,6 +68,7 @@ directCommands:
     name: --name
     summary: Name of the variable.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -60,21 +79,28 @@ directCommands:
   - name: --project -p
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
     description: ''
 - uid: az_pipelines_variable_group_variable_list
   name: az pipelines variable-group variable list
   summary: List the variables in a variable group.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group variable list --group-id
+                                              [--detect {false, true}]
+                                              [--org]
+                                              [--project]
+                                              [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --group-id --id
     summary: Id of the variable group.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -92,7 +118,18 @@ directCommands:
   name: az pipelines variable-group variable update
   summary: Update a variable in a variable group.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group variable update --group-id
+                                                --name
+                                                [--detect {false, true}]
+                                                [--new-name]
+                                                [--org]
+                                                [--project]
+                                                [--prompt-value {false, true}]
+                                                [--secret {false, true}]
+                                                [--subscription]
+                                                [--value]
+  requiredParameters:
   - isRequired: true
     name: --group-id --id
     summary: Id of the variable group.
@@ -101,6 +138,7 @@ directCommands:
     name: --name
     summary: Name of the variable.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -122,11 +160,11 @@ directCommands:
     parameterValueGroup: false, true
     summary: If the value of the variable is a secret.
     description: ''
-  - name: --value
-    summary: New value of the variable. For secret variables, if --value parameter is not given, it will be picked from environment variable prefixed with AZURE_DEVOPS_EXT_PIPELINE_VAR_ or user will be prompted to enter it via standard input. e.g. PersonalAccessToken can be input using environment variable AZURE_DEVOPS_EXT_PIPELINE_VAR_PersonalAccessToken.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --value
+    summary: New value of the variable. For secret variables, if --value parameter is not given, it will be picked from environment variable prefixed with AZURE_DEVOPS_EXT_PIPELINE_VAR_ or user will be prompted to enter it via standard input. e.g. PersonalAccessToken can be input using environment variable AZURE_DEVOPS_EXT_PIPELINE_VAR_PersonalAccessToken.
     description: ''
 commands:
 - az_pipelines_variable_group_variable_create

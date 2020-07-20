@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_spring-cloud_az_spring_cloud_app_binding_redis
 name: az spring-cloud app binding redis
 summary: Commands to manage Azure Cache for Redis bindings.
@@ -8,7 +8,14 @@ directCommands:
   name: az spring-cloud app binding redis add
   summary: Bind an Azure Cache for Redis with the app.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud app binding redis add --app
+                                          --name
+                                          --resource-group
+                                          --resource-id
+                                          --service
+                                          [--disable-ssl]
+  requiredParameters:
   - isRequired: true
     name: --app
     summary: Name of app.
@@ -29,6 +36,7 @@ directCommands:
     name: --service -s
     summary: Name of Azure Spring Cloud, you can configure the default service using az configure --defaults spring-cloud=<name>.
     description: ''
+  optionalParameters:
   - name: --disable-ssl
     summary: Disable SSL.
     description: ''
@@ -36,7 +44,13 @@ directCommands:
   name: az spring-cloud app binding redis update
   summary: Update an Azure Cache for Redis service binding of the app.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud app binding redis update --app
+                                             --name
+                                             --resource-group
+                                             --service
+                                             [--disable-ssl]
+  requiredParameters:
   - isRequired: true
     name: --app
     summary: Name of app.
@@ -53,6 +67,7 @@ directCommands:
     name: --service -s
     summary: Name of Azure Spring Cloud, you can configure the default service using az configure --defaults spring-cloud=<name>.
     description: ''
+  optionalParameters:
   - name: --disable-ssl
     summary: Disable SSL.
     description: ''

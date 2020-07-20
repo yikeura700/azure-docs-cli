@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az
 name: az
 summary: ''
@@ -8,12 +8,16 @@ directCommands:
   name: az configure
   summary: Manage Azure CLI configuration. This command is interactive.
   description: ''
+  syntax: >-
+    az configure [--defaults]
+                 [--list-defaults {false, true}]
+                 [--scope {global, local}]
   examples:
   - summary: Set default resource group, webapp and VM names.
     syntax: az configure --defaults group=myRG web=myweb vm=myvm
   - summary: Clear default webapp and VM names.
     syntax: az configure --defaults vm='' web=''
-  parameters:
+  optionalParameters:
   - name: --defaults -d
     summary: Space-separated 'name=value' pairs for common argument defaults.
     description: ''
@@ -26,27 +30,18 @@ directCommands:
     parameterValueGroup: global, local
     summary: Scope of defaults. Using "local" for settings only effective under current folder.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/configure/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/configure/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/configure/_help.py
 - uid: az_feedback
   name: az feedback
   summary: Send feedback to the Azure CLI Team!
   description: ''
-  parameters: []
-  source:
-    path: src/azure-cli/azure/cli/command_modules/feedback/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/feedback/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  syntax: az feedback
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/feedback/_help.py
 - uid: az_find
   name: az find
   summary: I'm an AI robot, my advice is based on our Azure documentation as well as the usage patterns of Azure CLI and Azure ARM users. Using me improves Azure products and documentation.
   description: ''
+  syntax: az find [<CLI_TERM>]
   examples:
   - summary: Give me any Azure CLI group and I’ll show the most popular commands within the group.
     syntax: az find "az storage"
@@ -54,21 +49,19 @@ directCommands:
     syntax: az find "az monitor activity-log list"
   - summary: You can also enter a search term, and I'll try to help find the best commands.
     syntax: az find "arm template"
-  parameters:
+  optionalParameters:
   - name: <CLI_TERM>
     summary: An Azure CLI command or group for which you need an example.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/find/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/find/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/find/_help.py
 - uid: az_interactive
   name: az interactive
   summary: Start interactive mode. Installs the Interactive extension if not installed already.
   description: 'For more information on interactive mode, see: <a href="https://azure.microsoft.com/blog/welcome-to-azure-cli-shell/">https://azure.microsoft.com/blog/welcome-to-azure-cli-shell/</a>.'
-  parameters:
+  syntax: >-
+    az interactive [--style {bg, br, contrast, default, grey, halloween, neon, none, pastel, primary, purple, quiet}]
+                   [--update]
+  optionalParameters:
   - name: --style -s
     parameterValueGroup: bg, br, contrast, default, grey, halloween, neon, none, pastel, primary, purple, quiet
     summary: The colors of the shell.
@@ -80,6 +73,15 @@ directCommands:
   name: az login
   summary: Log in to Azure.
   description: ''
+  syntax: >-
+    az login [--allow-no-subscriptions]
+             [--identity]
+             [--password]
+             [--service-principal]
+             [--tenant]
+             [--use-cert-sn-issuer]
+             [--use-device-code]
+             [--username]
   examples:
   - summary: Log in interactively.
     syntax: az login
@@ -93,9 +95,12 @@ directCommands:
     syntax: az login --identity
   - summary: Log in using a VM's user assigned identity. Client or object ids of the service identity also work
     syntax: az login --identity -u /subscriptions/<subscriptionId>/resourcegroups/myRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myID
-  parameters:
+  optionalParameters:
   - name: --allow-no-subscriptions
     summary: Support access tenants without subscriptions. It's uncommon but useful to run tenant level commands, such as 'az ad'.
+    description: ''
+  - name: --identity -i
+    summary: Log in using the Virtual Machine's identity.
     description: ''
   - name: --password -p
     summary: Credentials like user password, or for a service principal, provide client secret or a pem file with key and public certificate. Will prompt if not given.
@@ -115,29 +120,17 @@ directCommands:
   - name: --username -u
     summary: User name, service principal, or managed service identity ID.
     description: ''
-  - name: --identity -i
-    summary: Log in using the Virtual Machine's identity.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
 - uid: az_logout
   name: az logout
   summary: Log out to remove access to Azure subscriptions.
   description: ''
-  parameters:
+  syntax: az logout [--username]
+  optionalParameters:
   - name: --username
     summary: Account user, if missing, logout the current active account.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
 - uid: az_rest
   name: az rest
   summary: Invoke a custom request.
@@ -145,6 +138,16 @@ directCommands:
     This command automatically authenticates using the logged-in credential: If Authorization header is not set, it attaches header `Authorization: Bearer <token>`, where `<token>` is retrieved from AAD. The target resource of the token is derived from --url if --url starts with an endpoint from `az cloud show --query endpoints`. You may also use --resource for a custom resource.
 
     If Content-Type header is not set and --body is a valid JSON string, Content-Type header will default to application/json.
+  syntax: >-
+    az rest --uri
+            [--body]
+            [--headers]
+            [--method {delete, get, head, options, patch, post, put}]
+            [--output-file]
+            [--resource]
+            [--skip-authorization-header]
+            [--subscription]
+            [--uri-parameters]
   examples:
   - summary: Get Audit log through Microsoft Graph
     syntax: az rest --method get --url https://graph.microsoft.com/beta/auditLogs/directoryAudits
@@ -156,11 +159,12 @@ directCommands:
     syntax: az rest --method put --url https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/publicIPAddresses/{publicIpAddressName}?api-version=2019-09-01 --body @body.json
   - summary: List the top three resources (Bash)
     syntax: az rest --method get --url https://management.azure.com/subscriptions/{subscriptionId}/resources?api-version=2019-07-01 --url-parameters \$top=3
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --uri --url -u
     summary: Request URL. If it doesn't start with a host, CLI assumes it as an Azure resource ID and prefixes it with the ARM endpoint of the current cloud shown by `az cloud show --query endpoints.resourceManager`. Common token {subscriptionId} will be replaced with the current subscription ID specified by `az account set`.
     description: ''
+  optionalParameters:
   - name: --body -b
     summary: Request body. Use @{file} to load from a file. For quoting issues in different terminals, see <a href="https://github.com/Azure/azure-cli/blob/dev/doc/use_cli_effectively.md#quoting-issues">https://github.com/Azure/azure-cli/blob/dev/doc/use_cli_effectively.md#quoting-issues</a>.
     description: ''
@@ -181,17 +185,18 @@ directCommands:
   - name: --skip-authorization-header
     summary: Do not auto-append Authorization header.
     description: ''
-  - name: --uri-parameters --url-parameters
-    summary: Query parameters in the URL. Space-separated queries in KEY=VALUE format or JSON string. Use @{file} to load from a file.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --uri-parameters --url-parameters
+    summary: Query parameters in the URL. Space-separated queries in KEY=VALUE format or JSON string. Use @{file} to load from a file.
     description: ''
 - uid: az_self_test
   name: az self-test
   summary: Runs a self-test of the CLI.
   description: ''
-  parameters:
+  syntax: az self-test [--subscription]
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
@@ -199,7 +204,8 @@ directCommands:
   name: az version
   summary: Show the versions of Azure CLI modules and extensions in JSON format by default or format configured by --output.
   description: ''
-  parameters:
+  syntax: az version [--subscription]
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
@@ -313,6 +319,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/10b5e966121d2b7fda114bcbdfad5b6f6aa0aae8/src/azure-cli/azure/cli/command_modules/profile/_help.py
   updated_at: 3/16/2020 9:14:21 AM

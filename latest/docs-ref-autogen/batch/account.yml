@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_batch_account
 name: az batch account
 summary: Manage Azure Batch accounts.
@@ -8,7 +8,20 @@ directCommands:
   name: az batch account create
   summary: Create a Batch account with the specified parameters.
   description: ''
-  parameters:
+  syntax: >-
+    az batch account create --location
+                            --name
+                            --resource-group
+                            [--encryption-key-identifier]
+                            [--encryption-key-source {Microsoft.Batch, Microsoft.KeyVault}]
+                            [--identity-type {None, SystemAssigned}]
+                            [--keyvault]
+                            [--no-wait]
+                            [--public-network-access {Disabled, Enabled}]
+                            [--storage-account]
+                            [--subscription]
+                            [--tags]
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: The region in which to create the account.
@@ -21,6 +34,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of the resource group.
     description: ''
+  optionalParameters:
   - name: --encryption-key-identifier
     summary: Part of the encryption configuration for the Batch account. Full path to the versioned secret. Example <a href="https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053">https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053</a>.
     description: ''
@@ -45,23 +59,24 @@ directCommands:
   - name: --storage-account
     summary: The storage account name or resource ID to be used for auto storage.
     description: ''
-  - name: --tags
-    summary: Space-separated tags in 'key[=value]' format.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --tags
+    summary: Space-separated tags in 'key[=value]' format.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
 - uid: az_batch_account_delete
   name: az batch account delete
   summary: Deletes the specified Batch account.
   description: ''
-  parameters:
+  syntax: >-
+    az batch account delete --name
+                            --resource-group
+                            [--no-wait]
+                            [--subscription]
+                            [--yes]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the Batch account.
@@ -70,43 +85,43 @@ directCommands:
     name: --resource-group -g
     summary: Name of the resource group.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
-    description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
 - uid: az_batch_account_list
   name: az batch account list
   summary: List the Batch accounts associated with a subscription or resource group.
   description: ''
-  parameters:
+  syntax: >-
+    az batch account list [--resource-group]
+                          [--subscription]
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of the resource group.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
 - uid: az_batch_account_login
   name: az batch account login
   summary: Log in to a Batch account through Azure Active Directory or Shared Key authentication.
   description: ''
-  parameters:
+  syntax: >-
+    az batch account login --name
+                           --resource-group
+                           [--shared-key-auth]
+                           [--show]
+                           [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the Batch account.
@@ -115,6 +130,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of the resource group.
     description: ''
+  optionalParameters:
   - name: --shared-key-auth
     summary: Using Shared Key authentication, if not specified, it will use Azure Active Directory authentication.
     description: ''
@@ -124,20 +140,24 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
 - uid: az_batch_account_set
   name: az batch account set
   summary: Update properties for a Batch account.
   description: ''
+  syntax: >-
+    az batch account set --name
+                         --resource-group
+                         [--encryption-key-identifier]
+                         [--encryption-key-source]
+                         [--identity-type {None, SystemAssigned}]
+                         [--storage-account]
+                         [--subscription]
+                         [--tags]
   examples:
   - summary: Update properties for a Batch account. (autogenerated)
     syntax: az batch account set --name MyBatchAccount --resource-group MyResourceGroup
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the Batch account.
@@ -146,6 +166,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of the resource group.
     description: ''
+  optionalParameters:
   - name: --encryption-key-identifier
     summary: Part of the encryption configuration for the Batch account. Full path to the versioned secret. Example <a href="https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053">https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053</a>.
     description: ''
@@ -159,26 +180,25 @@ directCommands:
   - name: --storage-account
     summary: The storage account name or resource ID to be used for auto storage.
     description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
 - uid: az_batch_account_show
   name: az batch account show
   summary: Get a specified Batch account or the currently set account.
   description: ''
+  syntax: >-
+    az batch account show [--name]
+                          [--resource-group]
+                          [--subscription]
   examples:
   - summary: Get a specified Batch account or the currently set account. (autogenerated)
     syntax: az batch account show --name MyBatchAccount --resource-group MyResourceGroup
-  parameters:
+  optionalParameters:
   - name: --name -n
     summary: Name of the batch account to show. If not specified will display currently set account.
     description: ''
@@ -188,12 +208,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
 commands:
 - az_batch_account_autostorage_keys
 - az_batch_account_autostorage_keys_sync
@@ -222,6 +237,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e1102d37a891598da84f80ba091b89a7532b90aa/src/azure-cli/azure/cli/command_modules/batch/_help.py
   updated_at: 10/19/2019 10:02:34 AM

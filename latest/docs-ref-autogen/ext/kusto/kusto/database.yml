@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_kusto_az_kusto_database
 name: az kusto database
 summary: Kusto database.
@@ -8,10 +8,15 @@ directCommands:
   name: az kusto database add-principal
   summary: Add Database principals permissions.
   description: ''
+  syntax: >-
+    az kusto database add-principal --cluster-name
+                                    --database-name
+                                    --resource-group
+                                    [--value]
   examples:
   - summary: KustoDatabaseAddPrincipals
     syntax: az kusto database add-principal --cluster-name "KustoClusterRPTest4" --database-name "databaseName1" --value name="Some User" type="User" app-id="" email="user@microsoft.com" fqn="aaduser=some_guid" role="Admin" --value name="Kusto" type="Group" app-id="" email="kusto@microsoft.com" fqn="aadgroup=some_guid" role="Viewer" --value name="SomeApp" type="App" app-id="some_guid_app_id" email="" fqn="aadapp=some_guid_app_id" role="Admin" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -24,6 +29,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --value
     summary: 'The list of Kusto database principals. Expect value: KEY1=VALUE1 KEY2=VALUE2 ... , available KEYs are: role, name, type, fqn, email, app-id.'
     description: ''
@@ -31,10 +37,17 @@ directCommands:
   name: az kusto database create
   summary: Creates or updates a database.
   description: ''
+  syntax: >-
+    az kusto database create --cluster-name
+                             --database-name
+                             --resource-group
+                             [--no-wait]
+                             [--read-only-following-database]
+                             [--read-write-database]
   examples:
   - summary: KustoDatabasesCreateOrUpdate
     syntax: az kusto database create --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --read-write-database location="westus" soft-delete-period="P1D" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -47,6 +60,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -60,10 +74,15 @@ directCommands:
   name: az kusto database delete
   summary: Deletes the database with the given name.
   description: ''
+  syntax: >-
+    az kusto database delete --cluster-name
+                             --database-name
+                             --resource-group
+                             [--no-wait]
   examples:
   - summary: KustoDatabasesDelete
     syntax: az kusto database delete --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -76,6 +95,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -83,10 +103,13 @@ directCommands:
   name: az kusto database list
   summary: Returns the list of databases of the given Kusto cluster.
   description: ''
+  syntax: >-
+    az kusto database list --cluster-name
+                           --resource-group
   examples:
   - summary: KustoDatabasesListByCluster
     syntax: az kusto database list --cluster-name "KustoClusterRPTest4" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -99,10 +122,14 @@ directCommands:
   name: az kusto database list-principal
   summary: Returns a list of database principals of the given Kusto cluster and database.
   description: ''
+  syntax: >-
+    az kusto database list-principal --cluster-name
+                                     --database-name
+                                     --resource-group
   examples:
   - summary: KustoDatabaseListPrincipals
     syntax: az kusto database list-principal --cluster-name "KustoClusterRPTest4" --database-name "Kustodatabase8" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -119,10 +146,15 @@ directCommands:
   name: az kusto database remove-principal
   summary: Remove Database principals permissions.
   description: ''
+  syntax: >-
+    az kusto database remove-principal --cluster-name
+                                       --database-name
+                                       --resource-group
+                                       [--value]
   examples:
   - summary: KustoDatabaseRemovePrincipals
     syntax: az kusto database remove-principal --cluster-name "KustoClusterRPTest4" --database-name "databaseName1" --value name="Some User" type="User" app-id="" email="user@microsoft.com" fqn="aaduser=some_guid" role="Admin" --value name="Kusto" type="Group" app-id="" email="kusto@microsoft.com" fqn="aadgroup=some_guid" role="Viewer" --value name="SomeApp" type="App" app-id="some_guid_app_id" email="" fqn="aadapp=some_guid_app_id" role="Admin" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -135,6 +167,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --value
     summary: 'The list of Kusto database principals. Expect value: KEY1=VALUE1 KEY2=VALUE2 ... , available KEYs are: role, name, type, fqn, email, app-id.'
     description: ''
@@ -142,10 +175,14 @@ directCommands:
   name: az kusto database show
   summary: Returns a database.
   description: ''
+  syntax: >-
+    az kusto database show --cluster-name
+                           --database-name
+                           --resource-group
   examples:
   - summary: KustoDatabasesGet
     syntax: az kusto database show --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -162,10 +199,17 @@ directCommands:
   name: az kusto database update
   summary: Updates a database.
   description: ''
+  syntax: >-
+    az kusto database update --cluster-name
+                             --database-name
+                             --resource-group
+                             [--no-wait]
+                             [--read-only-following-database]
+                             [--read-write-database]
   examples:
   - summary: KustoDatabasesUpdate
     syntax: az kusto database update --cluster-name "KustoClusterRPTest4" --database-name "KustoDatabase8" --read-write-database soft-delete-period="P1D" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -178,6 +222,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -191,7 +236,18 @@ directCommands:
   name: az kusto database wait
   summary: Wait for a managed Kusto database to reach a desired state.
   description: If an operation on a database was interrupted or was started with `--no-wait`, use this command to wait for it to complete.
-  parameters:
+  syntax: >-
+    az kusto database wait --cluster-name
+                           --database-name
+                           --resource-group
+                           [--created]
+                           [--custom]
+                           [--deleted]
+                           [--exists]
+                           [--interval]
+                           [--timeout]
+                           [--updated]
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -204,6 +260,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

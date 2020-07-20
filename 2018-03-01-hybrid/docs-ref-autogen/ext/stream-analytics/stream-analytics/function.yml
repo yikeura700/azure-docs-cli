@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_stream-analytics_az_stream_analytics_function
 name: az stream-analytics function
 summary: Commands to manage stream-analytics function.
@@ -8,6 +8,14 @@ directCommands:
   name: az stream-analytics function create
   summary: Create a function or replaces an already existing function under an existing streaming job.
   description: ''
+  syntax: >-
+    az stream-analytics function create --binding
+                                        --function-output
+                                        --inputs
+                                        --job-name
+                                        --name
+                                        --resource-group
+                                        [--type {Scalar}]
   examples:
   - summary: Create a function
     syntax: >-
@@ -58,7 +66,7 @@ directCommands:
                "batchSize": 1000
            }
        }
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --binding
     summary: The binding of the function.
@@ -83,6 +91,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --type
     defaultValue: Scalar
     parameterValueGroup: Scalar
@@ -92,13 +101,17 @@ directCommands:
   name: az stream-analytics function delete
   summary: Delete a function from the streaming job.
   description: ''
+  syntax: >-
+    az stream-analytics function delete --job-name
+                                        --name
+                                        --resource-group
   examples:
   - summary: Delete a function
     syntax: >-
       az stream-analytics function delete --resource-group MyResourceGroup --job-name MyJobName \
 
       --name MyFunctionName
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --job-name
     summary: The name of the streaming job.
@@ -115,10 +128,13 @@ directCommands:
   name: az stream-analytics function list
   summary: List all of the functions under the specified streaming job.
   description: ''
+  syntax: >-
+    az stream-analytics function list --job-name
+                                      --resource-group
   examples:
   - summary: List all functions in a streaming job
     syntax: az stream-analytics function list --resource-group MyResourceGroup --job-name MyJobName
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --job-name
     summary: The name of the streaming job.
@@ -131,13 +147,17 @@ directCommands:
   name: az stream-analytics function show
   summary: Get details about the specified function.
   description: ''
+  syntax: >-
+    az stream-analytics function show --job-name
+                                      --name
+                                      --resource-group
   examples:
   - summary: Get details about a function
     syntax: >-
       az stream-analytics function show --resource-group MyResourceGroup --job-name MyJobName --name \
 
       MyFunctionName
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --job-name
     summary: The name of the streaming job.
@@ -154,13 +174,18 @@ directCommands:
   name: az stream-analytics function test
   summary: Test if the information provided for a function is valid.
   description: ''
+  syntax: >-
+    az stream-analytics function test --job-name
+                                      --name
+                                      --resource-group
+                                      [--no-wait]
   examples:
   - summary: Test the connection for a function
     syntax: >-
       az stream-analytics function test --resource-group MyResourceGroup --job-name MyJobName --name \
 
       MyFunctionName
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --job-name
     summary: The name of the streaming job.
@@ -173,6 +198,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''

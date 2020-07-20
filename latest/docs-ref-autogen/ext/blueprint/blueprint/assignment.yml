@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_blueprint_az_blueprint_assignment
 name: az blueprint assignment
 summary: Commands to manage blueprint assignment.
@@ -8,6 +8,22 @@ directCommands:
   name: az blueprint assignment create
   summary: Create a blueprint assignment.
   description: ''
+  syntax: >-
+    az blueprint assignment create --name
+                                   [--blueprint-version]
+                                   [--description]
+                                   [--display-name]
+                                   [--identity-type {None, SystemAssigned, UserAssigned}]
+                                   [--location]
+                                   [--locks-excluded-principals]
+                                   [--locks-mode {AllResourcesDoNotDelete, AllResourcesReadOnly, None}]
+                                   [--management-group]
+                                   [--parameters]
+                                   [--principal-id]
+                                   [--resource-group-value]
+                                   [--subscription]
+                                   [--tenant-id]
+                                   [--user-assigned-identities]
   examples:
   - summary: Assignment with system-assigned managed identity
     syntax: >-
@@ -43,11 +59,12 @@ directCommands:
       --resource-group-value artifact_name=rg-art-1 name=rg1 location=eastus \
 
       --parameters "path/to/parameter/file" \
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the blueprint assignment.
     description: ''
+  optionalParameters:
   - name: --blueprint-version
     summary: Resource ID of the published version of a blueprint definition.
     description: ''
@@ -56,6 +73,11 @@ directCommands:
     description: ''
   - name: --display-name
     summary: One-liner string explain this resource.
+    description: ''
+  - name: --identity-type
+    defaultValue: SystemAssigned
+    parameterValueGroup: None, SystemAssigned, UserAssigned
+    summary: Type of the managed identity.
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -67,19 +89,20 @@ directCommands:
     parameterValueGroup: AllResourcesDoNotDelete, AllResourcesReadOnly, None
     summary: Lock mode.
     description: ''
+  - name: --management-group -m
+    summary: Use management group for the target scope of the blueprint assignment. It is reserved for future use. Use --subscription instead.
+    description: ''
   - name: --parameters -p
     summary: Blueprint assignment parameter values. It can be a JSON string or JSON file path.
+    description: ''
+  - name: --principal-id
+    summary: Azure Active Directory principal ID associated with this Identity.
     description: ''
   - name: --resource-group-value
     summary: Key=Value pairs for a resource group. Keys include 'artifact_name'(required), 'name', 'location'.
     description: ''
-  - name: --identity-type
-    defaultValue: SystemAssigned
-    parameterValueGroup: None, SystemAssigned, UserAssigned
-    summary: Type of the managed identity.
-    description: ''
-  - name: --principal-id
-    summary: Azure Active Directory principal ID associated with this Identity.
+  - name: --subscription -s
+    summary: Use subscription for the target scope of the blueprint assignment. Default susbcription will be used if option not specified.
     description: ''
   - name: --tenant-id
     summary: ID of the Azure Active Directory.
@@ -87,44 +110,47 @@ directCommands:
   - name: --user-assigned-identities
     summary: The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
     description: ''
-  - name: --management-group -m
-    summary: Use management group for the target scope of the blueprint assignment. It is reserved for future use. Use --subscription instead.
-    description: ''
-  - name: --subscription -s
-    summary: Use subscription for the target scope of the blueprint assignment. Default susbcription will be used if option not specified.
-    description: ''
 - uid: ext_blueprint_az_blueprint_assignment_delete
   name: az blueprint assignment delete
   summary: Delete a blueprint assignment.
   description: ''
+  syntax: >-
+    az blueprint assignment delete --name
+                                   [--management-group]
+                                   [--subscription]
+                                   [--yes]
   examples:
   - summary: Delete an assignment
     syntax: >-
       az blueprint assignment delete --subscription MySubscription \
 
       --name MyBlueprintAssignment
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the blueprint assignment.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
+  optionalParameters:
   - name: --management-group -m
     summary: Use management group for the target scope of the blueprint assignment. It is reserved for future use. Use --subscription instead.
     description: ''
   - name: --subscription -s
     summary: Use subscription for the target scope of the blueprint assignment. Default susbcription will be used if option not specified.
     description: ''
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
 - uid: ext_blueprint_az_blueprint_assignment_list
   name: az blueprint assignment list
   summary: List blueprint assignments within a subscription.
   description: ''
+  syntax: >-
+    az blueprint assignment list [--management-group]
+                                 [--subscription]
   examples:
   - summary: List assignments
     syntax: az blueprint assignment list --subscription MySubscription
-  parameters:
+  optionalParameters:
   - name: --management-group -m
     summary: Use management group for the target scope of the blueprint assignment. It is reserved for future use. Use --subscription instead.
     description: ''
@@ -135,17 +161,22 @@ directCommands:
   name: az blueprint assignment show
   summary: Get a blueprint assignment.
   description: ''
+  syntax: >-
+    az blueprint assignment show --name
+                                 [--management-group]
+                                 [--subscription]
   examples:
   - summary: Show an assignment
     syntax: >-
       az blueprint assignment show --subscription MySubscription \
 
       --name MyBlueprintAssignment
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the blueprint assignment.
     description: ''
+  optionalParameters:
   - name: --management-group -m
     summary: Use management group for the target scope of the blueprint assignment. It is reserved for future use. Use --subscription instead.
     description: ''
@@ -156,11 +187,28 @@ directCommands:
   name: az blueprint assignment update
   summary: Update a blueprint assignment.
   description: ''
-  parameters:
+  syntax: >-
+    az blueprint assignment update --name
+                                   [--blueprint-version]
+                                   [--description]
+                                   [--display-name]
+                                   [--identity-type {None, SystemAssigned, UserAssigned}]
+                                   [--location]
+                                   [--locks-excluded-principals]
+                                   [--locks-mode {AllResourcesDoNotDelete, AllResourcesReadOnly, None}]
+                                   [--management-group]
+                                   [--parameters]
+                                   [--principal-id]
+                                   [--resource-group-value]
+                                   [--subscription]
+                                   [--tenant-id]
+                                   [--user-assigned-identities]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the blueprint assignment.
     description: ''
+  optionalParameters:
   - name: --blueprint-version
     summary: Resource ID of the published version of a blueprint definition.
     description: ''
@@ -169,6 +217,11 @@ directCommands:
     description: ''
   - name: --display-name
     summary: One-liner string explain this resource.
+    description: ''
+  - name: --identity-type
+    defaultValue: SystemAssigned
+    parameterValueGroup: None, SystemAssigned, UserAssigned
+    summary: Type of the managed identity.
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -180,19 +233,20 @@ directCommands:
     parameterValueGroup: AllResourcesDoNotDelete, AllResourcesReadOnly, None
     summary: Lock mode.
     description: ''
+  - name: --management-group -m
+    summary: Use management group for the target scope of the blueprint assignment. It is reserved for future use. Use --subscription instead.
+    description: ''
   - name: --parameters -p
     summary: Blueprint assignment parameter values. It can be a JSON string or JSON file path.
+    description: ''
+  - name: --principal-id
+    summary: Azure Active Directory principal ID associated with this Identity.
     description: ''
   - name: --resource-group-value
     summary: Key=Value pairs for a resource group. Keys include 'artifact_name'(required), 'name', 'location'.
     description: ''
-  - name: --identity-type
-    defaultValue: SystemAssigned
-    parameterValueGroup: None, SystemAssigned, UserAssigned
-    summary: Type of the managed identity.
-    description: ''
-  - name: --principal-id
-    summary: Azure Active Directory principal ID associated with this Identity.
+  - name: --subscription -s
+    summary: Use subscription for the target scope of the blueprint assignment. Default susbcription will be used if option not specified.
     description: ''
   - name: --tenant-id
     summary: ID of the Azure Active Directory.
@@ -200,30 +254,30 @@ directCommands:
   - name: --user-assigned-identities
     summary: The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
     description: ''
-  - name: --management-group -m
-    summary: Use management group for the target scope of the blueprint assignment. It is reserved for future use. Use --subscription instead.
-    description: ''
-  - name: --subscription -s
-    summary: Use subscription for the target scope of the blueprint assignment. Default susbcription will be used if option not specified.
-    description: ''
 - uid: ext_blueprint_az_blueprint_assignment_wait
   name: az blueprint assignment wait
   summary: Place the CLI in a waiting state until a condition of the Blueprint Assignment is met.
   description: ''
+  syntax: >-
+    az blueprint assignment wait --name
+                                 [--created]
+                                 [--custom]
+                                 [--deleted]
+                                 [--exists]
+                                 [--interval]
+                                 [--management-group]
+                                 [--subscription]
+                                 [--timeout]
+                                 [--updated]
   examples:
   - summary: Pause executing next line of CLI script until the Blueprint Assignment is successfully provisioned.
     syntax: az blueprint assignment wait --subscription MySubscription \ --name MyBlueprintAssignment --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the blueprint assignment.
     description: ''
-  - name: --management-group -m
-    summary: Use management group for the target scope of the blueprint assignment. It is reserved for future use. Use --subscription instead.
-    description: ''
-  - name: --subscription -s
-    summary: Use subscription for the target scope of the blueprint assignment. Default susbcription will be used if option not specified.
-    description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
@@ -240,6 +294,12 @@ directCommands:
     defaultValue: "30"
     summary: Polling interval in seconds.
     description: ''
+  - name: --management-group -m
+    summary: Use management group for the target scope of the blueprint assignment. It is reserved for future use. Use --subscription instead.
+    description: ''
+  - name: --subscription -s
+    summary: Use subscription for the target scope of the blueprint assignment. Default susbcription will be used if option not specified.
+    description: ''
   - name: --timeout
     defaultValue: "3600"
     summary: Maximum wait in seconds.
@@ -251,17 +311,22 @@ directCommands:
   name: az blueprint assignment who
   summary: Get Blueprint Servie Principal Name objectId.
   description: ''
+  syntax: >-
+    az blueprint assignment who --name
+                                [--management-group]
+                                [--subscription]
   examples:
   - summary: Get SPN objectId
     syntax: >-
       az blueprint assignment who --subscription MySubscription \
 
       --name MyBlueprintAssignment
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the blueprint assignment.
     description: ''
+  optionalParameters:
   - name: --management-group -m
     summary: Use management group for the target scope of the blueprint assignment. It is reserved for future use. Use --subscription instead.
     description: ''

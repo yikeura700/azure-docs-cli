@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-iot-ext_az_iot_hub
 name: az iot hub
 summary: Manage entities in an Azure IoT Hub.
@@ -8,6 +8,15 @@ directCommands:
   name: az iot hub generate-sas-token
   summary: Generate a SAS token for a target IoT Hub, device or module.
   description: For device SAS tokens, the policy parameter is used to access the the device registry only. Therefore the policy should have read access to the registry. For IoT Hub tokens the policy is part of the SAS.
+  syntax: >-
+    az iot hub generate-sas-token [--device-id]
+                                  [--du]
+                                  [--hub-name]
+                                  [--key-type {primary, secondary}]
+                                  [--login]
+                                  [--module-id]
+                                  [--pn]
+                                  [--resource-group]
   examples:
   - summary: Generate an IoT Hub SAS token using the iothubowner policy and primary key.
     syntax: az iot hub generate-sas-token -n {iothub_name}
@@ -17,7 +26,7 @@ directCommands:
     syntax: az iot hub generate-sas-token -d {device_id} -n {iothub_name}
   - summary: Generate a device SAS token using an IoT Hub connection string (with registry access)
     syntax: az iot hub generate-sas-token -d {device_id} --login 'HostName=myhub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=12345'
-  parameters:
+  optionalParameters:
   - name: --device-id -d
     summary: Target Device.
     description: ''
@@ -50,7 +59,15 @@ directCommands:
   name: az iot hub invoke-device-method
   summary: Invoke a device method.
   description: ''
-  parameters:
+  syntax: >-
+    az iot hub invoke-device-method --device-id
+                                    --method-name
+                                    [--hub-name]
+                                    [--login]
+                                    [--method-payload]
+                                    [--resource-group]
+                                    [--timeout]
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
@@ -59,6 +76,7 @@ directCommands:
     name: --method-name --mn
     summary: Target method for invocation.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''
@@ -80,7 +98,16 @@ directCommands:
   name: az iot hub invoke-module-method
   summary: Invoke an Edge module method.
   description: ''
-  parameters:
+  syntax: >-
+    az iot hub invoke-module-method --device-id
+                                    --method-name
+                                    --module-id
+                                    [--hub-name]
+                                    [--login]
+                                    [--method-payload]
+                                    [--resource-group]
+                                    [--timeout]
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
@@ -93,6 +120,7 @@ directCommands:
     name: --module-id -m
     summary: Target Module.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''
@@ -119,6 +147,19 @@ directCommands:
     This command relies on and may install dependent Cython package (uamqp) upon first execution.
 
     <a href="https://github.com/Azure/azure-uamqp-python">https://github.com/Azure/azure-uamqp-python</a>.
+  syntax: >-
+    az iot hub monitor-events [--cg]
+                              [--content-type]
+                              [--device-id]
+                              [--device-query]
+                              [--enqueued-time]
+                              [--hub-name]
+                              [--login]
+                              [--properties {all, anno, app, sys}]
+                              [--repair {false, true}]
+                              [--resource-group]
+                              [--timeout]
+                              [--yes {false, true}]
   examples:
   - summary: Basic usage
     syntax: az iot hub monitor-events -n {iothub_name}
@@ -140,7 +181,7 @@ directCommands:
     syntax: az iot hub monitor-events -n {iothub_name} --props all
   - summary: Receive all messages and parse message payload as JSON
     syntax: az iot hub monitor-events -n {iothub_name} --content-type application/json
-  parameters:
+  optionalParameters:
   - name: --cg --consumer-group -c
     defaultValue: $Default
     summary: Specify the consumer group to use when connecting to event hub endpoint.
@@ -191,6 +232,14 @@ directCommands:
     This command relies on and may install dependent Cython package (uamqp) upon first execution.
 
     <a href="https://github.com/Azure/azure-uamqp-python">https://github.com/Azure/azure-uamqp-python</a>.
+  syntax: >-
+    az iot hub monitor-feedback [--device-id]
+                                [--hub-name]
+                                [--login]
+                                [--repair {false, true}]
+                                [--resource-group]
+                                [--wait-on-msg]
+                                [--yes {false, true}]
   examples:
   - summary: Basic usage
     syntax: az iot hub monitor-feedback -n {iothub_name}
@@ -200,7 +249,7 @@ directCommands:
     syntax: az iot hub monitor-feedback -n {iothub_name} -d {device_id}
   - summary: Exit feedback monitor upon receiving a message with specific id (uuid)
     syntax: az iot hub monitor-feedback -n {iothub_name} -d {device_id} -w {message_id}
-  parameters:
+  optionalParameters:
   - name: --device-id -d
     summary: Target Device.
     description: ''
@@ -228,16 +277,23 @@ directCommands:
   name: az iot hub query
   summary: Query an IoT Hub using a powerful SQL-like language.
   description: Query an IoT Hub using a powerful SQL-like language to retrieve information regarding device and module twins, jobs and message routing. See <a href="https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language">https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language</a> for more information.
+  syntax: >-
+    az iot hub query --query-command
+                     [--hub-name]
+                     [--login]
+                     [--resource-group]
+                     [--top]
   examples:
   - summary: Query all device twin data in an Azure IoT Hub.
     syntax: az iot hub query -n {iothub_name} -q "select * from devices"
   - summary: Query all module twin data on target device.
     syntax: az iot hub query -n {iothub_name} -q "select * from devices.modules where devices.deviceId = '{device_id}'"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --query-command -q
     summary: User query to be executed.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''

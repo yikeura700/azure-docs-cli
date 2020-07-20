@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datafactory_az_datafactory_activity_run
 name: az datafactory activity-run
 summary: Datafactory activity-run.
@@ -8,10 +8,19 @@ directCommands:
   name: az datafactory activity-run query-by-pipeline-run
   summary: Query activity runs based on input filter conditions.
   description: ''
+  syntax: >-
+    az datafactory activity-run query-by-pipeline-run --factory-name
+                                                      --last-updated-after
+                                                      --last-updated-before
+                                                      --resource-group
+                                                      --run-id
+                                                      [--continuation-token]
+                                                      [--filters]
+                                                      [--order-by]
   examples:
   - summary: ActivityRuns_QueryByPipelineRun
     syntax: az datafactory activity-run query-by-pipeline-run --factory-name "myFactoryName" --last-updated-after "2018-06-16T00:36:44.3345758Z" --last-updated-before "2018-06-16T00:49:48.3686473Z" --resource-group "myResourceGroup" --run-id "2f7fdb90-5df1-4b8e-ac2f-064cfa58202b"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -32,6 +41,7 @@ directCommands:
     name: --run-id
     summary: The pipeline run identifier.
     description: ''
+  optionalParameters:
   - name: --continuation-token
     summary: The continuation token for getting the next page of results. Null for first page.
     description: ''

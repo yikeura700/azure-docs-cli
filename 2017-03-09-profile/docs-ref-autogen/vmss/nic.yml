@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_vmss_nic
 name: az vmss nic
 summary: Manage network interfaces of a VMSS.
@@ -8,7 +8,11 @@ directCommands:
   name: az vmss nic list
   summary: Gets all network interfaces in a virtual machine scale set.
   description: ''
-  parameters:
+  syntax: >-
+    az vmss nic list --resource-group
+                     --vmss-name
+                     [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -17,20 +21,22 @@ directCommands:
     name: --vmss-name
     summary: Scale set name. You can configure the default using `az configure --defaults vmss=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vmss_nic_list_vm_nics
   name: az vmss nic list-vm-nics
   summary: Gets information about all network interfaces in a virtual machine in a virtual machine scale set.
   description: ''
-  parameters:
+  syntax: >-
+    az vmss nic list-vm-nics [--ids]
+                             [--instance-id]
+                             [--resource-group]
+                             [--subscription]
+                             [--vmss-name]
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -46,17 +52,20 @@ directCommands:
   - name: --vmss-name
     summary: Scale set name.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vmss_nic_show
   name: az vmss nic show
   summary: Get the specified network interface in a virtual machine scale set.
   description: ''
-  parameters:
+  syntax: >-
+    az vmss nic show [--expand]
+                     [--ids]
+                     [--instance-id]
+                     [--name]
+                     [--resource-group]
+                     [--subscription]
+                     [--vmss-name]
+  optionalParameters:
   - name: --expand
     summary: Expands referenced resources.
     description: ''
@@ -78,12 +87,7 @@ directCommands:
   - name: --vmss-name
     summary: Scale set name.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 commands:
 - az_vmss_nic_list
 - az_vmss_nic_list_vm_nics
@@ -104,6 +108,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/f55acfa0a4074843c2a9fd392157a42afe8d2e59/src/azure-cli/azure/cli/command_modules/vm/_help.py
   updated_at: 6/10/2020 7:38:50 AM

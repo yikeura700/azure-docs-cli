@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_timeseriesinsights_az_timeseriesinsights_reference_data_set
 name: az timeseriesinsights reference-data-set
 summary: Commands to manage timeseriesinsights reference data set.
@@ -8,10 +8,18 @@ directCommands:
   name: az timeseriesinsights reference-data-set create
   summary: Create or update a reference data set in the specified environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights reference-data-set create --data-string-comparison-behavior {Ordinal, OrdinalIgnoreCase}
+                                                    --environment-name
+                                                    --key-properties
+                                                    --name
+                                                    --resource-group
+                                                    [--location]
+                                                    [--tags]
   examples:
   - summary: Create reference-data-set
     syntax: az timeseriesinsights reference-data-set create -g {rg} --environment-name {env} -n {rds} --key-properties DeviceId1 String DeviceFloor Double --data-string-comparison-behavior Ordinal
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --data-string-comparison-behavior
     parameterValueGroup: Ordinal, OrdinalIgnoreCase
@@ -33,6 +41,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
@@ -43,10 +52,15 @@ directCommands:
   name: az timeseriesinsights reference-data-set delete
   summary: Delete the reference data set with the specified name in the specified subscription, resource group, and environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights reference-data-set delete --environment-name
+                                                    --name
+                                                    --resource-group
+                                                    [--yes]
   examples:
   - summary: Delete reference-data-set
     syntax: az timeseriesinsights reference-data-set delete -g {rg} --environment-name {env} -n {rds}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.
@@ -59,6 +73,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -66,10 +81,13 @@ directCommands:
   name: az timeseriesinsights reference-data-set list
   summary: List all the available reference data sets associated with the subscription and within the specified resource group and environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights reference-data-set list --environment-name
+                                                  --resource-group
   examples:
   - summary: List reference-data-set by environment
     syntax: az timeseriesinsights reference-data-set list -g {rg} --environment-name {env}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.
@@ -82,10 +100,14 @@ directCommands:
   name: az timeseriesinsights reference-data-set show
   summary: Show the reference data set with the specified name in the specified environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights reference-data-set show --environment-name
+                                                  --name
+                                                  --resource-group
   examples:
   - summary: Show reference-data-set
     syntax: az timeseriesinsights reference-data-set show -g {rg} --environment-name {env} -n {rds}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.
@@ -102,10 +124,15 @@ directCommands:
   name: az timeseriesinsights reference-data-set update
   summary: Create or update a reference data set in the specified environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights reference-data-set update --environment-name
+                                                    --name
+                                                    --resource-group
+                                                    [--tags]
   examples:
   - summary: Update reference-data-set
     syntax: az timeseriesinsights reference-data-set update -g {rg} --environment-name {env} -n {rds} --tags mykey=myvalue
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.
@@ -118,6 +145,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''

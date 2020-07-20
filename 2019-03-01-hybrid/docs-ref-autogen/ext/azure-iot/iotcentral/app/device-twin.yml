@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-iot_az_iotcentral_app_device_twin
 name: az iotcentral app device-twin
 summary: Manage IoT Central device twins.
@@ -8,7 +8,11 @@ directCommands:
   name: az iotcentral app device-twin show
   summary: Manage IoT Central device twins.
   description: ''
-  parameters:
+  syntax: >-
+    az iotcentral app device-twin show --app-id
+                                       --device-id
+                                       [--central-api-uri]
+  requiredParameters:
   - isRequired: true
     name: --app-id
     summary: Target App.
@@ -17,6 +21,7 @@ directCommands:
     name: --device-id -d
     summary: Target Device.
     description: ''
+  optionalParameters:
   - name: --central-api-uri --central-dns-suffix
     defaultValue: azureiotcentral.com
     summary: Central dns suffix. This enables running cli commands against non public/prod environments.

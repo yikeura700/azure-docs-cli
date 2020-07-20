@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_sf_cluster_client_certificate
 name: az sf cluster client-certificate
 summary: Manage the client certificate of a cluster.
@@ -8,10 +8,21 @@ directCommands:
   name: az sf cluster client-certificate add
   summary: Add a common name or certificate thumbprint to the cluster for client authentication.
   description: ''
+  syntax: >-
+    az sf cluster client-certificate add --cluster-name
+                                         --resource-group
+                                         [--admin-client-thumbprints]
+                                         [--certificate-common-name]
+                                         [--certificate-issuer-thumbprint]
+                                         [--client-certificate-common-names]
+                                         [--is-admin]
+                                         [--readonly-client-thumbprints]
+                                         [--subscription]
+                                         [--thumbprint]
   examples:
   - summary: Add client certificate by thumbprint
     syntax: az sf cluster client-certificate add -g group-name -c cluster1 --thumbprint '5F3660C715EBBDA31DB1FFDCF508302348DE8E7A'
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name -c
     summary: Specify the name of the cluster, if not given it will be same as resource group name.
@@ -20,6 +31,7 @@ directCommands:
     name: --resource-group -g
     summary: Specify the resource group name. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --admin-client-thumbprints
     summary: Client certificate thumbprint that only has admin permission.
     description: ''
@@ -38,20 +50,28 @@ directCommands:
   - name: --readonly-client-thumbprints
     summary: Space-separated list of client certificate thumbprint that has read only permission.
     description: ''
-  - name: --thumbprint
-    summary: Client certificate thumbprint.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --thumbprint
+    summary: Client certificate thumbprint.
     description: ''
 - uid: az_sf_cluster_client_certificate_remove
   name: az sf cluster client-certificate remove
   summary: Remove client certificates or subject names used for authentication.
   description: ''
+  syntax: >-
+    az sf cluster client-certificate remove --cluster-name
+                                            --resource-group
+                                            [--certificate-common-name]
+                                            [--certificate-issuer-thumbprint]
+                                            [--client-certificate-common-names]
+                                            [--subscription]
+                                            [--thumbprints]
   examples:
   - summary: Remove a client certificate by thumbprint.
     syntax: az sf cluster client-certificate remove -g group-name -c cluster1 --thumbprint '5F3660C715EBBDA31DB1FFDCF508302348DE8E7A'
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name -c
     summary: Specify the name of the cluster, if not given it will be same as resource group name.
@@ -60,6 +80,7 @@ directCommands:
     name: --resource-group -g
     summary: Specify the resource group name. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --certificate-common-name
     summary: Client certificate common name.
     description: ''
@@ -69,11 +90,11 @@ directCommands:
   - name: --client-certificate-common-names
     summary: 'JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"certificateCommonName": "test.com","certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].'
     description: ''
-  - name: --thumbprints
-    summary: A single or Space-separated list of client certificate thumbprint(s) to be remove.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --thumbprints
+    summary: A single or Space-separated list of client certificate thumbprint(s) to be remove.
     description: ''
 commands:
 - az_sf_cluster_client_certificate_add

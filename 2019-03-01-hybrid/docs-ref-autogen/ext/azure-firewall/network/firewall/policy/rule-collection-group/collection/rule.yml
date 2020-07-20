@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule
 name: az network firewall policy rule-collection-group collection rule
 summary: Manage and configure the rule of a filter collection in the rule collection group of Azure firewall policy.
@@ -14,10 +14,33 @@ directCommands:
     Filter collection supports having a list of network rules or application rules.
 
     NatRule collection supports including a list of nat rules.
-  parameters:
+  syntax: >-
+    az network firewall policy rule-collection-group collection rule add --collection-name
+                                                                         --name
+                                                                         --policy-name
+                                                                         --resource-group
+                                                                         --rule-collection-group-name
+                                                                         --rule-type {ApplicationRule, NatRule, NetworkRule}
+                                                                         [--description]
+                                                                         [--destination-addresses]
+                                                                         [--destination-ip-groups]
+                                                                         [--destination-ports]
+                                                                         [--fqdn-tags]
+                                                                         [--ip-protocols {Any, ICMP, TCP, UDP}]
+                                                                         [--protocols]
+                                                                         [--source-addresses]
+                                                                         [--source-ip-groups]
+                                                                         [--target-fqdns]
+                                                                         [--translated-address]
+                                                                         [--translated-port]
+  requiredParameters:
   - isRequired: true
     name: --collection-name
     summary: The name of the rule collection in Firewall Policy Rule Collection Group.
+    description: ''
+  - isRequired: true
+    name: --name -n
+    summary: The name of rule.
     description: ''
   - isRequired: true
     name: --policy-name
@@ -31,36 +54,33 @@ directCommands:
     name: --rule-collection-group-name
     summary: The name of the Firewall Policy Rule Collection Group.
     description: ''
-  - name: --fqdn-tags
-    summary: Space-separated list of FQDN tags for this rule.
-    description: ''
-  - name: --protocols
-    summary: Space-separated list of protocols and port numbers to use, in PROTOCOL=PORT format. Valid protocols are Http, Https.
-    description: ''
-  - name: --target-fqdns
-    summary: Space-separated list of FQDNs for this rule.
-    description: ''
-  - isRequired: true
-    name: --name -n
-    summary: The name of rule.
-    description: ''
   - isRequired: true
     name: --rule-type
     parameterValueGroup: ApplicationRule, NatRule, NetworkRule
     summary: The type of rule.
     description: ''
+  optionalParameters:
   - name: --description
     summary: The description of rule.
     description: ''
   - name: --destination-addresses
     summary: Space-separated list of destination IP addresses.
     description: ''
+  - name: --destination-ip-groups
+    summary: Space-separated list of name or resource id of destination IpGroups.
+    description: ''
   - name: --destination-ports
     summary: Space-separated list of destination ports. This argument is supported for Nat and Network Rule.
+    description: ''
+  - name: --fqdn-tags
+    summary: Space-separated list of FQDN tags for this rule.
     description: ''
   - name: --ip-protocols
     parameterValueGroup: Any, ICMP, TCP, UDP
     summary: Space-separated list of IP protocols. This argument is supported for Nat and Network Rule.
+    description: ''
+  - name: --protocols
+    summary: Space-separated list of protocols and port numbers to use, in PROTOCOL=PORT format. Valid protocols are Http, Https.
     description: ''
   - name: --source-addresses
     summary: Space-separated list of source IP addresses.
@@ -68,14 +88,14 @@ directCommands:
   - name: --source-ip-groups
     summary: Space-separated list of name or resource id of source IpGroups.
     description: ''
+  - name: --target-fqdns
+    summary: Space-separated list of FQDNs for this rule.
+    description: ''
   - name: --translated-address
     summary: Translated address for this NAT rule collection.
     description: ''
   - name: --translated-port
     summary: Translated port for this NAT rule collection.
-    description: ''
-  - name: --destination-ip-groups
-    summary: Space-separated list of name or resource id of destination IpGroups.
     description: ''
 - uid: ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_remove
   name: az network firewall policy rule-collection-group collection rule remove
@@ -84,10 +104,20 @@ directCommands:
     Filter collection supports having a list of network rules or application rules.
 
     NatRule collection supports including a list of nat rules.
-  parameters:
+  syntax: >-
+    az network firewall policy rule-collection-group collection rule remove --collection-name
+                                                                            --name
+                                                                            --policy-name
+                                                                            --resource-group
+                                                                            --rule-collection-group-name
+  requiredParameters:
   - isRequired: true
     name: --collection-name
     summary: The name of the rule collection in Firewall Policy Rule Collection Group.
+    description: ''
+  - isRequired: true
+    name: --name -n
+    summary: The name of rule.
     description: ''
   - isRequired: true
     name: --policy-name
@@ -100,10 +130,6 @@ directCommands:
   - isRequired: true
     name: --rule-collection-group-name
     summary: The name of the Firewall Policy Rule Collection Group.
-    description: ''
-  - isRequired: true
-    name: --name -n
-    summary: The name of rule.
     description: ''
 commands:
 - ext_azure-firewall_az_network_firewall_policy_rule_collection_group_collection_rule_add

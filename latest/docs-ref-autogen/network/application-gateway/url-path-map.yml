@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_application_gateway_url_path_map
 name: az network application-gateway url-path-map
 summary: Manage URL path maps of an application gateway.
@@ -8,13 +8,30 @@ directCommands:
   name: az network application-gateway url-path-map create
   summary: Create a URL path map.
   description: The map must be created with at least one rule. This command requires the creation of the first rule at the time the map is created. To learn more visit <a href="https://docs.microsoft.com/azure/application-gateway/application-gateway-create-url-route-cli">https://docs.microsoft.com/azure/application-gateway/application-gateway-create-url-route-cli</a>.
+  syntax: >-
+    az network application-gateway url-path-map create --gateway-name
+                                                       --name
+                                                       --paths
+                                                       --resource-group
+                                                       [--address-pool]
+                                                       [--default-address-pool]
+                                                       [--default-http-settings]
+                                                       [--default-redirect-config]
+                                                       [--default-rewrite-rule-set]
+                                                       [--http-settings]
+                                                       [--no-wait]
+                                                       [--redirect-config]
+                                                       [--rewrite-rule-set]
+                                                       [--rule-name]
+                                                       [--subscription]
+                                                       [--waf-policy]
   examples:
   - summary: Create a URL path map with a rule.
     syntax: >-
       az network application-gateway url-path-map create -g MyResourceGroup --gateway-name MyAppGateway \
           -n MyUrlPathMap --rule-name MyUrlPathMapRule1 --paths /mypath1/* --address-pool MyAddressPool \
           --default-address-pool MyAddressPool --http-settings MyHttpSettings --default-http-settings MyHttpSettings
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --gateway-name
     summary: Name of the application gateway.
@@ -24,8 +41,16 @@ directCommands:
     summary: The name of the URL path map.
     description: ''
   - isRequired: true
+    name: --paths
+    summary: 'Space-separated list of paths to associate with the rule. Valid paths start and end with "/" (ex: "/bar/").'
+    description: ''
+  - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  optionalParameters:
+  - name: --address-pool
+    summary: The name or ID of the backend address pool to use with the created rule.
     description: ''
   - name: --default-address-pool
     summary: The name or ID of the default backend address pool, if different from --address-pool.
@@ -39,18 +64,11 @@ directCommands:
   - name: --default-rewrite-rule-set
     summary: The name or ID of the default rewrite rule set, if different from --rewrite-rule-set.
     description: ''
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
-  - isRequired: true
-    name: --paths
-    summary: 'Space-separated list of paths to associate with the rule. Valid paths start and end with "/" (ex: "/bar/").'
-    description: ''
-  - name: --address-pool
-    summary: The name or ID of the backend address pool to use with the created rule.
-    description: ''
   - name: --http-settings
     summary: The name or ID of the HTTP settings to use with the created rule.
+    description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --redirect-config
     summary: The name or ID of the redirect configuration to use with the created rule.
@@ -62,29 +80,28 @@ directCommands:
     defaultValue: default
     summary: The name of the url-path-map rule.
     description: ''
-  - name: --waf-policy
-    summary: Name or ID of a Firewall Policy resource.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --waf-policy
+    summary: Name or ID of a Firewall Policy resource.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_application_gateway_url_path_map_delete
   name: az network application-gateway url-path-map delete
   summary: Delete a URL path map.
   description: ''
+  syntax: >-
+    az network application-gateway url-path-map delete [--gateway-name]
+                                                       [--ids]
+                                                       [--name]
+                                                       [--no-wait]
+                                                       [--resource-group]
+                                                       [--subscription]
   examples:
   - summary: Delete a URL path map.
     syntax: az network application-gateway url-path-map delete -g MyResourceGroup --gateway-name MyAppGateway -n MyUrlPathMap
-  parameters:
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
+  optionalParameters:
   - name: --gateway-name
     summary: The name of the application gateway.
     description: ''
@@ -94,26 +111,28 @@ directCommands:
   - name: --name -n
     summary: The name of the URL path map.
     description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_application_gateway_url_path_map_list
   name: az network application-gateway url-path-map list
   summary: List URL path maps.
   description: ''
+  syntax: >-
+    az network application-gateway url-path-map list --gateway-name
+                                                     --resource-group
+                                                     [--subscription]
   examples:
   - summary: List URL path maps.
     syntax: az network application-gateway url-path-map list -g MyResourceGroup --gateway-name MyAppGateway
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --gateway-name
     summary: The name of the application gateway.
@@ -122,23 +141,25 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_application_gateway_url_path_map_show
   name: az network application-gateway url-path-map show
   summary: Get the details of a URL path map.
   description: ''
+  syntax: >-
+    az network application-gateway url-path-map show [--gateway-name]
+                                                     [--ids]
+                                                     [--name]
+                                                     [--resource-group]
+                                                     [--subscription]
   examples:
   - summary: Get the details of a URL path map.
     syntax: az network application-gateway url-path-map show -g MyResourceGroup --gateway-name MyAppGateway -n MyUrlPathMap
-  parameters:
+  optionalParameters:
   - name: --gateway-name
     summary: The name of the application gateway.
     description: ''
@@ -154,16 +175,26 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_application_gateway_url_path_map_update
   name: az network application-gateway url-path-map update
   summary: Update a URL path map.
   description: ''
+  syntax: >-
+    az network application-gateway url-path-map update [--add]
+                                                       [--default-address-pool]
+                                                       [--default-http-settings]
+                                                       [--default-redirect-config]
+                                                       [--default-rewrite-rule-set]
+                                                       [--force-string]
+                                                       [--gateway-name]
+                                                       [--ids]
+                                                       [--name]
+                                                       [--no-wait]
+                                                       [--remove]
+                                                       [--resource-group]
+                                                       [--set]
+                                                       [--subscription]
   examples:
   - summary: Update a URL path map to use new default HTTP settings.
     syntax: >-
@@ -173,7 +204,10 @@ directCommands:
     syntax: az network application-gateway url-path-map update --default-address-pool MyAddressPool --default-http-settings MyNewHttpSettings --gateway-name MyAppGateway --name MyUrlPathMap --resource-group MyResourceGroup
   - summary: Update a URL path map. (autogenerated)
     syntax: az network application-gateway url-path-map update --gateway-name MyAppGateway --name MyUrlPathMap --resource-group MyResourceGroup --set useRemoteGateways=true
-  parameters:
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
   - name: --default-address-pool
     summary: The name or ID of the default backend address pool.
     description: ''
@@ -186,8 +220,8 @@ directCommands:
   - name: --default-rewrite-rule-set
     summary: The name or ID of the default rewrite rule set.
     description: ''
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --gateway-name
     summary: Name of the application gateway.
@@ -198,30 +232,22 @@ directCommands:
   - name: --name -n
     summary: The name of the URL path map.
     description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_application_gateway_url_path_map_create
 - az_network_application_gateway_url_path_map_delete
@@ -247,6 +273,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

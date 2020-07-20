@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_peering_az_peering_service
 name: az peering service
 summary: Peering service.
@@ -8,10 +8,18 @@ directCommands:
   name: az peering service create
   summary: Creates a new peering service or updates an existing peering with the specified name under the given subscription and resource group.
   description: ''
+  syntax: >-
+    az peering service create --location
+                              --peering-service-name
+                              --resource-group
+                              [--peering-service-location]
+                              [--peering-service-provider]
+                              [--sku]
+                              [--tags]
   examples:
   - summary: Create a  peering service
     syntax: az peering service create --location "eastus" --peering-service-location "state1" --peering-service-provider "serviceProvider1" --peering-service-name "peeringServiceName" --resource-group "rgName"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -24,6 +32,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --peering-service-location
     summary: The PeeringServiceLocation of the Customer.
     description: ''
@@ -40,10 +49,13 @@ directCommands:
   name: az peering service delete
   summary: Deletes an existing peering service with the specified name under the given subscription and resource group.
   description: ''
+  syntax: >-
+    az peering service delete --peering-service-name
+                              --resource-group
   examples:
   - summary: Delete a peering service
     syntax: az peering service delete --peering-service-name "peeringServiceName" --resource-group "rgName"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --peering-service-name
     summary: The name of the peering service.
@@ -56,10 +68,11 @@ directCommands:
   name: az peering service list
   summary: Lists all of the peerings under the given subscription.
   description: ''
+  syntax: az peering service list [--resource-group]
   examples:
   - summary: List peering services in a resource group
     syntax: az peering service list --resource-group "rgName"
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -67,10 +80,13 @@ directCommands:
   name: az peering service show
   summary: Gets an existing peering service with the specified name under the given subscription and resource group.
   description: ''
+  syntax: >-
+    az peering service show --peering-service-name
+                            --resource-group
   examples:
   - summary: Get a peering service
     syntax: az peering service show --peering-service-name "peeringServiceName" --resource-group "rgName"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --peering-service-name
     summary: The name of the peering.
@@ -83,10 +99,14 @@ directCommands:
   name: az peering service update
   summary: Updates tags for a peering service with the specified name under the given subscription and resource group.
   description: ''
+  syntax: >-
+    az peering service update --peering-service-name
+                              --resource-group
+                              [--tags]
   examples:
   - summary: Update peering service tags
     syntax: az peering service update --peering-service-name "peeringServiceName" --resource-group "rgName" --tags tags={"tag0":"value0","tag1":"value1"}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --peering-service-name
     summary: The name of the peering service.
@@ -95,6 +115,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''

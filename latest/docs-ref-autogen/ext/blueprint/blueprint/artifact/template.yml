@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_blueprint_az_blueprint_artifact_template
 name: az blueprint artifact template
 summary: Commands to manage blueprint ARM template artifact.
@@ -8,6 +8,17 @@ directCommands:
   name: az blueprint artifact template create
   summary: Create blueprint arm artifact.
   description: ''
+  syntax: >-
+    az blueprint artifact template create --artifact-name
+                                          --blueprint-name
+                                          --template
+                                          [--depends-on]
+                                          [--description]
+                                          [--display-name]
+                                          [--management-group]
+                                          [--parameters]
+                                          [--resource-group-art]
+                                          [--subscription]
   examples:
   - summary: Create an arm artifact
     syntax: >-
@@ -16,7 +27,7 @@ directCommands:
       --blueprint-name MyBlueprint --artifact-name MyTemplate \
 
       --parameters path/to/parameter/file --template path/to/template
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --artifact-name
     summary: Name of the blueprint artifact.
@@ -29,6 +40,7 @@ directCommands:
     name: --template -t
     summary: ARM template in JSON string or path to JSON file.
     description: ''
+  optionalParameters:
   - name: --depends-on
     summary: Artifacts which need to be deployed before the specified artifact.
     description: ''
@@ -38,14 +50,14 @@ directCommands:
   - name: --display-name
     summary: DisplayName of this artifact.
     description: ''
+  - name: --management-group -m
+    summary: Use management group for the scope of the blueprint.
+    description: ''
   - name: --parameters -p
     summary: Parameters for ARM template artifact. It can be a JSON string or JSON file path.
     description: ''
   - name: --resource-group-art
     summary: Name of the resource group artifact to which the policy will be assigned.
-    description: ''
-  - name: --management-group -m
-    summary: Use management group for the scope of the blueprint.
     description: ''
   - name: --subscription -s
     summary: Use subscription for the scope of the blueprint. If --management-group is not specified, --subscription value or the default subscription will be used as the scope.
@@ -54,13 +66,24 @@ directCommands:
   name: az blueprint artifact template update
   summary: Update blueprint arm artifact.
   description: ''
+  syntax: >-
+    az blueprint artifact template update --artifact-name
+                                          --blueprint-name
+                                          [--depends-on]
+                                          [--description]
+                                          [--display-name]
+                                          [--management-group]
+                                          [--parameters]
+                                          [--resource-group-art]
+                                          [--subscription]
+                                          [--template]
   examples:
   - summary: Update a arm artifact
     syntax: >-
       az blueprint artifact template update \
 
       --blueprint-name MyBlueprint --artifact-name MyTemplate --display-name "My Template"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --artifact-name
     summary: Name of the blueprint artifact.
@@ -69,6 +92,7 @@ directCommands:
     name: --blueprint-name
     summary: Name of the blueprint definition.
     description: ''
+  optionalParameters:
   - name: --depends-on
     summary: Artifacts which need to be deployed before the specified artifact.
     description: ''
@@ -78,20 +102,20 @@ directCommands:
   - name: --display-name
     summary: DisplayName of this artifact.
     description: ''
+  - name: --management-group -m
+    summary: Use management group for the scope of the blueprint.
+    description: ''
   - name: --parameters -p
     summary: Parameters for ARM template artifact. It can be a JSON string or JSON file path.
     description: ''
   - name: --resource-group-art
     summary: Name of the resource group artifact to which the policy will be assigned.
     description: ''
-  - name: --template -t
-    summary: ARM template in JSON string or path to JSON file.
-    description: ''
-  - name: --management-group -m
-    summary: Use management group for the scope of the blueprint.
-    description: ''
   - name: --subscription -s
     summary: Use subscription for the scope of the blueprint. If --management-group is not specified, --subscription value or the default subscription will be used as the scope.
+    description: ''
+  - name: --template -t
+    summary: ARM template in JSON string or path to JSON file.
     description: ''
 commands:
 - ext_blueprint_az_blueprint_artifact_template_create

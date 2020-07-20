@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datafactory_az_datafactory_integration_runtime_linked_integration_runtime
 name: az datafactory integration-runtime linked-integration-runtime
 summary: Datafactory integration-runtime sub group linked-integration-runtime.
@@ -8,10 +8,18 @@ directCommands:
   name: az datafactory integration-runtime linked-integration-runtime create
   summary: Create a linked integration runtime entry in a shared integration runtime.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime linked-integration-runtime create --factory-name
+                                                                         --integration-runtime-name
+                                                                         --resource-group
+                                                                         [--data-factory-name]
+                                                                         [--location]
+                                                                         [--name]
+                                                                         [--subscription-id]
   examples:
   - summary: IntegrationRuntimes_CreateLinkedIntegrationRuntime
     syntax: az datafactory integration-runtime linked-integration-runtime create --name "bfa92911-9fb6-4fbe-8f23-beae87bc1c83" --location "West US" --data-factory-name "e9955d6d-56ea-4be3-841c-52a12c1a9981" --subscription-id "061774c7-4b5a-4159-a55b-365581830283" --factory-name "myFactoryName" --integration-runtime-name "myIntegrationRuntime" --resource-group "myResourceGroup" --subscription-id "12345678-1234-1234-1234-12345678abc"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -24,6 +32,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --data-factory-name
     summary: The name of the data factory that the linked integration runtime belongs to.
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_express_route
 name: az network express-route
 summary: Manage dedicated private network fiber connections to Azure.
@@ -8,10 +8,22 @@ directCommands:
   name: az network express-route create
   summary: Create an ExpressRoute circuit.
   description: ''
+  syntax: >-
+    az network express-route create --bandwidth
+                                    --name
+                                    --peering-location
+                                    --provider
+                                    --resource-group
+                                    [--location]
+                                    [--no-wait]
+                                    [--sku-family {MeteredData, UnlimitedData}]
+                                    [--sku-tier {Premium, Standard}]
+                                    [--subscription]
+                                    [--tags]
   examples:
   - summary: Create an ExpressRoute circuit.
     syntax: az network express-route create --bandwidth 200 -n MyCircuit --peering-location "Silicon Valley" -g MyResourceGroup --provider "Equinix" -l "West US" --sku-family MeteredData --sku-tier Standard
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --bandwidth
     summary: 'Bandwidth of the circuit. Usage: INT {Mbps,Gbps}. Defaults to Mbps.'
@@ -35,6 +47,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
@@ -51,48 +64,48 @@ directCommands:
     parameterValueGroup: Premium, Standard
     summary: SKU Tier of ExpressRoute circuit.
     description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_express_route_list
   name: az network express-route list
   summary: List all ExpressRoute circuits for the current subscription.
   description: ''
+  syntax: >-
+    az network express-route list [--resource-group]
+                                  [--subscription]
   examples:
   - summary: List all ExpressRoute circuits for the current subscription.
     syntax: az network express-route list -g MyResourceGroup
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_express_route_list_route_tables
   name: az network express-route list-route-tables
   summary: Show the current routing table of an ExpressRoute circuit peering.
   description: ''
+  syntax: >-
+    az network express-route list-route-tables --path {primary, secondary}
+                                               --peering-name
+                                               [--ids]
+                                               [--name]
+                                               [--resource-group]
+                                               [--subscription]
   examples:
   - summary: Show the current routing table of an ExpressRoute circuit peering.
     syntax: >-
       az network express-route list-route-tables -g MyResourceGroup -n MyCircuit \
           --path primary --peering-name AzurePrivatePeering
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --path
     parameterValueGroup: primary, secondary
@@ -102,6 +115,7 @@ directCommands:
     name: --peering-name
     summary: The name of the peering.
     description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -114,12 +128,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_express_route_create
 - az_network_express_route_gateway
@@ -156,6 +165,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

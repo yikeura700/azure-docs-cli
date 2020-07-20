@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_cdn
 name: az cdn
 summary: Manage Azure Content Delivery Networks (CDNs).
@@ -8,7 +8,11 @@ directCommands:
   name: az cdn name-exists
   summary: Check the availability of a resource name.
   description: This is needed for resources where name is globally unique, such as a CDN endpoint.
-  parameters:
+  syntax: >-
+    az cdn name-exists [--ids]
+                       [--name]
+                       [--subscription]
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -18,26 +22,17 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
 - uid: az_cdn_usage
   name: az cdn usage
   summary: Check the quota and actual usage of the CDN profiles under the given subscription.
   description: ''
-  parameters:
+  syntax: az cdn usage [--subscription]
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
 commands:
 - az_cdn_custom_domain
 - az_cdn_custom_domain_create
@@ -132,6 +127,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/0bb45ecd541c1a6109ad67be4f45afe3ce47f2b5/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   updated_at: 6/3/2020 1:56:07 AM

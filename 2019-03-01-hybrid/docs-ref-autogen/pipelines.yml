@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_pipelines
 name: az pipelines
 summary: Manage Azure Pipelines.
@@ -8,6 +8,21 @@ directCommands:
   name: az pipelines create
   summary: Create a new Azure Pipeline (YAML based).
   description: ''
+  syntax: >-
+    az pipelines create --name
+                        [--branch]
+                        [--description]
+                        [--detect {false, true}]
+                        [--folder-path]
+                        [--org]
+                        [--project]
+                        [--queue-id]
+                        [--repository]
+                        [--repository-type {github, tfsgit}]
+                        [--service-connection]
+                        [--skip-first-run {false, true}]
+                        [--subscription]
+                        [--yaml-path]
   examples:
   - summary: Create an Azure Pipeline from local checkout repository context
     syntax: >-
@@ -36,11 +51,12 @@ directCommands:
       az pipelines create --name 'ContosoBuild' --description 'Pipeline for contoso project'
 
       --repository https://github.com/SampleOrg/SampleRepo --branch master --yml-path azure-pipelines.yml [--service-connection SERVICE_CONNECTION]
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: Name of the new pipeline.
     description: ''
+  optionalParameters:
   - name: --branch
     summary: Branch name for which the pipeline will be configured. If omitted, it will be auto-detected from local repository.
     description: ''
@@ -77,21 +93,29 @@ directCommands:
     parameterValueGroup: false, true
     summary: Specify this flag to prevent the first run being triggered by the command. Command will return a pipeline if run is skipped else it will output a pipeline run.
     description: ''
-  - name: --yaml-path --yml-path
-    summary: Path of the pipelines yaml file in the repo (if yaml is already present in the repo).
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --yaml-path --yml-path
+    summary: Path of the pipelines yaml file in the repo (if yaml is already present in the repo).
     description: ''
 - uid: az_pipelines_delete
   name: az pipelines delete
   summary: Delete a pipeline.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines delete --id
+                        [--detect {false, true}]
+                        [--org]
+                        [--project]
+                        [--subscription]
+                        [--yes]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: ID of the pipeline.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -102,17 +126,28 @@ directCommands:
   - name: --project -p
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
     description: ''
 - uid: az_pipelines_list
   name: az pipelines list
   summary: List pipelines.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines list [--detect {false, true}]
+                      [--folder-path]
+                      [--name]
+                      [--org]
+                      [--project]
+                      [--query-order {ModifiedAsc, ModifiedDesc, NameAsc, NameDesc, None}]
+                      [--repository]
+                      [--repository-type {bitbucket, git, github, githubenterprise, svn, tfsgit, tfsversioncontrol}]
+                      [--subscription]
+                      [--top]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -140,17 +175,29 @@ directCommands:
     parameterValueGroup: bitbucket, git, github, githubenterprise, svn, tfsgit, tfsversioncontrol
     summary: Limit results to pipelines associated with this repository type. It is mandatory to pass 'repository' argument along with this argument.
     description: ''
-  - name: --top
-    summary: Maximum number of pipelines to list.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --top
+    summary: Maximum number of pipelines to list.
     description: ''
 - uid: az_pipelines_run
   name: az pipelines run
   summary: Queue (run) a pipeline.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines run [--branch]
+                     [--commit-id]
+                     [--detect {false, true}]
+                     [--folder-path]
+                     [--id]
+                     [--name]
+                     [--open]
+                     [--org]
+                     [--project]
+                     [--subscription]
+                     [--variables]
+  optionalParameters:
   - name: --branch
     summary: 'Name of the branch on which the pipeline run is to be queued. Example: refs/heads/master or master or refs/pull/1/merge.'
     description: ''
@@ -179,17 +226,26 @@ directCommands:
   - name: --project -p
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
-  - name: --variables
-    summary: Space separated "name=value" pairs for the variables you would like to set.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --variables
+    summary: Space separated "name=value" pairs for the variables you would like to set.
     description: ''
 - uid: az_pipelines_show
   name: az pipelines show
   summary: Get the details of a pipeline.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines show [--detect {false, true}]
+                      [--folder-path]
+                      [--id]
+                      [--name]
+                      [--open]
+                      [--org]
+                      [--project]
+                      [--subscription]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -219,7 +275,20 @@ directCommands:
   name: az pipelines update
   summary: Update a pipeline.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines update [--branch]
+                        [--description]
+                        [--detect {false, true}]
+                        [--id]
+                        [--name]
+                        [--new-folder-path]
+                        [--new-name]
+                        [--org]
+                        [--project]
+                        [--queue-id]
+                        [--subscription]
+                        [--yaml-path]
+  optionalParameters:
   - name: --branch
     summary: Branch name for which the pipeline will be configured.
     description: ''
@@ -251,11 +320,11 @@ directCommands:
   - name: --queue-id
     summary: Queue id of the agent pool where the pipeline needs to run.
     description: ''
-  - name: --yaml-path --yml-path
-    summary: Path of the pipelines yaml file in the repo.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --yaml-path --yml-path
+    summary: Path of the pipelines yaml file in the repo.
     description: ''
 commands:
 - az_pipelines_agent

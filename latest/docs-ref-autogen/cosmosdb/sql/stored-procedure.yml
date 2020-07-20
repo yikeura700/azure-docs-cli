@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_cosmosdb_sql_stored_procedure
 name: az cosmosdb sql stored-procedure
 summary: Manage Azure Cosmos DB SQL stored procedures.
@@ -8,10 +8,18 @@ directCommands:
   name: az cosmosdb sql stored-procedure create
   summary: Create an SQL stored procedure under an Azure Cosmos DB SQL container.
   description: ''
+  syntax: >-
+    az cosmosdb sql stored-procedure create --account-name
+                                            --body
+                                            --container-name
+                                            --database-name
+                                            --name
+                                            --resource-group
+                                            [--subscription]
   examples:
   - summary: Create an Azure Cosmos DB SQL stored procedure.
     syntax: az cosmosdb sql stored-procedure create -g MyResourceGroup -a MyAccount -d MyDatabase -c MyContainer -n MyStoredProcedure -b StoredProcedureBody
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -36,20 +44,24 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_sql_stored_procedure_delete
   name: az cosmosdb sql stored-procedure delete
   summary: Delete the SQL stored procedure under an Azure Cosmos DB SQL container.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb sql stored-procedure delete --account-name
+                                            --container-name
+                                            --database-name
+                                            --name
+                                            --resource-group
+                                            [--subscription]
+                                            [--yes]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -69,24 +81,26 @@ directCommands:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  optionalParameters:
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_sql_stored_procedure_list
   name: az cosmosdb sql stored-procedure list
   summary: List the SQL stored procedures under an Azure Cosmos DB SQL container.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb sql stored-procedure list --account-name
+                                          --container-name
+                                          --database-name
+                                          --resource-group
+                                          [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -103,20 +117,23 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_sql_stored_procedure_show
   name: az cosmosdb sql stored-procedure show
   summary: Show the details of a SQL stored procedure under an Azure Cosmos DB SQL container.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb sql stored-procedure show --account-name
+                                          --container-name
+                                          --database-name
+                                          --name
+                                          --resource-group
+                                          [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -137,20 +154,24 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_sql_stored_procedure_update
   name: az cosmosdb sql stored-procedure update
   summary: Creates or Updates an Azure Cosmos DB SQL stored procedure.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb sql stored-procedure update --account-name
+                                            --body
+                                            --container-name
+                                            --database-name
+                                            --name
+                                            --resource-group
+                                            [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -175,15 +196,11 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 commands:
 - az_cosmosdb_sql_stored_procedure_create
 - az_cosmosdb_sql_stored_procedure_delete
@@ -206,6 +223,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/1a803c49df1c2a27dfcdc079168f3bc2baf02c81/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   updated_at: 4/17/2020 2:16:59 AM

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_ams_live_output
 name: az ams live-output
 summary: Manage live outputs for an Azure Media Service account.
@@ -8,7 +8,19 @@ directCommands:
   name: az ams live-output create
   summary: Create a live output.
   description: ''
-  parameters:
+  syntax: >-
+    az ams live-output create --account-name
+                              --archive-window-length
+                              --asset-name
+                              --live-event-name
+                              --name
+                              --resource-group
+                              [--description]
+                              [--fragments-per-ts-segment]
+                              [--manifest-name]
+                              [--output-snap-time]
+                              [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -33,6 +45,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --description
     summary: The live output description.
     description: ''
@@ -48,17 +61,19 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
 - uid: az_ams_live_output_delete
   name: az ams live-output delete
   summary: Delete a live output.
   description: ''
-  parameters:
+  syntax: >-
+    az ams live-output delete [--account-name]
+                              [--ids]
+                              [--live-event-name]
+                              [--name]
+                              [--resource-group]
+                              [--subscription]
+  optionalParameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
     description: ''
@@ -77,17 +92,17 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
 - uid: az_ams_live_output_list
   name: az ams live-output list
   summary: List all the live outputs in a live event.
   description: ''
-  parameters:
+  syntax: >-
+    az ams live-output list --account-name
+                            --live-event-name
+                            --resource-group
+                            [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -100,20 +115,23 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
 - uid: az_ams_live_output_show
   name: az ams live-output show
   summary: Show the details of a live output.
   description: ''
-  parameters:
+  syntax: >-
+    az ams live-output show [--account-name]
+                            [--ids]
+                            [--live-event-name]
+                            [--name]
+                            [--resource-group]
+                            [--subscription]
+  optionalParameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
     description: ''
@@ -132,12 +150,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
 commands:
 - az_ams_live_output_create
 - az_ams_live_output_delete
@@ -159,6 +172,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
   updated_at: 3/25/2020 2:12:45 AM

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_keyvault-preview_az_keyvault_storage
 name: az keyvault storage
 summary: Manage storage accounts.
@@ -8,6 +8,15 @@ directCommands:
   name: az keyvault storage add
   summary: Creates or updates a new storage account.
   description: ''
+  syntax: >-
+    az keyvault storage add --active-key-name
+                            --name
+                            --resource-id
+                            --vault-name
+                            [--auto-regenerate-key {false, true}]
+                            [--disabled {false, true}]
+                            [--regeneration-period]
+                            [--tags]
   examples:
   - summary: Create a storage account and setup a vault to manage its keys
     syntax: >-
@@ -18,15 +27,24 @@ directCommands:
 
 
       az keyvault storage add --vault-name vault -n storageacct --active-key-name key1    \ --auto-regenerate-key --regeneration-period P90D  --resource-id $id
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --active-key-name
     summary: Current active storage account key name.
     description: ''
   - isRequired: true
+    name: --name -n
+    summary: Name to identify the storage account in the vault.
+    description: ''
+  - isRequired: true
     name: --resource-id
     summary: Storage account resource id.
     description: ''
+  - isRequired: true
+    name: --vault-name
+    summary: Name of the key vault.
+    description: ''
+  optionalParameters:
   - name: --auto-regenerate-key
     parameterValueGroup: false, true
     summary: Whether keyvault should manage the storage account for the user.
@@ -41,23 +59,21 @@ directCommands:
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
-  - isRequired: true
-    name: --name -n
-    summary: Name to identify the storage account in the vault.
-    description: ''
-  - isRequired: true
-    name: --vault-name
-    summary: Name of the key vault.
-    description: ''
 - uid: ext_keyvault-preview_az_keyvault_storage_backup
   name: az keyvault storage backup
   summary: Backs up the specified storage account.
   description: Requests that a backup of the specified storage account be downloaded to the client. This operation requires the storage/backup permission.
-  parameters:
+  syntax: >-
+    az keyvault storage backup --file
+                               [--id]
+                               [--name]
+                               [--vault-name]
+  requiredParameters:
   - isRequired: true
     name: --file -f
     summary: Local file path in which to store storage account backup.
     description: ''
+  optionalParameters:
   - name: --id
     summary: Id of the storage account.  If specified all other 'Id' arguments should be omitted.
     description: ''
@@ -71,31 +87,42 @@ directCommands:
   name: az keyvault storage list
   summary: List storage accounts managed by the specified key vault.
   description: This operation requires the storage/list permission.
-  parameters:
-  - name: --maxresults
-    summary: Maximum number of results to return in a page. If not specified the service will return up to 25 results.
-    description: ''
+  syntax: >-
+    az keyvault storage list --vault-name
+                             [--maxresults]
+  requiredParameters:
   - isRequired: true
     name: --vault-name
     summary: Name of the key vault.
+    description: ''
+  optionalParameters:
+  - name: --maxresults
+    summary: Maximum number of results to return in a page. If not specified the service will return up to 25 results.
     description: ''
 - uid: ext_keyvault-preview_az_keyvault_storage_list_deleted
   name: az keyvault storage list-deleted
   summary: Lists deleted storage accounts for the specified vault.
   description: The Get Deleted Storage Accounts operation returns the storage accounts that have been deleted for a vault enabled for soft-delete. This operation requires the storage/list permission.
-  parameters:
-  - name: --maxresults
-    summary: Maximum number of results to return in a page. If not specified the service will return up to 25 results.
-    description: ''
+  syntax: >-
+    az keyvault storage list-deleted --vault-name
+                                     [--maxresults]
+  requiredParameters:
   - isRequired: true
     name: --vault-name
     summary: Name of the key vault.
+    description: ''
+  optionalParameters:
+  - name: --maxresults
+    summary: Maximum number of results to return in a page. If not specified the service will return up to 25 results.
     description: ''
 - uid: ext_keyvault-preview_az_keyvault_storage_purge
   name: az keyvault storage purge
   summary: Permanently deletes the specified storage account.
   description: The purge deleted storage account operation removes the secret permanently, without the possibility of recovery. This operation can only be performed on a soft-delete enabled vault. This operation requires the storage/purge permission.
-  parameters:
+  syntax: >-
+    az keyvault storage purge --name
+                              --vault-name
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name to identify the storage account in the vault.
@@ -108,7 +135,10 @@ directCommands:
   name: az keyvault storage recover
   summary: Recovers the deleted storage account.
   description: Recovers the deleted storage account in the specified vault. This operation can only be performed on a soft-delete enabled vault. This operation requires the storage/recover permission.
-  parameters:
+  syntax: >-
+    az keyvault storage recover --name
+                                --vault-name
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name to identify the storage account in the vault.
@@ -121,11 +151,17 @@ directCommands:
   name: az keyvault storage regenerate-key
   summary: Regenerates the specified key value for the given storage account.
   description: This operation requires the storage/regeneratekey permission.
-  parameters:
+  syntax: >-
+    az keyvault storage regenerate-key --key-name
+                                       [--id]
+                                       [--name]
+                                       [--vault-name]
+  requiredParameters:
   - isRequired: true
     name: --key-name
     summary: The storage account key name.
     description: ''
+  optionalParameters:
   - name: --id
     summary: Id of the storage account.  If specified all other 'Id' arguments should be omitted.
     description: ''
@@ -139,10 +175,14 @@ directCommands:
   name: az keyvault storage remove
   summary: Remove a Key Vault managed Azure Storage Account and all associated SAS definitions. This operation requires the storage/delete permission.
   description: ''
+  syntax: >-
+    az keyvault storage remove [--id]
+                               [--name]
+                               [--vault-name]
   examples:
   - summary: Remove a Key Vault managed Azure Storage Account and all associated SAS definitions (autogenerated)
     syntax: az keyvault storage remove --name MyStorageAccount --vault-name MyVault
-  parameters:
+  optionalParameters:
   - name: --id
     summary: Id of the storage account.  If specified all other 'Id' arguments should be omitted.
     description: ''
@@ -156,7 +196,10 @@ directCommands:
   name: az keyvault storage restore
   summary: Restores a backed up storage account to a vault.
   description: Restores a backed up storage account to a vault. This operation requires the storage/restore permission.
-  parameters:
+  syntax: >-
+    az keyvault storage restore --file-path
+                                --vault-name
+  requiredParameters:
   - isRequired: true
     name: --file-path
     summary: ''
@@ -169,7 +212,11 @@ directCommands:
   name: az keyvault storage show
   summary: Gets information about a specified storage account.
   description: This operation requires the storage/get permission.
-  parameters:
+  syntax: >-
+    az keyvault storage show [--id]
+                             [--name]
+                             [--vault-name]
+  optionalParameters:
   - name: --id
     summary: Id of the storage account.  If specified all other 'Id' arguments should be omitted.
     description: ''
@@ -183,7 +230,10 @@ directCommands:
   name: az keyvault storage show-deleted
   summary: Gets the specified deleted storage account.
   description: The Get Deleted Storage Account operation returns the specified deleted storage account along with its attributes. This operation requires the storage/get permission.
-  parameters:
+  syntax: >-
+    az keyvault storage show-deleted --name
+                                     --vault-name
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name to identify the storage account in the vault.
@@ -196,7 +246,16 @@ directCommands:
   name: az keyvault storage update
   summary: Updates the specified attributes associated with the given storage account.
   description: This operation requires the storage/set/update permission.
-  parameters:
+  syntax: >-
+    az keyvault storage update [--active-key-name]
+                               [--auto-regenerate-key {false, true}]
+                               [--disabled {false, true}]
+                               [--id]
+                               [--name]
+                               [--regeneration-period]
+                               [--tags]
+                               [--vault-name]
+  optionalParameters:
   - name: --active-key-name
     summary: The current active storage account key name.
     description: ''
@@ -208,17 +267,17 @@ directCommands:
     parameterValueGroup: false, true
     summary: Add the storage account in a disabled state.
     description: ''
-  - name: --regeneration-period
-    summary: The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.
-    description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
   - name: --id
     summary: Id of the storage account.  If specified all other 'Id' arguments should be omitted.
     description: ''
   - name: --name -n
     summary: Name to identify the storage account in the vault. Required if --id is not specified.
+    description: ''
+  - name: --regeneration-period
+    summary: The key regeneration time duration specified in ISO-8601 format, such as "P30D" for rotation every 30 days.
+    description: ''
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
   - name: --vault-name
     summary: Name of the key vault. Required if --id is not specified.

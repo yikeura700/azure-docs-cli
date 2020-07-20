@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_devops_security_group
 name: az devops security group
 summary: Manage security groups.
@@ -8,6 +8,16 @@ directCommands:
   name: az devops security group create
   summary: Create a new Azure DevOps group.
   description: ''
+  syntax: >-
+    az devops security group create [--description]
+                                    [--detect {false, true}]
+                                    [--email-id]
+                                    [--groups]
+                                    [--name]
+                                    [--org]
+                                    [--origin-id]
+                                    [--project]
+                                    [--scope {organization, project}]
   examples:
   - summary: Create an Azure DevOps Group with name and description
     syntax: >-
@@ -31,7 +41,7 @@ directCommands:
       az devops security group create --name 'Some group name'
 
       --groups 'vssgp.someDescriptorForGroupOne,vssgp.someDescriptorForGroupTwo'
-  parameters:
+  optionalParameters:
   - name: --description
     summary: Description of Azure DevOps group.
     description: ''
@@ -66,11 +76,17 @@ directCommands:
   name: az devops security group delete
   summary: Delete an Azure DevOps group.
   description: ''
-  parameters:
+  syntax: >-
+    az devops security group delete --id
+                                    [--detect {false, true}]
+                                    [--org]
+                                    [--yes]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: Descriptor of the group.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -85,7 +101,14 @@ directCommands:
   name: az devops security group list
   summary: List all the groups in a project or organization.
   description: ''
-  parameters:
+  syntax: >-
+    az devops security group list [--continuation-token]
+                                  [--detect {false, true}]
+                                  [--org]
+                                  [--project]
+                                  [--scope {organization, project}]
+                                  [--subject-types]
+  optionalParameters:
   - name: --continuation-token
     summary: If there are more results that can't be returned in a single page, the result set will contain a continuation token for retrieval of the next set of results.
     description: ''
@@ -111,11 +134,16 @@ directCommands:
   name: az devops security group show
   summary: Show group details.
   description: ''
-  parameters:
+  syntax: >-
+    az devops security group show --id
+                                  [--detect {false, true}]
+                                  [--org]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: Descriptor of the group.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -127,11 +155,18 @@ directCommands:
   name: az devops security group update
   summary: Update name AND/OR description for an Azure DevOps group.
   description: ''
-  parameters:
+  syntax: >-
+    az devops security group update --id
+                                    [--description]
+                                    [--detect {false, true}]
+                                    [--name]
+                                    [--org]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: Descriptor of the group.
     description: ''
+  optionalParameters:
   - name: --description
     summary: New description for Azure DevOps group.
     description: ''

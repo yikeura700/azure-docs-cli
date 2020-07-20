@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_dms-preview_az_dms_project
 name: az dms project
 summary: Manage Projects for an instance of the Data Migration Service.
@@ -14,10 +14,18 @@ directCommands:
         2) MySQL -> AzureDbForMySql
         3) PostgreSQL -> AzureDbForPostgreSQL
         4) MongoDB -> MongoDB (for migrating to Cosmos DB via their MongoDB API).
+  syntax: >-
+    az dms project create --location
+                          --name
+                          --resource-group
+                          --service-name
+                          --source-platform
+                          --target-platform
+                          [--tags]
   examples:
   - summary: Create a SQL Project for a DMS instance.
     syntax: az dms project create -l westus -n myproject -g myresourcegroup --service-name mydms --source-platform SQL --target-platform SQLDB --tags tagName1=tagValue1 tagWithNoValue
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -42,6 +50,7 @@ directCommands:
     name: --target-platform
     summary: 'The type of service for the target database. The supported types are: SQLDB, AzureDbForMySql, AzureDbForPostgreSQL, MongoDB.'
     description: ''
+  optionalParameters:
   - name: --tags
     summary: A space-delimited list of tags in tag1[=value1]" format.
     description: ''

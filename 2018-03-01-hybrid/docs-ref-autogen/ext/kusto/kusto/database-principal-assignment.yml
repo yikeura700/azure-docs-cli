@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_kusto_az_kusto_database_principal_assignment
 name: az kusto database-principal-assignment
 summary: Kusto database-principal-assignment.
@@ -8,10 +8,20 @@ directCommands:
   name: az kusto database-principal-assignment create
   summary: Creates a Kusto cluster database principalAssignment.
   description: ''
+  syntax: >-
+    az kusto database-principal-assignment create --cluster-name
+                                                  --database-name
+                                                  --principal-assignment-name
+                                                  --resource-group
+                                                  [--no-wait]
+                                                  [--principal-id]
+                                                  [--principal-type {App, Group, User}]
+                                                  [--role {Admin, Ingestor, Monitor, UnrestrictedViewers, User, Viewer}]
+                                                  [--tenant-id]
   examples:
   - summary: KustoDatabasePrincipalAssignmentsCreateOrUpdate
     syntax: az kusto database-principal-assignment create --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --principal-id "87654321-1234-1234-1234-123456789123" --principal-type "App" --role "Admin" --tenant-id "12345678-1234-1234-1234-123456789123" --principal-assignment-name "kustoprincipal1" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -28,6 +38,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -49,10 +60,16 @@ directCommands:
   name: az kusto database-principal-assignment delete
   summary: Deletes a Kusto principalAssignment.
   description: ''
+  syntax: >-
+    az kusto database-principal-assignment delete --cluster-name
+                                                  --database-name
+                                                  --principal-assignment-name
+                                                  --resource-group
+                                                  [--no-wait]
   examples:
   - summary: KustoDatabasePrincipalAssignmentsDelete
     syntax: az kusto database-principal-assignment delete --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --principal-assignment-name "kustoprincipal1" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -69,6 +86,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -76,10 +94,14 @@ directCommands:
   name: az kusto database-principal-assignment list
   summary: Lists all Kusto cluster database principalAssignments.
   description: ''
+  syntax: >-
+    az kusto database-principal-assignment list --cluster-name
+                                                --database-name
+                                                --resource-group
   examples:
   - summary: KustoPrincipalAssignmentsList
     syntax: az kusto database-principal-assignment list --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -96,10 +118,15 @@ directCommands:
   name: az kusto database-principal-assignment show
   summary: Gets a Kusto cluster database principalAssignment.
   description: ''
+  syntax: >-
+    az kusto database-principal-assignment show --cluster-name
+                                                --database-name
+                                                --principal-assignment-name
+                                                --resource-group
   examples:
   - summary: KustoDatabasePrincipalAssignmentsGet
     syntax: az kusto database-principal-assignment show --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --principal-assignment-name "kustoprincipal1" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -120,10 +147,20 @@ directCommands:
   name: az kusto database-principal-assignment update
   summary: Creates a Kusto cluster database principalAssignment.
   description: ''
+  syntax: >-
+    az kusto database-principal-assignment update --cluster-name
+                                                  --database-name
+                                                  --principal-assignment-name
+                                                  --resource-group
+                                                  [--no-wait]
+                                                  [--principal-id]
+                                                  [--principal-type {App, Group, User}]
+                                                  [--role {Admin, Ingestor, Monitor, UnrestrictedViewers, User, Viewer}]
+                                                  [--tenant-id]
   examples:
   - summary: KustoDatabasePrincipalAssignmentsCreateOrUpdate
     syntax: az kusto database-principal-assignment update --cluster-name "kustoclusterrptest4" --database-name "Kustodatabase8" --principal-id "87654321-1234-1234-1234-123456789123" --principal-type "App" --role "Admin" --tenant-id "12345678-1234-1234-1234-123456789123" --principal-assignment-name "kustoprincipal1" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -140,6 +177,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -161,7 +199,19 @@ directCommands:
   name: az kusto database-principal-assignment wait
   summary: Wait for a managed Kusto cluster to reach a desired state.
   description: If an operation on a cluster was interrupted or was started with `--no-wait`, use this command to wait for it to complete.
-  parameters:
+  syntax: >-
+    az kusto database-principal-assignment wait --cluster-name
+                                                --database-name
+                                                --principal-assignment-name
+                                                --resource-group
+                                                [--created]
+                                                [--custom]
+                                                [--deleted]
+                                                [--exists]
+                                                [--interval]
+                                                [--timeout]
+                                                [--updated]
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -178,6 +228,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

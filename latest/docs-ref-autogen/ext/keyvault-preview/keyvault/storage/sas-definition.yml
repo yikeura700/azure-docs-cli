@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_keyvault-preview_az_keyvault_storage_sas_definition
 name: az keyvault storage sas-definition
 summary: Manage storage account SAS definitions.
@@ -8,6 +8,15 @@ directCommands:
   name: az keyvault storage sas-definition create
   summary: Creates or updates a new SAS definition for the specified storage account.
   description: ''
+  syntax: >-
+    az keyvault storage sas-definition create --account-name
+                                              --name
+                                              --sas-type {account, service}
+                                              --template-uri
+                                              --validity-period
+                                              --vault-name
+                                              [--disabled {false, true}]
+                                              [--tags]
   examples:
   - summary: Add a sas-definition for an account sas-token
     syntax: >-
@@ -24,7 +33,15 @@ directCommands:
 
 
       az keyvault storage sas-definition create --vault-name vault --account-name storageacct   \ -n rwblobaccess --validity-period P2D --sas-type service --template-uri $url?$sastoken
-  parameters:
+  requiredParameters:
+  - isRequired: true
+    name: --account-name
+    summary: Name to identify the storage account in the vault.
+    description: ''
+  - isRequired: true
+    name: --name -n
+    summary: Name to identify the SAS definition in the vault.
+    description: ''
   - isRequired: true
     name: --sas-type
     parameterValueGroup: account, service
@@ -38,6 +55,11 @@ directCommands:
     name: --validity-period
     summary: The validity period of SAS tokens created according to the SAS definition in ISO-8601, such as "PT12H" for 12 hour tokens.
     description: ''
+  - isRequired: true
+    name: --vault-name
+    summary: Name of the key vault.
+    description: ''
+  optionalParameters:
   - name: --disabled
     parameterValueGroup: false, true
     summary: Add the storage account in a disabled state.
@@ -45,23 +67,16 @@ directCommands:
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
-  - isRequired: true
-    name: --account-name
-    summary: Name to identify the storage account in the vault.
-    description: ''
-  - isRequired: true
-    name: --name -n
-    summary: Name to identify the SAS definition in the vault.
-    description: ''
-  - isRequired: true
-    name: --vault-name
-    summary: Name of the key vault.
-    description: ''
 - uid: ext_keyvault-preview_az_keyvault_storage_sas_definition_delete
   name: az keyvault storage sas-definition delete
   summary: Deletes a SAS definition from a specified storage account.
   description: This operation requires the storage/deletesas permission.
-  parameters:
+  syntax: >-
+    az keyvault storage sas-definition delete [--account-name]
+                                              [--id]
+                                              [--name]
+                                              [--vault-name]
+  optionalParameters:
   - name: --account-name
     summary: Name to identify the storage account in the vault. Required if --id is not specified.
     description: ''
@@ -78,10 +93,11 @@ directCommands:
   name: az keyvault storage sas-definition list
   summary: List storage SAS definitions for the given storage account.
   description: This operation requires the storage/listsas permission.
-  parameters:
-  - name: --maxresults
-    summary: Maximum number of results to return in a page. If not specified the service will return up to 25 results.
-    description: ''
+  syntax: >-
+    az keyvault storage sas-definition list --account-name
+                                            --vault-name
+                                            [--maxresults]
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: Name to identify the storage account in the vault.
@@ -89,15 +105,20 @@ directCommands:
   - isRequired: true
     name: --vault-name
     summary: Name of the key vault.
+    description: ''
+  optionalParameters:
+  - name: --maxresults
+    summary: Maximum number of results to return in a page. If not specified the service will return up to 25 results.
     description: ''
 - uid: ext_keyvault-preview_az_keyvault_storage_sas_definition_list_deleted
   name: az keyvault storage sas-definition list-deleted
   summary: Lists deleted SAS definitions for the specified vault and storage account.
   description: The Get Deleted Sas Definitions operation returns the SAS definitions that have been deleted for a vault enabled for soft-delete. This operation requires the storage/listsas permission.
-  parameters:
-  - name: --maxresults
-    summary: Maximum number of results to return in a page. If not specified the service will return up to 25 results.
-    description: ''
+  syntax: >-
+    az keyvault storage sas-definition list-deleted --account-name
+                                                    --vault-name
+                                                    [--maxresults]
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: Name to identify the storage account in the vault.
@@ -106,11 +127,19 @@ directCommands:
     name: --vault-name
     summary: Name of the key vault.
     description: ''
+  optionalParameters:
+  - name: --maxresults
+    summary: Maximum number of results to return in a page. If not specified the service will return up to 25 results.
+    description: ''
 - uid: ext_keyvault-preview_az_keyvault_storage_sas_definition_recover
   name: az keyvault storage sas-definition recover
   summary: Recovers the deleted SAS definition.
   description: Recovers the deleted SAS definition for the specified storage account. This operation can only be performed on a soft-delete enabled vault. This operation requires the storage/recover permission.
-  parameters:
+  syntax: >-
+    az keyvault storage sas-definition recover --account-name
+                                               --name
+                                               --vault-name
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: Name to identify the storage account in the vault.
@@ -127,7 +156,12 @@ directCommands:
   name: az keyvault storage sas-definition show
   summary: Gets information about a SAS definition for the specified storage account.
   description: This operation requires the storage/getsas permission.
-  parameters:
+  syntax: >-
+    az keyvault storage sas-definition show [--account-name]
+                                            [--id]
+                                            [--name]
+                                            [--vault-name]
+  optionalParameters:
   - name: --account-name
     summary: Name to identify the storage account in the vault. Required if --id is not specified.
     description: ''
@@ -144,7 +178,11 @@ directCommands:
   name: az keyvault storage sas-definition show-deleted
   summary: Gets the specified deleted sas definition.
   description: The Get Deleted SAS Definition operation returns the specified deleted SAS definition along with its attributes. This operation requires the storage/getsas permission.
-  parameters:
+  syntax: >-
+    az keyvault storage sas-definition show-deleted --account-name
+                                                    --name
+                                                    --vault-name
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: Name to identify the storage account in the vault.
@@ -161,10 +199,29 @@ directCommands:
   name: az keyvault storage sas-definition update
   summary: Updates the specified attributes associated with the given SAS definition.
   description: This operation requires the storage/setsas permission.
-  parameters:
+  syntax: >-
+    az keyvault storage sas-definition update [--account-name]
+                                              [--disabled {false, true}]
+                                              [--id]
+                                              [--name]
+                                              [--sas-type {account, service}]
+                                              [--tags]
+                                              [--template-uri]
+                                              [--validity-period]
+                                              [--vault-name]
+  optionalParameters:
+  - name: --account-name
+    summary: Name to identify the storage account in the vault. Required if --id is not specified.
+    description: ''
   - name: --disabled
     parameterValueGroup: false, true
     summary: Add the storage account in a disabled state.
+    description: ''
+  - name: --id
+    summary: Id of the SAS definition.  If specified all other 'Id' arguments should be omitted.
+    description: ''
+  - name: --name -n
+    summary: Name to identify the SAS definition in the vault. Required if --id is not specified.
     description: ''
   - name: --sas-type
     parameterValueGroup: account, service
@@ -178,15 +235,6 @@ directCommands:
     description: ''
   - name: --validity-period
     summary: The validity period of SAS tokens created according to the SAS definition in ISO-8601, such as "PT12H" for 12 hour tokens.
-    description: ''
-  - name: --account-name
-    summary: Name to identify the storage account in the vault. Required if --id is not specified.
-    description: ''
-  - name: --id
-    summary: Id of the SAS definition.  If specified all other 'Id' arguments should be omitted.
-    description: ''
-  - name: --name -n
-    summary: Name to identify the SAS definition in the vault. Required if --id is not specified.
     description: ''
   - name: --vault-name
     summary: Name of the key vault. Required if --id is not specified.

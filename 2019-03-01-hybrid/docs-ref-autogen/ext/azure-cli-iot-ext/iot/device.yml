@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-iot-ext_az_iot_device
 name: az iot device
 summary: Leverage device-to-cloud and cloud-to-device messaging capabilities.
@@ -8,6 +8,15 @@ directCommands:
   name: az iot device send-d2c-message
   summary: Send an mqtt device-to-cloud message. The command supports sending messages with application and system properties.
   description: ''
+  syntax: >-
+    az iot device send-d2c-message --device-id
+                                   [--da]
+                                   [--hub-name]
+                                   [--login]
+                                   [--mc]
+                                   [--properties]
+                                   [--qos {0, 1}]
+                                   [--resource-group]
   examples:
   - summary: Basic usage
     syntax: az iot device send-d2c-message -n {iothub_name} -d {device_id}
@@ -17,11 +26,12 @@ directCommands:
     syntax: az iot device send-d2c-message -n {iothub_name} -d {device_id} --props 'key0=value0;key1=value1'
   - summary: Send system properties (Message Id and Correlation Id)
     syntax: az iot device send-d2c-message -n {iothub_name} -d {device_id} --props '$.mid=<id>;$.cid=<id>'
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
     description: ''
+  optionalParameters:
   - name: --da --data
     defaultValue: Ping from Az CLI IoT Extension
     summary: Message body.
@@ -66,6 +76,17 @@ directCommands:
 
     to utf-8. This can be overriden.
   description: ''
+  syntax: >-
+    az iot device simulate --device-id
+                           [--da]
+                           [--hub-name]
+                           [--login]
+                           [--mc]
+                           [--mi]
+                           [--properties]
+                           [--proto {http, mqtt}]
+                           [--receive-settle {abandon, complete, reject}]
+                           [--resource-group]
   examples:
   - summary: Basic usage (mqtt)
     syntax: az iot device simulate -n {iothub_name} -d {device_id}
@@ -81,11 +102,12 @@ directCommands:
     syntax: az iot device simulate -n {iothub_name} -d {device_id} --rs reject --protocol http
   - summary: Abandon c2d messages (http only)
     syntax: az iot device simulate -n {iothub_name} -d {device_id} --rs abandon --protocol http
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
     description: ''
+  optionalParameters:
   - name: --da --data
     defaultValue: Ping from Az CLI IoT Extension
     summary: Message body.
@@ -124,7 +146,14 @@ directCommands:
   name: az iot device upload-file
   summary: Upload a local file as a device to a pre-configured blob storage container.
   description: ''
-  parameters:
+  syntax: >-
+    az iot device upload-file --content-type
+                              --device-id
+                              --file-path
+                              [--hub-name]
+                              [--login]
+                              [--resource-group]
+  requiredParameters:
   - isRequired: true
     name: --content-type --ct
     summary: MIME Type of file.
@@ -137,6 +166,7 @@ directCommands:
     name: --file-path --fp
     summary: Path to file for upload.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''

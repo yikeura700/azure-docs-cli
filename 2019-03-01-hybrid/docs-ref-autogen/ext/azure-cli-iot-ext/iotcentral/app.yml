@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-iot-ext_az_iotcentral_app
 name: az iotcentral app
 summary: Manage IoT Central applications.
@@ -16,6 +16,16 @@ directCommands:
 
 
     DEPRECATED. Use 'az iot central app monitor-events' instead.
+  syntax: >-
+    az iotcentral app monitor-events --app-id
+                                     [--central-api-uri]
+                                     [--cg]
+                                     [--device-id]
+                                     [--enqueued-time]
+                                     [--properties {all, anno, app, sys}]
+                                     [--repair {false, true}]
+                                     [--timeout]
+                                     [--yes {false, true}]
   examples:
   - summary: Basic usage
     syntax: az iotcentral app monitor-events --app-id {app_id}
@@ -33,11 +43,12 @@ directCommands:
     syntax: az iotcentral app monitor-events --app-id {app_id} --props all
   - summary: Receive all messages and parse message payload as JSON
     syntax: az iotcentral app monitor-events --app-id {app_id} --output json
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app-id
     summary: Target App.
     description: ''
+  optionalParameters:
   - name: --central-api-uri
     defaultValue: api.azureiotcentral.com
     summary: IoT Central API override.  For use with environments other than production.

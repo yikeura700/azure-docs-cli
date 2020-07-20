@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_lab_vnet
 name: az lab vnet
 summary: Manage virtual networks of an Azure DevTest Lab.
@@ -8,7 +8,13 @@ directCommands:
   name: az lab vnet get
   summary: Get virtual network.
   description: ''
-  parameters:
+  syntax: >-
+    az lab vnet get --lab-name
+                    --name
+                    --resource-group
+                    [--expand]
+                    [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --lab-name
     summary: The name of the lab.
@@ -21,23 +27,27 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --expand
     summary: "Specify the $expand query. Example: 'properties($expand=externalSubnets)'."
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/lab/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/lab/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/lab/_help.py
 - uid: az_lab_vnet_list
   name: az lab vnet list
   summary: List virtual networks in a given lab.
   description: ''
-  parameters:
+  syntax: >-
+    az lab vnet list --lab-name
+                     --resource-group
+                     [--expand]
+                     [--filter]
+                     [--orderby]
+                     [--subscription]
+                     [--top]
+  requiredParameters:
   - isRequired: true
     name: --lab-name
     summary: The name of the lab.
@@ -46,6 +56,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --expand
     summary: "Specify the $expand query. Example: 'properties($expand=externalSubnets)'."
     description: ''
@@ -55,18 +66,13 @@ directCommands:
   - name: --orderby
     summary: "The ordering expression for the results, using OData notation. Example: '$orderby=name desc'."
     description: ''
-  - name: --top
-    summary: "The maximum number of resources to return from the operation. Example: '$top=10'."
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/lab/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/lab/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --top
+    summary: "The maximum number of resources to return from the operation. Example: '$top=10'."
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/lab/_help.py
 commands:
 - az_lab_vnet_get
 - az_lab_vnet_list
@@ -86,6 +92,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/lab/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/c6dfe49296b8935b1ce10145210f74ec6e3a9a3c/src/azure-cli/azure/cli/command_modules/lab/_help.py
   updated_at: 10/20/2019 2:55:52 AM

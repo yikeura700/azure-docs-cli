@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_pipelines_release_definition
 name: az pipelines release definition
 summary: Manage release definitions.
@@ -8,7 +8,15 @@ directCommands:
   name: az pipelines release definition list
   summary: List release definitions.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines release definition list [--artifact-source-id]
+                                         [--artifact-type {build, externaltfsbuild, git, github, jenkins, tfvc}]
+                                         [--detect {false, true}]
+                                         [--name]
+                                         [--org]
+                                         [--project]
+                                         [--top]
+  optionalParameters:
   - name: --artifact-source-id
     summary: Limit results to definitions associated with this artifact_source_id. e.g. For build it would be {projectGuid}:{BuildDefinitionId}, for Jenkins it would be {JenkinsConnectionId}:{JenkinsDefinitionId}, for TfsOnPrem it would be {TfsOnPremConnectionId}:{ProjectName}:{TfsOnPremDefinitionId}. For third-party artifacts e.g. TeamCity, BitBucket you may refer 'uniqueSourceIdentifier' inside vss-extension.json at <a href="https://github.com/Microsoft/vsts-rm-extensions/blob/master/Extensions">https://github.com/Microsoft/vsts-rm-extensions/blob/master/Extensions</a>.
     description: ''
@@ -36,7 +44,14 @@ directCommands:
   name: az pipelines release definition show
   summary: Get the details of a release definition.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines release definition show [--detect {false, true}]
+                                         [--id]
+                                         [--name]
+                                         [--open]
+                                         [--org]
+                                         [--project]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

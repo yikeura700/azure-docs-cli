@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_override
 name: az network front-door waf-policy managed-rules override
 summary: View and alter overrides on managed rules within a managed rule set.
@@ -8,7 +8,15 @@ directCommands:
   name: az network front-door waf-policy managed-rules override add
   summary: Add an override on a managed rule within a managed rule set.
   description: Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
-  parameters:
+  syntax: >-
+    az network front-door waf-policy managed-rules override add --policy-name
+                                                                --resource-group
+                                                                --rule-group-id
+                                                                --rule-id
+                                                                --type
+                                                                [--action {Allow, Block, Log, Redirect}]
+                                                                [--disabled {false, true}]
+  requiredParameters:
   - isRequired: true
     name: --policy-name
     summary: Name of the WAF policy.
@@ -29,6 +37,7 @@ directCommands:
     name: --type
     summary: ID of the ruleset to override.
     description: ''
+  optionalParameters:
   - name: --action
     parameterValueGroup: Allow, Block, Log, Redirect
     summary: Action for applied rulesets.
@@ -41,7 +50,11 @@ directCommands:
   name: az network front-door waf-policy managed-rules override list
   summary: List the overrides on managed rules within a managed rule set.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door waf-policy managed-rules override list --policy-name
+                                                                 --resource-group
+                                                                 --type
+  requiredParameters:
   - isRequired: true
     name: --policy-name
     summary: Name of the WAF policy.
@@ -58,7 +71,13 @@ directCommands:
   name: az network front-door waf-policy managed-rules override remove
   summary: Remove an override on a managed rule within a managed rule set.
   description: After this command, the standard behavior for the rule within the managed rule set will apply. Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
-  parameters:
+  syntax: >-
+    az network front-door waf-policy managed-rules override remove --policy-name
+                                                                   --resource-group
+                                                                   --rule-group-id
+                                                                   --rule-id
+                                                                   --type
+  requiredParameters:
   - isRequired: true
     name: --policy-name
     summary: Name of the WAF policy.

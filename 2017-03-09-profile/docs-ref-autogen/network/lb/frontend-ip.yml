@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_lb_frontend_ip
 name: az network lb frontend-ip
 summary: Manage frontend IP addresses of a load balancer.
@@ -8,6 +8,15 @@ directCommands:
   name: az network lb frontend-ip create
   summary: Create a frontend IP address.
   description: ''
+  syntax: >-
+    az network lb frontend-ip create --lb-name
+                                     --name
+                                     --resource-group
+                                     [--private-ip-address]
+                                     [--public-ip-address]
+                                     [--subnet]
+                                     [--subscription]
+                                     [--vnet-name]
   examples:
   - summary: Create a frontend ip address for a public load balancer.
     syntax: az network lb frontend-ip create -g MyResourceGroup -n MyFrontendIp --lb-name MyLb --public-ip-address MyFrontendIp
@@ -15,7 +24,7 @@ directCommands:
     syntax: >-
       az network lb frontend-ip create -g MyResourceGroup -n MyFrontendIp --lb-name MyLb \
           --private-ip-address 10.10.10.100 --subnet MySubnet --vnet-name MyVnet
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --lb-name
     summary: The load balancer name.
@@ -28,6 +37,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --private-ip-address
     summary: Static private IP address to associate with the configuration.
     description: ''
@@ -37,26 +47,26 @@ directCommands:
   - name: --subnet
     summary: Name or ID of an existing subnet. If name is specified, also specify --vnet-name.
     description: ''
-  - name: --vnet-name
-    summary: The virtual network (VNet) associated with the subnet (Omit if supplying a subnet id).
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --vnet-name
+    summary: The virtual network (VNet) associated with the subnet (Omit if supplying a subnet id).
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_lb_frontend_ip_delete
   name: az network lb frontend-ip delete
   summary: Delete a frontend IP address.
   description: ''
+  syntax: >-
+    az network lb frontend-ip delete --lb-name
+                                     --name
+                                     --resource-group
+                                     [--subscription]
   examples:
   - summary: Delete a frontend IP address.
     syntax: az network lb frontend-ip delete -g MyResourceGroup --lb-name MyLb -n MyFrontendIp
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --lb-name
     summary: The name of the load balancer.
@@ -69,23 +79,23 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_lb_frontend_ip_list
   name: az network lb frontend-ip list
   summary: List frontend IP addresses.
   description: ''
+  syntax: >-
+    az network lb frontend-ip list --lb-name
+                                   --resource-group
+                                   [--subscription]
   examples:
   - summary: List frontend IP addresses.
     syntax: az network lb frontend-ip list -g MyResourceGroup --lb-name MyLb
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --lb-name
     summary: The name of the load balancer.
@@ -94,25 +104,26 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_lb_frontend_ip_show
   name: az network lb frontend-ip show
   summary: Get the details of a frontend IP address.
   description: ''
+  syntax: >-
+    az network lb frontend-ip show --lb-name
+                                   --name
+                                   --resource-group
+                                   [--subscription]
   examples:
   - summary: Get the details of a frontend IP address.
     syntax: az network lb frontend-ip show -g MyResourceGroup --lb-name MyLb -n MyFrontendIp
   - summary: Get the details of a frontend IP address (autogenerated)
     syntax: az network lb frontend-ip show --lb-name MyLb --name MyFrontendIp --resource-group MyResourceGroup --subscription MySubscription
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --lb-name
     summary: The name of the load balancer.
@@ -125,19 +136,29 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_lb_frontend_ip_update
   name: az network lb frontend-ip update
   summary: Update a frontend IP address.
   description: ''
+  syntax: >-
+    az network lb frontend-ip update [--add]
+                                     [--force-string]
+                                     [--ids]
+                                     [--lb-name]
+                                     [--name]
+                                     [--private-ip-address]
+                                     [--public-ip-address]
+                                     [--remove]
+                                     [--resource-group]
+                                     [--set]
+                                     [--subnet]
+                                     [--subscription]
+                                     [--vnet-name]
   examples:
   - summary: Update the frontend IP address of a public load balancer.
     syntax: az network lb frontend-ip update -g MyResourceGroup --lb-name MyLb -n MyFrontendIp --public-ip-address MyNewPublicIp
@@ -145,18 +166,12 @@ directCommands:
     syntax: az network lb frontend-ip update -g MyResourceGroup --lb-name MyLb -n MyFrontendIp --private-ip-address 10.10.10.50
   - summary: Update a frontend IP address. (autogenerated)
     syntax: az network lb frontend-ip update --lb-name MyLb --name MyFrontendIp --resource-group MyResourceGroup --set tags.CostCenter=MyBusinessGroup
-  parameters:
-  - name: --private-ip-address
-    summary: Static private IP address to associate with the configuration. Use "" to remove the static address and use a dynamic address instead.
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
-  - name: --public-ip-address
-    summary: Name or ID of the existing public IP to associate with the configuration.
-    description: ''
-  - name: --subnet
-    summary: Name or ID of an existing subnet. If name is specified, also specify --vnet-name.
-    description: ''
-  - name: --vnet-name
-    summary: The virtual network (VNet) associated with the subnet (Omit if supplying a subnet id).
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -167,30 +182,31 @@ directCommands:
   - name: --name -n
     summary: The name of the frontend IP configuration.
     description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+  - name: --private-ip-address
+    summary: Static private IP address to associate with the configuration. Use "" to remove the static address and use a dynamic address instead.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+  - name: --public-ip-address
+    summary: Name or ID of the existing public IP to associate with the configuration.
     description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --subnet
+    summary: Name or ID of an existing subnet. If name is specified, also specify --vnet-name.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --vnet-name
+    summary: The virtual network (VNet) associated with the subnet (Omit if supplying a subnet id).
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_lb_frontend_ip_create
 - az_network_lb_frontend_ip_delete
@@ -213,6 +229,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

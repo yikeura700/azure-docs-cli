@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_acr_agentpool
 name: az acr agentpool
 summary: Manage private Tasks agent pools with Azure Container Registries.
@@ -8,6 +8,16 @@ directCommands:
   name: az acr agentpool create
   summary: Create an agent pool for an Azure Container Registry.
   description: ''
+  syntax: >-
+    az acr agentpool create --name
+                            --registry
+                            [--count]
+                            [--no-wait]
+                            [--os]
+                            [--resource-group]
+                            [--subnet-id]
+                            [--subscription]
+                            [--tier]
   examples:
   - summary: Create the agent pool 'MyAgentName' associated with the registry 'MyRegistry'.
     syntax: az acr agentpool create -n MyAgentName -r MyRegistry
@@ -15,7 +25,7 @@ directCommands:
     syntax: az acr agentpool create -n MyAgentName -r MyRegistry --count 2
   - summary: Create the agent pool 'MyAgentName' associated with the registry 'MyRegistry' in VNET subnet.
     syntax: az acr agentpool create -n MyAgentName -r MyRegistry --subnet-id /subscriptions/<SubscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ClassicNetwork/virtualNetworks/<myNetwork>/subnets/<subNet>
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the agent pool.
@@ -24,6 +34,7 @@ directCommands:
     name: --registry -r
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
+  optionalParameters:
   - name: --count -c
     defaultValue: "1"
     summary: The count of the agent pool.
@@ -41,27 +52,29 @@ directCommands:
   - name: --subnet-id
     summary: The Virtual Network Subnet Resource Id of the agent machine.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --tier
     defaultValue: S1
     summary: 'Sets the VM your agent pool will run on. Valid values are: S1(2 vCPUs, 3 MiB RAM), S2(4 vCPUs, 8 MiB RAM) or S3(8 vCPUs, 16 MiB RAM).'
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 - uid: az_acr_agentpool_delete
   name: az acr agentpool delete
   summary: Delete an agent pool.
   description: ''
+  syntax: >-
+    az acr agentpool delete --name
+                            --registry
+                            [--no-wait]
+                            [--resource-group]
+                            [--subscription]
+                            [--yes]
   examples:
   - summary: Delete the agent pool 'MyAgentName'.
     syntax: az acr agentpool delete -n MyAgentName -r MyRegistry
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the agent pool.
@@ -70,56 +83,58 @@ directCommands:
     name: --registry -r
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the Agent Pool to complete action and return immediately after queuing the request.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 - uid: az_acr_agentpool_list
   name: az acr agentpool list
   summary: List the agent pools for an Azure Container Registry.
   description: ''
+  syntax: >-
+    az acr agentpool list --registry
+                          [--resource-group]
+                          [--subscription]
   examples:
   - summary: List agent pools and show the result in a table.
     syntax: az acr agentpool list -r MyRegistry -o table
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --registry -r
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 - uid: az_acr_agentpool_show
   name: az acr agentpool show
   summary: Get the properties of a specified agent pool for an Azure Container Registry.
   description: ''
+  syntax: >-
+    az acr agentpool show --name
+                          --registry
+                          [--queue-count]
+                          [--resource-group]
+                          [--subscription]
   examples:
   - summary: Get the properties of an agent pool, displaying the results in a table.
     syntax: az acr agentpool show -n MyAgentName -r MyRegistry -o table
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the agent pool.
@@ -128,6 +143,7 @@ directCommands:
     name: --registry -r
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
+  optionalParameters:
   - name: --queue-count
     summary: Get only the queue count.
     description: ''
@@ -137,20 +153,22 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 - uid: az_acr_agentpool_update
   name: az acr agentpool update
   summary: Update an agent pool for an Azure Container Registry.
   description: ''
+  syntax: >-
+    az acr agentpool update --name
+                            --registry
+                            [--count]
+                            [--no-wait]
+                            [--resource-group]
+                            [--subscription]
   examples:
   - summary: Update the agent pool 'MyAgentName' count to 5
     syntax: az acr agentpool update -n MyAgentName -r MyRegistry --count 5
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the agent pool.
@@ -159,6 +177,7 @@ directCommands:
     name: --registry -r
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
+  optionalParameters:
   - name: --count -c
     summary: The count of the agent pool.
     description: ''
@@ -171,12 +190,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 commands:
 - az_acr_agentpool_create
 - az_acr_agentpool_delete
@@ -199,6 +213,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
   updated_at: 4/15/2020 7:14:42 AM

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datashare_az_datashare_consumer_dataset_mapping
 name: az datashare consumer dataset-mapping
 summary: Commands for consumers to manage datashare dataset mappings.
@@ -8,6 +8,12 @@ directCommands:
   name: az datashare consumer dataset-mapping create
   summary: Create a dataSet mapping.
   description: ''
+  syntax: >-
+    az datashare consumer dataset-mapping create --account-name
+                                                 --mapping
+                                                 --name
+                                                 --resource-group
+                                                 --share-subscription-name
   examples:
   - summary: Create a Blob dataset mapping
     syntax: az datashare consumer dataset-mapping create --account-name MyAccount --name MyDatasetMapping --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --mapping "{\"kind\":\"Blob\",\"properties\":{\"containerName\":\"C1\",\"dataSetId\":\"00000000-0000-0000-0000-000000000000\",\"filePath\":\"file21\",\"resourceGroup\":\"SampleResourceGroup\",\"storageAccountName\":\"storage2\",\"subscriptionId\":\"00000000-0000-0000-0000-000000000000\"}}"
@@ -17,7 +23,7 @@ directCommands:
     syntax: 'az datashare consumer dataset-mapping create --account-name MyAccount --name MyDatasetMapping --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --mapping "{\"kind\":\"AdlsGen2File\",\"properties\":{\"dataSetId\":\"00000000-0000-0000-0000-000000000000\",\"filePath\":\"file21\",\"fileSystem\": \"fileSystem\",\"outputType\":\"Csv\",\"resourceGroup\":\"SampleResourceGroup\",\"storageAccountName\":\"storage2\",\"subscriptionId\":\"00000000-0000-0000-0000-000000000000\"}}"'
   - summary: Create a SqlDWTable dataset mapping
     syntax: az datashare consumer dataset-mapping create --account-name MyAccount --name MyDatasetMapping --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --mapping "{\"kind\":\"SqlDWTable\",\"properties\":{\"dataSetId\":\"00000000-0000-0000-0000-000000000000\",\"dataWarehouseName\":\"DataWarehouse1\",\"schemaName\":\"dbo\",\"sqlServerResourceId\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SampleResourceGroup/providers/Microsoft.Sql/servers/Server1\",\"tableName\":\"Table1\"}}"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -42,10 +48,16 @@ directCommands:
   name: az datashare consumer dataset-mapping delete
   summary: Delete a dataset mapping in a share subscription.
   description: ''
+  syntax: >-
+    az datashare consumer dataset-mapping delete --account-name
+                                                 --name
+                                                 --resource-group
+                                                 --share-subscription-name
+                                                 [--yes]
   examples:
   - summary: Delete a dataset mapping
     syntax: az datashare consumer dataset-mapping delete --account-name MyAccount --name MyDatasetMapping --resource-group MyResourceGroup --share-subscription-name MyShareSubscription
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -62,6 +74,7 @@ directCommands:
     name: --share-subscription-name
     summary: The name of the share subscription.
     description: ''
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -69,10 +82,14 @@ directCommands:
   name: az datashare consumer dataset-mapping list
   summary: List dataset mappings in a share subscription.
   description: ''
+  syntax: >-
+    az datashare consumer dataset-mapping list --account-name
+                                               --resource-group
+                                               --share-subscription-name
   examples:
   - summary: List dataset mappings
     syntax: az datashare consumer dataset-mapping list --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -89,10 +106,15 @@ directCommands:
   name: az datashare consumer dataset-mapping show
   summary: Show a dataset mapping in a share subscription.
   description: ''
+  syntax: >-
+    az datashare consumer dataset-mapping show --account-name
+                                               --name
+                                               --resource-group
+                                               --share-subscription-name
   examples:
   - summary: Show a dataset mapping
     syntax: az datashare consumer dataset-mapping show --account-name MyAccount --name MyDatasetMapping --resource-group MyResourceGroup --share-subscription-name MyShareSubscription
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.

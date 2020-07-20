@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_repos_policy_case_enforcement
 name: az repos policy case-enforcement
 summary: Manage case enforcement policy.
@@ -8,7 +8,15 @@ directCommands:
   name: az repos policy case-enforcement create
   summary: Create case enforcement policy.
   description: ''
-  parameters:
+  syntax: >-
+    az repos policy case-enforcement create --blocking {false, true}
+                                            --enabled {false, true}
+                                            --repository-id
+                                            [--detect {false, true}]
+                                            [--org]
+                                            [--project]
+                                            [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --blocking
     parameterValueGroup: false, true
@@ -23,6 +31,7 @@ directCommands:
     name: --repository-id
     summary: Id of the repository on which to apply the policy.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -40,11 +49,21 @@ directCommands:
   name: az repos policy case-enforcement update
   summary: Update case enforcement policy.
   description: ''
-  parameters:
+  syntax: >-
+    az repos policy case-enforcement update --id
+                                            [--blocking {false, true}]
+                                            [--detect {false, true}]
+                                            [--enabled {false, true}]
+                                            [--org]
+                                            [--project]
+                                            [--repository-id]
+                                            [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --id --policy-id
     summary: ID of the policy.
     description: ''
+  optionalParameters:
   - name: --blocking
     parameterValueGroup: false, true
     summary: Whether the policy should be blocking or not.

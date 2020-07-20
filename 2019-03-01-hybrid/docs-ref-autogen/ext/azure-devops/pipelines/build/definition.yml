@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_pipelines_build_definition
 name: az pipelines build definition
 summary: Manage build definitions.
@@ -8,7 +8,15 @@ directCommands:
   name: az pipelines build definition list
   summary: List build definitions.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines build definition list [--detect {false, true}]
+                                       [--name]
+                                       [--org]
+                                       [--project]
+                                       [--repository]
+                                       [--repository-type {bitbucket, git, github, githubenterprise, svn, tfsgit, tfsversioncontrol}]
+                                       [--top]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -36,7 +44,14 @@ directCommands:
   name: az pipelines build definition show
   summary: Get the details of a build definition.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines build definition show [--detect {false, true}]
+                                       [--id]
+                                       [--name]
+                                       [--open]
+                                       [--org]
+                                       [--project]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

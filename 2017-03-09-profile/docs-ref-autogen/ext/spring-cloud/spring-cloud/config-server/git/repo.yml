@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_spring-cloud_az_spring_cloud_config_server_git_repo
 name: az spring-cloud config-server git repo
 summary: Commands to manage Config Server git repository in Azure Spring Cloud.
@@ -8,7 +8,21 @@ directCommands:
   name: az spring-cloud config-server git repo add
   summary: Set add a new repositry of git property of Config Server.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud config-server git repo add --name
+                                               --repo-name
+                                               --resource-group
+                                               --uri
+                                               [--host-key]
+                                               [--host-key-algorithm]
+                                               [--label]
+                                               [--password]
+                                               [--pattern]
+                                               [--private-key]
+                                               [--search-paths]
+                                               [--strict-host-key-checking]
+                                               [--username]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of Azure Spring Cloud.
@@ -25,6 +39,7 @@ directCommands:
     name: --uri
     summary: Uri of the added config.
     description: ''
+  optionalParameters:
   - name: --host-key
     summary: Host key of the added config.
     description: ''
@@ -56,7 +71,10 @@ directCommands:
   name: az spring-cloud config-server git repo list
   summary: List all repositries of git property of Config Server.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud config-server git repo list --name
+                                                --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of Azure Spring Cloud.
@@ -69,7 +87,11 @@ directCommands:
   name: az spring-cloud config-server git repo remove
   summary: Remove an existing repositry of git property of Config Server.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud config-server git repo remove --name
+                                                  --repo-name
+                                                  --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of Azure Spring Cloud.
@@ -86,7 +108,21 @@ directCommands:
   name: az spring-cloud config-server git repo update
   summary: Override an existing repositry of git property of Config Server, will totally override the old one.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud config-server git repo update --name
+                                                  --repo-name
+                                                  --resource-group
+                                                  [--host-key]
+                                                  [--host-key-algorithm]
+                                                  [--label]
+                                                  [--password]
+                                                  [--pattern]
+                                                  [--private-key]
+                                                  [--search-paths]
+                                                  [--strict-host-key-checking]
+                                                  [--uri]
+                                                  [--username]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of Azure Spring Cloud.
@@ -99,6 +135,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --host-key
     summary: Host key of the added config.
     description: ''

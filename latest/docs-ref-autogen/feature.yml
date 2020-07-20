@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_feature
 name: az feature
 summary: Manage resource provider features.
@@ -8,30 +8,32 @@ directCommands:
   name: az feature list
   summary: List preview features.
   description: ''
+  syntax: >-
+    az feature list [--namespace]
+                    [--subscription]
   examples:
   - summary: List preview features
     syntax: az feature list
-  parameters:
+  optionalParameters:
   - name: --namespace
     summary: The resource namespace, aka 'provider'.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
 - uid: az_feature_register
   name: az feature register
   summary: Register a preview feature.
   description: ''
+  syntax: >-
+    az feature register --name
+                        --namespace
+                        [--subscription]
   examples:
   - summary: register the "Shared Image Gallery" feature
     syntax: az feature register --namespace Microsoft.Compute --name GalleryPreview
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The feature name.
@@ -40,20 +42,20 @@ directCommands:
     name: --namespace
     summary: The resource namespace, aka 'provider'.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
 - uid: az_feature_show
   name: az feature show
   summary: Gets the preview feature with the specified name.
   description: ''
-  parameters:
+  syntax: >-
+    az feature show --name
+                    --namespace
+                    [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The feature name.
@@ -62,23 +64,23 @@ directCommands:
     name: --namespace
     summary: The resource namespace, aka 'provider'.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
 - uid: az_feature_unregister
   name: az feature unregister
   summary: Unregister a preview feature.
   description: ''
+  syntax: >-
+    az feature unregister --name
+                          --namespace
+                          [--subscription]
   examples:
   - summary: unregister the "Shared Image Gallery" feature
     syntax: az feature unregister --namespace Microsoft.Compute --name GalleryPreview
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The feature name.
@@ -87,15 +89,11 @@ directCommands:
     name: --namespace
     summary: The resource namespace, aka 'provider'.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
 commands:
 - az_feature_list
 - az_feature_register
@@ -117,6 +115,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
   updated_at: 6/16/2020 5:44:37 AM

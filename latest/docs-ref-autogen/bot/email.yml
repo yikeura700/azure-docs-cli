@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_bot_email
 name: az bot email
 summary: Manage the email Channel on a bot.
@@ -8,13 +8,20 @@ directCommands:
   name: az bot email create
   summary: Create the Email Channel on a bot.
   description: ''
+  syntax: >-
+    az bot email create --email-address
+                        --name
+                        --password
+                        --resource-group
+                        [--add-disabled {false, true}]
+                        [--subscription]
   examples:
   - summary: Create the Email Channel for a bot
     syntax: >-
       az bot email create -n botName -g MyResourceGroup -a abc@outlook.com \
 
       -p password
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --email-address -a
     summary: The email address for the bot.
@@ -31,6 +38,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --add-disabled
     parameterValueGroup: false, true
     summary: Add the channel in a disabled state.
@@ -38,17 +46,16 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/botservice/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/botservice/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/botservice/_help.py
 - uid: az_bot_email_delete
   name: az bot email delete
   summary: Delete the email Channel on a bot.
   description: ''
-  parameters:
+  syntax: >-
+    az bot email delete --name
+                        --resource-group
+                        [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _.
@@ -57,20 +64,21 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/botservice/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/botservice/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/botservice/_help.py
 - uid: az_bot_email_show
   name: az bot email show
   summary: Get details of the email Channel on a bot.
   description: ''
-  parameters:
+  syntax: >-
+    az bot email show --name
+                      --resource-group
+                      [--subscription]
+                      [--with-secrets {false, true}]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _.
@@ -78,20 +86,16 @@ directCommands:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  optionalParameters:
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --with-secrets
     parameterValueGroup: false, true
     summary: Show secrets in response for the channel.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/botservice/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/botservice/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/botservice/_help.py
 commands:
 - az_bot_email_create
 - az_bot_email_delete
@@ -112,6 +116,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/botservice/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/56dc0661067496e28575bd9cd99eb7f362479a0c/src/azure-cli/azure/cli/command_modules/botservice/_help.py
   updated_at: 12/11/2019 6:25:45 AM

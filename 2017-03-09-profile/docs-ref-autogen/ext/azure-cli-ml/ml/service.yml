@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-ml_az_ml_service
 name: az ml service
 summary: Manage operationalized services.
@@ -8,11 +8,19 @@ directCommands:
   name: az ml service delete
   summary: Delete a service from the workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml service delete --name
+                         [--path]
+                         [--resource-group]
+                         [--subscription-id]
+                         [-v]
+                         [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The service name to delete.
     description: ''
+  optionalParameters:
   - name: --path
     summary: 'Path to a project folder. Default: current directory.'
     description: ''
@@ -22,21 +30,29 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace containing the service to delete.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace containing the service to delete.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_service_get_access_token
   name: az ml service get-access-token
   summary: Get a token to issue requests a service.
   description: ''
-  parameters:
+  syntax: >-
+    az ml service get-access-token --name
+                                   [--path]
+                                   [--resource-group]
+                                   [--subscription-id]
+                                   [-v]
+                                   [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Service Name.
     description: ''
+  optionalParameters:
   - name: --path
     summary: 'Path to a project folder. Default: current directory.'
     description: ''
@@ -46,21 +62,29 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace containing the service to show.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace containing the service to show.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_service_get_keys
   name: az ml service get-keys
   summary: Get keys to issue requests against a service.
   description: ''
-  parameters:
+  syntax: >-
+    az ml service get-keys --name
+                           [--path]
+                           [--resource-group]
+                           [--subscription-id]
+                           [-v]
+                           [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Service Name.
     description: ''
+  optionalParameters:
   - name: --path
     summary: 'Path to a project folder. Default: current directory.'
     description: ''
@@ -70,21 +94,31 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace containing the service to show.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace containing the service to show.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_service_get_logs
   name: az ml service get-logs
   summary: Get logs for a service.
   description: ''
-  parameters:
+  syntax: >-
+    az ml service get-logs --name
+                           [--init]
+                           [--num_lines]
+                           [--path]
+                           [--resource-group]
+                           [--subscription-id]
+                           [-v]
+                           [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Service Name.
     description: ''
+  optionalParameters:
   - name: --init -i
     summary: Get logs of init container instead of the scoring container.
     description: ''
@@ -101,17 +135,29 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace containing the service to show.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace containing the service to show.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_service_list
   name: az ml service list
   summary: List services in the workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml service list [--compute-type]
+                       [--image-digest]
+                       [--model-id]
+                       [--model-name]
+                       [--path]
+                       [--property]
+                       [--resource-group]
+                       [--subscription-id]
+                       [--tag]
+                       [-v]
+                       [--workspace-name]
+  optionalParameters:
   - name: --compute-type -c
     summary: If provided, will only show services that have the specified compute type. (Options are 'ACI', 'AKS').
     description: ''
@@ -139,17 +185,26 @@ directCommands:
   - name: --tag
     summary: If provided, will filter based on the provided key/value (e.g. key, or key=value). Multiple tags can be specified with multiple --tag options.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace containing the services to list.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace containing the services to list.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_service_regen_key
   name: az ml service regen-key
   summary: Regenerate keys for a service.
   description: ''
-  parameters:
+  syntax: >-
+    az ml service regen-key --key
+                            --name
+                            [--path]
+                            [--resource-group]
+                            [--set-key]
+                            [--subscription-id]
+                            [-v]
+                            [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --key -k
     summary: 'Which key to regenerate, if regen is specified. Options: Primary, Secondary.'
@@ -158,6 +213,7 @@ directCommands:
     name: --name -n
     summary: Service Name.
     description: ''
+  optionalParameters:
   - name: --path
     summary: 'Path to a project folder. Default: current directory.'
     description: ''
@@ -170,21 +226,30 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace containing the service to show.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace containing the service to show.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_service_run
   name: az ml service run
   summary: Run a service in the workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml service run --name
+                      [--input-data]
+                      [--path]
+                      [--resource-group]
+                      [--subscription-id]
+                      [-v]
+                      [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The service name to score against.
     description: ''
+  optionalParameters:
   - name: --input-data -d
     summary: The data to use for calling the web service.
     description: ''
@@ -197,21 +262,29 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace containing the service to run.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace containing the service to run.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_service_show
   name: az ml service show
   summary: Show details for a service in the workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml service show --name
+                       [--path]
+                       [--resource-group]
+                       [--subscription-id]
+                       [-v]
+                       [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the webservice to show.
     description: ''
+  optionalParameters:
   - name: --path
     summary: 'Path to a project folder. Default: current directory.'
     description: ''
@@ -221,21 +294,80 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace containing the service to show.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace containing the service to show.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_service_update
   name: az ml service update
   summary: Update a service in the workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml service update --name
+                         [--add-property]
+                         [--add-tag]
+                         [--ae]
+                         [--ai]
+                         [--ar]
+                         [--as]
+                         [--at]
+                         [--autoscale-max-replicas]
+                         [--autoscale-min-replicas]
+                         [--base-image]
+                         [--base-image-registry]
+                         [--cc]
+                         [--cf]
+                         [--collect-model-data]
+                         [--cuda-version]
+                         [--dc]
+                         [--description]
+                         [--dn]
+                         [--ds]
+                         [--ed]
+                         [--eg]
+                         [--entry-script]
+                         [--environment-name]
+                         [--environment-version]
+                         [--failure-threshold]
+                         [--gb]
+                         [--gc]
+                         [--ic]
+                         [--id]
+                         [--kp]
+                         [--ks]
+                         [--lo]
+                         [--max-request-wait-time]
+                         [--model]
+                         [--model-metadata-file]
+                         [--no-wait]
+                         [--nr]
+                         [--path]
+                         [--period-seconds]
+                         [--po]
+                         [--remove-tag]
+                         [--replica-max-concurrent-requests]
+                         [--resource-group]
+                         [--rt]
+                         [--sc]
+                         [--scoring-timeout-ms]
+                         [--sd]
+                         [--se]
+                         [--sk]
+                         [--sp]
+                         [--st]
+                         [--subscription-id]
+                         [--timeout-seconds]
+                         [--token-auth-enabled]
+                         [-v]
+                         [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The service name to update.
     description: ''
+  optionalParameters:
   - name: --add-property
     summary: Key/value property to add (e.g. key=value ). Multiple properties can be specified with multiple --add-property options.
     description: ''
@@ -398,11 +530,11 @@ directCommands:
   - name: --token-auth-enabled
     summary: Whether or not to enable token auth for this Webservice. Only available for AKS web services. Defaults to False.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace containing the service to update.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace containing the service to update.
     description: ''
 commands:
 - ext_azure-cli-ml_az_ml_service_delete

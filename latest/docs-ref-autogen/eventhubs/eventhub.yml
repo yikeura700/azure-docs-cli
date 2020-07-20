@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_eventhubs_eventhub
 name: az eventhubs eventhub
 summary: Manage Azure EventHubs eventhub and authorization-rule.
@@ -8,10 +8,26 @@ directCommands:
   name: az eventhubs eventhub create
   summary: Creates the EventHubs Eventhub.
   description: ''
+  syntax: >-
+    az eventhubs eventhub create --name
+                                 --namespace-name
+                                 --resource-group
+                                 [--archive-name-format]
+                                 [--blob-container]
+                                 [--capture-interval]
+                                 [--capture-size-limit]
+                                 [--destination-name]
+                                 [--enable-capture {false, true}]
+                                 [--message-retention]
+                                 [--partition-count]
+                                 [--skip-empty-archives {false, true}]
+                                 [--status {Active, Disabled, SendDisabled}]
+                                 [--storage-account]
+                                 [--subscription]
   examples:
   - summary: Create a new Eventhub.
     syntax: az eventhubs eventhub create --resource-group myresourcegroup --namespace-name mynamespace --name myeventhub --message-retention 4 --partition-count 15
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of Eventhub.
@@ -24,6 +40,22 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
+  - name: --archive-name-format
+    summary: Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order.
+    description: ''
+  - name: --blob-container
+    summary: Blob container Name.
+    description: ''
+  - name: --capture-interval
+    summary: Allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds.
+    description: ''
+  - name: --capture-size-limit
+    summary: Defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes.
+    description: ''
+  - name: --destination-name
+    summary: Name for capture destination.
+    description: ''
   - name: --enable-capture
     parameterValueGroup: false, true
     summary: A boolean value that indicates whether capture description is enabled.
@@ -42,41 +74,27 @@ directCommands:
     parameterValueGroup: Active, Disabled, SendDisabled
     summary: Status of Eventhub.
     description: ''
-  - name: --capture-interval
-    summary: Allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds.
-    description: ''
-  - name: --capture-size-limit
-    summary: Defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes.
-    description: ''
-  - name: --archive-name-format
-    summary: Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order.
-    description: ''
-  - name: --blob-container
-    summary: Blob container Name.
-    description: ''
-  - name: --destination-name
-    summary: Name for capture destination.
-    description: ''
   - name: --storage-account
     summary: Name (if within same resource group and not of type Classic Storage) or ARM id of the storage account to be used to create the blobs.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
 - uid: az_eventhubs_eventhub_delete
   name: az eventhubs eventhub delete
   summary: Deletes the Eventhub.
   description: ''
+  syntax: >-
+    az eventhubs eventhub delete [--ids]
+                                 [--name]
+                                 [--namespace-name]
+                                 [--resource-group]
+                                 [--subscription]
   examples:
   - summary: Deletes the Eventhub
     syntax: az eventhubs eventhub delete --resource-group myresourcegroup --namespace-name mynamespace --name myeventhub
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -92,20 +110,21 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
 - uid: az_eventhubs_eventhub_list
   name: az eventhubs eventhub list
   summary: List the EventHub by Namepsace.
   description: ''
+  syntax: >-
+    az eventhubs eventhub list --namespace-name
+                               --resource-group
+                               [--skip]
+                               [--subscription]
+                               [--top]
   examples:
   - summary: Get the Eventhubs by Namespace.
     syntax: az eventhubs eventhub list --resource-group myresourcegroup --namespace-name mynamespace
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --namespace-name
     summary: Name of Namespace.
@@ -114,29 +133,31 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --skip
     summary: Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.
-    description: ''
-  - name: --top
-    summary: May be used to limit the number of results to the most recent N usageDetails.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --top
+    summary: May be used to limit the number of results to the most recent N usageDetails.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
 - uid: az_eventhubs_eventhub_show
   name: az eventhubs eventhub show
   summary: Shows the Eventhub Details.
   description: ''
+  syntax: >-
+    az eventhubs eventhub show [--ids]
+                               [--name]
+                               [--namespace-name]
+                               [--resource-group]
+                               [--subscription]
   examples:
   - summary: Shows the Eventhub details.
     syntax: az eventhubs eventhub show --resource-group myresourcegroup --namespace-name mynamespace --name myeventhub
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -152,16 +173,32 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
 - uid: az_eventhubs_eventhub_update
   name: az eventhubs eventhub update
   summary: Updates the EventHubs Eventhub.
   description: ''
+  syntax: >-
+    az eventhubs eventhub update [--add]
+                                 [--archive-name-format]
+                                 [--blob-container]
+                                 [--capture-interval]
+                                 [--capture-size-limit]
+                                 [--destination-name]
+                                 [--enable-capture {false, true}]
+                                 [--force-string]
+                                 [--ids]
+                                 [--message-retention]
+                                 [--name]
+                                 [--namespace-name]
+                                 [--partition-count]
+                                 [--remove]
+                                 [--resource-group]
+                                 [--set]
+                                 [--skip-empty-archives {false, true}]
+                                 [--status {Active, Disabled, SendDisabled}]
+                                 [--storage-account]
+                                 [--subscription]
   examples:
   - summary: Updates a new Eventhub.
     syntax: az eventhubs eventhub update --resource-group myresourcegroup --namespace-name mynamespace --name myeventhub --message-retention 3 --partition-count 12
@@ -169,16 +206,55 @@ directCommands:
     syntax: az eventhubs eventhub update --name myeventhub --namespace-name mynamespace --partition-count 12 --resource-group myresourcegroup
   - summary: Updates the EventHubs Eventhub (autogenerated)
     syntax: az eventhubs eventhub update --message-retention 3 --name myeventhub --namespace-name mynamespace --resource-group myresourcegroup --subscription MySubscription
-  parameters:
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
+  - name: --archive-name-format
+    summary: Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order.
+    description: ''
+  - name: --blob-container
+    summary: Blob container Name.
+    description: ''
+  - name: --capture-interval
+    summary: Allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds.
+    description: ''
+  - name: --capture-size-limit
+    summary: Defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes.
+    description: ''
+  - name: --destination-name
+    summary: Name for capture destination.
+    description: ''
   - name: --enable-capture
     parameterValueGroup: false, true
     summary: A boolean value that indicates whether capture description is enabled.
     description: ''
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --message-retention
     summary: Number of days to retain events for this Event Hub, value should be 1 to 7 days and depends on Namespace sku. if Namespace sku is Basic than value should be one and is Manadatory parameter. Namespace sku is standard value should be 1 to 7 days, default is 7 days and is optional parameter.
     description: ''
+  - name: --name -n
+    summary: Name of Eventhub.
+    description: ''
+  - name: --namespace-name
+    summary: Name of Namespace.
+    description: ''
   - name: --partition-count
     summary: Number of partitions created for the Event Hub. By default, allowed values are 2-32. Lower value of 1 is supported with Kafka enabled namespaces. In presence of a custom quota, the upper limit will match the upper limit of the quota.
+    description: ''
+  - name: --remove
+    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --set
+    summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --skip-empty-archives
     parameterValueGroup: false, true
@@ -188,57 +264,13 @@ directCommands:
     parameterValueGroup: Active, Disabled, SendDisabled
     summary: Status of Eventhub.
     description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --name -n
-    summary: Name of Eventhub.
-    description: ''
-  - name: --namespace-name
-    summary: Name of Namespace.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+  - name: --storage-account
+    summary: Name (if within same resource group and not of type Classic Storage) or ARM id of the storage account to be used to create the blobs.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  - name: --capture-interval
-    summary: Allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds.
-    description: ''
-  - name: --capture-size-limit
-    summary: Defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes.
-    description: ''
-  - name: --archive-name-format
-    summary: Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order.
-    description: ''
-  - name: --blob-container
-    summary: Blob container Name.
-    description: ''
-  - name: --destination-name
-    summary: Name for capture destination.
-    description: ''
-  - name: --storage-account
-    summary: Name (if within same resource group and not of type Classic Storage) or ARM id of the storage account to be used to create the blobs.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-    description: ''
-  - name: --remove
-    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
-    description: ''
-  - name: --set
-    summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
 commands:
 - az_eventhubs_eventhub_authorization_rule
 - az_eventhubs_eventhub_authorization_rule_create
@@ -276,6 +308,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e4f67020bbaa8468157847986780c38a7f43970a/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   updated_at: 10/19/2019 11:44:55 AM

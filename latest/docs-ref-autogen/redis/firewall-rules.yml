@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_redis_firewall_rules
 name: az redis firewall-rules
 summary: Manage Redis firewall rules.
@@ -8,7 +8,14 @@ directCommands:
   name: az redis firewall-rules create
   summary: Create a redis cache firewall rule.
   description: Usage example - az redis firewall-rules create --name testCacheName --resource-group testResourceGroup  --start-ip 10.10.10.10 --end-ip 20.20.20.20 --rule-name 10to20.
-  parameters:
+  syntax: >-
+    az redis firewall-rules create --end-ip
+                                   --name
+                                   --resource-group
+                                   --rule-name
+                                   --start-ip
+                                   [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --end-ip
     summary: Highest IP address included in the range.
@@ -29,24 +36,27 @@ directCommands:
     name: --start-ip
     summary: Lowest IP address included in the range.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/redis/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/redis/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
 - uid: az_redis_firewall_rules_delete
   name: az redis firewall-rules delete
   summary: Deletes a single firewall rule in a specified redis cache.
   description: ''
-  parameters:
+  syntax: >-
+    az redis firewall-rules delete --rule-name
+                                   [--ids]
+                                   [--name]
+                                   [--resource-group]
+                                   [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --rule-name
     summary: The name of the firewall rule.
     description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -59,17 +69,16 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/redis/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/redis/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
 - uid: az_redis_firewall_rules_list
   name: az redis firewall-rules list
   summary: Gets all firewall rules in the specified redis cache.
   description: ''
-  parameters:
+  syntax: >-
+    az redis firewall-rules list --name
+                                 --resource-group
+                                 [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the Redis cache.
@@ -78,24 +87,27 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/redis/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/redis/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
 - uid: az_redis_firewall_rules_show
   name: az redis firewall-rules show
   summary: Gets a single firewall rule in a specified redis cache.
   description: ''
-  parameters:
+  syntax: >-
+    az redis firewall-rules show --rule-name
+                                 [--ids]
+                                 [--name]
+                                 [--resource-group]
+                                 [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --rule-name
     summary: The name of the firewall rule.
     description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -108,17 +120,20 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/redis/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/redis/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
 - uid: az_redis_firewall_rules_update
   name: az redis firewall-rules update
   summary: Update a redis cache firewall rule.
   description: ''
-  parameters:
+  syntax: >-
+    az redis firewall-rules update --end-ip
+                                   --rule-name
+                                   --start-ip
+                                   [--ids]
+                                   [--name]
+                                   [--resource-group]
+                                   [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --end-ip
     summary: Highest IP address included in the range.
@@ -131,6 +146,7 @@ directCommands:
     name: --start-ip
     summary: Lowest IP address included in the range.
     description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -143,12 +159,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/redis/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/redis/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
 commands:
 - az_redis_firewall_rules_create
 - az_redis_firewall_rules_delete
@@ -171,6 +182,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/2d5aa88974803a9629ed3950694ef8a6dbd013a0/src/azure-cli/azure/cli/command_modules/redis/_help.py
   updated_at: 10/17/2019 10:38:47 AM

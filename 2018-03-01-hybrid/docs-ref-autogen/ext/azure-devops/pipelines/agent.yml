@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_pipelines_agent
 name: az pipelines agent
 summary: Manage agents.
@@ -8,11 +8,21 @@ directCommands:
   name: az pipelines agent list
   summary: Get a list of agents in a pool.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines agent list --pool-id
+                            [--agent-name]
+                            [--demands]
+                            [--detect {false, true}]
+                            [--include-assigned-request {false, true}]
+                            [--include-capabilities {false, true}]
+                            [--include-last-completed-request {false, true}]
+                            [--org]
+  requiredParameters:
   - isRequired: true
     name: --pool-id
     summary: The agent pool containing the agents.
     description: ''
+  optionalParameters:
   - name: --agent-name
     summary: Filter on agent name.
     description: ''
@@ -42,7 +52,15 @@ directCommands:
   name: az pipelines agent show
   summary: Show agent details.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines agent show --agent-id
+                            --pool-id
+                            [--detect {false, true}]
+                            [--include-assigned-request {false, true}]
+                            [--include-capabilities {false, true}]
+                            [--include-last-completed-request {false, true}]
+                            [--org]
+  requiredParameters:
   - isRequired: true
     name: --agent-id --id
     summary: The agent ID to get information about.
@@ -51,6 +69,7 @@ directCommands:
     name: --pool-id
     summary: The agent pool containing the agent.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

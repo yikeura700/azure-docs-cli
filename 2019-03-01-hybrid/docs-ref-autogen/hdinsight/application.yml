@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_hdinsight_application
 name: az hdinsight application
 summary: Manage HDInsight applications.
@@ -8,6 +8,28 @@ directCommands:
   name: az hdinsight application create
   summary: Create an application for a HDInsight cluster.
   description: ''
+  syntax: >-
+    az hdinsight application create --cluster-name
+                                    --name
+                                    --resource-group
+                                    --script-action-name
+                                    --script-uri
+                                    [--access-mode]
+                                    [--destination-port]
+                                    [--disable-gateway-auth {false, true}]
+                                    [--edgenode-size]
+                                    [--marketplace-id]
+                                    [--no-validation-timeout]
+                                    [--script-parameters]
+                                    [--ssh-password]
+                                    [--ssh-public-key]
+                                    [--ssh-user]
+                                    [--sub-domain-suffix]
+                                    [--subnet]
+                                    [--subscription]
+                                    [--tags]
+                                    [--type {CustomApplication, RServer}]
+                                    [--vnet-name]
   examples:
   - summary: Create an application with a script URI.
     syntax: >-
@@ -48,7 +70,7 @@ directCommands:
       --destination-port 8888 \
 
       --sub-domain-suffix was
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the cluster.
@@ -61,20 +83,15 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --marketplace-id
-    summary: The marketplace identifier.
+  - isRequired: true
+    name: --script-action-name
+    summary: The name of the script action.
     description: ''
-  - name: --no-validation-timeout
-    summary: Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.
+  - isRequired: true
+    name: --script-uri
+    summary: The URI to the script.
     description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
-  - name: --type -t
-    defaultValue: CustomApplication
-    parameterValueGroup: CustomApplication, RServer
-    summary: The application type.
-    description: ''
+  optionalParameters:
   - name: --access-mode
     defaultValue: WebPage
     summary: The access mode for the application.
@@ -87,18 +104,18 @@ directCommands:
     parameterValueGroup: false, true
     summary: 'Indicates whether to disable gateway authentication. Default is to enable gateway authentication. Default: false.'
     description: ''
-  - name: --sub-domain-suffix
-    summary: The subdomain suffix of the application.
-    description: ''
-  - name: --subnet
-    summary: The name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.
-    description: ''
-  - name: --vnet-name
-    summary: The name of a virtual network.
-    description: ''
   - name: --edgenode-size
     defaultValue: Standard_D3_V2
     summary: 'The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.'
+    description: ''
+  - name: --marketplace-id
+    summary: The marketplace identifier.
+    description: ''
+  - name: --no-validation-timeout
+    summary: Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.
+    description: ''
+  - name: --script-parameters
+    summary: The parameters for the script.
     description: ''
   - name: --ssh-password -P
     summary: SSH password for the cluster nodes.
@@ -110,31 +127,39 @@ directCommands:
     defaultValue: sshuser
     summary: SSH username for the cluster nodes.
     description: ''
-  - isRequired: true
-    name: --script-action-name
-    summary: The name of the script action.
+  - name: --sub-domain-suffix
+    summary: The subdomain suffix of the application.
     description: ''
-  - isRequired: true
-    name: --script-uri
-    summary: The URI to the script.
-    description: ''
-  - name: --script-parameters
-    summary: The parameters for the script.
+  - name: --subnet
+    summary: The name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
+  - name: --type -t
+    defaultValue: CustomApplication
+    parameterValueGroup: CustomApplication, RServer
+    summary: The application type.
+    description: ''
+  - name: --vnet-name
+    summary: The name of a virtual network.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
 - uid: az_hdinsight_application_delete
   name: az hdinsight application delete
   summary: Deletes the specified application on the HDInsight cluster.
   description: ''
-  parameters:
+  syntax: >-
+    az hdinsight application delete --cluster-name
+                                    --name
+                                    --resource-group
+                                    [--no-wait]
+                                    [--subscription]
+                                    [--yes]
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the cluster.
@@ -147,26 +172,26 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
 - uid: az_hdinsight_application_list
   name: az hdinsight application list
   summary: Lists all of the applications for the HDInsight cluster.
   description: ''
-  parameters:
+  syntax: >-
+    az hdinsight application list --cluster-name
+                                  --resource-group
+                                  [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the cluster.
@@ -175,20 +200,21 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
 - uid: az_hdinsight_application_show
   name: az hdinsight application show
   summary: Gets properties of the specified application.
   description: ''
-  parameters:
+  syntax: >-
+    az hdinsight application show --cluster-name
+                                  --name
+                                  --resource-group
+                                  [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the cluster.
@@ -201,20 +227,28 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
 - uid: az_hdinsight_application_wait
   name: az hdinsight application wait
   summary: Place the CLI in a waiting state until an operation is complete.
   description: ''
-  parameters:
+  syntax: >-
+    az hdinsight application wait --cluster-name
+                                  --name
+                                  --resource-group
+                                  [--created]
+                                  [--custom]
+                                  [--deleted]
+                                  [--exists]
+                                  [--interval]
+                                  [--subscription]
+                                  [--timeout]
+                                  [--updated]
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the cluster.
@@ -227,6 +261,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
@@ -243,6 +278,9 @@ directCommands:
     defaultValue: "30"
     summary: Polling interval in seconds.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --timeout
     defaultValue: "3600"
     summary: Maximum wait in seconds.
@@ -250,15 +288,7 @@ directCommands:
   - name: --updated
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
 commands:
 - az_hdinsight_application_create
 - az_hdinsight_application_delete
@@ -281,6 +311,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/f55047618be302f17adc2cfe6c0953637d70ef2c/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   updated_at: 3/23/2020 8:14:59 AM

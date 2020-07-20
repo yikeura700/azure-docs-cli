@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_functionapp_devops_pipeline
 name: az functionapp devops-pipeline
 summary: Azure Function specific integration with Azure DevOps. Please visit <a href="https://aka.ms/functions-azure-devops">https://aka.ms/functions-azure-devops</a> for more information.
@@ -8,6 +8,16 @@ directCommands:
   name: az functionapp devops-pipeline create
   summary: Create an Azure DevOps pipeline for a function app.
   description: ''
+  syntax: >-
+    az functionapp devops-pipeline create [--allow-force-push {false, true}]
+                                          [--functionapp-name]
+                                          [--github-pat]
+                                          [--github-repository]
+                                          [--organization-name]
+                                          [--overwrite-yaml {false, true}]
+                                          [--project-name]
+                                          [--repository-name]
+                                          [--subscription]
   examples:
   - summary: create an Azure Pipeline to a function app.
     syntax: az functionapp devops-pipeline create --functionapp-name FunctionApp
@@ -15,7 +25,7 @@ directCommands:
     syntax: az functionapp devops-pipeline create --github-repository GithubOrganization/GithubRepository --github-pat GithubPersonalAccessToken
   - summary: create an Azure Pipeline with specific Azure DevOps organization and project
     syntax: az functionapp devops-pipeline create --organization-name AzureDevOpsOrganization --project-name AzureDevOpsProject
-  parameters:
+  optionalParameters:
   - name: --allow-force-push
     parameterValueGroup: false, true
     summary: If Azure DevOps repository is not clean, should it overwrite remote content?
@@ -45,12 +55,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appservice/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appservice/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
 commands:
 - az_functionapp_devops_pipeline_create
 globalParameters:
@@ -69,6 +74,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/433268833f4a2e9c48736f28e34fbf8794e0a20a/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   updated_at: 6/15/2020 6:19:53 PM

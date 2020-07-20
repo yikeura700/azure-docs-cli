@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_dla_account_compute_policy
 name: az dla account compute-policy
 summary: Manage Data Lake Analytics account compute policies.
@@ -8,7 +8,16 @@ directCommands:
   name: az dla account compute-policy create
   summary: Create a compute policy in the Data Lake Analytics account.
   description: ''
-  parameters:
+  syntax: >-
+    az dla account compute-policy create --account
+                                         --compute-policy-name
+                                         --object-id
+                                         --object-type
+                                         [--max-dop-per-job]
+                                         [--min-priority-per-job]
+                                         [--resource-group]
+                                         [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account -n
     summary: Name of the Data Lake Analytics account.
@@ -25,6 +34,7 @@ directCommands:
     name: --object-type
     summary: The Azure Active Directory object type associated with the supplied object ID.
     description: ''
+  optionalParameters:
   - name: --max-dop-per-job
     summary: The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.
     description: ''
@@ -37,97 +47,111 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_account_compute_policy_delete
   name: az dla account compute-policy delete
   summary: Delete a compute policy in a Data Lake Analytics account.
   description: ''
-  parameters:
+  syntax: >-
+    az dla account compute-policy delete --compute-policy-name
+                                         [--account]
+                                         [--ids]
+                                         [--resource-group]
+                                         [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --compute-policy-name
     summary: The name of the compute policy to delete.
     description: ''
-  - name: --resource-group -g
-    summary: If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.
-    description: ''
+  optionalParameters:
   - name: --account -n
     summary: Name of the Data Lake Analytics account.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
+  - name: --resource-group -g
+    summary: If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.
+    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_account_compute_policy_list
   name: az dla account compute-policy list
   summary: List compute policies in the a Lake Analytics account.
   description: ''
-  parameters:
-  - name: --resource-group -g
-    summary: If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.
-    description: ''
+  syntax: >-
+    az dla account compute-policy list [--account]
+                                       [--ids]
+                                       [--resource-group]
+                                       [--subscription]
+  optionalParameters:
   - name: --account -n
     summary: Name of the Data Lake Analytics account.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
+  - name: --resource-group -g
+    summary: If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.
+    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_account_compute_policy_show
   name: az dla account compute-policy show
   summary: Retrieve a compute policy in a Data Lake Analytics account.
   description: ''
-  parameters:
+  syntax: >-
+    az dla account compute-policy show --compute-policy-name
+                                       [--account]
+                                       [--ids]
+                                       [--resource-group]
+                                       [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --compute-policy-name
     summary: The name of the compute policy to retrieve.
     description: ''
-  - name: --resource-group -g
-    summary: If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.
-    description: ''
+  optionalParameters:
   - name: --account -n
     summary: Name of the Data Lake Analytics account.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
+  - name: --resource-group -g
+    summary: If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.
+    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_account_compute_policy_update
   name: az dla account compute-policy update
   summary: Update a compute policy in the Data Lake Analytics account.
   description: ''
-  parameters:
+  syntax: >-
+    az dla account compute-policy update --compute-policy-name
+                                         [--account]
+                                         [--ids]
+                                         [--max-dop-per-job]
+                                         [--min-priority-per-job]
+                                         [--resource-group]
+                                         [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --compute-policy-name
     summary: The name of the compute policy to update.
+    description: ''
+  optionalParameters:
+  - name: --account -n
+    summary: Name of the Data Lake Analytics account.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --max-dop-per-job
     summary: The maximum degree of parallelism allowed per job for this policy. At least one of `--min-priority-per-job` and `--max-dop-per-job` must be specified.
@@ -138,21 +162,10 @@ directCommands:
   - name: --resource-group -g
     summary: If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.
     description: ''
-  - name: --account -n
-    summary: Name of the Data Lake Analytics account.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 commands:
 - az_dla_account_compute_policy_create
 - az_dla_account_compute_policy_delete
@@ -175,6 +188,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/dc914cb8b85cfb556230244c8bba6bdedcb5b741/src/azure-cli/azure/cli/command_modules/dla/_help.py
   updated_at: 9/16/2019 10:35:08 AM

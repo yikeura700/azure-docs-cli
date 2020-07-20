@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_dla_account
 name: az dla account
 summary: Manage Data Lake Analytics accounts.
@@ -8,7 +8,18 @@ directCommands:
   name: az dla account create
   summary: Create a Data Lake Analytics account.
   description: ''
-  parameters:
+  syntax: >-
+    az dla account create --account
+                          --default-data-lake-store
+                          [--location]
+                          [--max-degree-of-parallelism]
+                          [--max-job-count]
+                          [--query-store-retention]
+                          [--resource-group]
+                          [--subscription]
+                          [--tags]
+                          [--tier {Commitment_100000AUHours, Commitment_10000AUHours, Commitment_1000AUHours, Commitment_100AUHours, Commitment_500000AUHours, Commitment_50000AUHours, Commitment_5000AUHours, Commitment_500AUHours, Consumption}]
+  requiredParameters:
   - isRequired: true
     name: --account -n
     summary: Name of the Data Lake Analytics account.
@@ -17,6 +28,7 @@ directCommands:
     name: --default-data-lake-store
     summary: The default Data Lake Store account to associate with the created account.
     description: ''
+  optionalParameters:
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
@@ -35,6 +47,9 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
@@ -42,83 +57,88 @@ directCommands:
     parameterValueGroup: Commitment_100000AUHours, Commitment_10000AUHours, Commitment_1000AUHours, Commitment_100AUHours, Commitment_500000AUHours, Commitment_50000AUHours, Commitment_5000AUHours, Commitment_500AUHours, Consumption
     summary: The desired commitment tier for this account to use.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_account_delete
   name: az dla account delete
   summary: Delete a Data Lake Analytics account.
   description: ''
-  parameters:
-  - name: --resource-group -g
-    summary: If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.
-    description: ''
+  syntax: >-
+    az dla account delete [--account]
+                          [--ids]
+                          [--resource-group]
+                          [--subscription]
+  optionalParameters:
   - name: --account -n
     summary: Name of the Data Lake Analytics account.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
+  - name: --resource-group -g
+    summary: If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.
+    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_account_list
   name: az dla account list
   summary: List available Data Lake Analytics accounts.
   description: ''
-  parameters:
+  syntax: >-
+    az dla account list [--resource-group]
+                        [--subscription]
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_account_show
   name: az dla account show
   summary: Get the details of a Data Lake Analytics account.
   description: ''
-  parameters:
-  - name: --resource-group -g
-    summary: If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.
-    description: ''
+  syntax: >-
+    az dla account show [--account]
+                        [--ids]
+                        [--resource-group]
+                        [--subscription]
+  optionalParameters:
   - name: --account -n
     summary: Name of the Data Lake Analytics account.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
+  - name: --resource-group -g
+    summary: If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.
+    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_account_update
   name: az dla account update
   summary: Update a Data Lake Analytics account.
   description: ''
-  parameters:
+  syntax: >-
+    az dla account update [--account]
+                          [--allow-azure-ips {Disabled, Enabled}]
+                          [--firewall-state {Disabled, Enabled}]
+                          [--ids]
+                          [--max-degree-of-parallelism]
+                          [--max-job-count]
+                          [--query-store-retention]
+                          [--resource-group]
+                          [--subscription]
+                          [--tags]
+                          [--tier {Commitment_100000AUHours, Commitment_10000AUHours, Commitment_1000AUHours, Commitment_100AUHours, Commitment_500000AUHours, Commitment_50000AUHours, Commitment_5000AUHours, Commitment_500AUHours, Consumption}]
+  optionalParameters:
+  - name: --account -n
+    summary: Name of the Data Lake Analytics account.
+    description: ''
   - name: --allow-azure-ips
     parameterValueGroup: Disabled, Enabled
     summary: Allow or block IPs originating from Azure through the firewall.
@@ -126,6 +146,9 @@ directCommands:
   - name: --firewall-state
     parameterValueGroup: Disabled, Enabled
     summary: Enable or disable existing firewall rules.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --max-degree-of-parallelism
     summary: The maximum degree of parallelism for this account.
@@ -139,6 +162,9 @@ directCommands:
   - name: --resource-group -g
     summary: If not specified, will attempt to discover the resource group for the specified Data Lake Analytics account.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
@@ -146,21 +172,7 @@ directCommands:
     parameterValueGroup: Commitment_100000AUHours, Commitment_10000AUHours, Commitment_1000AUHours, Commitment_100AUHours, Commitment_500000AUHours, Commitment_50000AUHours, Commitment_5000AUHours, Commitment_500AUHours, Consumption
     summary: The desired commitment tier for this account to use.
     description: ''
-  - name: --account -n
-    summary: Name of the Data Lake Analytics account.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 commands:
 - az_dla_account_blob_storage
 - az_dla_account_blob_storage_add
@@ -206,6 +218,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/dc914cb8b85cfb556230244c8bba6bdedcb5b741/src/azure-cli/azure/cli/command_modules/dla/_help.py
   updated_at: 9/16/2019 10:35:08 AM

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_peering_az_peering_location
 name: az peering location
 summary: Peering location.
@@ -8,17 +8,21 @@ directCommands:
   name: az peering location list
   summary: Lists all of the available peering locations for the specified kind of peering.
   description: ''
+  syntax: >-
+    az peering location list --kind {Direct, Exchange}
+                             [--direct-peering-type {Cdn, Edge, Internal, Ix, IxRs, Transit}]
   examples:
   - summary: List direct peering locations
     syntax: az peering location list --kind "Direct"
   - summary: List exchange peering locations
     syntax: az peering location list --kind "Exchange"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --kind
     parameterValueGroup: Direct, Exchange
     summary: The kind of the peering.
     description: ''
+  optionalParameters:
   - name: --direct-peering-type
     parameterValueGroup: Cdn, Edge, Internal, Ix, IxRs, Transit
     summary: The type of direct peering.

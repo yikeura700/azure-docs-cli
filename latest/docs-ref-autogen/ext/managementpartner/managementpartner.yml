@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_managementpartner_az_managementpartner
 name: az managementpartner
 summary: Allows the partners to associate a Microsoft Partner Network(MPN) ID to a user or service principal in the customer's Azure directory.
@@ -8,7 +8,8 @@ directCommands:
   name: az managementpartner create
   summary: Associates a Microsoft Partner Network(MPN) ID to the current authenticated user or service principal.
   description: ''
-  parameters:
+  syntax: az managementpartner create --partner-id
+  requiredParameters:
   - isRequired: true
     name: --partner-id
     summary: Microsoft partner network ID.
@@ -17,7 +18,8 @@ directCommands:
   name: az managementpartner delete
   summary: Delete the Microsoft Partner Network(MPN) ID of the current authenticated user or service principal.
   description: ''
-  parameters:
+  syntax: az managementpartner delete --partner-id
+  requiredParameters:
   - isRequired: true
     name: --partner-id
     summary: Microsoft partner network ID.
@@ -26,7 +28,8 @@ directCommands:
   name: az managementpartner show
   summary: Gets the Microsoft Partner Network(MPN) ID of the current authenticated user or service principal.
   description: ''
-  parameters:
+  syntax: az managementpartner show [--partner-id]
+  optionalParameters:
   - name: --partner-id
     summary: Microsoft partner network ID.
     description: ''
@@ -34,7 +37,8 @@ directCommands:
   name: az managementpartner update
   summary: Updates the Microsoft Partner Network(MPN) ID of the current authenticated user or service principal.
   description: ''
-  parameters:
+  syntax: az managementpartner update --partner-id
+  requiredParameters:
   - isRequired: true
     name: --partner-id
     summary: Microsoft partner network ID.

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_webapp_az_webapp_scan
 name: az webapp scan
 summary: Holds group of commands which cater to webapp scans. Currently available only for Linux based webapps.
@@ -8,7 +8,11 @@ directCommands:
   name: az webapp scan list-result
   summary: Get details of all scans conducted on webapp, upto max scan limit set on the webapp This will get you the scan log results in addition to the scan status of each scan conducted on the webapp.
   description: ''
-  parameters:
+  syntax: >-
+    az webapp scan list-result --name
+                               --resource-group
+                               [--slot]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the webapp to connect to.
@@ -17,6 +21,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --slot
     summary: ''
     description: ''
@@ -24,7 +29,12 @@ directCommands:
   name: az webapp scan show-result
   summary: Get results of specified scan-id. This will fetch you the Scan log results of the specified scan-id.
   description: ''
-  parameters:
+  syntax: >-
+    az webapp scan show-result --name
+                               --resource-group
+                               --scan-id
+                               [--slot]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the webapp to connect to.
@@ -37,6 +47,7 @@ directCommands:
     name: --scan-id
     summary: Unique scan id.
     description: ''
+  optionalParameters:
   - name: --slot
     summary: ''
     description: ''
@@ -44,7 +55,12 @@ directCommands:
   name: az webapp scan start
   summary: Starts the scan on the specified webapp files in the wwwroot directory. It returns a JSON containing the ScanID, traking and results URL.
   description: ''
-  parameters:
+  syntax: >-
+    az webapp scan start --name
+                         --resource-group
+                         [--slot]
+                         [--timeout]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the webapp to connect to.
@@ -53,6 +69,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --slot
     summary: ''
     description: ''
@@ -63,7 +80,11 @@ directCommands:
   name: az webapp scan stop
   summary: Stops the current executing scan. Does nothing if no scan is executing.
   description: ''
-  parameters:
+  syntax: >-
+    az webapp scan stop --name
+                        --resource-group
+                        [--slot]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the webapp to connect to.
@@ -72,6 +93,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --slot
     summary: ''
     description: ''
@@ -79,7 +101,12 @@ directCommands:
   name: az webapp scan track
   summary: Track status of scan by providing scan-id. You can track the status of the scan from [Starting, Success, Failed, TimeoutFailure, Executing].
   description: ''
-  parameters:
+  syntax: >-
+    az webapp scan track --name
+                         --resource-group
+                         --scan-id
+                         [--slot]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the webapp to connect to.
@@ -92,6 +119,7 @@ directCommands:
     name: --scan-id
     summary: Unique scan id.
     description: ''
+  optionalParameters:
   - name: --slot
     summary: ''
     description: ''

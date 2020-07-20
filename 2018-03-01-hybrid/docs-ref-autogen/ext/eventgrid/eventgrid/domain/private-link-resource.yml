@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_eventgrid_az_eventgrid_domain_private_link_resource
 name: az eventgrid domain private-link-resource
 summary: Manage private link resource of a domain.
@@ -8,10 +8,13 @@ directCommands:
   name: az eventgrid domain private-link-resource list
   summary: List the properties of all the private link resources for a domain.
   description: ''
+  syntax: >-
+    az eventgrid domain private-link-resource list --domain-name
+                                                   --resource-group
   examples:
   - summary: Show a private endpoint connection for a domain.
     syntax: az eventgrid domain private-link-resource list -g rg1 --domain-name domain1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --domain-name
     summary: Name of the domain.
@@ -24,10 +27,14 @@ directCommands:
   name: az eventgrid domain private-link-resource show
   summary: Display the properties of a private link resource for a domain.
   description: ''
+  syntax: >-
+    az eventgrid domain private-link-resource show --domain-name
+                                                   --name
+                                                   --resource-group
   examples:
   - summary: Show a private endpoint connection for a domain.
     syntax: az eventgrid domain private-link-resource show -g rg1 --domain-name domain1 -n domain
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --domain-name
     summary: Name of the domain.

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_repos_pr_policy
 name: az repos pr policy
 summary: Manage pull request policy.
@@ -8,11 +8,18 @@ directCommands:
   name: az repos pr policy list
   summary: List policies of a pull request.
   description: ''
-  parameters:
+  syntax: >-
+    az repos pr policy list --id
+                            [--detect {false, true}]
+                            [--org]
+                            [--skip]
+                            [--top]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: ID of the pull request.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -30,7 +37,12 @@ directCommands:
   name: az repos pr policy queue
   summary: Queue an evaluation of a policy for a pull request.
   description: ''
-  parameters:
+  syntax: >-
+    az repos pr policy queue --evaluation-id
+                             --id
+                             [--detect {false, true}]
+                             [--org]
+  requiredParameters:
   - isRequired: true
     name: --evaluation-id -e
     summary: ID of the policy evaluation to queue.
@@ -39,6 +51,7 @@ directCommands:
     name: --id
     summary: ID of the pull request.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

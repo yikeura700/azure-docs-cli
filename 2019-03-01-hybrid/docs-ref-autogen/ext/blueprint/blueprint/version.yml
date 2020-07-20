@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_blueprint_az_blueprint_version
 name: az blueprint version
 summary: Commands to manage published blueprint versions.
@@ -8,6 +8,12 @@ directCommands:
   name: az blueprint version delete
   summary: Delete a published version of a blueprint.
   description: ''
+  syntax: >-
+    az blueprint version delete --blueprint-name
+                                --version
+                                [--management-group]
+                                [--subscription]
+                                [--yes]
   examples:
   - summary: Delete a published subscription blueprint
     syntax: >-
@@ -21,7 +27,7 @@ directCommands:
       az blueprint version delete --management-group MyManagementGroup --blueprint-name \
 
       MyBlueprint --version v2
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --blueprint-name
     summary: Name of the blueprint definition.
@@ -30,19 +36,24 @@ directCommands:
     name: --version
     summary: Version of the published blueprint definition.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
+  optionalParameters:
   - name: --management-group -m
     summary: Use management group for the scope of the blueprint.
     description: ''
   - name: --subscription -s
     summary: Use subscription for the scope of the blueprint. If --management-group is not specified, --subscription value or the default subscription will be used as the scope.
     description: ''
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
 - uid: ext_blueprint_az_blueprint_version_list
   name: az blueprint version list
   summary: List published versions of given blueprint definition.
   description: ''
+  syntax: >-
+    az blueprint version list --blueprint-name
+                              [--management-group]
+                              [--subscription]
   examples:
   - summary: List published blueprints of a management group
     syntax: >-
@@ -54,11 +65,12 @@ directCommands:
       az blueprint version list --subscription MySubscription \
 
       --blueprint-name MyBlueprint
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --blueprint-name
     summary: Name of the blueprint definition.
     description: ''
+  optionalParameters:
   - name: --management-group -m
     summary: Use management group for the scope of the blueprint.
     description: ''
@@ -69,6 +81,11 @@ directCommands:
   name: az blueprint version show
   summary: Get a published version of a blueprint.
   description: ''
+  syntax: >-
+    az blueprint version show --blueprint-name
+                              --version
+                              [--management-group]
+                              [--subscription]
   examples:
   - summary: Get a published management group blueprint
     syntax: >-
@@ -80,7 +97,7 @@ directCommands:
       az blueprint version show --subscription MySubscription \
 
       --blueprint-name MyBlueprint --version v2
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --blueprint-name
     summary: Name of the blueprint definition.
@@ -89,6 +106,7 @@ directCommands:
     name: --version
     summary: Version of the published blueprint definition.
     description: ''
+  optionalParameters:
   - name: --management-group -m
     summary: Use management group for the scope of the blueprint.
     description: ''

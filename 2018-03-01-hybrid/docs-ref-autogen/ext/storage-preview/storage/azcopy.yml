@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_storage-preview_az_storage_azcopy
 name: az storage azcopy
 summary: '[EXPERIMENTAL] Manage storage operations utilizing AzCopy.'
@@ -8,7 +8,8 @@ directCommands:
   name: az storage azcopy run-command
   summary: Run a command directly using the AzCopy CLI. Please use SAS tokens for authentication.
   description: ''
-  parameters:
+  syntax: az storage azcopy run-command [<COMMAND_ARGS>]
+  optionalParameters:
   - name: <COMMAND_ARGS>
     summary: Command to run using azcopy. Please start commands with "azcopy ".
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_repos_pr_work_item
 name: az repos pr work-item
 summary: Manage work items associated with pull requests.
@@ -8,7 +8,12 @@ directCommands:
   name: az repos pr work-item add
   summary: Link one or more work items to a pull request.
   description: ''
-  parameters:
+  syntax: >-
+    az repos pr work-item add --id
+                              --work-items
+                              [--detect {false, true}]
+                              [--org]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: ID of the pull request.
@@ -17,6 +22,7 @@ directCommands:
     name: --work-items
     summary: IDs of the work items to link. Space separated.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -28,11 +34,16 @@ directCommands:
   name: az repos pr work-item list
   summary: List linked work items for a pull request.
   description: ''
-  parameters:
+  syntax: >-
+    az repos pr work-item list --id
+                               [--detect {false, true}]
+                               [--org]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: ID of the pull request.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -44,7 +55,12 @@ directCommands:
   name: az repos pr work-item remove
   summary: Unlink one or more work items from a pull request.
   description: ''
-  parameters:
+  syntax: >-
+    az repos pr work-item remove --id
+                                 --work-items
+                                 [--detect {false, true}]
+                                 [--org]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: ID of the pull request.
@@ -53,6 +69,7 @@ directCommands:
     name: --work-items
     summary: IDs of the work items to unlink. Space separated.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-ml_az_ml_computetarget_create
 name: az ml computetarget create
 summary: Create a compute target (aks or amlcompute or computeinstance).
@@ -8,11 +8,37 @@ directCommands:
   name: az ml computetarget create aks
   summary: Create an AKS compute target.
   description: ''
-  parameters:
+  syntax: >-
+    az ml computetarget create aks --name
+                                   [--agent-count]
+                                   [--cluster-purpose]
+                                   [--dns-service-ip]
+                                   [--docker-bridge-cidr]
+                                   [--load-balancer-subnet]
+                                   [--load-balancer-type]
+                                   [--location]
+                                   [--no-wait]
+                                   [--path]
+                                   [--resource-group]
+                                   [--service-cidr]
+                                   [--ssl-cert-file]
+                                   [--ssl-cname]
+                                   [--ssl-key-file]
+                                   [--ssl-leaf-domain-label]
+                                   [--ssl-overwrite-domain]
+                                   [--subnet-name]
+                                   [--subscription-id]
+                                   [-v]
+                                   [--vm-size]
+                                   [--vnet-name]
+                                   [--vnet-resourcegroup-name]
+                                   [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of compute target to provision.
     description: ''
+  optionalParameters:
   - name: --agent-count -a
     summary: 'Number of agents to provision with the AKS cluster. Default: 3.'
     description: ''
@@ -67,6 +93,9 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
+  - name: -v
+    summary: Verbosity flag.
+    description: ''
   - name: --vm-size -s
     summary: 'VM size to use for the compute target. A full list of options can be found here: <a href="https://aka.ms/azureml-aks-details">https://aka.ms/azureml-aks-details</a> Default: Standard_D3_v2.'
     description: ''
@@ -79,14 +108,34 @@ directCommands:
   - name: --workspace-name -w
     summary: Name of the workspace to create this compute target under.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
 - uid: ext_azure-cli-ml_az_ml_computetarget_create_amlcompute
   name: az ml computetarget create amlcompute
   summary: Create an AzureML compute target.
   description: ''
-  parameters:
+  syntax: >-
+    az ml computetarget create amlcompute --max-nodes
+                                          --name
+                                          --vm-size
+                                          [--admin-username]
+                                          [--admin-user-password]
+                                          [--admin-user-ssh-key]
+                                          [--assign-identity]
+                                          [--description]
+                                          [--idle-seconds-before-scaledown]
+                                          [--min-nodes]
+                                          [--no-wait]
+                                          [--path]
+                                          [--remote-login-port-public-access]
+                                          [--resource-group]
+                                          [--subnet-name]
+                                          [--subscription-id]
+                                          [--tag]
+                                          [-v]
+                                          [--vm-priority]
+                                          [--vnet-name]
+                                          [--vnet-resourcegroup-name]
+                                          [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --max-nodes
     summary: 'Maximum number of nodes to use. Default: 4.'
@@ -99,14 +148,15 @@ directCommands:
     name: --vm-size -s
     summary: 'VM size to use for the compute target. More details can be found here: <a href="https://aka.ms/azureml-vm-details">https://aka.ms/azureml-vm-details</a> Default: Standard_NC6.'
     description: ''
+  optionalParameters:
+  - name: --admin-username
+    summary: Name of the administrator user account which can be used to SSH into nodes.
+    description: ''
   - name: --admin-user-password
     summary: Password of the administrator user account.
     description: ''
   - name: --admin-user-ssh-key
     summary: SSH public key of the administrator user account.
-    description: ''
-  - name: --admin-username
-    summary: Name of the administrator user account which can be used to SSH into nodes.
     description: ''
   - name: --assign-identity
     summary: Use '[system]' to set a system assigned identity else input resource IDs separated by commas (ie <ResourceID1>,<ResourceID2>) to set user assigned identities.
@@ -141,6 +191,9 @@ directCommands:
   - name: --tag
     summary: Key/value tag to add (e.g. key=value ). Multiple tags can be specified with multiple --tag options.
     description: ''
+  - name: -v
+    summary: Verbosity flag.
+    description: ''
   - name: --vm-priority -p
     summary: "VM priority to use for the compute target. (Options are 'dedicated', 'lowpriority') Default: dedicated."
     description: ''
@@ -153,14 +206,27 @@ directCommands:
   - name: --workspace-name -w
     summary: Name of the workspace to create this compute target under.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
 - uid: ext_azure-cli-ml_az_ml_computetarget_create_computeinstance
   name: az ml computetarget create computeinstance
   summary: Create an AzureML compute instance target.
   description: ''
-  parameters:
+  syntax: >-
+    az ml computetarget create computeinstance --name
+                                               --vm-size
+                                               [--admin-user-ssh-public-key]
+                                               [--description]
+                                               [--no-wait]
+                                               [--path]
+                                               [--resource-group]
+                                               [--ssh-public-access]
+                                               [--subnet-name]
+                                               [--subscription-id]
+                                               [--tag]
+                                               [-v]
+                                               [--vnet-name]
+                                               [--vnet-resourcegroup-name]
+                                               [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of compute instance to create.
@@ -169,6 +235,7 @@ directCommands:
     name: --vm-size -s
     summary: 'VM size to use for the compute target. More details can be found here: <a href="https://aka.ms/azureml-vm-details">https://aka.ms/azureml-vm-details</a> Default: Standard_NC6.'
     description: ''
+  optionalParameters:
   - name: --admin-user-ssh-public-key
     summary: SSH public key of the administrator user account.
     description: ''
@@ -196,6 +263,9 @@ directCommands:
   - name: --tag
     summary: Key/value tag to add (e.g. key=value ). Multiple tags can be specified with multiple --tag options.
     description: ''
+  - name: -v
+    summary: Verbosity flag.
+    description: ''
   - name: --vnet-name
     summary: Name of the virtual network.
     description: ''
@@ -205,18 +275,25 @@ directCommands:
   - name: --workspace-name -w
     summary: Name of the workspace to create this compute target under.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
 - uid: ext_azure-cli-ml_az_ml_computetarget_create_datafactory
   name: az ml computetarget create datafactory
   summary: Create a data factory compute target.
   description: ''
-  parameters:
+  syntax: >-
+    az ml computetarget create datafactory --name
+                                           [--location]
+                                           [--no-wait]
+                                           [--path]
+                                           [--resource-group]
+                                           [--subscription-id]
+                                           [-v]
+                                           [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of compute target to provision.
     description: ''
+  optionalParameters:
   - name: --location -l
     summary: Location to provision cluster in. If not specified, will default to workspace location.
     description: ''
@@ -232,11 +309,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace to create this compute target under.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace to create this compute target under.
     description: ''
 commands:
 - ext_azure-cli-ml_az_ml_computetarget_create_aks

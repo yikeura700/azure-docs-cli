@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_spring-cloud_az_spring_cloud_app_deployment
 name: az spring-cloud app deployment
 summary: Commands to manage life cycle of deployments of an app in Azure Spring Cloud. More operations on deployments can be done on app level with parameter --deployment. e.g. az spring-cloud app deploy --deployment <staging deployment>.
@@ -8,12 +8,28 @@ directCommands:
   name: az spring-cloud app deployment create
   summary: Create a staging deployment for the app. To deploy code or update setting to an existing deployment, use az spring-cloud app deploy/update --deployment <staging deployment>.
   description: ''
+  syntax: >-
+    az spring-cloud app deployment create --app
+                                          --name
+                                          --resource-group
+                                          --service
+                                          [--cpu]
+                                          [--env]
+                                          [--instance-count]
+                                          [--jar-path]
+                                          [--jvm-options]
+                                          [--memory]
+                                          [--no-wait]
+                                          [--runtime-version {Java_11, Java_8}]
+                                          [--skip-clone-settings]
+                                          [--target-module]
+                                          [--version]
   examples:
   - summary: Deploy source code to a new deployment of an app. This will pack current directory, build binary with Pivotal Build Service and then deploy.
     syntax: az spring-cloud app deployment create -n green-deployment --app MyApp -s MyCluster -g MyResourceGroup
   - summary: Deploy a pre-built jar to an app with jvm options and environment variables.
     syntax: az spring-cloud app deployment create -n green-deployment --app MyApp -s MyCluster -g MyResourceGroup --jar-path app.jar --jvm-options="-XX:+UseG1GC -XX:+UseStringDeduplication" --env foo=bar
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app
     summary: Name of app.
@@ -30,6 +46,7 @@ directCommands:
     name: --service -s
     summary: Name of Azure Spring Cloud, you can configure the default service using az configure --defaults spring-cloud=<name>.
     description: ''
+  optionalParameters:
   - name: --cpu
     defaultValue: "1"
     summary: Number of virtual cpu cores per instance.
@@ -71,7 +88,12 @@ directCommands:
   name: az spring-cloud app deployment delete
   summary: Delete a deployment of the app.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud app deployment delete --app
+                                          --name
+                                          --resource-group
+                                          --service
+  requiredParameters:
   - isRequired: true
     name: --app
     summary: Name of app.
@@ -92,7 +114,11 @@ directCommands:
   name: az spring-cloud app deployment list
   summary: List all deployments in an app.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud app deployment list --app
+                                        --resource-group
+                                        --service
+  requiredParameters:
   - isRequired: true
     name: --app
     summary: Name of app.
@@ -109,7 +135,12 @@ directCommands:
   name: az spring-cloud app deployment show
   summary: Show details of a deployment.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud app deployment show --app
+                                        --name
+                                        --resource-group
+                                        --service
+  requiredParameters:
   - isRequired: true
     name: --app
     summary: Name of app.

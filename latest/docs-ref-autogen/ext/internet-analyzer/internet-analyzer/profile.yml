@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_internet-analyzer_az_internet_analyzer_profile
 name: az internet-analyzer profile
 summary: Commands to manage internet analyzer profile.
@@ -8,13 +8,19 @@ directCommands:
   name: az internet-analyzer profile create
   summary: Create internet analyzer profile.
   description: ''
+  syntax: >-
+    az internet-analyzer profile create --name
+                                        --resource-group
+                                        [--enabled-state {Disabled, Enabled}]
+                                        [--location]
+                                        [--tags]
   examples:
   - summary: Creates an Internet Analyzer Profile in a Resource Group
     syntax: >-
       az internet-analyzer profile create --resource-group "MyResourceGroup" --name "MyProfile" \
 
       --location "WestUs" --enabled-state "Enabled"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: The name of the Internet Analyzer profile to be created.
@@ -23,6 +29,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --enabled-state
     parameterValueGroup: Disabled, Enabled
     summary: The state of the Experiment.
@@ -37,10 +44,13 @@ directCommands:
   name: az internet-analyzer profile delete
   summary: Delete internet analyzer profile.
   description: ''
+  syntax: >-
+    az internet-analyzer profile delete --name
+                                        --resource-group
   examples:
   - summary: Deletes an Internet Analyzer Profile in a Resource Group
     syntax: az internet-analyzer profile delete --resource-group "MyResourceGroup" --name "MyProfile"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: The name of the Internet Analyzer profile to be deleted.
@@ -53,10 +63,11 @@ directCommands:
   name: az internet-analyzer profile list
   summary: List internet analyzer profiles.
   description: ''
+  syntax: az internet-analyzer profile list --resource-group
   examples:
   - summary: List Internet Analyzer Profiles in a Resource Group
     syntax: az internet-analyzer profile list --resource-group "MyResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -65,10 +76,13 @@ directCommands:
   name: az internet-analyzer profile show
   summary: Show internet analyzer profile.
   description: ''
+  syntax: >-
+    az internet-analyzer profile show --name
+                                      --resource-group
   examples:
   - summary: Gets an Internet Analyzer Profile by Profile Id
     syntax: az internet-analyzer profile show --resource-group "MyResourceGroup" --name "MyProfile"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: The name of the Internet Analyzer profile to show.
@@ -81,13 +95,19 @@ directCommands:
   name: az internet-analyzer profile update
   summary: Update internet analyzer profile.
   description: ''
+  syntax: >-
+    az internet-analyzer profile update --name
+                                        --resource-group
+                                        [--enabled-state {Disabled, Enabled}]
+                                        [--location]
+                                        [--tags]
   examples:
   - summary: Updates an Internet Analyzer Profile in a Resource Group
     syntax: >-
       az internet-analyzer profile update --resource-group "MyResourceGroup" --name "MyProfile" \
 
       --enabled-state "Enabled"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: The name of the Internet Analyzer profile to be updated.
@@ -96,6 +116,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --enabled-state
     parameterValueGroup: Disabled, Enabled
     summary: The state of the Experiment.

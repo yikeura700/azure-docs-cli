@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datashare_az_datashare
 name: az datashare
 summary: Commands to manage datashare.
@@ -8,10 +8,17 @@ directCommands:
   name: az datashare create
   summary: Create a datashare.
   description: ''
+  syntax: >-
+    az datashare create --account-name
+                        --name
+                        --resource-group
+                        [--description]
+                        [--share-kind {CopyBased, InPlace}]
+                        [--terms]
   examples:
   - summary: Create a datashare
     syntax: az datashare create --account-name MyAccount --resource-group MyResourceGroup --description "share description" --share-kind "CopyBased" --terms "Confidential" --name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -24,6 +31,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --description
     summary: Share description.
     description: ''
@@ -38,10 +46,16 @@ directCommands:
   name: az datashare delete
   summary: Delete a datashare.
   description: ''
+  syntax: >-
+    az datashare delete --account-name
+                        --name
+                        --resource-group
+                        [--no-wait]
+                        [--yes]
   examples:
   - summary: Delete a datashare
     syntax: az datashare delete --account-name MyAccount --resource-group MyResourceGroup --name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -54,6 +68,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -64,10 +79,13 @@ directCommands:
   name: az datashare list
   summary: List datashares in an account.
   description: ''
+  syntax: >-
+    az datashare list --account-name
+                      --resource-group
   examples:
   - summary: List datashares
     syntax: az datashare list --account-name MyAccount --resource-group MyResourceGroup
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -80,10 +98,14 @@ directCommands:
   name: az datashare show
   summary: Show a datashare.
   description: ''
+  syntax: >-
+    az datashare show --account-name
+                      --name
+                      --resource-group
   examples:
   - summary: Show a datashare
     syntax: az datashare show --account-name MyAccount --resource-group MyResourceGroup --name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -100,10 +122,21 @@ directCommands:
   name: az datashare wait
   summary: Place the CLI in a waiting state until a condition of the datashare is met.
   description: ''
+  syntax: >-
+    az datashare wait --account-name
+                      --name
+                      --resource-group
+                      [--created]
+                      [--custom]
+                      [--deleted]
+                      [--exists]
+                      [--interval]
+                      [--timeout]
+                      [--updated]
   examples:
   - summary: Pause executing next line of CLI script until the datashare is successfully provisioned.
     syntax: az datashare wait --account-name MyAccount --resource-group MyResourceGroup --name MyShare --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -116,6 +149,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

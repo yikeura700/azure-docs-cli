@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datashare_az_datashare_consumer_share_subscription_synchronization
 name: az datashare consumer share-subscription synchronization
 summary: Commands for consumers to manage datashare share subscription synchronizations.
@@ -8,10 +8,16 @@ directCommands:
   name: az datashare consumer share-subscription synchronization cancel
   summary: Request to cancel a synchronization.
   description: ''
+  syntax: >-
+    az datashare consumer share-subscription synchronization cancel --account-name
+                                                                    --resource-group
+                                                                    --share-subscription-name
+                                                                    --synchronization-id
+                                                                    [--no-wait]
   examples:
   - summary: Request to cancel a synchronization
     syntax: az datashare consumer share-subscription synchronization cancel --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --synchronization-id 00000000-0000-0000-0000-000000000000
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -28,6 +34,7 @@ directCommands:
     name: --synchronization-id
     summary: The synchronization GUID.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -35,10 +42,14 @@ directCommands:
   name: az datashare consumer share-subscription synchronization list
   summary: List synchronizations of a share subscription.
   description: ''
+  syntax: >-
+    az datashare consumer share-subscription synchronization list --account-name
+                                                                  --resource-group
+                                                                  --share-subscription-name
   examples:
   - summary: List synchronizations
     syntax: az datashare consumer share-subscription synchronization list --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSub
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -55,10 +66,15 @@ directCommands:
   name: az datashare consumer share-subscription synchronization list-detail
   summary: List synchronization details.
   description: ''
+  syntax: >-
+    az datashare consumer share-subscription synchronization list-detail --account-name
+                                                                         --resource-group
+                                                                         --share-subscription-name
+                                                                         --synchronization-id
   examples:
   - summary: List synchronization details
     syntax: az datashare consumer share-subscription synchronization list-detail --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSub --synchronization-id 00000000-0000-0000-0000-000000000000
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -79,10 +95,16 @@ directCommands:
   name: az datashare consumer share-subscription synchronization start
   summary: Initiate a dataset synchronization.
   description: ''
+  syntax: >-
+    az datashare consumer share-subscription synchronization start --account-name
+                                                                   --resource-group
+                                                                   --share-subscription-name
+                                                                   [--no-wait]
+                                                                   [--synchronization-mode {FullSync, Incremental}]
   examples:
   - summary: Initiate a dataset synchronization
     syntax: az datashare consumer share-subscription synchronization start --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --synchronization-mode "Incremental"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -95,6 +117,7 @@ directCommands:
     name: --share-subscription-name
     summary: The name of the share subscription.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -106,12 +129,24 @@ directCommands:
   name: az datashare consumer share-subscription synchronization wait
   summary: Place the CLI in a waiting state until a condition of the datashare share subscription synchronization is met.
   description: ''
+  syntax: >-
+    az datashare consumer share-subscription synchronization wait --account-name
+                                                                  --resource-group
+                                                                  --share-subscription-name
+                                                                  --synchronization-id
+                                                                  [--created]
+                                                                  [--custom]
+                                                                  [--deleted]
+                                                                  [--exists]
+                                                                  [--interval]
+                                                                  [--timeout]
+                                                                  [--updated]
   examples:
   - summary: Pause executing next line of CLI script until the datashare share subscription synchronization finishes successfully.
     syntax: az datashare consumer share-subscription synchronization wait --custom "status=='Succeeded'" --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --synchronization-id 00000000-0000-0000-0000-000000000000
   - summary: Pause executing next line of CLI script until the datashare share subscription synchronization is cancelled.
     syntax: az datashare consumer share-subscription synchronization wait --custom "status=='Cancelled'" --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --synchronization-id 00000000-0000-0000-0000-000000000000
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -128,6 +163,7 @@ directCommands:
     name: --synchronization-id
     summary: The synchronization GUID.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

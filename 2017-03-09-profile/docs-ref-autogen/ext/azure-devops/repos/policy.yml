@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_repos_policy
 name: az repos policy
 summary: Manage branch policy.
@@ -8,11 +8,17 @@ directCommands:
   name: az repos policy create
   summary: Create a policy using a configuration file.
   description: Recommended when creating policies using multiple scopes for a policy. See <a href="https://aka.ms/azure-devops-cli-docs-policy-file">https://aka.ms/azure-devops-cli-docs-policy-file</a> for more information.
-  parameters:
+  syntax: >-
+    az repos policy create --config
+                           [--detect {false, true}]
+                           [--org]
+                           [--project]
+  requiredParameters:
   - isRequired: true
     name: --config --policy-configuration
     summary: Local file path for configuration file. Please use / backslash when typing in directory path.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -27,11 +33,18 @@ directCommands:
   name: az repos policy delete
   summary: Delete a policy.
   description: ''
-  parameters:
+  syntax: >-
+    az repos policy delete --id
+                           [--detect {false, true}]
+                           [--org]
+                           [--project]
+                           [--yes]
+  requiredParameters:
   - isRequired: true
     name: --id --policy-id
     summary: ID of the policy.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -49,7 +62,13 @@ directCommands:
   name: az repos policy list
   summary: List all policies in a project.
   description: ''
-  parameters:
+  syntax: >-
+    az repos policy list [--branch]
+                         [--detect {false, true}]
+                         [--org]
+                         [--project]
+                         [--repository-id]
+  optionalParameters:
   - name: --branch
     summary: 'Branch name to filter results by exact match of branch name. The --repository-id parameter is required to use the branch filter. For example: --branch master.'
     description: ''
@@ -70,11 +89,17 @@ directCommands:
   name: az repos policy show
   summary: Show policy details.
   description: ''
-  parameters:
+  syntax: >-
+    az repos policy show --id
+                         [--detect {false, true}]
+                         [--org]
+                         [--project]
+  requiredParameters:
   - isRequired: true
     name: --id --policy-id
     summary: ID of the policy.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -89,7 +114,13 @@ directCommands:
   name: az repos policy update
   summary: Update a policy using a configuration file.
   description: Recommended when creating policies using multiple scopes for a policy. See <a href="https://aka.ms/azure-devops-cli-docs-policy-file">https://aka.ms/azure-devops-cli-docs-policy-file</a> for more information.
-  parameters:
+  syntax: >-
+    az repos policy update --config
+                           --id
+                           [--detect {false, true}]
+                           [--org]
+                           [--project]
+  requiredParameters:
   - isRequired: true
     name: --config --policy-configuration
     summary: Local file path for configuration file. Please use / backslash when typing in directory path.
@@ -98,6 +129,7 @@ directCommands:
     name: --id --policy-id
     summary: ID of the policy.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

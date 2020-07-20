@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_stream-analytics_az_stream_analytics_quota
 name: az stream-analytics quota
 summary: Commands to show quota information.
@@ -8,10 +8,11 @@ directCommands:
   name: az stream-analytics quota show
   summary: Retrieve quota information in a particular region.
   description: ''
+  syntax: az stream-analytics quota show --location
   examples:
   - summary: List quota information in West US
     syntax: az stream-analytics quota show --location "West US"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'

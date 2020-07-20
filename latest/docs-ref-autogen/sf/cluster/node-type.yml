@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_sf_cluster_node_type
 name: az sf cluster node-type
 summary: Manage the node-type of a cluster.
@@ -8,10 +8,21 @@ directCommands:
   name: az sf cluster node-type add
   summary: Add a new node type to a cluster.
   description: ''
+  syntax: >-
+    az sf cluster node-type add --capacity
+                                --cluster-name
+                                --node-type
+                                --resource-group
+                                --vm-password
+                                --vm-user-name
+                                [--durability-level {Bronze, Gold, Silver}]
+                                [--subscription]
+                                [--vm-sku]
+                                [--vm-tier]
   examples:
   - summary: Add a new node type to a cluster.
     syntax: az sf cluster node-type add -g group-name -c cluster1 --node-type 'n2' --capacity 5 --vm-user-name 'adminName' --vm-password testPassword0
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --capacity
     summary: The capacity tag applied to nodes in the node type. The cluster resource manager uses these tags to understand how much capacity a node has.
@@ -36,10 +47,14 @@ directCommands:
     name: --vm-user-name
     summary: The user name for logging to Vm. Default will be adminuser.
     description: ''
+  optionalParameters:
   - name: --durability-level
     defaultValue: Bronze
     parameterValueGroup: Bronze, Gold, Silver
     summary: Durability level.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --vm-sku
     defaultValue: Standard_D2_V2
@@ -48,9 +63,6 @@ directCommands:
   - name: --vm-tier
     defaultValue: Standard
     summary: VM tier.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
 - az_sf_cluster_node_type_add

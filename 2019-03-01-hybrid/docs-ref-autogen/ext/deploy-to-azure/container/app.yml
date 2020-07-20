@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_deploy-to-azure_az_container_app
 name: az container app
 summary: Commands to Manage Azure Container Instances App.
@@ -8,7 +8,13 @@ directCommands:
   name: az container app up
   summary: Deploy to Azure Container Instances using GitHub Actions.
   description: ''
-  parameters:
+  syntax: >-
+    az container app up [--acr]
+                        [--branch-name]
+                        [--do-not-wait]
+                        [--port]
+                        [--repository]
+  optionalParameters:
   - name: --acr
     summary: Name of the Azure Container Registry to be used for pushing the image.
     description: ''

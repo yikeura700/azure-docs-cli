@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_csvmware_az_csvmware_vm_template
 name: az csvmware vm-template
 summary: Manage VMware virtual machine templates.
@@ -8,10 +8,14 @@ directCommands:
   name: az csvmware vm-template list
   summary: List details of VMware virtual machines templates in a private cloud.
   description: ''
+  syntax: >-
+    az csvmware vm-template list --location
+                                 --private-cloud
+                                 --resource-pool
   examples:
   - summary: List details of VM templates.
     syntax: az csvmware vm-template list -p MyPrivateCloud -r MyResourcePool --location eastus
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: Region in which the private cloud is present.
@@ -28,10 +32,14 @@ directCommands:
   name: az csvmware vm-template show
   summary: Get the details of a VMware virtual machines template in a private cloud.
   description: ''
+  syntax: >-
+    az csvmware vm-template show --location
+                                 --name
+                                 --private-cloud
   examples:
   - summary: Get the details of a VM template.
     syntax: az csvmware vm-template show  -n MyVmTemplate -p MyPrivateCloud --location eastus
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: Region in which the private cloud is present.

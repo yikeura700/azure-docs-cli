@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_netappfiles_snapshot
 name: az netappfiles snapshot
 summary: Manage Azure NetApp Files (ANF) Snapshot Resources.
@@ -8,10 +8,19 @@ directCommands:
   name: az netappfiles snapshot create
   summary: Create a new Azure NetApp Files (ANF) snapshot.
   description: ''
+  syntax: >-
+    az netappfiles snapshot create --account-name
+                                   --location
+                                   --name
+                                   --pool-name
+                                   --resource-group
+                                   --volume-name
+                                   [--file-system-id]
+                                   [--subscription]
   examples:
   - summary: Create an ANF snapshot
     syntax: az netappfiles snapshot create -g mygroup --account-name myaccname --pool-name mypoolname --volume-name myvolname --name mysnapname -l eastus --file-system-id 13641da9-c0e9-4b97-84fc-4f8014a93848
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the ANF account.
@@ -36,26 +45,30 @@ directCommands:
     name: --volume-name -v
     summary: The name of the ANF volume.
     description: ''
+  optionalParameters:
   - name: --file-system-id
     summary: The uuid of the volume.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
 - uid: az_netappfiles_snapshot_delete
   name: az netappfiles snapshot delete
   summary: Delete the specified ANF snapshot.
   description: ''
+  syntax: >-
+    az netappfiles snapshot delete [--account-name]
+                                   [--ids]
+                                   [--name]
+                                   [--pool-name]
+                                   [--resource-group]
+                                   [--subscription]
+                                   [--volume-name]
   examples:
   - summary: Delete an ANF snapshot
     syntax: az netappfiles snapshot delete -g mygroup --account-name myaccname --pool-name mypoolname --volume-name myvolname --name mysnapname
-  parameters:
+  optionalParameters:
   - name: --account-name -a
     summary: The name of the ANF account.
     description: ''
@@ -77,20 +90,21 @@ directCommands:
   - name: --volume-name -v
     summary: The name of the ANF volume.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
 - uid: az_netappfiles_snapshot_list
   name: az netappfiles snapshot list
   summary: List the snapshots of an ANF volume.
   description: ''
+  syntax: >-
+    az netappfiles snapshot list --account-name
+                                 --pool-name
+                                 --resource-group
+                                 --volume-name
+                                 [--subscription]
   examples:
   - summary: list the snapshots of an ANF volume
     syntax: az netappfiles snapshot list -g mygroup --account-name myaccname --pool-name mypoolname --volume-name myvolname
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the ANF account.
@@ -107,23 +121,27 @@ directCommands:
     name: --volume-name -v
     summary: The name of the ANF volume.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
 - uid: az_netappfiles_snapshot_show
   name: az netappfiles snapshot show
   summary: Get the specified ANF snapshot.
   description: ''
+  syntax: >-
+    az netappfiles snapshot show [--account-name]
+                                 [--ids]
+                                 [--name]
+                                 [--pool-name]
+                                 [--resource-group]
+                                 [--subscription]
+                                 [--volume-name]
   examples:
   - summary: Return the specified ANF snapshot
     syntax: az netappfiles snapshot show -g mygroup --account-name myaccname --pool-name mypoolname --volume-name myvolname --name mysnapname
-  parameters:
+  optionalParameters:
   - name: --account-name -a
     summary: The name of the ANF account.
     description: ''
@@ -145,12 +163,7 @@ directCommands:
   - name: --volume-name -v
     summary: The name of the ANF volume.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
 commands:
 - az_netappfiles_snapshot_create
 - az_netappfiles_snapshot_delete
@@ -172,6 +185,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/ee84afb7c3604c924b225b79095feee55c466a1b/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   updated_at: 5/15/2020 10:20:28 AM

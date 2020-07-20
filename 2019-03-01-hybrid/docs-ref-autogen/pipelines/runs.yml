@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_pipelines_runs
 name: az pipelines runs
 summary: Manage pipeline runs.
@@ -8,7 +8,21 @@ directCommands:
   name: az pipelines runs list
   summary: List the pipeline runs in a project.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines runs list [--branch]
+                           [--detect {false, true}]
+                           [--org]
+                           [--pipeline-ids]
+                           [--project]
+                           [--query-order {FinishTimeAsc, FinishTimeDesc, QueueTimeAsc, QueueTimeDesc, StartTimeAsc, StartTimeDesc}]
+                           [--reason {all, batchedCI, buildCompletion, checkInShelveset, individualCI, manual, pullRequest, schedule, triggered, userCreated, validateShelveset}]
+                           [--requested-for]
+                           [--result {canceled, failed, none, partiallySucceeded, succeeded}]
+                           [--status {all, cancelling, completed, inProgress, none, notStarted, postponed}]
+                           [--subscription]
+                           [--tags]
+                           [--top]
+  optionalParameters:
   - name: --branch
     summary: Filter by builds for this branch.
     description: ''
@@ -44,24 +58,32 @@ directCommands:
     parameterValueGroup: all, cancelling, completed, inProgress, none, notStarted, postponed
     summary: Limit to builds with this status.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --tags
     summary: Limit to builds with each of the specified tags. Space separated.
     description: ''
   - name: --top
     summary: Maximum number of builds to list.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
 - uid: az_pipelines_runs_show
   name: az pipelines runs show
   summary: Show details of a pipeline run.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines runs show --id
+                           [--detect {false, true}]
+                           [--open]
+                           [--org]
+                           [--project]
+                           [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: ID of the pipeline run.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

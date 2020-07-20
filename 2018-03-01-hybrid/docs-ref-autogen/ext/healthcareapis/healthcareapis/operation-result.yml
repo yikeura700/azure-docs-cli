@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_healthcareapis_az_healthcareapis_operation_result
 name: az healthcareapis operation-result
 summary: Healthcareapis operation-result.
@@ -8,10 +8,13 @@ directCommands:
   name: az healthcareapis operation-result show
   summary: Get the operation result for a long running operation.
   description: ''
+  syntax: >-
+    az healthcareapis operation-result show --location-name
+                                            --operation-result-id
   examples:
   - summary: Get operation result
     syntax: az healthcareapis operation-result show --location-name "westus" --operation-result-id "exampleid"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location-name
     summary: The location of the operation.

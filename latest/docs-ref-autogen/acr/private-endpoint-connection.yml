@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_acr_private_endpoint_connection
 name: az acr private-endpoint-connection
 summary: Manage container registry private endpoint connections.
@@ -8,7 +8,13 @@ directCommands:
   name: az acr private-endpoint-connection approve
   summary: Approve a private endpoint connection request for a container registry.
   description: To create a private endpoint connection use "az network private-endpoint create". For more information see <a href="https://aka.ms/acr/private-link">https://aka.ms/acr/private-link</a>.
-  parameters:
+  syntax: >-
+    az acr private-endpoint-connection approve --name
+                                               --registry-name
+                                               [--description]
+                                               [--resource-group]
+                                               [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the private endpoint connection.
@@ -17,6 +23,7 @@ directCommands:
     name: --registry-name -r
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
+  optionalParameters:
   - name: --description
     summary: Approval description. For example, the reason for approval.
     description: ''
@@ -26,17 +33,17 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 - uid: az_acr_private_endpoint_connection_delete
   name: az acr private-endpoint-connection delete
   summary: Delete a private endpoint connection request for a container registry.
   description: To create a private endpoint connection use "az network private-endpoint create". For more information see <a href="https://aka.ms/acr/private-link">https://aka.ms/acr/private-link</a>.
-  parameters:
+  syntax: >-
+    az acr private-endpoint-connection delete --name
+                                              --registry-name
+                                              [--resource-group]
+                                              [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the private endpoint connection.
@@ -45,44 +52,46 @@ directCommands:
     name: --registry-name -r
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 - uid: az_acr_private_endpoint_connection_list
   name: az acr private-endpoint-connection list
   summary: List all private endpoint connections to a container registry.
   description: To create a private endpoint connection use "az network private-endpoint create". For more information see <a href="https://aka.ms/acr/private-link">https://aka.ms/acr/private-link</a>.
-  parameters:
+  syntax: >-
+    az acr private-endpoint-connection list --registry-name
+                                            [--resource-group]
+                                            [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --registry-name -r
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 - uid: az_acr_private_endpoint_connection_reject
   name: az acr private-endpoint-connection reject
   summary: Reject a private endpoint connection request for a container registry.
   description: To create a private endpoint connection use "az network private-endpoint create". For more information see <a href="https://aka.ms/acr/private-link">https://aka.ms/acr/private-link</a>.
-  parameters:
+  syntax: >-
+    az acr private-endpoint-connection reject --name
+                                              --registry-name
+                                              [--description]
+                                              [--resource-group]
+                                              [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the private endpoint connection.
@@ -91,6 +100,7 @@ directCommands:
     name: --registry-name -r
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
+  optionalParameters:
   - name: --description
     summary: Rejection description. For example, the reason for rejection.
     description: ''
@@ -100,17 +110,17 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 - uid: az_acr_private_endpoint_connection_show
   name: az acr private-endpoint-connection show
   summary: Show details of a container registry's private endpoint connection.
   description: To create a private endpoint connection use "az network private-endpoint create". For more information see <a href="https://aka.ms/acr/private-link">https://aka.ms/acr/private-link</a>.
-  parameters:
+  syntax: >-
+    az acr private-endpoint-connection show --name
+                                            --registry-name
+                                            [--resource-group]
+                                            [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the private endpoint connection.
@@ -119,18 +129,14 @@ directCommands:
     name: --registry-name -r
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/acr/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 commands:
 - az_acr_private_endpoint_connection_approve
 - az_acr_private_endpoint_connection_delete
@@ -153,6 +159,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/537e4dd63081fb7aee3d051899dd5d045c1edccd/src/azure-cli/azure/cli/command_modules/acr/_help.py
   updated_at: 4/15/2020 7:14:42 AM

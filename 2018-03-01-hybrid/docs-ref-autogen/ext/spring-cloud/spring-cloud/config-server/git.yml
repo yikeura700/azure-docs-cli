@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_spring-cloud_az_spring_cloud_config_server_git
 name: az spring-cloud config-server git
 summary: Commands to manage Config Server git property in Azure Spring Cloud.
@@ -8,7 +8,19 @@ directCommands:
   name: az spring-cloud config-server git set
   summary: Set git property of Config Server, will totally override the old one.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud config-server git set --name
+                                          --resource-group
+                                          --uri
+                                          [--host-key]
+                                          [--host-key-algorithm]
+                                          [--label]
+                                          [--password]
+                                          [--private-key]
+                                          [--search-paths]
+                                          [--strict-host-key-checking]
+                                          [--username]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of Azure Spring Cloud.
@@ -21,6 +33,7 @@ directCommands:
     name: --uri
     summary: Uri of the added config.
     description: ''
+  optionalParameters:
   - name: --host-key
     summary: Host key of the added config.
     description: ''

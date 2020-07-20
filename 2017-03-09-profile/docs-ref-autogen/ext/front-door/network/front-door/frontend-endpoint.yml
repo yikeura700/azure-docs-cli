@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_front-door_az_network_front_door_frontend_endpoint
 name: az network front-door frontend-endpoint
 summary: Manage Front Door frontend endpoints.
@@ -8,7 +8,15 @@ directCommands:
   name: az network front-door frontend-endpoint create
   summary: Create a Front Door frontend endpoint.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door frontend-endpoint create --front-door-name
+                                                   --host-name
+                                                   --name
+                                                   --resource-group
+                                                   [--session-affinity-enabled {false, true}]
+                                                   [--session-affinity-ttl]
+                                                   [--waf-policy]
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -25,6 +33,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --session-affinity-enabled
     parameterValueGroup: false, true
     summary: Whether to allow session affinity on this host.
@@ -39,7 +48,11 @@ directCommands:
   name: az network front-door frontend-endpoint delete
   summary: Delete a Front Door frontend endpoint.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door frontend-endpoint delete --front-door-name
+                                                   --name
+                                                   --resource-group
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -56,7 +69,11 @@ directCommands:
   name: az network front-door frontend-endpoint disable-https
   summary: Disable HTTPS protocol for a custom domain.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door frontend-endpoint disable-https --front-door-name
+                                                          --name
+                                                          --resource-group
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -73,7 +90,16 @@ directCommands:
   name: az network front-door frontend-endpoint enable-https
   summary: Enable HTTPS protocol for a custom domain.
   description: HTTPS protocol for a custom domain can be enabled using Front Door managed certificate or using your own certificate in Azure Key Vault. For Azure Key Vault, right permissions need to be set for Front Door to access the Key vault. Learn more at <a href="https://aka.ms/FrontDoorCustomDomain">https://aka.ms/FrontDoorCustomDomain</a>.
-  parameters:
+  syntax: >-
+    az network front-door frontend-endpoint enable-https --front-door-name
+                                                         --name
+                                                         --resource-group
+                                                         [--certificate-source {AzureKeyVault, FrontDoor}]
+                                                         [--minimum-tls-version {1.0, 1.2}]
+                                                         [--secret-name]
+                                                         [--secret-version]
+                                                         [--vault-id]
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -86,6 +112,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --certificate-source
     defaultValue: FrontDoor
     parameterValueGroup: AzureKeyVault, FrontDoor
@@ -109,7 +136,10 @@ directCommands:
   name: az network front-door frontend-endpoint list
   summary: List Front Door frontend endpoints.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door frontend-endpoint list --front-door-name
+                                                 --resource-group
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -122,7 +152,11 @@ directCommands:
   name: az network front-door frontend-endpoint show
   summary: Get the details of a Front Door frontend endpoint.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door frontend-endpoint show --front-door-name
+                                                 --name
+                                                 --resource-group
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.

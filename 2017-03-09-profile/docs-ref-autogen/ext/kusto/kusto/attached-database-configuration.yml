@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_kusto_az_kusto_attached_database_configuration
 name: az kusto attached-database-configuration
 summary: Kusto attached-database-configuration.
@@ -8,10 +8,19 @@ directCommands:
   name: az kusto attached-database-configuration create
   summary: Creates or updates an attached database configuration.
   description: ''
+  syntax: >-
+    az kusto attached-database-configuration create --attached-database-configuration-name
+                                                    --cluster-name
+                                                    --resource-group
+                                                    [--cluster-resource-id]
+                                                    [--database-name]
+                                                    [--default-principals-modification-kind {None, Replace, Union}]
+                                                    [--location]
+                                                    [--no-wait]
   examples:
   - summary: AttachedDatabaseConfigurationsCreateOrUpdate
     syntax: az kusto attached-database-configuration create --attached-database-configuration-name "attachedDatabaseConfigurations1" --cluster-name "KustoClusterRPTest4" --location "westus" --cluster-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader" --database-name "Kustodatabase8" --default-principals-modification-kind "Union" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --attached-database-configuration-name
     summary: The name of the attached database configuration.
@@ -24,6 +33,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --cluster-resource-id
     summary: The resource id of the cluster where the databases you would like to attach reside.
     description: ''
@@ -44,10 +54,15 @@ directCommands:
   name: az kusto attached-database-configuration delete
   summary: Deletes the attached database configuration with the given name.
   description: ''
+  syntax: >-
+    az kusto attached-database-configuration delete --attached-database-configuration-name
+                                                    --cluster-name
+                                                    --resource-group
+                                                    [--no-wait]
   examples:
   - summary: AttachedDatabaseConfigurationsDelete
     syntax: az kusto attached-database-configuration delete --attached-database-configuration-name "attachedDatabaseConfigurations1" --cluster-name "KustoClusterRPTest4" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --attached-database-configuration-name
     summary: The name of the attached database configuration.
@@ -60,6 +75,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -67,10 +83,13 @@ directCommands:
   name: az kusto attached-database-configuration list
   summary: Returns the list of attached database configurations of the given Kusto cluster.
   description: ''
+  syntax: >-
+    az kusto attached-database-configuration list --cluster-name
+                                                  --resource-group
   examples:
   - summary: KustoAttachedDatabaseConfigurationsListByCluster
     syntax: az kusto attached-database-configuration list --cluster-name "KustoClusterRPTest4" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -83,10 +102,14 @@ directCommands:
   name: az kusto attached-database-configuration show
   summary: Returns an attached database configuration.
   description: ''
+  syntax: >-
+    az kusto attached-database-configuration show --attached-database-configuration-name
+                                                  --cluster-name
+                                                  --resource-group
   examples:
   - summary: AttachedDatabaseConfigurationsGet
     syntax: az kusto attached-database-configuration show --attached-database-configuration-name "attachedDatabaseConfigurations1" --cluster-name "KustoClusterRPTest4" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --attached-database-configuration-name
     summary: The name of the attached database configuration.
@@ -103,10 +126,19 @@ directCommands:
   name: az kusto attached-database-configuration update
   summary: Creates or updates an attached database configuration.
   description: ''
+  syntax: >-
+    az kusto attached-database-configuration update --attached-database-configuration-name
+                                                    --cluster-name
+                                                    --resource-group
+                                                    [--cluster-resource-id]
+                                                    [--database-name]
+                                                    [--default-principals-modification-kind {None, Replace, Union}]
+                                                    [--location]
+                                                    [--no-wait]
   examples:
   - summary: AttachedDatabaseConfigurationsCreateOrUpdate
     syntax: az kusto attached-database-configuration update --attached-database-configuration-name "attachedDatabaseConfigurations1" --cluster-name "KustoClusterRPTest4" --location "westus" --cluster-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterLeader" --database-name "Kustodatabase8" --default-principals-modification-kind "Union" --resource-group "kustorptest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --attached-database-configuration-name
     summary: The name of the attached database configuration.
@@ -119,6 +151,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --cluster-resource-id
     summary: The resource id of the cluster where the databases you would like to attach reside.
     description: ''
@@ -139,7 +172,18 @@ directCommands:
   name: az kusto attached-database-configuration wait
   summary: Wait for a managed Kusto cluster to reach a desired state.
   description: If an operation on a cluster was interrupted or was started with `--no-wait`, use this command to wait for it to complete.
-  parameters:
+  syntax: >-
+    az kusto attached-database-configuration wait --attached-database-configuration-name
+                                                  --cluster-name
+                                                  --resource-group
+                                                  [--created]
+                                                  [--custom]
+                                                  [--deleted]
+                                                  [--exists]
+                                                  [--interval]
+                                                  [--timeout]
+                                                  [--updated]
+  requiredParameters:
   - isRequired: true
     name: --attached-database-configuration-name
     summary: The name of the attached database configuration.
@@ -152,6 +196,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

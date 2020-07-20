@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_express-route-cross-connection_az_network_cross_connection
 name: az network cross-connection
 summary: Manage customers' ExpressRoute circuits.
@@ -8,10 +8,11 @@ directCommands:
   name: az network cross-connection list
   summary: List all ExpressRoute cross-connections for the current subscription.
   description: ''
+  syntax: az network cross-connection list [--resource-group]
   examples:
   - summary: List all ExpressRoute cross-connections for the current subscription.
     syntax: az network cross-connection list -g MyResourceGroup
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -19,12 +20,17 @@ directCommands:
   name: az network cross-connection list-arp-tables
   summary: Show the current Address Resolution Protocol (ARP) table of an ExpressRoute cross-connection peering.
   description: ''
+  syntax: >-
+    az network cross-connection list-arp-tables --name
+                                                --path {primary, secondary}
+                                                --peering-name
+                                                --resource-group
   examples:
   - summary: Show the current Address Resolution Protocol (ARP) table of an ExpressRoute cross-connection.
     syntax: >-
       az network cross-connection list-arp-tables -g MyResourceGroup -n MyCircuit \
           --path primary --peering-name AzurePrivatePeering
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: ExpressRoute cross-connection name.
@@ -46,12 +52,17 @@ directCommands:
   name: az network cross-connection list-route-tables
   summary: Show the current routing table of an ExpressRoute cross-connection peering.
   description: ''
+  syntax: >-
+    az network cross-connection list-route-tables --name
+                                                  --path {primary, secondary}
+                                                  --peering-name
+                                                  --resource-group
   examples:
   - summary: Show the current routing table of an ExpressRoute cross-connection peering.
     syntax: >-
       az network cross-connection list-route-tables -g MyResourceGroup -n MyCircuit \
           --path primary --peering-name AzurePrivatePeering
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: ExpressRoute cross-connection name.
@@ -73,10 +84,13 @@ directCommands:
   name: az network cross-connection show
   summary: Get the details of an ExpressRoute cross-connection.
   description: ''
+  syntax: >-
+    az network cross-connection show --name
+                                     --resource-group
   examples:
   - summary: Get the details of an ExpressRoute cross-connection.
     syntax: az network cross-connection show -n MyCircuit -g MyResourceGroup
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: ExpressRoute cross-connection name.
@@ -89,7 +103,12 @@ directCommands:
   name: az network cross-connection summarize-route-table
   summary: Gets the route table summary associated with the express route cross connection in a resource group.
   description: ''
-  parameters:
+  syntax: >-
+    az network cross-connection summarize-route-table --name
+                                                      --path {primary, secondary}
+                                                      --peering-name
+                                                      --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: ExpressRoute cross-connection name.
@@ -111,7 +130,17 @@ directCommands:
   name: az network cross-connection update
   summary: Update settings of an ExpressRoute cross-connection.
   description: ''
-  parameters:
+  syntax: >-
+    az network cross-connection update --name
+                                       --resource-group
+                                       [--add]
+                                       [--force-string]
+                                       [--notes]
+                                       [--no-wait]
+                                       [--provisioning-state {NotProvisioned, Provisioned, Provisioning}]
+                                       [--remove]
+                                       [--set]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: ExpressRoute cross-connection name.
@@ -120,21 +149,22 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
-  - name: --notes
-    summary: Service provider notes.
-    description: ''
-  - name: --provisioning-state
-    parameterValueGroup: NotProvisioned, Provisioned, Provisioning
-    summary: Provisioning state of the customer ExpressRoute circuit.
-    description: ''
+  optionalParameters:
   - name: --add
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --force-string
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+    description: ''
+  - name: --notes
+    summary: Service provider notes.
+    description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
+  - name: --provisioning-state
+    parameterValueGroup: NotProvisioned, Provisioned, Provisioning
+    summary: Provisioning state of the customer ExpressRoute circuit.
     description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
@@ -146,10 +176,20 @@ directCommands:
   name: az network cross-connection wait
   summary: Place the CLI in a waiting state until a condition of the ExpressRoute is met.
   description: ''
+  syntax: >-
+    az network cross-connection wait --name
+                                     --resource-group
+                                     [--created]
+                                     [--custom]
+                                     [--deleted]
+                                     [--exists]
+                                     [--interval]
+                                     [--timeout]
+                                     [--updated]
   examples:
   - summary: Pause executing next line of CLI script until the ExpressRoute cross-connection is successfully provisioned.
     syntax: az network cross-connection wait -n MyCircuit -g MyResourceGroup --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: ExpressRoute cross-connection name.
@@ -158,6 +198,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_maintenance_az_maintenance_update
 name: az maintenance update
 summary: Azure Maintenance updates.
@@ -8,10 +8,17 @@ directCommands:
   name: az maintenance update list
   summary: List pending a Maintenance Updates.
   description: ''
+  syntax: >-
+    az maintenance update list --provider-name
+                               --resource-group
+                               --resource-name
+                               --resource-type
+                               [--resource-parent-name]
+                               [--resource-parent-type]
   examples:
   - summary: List pending a Maintenance Updates.
     syntax: az maintenance update list -g smdtest --resource-name smdVM --resource-type virtualMachines --provider-name Microsoft.Compute
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --provider-name
     summary: Maintenance resource provider - Microsoft.Maintenance.
@@ -28,6 +35,7 @@ directCommands:
     name: --resource-type
     summary: Type of the azure resource e.g. virtualmachines, hosts etc.
     description: ''
+  optionalParameters:
   - name: --resource-parent-name
     summary: Name of the parent resource e.g. for dedicated hosts this would be the name of the dedicated host group, for VMSS VMs this would be the VMSS name.
     description: ''

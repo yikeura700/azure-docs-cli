@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_cosmosdb_sql_trigger
 name: az cosmosdb sql trigger
 summary: Manage Azure Cosmos DB SQL triggers.
@@ -8,10 +8,20 @@ directCommands:
   name: az cosmosdb sql trigger create
   summary: Create an SQL trigger under an Azure Cosmos DB SQL container.
   description: ''
+  syntax: >-
+    az cosmosdb sql trigger create --account-name
+                                   --body
+                                   --container-name
+                                   --database-name
+                                   --name
+                                   --resource-group
+                                   [--operation {All, Create, Delete, Replace, Update}]
+                                   [--subscription]
+                                   [--type {Post, Pre}]
   examples:
   - summary: Create an Azure Cosmos DB SQL trigger.
     syntax: az cosmosdb sql trigger create -g MyResourceGroup -a MyAccount -d MyDatabase -c MyContainer -n MyTrigger -b TriggerBody
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -36,28 +46,32 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --operation
     parameterValueGroup: All, Create, Delete, Replace, Update
     summary: The operation of the trigger.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --type -t
     parameterValueGroup: Post, Pre
     summary: Trigger type.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_sql_trigger_delete
   name: az cosmosdb sql trigger delete
   summary: Delete the SQL trigger under an Azure Cosmos DB SQL container.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb sql trigger delete --account-name
+                                   --container-name
+                                   --database-name
+                                   --name
+                                   --resource-group
+                                   [--subscription]
+                                   [--yes]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -77,24 +91,26 @@ directCommands:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  optionalParameters:
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_sql_trigger_list
   name: az cosmosdb sql trigger list
   summary: List the SQL triggers under an Azure Cosmos DB SQL container.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb sql trigger list --account-name
+                                 --container-name
+                                 --database-name
+                                 --resource-group
+                                 [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -111,20 +127,23 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_sql_trigger_show
   name: az cosmosdb sql trigger show
   summary: Show the details of a SQL trigger under an Azure Cosmos DB SQL container.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb sql trigger show --account-name
+                                 --container-name
+                                 --database-name
+                                 --name
+                                 --resource-group
+                                 [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -145,20 +164,26 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 - uid: az_cosmosdb_sql_trigger_update
   name: az cosmosdb sql trigger update
   summary: Updates an Azure Cosmos DB SQL trigger.
   description: ''
-  parameters:
+  syntax: >-
+    az cosmosdb sql trigger update --account-name
+                                   --container-name
+                                   --database-name
+                                   --name
+                                   --resource-group
+                                   [--body]
+                                   [--operation {All, Create, Delete, Replace, Update}]
+                                   [--subscription]
+                                   [--type {Post, Pre}]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: Cosmosdb account name.
@@ -179,6 +204,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --body -b
     summary: Trigger body, you can enter it as a string or as a file, e.g., --body @triggerbody-file.json.
     description: ''
@@ -186,19 +212,14 @@ directCommands:
     parameterValueGroup: All, Create, Delete, Replace, Update
     summary: The operation of the trigger.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --type -t
     parameterValueGroup: Post, Pre
     summary: Trigger type.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
 commands:
 - az_cosmosdb_sql_trigger_create
 - az_cosmosdb_sql_trigger_delete
@@ -221,6 +242,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/1a803c49df1c2a27dfcdc079168f3bc2baf02c81/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   updated_at: 4/17/2020 2:16:59 AM

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_maintenance_az_maintenance_configuration
 name: az maintenance configuration
 summary: Manage Azure Maintenance configurations.
@@ -8,10 +8,16 @@ directCommands:
   name: az maintenance configuration create
   summary: Creates a Maintenance Configuration.
   description: ''
+  syntax: >-
+    az maintenance configuration create --location
+                                        --name
+                                        --resource-group
+                                        [--maintenanceScope]
+                                        [--tags]
   examples:
   - summary: Create a Maintenance Configuration with the All scope.
     syntax: az maintenance configuration create --name workervms -g MyResourceGroup -l westus
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -24,6 +30,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --maintenanceScope
     defaultValue: All
     summary: Maintenance Scope e.g. Host, Guest or All.
@@ -35,10 +42,13 @@ directCommands:
   name: az maintenance configuration delete
   summary: Deletes a Maintenance Configuration.
   description: ''
+  syntax: >-
+    az maintenance configuration delete --name
+                                        --resource-group
   examples:
   - summary: Delete a Maintenance Configuration.
     syntax: az maintenance configuration delete --name workervms -g MyResourceGroup
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of resource.
@@ -51,18 +61,21 @@ directCommands:
   name: az maintenance configuration list
   summary: Get Configuration records within a subscription.
   description: ''
+  syntax: az maintenance configuration list
   examples:
   - summary: Get Configuration records within a subscription.
     syntax: az maintenance configuration list --subscription 2b4ce620-bb0f-4964-8428-dea4aefe00000
-  parameters: []
 - uid: ext_maintenance_az_maintenance_configuration_show
   name: az maintenance configuration show
   summary: Get the details of a Maintenance Configuration.
   description: ''
+  syntax: >-
+    az maintenance configuration show --name
+                                      --resource-group
   examples:
   - summary: Get the Maintenance Configuration.
     syntax: az maintenance configuration show --name workervms -g MyResourceGroup
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of resource.
@@ -75,10 +88,16 @@ directCommands:
   name: az maintenance configuration update
   summary: Creates a Maintenance Configuration.
   description: ''
+  syntax: >-
+    az maintenance configuration update --location
+                                        --name
+                                        --resource-group
+                                        [--maintenanceScope]
+                                        [--tags]
   examples:
   - summary: Create a Maintenance Configuration with the All scope.
     syntax: az maintenance configuration update --name workervms -g MyResourceGroup -l westus --maintenanceScope All
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -91,6 +110,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --maintenanceScope
     defaultValue: All
     summary: Maintenance Scope e.g. Host, Guest or All.

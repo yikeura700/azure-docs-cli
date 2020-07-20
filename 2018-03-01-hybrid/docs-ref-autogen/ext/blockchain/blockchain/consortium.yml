@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_blockchain_az_blockchain_consortium
 name: az blockchain consortium
 summary: Blockchain consortium.
@@ -8,10 +8,11 @@ directCommands:
   name: az blockchain consortium list
   summary: List the available consortiums for a subscription.
   description: ''
+  syntax: az blockchain consortium list --location
   examples:
   - summary: List the available consortiums for a subscription.
     syntax: az blockchain consortium list --location "southeastasia"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'

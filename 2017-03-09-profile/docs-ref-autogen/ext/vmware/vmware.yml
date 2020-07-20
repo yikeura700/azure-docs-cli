@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_vmware_az_vmware
 name: az vmware
 summary: Commands to manage Azure VMware Solutions.
@@ -8,7 +8,8 @@ directCommands:
   name: az vmware checkquotaavailability
   summary: Return quota for subscription by region.
   description: ''
-  parameters:
+  syntax: az vmware checkquotaavailability --location
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'

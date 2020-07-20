@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_peering_az_peering_service_location
 name: az peering service location
 summary: Peering service location.
@@ -8,10 +8,11 @@ directCommands:
   name: az peering service location list
   summary: Lists all of the available locations for peering service.
   description: ''
+  syntax: az peering service location list [--country]
   examples:
   - summary: List peering service locations
     syntax: az peering service location list
-  parameters:
+  optionalParameters:
   - name: --country
     summary: The country of interest, in which the locations are to be present.
     description: ''

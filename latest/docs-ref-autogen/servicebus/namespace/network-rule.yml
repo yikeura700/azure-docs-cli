@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_servicebus_namespace_network_rule
 name: az servicebus namespace network-rule
 summary: Manage Azure ServiceBus networkruleSet for namespace.
@@ -8,12 +8,21 @@ directCommands:
   name: az servicebus namespace network-rule add
   summary: Add a network rule for a namespace.
   description: ''
+  syntax: >-
+    az servicebus namespace network-rule add --namespace-name
+                                             --resource-group
+                                             [--action {Allow}]
+                                             [--ignore-missing-endpoint {false, true}]
+                                             [--ip-address]
+                                             [--subnet]
+                                             [--subscription]
+                                             [--vnet-name]
   examples:
   - summary: add a VirtualNetwork rule in NetworkruleSet for a namespace
     syntax: az servicebus namespace network-rule add --resource-group myresourcegroup --namespace-name mynamespace --subnet {subnetId} --ignore-missing-endpoint True
   - summary: add a IP rule in NetworkruleSet for a namespace
     syntax: az servicebus namespace network-rule add --resource-group myresourcegroup --namespace-name mynamespace --ip-address 10.0.0.0/24 --action Allow
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --namespace-name
     summary: Name of the Namespace.
@@ -22,41 +31,41 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --action
     defaultValue: Allow
     parameterValueGroup: Allow
     summary: Action of the IP rule.
     description: ''
-  - name: --ip-address
-    summary: IPv4 address or CIDR range.
-    description: ''
   - name: --ignore-missing-endpoint
     parameterValueGroup: false, true
     summary: A boolean value that indicates whether to ignore missing vnet Service Endpoint.
     description: ''
+  - name: --ip-address
+    summary: IPv4 address or CIDR range.
+    description: ''
   - name: --subnet
     summary: Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.
-    description: ''
-  - name: --vnet-name
-    summary: Name of the Virtual Network.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/servicebus/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/servicebus/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --vnet-name
+    summary: Name of the Virtual Network.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
 - uid: az_servicebus_namespace_network_rule_list
   name: az servicebus namespace network-rule list
   summary: Show properties of Network rule of the given Namespace.
   description: ''
+  syntax: >-
+    az servicebus namespace network-rule list --namespace-name
+                                              --resource-group
+                                              [--subscription]
   examples:
   - summary: Show properties of Network rule of the given Namespace
     syntax: az servicebus namespace network-rule list --resource-group myresourcegroup --namespace-name mynamespace
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --namespace-name
     summary: Name of the Namespace.
@@ -65,25 +74,28 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/servicebus/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/servicebus/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
 - uid: az_servicebus_namespace_network_rule_remove
   name: az servicebus namespace network-rule remove
   summary: Remove network rule for a namespace.
   description: ''
+  syntax: >-
+    az servicebus namespace network-rule remove --namespace-name
+                                                --resource-group
+                                                [--ip-address]
+                                                [--subnet]
+                                                [--subscription]
+                                                [--vnet-name]
   examples:
   - summary: remove VirtualNetwork rule from NetworkruleSet for a namespace
     syntax: az servicebus namespace network-rule remove --resource-group myresourcegroup --namespace-name mynamespace --subnet {subnetId}
   - summary: remove IP rule from NetworkruleSet for a namespace
     syntax: az servicebus namespace network-rule remove --resource-group myresourcegroup --namespace-name mynamespace --ip-address 10.0.0.0/24
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --namespace-name
     summary: Name of the Namespace.
@@ -92,24 +104,20 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --ip-address
     summary: IPv4 address or CIDR range.
     description: ''
   - name: --subnet
     summary: Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.
     description: ''
-  - name: --vnet-name
-    summary: Name of the Virtual Network.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/servicebus/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/servicebus/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --vnet-name
+    summary: Name of the Virtual Network.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
 commands:
 - az_servicebus_namespace_network_rule_add
 - az_servicebus_namespace_network_rule_list
@@ -130,6 +138,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/14b5a20839a9bc1f37d3c259564bce7546ef6478/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   updated_at: 10/17/2019 11:07:36 AM

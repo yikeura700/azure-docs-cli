@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_monitor
 name: az monitor
 summary: Manage the Azure Monitor Service.
@@ -8,10 +8,16 @@ directCommands:
   name: az monitor clone
   summary: Clone metrics alert rules from one resource to another resource.
   description: ''
+  syntax: >-
+    az monitor clone --source-resource
+                     --target-resource
+                     [--always-clone]
+                     [--subscription]
+                     [--types {metricsAlert}]
   examples:
   - summary: Clone the metric alert settings from one VM to another
     syntax: az monitor clone --source-resource /subscriptions/{subscriptionID}/resourceGroups/Space1999/providers/Microsoft.Compute/virtualMachines/vm1 --target-resource /subscriptions/{subscriptionID}/resourceGroups/Space1999/providers/Microsoft.Compute/virtualMachines/vm2
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --source-resource
     summary: Resource ID of the source resource.
@@ -20,23 +26,19 @@ directCommands:
     name: --target-resource
     summary: Resource ID of the target resource.
     description: ''
+  optionalParameters:
   - name: --always-clone
     summary: If this argument is applied, all monitor settings would be cloned instead of expanding its scope.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --types -t
     defaultValue: "['metricsAlert']"
     parameterValueGroup: metricsAlert
     summary: List of types of monitor settings which would be cloned.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/monitor/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/monitor/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
 commands:
 - az_monitor_action_group
 - az_monitor_action_group_create
@@ -201,6 +203,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   updated_at: 6/4/2020 1:53:34 PM

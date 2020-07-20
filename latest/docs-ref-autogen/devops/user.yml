@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_devops_user
 name: az devops user
 summary: Manage users.
@@ -8,7 +8,14 @@ directCommands:
   name: az devops user add
   summary: Add user.
   description: ''
-  parameters:
+  syntax: >-
+    az devops user add --email-id
+                       --license-type {advanced, earlyAdopter, express, professional, stakeholder}
+                       [--detect {false, true}]
+                       [--org]
+                       [--send-email-invite {false, true}]
+                       [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --email-id
     summary: Email ID of the user.
@@ -18,6 +25,7 @@ directCommands:
     parameterValueGroup: advanced, earlyAdopter, express, professional, stakeholder
     summary: License type for the user.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -36,7 +44,13 @@ directCommands:
   name: az devops user list
   summary: List users in an organization [except for users which are added via AAD groups].
   description: ''
-  parameters:
+  syntax: >-
+    az devops user list [--detect {false, true}]
+                        [--org]
+                        [--skip]
+                        [--subscription]
+                        [--top]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -47,22 +61,29 @@ directCommands:
   - name: --skip
     summary: 'Offset: Number of records to skip.'
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --top
     defaultValue: "100"
     summary: Maximum number of users to return. Max value is 10000.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 - uid: az_devops_user_remove
   name: az devops user remove
   summary: Remove user from an organization.
   description: ''
-  parameters:
+  syntax: >-
+    az devops user remove --user
+                          [--detect {false, true}]
+                          [--org]
+                          [--subscription]
+                          [--yes]
+  requiredParameters:
   - isRequired: true
     name: --user
     summary: Email ID or ID of the user.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -70,21 +91,27 @@ directCommands:
   - name: --org --organization
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href="https://dev.azure.com/MyOrganizationName/">https://dev.azure.com/MyOrganizationName/</a>.'
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
     description: ''
 - uid: az_devops_user_show
   name: az devops user show
   summary: Show user details.
   description: ''
-  parameters:
+  syntax: >-
+    az devops user show --user
+                        [--detect {false, true}]
+                        [--org]
+                        [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --user
     summary: Email ID or ID of the user.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -99,7 +126,13 @@ directCommands:
   name: az devops user update
   summary: Update license type for a user.
   description: ''
-  parameters:
+  syntax: >-
+    az devops user update --license-type {advanced, earlyAdopter, express, professional, stakeholder}
+                          --user
+                          [--detect {false, true}]
+                          [--org]
+                          [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --license-type
     parameterValueGroup: advanced, earlyAdopter, express, professional, stakeholder
@@ -109,6 +142,7 @@ directCommands:
     name: --user
     summary: Email ID or ID of the user.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

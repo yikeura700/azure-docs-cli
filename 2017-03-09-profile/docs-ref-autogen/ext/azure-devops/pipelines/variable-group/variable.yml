@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_pipelines_variable_group_variable
 name: az pipelines variable-group variable
 summary: Manage variables in a variable group.
@@ -8,7 +8,15 @@ directCommands:
   name: az pipelines variable-group variable create
   summary: Add a variable to a variable group.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group variable create --group-id
+                                                --name
+                                                [--detect {false, true}]
+                                                [--org]
+                                                [--project]
+                                                [--secret {false, true}]
+                                                [--value]
+  requiredParameters:
   - isRequired: true
     name: --group-id --id
     summary: Id of the variable group.
@@ -17,6 +25,7 @@ directCommands:
     name: --name
     summary: Name of the variable.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -38,7 +47,14 @@ directCommands:
   name: az pipelines variable-group variable delete
   summary: Delete a variable from variable group.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group variable delete --group-id
+                                                --name
+                                                [--detect {false, true}]
+                                                [--org]
+                                                [--project]
+                                                [--yes]
+  requiredParameters:
   - isRequired: true
     name: --group-id --id
     summary: Id of the variable group.
@@ -47,6 +63,7 @@ directCommands:
     name: --name
     summary: Name of the variable.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -64,11 +81,17 @@ directCommands:
   name: az pipelines variable-group variable list
   summary: List the variables in a variable group.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group variable list --group-id
+                                              [--detect {false, true}]
+                                              [--org]
+                                              [--project]
+  requiredParameters:
   - isRequired: true
     name: --group-id --id
     summary: Id of the variable group.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -83,7 +106,17 @@ directCommands:
   name: az pipelines variable-group variable update
   summary: Update a variable in a variable group.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines variable-group variable update --group-id
+                                                --name
+                                                [--detect {false, true}]
+                                                [--new-name]
+                                                [--org]
+                                                [--project]
+                                                [--prompt-value {false, true}]
+                                                [--secret {false, true}]
+                                                [--value]
+  requiredParameters:
   - isRequired: true
     name: --group-id --id
     summary: Id of the variable group.
@@ -92,6 +125,7 @@ directCommands:
     name: --name
     summary: Name of the variable.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

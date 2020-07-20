@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_db-up_az_sql
 name: az sql
 summary: Manage Azure SQL Databases and Data Warehouses.
@@ -8,12 +8,16 @@ directCommands:
   name: az sql down
   summary: Delete the SQL server and its cached information.
   description: ''
+  syntax: >-
+    az sql down [--delete-group]
+                [--no-wait]
+                [--yes]
   examples:
   - summary: Delete the server and the cached data, aside from the resource group.
     syntax: az sql down
   - summary: Delete the resource group and the full cache.
     syntax: az sql down --delete-group
-  parameters:
+  optionalParameters:
   - name: --delete-group
     summary: Delete the resource group.
     description: ''
@@ -27,14 +31,33 @@ directCommands:
   name: az sql up
   summary: Set up an Azure Database for SQL server and configurations.
   description: ''
+  syntax: >-
+    az sql up [--admin-password]
+              [--admin-user]
+              [--database-name]
+              [--generate-password]
+              [--location]
+              [--resource-group]
+              [--server-name]
+              [--tags]
+              [--version]
   examples:
   - summary: Ensure that a Azure Database for SQL server is up and running and configured for immediate use.
     syntax: az sql up
   - summary: To override default names, provide parameters indicating desired values/existing resources.
     syntax: az sql up -g MyResourceGroup -s MyServer -d MyDatabase -u MyUsername -p MyPassword
-  parameters:
+  optionalParameters:
+  - name: --admin-password -p
+    summary: The login password of the administrator.
+    description: ''
+  - name: --admin-user -u
+    summary: The login username of the administrator.
+    description: ''
   - name: --database-name -d
     summary: The name of a database to initialize.
+    description: ''
+  - name: --generate-password
+    summary: Generate a password.
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -51,15 +74,6 @@ directCommands:
   - name: --version
     defaultValue: "12.0"
     summary: Server version.
-    description: ''
-  - name: --admin-password -p
-    summary: The login password of the administrator.
-    description: ''
-  - name: --admin-user -u
-    summary: The login username of the administrator.
-    description: ''
-  - name: --generate-password
-    summary: Generate a password.
     description: ''
 commands:
 - ext_db-up_az_sql_down

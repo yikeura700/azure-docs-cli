@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_dns_zone
 name: az network dns zone
 summary: Manage DNS zones.
@@ -8,6 +8,16 @@ directCommands:
   name: az network dns zone create
   summary: Create a DNS zone.
   description: ''
+  syntax: >-
+    az network dns zone create --name
+                               --resource-group
+                               [--if-none-match]
+                               [--parent-name]
+                               [--registration-vnets]
+                               [--resolution-vnets]
+                               [--subscription]
+                               [--tags]
+                               [--zone-type]
   examples:
   - summary: Create a DNS zone using a fully qualified domain name.
     syntax: az network dns zone create -g MyResourceGroup -n www.mysite.com
@@ -15,7 +25,7 @@ directCommands:
     syntax: az network dns zone create -g MyResourceGroup -n books.mysite.com -p mysite.com
   - summary: Create a DNS zone with delegation in the parent in different subscription
     syntax: az network dns zone create -g MyResourceGroup -n books.mysite.com -p "/subscriptions/**67e2/resourceGroups/OtherRg/providers/Microsoft.Network/dnszones/mysite.com"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the zone.
@@ -24,18 +34,12 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --if-none-match
     summary: Only create a DNS zone if one doesn't exist that matches the given name.
     description: ''
   - name: --parent-name -p
     summary: Specify if parent zone exists for this zone and delegation for the child zone in the parent is to be added.
-    description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
-  - name: --zone-type
-    defaultValue: Public
-    summary: Type of DNS zone to create.
     description: ''
   - name: --registration-vnets
     summary: 'Space-separated names or IDs of virtual networks that register hostnames in this DNS zone. Number of private DNS zones with virtual network auto-registration enabled is 1. If you need to increase this limit, please contact Azure Support: <a href="https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits">https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits</a>.'
@@ -46,20 +50,28 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
+  - name: --zone-type
+    defaultValue: Public
+    summary: Type of DNS zone to create.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_dns_zone_delete
   name: az network dns zone delete
   summary: Delete a DNS zone and all associated records.
   description: ''
+  syntax: >-
+    az network dns zone delete --name
+                               --resource-group
+                               [--if-match]
+                               [--subscription]
+                               [--yes]
   examples:
   - summary: Delete a DNS zone using a fully qualified domain name.
     syntax: az network dns zone delete -g MyResourceGroup -n www.mysite.com
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the zone.
@@ -68,29 +80,30 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --if-match
     summary: The etag of the DNS zone. Omit this value to always delete the current zone. Specify the last-seen etag value to prevent accidentally deleting any concurrent changes.
-    description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_dns_zone_export
   name: az network dns zone export
   summary: Export a DNS zone as a DNS zone file.
   description: ''
+  syntax: >-
+    az network dns zone export --name
+                               --resource-group
+                               [--file-name]
+                               [--subscription]
   examples:
   - summary: Export a DNS zone as a DNS zone file.
     syntax: az network dns zone export -g MyResourceGroup -n www.mysite.com -f mysite_com_zone.txt
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the zone.
@@ -99,26 +112,27 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --file-name -f
     summary: Path to the DNS zone file to save.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_dns_zone_import
   name: az network dns zone import
   summary: Create a DNS zone using a DNS zone file.
   description: ''
+  syntax: >-
+    az network dns zone import --file-name
+                               --name
+                               --resource-group
+                               [--subscription]
   examples:
   - summary: Import a local zone file into a DNS zone resource.
     syntax: az network dns zone import -g MyResourceGroup -n MyZone -f /path/to/zone/file
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --file-name -f
     summary: Path to the DNS zone file to import.
@@ -131,43 +145,41 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_dns_zone_list
   name: az network dns zone list
   summary: List DNS zones.
   description: ''
+  syntax: >-
+    az network dns zone list [--resource-group]
+                             [--subscription]
   examples:
   - summary: List DNS zones in a resource group.
     syntax: az network dns zone list -g MyResourceGroup
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_dns_zone_show
   name: az network dns zone show
   summary: Get a DNS zone parameters. Does not show DNS records within the zone.
   description: ''
+  syntax: >-
+    az network dns zone show --name
+                             --resource-group
+                             [--subscription]
   examples:
   - summary: List DNS zones in a resource group.
     syntax: az network dns zone show -g MyResourceGroup -n www.mysite.com
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the zone.
@@ -176,25 +188,34 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_dns_zone_update
   name: az network dns zone update
   summary: Update a DNS zone properties. Does not modify DNS records within the zone.
   description: ''
+  syntax: >-
+    az network dns zone update --name
+                               --resource-group
+                               [--add]
+                               [--force-string]
+                               [--if-match]
+                               [--registration-vnets]
+                               [--remove]
+                               [--resolution-vnets]
+                               [--set]
+                               [--subscription]
+                               [--tags]
+                               [--zone-type]
   examples:
   - summary: Update a DNS zone properties to change the user-defined value of a previously set tag.
     syntax: az network dns zone update -g MyResourceGroup -n www.mysite.com --tags CostCenter=Marketing
   - summary: Update a DNS zone properties (autogenerated)
     syntax: az network dns zone update --name www.mysite.com --remove tags.no_80 --resource-group MyResourceGroup
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the zone.
@@ -203,29 +224,24 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --if-match
-    summary: Update only if the resource with the same ETAG exists.
-    description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
-  - name: --zone-type
-    summary: Type of DNS zone to create.
-    description: ''
-  - name: --registration-vnets
-    summary: 'Space-separated names or IDs of virtual networks that register hostnames in this DNS zone. Number of private DNS zones with virtual network auto-registration enabled is 1. If you need to increase this limit, please contact Azure Support: <a href="https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits">https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits</a>.'
-    description: ''
-  - name: --resolution-vnets
-    summary: Space-separated names or IDs of virtual networks that resolve records in this DNS zone.
-    description: ''
+  optionalParameters:
   - name: --add
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --force-string
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
+  - name: --if-match
+    summary: Update only if the resource with the same ETAG exists.
+    description: ''
+  - name: --registration-vnets
+    summary: 'Space-separated names or IDs of virtual networks that register hostnames in this DNS zone. Number of private DNS zones with virtual network auto-registration enabled is 1. If you need to increase this limit, please contact Azure Support: <a href="https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits">https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits</a>.'
+    description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
+    description: ''
+  - name: --resolution-vnets
+    summary: Space-separated names or IDs of virtual networks that resolve records in this DNS zone.
     description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
@@ -233,12 +249,13 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
+  - name: --zone-type
+    summary: Type of DNS zone to create.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_dns_zone_create
 - az_network_dns_zone_delete
@@ -263,6 +280,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

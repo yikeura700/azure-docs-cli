@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_front-door_az_network_front_door_waf_policy_managed_rules_exclusion
 name: az network front-door waf-policy managed-rules exclusion
 summary: View and alter exclusions on a managed rule set, rule group, or rule within a managed rule set.
@@ -8,7 +8,16 @@ directCommands:
   name: az network front-door waf-policy managed-rules exclusion add
   summary: Add an exclusion on a managed rule set, rule group, or rule within a managed rule set.
   description: Prevents the rule set, rule group, or rule from being applied to the content of the specified variable. Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
-  parameters:
+  syntax: >-
+    az network front-door waf-policy managed-rules exclusion add --match-variable
+                                                                 --operator
+                                                                 --policy-name
+                                                                 --resource-group
+                                                                 --type
+                                                                 --value
+                                                                 [--rule-group-id]
+                                                                 [--rule-id]
+  requiredParameters:
   - isRequired: true
     name: --match-variable
     summary: Which kind of variable's content will be ignored, e.g. RequestHeaderNames, RequestCookieNames, QueryStringArgNames, RequestBodyPostArgNames.
@@ -33,6 +42,7 @@ directCommands:
     name: --value
     summary: Values to match the variable name against.
     description: ''
+  optionalParameters:
   - name: --rule-group-id
     summary: ID of the rule group containing the rule to exclusion.
     description: ''
@@ -43,7 +53,13 @@ directCommands:
   name: az network front-door waf-policy managed-rules exclusion list
   summary: List the exclusions on managed rule set, rule group, or rule within a managed rule set.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door waf-policy managed-rules exclusion list --policy-name
+                                                                  --resource-group
+                                                                  --type
+                                                                  [--rule-group-id]
+                                                                  [--rule-id]
+  requiredParameters:
   - isRequired: true
     name: --policy-name
     summary: Name of the WAF policy.
@@ -56,6 +72,7 @@ directCommands:
     name: --type
     summary: ID of the ruleset with the exclusions to list.
     description: ''
+  optionalParameters:
   - name: --rule-group-id
     summary: ID of the rule group containing the exclusions to list.
     description: ''
@@ -66,7 +83,16 @@ directCommands:
   name: az network front-door waf-policy managed-rules exclusion remove
   summary: Remove an exclusion on a managed rule set, rule group, or rule within a managed rule set.
   description: After this command, the standard behavior for the rule within the managed rule set will apply. Use 'az network front-door waf-policy managed-rule-definition list' to see the available rules.
-  parameters:
+  syntax: >-
+    az network front-door waf-policy managed-rules exclusion remove --match-variable
+                                                                    --operator
+                                                                    --policy-name
+                                                                    --resource-group
+                                                                    --type
+                                                                    --value
+                                                                    [--rule-group-id]
+                                                                    [--rule-id]
+  requiredParameters:
   - isRequired: true
     name: --match-variable
     summary: Which kind of variable's content will be ignored, e.g. RequestHeaderNames, RequestCookieNames, QueryStringArgNames, RequestBodyPostArgNames.
@@ -91,6 +117,7 @@ directCommands:
     name: --value
     summary: Values to match the variable name against.
     description: ''
+  optionalParameters:
   - name: --rule-group-id
     summary: ID of the rule group containing the exclusion to remove.
     description: ''

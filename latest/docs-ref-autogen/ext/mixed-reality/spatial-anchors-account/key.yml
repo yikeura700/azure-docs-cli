@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_mixed-reality_az_spatial_anchors_account_key
 name: az spatial-anchors-account key
 summary: Manage developer keys of a Spatial Anchors Account.
@@ -8,12 +8,16 @@ directCommands:
   name: az spatial-anchors-account key renew
   summary: Renew one of the keys of a Spatial Anchors Account.
   description: ''
+  syntax: >-
+    az spatial-anchors-account key renew --key {primary, secondary}
+                                         --name
+                                         --resource-group
   examples:
   - summary: Renew primary key of a Spatial Anchors Account.
     syntax: az spatial-anchors-account key renew -g example -n example -k primary
   - summary: Renew secondary key of a Spatial Anchors Account.
     syntax: az spatial-anchors-account key renew -g example -n example -k secondary
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --key -k
     parameterValueGroup: primary, secondary
@@ -31,10 +35,13 @@ directCommands:
   name: az spatial-anchors-account key show
   summary: Show keys of a Spatial Anchors Account.
   description: ''
+  syntax: >-
+    az spatial-anchors-account key show --name
+                                        --resource-group
   examples:
   - summary: Show primary key and secondary key of a Spatial Anchors Account.
     syntax: az spatial-anchors-account key show -g example -n example
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the Spatial Anchors Account.

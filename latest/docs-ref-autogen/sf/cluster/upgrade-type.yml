@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_sf_cluster_upgrade_type
 name: az sf cluster upgrade-type
 summary: Manage the upgrade type of a cluster.
@@ -8,10 +8,16 @@ directCommands:
   name: az sf cluster upgrade-type set
   summary: Change the  upgrade type for a cluster.
   description: ''
+  syntax: >-
+    az sf cluster upgrade-type set --cluster-name
+                                   --resource-group
+                                   --upgrade-mode {automatic, manual}
+                                   [--subscription]
+                                   [--version]
   examples:
   - summary: Set a cluster to use the 'Automatic' upgrade mode.
     syntax: az sf cluster upgrade-type set -g group-name -c cluster1 --upgrade-mode Automatic
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name -c
     summary: Specify the name of the cluster, if not given it will be same as resource group name.
@@ -25,11 +31,12 @@ directCommands:
     parameterValueGroup: automatic, manual
     summary: Cluster upgrade mode.
     description: ''
-  - name: --version
-    summary: Cluster code version.
-    description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --version
+    summary: Cluster code version.
     description: ''
 commands:
 - az_sf_cluster_upgrade_type_set

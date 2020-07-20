@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-iot_az_iot_pnp_interface
 name: az iot pnp interface
 summary: Manage interfaces in an IoT Plug and Play model repository.
@@ -8,14 +8,20 @@ directCommands:
   name: az iot pnp interface create
   summary: Create an interface in the company repository.
   description: ''
+  syntax: >-
+    az iot pnp interface create --def
+                                [--endpoint]
+                                [--login]
+                                [--repo-id]
   examples:
   - summary: Create an interface in the company repository.
     syntax: az iot pnp interface create --def {plug_and_play_interface_file_path} -r {pnp_repository}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --def --definition
     summary: IoT Plug and Play interface definition written in PPDL (JSON-LD). Can be directly input or a file path where the content is extracted.
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -30,14 +36,20 @@ directCommands:
   name: az iot pnp interface delete
   summary: Delete an interface in the company repository.
   description: ''
+  syntax: >-
+    az iot pnp interface delete --interface
+                                [--endpoint]
+                                [--login]
+                                [--repo-id]
   examples:
   - summary: Delete an interface in the company repository.
     syntax: az iot pnp interface delete -r {pnp_repository} --interface {plug_and_play_interface_id}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --interface -i
     summary: 'Target interface urn-id. Example: <a href="urn:example:interfaces:MXChip:1">urn:example:interfaces:MXChip:1</a>.'
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -52,12 +64,18 @@ directCommands:
   name: az iot pnp interface list
   summary: List all interfaces.
   description: ''
+  syntax: >-
+    az iot pnp interface list [--endpoint]
+                              [--login]
+                              [--repo-id]
+                              [--search]
+                              [--top]
   examples:
   - summary: List all company repository's interfaces.
     syntax: az iot pnp interface list -r {pnp_repository}
   - summary: List all public interfaces.
     syntax: az iot pnp interface list
-  parameters:
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -79,14 +97,20 @@ directCommands:
   name: az iot pnp interface publish
   summary: Publish an interface to public repository.
   description: ''
+  syntax: >-
+    az iot pnp interface publish --interface
+                                 [--endpoint]
+                                 [--login]
+                                 [--repo-id]
   examples:
   - summary: Publish an interface to public repository.
     syntax: az iot pnp interface publish -r {pnp_repository} --interface {plug_and_play_interface_id}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --interface -i
     summary: 'Target interface urn-id. Example: <a href="urn:example:interfaces:MXChip:1">urn:example:interfaces:MXChip:1</a>.'
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -101,16 +125,22 @@ directCommands:
   name: az iot pnp interface show
   summary: Get the details of an interface.
   description: ''
+  syntax: >-
+    az iot pnp interface show --interface
+                              [--endpoint]
+                              [--login]
+                              [--repo-id]
   examples:
   - summary: Get the details of a company repository interface.
     syntax: az iot pnp interface show -r {pnp_repository} --interface {plug_and_play_interface_id}
   - summary: Get the details of public interface.
     syntax: az iot pnp interface show --interface {plug_and_play_interface_id}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --interface -i
     summary: 'Target interface urn-id. Example: <a href="urn:example:interfaces:MXChip:1">urn:example:interfaces:MXChip:1</a>.'
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -125,14 +155,20 @@ directCommands:
   name: az iot pnp interface update
   summary: Update an interface in the company repository.
   description: ''
+  syntax: >-
+    az iot pnp interface update --def
+                                [--endpoint]
+                                [--login]
+                                [--repo-id]
   examples:
   - summary: Update an interface in the company repository.
     syntax: az iot pnp interface update --def {updated_plug_and_play_interface_file_path} -r {pnp_repository}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --def --definition
     summary: IoT Plug and Play interface definition written in PPDL (JSON-LD). Can be directly input or a file path where the content is extracted.
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.

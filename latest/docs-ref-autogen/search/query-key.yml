@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_search_query_key
 name: az search query-key
 summary: Manage Azure Search query keys.
@@ -8,7 +8,12 @@ directCommands:
   name: az search query-key create
   summary: Generates a new query key for the specified Search service.
   description: You can create up to 50 query keys per service.
-  parameters:
+  syntax: >-
+    az search query-key create --name
+                               --resource-group
+                               --service-name
+                               [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the query key.
@@ -21,20 +26,21 @@ directCommands:
     name: --service-name
     summary: The name of the search service.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/search/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/search/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
 - uid: az_search_query_key_delete
   name: az search query-key delete
   summary: Deletes the specified query key.
   description: Unlike admin keys, query keys are not regenerated. The process for regenerating a query key is to delete and then recreate it.
-  parameters:
+  syntax: >-
+    az search query-key delete --key-value
+                               --resource-group
+                               --service-name
+                               [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --key-value
     summary: The value of the query key.
@@ -47,20 +53,20 @@ directCommands:
     name: --service-name
     summary: The name of the search service.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/search/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/search/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
 - uid: az_search_query_key_list
   name: az search query-key list
   summary: Returns the list of query API keys for the given Azure Search service.
   description: ''
-  parameters:
+  syntax: >-
+    az search query-key list --resource-group
+                             --service-name
+                             [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -69,15 +75,11 @@ directCommands:
     name: --service-name
     summary: The name of the search service.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/search/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/search/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
 commands:
 - az_search_query_key_create
 - az_search_query_key_delete
@@ -98,6 +100,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/763d0a0d5187467b9584172f2c14d8aec8c23579/src/azure-cli/azure/cli/command_modules/search/_help.py
   updated_at: 9/16/2019 10:20:26 AM

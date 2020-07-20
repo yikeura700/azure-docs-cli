@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_mesh_az_mesh_generate
 name: az mesh generate
 summary: Generate Service Fabric Mesh deployment template.
@@ -8,6 +8,9 @@ directCommands:
   name: az mesh generate armtemplate
   summary: Generate a Service Fabric Mesh ARM deployment template from input yaml.
   description: ''
+  syntax: >-
+    az mesh generate armtemplate --input-yaml-files
+                                 [--parameters]
   examples:
   - summary: Generate a template file for deployment.
     syntax: az mesh generate armtemplate --input-yaml-files ./app.yaml,./network.yaml
@@ -17,11 +20,12 @@ directCommands:
     syntax: az mesh generate armtemplate --input-yaml-files ./app.yaml,./network.yaml --parameters "params.json"
   - summary: Generate a template file for deployment with parameters passed directly as a json object.
     syntax: "az mesh generate armtemplate --input-yaml-files ./app.yaml,./network.yaml --parameters \"{ 'location' : {'value' : 'eastus'}, 'myparam' : {'value' : 'myvalue'} }\""
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --input-yaml-files
     summary: List of comma seperated yaml files or a directory which contains all the yaml files.
     description: ''
+  optionalParameters:
   - name: --parameters
     summary: Parameters in yaml file as key-value pairs or as json object or as json arm parameter file to supplement parameters of the deployment template.
     description: ''

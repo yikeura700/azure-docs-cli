@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_pipelines_runs_tag
 name: az pipelines runs tag
 summary: Manage pipeline run tags.
@@ -8,7 +8,13 @@ directCommands:
   name: az pipelines runs tag add
   summary: Add tag(s) for a pipeline run.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines runs tag add --run-id
+                              --tags
+                              [--detect {false, true}]
+                              [--org]
+                              [--project]
+  requiredParameters:
   - isRequired: true
     name: --run-id
     summary: ID of the pipeline run.
@@ -17,6 +23,7 @@ directCommands:
     name: --tags
     summary: Tag(s) to be added to the pipeline run. [Comma seperated values].
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -31,7 +38,13 @@ directCommands:
   name: az pipelines runs tag delete
   summary: Delete a pipeline run tag.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines runs tag delete --run-id
+                                 --tag
+                                 [--detect {false, true}]
+                                 [--org]
+                                 [--project]
+  requiredParameters:
   - isRequired: true
     name: --run-id
     summary: ID of the pipeline run.
@@ -40,6 +53,7 @@ directCommands:
     name: --tag
     summary: Tag to be deleted from the pipeline run.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -54,11 +68,17 @@ directCommands:
   name: az pipelines runs tag list
   summary: Get tags for a pipeline run.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines runs tag list --run-id
+                               [--detect {false, true}]
+                               [--org]
+                               [--project]
+  requiredParameters:
   - isRequired: true
     name: --run-id
     summary: ID of the  pipeline run.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

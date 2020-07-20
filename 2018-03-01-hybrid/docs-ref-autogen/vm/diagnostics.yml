@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_vm_diagnostics
 name: az vm diagnostics
 summary: Configure the Azure Virtual Machine diagnostics extension.
@@ -8,6 +8,9 @@ directCommands:
   name: az vm diagnostics get-default-config
   summary: Get the default configuration settings for a VM.
   description: ''
+  syntax: >-
+    az vm diagnostics get-default-config [--is-windows-os]
+                                         [--subscription]
   examples:
   - summary: Get the default diagnostics for a Linux VM and override the storage account name and the VM resource ID.
     syntax: >-
@@ -16,23 +19,27 @@ directCommands:
           | sed "s#__VM_OR_VMSS_RESOURCE_ID__#MyVmResourceId#g"
   - summary: Get the default diagnostics for a Windows VM.
     syntax: az vm diagnostics get-default-config --is-windows-os
-  parameters:
+  optionalParameters:
   - name: --is-windows-os
     summary: For Windows VMs.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vm_diagnostics_set
   name: az vm diagnostics set
   summary: Configure the Azure VM diagnostics extension.
   description: ''
+  syntax: >-
+    az vm diagnostics set --settings
+                          [--ids]
+                          [--no-auto-upgrade {false, true}]
+                          [--protected-settings]
+                          [--resource-group]
+                          [--subscription]
+                          [--version]
+                          [--vm-name]
   examples:
   - summary: Set up default diagnostics on a Linux VM for Azure Portal VM metrics graphs and syslog collection.
     syntax: >-
@@ -103,10 +110,14 @@ directCommands:
         --query [0].value -o tsv)
       protected_settings="{'storageAccountName': '$my_diagnostic_storage_account', \
         'storageAccountKey': '$storage_account_key'}"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --settings
     summary: Json string or a file path, which defines data to be collected.
+    description: ''
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --no-auto-upgrade
     parameterValueGroup: false, true
@@ -115,27 +126,19 @@ directCommands:
   - name: --protected-settings
     summary: Json string or a file path containing private configurations such as storage account keys, etc.
     description: ''
-  - name: --version
-    summary: Version of the diagnostics extension. Will use the latest if not specfied.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
+  - name: --version
+    summary: Version of the diagnostics extension. Will use the latest if not specfied.
+    description: ''
   - name: --vm-name
     summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 commands:
 - az_vm_diagnostics_get_default_config
 - az_vm_diagnostics_set
@@ -155,6 +158,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/f55acfa0a4074843c2a9fd392157a42afe8d2e59/src/azure-cli/azure/cli/command_modules/vm/_help.py
   updated_at: 6/10/2020 7:38:50 AM

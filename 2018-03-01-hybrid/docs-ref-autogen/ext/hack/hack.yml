@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_hack_az_hack
 name: az hack
 summary: Commands to manage resources commonly used for student hacks.
@@ -8,12 +8,18 @@ directCommands:
   name: az hack create
   summary: Create resources commonly used for a student hack, including a website, database, and artificial intelligence.
   description: ''
+  syntax: >-
+    az hack create --location
+                   --name
+                   --runtime {aspnet, jetty, node, php, python, tomcat}
+                   [--ai]
+                   [--database {cosmosdb, mysql, sql}]
   examples:
   - summary: Create website using Python and MySQL
     syntax: az hack create --name samplename --runtime python --location westus2 --database mysql
   - summary: Create website using Node.js, SQL and Cognitive Services key
     syntax: az hack create --name samplename --runtime node --location westus2 --database sql --ai
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -27,6 +33,7 @@ directCommands:
     parameterValueGroup: aspnet, jetty, node, php, python, tomcat
     summary: Runtime.
     description: ''
+  optionalParameters:
   - name: --ai
     summary: Enable Azure Cognitive Services.
     description: ''
@@ -38,10 +45,11 @@ directCommands:
   name: az hack show
   summary: Display settings for created resources, including database name and password, Git url, and website url.
   description: ''
+  syntax: az hack show --name
   examples:
   - summary: Display settings
     syntax: az hack show --name samplename
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the application.

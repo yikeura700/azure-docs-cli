@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_front-door_az_network_front_door_rules_engine_rule_condition
 name: az network front-door rules-engine rule condition
 summary: Manage Rules Engine match conditions for Front Door.
@@ -8,7 +8,18 @@ directCommands:
   name: az network front-door rules-engine rule condition add
   summary: Add a match condition to a Rules Engine rule.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door rules-engine rule condition add --front-door-name
+                                                          --name
+                                                          --resource-group
+                                                          --rules-engine-name
+                                                          [--match-values]
+                                                          [--match-variable {IsMobile, PostArgs, QueryString, RemoteAddr, RequestBody, RequestFilename, RequestFilenameExtension, RequestHeader, RequestMethod, RequestPath, RequestScheme, RequestUri}]
+                                                          [--negate-condition {false, true}]
+                                                          [--operator {Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual}]
+                                                          [--selector]
+                                                          [--transforms {Lowercase, RemoveNulls, Trim, Uppercase, UrlDecode, UrlEncode}]
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -25,6 +36,7 @@ directCommands:
     name: --rules-engine-name -r
     summary: Name of the Rules Engine.
     description: ''
+  optionalParameters:
   - name: --match-values
     summary: Space-separated list of values to match against.
     description: ''
@@ -51,7 +63,12 @@ directCommands:
   name: az network front-door rules-engine rule condition list
   summary: Show all match conditions associated with a Rules Engine rule.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door rules-engine rule condition list --front-door-name
+                                                           --name
+                                                           --resource-group
+                                                           --rules-engine-name
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -72,7 +89,13 @@ directCommands:
   name: az network front-door rules-engine rule condition remove
   summary: Remove a match condition from a Rules Engine rule.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door rules-engine rule condition remove --front-door-name
+                                                             --index
+                                                             --name
+                                                             --resource-group
+                                                             --rules-engine-name
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.

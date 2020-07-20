@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_import-export_az_import_export_bit_locker_key
 name: az import-export bit-locker-key
 summary: Import-export bit-locker-key.
@@ -8,10 +8,13 @@ directCommands:
   name: az import-export bit-locker-key list
   summary: Returns the BitLocker Keys for all drives in the specified job.
   description: ''
+  syntax: >-
+    az import-export bit-locker-key list --job-name
+                                         --resource-group
   examples:
   - summary: List BitLocker Keys for drives in a job
     syntax: az import-export bit-locker-key list --resource-group "myResourceGroup" --job-name "myJob"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --job-name
     summary: The name of the import/export job.

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_dla_catalog_schema
 name: az dla catalog schema
 summary: Manage Data Lake Analytics catalog schemas.
@@ -8,16 +8,34 @@ directCommands:
   name: az dla catalog schema list
   summary: Retrieves the list of schemas from the Data Lake Analytics catalog.
   description: ''
-  parameters:
+  syntax: >-
+    az dla catalog schema list --database-name
+                               [--account]
+                               [--count]
+                               [--filter]
+                               [--ids]
+                               [--orderby]
+                               [--select]
+                               [--skip]
+                               [--subscription]
+                               [--top]
+  requiredParameters:
   - isRequired: true
     name: --database-name
     summary: The name of the database containing the schema.
+    description: ''
+  optionalParameters:
+  - name: --account -n
+    summary: Name of the Data Lake Analytics account.
     description: ''
   - name: --count
     summary: The Boolean value of true or false to request a count of the matching resources included with the resources in the response, e.g. Categories?$count=true.
     description: ''
   - name: --filter
     summary: OData filter. Optional.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --orderby
     summary: OrderBy clause. One or more comma-separated expressions with an optional "asc" (the default) or "desc" depending on the order you'd like the values sorted, e.g. Categories?$orderby=CategoryName desc. Optional.
@@ -28,29 +46,24 @@ directCommands:
   - name: --skip
     summary: The number of items to skip over before returning elements.
     description: ''
-  - name: --top
-    summary: Maximum number of items to return.
-    description: ''
-  - name: --account -n
-    summary: Name of the Data Lake Analytics account.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --top
+    summary: Maximum number of items to return.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_catalog_schema_show
   name: az dla catalog schema show
   summary: Retrieves the specified schema from the Data Lake Analytics catalog.
   description: ''
-  parameters:
+  syntax: >-
+    az dla catalog schema show --database-name
+                               --schema-name
+                               [--account]
+                               [--ids]
+                               [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --database-name
     summary: The name of the database containing the schema.
@@ -59,6 +72,7 @@ directCommands:
     name: --schema-name
     summary: The name of the schema.
     description: ''
+  optionalParameters:
   - name: --account -n
     summary: Name of the Data Lake Analytics account.
     description: ''
@@ -68,12 +82,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 commands:
 - az_dla_catalog_schema_list
 - az_dla_catalog_schema_show
@@ -93,6 +102,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/dc914cb8b85cfb556230244c8bba6bdedcb5b741/src/azure-cli/azure/cli/command_modules/dla/_help.py
   updated_at: 9/16/2019 10:35:08 AM

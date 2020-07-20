@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_internet-analyzer_az_internet_analyzer
 name: az internet-analyzer
 summary: Commands to manage internet analyzer.
@@ -8,7 +8,14 @@ directCommands:
   name: az internet-analyzer show-scorecard
   summary: Show latency scorecard for a test.
   description: ''
-  parameters:
+  syntax: >-
+    az internet-analyzer show-scorecard --aggregation-interval
+                                        --profile-name
+                                        --resource-group
+                                        --test-name
+                                        [--country]
+                                        [--end-date-time-utc]
+  requiredParameters:
   - isRequired: true
     name: --aggregation-interval
     summary: The aggregation interval of the Latency Scorecard.
@@ -25,6 +32,7 @@ directCommands:
     name: --test-name
     summary: The name of the Internet Analyzer test.
     description: ''
+  optionalParameters:
   - name: --country
     summary: The country associated with the Latency Scorecard. Values are country ISO codes as specified here - <a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a>.
     description: ''
@@ -35,7 +43,17 @@ directCommands:
   name: az internet-analyzer show-timeseries
   summary: Show timeseries for a test.
   description: ''
-  parameters:
+  syntax: >-
+    az internet-analyzer show-timeseries --aggregation-interval
+                                         --end-date-time-utc
+                                         --endpoint
+                                         --profile-name
+                                         --resource-group
+                                         --start-date-time-utc
+                                         --test-name
+                                         --timeseries-type
+                                         [--country]
+  requiredParameters:
   - isRequired: true
     name: --aggregation-interval
     summary: The aggregation interval of the Timeseries.
@@ -68,6 +86,7 @@ directCommands:
     name: --timeseries-type
     summary: The type of Timeseries.
     description: ''
+  optionalParameters:
   - name: --country
     summary: The country associated with the Latency Scorecard. Values are country ISO codes as specified here - <a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a>.
     description: ''

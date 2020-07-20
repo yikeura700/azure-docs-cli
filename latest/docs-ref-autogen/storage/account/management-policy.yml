@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_storage_account_management_policy
 name: az storage account management-policy
 summary: Manage storage account management policies.
@@ -8,7 +8,12 @@ directCommands:
   name: az storage account management-policy create
   summary: Creates the data policy rules associated with the specified storage account.
   description: ''
-  parameters:
+  syntax: >-
+    az storage account management-policy create --account-name
+                                                --policy
+                                                --resource-group
+                                                [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the storage account within the specified resource group.
@@ -21,20 +26,20 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_account_management_policy_delete
   name: az storage account management-policy delete
   summary: Deletes the managementpolicy associated with the specified storage account.
   description: ''
-  parameters:
+  syntax: >-
+    az storage account management-policy delete --account-name
+                                                --resource-group
+                                                [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
@@ -43,20 +48,20 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_account_management_policy_show
   name: az storage account management-policy show
   summary: Gets the managementpolicy associated with the specified storage account.
   description: ''
-  parameters:
+  syntax: >-
+    az storage account management-policy show --account-name
+                                              --resource-group
+                                              [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
@@ -65,20 +70,24 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_account_management_policy_update
   name: az storage account management-policy update
   summary: Updates the data policy rules associated with the specified storage account.
   description: ''
-  parameters:
+  syntax: >-
+    az storage account management-policy update --account-name
+                                                --resource-group
+                                                [--add]
+                                                [--force-string]
+                                                [--remove]
+                                                [--set]
+                                                [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the storage account within the specified resource group.
@@ -87,6 +96,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --add
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
@@ -102,12 +112,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 commands:
 - az_storage_account_management_policy_create
 - az_storage_account_management_policy_delete
@@ -129,6 +134,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
   updated_at: 6/4/2020 1:53:34 PM

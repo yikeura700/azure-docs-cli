@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-ml_az_ml_workspace
 name: az ml workspace
 summary: Workspace subgroup commands.
@@ -8,11 +8,33 @@ directCommands:
   name: az ml workspace create
   summary: Create a workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml workspace create --workspace-name
+                           [--application-insights]
+                           [--cmk-keyvault]
+                           [--container-registry]
+                           [--exist-ok]
+                           [--friendly-name]
+                           [--hbi-workspace]
+                           [--keyvault]
+                           [--location]
+                           [--pe-auto-approval]
+                           [--pe-name]
+                           [--pe-resource-group]
+                           [--pe-subnet-name]
+                           [--pe-subscription-id]
+                           [--pe-vnet-name]
+                           [--resource-cmk-uri]
+                           [--resource-group]
+                           [--sku]
+                           [--storage-account]
+                           [--yes]
+  requiredParameters:
   - isRequired: true
     name: --workspace-name -w
     summary: Workspace name.
     description: ''
+  optionalParameters:
   - name: --application-insights
     summary: Application Insights to be associated with this workspace.
     description: ''
@@ -76,7 +98,15 @@ directCommands:
   name: az ml workspace delete
   summary: Delete a workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml workspace delete [--all-resources]
+                           [--no-wait]
+                           [--output-metadata-file]
+                           [--path]
+                           [--resource-group]
+                           [--subscription-id]
+                           [--workspace-name]
+  optionalParameters:
   - name: --all-resources
     summary: Deletes resources which this workspace depends on like storage, acr, kv and app insights.
     description: ''
@@ -103,7 +133,8 @@ directCommands:
   name: az ml workspace list
   summary: List workspaces.
   description: ''
-  parameters:
+  syntax: az ml workspace list [--resource-group]
+  optionalParameters:
   - name: --resource-group -g
     summary: Resource group name.
     description: ''
@@ -111,7 +142,15 @@ directCommands:
   name: az ml workspace share
   summary: Share a workspace with another user with a given role.
   description: ''
-  parameters:
+  syntax: >-
+    az ml workspace share --role
+                          --user
+                          [--output-metadata-file]
+                          [--path]
+                          [--resource-group]
+                          [--subscription-id]
+                          [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --role
     summary: Role to assign to this user.
@@ -120,6 +159,7 @@ directCommands:
     name: --user
     summary: User with whom to share this workspace.
     description: ''
+  optionalParameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
     description: ''
@@ -140,7 +180,13 @@ directCommands:
   name: az ml workspace show
   summary: Show a workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml workspace show [--output-metadata-file]
+                         [--path]
+                         [--resource-group]
+                         [--subscription-id]
+                         [--workspace-name]
+  optionalParameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
     description: ''
@@ -161,7 +207,13 @@ directCommands:
   name: az ml workspace sync-keys
   summary: Sync workspace keys  for dependent resources such as storage, acr, and app insights.
   description: ''
-  parameters:
+  syntax: >-
+    az ml workspace sync-keys [--output-metadata-file]
+                              [--path]
+                              [--resource-group]
+                              [--subscription-id]
+                              [--workspace-name]
+  optionalParameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
     description: ''
@@ -182,7 +234,17 @@ directCommands:
   name: az ml workspace update
   summary: Update a workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml workspace update [--description]
+                           [--friendly-name]
+                           [--image-build-compute]
+                           [--output-metadata-file]
+                           [--path]
+                           [--resource-group]
+                           [--subscription-id]
+                           [--tags]
+                           [--workspace-name]
+  optionalParameters:
   - name: --description -d
     summary: Description of this workspace.
     description: ''

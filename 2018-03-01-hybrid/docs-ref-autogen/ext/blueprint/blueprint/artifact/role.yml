@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_blueprint_az_blueprint_artifact_role
 name: az blueprint artifact role
 summary: Commands to manage blueprint role assignment artifact.
@@ -8,6 +8,17 @@ directCommands:
   name: az blueprint artifact role create
   summary: Create blueprint role artifact.
   description: ''
+  syntax: >-
+    az blueprint artifact role create --artifact-name
+                                      --blueprint-name
+                                      --principal-ids
+                                      --role-definition-id
+                                      [--depends-on]
+                                      [--description]
+                                      [--display-name]
+                                      [--management-group]
+                                      [--resource-group-art]
+                                      [--subscription]
   examples:
   - summary: Create a role artifact
     syntax: >-
@@ -18,7 +29,7 @@ directCommands:
       "/providers/Microsoft.Authorization/roleDefinitions/00000000-0000-0000-0000-000000000000" \
 
       --principal-ids "[parameters('[Usergrouporapplicationname]:MyRoleAssignmentName')]"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --artifact-name
     summary: Name of the blueprint artifact.
@@ -35,6 +46,7 @@ directCommands:
     name: --role-definition-id
     summary: The full role definition id. Only built-in roles are supported.
     description: ''
+  optionalParameters:
   - name: --depends-on
     summary: Artifacts which need to be deployed before the specified artifact.
     description: ''
@@ -44,11 +56,11 @@ directCommands:
   - name: --display-name
     summary: DisplayName of this artifact.
     description: ''
-  - name: --resource-group-art
-    summary: Name of the resource group artifact to which the policy will be assigned.
-    description: ''
   - name: --management-group -m
     summary: Use management group for the scope of the blueprint.
+    description: ''
+  - name: --resource-group-art
+    summary: Name of the resource group artifact to which the policy will be assigned.
     description: ''
   - name: --subscription -s
     summary: Use subscription for the scope of the blueprint. If --management-group is not specified, --subscription value or the default subscription will be used as the scope.
@@ -57,13 +69,22 @@ directCommands:
   name: az blueprint artifact role update
   summary: Update blueprint role artifact.
   description: ''
+  syntax: >-
+    az blueprint artifact role update --artifact-name
+                                      --blueprint-name
+                                      [--depends-on]
+                                      [--description]
+                                      [--display-name]
+                                      [--management-group]
+                                      [--resource-group-art]
+                                      [--subscription]
   examples:
   - summary: Update a role artifact
     syntax: >-
       az blueprint artifact role update \
 
       --blueprint-name MyBlueprint --artifact-name MyRole --display-name "My Big Role"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --artifact-name
     summary: Name of the blueprint artifact.
@@ -72,6 +93,7 @@ directCommands:
     name: --blueprint-name
     summary: Name of the blueprint definition.
     description: ''
+  optionalParameters:
   - name: --depends-on
     summary: Artifacts which need to be deployed before the specified artifact.
     description: ''
@@ -81,11 +103,11 @@ directCommands:
   - name: --display-name
     summary: DisplayName of this artifact.
     description: ''
-  - name: --resource-group-art
-    summary: Name of the resource group artifact to which the policy will be assigned.
-    description: ''
   - name: --management-group -m
     summary: Use management group for the scope of the blueprint.
+    description: ''
+  - name: --resource-group-art
+    summary: Name of the resource group artifact to which the policy will be assigned.
     description: ''
   - name: --subscription -s
     summary: Use subscription for the scope of the blueprint. If --management-group is not specified, --subscription value or the default subscription will be used as the scope.

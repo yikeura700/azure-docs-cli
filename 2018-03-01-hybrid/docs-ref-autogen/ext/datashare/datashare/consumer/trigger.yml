@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datashare_az_datashare_consumer_trigger
 name: az datashare consumer trigger
 summary: Commands for consumers to manage datashare consumer triggers.
@@ -8,10 +8,19 @@ directCommands:
   name: az datashare consumer trigger create
   summary: Create a trigger.
   description: ''
+  syntax: >-
+    az datashare consumer trigger create --account-name
+                                         --name
+                                         --recurrence-interval {Day, Hour}
+                                         --resource-group
+                                         --share-subscription-name
+                                         --synchronization-time
+                                         [--kind {ScheduleBased}]
+                                         [--no-wait]
   examples:
   - summary: Create a trigger
     syntax: az datashare consumer trigger create --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --name MyTrigger --recurrence-interval Day --synchronization-time "2020-04-05 10:50:00 +00:00" --kind ScheduleBased
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -19,17 +28,6 @@ directCommands:
   - isRequired: true
     name: --name -n
     summary: The name of the trigger.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - isRequired: true
-    name: --share-subscription-name
-    summary: The name of the share subscription.
-    description: ''
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
     description: ''
   - isRequired: true
     name: --recurrence-interval
@@ -37,22 +35,41 @@ directCommands:
     summary: Synchronization Recurrence Interval.
     description: ''
   - isRequired: true
+    name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - isRequired: true
+    name: --share-subscription-name
+    summary: The name of the share subscription.
+    description: ''
+  - isRequired: true
     name: --synchronization-time
     summary: 'Synchronization time. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).'
     description: ''
+  optionalParameters:
   - name: --kind
     defaultValue: ScheduleBased
     parameterValueGroup: ScheduleBased
     summary: Kind of synchronization.
     description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
 - uid: ext_datashare_az_datashare_consumer_trigger_delete
   name: az datashare consumer trigger delete
   summary: Delete a trigger in a share subscription.
   description: ''
+  syntax: >-
+    az datashare consumer trigger delete --account-name
+                                         --name
+                                         --resource-group
+                                         --share-subscription-name
+                                         [--no-wait]
+                                         [--yes]
   examples:
   - summary: Delete a trigger
     syntax: az datashare consumer trigger delete --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --name MyTrigger
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -69,6 +86,7 @@ directCommands:
     name: --share-subscription-name
     summary: The name of the share subscription.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -79,10 +97,14 @@ directCommands:
   name: az datashare consumer trigger list
   summary: List triggers in a share subscription.
   description: ''
+  syntax: >-
+    az datashare consumer trigger list --account-name
+                                       --resource-group
+                                       --share-subscription-name
   examples:
   - summary: List triggers
     syntax: az datashare consumer trigger list --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -99,10 +121,15 @@ directCommands:
   name: az datashare consumer trigger show
   summary: Show a trigger in a share subscription.
   description: ''
+  syntax: >-
+    az datashare consumer trigger show --account-name
+                                       --name
+                                       --resource-group
+                                       --share-subscription-name
   examples:
   - summary: Show a trigger
     syntax: az datashare consumer trigger show --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --name MyTrigger
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -123,10 +150,22 @@ directCommands:
   name: az datashare consumer trigger wait
   summary: Place the CLI in a waiting state until a condition of the datashare trigger is met.
   description: ''
+  syntax: >-
+    az datashare consumer trigger wait --account-name
+                                       --name
+                                       --resource-group
+                                       --share-subscription-name
+                                       [--created]
+                                       [--custom]
+                                       [--deleted]
+                                       [--exists]
+                                       [--interval]
+                                       [--timeout]
+                                       [--updated]
   examples:
   - summary: Pause executing next line of CLI script until the datashare trigger is successfully provisioned.
     syntax: az datashare consumer trigger wait --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSubscription --name MyTrigger --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -143,6 +182,7 @@ directCommands:
     name: --share-subscription-name
     summary: The name of the shareSubscription.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

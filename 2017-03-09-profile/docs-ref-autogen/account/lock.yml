@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_account_lock
 name: az account lock
 summary: Manage Azure subscription level locks.
@@ -8,10 +8,14 @@ directCommands:
   name: az account lock create
   summary: Create a subscription lock.
   description: ''
+  syntax: >-
+    az account lock create --lock-type {CanNotDelete, ReadOnly}
+                           --name
+                           [--notes]
   examples:
   - summary: Create a read-only subscription level lock.
     syntax: az account lock create --lock-type ReadOnly -n lockName
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --lock-type -t
     parameterValueGroup: CanNotDelete, ReadOnly
@@ -21,80 +25,73 @@ directCommands:
     name: --name -n
     summary: Name of the lock.
     description: ''
+  optionalParameters:
   - name: --notes
     summary: Notes about this lock.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
 - uid: az_account_lock_delete
   name: az account lock delete
   summary: Delete a subscription lock.
   description: ''
+  syntax: >-
+    az account lock delete [--ids]
+                           [--name]
   examples:
   - summary: Delete a subscription lock
     syntax: az account lock delete --name lockName
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.
     description: ''
   - name: --name -n
     summary: Name of the lock.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
 - uid: az_account_lock_list
   name: az account lock list
   summary: List lock information in the subscription.
   description: ''
+  syntax: az account lock list [--filter-string]
   examples:
   - summary: List out all locks on the subscription level
     syntax: az account lock list
-  parameters:
+  optionalParameters:
   - name: --filter-string
     summary: A query filter to use to restrict the results.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
 - uid: az_account_lock_show
   name: az account lock show
   summary: Show the details of a subscription lock.
   description: ''
+  syntax: >-
+    az account lock show [--ids]
+                         [--name]
   examples:
   - summary: Show a subscription level lock
     syntax: az account lock show -n lockname
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.
     description: ''
   - name: --name -n
     summary: Name of the lock.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
 - uid: az_account_lock_update
   name: az account lock update
   summary: Update a subscription lock.
   description: ''
+  syntax: >-
+    az account lock update [--ids]
+                           [--lock-type {CanNotDelete, ReadOnly}]
+                           [--name]
+                           [--notes]
   examples:
   - summary: Update a subscription lock with new notes and type
     syntax: az account lock update --name lockName --notes newNotesHere --lock-type CanNotDelete
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.
     description: ''
@@ -108,12 +105,7 @@ directCommands:
   - name: --notes
     summary: Notes about this lock.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/profile/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
 commands:
 - az_account_lock_create
 - az_account_lock_delete
@@ -136,6 +128,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/10b5e966121d2b7fda114bcbdfad5b6f6aa0aae8/src/azure-cli/azure/cli/command_modules/profile/_help.py
   updated_at: 3/16/2020 9:14:21 AM

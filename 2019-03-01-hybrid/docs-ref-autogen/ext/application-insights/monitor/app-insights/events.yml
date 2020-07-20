@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_application-insights_az_monitor_app_insights_events
 name: az monitor app-insights events
 summary: Retrieve events from an application.
@@ -8,12 +8,20 @@ directCommands:
   name: az monitor app-insights events show
   summary: List events by type or view a single event from an application, specified by type and ID.
   description: ''
+  syntax: >-
+    az monitor app-insights events show --app
+                                        --type
+                                        [--end-time]
+                                        [--event]
+                                        [--offset]
+                                        [--resource-group]
+                                        [--start-time]
   examples:
   - summary: Get an availability result by ID.
     syntax: az monitor app-insights events show --app 578f0e27-12e9-4631-bc02-50b965da2633 --type availabilityResults --event b2cf08df-bf42-4278-8d2c-5b55f85901fe
   - summary: List availability results from the last 24 hours.
     syntax: az monitor app-insights events show --app 578f0e27-12e9-4631-bc02-50b965da2633 --type availabilityResults --offset 24h
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app -a
     summary: GUID, app name, or fully-qualified Azure resource name of Application Insights component. The application GUID may be acquired from the API Access menu item on any Application Insights resource in the Azure portal. If using an application name, please specify resource group.
@@ -22,6 +30,7 @@ directCommands:
     name: --type
     summary: The type of events to retrieve.
     description: ''
+  optionalParameters:
   - name: --end-time
     summary: 'End of time range for current operation. Defaults to the current time. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).'
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_devops_security_permission_namespace
 name: az devops security permission namespace
 summary: Manage security namespaces.
@@ -8,7 +8,11 @@ directCommands:
   name: az devops security permission namespace list
   summary: List all available namespaces for an organization.
   description: ''
-  parameters:
+  syntax: >-
+    az devops security permission namespace list [--detect {false, true}]
+                                                 [--local-only]
+                                                 [--org]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -23,11 +27,16 @@ directCommands:
   name: az devops security permission namespace show
   summary: Show details of permissions available in each namespace.
   description: ''
-  parameters:
+  syntax: >-
+    az devops security permission namespace show --id
+                                                 [--detect {false, true}]
+                                                 [--org]
+  requiredParameters:
   - isRequired: true
     name: --id --namespace-id
     summary: ID of security namespace.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

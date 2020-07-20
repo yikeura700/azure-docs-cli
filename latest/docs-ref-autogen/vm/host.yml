@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_vm_host
 name: az vm host
 summary: Manage Dedicated Hosts for Virtual Machines.
@@ -8,6 +8,17 @@ directCommands:
   name: az vm host create
   summary: Create a dedicated host.
   description: ''
+  syntax: >-
+    az vm host create --host-group
+                      --name
+                      --resource-group
+                      --sku {DSv3-Type1, ESv3-Type1, FSv2-Type2}
+                      [--auto-replace {false, true}]
+                      [--license-type {None, Windows_Server_Hybrid, Windows_Server_Perpetual}]
+                      [--location]
+                      [--platform-fault-domain]
+                      [--subscription]
+                      [--tags]
   examples:
   - summary: Create a dedicated host. Ensure it auto replaces on failure
     syntax: >-
@@ -17,7 +28,7 @@ directCommands:
     syntax: >-
       az vm host create --host-group my-host-group --name my-host --platform-fault-domain 0 \
           --auto-replace false --resource-group my-resource-group --sku ESv3-Type1 --location eastasia
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --host-group
     summary: Name of the Dedicated Host Group.
@@ -35,6 +46,7 @@ directCommands:
     parameterValueGroup: DSv3-Type1, ESv3-Type1, FSv2-Type2
     summary: Sku of the dedicated host.
     description: ''
+  optionalParameters:
   - name: --auto-replace
     parameterValueGroup: false, true
     summary: Replace the host automatically if a failure occurs.
@@ -49,26 +61,25 @@ directCommands:
   - name: --platform-fault-domain -d
     summary: 'Fault domain of the host within a group. Allowed values: 0, 1, 2.'
     description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vm_host_delete
   name: az vm host delete
   summary: Delete a dedicated host.
   description: ''
-  parameters:
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
+  syntax: >-
+    az vm host delete [--host-group]
+                      [--ids]
+                      [--name]
+                      [--resource-group]
+                      [--subscription]
+                      [--yes]
+  optionalParameters:
   - name: --host-group
     summary: Name of the Dedicated Host Group.
     description: ''
@@ -84,22 +95,26 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vm_host_get_instance_view
   name: az vm host get-instance-view
   summary: Get instance information about a dedicated host.
   description: ''
+  syntax: >-
+    az vm host get-instance-view [--host-group]
+                                 [--ids]
+                                 [--name]
+                                 [--resource-group]
+                                 [--subscription]
   examples:
   - summary: Get instance view information of a dedicated host.
     syntax: az vm host get-instance-view --host-group my-host-group --name my-host -g my-rg
   - summary: Get instance views for all dedicated hosts in a host group.
     syntax: az vm host get-instance-view --ids $(az vm host list -g my-rg --host-group my-host-group --query "[].id" -o tsv)
-  parameters:
+  optionalParameters:
   - name: --host-group
     summary: Name of the Dedicated Host Group.
     description: ''
@@ -115,20 +130,19 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vm_host_list
   name: az vm host list
   summary: List dedicated hosts.
   description: ''
+  syntax: >-
+    az vm host list --host-group
+                    --resource-group
+                    [--subscription]
   examples:
   - summary: List dedicated hosts. (autogenerated)
     syntax: az vm host list --host-group my-host-group --resource-group my-rg
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --host-group
     summary: Name of the Dedicated Host Group.
@@ -137,23 +151,25 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vm_host_show
   name: az vm host show
   summary: Get the details of a dedicated host.
   description: ''
+  syntax: >-
+    az vm host show [--host-group]
+                    [--ids]
+                    [--name]
+                    [--resource-group]
+                    [--subscription]
   examples:
   - summary: Get the details of a dedicated host (autogenerated)
     syntax: az vm host show --host-group my-host-group --name MyDedicatedHost --resource-group MyResourceGroup
-  parameters:
+  optionalParameters:
   - name: --host-group
     summary: Name of the Dedicated Host Group.
     description: ''
@@ -169,55 +185,55 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vm_host_update
   name: az vm host update
   summary: Update a dedicated host.
   description: ''
+  syntax: >-
+    az vm host update [--add]
+                      [--force-string]
+                      [--host-group]
+                      [--ids]
+                      [--name]
+                      [--remove]
+                      [--resource-group]
+                      [--set]
+                      [--subscription]
   examples:
   - summary: Update the 'autoReplaceOnFailure' field of a dedicated host.
     syntax: >-
       az vm host update --host-group my-host-group --name my-host \
           --resource-group my-resource-group --set autoReplaceOnFailure=True
-  parameters:
-  - name: --host-group
-    summary: Name of the Dedicated Host Group.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --name -n
-    summary: Name of the Dedicated Host.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
+  optionalParameters:
   - name: --add
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --force-string
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
+  - name: --host-group
+    summary: Name of the Dedicated Host Group.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: Name of the Dedicated Host.
+    description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/vm/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 commands:
 - az_vm_host_create
 - az_vm_host_delete
@@ -247,6 +263,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/f55acfa0a4074843c2a9fd392157a42afe8d2e59/src/azure-cli/azure/cli/command_modules/vm/_help.py
   updated_at: 6/10/2020 7:38:50 AM

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_storage_account_private_endpoint_connection
 name: az storage account private-endpoint-connection
 summary: Manage storage account private endpoint connection.
@@ -8,6 +8,13 @@ directCommands:
   name: az storage account private-endpoint-connection approve
   summary: Approve a private endpoint connection request for storage account.
   description: ''
+  syntax: >-
+    az storage account private-endpoint-connection approve [--account-name]
+                                                           [--description]
+                                                           [--id]
+                                                           [--name]
+                                                           [--resource-group]
+                                                           [--subscription]
   examples:
   - summary: Approve a private endpoint connection request for storage account by ID.
     syntax: az storage account private-endpoint-connection approve --id "/subscriptions/0000-0000-0000-0000/resourceGroups/MyResourceGroup/providers/Microsoft.Storage/storageAccounts/mystorageaccount/privateEndpointConnections/mystorageaccount.b56b5a95-0588-4f8b-b348-15db61590a6c"
@@ -23,7 +30,7 @@ directCommands:
       name = (az storage account show -n mystorageaccount --query "privateEndpointConnections[0].name")
 
       az storage account private-endpoint-connection approve -g myRg --account-name mystorageaccount --name $name
-  parameters:
+  optionalParameters:
   - name: --account-name
     summary: The storage account name.
     description: ''
@@ -42,16 +49,18 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_account_private_endpoint_connection_delete
   name: az storage account private-endpoint-connection delete
   summary: Delete a private endpoint connection request for storage account.
   description: ''
+  syntax: >-
+    az storage account private-endpoint-connection delete [--account-name]
+                                                          [--id]
+                                                          [--name]
+                                                          [--resource-group]
+                                                          [--subscription]
+                                                          [--yes]
   examples:
   - summary: Delete a private endpoint connection request for storage account by ID.
     syntax: az storage account private-endpoint-connection delete --id "/subscriptions/0000-0000-0000-0000/resourceGroups/MyResourceGroup/providers/Microsoft.Storage/storageAccounts/mystorageaccount/privateEndpointConnections/mystorageaccount.b56b5a95-0588-4f8b-b348-15db61590a6c"
@@ -67,7 +76,7 @@ directCommands:
       name = (az storage account show -n mystorageaccount --query "privateEndpointConnections[0].name")
 
       az storage account private-endpoint-connection delete -g myRg --account-name mystorageaccount --name $name
-  parameters:
+  optionalParameters:
   - name: --account-name
     summary: The storage account name.
     description: ''
@@ -80,22 +89,24 @@ directCommands:
   - name: --resource-group -g
     summary: The resource group name of specified storage account.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_account_private_endpoint_connection_reject
   name: az storage account private-endpoint-connection reject
   summary: Reject a private endpoint connection request for storage account.
   description: ''
+  syntax: >-
+    az storage account private-endpoint-connection reject [--account-name]
+                                                          [--description]
+                                                          [--id]
+                                                          [--name]
+                                                          [--resource-group]
+                                                          [--subscription]
   examples:
   - summary: Reject a private endpoint connection request for storage account by ID.
     syntax: az storage account private-endpoint-connection reject --id "/subscriptions/0000-0000-0000-0000/resourceGroups/MyResourceGroup/providers/Microsoft.Storage/storageAccounts/mystorageaccount/privateEndpointConnections/mystorageaccount.b56b5a95-0588-4f8b-b348-15db61590a6c"
@@ -111,7 +122,7 @@ directCommands:
       name = (az storage account show -n mystorageaccount --query "privateEndpointConnections[0].name")
 
       az storage account private-endpoint-connection reject -g myRg --account-name mystorageaccount --name $name
-  parameters:
+  optionalParameters:
   - name: --account-name
     summary: The storage account name.
     description: ''
@@ -130,16 +141,17 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_account_private_endpoint_connection_show
   name: az storage account private-endpoint-connection show
   summary: Show details of a private endpoint connection request for storage account.
   description: ''
+  syntax: >-
+    az storage account private-endpoint-connection show [--account-name]
+                                                        [--id]
+                                                        [--name]
+                                                        [--resource-group]
+                                                        [--subscription]
   examples:
   - summary: Show details of a private endpoint connection request for storage account by ID.
     syntax: az storage account private-endpoint-connection show --id "/subscriptions/0000-0000-0000-0000/resourceGroups/MyResourceGroup/providers/Microsoft.Storage/storageAccounts/mystorageaccount/privateEndpointConnections/mystorageaccount.b56b5a95-0588-4f8b-b348-15db61590a6c"
@@ -155,7 +167,7 @@ directCommands:
       name = (az storage account show -n mystorageaccount --query "privateEndpointConnections[0].name")
 
       az storage account private-endpoint-connection show -g myRg --account-name mystorageaccount --name $name
-  parameters:
+  optionalParameters:
   - name: --account-name
     summary: The storage account name.
     description: ''
@@ -171,12 +183,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/storage/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 commands:
 - az_storage_account_private_endpoint_connection_approve
 - az_storage_account_private_endpoint_connection_delete
@@ -198,6 +205,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
   updated_at: 6/4/2020 1:53:34 PM

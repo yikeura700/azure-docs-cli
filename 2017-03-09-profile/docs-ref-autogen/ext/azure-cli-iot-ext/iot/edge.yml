@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-iot-ext_az_iot_edge
 name: az iot edge
 summary: Manage IoT solutions on the Edge.
@@ -12,10 +12,16 @@ directCommands:
 
 
     Note: Upon execution the command will output the collection of modules applied to the device.
+  syntax: >-
+    az iot edge set-modules --content
+                            --device-id
+                            [--hub-name]
+                            [--login]
+                            [--resource-group]
   examples:
   - summary: Test edge modules while in development by setting modules on a target device.
     syntax: az iot edge set-modules --hub-name {iothub_name} --device-id {device_id} --content ../modules_content.json
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --content -k
     summary: IoT Edge deployment content. Provide file path or raw json.
@@ -24,6 +30,7 @@ directCommands:
     name: --device-id -d
     summary: Target Device.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_virtual-network-tap_az_network_nic_vtap_config
 name: az network nic vtap-config
 summary: Manage virtual network tap configurations.
@@ -8,7 +8,12 @@ directCommands:
   name: az network nic vtap-config create
   summary: Create a virtual network tap configuration.
   description: ''
-  parameters:
+  syntax: >-
+    az network nic vtap-config create --name
+                                      --nic-name
+                                      --resource-group
+                                      --vnet-tap
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the virtual network tap configuration.
@@ -29,7 +34,11 @@ directCommands:
   name: az network nic vtap-config delete
   summary: Delete a virtual network tap configuration.
   description: ''
-  parameters:
+  syntax: >-
+    az network nic vtap-config delete --name
+                                      --nic-name
+                                      --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the virtual network tap configuration.
@@ -46,7 +55,10 @@ directCommands:
   name: az network nic vtap-config list
   summary: List virtual network tap configurations.
   description: ''
-  parameters:
+  syntax: >-
+    az network nic vtap-config list --nic-name
+                                    --resource-group
+  requiredParameters:
   - isRequired: true
     name: --nic-name
     summary: Name of the network interface (NIC).
@@ -59,7 +71,11 @@ directCommands:
   name: az network nic vtap-config show
   summary: Get details of a virtual network tap configuration.
   description: ''
-  parameters:
+  syntax: >-
+    az network nic vtap-config show --name
+                                    --nic-name
+                                    --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the virtual network tap configuration.

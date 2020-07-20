@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datashare_az_datashare_synchronization
 name: az datashare synchronization
 summary: Commands to manage datashare synchronization.
@@ -8,10 +8,14 @@ directCommands:
   name: az datashare synchronization list
   summary: List synchronizations of a datashare.
   description: ''
+  syntax: >-
+    az datashare synchronization list --account-name
+                                      --resource-group
+                                      --share-name
   examples:
   - summary: List synchronizations
     syntax: az datashare synchronization list --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -28,10 +32,15 @@ directCommands:
   name: az datashare synchronization list-detail
   summary: List synchronization details.
   description: ''
+  syntax: >-
+    az datashare synchronization list-detail --account-name
+                                             --resource-group
+                                             --share-name
+                                             [--synchronization-id]
   examples:
   - summary: List synchronization details
     syntax: az datashare synchronization list-detail --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --synchronization-id 00000000-0000-0000-0000-000000000000
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -44,6 +53,7 @@ directCommands:
     name: --share-name
     summary: The name of the share.
     description: ''
+  optionalParameters:
   - name: --synchronization-id
     summary: The synchronization GUID.
     description: ''

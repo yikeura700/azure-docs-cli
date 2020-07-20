@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_pipelines
 name: az pipelines
 summary: Manage Azure Pipelines.
@@ -8,6 +8,20 @@ directCommands:
   name: az pipelines create
   summary: Create a new Azure Pipeline (YAML based).
   description: ''
+  syntax: >-
+    az pipelines create --name
+                        [--branch]
+                        [--description]
+                        [--detect {false, true}]
+                        [--folder-path]
+                        [--org]
+                        [--project]
+                        [--queue-id]
+                        [--repository]
+                        [--repository-type {github, tfsgit}]
+                        [--service-connection]
+                        [--skip-first-run {false, true}]
+                        [--yaml-path]
   examples:
   - summary: Create an Azure Pipeline from local checkout repository context
     syntax: >-
@@ -36,11 +50,12 @@ directCommands:
       az pipelines create --name 'ContosoBuild' --description 'Pipeline for contoso project'
 
       --repository https://github.com/SampleOrg/SampleRepo --branch master --yml-path azure-pipelines.yml [--service-connection SERVICE_CONNECTION]
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: Name of the new pipeline.
     description: ''
+  optionalParameters:
   - name: --branch
     summary: Branch name for which the pipeline will be configured. If omitted, it will be auto-detected from local repository.
     description: ''
@@ -84,11 +99,18 @@ directCommands:
   name: az pipelines delete
   summary: Delete a pipeline.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines delete --id
+                        [--detect {false, true}]
+                        [--org]
+                        [--project]
+                        [--yes]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: ID of the pipeline.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -106,7 +128,17 @@ directCommands:
   name: az pipelines list
   summary: List pipelines.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines list [--detect {false, true}]
+                      [--folder-path]
+                      [--name]
+                      [--org]
+                      [--project]
+                      [--query-order {ModifiedAsc, ModifiedDesc, NameAsc, NameDesc, None}]
+                      [--repository]
+                      [--repository-type {bitbucket, git, github, githubenterprise, svn, tfsgit, tfsversioncontrol}]
+                      [--top]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -141,7 +173,18 @@ directCommands:
   name: az pipelines run
   summary: Queue (run) a pipeline.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines run [--branch]
+                     [--commit-id]
+                     [--detect {false, true}]
+                     [--folder-path]
+                     [--id]
+                     [--name]
+                     [--open]
+                     [--org]
+                     [--project]
+                     [--variables]
+  optionalParameters:
   - name: --branch
     summary: 'Name of the branch on which the pipeline run is to be queued. Example: refs/heads/master or master or refs/pull/1/merge.'
     description: ''
@@ -177,7 +220,15 @@ directCommands:
   name: az pipelines show
   summary: Get the details of a pipeline.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines show [--detect {false, true}]
+                      [--folder-path]
+                      [--id]
+                      [--name]
+                      [--open]
+                      [--org]
+                      [--project]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -204,7 +255,19 @@ directCommands:
   name: az pipelines update
   summary: Update a pipeline.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines update [--branch]
+                        [--description]
+                        [--detect {false, true}]
+                        [--id]
+                        [--name]
+                        [--new-folder-path]
+                        [--new-name]
+                        [--org]
+                        [--project]
+                        [--queue-id]
+                        [--yaml-path]
+  optionalParameters:
   - name: --branch
     summary: Branch name for which the pipeline will be configured.
     description: ''

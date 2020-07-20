@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-iot-ext_az_iot_pnp_capability_model
 name: az iot pnp capability-model
 summary: Manage device capability models in an IoT Plug and Play model repository.
@@ -8,14 +8,20 @@ directCommands:
   name: az iot pnp capability-model create
   summary: Create a capability-model in the company repository.
   description: ''
+  syntax: >-
+    az iot pnp capability-model create --def
+                                       [--endpoint]
+                                       [--login]
+                                       [--repo-id]
   examples:
   - summary: Create a capability-model in the company repository.
     syntax: az iot pnp capability-model create --def {plug_and_play_capability_model_file_path} -r {pnp_repository}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --def --definition
     summary: IoT Plug and Play capability-model definition written in PPDL (JSON-LD). Can be directly input or a file path where the content is extracted.
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -30,14 +36,20 @@ directCommands:
   name: az iot pnp capability-model delete
   summary: Delete the capability-model in the company repository.
   description: ''
+  syntax: >-
+    az iot pnp capability-model delete --model
+                                       [--endpoint]
+                                       [--login]
+                                       [--repo-id]
   examples:
   - summary: Delete the capability-model in the company repository.
     syntax: az iot pnp capability-model delete -r {pnp_repository} --model {plug_and_play_capability_model_id}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --model -m
     summary: 'Target capability-model urn-id. Example: <a href="urn:example:capabilityModels:Mxchip:1">urn:example:capabilityModels:Mxchip:1</a>.'
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -52,12 +64,18 @@ directCommands:
   name: az iot pnp capability-model list
   summary: List all capability-model.
   description: ''
+  syntax: >-
+    az iot pnp capability-model list [--endpoint]
+                                     [--login]
+                                     [--repo-id]
+                                     [--search]
+                                     [--top]
   examples:
   - summary: List all company repository's capability-model.
     syntax: az iot pnp capability-model list -r {pnp_repository}
   - summary: List all public capability-model.
     syntax: az iot pnp capability-model list
-  parameters:
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -79,14 +97,20 @@ directCommands:
   name: az iot pnp capability-model publish
   summary: Publish the capability-model to public repository.
   description: ''
+  syntax: >-
+    az iot pnp capability-model publish --model
+                                        [--endpoint]
+                                        [--login]
+                                        [--repo-id]
   examples:
   - summary: Publish the capability-model to public repository.
     syntax: az iot pnp capability-model publish -r {pnp_repository} --model {plug_and_play_capability_model_id}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --model -m
     summary: 'Target capability-model urn-id. Example: <a href="urn:example:capabilityModels:Mxchip:1">urn:example:capabilityModels:Mxchip:1</a>.'
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -101,16 +125,23 @@ directCommands:
   name: az iot pnp capability-model show
   summary: Get the details of a capability-model.
   description: ''
+  syntax: >-
+    az iot pnp capability-model show --model
+                                     [--endpoint]
+                                     [--expand]
+                                     [--login]
+                                     [--repo-id]
   examples:
   - summary: Get the details of a company repository capability-model.
     syntax: az iot pnp capability-model show -r {pnp_repository} --model {plug_and_play_capability_model_id}
   - summary: Get the details of public capability-model.
     syntax: az iot pnp capability-model show --model {plug_and_play_capability_model_id}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --model -m
     summary: 'Target capability-model urn-id. Example: <a href="urn:example:capabilityModels:Mxchip:1">urn:example:capabilityModels:Mxchip:1</a>.'
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -128,14 +159,20 @@ directCommands:
   name: az iot pnp capability-model update
   summary: Update the capability-model in the company repository.
   description: ''
+  syntax: >-
+    az iot pnp capability-model update --def
+                                       [--endpoint]
+                                       [--login]
+                                       [--repo-id]
   examples:
   - summary: Update the capability-model in the company repository.
     syntax: az iot pnp capability-model update --def {updated_plug_and_play_capability_model_file_path} -r {pnp_repository}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --def --definition
     summary: IoT Plug and Play capability-model definition written in PPDL (JSON-LD). Can be directly input or a file path where the content is extracted.
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.

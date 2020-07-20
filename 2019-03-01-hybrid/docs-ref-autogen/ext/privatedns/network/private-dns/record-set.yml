@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_privatedns_az_network_private_dns_record_set
 name: az network private-dns record-set
 summary: Manage Private DNS records and record sets.
@@ -8,12 +8,15 @@ directCommands:
   name: az network private-dns record-set list
   summary: List all record sets within a Private DNS zone.
   description: ''
+  syntax: >-
+    az network private-dns record-set list --resource-group
+                                           --zone-name
   examples:
   - summary: List all "@" record sets within this zone.
     syntax: >-
       az network private-dns record-set list -g MyResourceGroup -z www.mysite.com \
           --query "[?name=='@']"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.

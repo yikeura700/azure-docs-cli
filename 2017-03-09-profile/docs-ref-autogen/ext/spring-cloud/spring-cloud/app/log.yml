@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_spring-cloud_az_spring_cloud_app_log
 name: az spring-cloud app log
 summary: Commands to tail app instances logs with multiple options. If the app has only one instance, the instance name is optional.
@@ -8,7 +8,16 @@ directCommands:
   name: az spring-cloud app log tail
   summary: Show logs of an app instance, logs will be streamed when setting '-f/--follow'.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud app log tail --name
+                                 --resource-group
+                                 --service
+                                 [--follow]
+                                 [--instance]
+                                 [--limit]
+                                 [--lines]
+                                 [--since]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of app.
@@ -21,6 +30,7 @@ directCommands:
     name: --service -s
     summary: Name of Azure Spring Cloud, you can configure the default service using az configure --defaults spring-cloud=<name>.
     description: ''
+  optionalParameters:
   - name: --follow  -f
     summary: Specify if the logs should be streamed.
     description: ''

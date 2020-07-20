@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_front-door_az_network_front_door_waf_policy_rule_match_condition
 name: az network front-door waf-policy rule match-condition
 summary: Alter match-conditions associated with a WAF policy custom rule.
@@ -13,7 +13,16 @@ directCommands:
       Variable allowed values: RemoteAddr, RequestMethod, QueryString, PostArgs, RequestUri, RequestHeader, RequestBody, Cookies, SocketAddr
 
       Operator allowed values: Any, IPMatch, GeoMatch, Equal, Contains, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, BeginsWith, EndsWith, RegEx.
-  parameters:
+  syntax: >-
+    az network front-door waf-policy rule match-condition add --match-variable
+                                                              --name
+                                                              --operator
+                                                              --policy-name
+                                                              --resource-group
+                                                              --values
+                                                              [--negate {false, true}]
+                                                              [--transforms {Lowercase, RemoveNulls, Trim, Uppercase, UrlDecode, UrlEncode}]
+  requiredParameters:
   - isRequired: true
     name: --match-variable
     summary: Variable[.Selector] Request variable to test with optional selector.
@@ -38,6 +47,7 @@ directCommands:
     name: --values
     summary: Space-separated list of values to match against.
     description: ''
+  optionalParameters:
   - name: --negate
     parameterValueGroup: false, true
     summary: Applies "Not" to the operator.
@@ -50,7 +60,11 @@ directCommands:
   name: az network front-door waf-policy rule match-condition list
   summary: Show all match-conditions associated with a WAF policy custom rule.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door waf-policy rule match-condition list --name
+                                                               --policy-name
+                                                               --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the custom rule.
@@ -67,7 +81,12 @@ directCommands:
   name: az network front-door waf-policy rule match-condition remove
   summary: Remove a match-condition from a WAF policy custom rule.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door waf-policy rule match-condition remove --index
+                                                                 --name
+                                                                 --policy-name
+                                                                 --resource-group
+  requiredParameters:
   - isRequired: true
     name: --index
     summary: 0-based index of the match condition to remove.

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_lb_probe
 name: az network lb probe
 summary: Evaluate probe information and define routing rules.
@@ -8,6 +8,16 @@ directCommands:
   name: az network lb probe create
   summary: Create a probe.
   description: ''
+  syntax: >-
+    az network lb probe create --lb-name
+                               --name
+                               --port
+                               --protocol {Http, Tcp}
+                               --resource-group
+                               [--interval]
+                               [--path]
+                               [--subscription]
+                               [--threshold]
   examples:
   - summary: Create a probe on a load balancer over HTTP and port 80.
     syntax: >-
@@ -17,7 +27,7 @@ directCommands:
     syntax: >-
       az network lb probe create -g MyResourceGroup --lb-name MyLb -n MyProbe \
           --protocol tcp --port 443
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --lb-name
     summary: The load balancer name.
@@ -39,32 +49,33 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --interval
     summary: Probing time interval in seconds.
     description: ''
   - name: --path
     summary: The endpoint to interrogate (http only).
     description: ''
-  - name: --threshold
-    summary: The number of consecutive probe failures before an instance is deemed unhealthy.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --threshold
+    summary: The number of consecutive probe failures before an instance is deemed unhealthy.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_lb_probe_delete
   name: az network lb probe delete
   summary: Delete a probe.
   description: ''
+  syntax: >-
+    az network lb probe delete --lb-name
+                               --name
+                               --resource-group
+                               [--subscription]
   examples:
   - summary: Delete a probe.
     syntax: az network lb probe delete -g MyResourceGroup --lb-name MyLb -n MyProbe
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --lb-name
     summary: The name of the load balancer.
@@ -77,23 +88,23 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_lb_probe_list
   name: az network lb probe list
   summary: List probes.
   description: ''
+  syntax: >-
+    az network lb probe list --lb-name
+                             --resource-group
+                             [--subscription]
   examples:
   - summary: List probes.
     syntax: az network lb probe list -g MyResourceGroup --lb-name MyLb -o table
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --lb-name
     summary: The name of the load balancer.
@@ -102,23 +113,24 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_lb_probe_show
   name: az network lb probe show
   summary: Get the details of a probe.
   description: ''
+  syntax: >-
+    az network lb probe show --lb-name
+                             --name
+                             --resource-group
+                             [--subscription]
   examples:
   - summary: Get the details of a probe.
     syntax: az network lb probe show -g MyResourceGroup --lb-name MyLb -n MyProbe
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --lb-name
     summary: The name of the load balancer.
@@ -131,27 +143,53 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_lb_probe_update
   name: az network lb probe update
   summary: Update a probe.
   description: ''
+  syntax: >-
+    az network lb probe update [--add]
+                               [--force-string]
+                               [--ids]
+                               [--interval]
+                               [--lb-name]
+                               [--name]
+                               [--path]
+                               [--port]
+                               [--protocol {Http, Tcp}]
+                               [--remove]
+                               [--resource-group]
+                               [--set]
+                               [--subscription]
+                               [--threshold]
   examples:
   - summary: Update a probe with a different port and interval.
     syntax: az network lb probe update -g MyResourceGroup --lb-name MyLb -n MyProbe --port 81 --interval 10
   - summary: Update a probe. (autogenerated)
     syntax: az network lb probe update --lb-name MyLb --name MyProbe --port 81 --resource-group MyResourceGroup --subscription MySubscription
-  parameters:
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --interval
     summary: Probing time interval in seconds.
+    description: ''
+  - name: --lb-name
+    summary: The load balancer name.
+    description: ''
+  - name: --name -n
+    summary: The name of the probe.
     description: ''
   - name: --path
     summary: The endpoint to interrogate (http only).
@@ -163,42 +201,22 @@ directCommands:
     parameterValueGroup: Http, Tcp
     summary: The protocol to probe.
     description: ''
-  - name: --threshold
-    summary: The number of consecutive probe failures before an instance is deemed unhealthy.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --lb-name
-    summary: The load balancer name.
-    description: ''
-  - name: --name -n
-    summary: The name of the probe.
+  - name: --remove
+    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-    description: ''
-  - name: --remove
-    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
-    description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --threshold
+    summary: The number of consecutive probe failures before an instance is deemed unhealthy.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_lb_probe_create
 - az_network_lb_probe_delete
@@ -221,6 +239,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

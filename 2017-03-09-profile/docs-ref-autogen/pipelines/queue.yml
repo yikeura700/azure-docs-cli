@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_pipelines_queue
 name: az pipelines queue
 summary: Manage agent queues.
@@ -8,7 +8,14 @@ directCommands:
   name: az pipelines queue list
   summary: List agent queues.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines queue list [--action {manage, none, use}]
+                            [--detect {false, true}]
+                            [--org]
+                            [--project]
+                            [--queue-name]
+                            [--subscription]
+  optionalParameters:
   - name: --action
     parameterValueGroup: manage, none, use
     summary: Filter by whether the calling user has use or manage permissions.
@@ -33,11 +40,19 @@ directCommands:
   name: az pipelines queue show
   summary: Show details of agent queue.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines queue show --id
+                            [--action {manage, none, use}]
+                            [--detect {false, true}]
+                            [--org]
+                            [--project]
+                            [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --id --queue-id
     summary: Id of the agent queue to get information about.
     description: ''
+  optionalParameters:
   - name: --action
     parameterValueGroup: manage, none, use
     summary: Filter by whether the calling user has use or manage permissions.

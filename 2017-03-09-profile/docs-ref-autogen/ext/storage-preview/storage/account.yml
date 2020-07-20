@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_storage-preview_az_storage_account
 name: az storage account
 summary: Manage storage accounts.
@@ -8,7 +8,8 @@ directCommands:
   name: az storage account check-name
   summary: Checks that the storage account name is valid and is not already in use.
   description: ''
-  parameters:
+  syntax: az storage account check-name --name
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The storage account name.
@@ -17,10 +18,25 @@ directCommands:
   name: az storage account create
   summary: Create a storage account.
   description: The SKU of the storage account defaults to 'Standard_RAGRS'.
+  syntax: >-
+    az storage account create --name
+                              --resource-group
+                              [--access-tier {Cool, Hot}]
+                              [--assign-identity]
+                              [--bypass {AzureServices, Logging, Metrics, None}]
+                              [--custom-domain]
+                              [--default-action {Allow, Deny}]
+                              [--encryption-services {blob, file, queue, table}]
+                              [--hierarchical-namespace {false, true}]
+                              [--https-only {false, true}]
+                              [--kind {BlobStorage, BlockBlobStorage, FileStorage, Storage, StorageV2}]
+                              [--location]
+                              [--sku {Premium_LRS, Premium_ZRS, Standard_GRS, Standard_LRS, Standard_RAGRS, Standard_ZRS}]
+                              [--tags]
   examples:
   - summary: Create a storage account 'MyStorageAccount' in resource group 'MyResourceGroup' in the West US region with locally redundant storage.
     syntax: az storage account create -n MyStorageAccount -g MyResourceGroup -l westus --sku Standard_LRS
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The storage account name.
@@ -29,6 +45,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --access-tier
     parameterValueGroup: Cool, Hot
     summary: The access tier used for billing StandardBlob accounts. Cannot be set for StandardLRS, StandardGRS, StandardRAGRS, or PremiumLRS account types. It is required for StandardBlob accounts during creation.
@@ -36,8 +53,16 @@ directCommands:
   - name: --assign-identity
     summary: Generate and assign a new Storage Account Identity for this storage account for use with key management services like Azure KeyVault.
     description: ''
+  - name: --bypass
+    parameterValueGroup: AzureServices, Logging, Metrics, None
+    summary: Bypass traffic for space-separated uses.
+    description: ''
   - name: --custom-domain
     summary: User domain assigned to the storage account. Name is the CNAME source.
+    description: ''
+  - name: --default-action
+    parameterValueGroup: Allow, Deny
+    summary: Default action to apply when no rule matches.
     description: ''
   - name: --encryption-services
     parameterValueGroup: blob, file, queue, table
@@ -67,28 +92,25 @@ directCommands:
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
-  - name: --bypass
-    parameterValueGroup: AzureServices, Logging, Metrics, None
-    summary: Bypass traffic for space-separated uses.
-    description: ''
-  - name: --default-action
-    parameterValueGroup: Allow, Deny
-    summary: Default action to apply when no rule matches.
-    description: ''
 - uid: ext_storage-preview_az_storage_account_delete
   name: az storage account delete
   summary: Delete a storage account.
   description: ''
+  syntax: >-
+    az storage account delete --name
+                              [--resource-group]
+                              [--yes]
   examples:
   - summary: Delete a storage account using a resource ID.
     syntax: az storage account delete --ids /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Storage/storageAccounts/{StorageAccount}
   - summary: Delete a storage account using an account name and resource group.
     syntax: az storage account delete -n MyStorageAccount -g MyResourceGroup
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The storage account name.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -104,6 +126,11 @@ directCommands:
     cluster will become primary after failover. For more information, please refer to
 
     <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-disaster-recovery-guidance">https://docs.microsoft.com/en-us/azure/storage/common/storage-disaster-recovery-guidance</a>.
+  syntax: >-
+    az storage account failover --name
+                                [--no-wait]
+                                [--resource-group]
+                                [--yes]
   examples:
   - summary: Failover a storage account.
     syntax: az storage account failover -n mystorageaccount -g MyResourceGroup
@@ -112,11 +139,12 @@ directCommands:
       az storage account failover -n mystorageaccount -g MyResourceGroup --no-wait
 
       az storage account show -n mystorageaccount --expand geoReplicationStats
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The storage account name.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -130,12 +158,13 @@ directCommands:
   name: az storage account list
   summary: List storage accounts.
   description: ''
+  syntax: az storage account list [--resource-group]
   examples:
   - summary: List all storage accounts in a subscription.
     syntax: az storage account list
   - summary: List all storage accounts in a resource group.
     syntax: az storage account list -g MyResourceGroup
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -143,16 +172,21 @@ directCommands:
   name: az storage account show
   summary: Show storage account properties.
   description: ''
+  syntax: >-
+    az storage account show --name
+                            [--expand {geoReplicationStats}]
+                            [--resource-group]
   examples:
   - summary: Show properties for a storage account by resource ID.
     syntax: az storage account show --ids /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Storage/storageAccounts/{StorageAccount}
   - summary: Show properties for a storage account using an account name and resource group.
     syntax: az storage account show -g MyResourceGroup -n MyStorageAccount
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The storage account name.
     description: ''
+  optionalParameters:
   - name: --expand
     parameterValueGroup: geoReplicationStats
     summary: May be used to expand the properties within account's properties. By default, data is not included when fetching properties. Currently we only support geoReplicationStats.
@@ -164,10 +198,11 @@ directCommands:
   name: az storage account show-usage
   summary: Show the current count and limit of the storage accounts under the subscription.
   description: ''
+  syntax: az storage account show-usage --location
   examples:
   - summary: Show the current count and limit of the storage accounts under the subscription. (autogenerated)
     syntax: az storage account show-usage --location westus2
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -176,42 +211,53 @@ directCommands:
   name: az storage account update
   summary: Update the properties of a storage account.
   description: ''
-  parameters:
+  syntax: >-
+    az storage account update --name
+                              [--access-tier {Cool, Hot}]
+                              [--add]
+                              [--assign-identity]
+                              [--bypass {AzureServices, Logging, Metrics, None}]
+                              [--custom-domain]
+                              [--default-action {Allow, Deny}]
+                              [--encryption-key-name]
+                              [--encryption-key-source {Microsoft.Keyvault, Microsoft.Storage}]
+                              [--encryption-key-vault]
+                              [--encryption-key-version]
+                              [--encryption-services {blob, file, queue, table}]
+                              [--force-string]
+                              [--https-only {false, true}]
+                              [--remove]
+                              [--resource-group]
+                              [--set]
+                              [--sku {Premium_LRS, Premium_ZRS, Standard_GRS, Standard_LRS, Standard_RAGRS, Standard_ZRS}]
+                              [--tags]
+                              [--use-subdomain {false, true}]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The storage account name.
     description: ''
+  optionalParameters:
   - name: --access-tier
     parameterValueGroup: Cool, Hot
     summary: The access tier used for billing StandardBlob accounts. Cannot be set for StandardLRS, StandardGRS, StandardRAGRS, or PremiumLRS account types. It is required for StandardBlob accounts during creation.
     description: ''
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
   - name: --assign-identity
     summary: Generate and assign a new Storage Account Identity for this storage account for use with key management services like Azure KeyVault.
+    description: ''
+  - name: --bypass
+    parameterValueGroup: AzureServices, Logging, Metrics, None
+    summary: Bypass traffic for space-separated uses.
     description: ''
   - name: --custom-domain
     summary: User domain assigned to the storage account. Name is the CNAME source. Use "" to clear existing value.
     description: ''
-  - name: --encryption-services
-    parameterValueGroup: blob, file, queue, table
-    summary: Specifies which service(s) to encrypt.
-    description: ''
-  - name: --https-only
-    parameterValueGroup: false, true
-    summary: Allows https traffic only to storage service.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --sku
-    parameterValueGroup: Premium_LRS, Premium_ZRS, Standard_GRS, Standard_LRS, Standard_RAGRS, Standard_ZRS
-    summary: The storage account SKU.
-    description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
-  - name: --use-subdomain
-    parameterValueGroup: false, true
-    summary: Specify whether to use indirect CNAME validation.
+  - name: --default-action
+    parameterValueGroup: Allow, Deny
+    summary: Default action to apply when no rule matches.
     description: ''
   - name: --encryption-key-name
     summary: The name of the KeyVault key.
@@ -227,25 +273,36 @@ directCommands:
   - name: --encryption-key-version
     summary: The version of the KeyVault key.
     description: ''
-  - name: --bypass
-    parameterValueGroup: AzureServices, Logging, Metrics, None
-    summary: Bypass traffic for space-separated uses.
-    description: ''
-  - name: --default-action
-    parameterValueGroup: Allow, Deny
-    summary: Default action to apply when no rule matches.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+  - name: --encryption-services
+    parameterValueGroup: blob, file, queue, table
+    summary: Specifies which service(s) to encrypt.
     description: ''
   - name: --force-string
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
+  - name: --https-only
+    parameterValueGroup: false, true
+    summary: Allows https traffic only to storage service.
+    description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
+    description: ''
+  - name: --sku
+    parameterValueGroup: Premium_LRS, Premium_ZRS, Standard_GRS, Standard_LRS, Standard_RAGRS, Standard_ZRS
+    summary: The storage account SKU.
+    description: ''
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
+  - name: --use-subdomain
+    parameterValueGroup: false, true
+    summary: Specify whether to use indirect CNAME validation.
     description: ''
 commands:
 - ext_storage-preview_az_storage_account_check_name

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_boards
 name: az boards
 summary: Manage Azure Boards.
@@ -8,7 +8,14 @@ directCommands:
   name: az boards query
   summary: Query for a list of work items.
   description: Only supports flat queries.
-  parameters:
+  syntax: >-
+    az boards query [--detect {false, true}]
+                    [--id]
+                    [--org]
+                    [--path]
+                    [--project]
+                    [--wiql]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

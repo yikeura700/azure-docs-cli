@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_repos
 name: az repos
 summary: Manage Azure Repos.
@@ -8,11 +8,18 @@ directCommands:
   name: az repos create
   summary: Create a Git repository in a team project.
   description: ''
-  parameters:
+  syntax: >-
+    az repos create --name
+                    [--detect {false, true}]
+                    [--open]
+                    [--org]
+                    [--project]
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: Name for the new repository.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -30,11 +37,18 @@ directCommands:
   name: az repos delete
   summary: Delete a Git repository in a team project.
   description: ''
-  parameters:
+  syntax: >-
+    az repos delete --id
+                    [--detect {false, true}]
+                    [--org]
+                    [--project]
+                    [--yes]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: ID of the repository.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -52,7 +66,11 @@ directCommands:
   name: az repos list
   summary: List Git repositories of a team project.
   description: ''
-  parameters:
+  syntax: >-
+    az repos list [--detect {false, true}]
+                  [--org]
+                  [--project]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -67,11 +85,18 @@ directCommands:
   name: az repos show
   summary: Get the details of a Git repository.
   description: ''
-  parameters:
+  syntax: >-
+    az repos show --repository
+                  [--detect {false, true}]
+                  [--open]
+                  [--org]
+                  [--project]
+  requiredParameters:
   - isRequired: true
     name: --repository -r
     summary: Name or ID of the repository.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -89,11 +114,19 @@ directCommands:
   name: az repos update
   summary: Update the Git repository.
   description: ''
-  parameters:
+  syntax: >-
+    az repos update --repository
+                    [--default-branch]
+                    [--detect {false, true}]
+                    [--name]
+                    [--org]
+                    [--project]
+  requiredParameters:
   - isRequired: true
     name: --repository -r
     summary: Name or ID of the repository.
     description: ''
+  optionalParameters:
   - name: --default-branch
     summary: "Default branch to be set for the repository. Example: 'refs/heads/live' or 'live'."
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_boards
 name: az boards
 summary: Manage Azure Boards.
@@ -8,7 +8,15 @@ directCommands:
   name: az boards query
   summary: Query for a list of work items.
   description: Only supports flat queries.
-  parameters:
+  syntax: >-
+    az boards query [--detect {false, true}]
+                    [--id]
+                    [--org]
+                    [--path]
+                    [--project]
+                    [--subscription]
+                    [--wiql]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -25,11 +33,11 @@ directCommands:
   - name: --project -p
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
-  - name: --wiql
-    summary: The query in Work Item Query Language format.  Ignored if --id or --path is specified.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --wiql
+    summary: The query in Work Item Query Language format.  Ignored if --id or --path is specified.
     description: ''
 commands:
 - az_boards_area

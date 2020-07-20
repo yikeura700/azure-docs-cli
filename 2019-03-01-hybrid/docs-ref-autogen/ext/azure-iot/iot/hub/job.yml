@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-iot_az_iot_hub_job
 name: az iot hub job
 summary: Manage IoT Hub jobs (v2).
@@ -8,14 +8,20 @@ directCommands:
   name: az iot hub job cancel
   summary: Cancel an IoT Hub job.
   description: ''
+  syntax: >-
+    az iot hub job cancel --job-id
+                          [--hub-name]
+                          [--login]
+                          [--resource-group]
   examples:
   - summary: Cancel an IoT Hub job.
     syntax: az iot hub job cancel --hub-name {iothub_name} --job-id {job_id}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --job-id
     summary: IoT Hub job Id.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''
@@ -32,6 +38,23 @@ directCommands:
     When scheduling a twin update job, the twin patch is a required argument.
 
     When scheduling a device method job, the method name and payload are required arguments.
+  syntax: >-
+    az iot hub job create --job-id
+                          --job-type {scheduleDeviceMethod, scheduleUpdateTwin}
+                          [--duration]
+                          [--hub-name]
+                          [--interval]
+                          [--login]
+                          [--mct]
+                          [--method-name]
+                          [--method-payload]
+                          [--method-response-timeout]
+                          [--patch]
+                          [--query-condition]
+                          [--resource-group]
+                          [--start]
+                          [--ttl]
+                          [--wait {false, true}]
   examples:
   - summary: Create and schedule a job to update the twin tags of all devices.
     syntax: "az iot hub job create --job-id {job_id} --job-type scheduleUpdateTwin -n {iothub_name} -q \"*\" --twin-patch '{\"tags\": {\"deviceType\": \"Type1, Type2, Type3\"}}'"
@@ -41,7 +64,7 @@ directCommands:
     syntax: "az iot hub job create --job-id {job_name} --job-type scheduleUpdateTwin -n {iothub_name} --twin-patch '{\"properties\":{\"desired\": {\"temperatureF\": 65}}}' --start-time \"2020-01-08T12:19:56.868Z\" --query-condition \"deviceId IN ['MyDevice1', 'MyDevice2', 'MyDevice3']\""
   - summary: Create and schedule a job to invoke a device method for a set of devices meeting a query condition.
     syntax: az iot hub job create --job-id {job_name} --job-type scheduleDeviceMethod -n {iothub_name} --method-name setSyncIntervalSec --method-payload 30 --query-condition "properties.reported.settings.syncIntervalSec != 30"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --job-id
     summary: IoT Hub job Id.
@@ -51,6 +74,7 @@ directCommands:
     parameterValueGroup: scheduleDeviceMethod, scheduleUpdateTwin
     summary: The type of scheduled job.
     description: ''
+  optionalParameters:
   - name: --duration --poll-duration
     defaultValue: "600"
     summary: Total duration in seconds where job status will be checked if --wait flag is passed in.
@@ -103,6 +127,13 @@ directCommands:
   name: az iot hub job list
   summary: List the historical jobs of an IoT Hub.
   description: ''
+  syntax: >-
+    az iot hub job list [--hub-name]
+                        [--job-status {cancelled, completed, enqueued, failed, queued, running, scheduled, unknown}]
+                        [--job-type {export, import, scheduleDeviceMethod, scheduleUpdateTwin}]
+                        [--login]
+                        [--resource-group]
+                        [--top]
   examples:
   - summary: List all archived jobs within retention period (max of 30 days).
     syntax: az iot hub job list --hub-name {iothub_name}
@@ -114,7 +145,7 @@ directCommands:
     syntax: az iot hub job list --hub-name {iothub_name} --job-type scheduleDeviceMethod --job-status scheduled
   - summary: List device export jobs which have status "completed"
     syntax: az iot hub job list --hub-name {iothub_name} --job-type export --job-status completed
-  parameters:
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''
@@ -139,14 +170,20 @@ directCommands:
   name: az iot hub job show
   summary: Show details of an existing IoT Hub job.
   description: ''
+  syntax: >-
+    az iot hub job show --job-id
+                        [--hub-name]
+                        [--login]
+                        [--resource-group]
   examples:
   - summary: Show the details of a created job.
     syntax: az iot hub job show --hub-name {iothub_name} --job-id {job_id}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --job-id
     summary: IoT Hub job Id.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''

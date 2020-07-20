@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-iot_az_dt
 name: az dt
 summary: Manage Azure Digital Twins solutions & infrastructure.
@@ -8,12 +8,17 @@ directCommands:
   name: az dt create
   summary: Create a new Digital Twins instance.
   description: ''
+  syntax: >-
+    az dt create --dt-name
+                 --location
+                 --resource-group
+                 [--tags]
   examples:
   - summary: Create instance in target resource group with default location.
     syntax: az dt create -n {instance_name} -g {resouce_group} -l eastus2euap
   - summary: Create instance in target resource group with specified location and tags.
     syntax: az dt create -n {instance_name} -g {resouce_group} -l westcentralus --tags "a=b;c=d"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --dt-name --dtn -n
     summary: Digital Twins instance name.
@@ -26,6 +31,7 @@ directCommands:
     name: --resource-group -g
     summary: Digital Twins instance resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --tags
     summary: 'Digital Twins instance tags. Property bag in key-value pairs with the following format: a=b;c=d.'
     description: ''
@@ -33,14 +39,18 @@ directCommands:
   name: az dt delete
   summary: Delete an existing Digital Twins instance.
   description: ''
+  syntax: >-
+    az dt delete --dt-name
+                 [--resource-group]
   examples:
   - summary: Delete an arbitrary instance.
     syntax: az dt delete -n {instance_name}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --dt-name --dtn -n
     summary: Digital Twins instance name.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Digital Twins instance resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -48,6 +58,7 @@ directCommands:
   name: az dt list
   summary: List the collection of Digital Twins instances by subscription or resource group.
   description: ''
+  syntax: az dt list [--resource-group]
   examples:
   - summary: List all instances in the current subscription.
     syntax: az dt list
@@ -57,7 +68,7 @@ directCommands:
     syntax: az dt list --query "[?contains(name, 'Production')]"
   - summary: Count instances that meet condition.
     syntax: az dt list --query "length([?contains(name, 'Production')])"
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Digital Twins instance resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -65,16 +76,20 @@ directCommands:
   name: az dt show
   summary: Show an existing Digital Twins instance.
   description: ''
+  syntax: >-
+    az dt show --dt-name
+               [--resource-group]
   examples:
   - summary: Show an instance.
     syntax: az dt show -n {instance_name}
   - summary: Show an instance and project certain properties.
     syntax: az dt show -n {instance_name} --query "{Endpoint:hostName, Location:location}"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --dt-name --dtn -n
     summary: Digital Twins instance name.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Digital Twins instance resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''

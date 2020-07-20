@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_healthcareapis_az_healthcareapis_service
 name: az healthcareapis service
 summary: Healthcareapis service.
@@ -8,12 +8,22 @@ directCommands:
   name: az healthcareapis service create
   summary: Create or update the metadata of a service instance.
   description: ''
+  syntax: >-
+    az healthcareapis service create --kind {fhir, fhir-R4, fhir-Stu3}
+                                     --location
+                                     --resource-group
+                                     --resource-name
+                                     [--etag]
+                                     [--identity]
+                                     [--no-wait]
+                                     [--properties]
+                                     [--tags]
   examples:
   - summary: Create or Update a service with all parameters
     syntax: az healthcareapis service create --resource-group "rg1" --resource-name "service1" --identity type="SystemAssigned" --kind "fhir-R4" --location "westus2" --properties "{\"accessPolicies\":[{\"objectId\":\"c487e7d1-3210-41a3-8ccc-e9372b78da47\"},{\"objectId\":\"5b307da8-43d4-492b-8b66-b0294ade872f\"}],\"authenticationConfiguration\":{\"audience\":\"https://azurehealthcareapis.com\",\"authority\":\"https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc\",\"smartProxyEnabled\":true},\"corsConfiguration\":{\"allowCredentials\":false,\"headers\":[\"*\"],\"maxAge\":1440,\"methods\":[\"DELETE\",\"GET\",\"OPTIONS\",\"PATCH\",\"POST\",\"PUT\"],\"origins\":[\"*\"]},\"cosmosDbConfiguration\":{\"offerThroughput\":1000},\"exportConfiguration\":{\"storageAccountName\":\"existingStorageAccount\"}}"
   - summary: Create or Update a service with minimum parameters
     syntax: az healthcareapis service create --resource-group "rg1" --resource-name "service2" --kind "fhir-R4" --location "westus2" --properties "{\"accessPolicies\":[{\"objectId\":\"c487e7d1-3210-41a3-8ccc-e9372b78da47\"}]}"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --kind
     parameterValueGroup: fhir, fhir-R4, fhir-Stu3
@@ -31,6 +41,7 @@ directCommands:
     name: --resource-name
     summary: The name of the service instance.
     description: ''
+  optionalParameters:
   - name: --etag
     summary: An etag associated with the resource, used for optimistic concurrency when editing it.
     description: ''
@@ -50,10 +61,14 @@ directCommands:
   name: az healthcareapis service delete
   summary: Delete a service instance.
   description: ''
+  syntax: >-
+    az healthcareapis service delete --resource-group
+                                     --resource-name
+                                     [--no-wait]
   examples:
   - summary: Delete service
     syntax: az healthcareapis service delete --resource-group "rg1" --resource-name "service1"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -62,6 +77,7 @@ directCommands:
     name: --resource-name
     summary: The name of the service instance.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -69,10 +85,11 @@ directCommands:
   name: az healthcareapis service list
   summary: Get all the service instances in a subscription.
   description: ''
+  syntax: az healthcareapis service list [--resource-group]
   examples:
   - summary: List all services in resource group
     syntax: az healthcareapis service list --resource-group "rgname"
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -80,10 +97,13 @@ directCommands:
   name: az healthcareapis service show
   summary: Get the metadata of a service instance.
   description: ''
+  syntax: >-
+    az healthcareapis service show --resource-group
+                                   --resource-name
   examples:
   - summary: Get metadata
     syntax: az healthcareapis service show --resource-group "rg1" --resource-name "service1"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -96,10 +116,15 @@ directCommands:
   name: az healthcareapis service update
   summary: Update the metadata of a service instance.
   description: ''
+  syntax: >-
+    az healthcareapis service update --resource-group
+                                     --resource-name
+                                     [--no-wait]
+                                     [--tags]
   examples:
   - summary: Patch service
     syntax: az healthcareapis service update --resource-group "rg1" --resource-name "service1" --tags tag1="value1" tag2="value2"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -108,6 +133,7 @@ directCommands:
     name: --resource-name
     summary: The name of the service instance.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_spring-cloud_az_spring_cloud_app_identity
 name: az spring-cloud app identity
 summary: Manage an app's managed service identity.
@@ -8,12 +8,18 @@ directCommands:
   name: az spring-cloud app identity assign
   summary: Enable managed service identity on an app.
   description: ''
+  syntax: >-
+    az spring-cloud app identity assign --name
+                                        --resource-group
+                                        --service
+                                        [--role]
+                                        [--scope]
   examples:
   - summary: Enable the system assigned identity.
     syntax: az spring-cloud app identity assign -n MyApp -s MyCluster -g MyResourceGroup
   - summary: Enable the system assigned identity on an app with the 'Reader' role.
     syntax: az spring-cloud app identity assign -n MyApp -s MyCluster -g MyResourceGroup --role Reader --scope /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/xxxxx/providers/Microsoft.KeyVault/vaults/xxxxx
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of app.
@@ -26,6 +32,7 @@ directCommands:
     name: --service -s
     summary: Name of Azure Spring Cloud, you can configure the default service using az configure --defaults spring-cloud=<name>.
     description: ''
+  optionalParameters:
   - name: --role
     summary: Role name or id the managed identity will be assigned.
     description: ''
@@ -36,10 +43,14 @@ directCommands:
   name: az spring-cloud app identity remove
   summary: Remove managed service identity from an app.
   description: ''
+  syntax: >-
+    az spring-cloud app identity remove --name
+                                        --resource-group
+                                        --service
   examples:
   - summary: Remove the system assigned identity from an app.
     syntax: az spring-cloud app identity remove -n MyApp -s MyCluster -g MyResourceGroup
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of app.
@@ -56,10 +67,14 @@ directCommands:
   name: az spring-cloud app identity show
   summary: Display app's managed identity info.
   description: ''
+  syntax: >-
+    az spring-cloud app identity show --name
+                                      --resource-group
+                                      --service
   examples:
   - summary: Display an app's managed identity info.
     syntax: az spring-cloud app identity show -n MyApp -s MyCluster -g MyResourceGroup
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of app.

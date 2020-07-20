@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-iot_az_dt_twin_telemetry
 name: az dt twin telemetry
 summary: Test and validate the event routes and endpoints of a Digital Twins instance.
@@ -8,10 +8,17 @@ directCommands:
   name: az dt twin telemetry send
   summary: Sends telemetry on behalf of a digital twin. If component path is provided the emitted telemetry is on behalf of the component.
   description: ''
+  syntax: >-
+    az dt twin telemetry send --dt-name
+                              --twin-id
+                              [--component]
+                              [--dt-id]
+                              [--resource-group]
+                              [--telemetry]
   examples:
   - summary: Send twin telemetry
     syntax: az dt twin telemetry send -n {instance_name} --twin-id {twin_id}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --dt-name --dtn -n
     summary: Digital Twins instance name.
@@ -20,6 +27,7 @@ directCommands:
     name: --twin-id -t
     summary: The digital twin Id.
     description: ''
+  optionalParameters:
   - name: --component
     summary: The path to the DTDL component. If set, telemetry will be emitted on behalf of the component.
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_appconfig_feature
 name: az appconfig feature
 summary: Manage feature flags stored in an App Configuration.
@@ -8,16 +8,24 @@ directCommands:
   name: az appconfig feature delete
   summary: Delete feature flag.
   description: ''
+  syntax: >-
+    az appconfig feature delete --feature
+                                [--connection-string]
+                                [--label]
+                                [--name]
+                                [--subscription]
+                                [--yes]
   examples:
   - summary: Delete a feature using App Configuration name without confirmation.
     syntax: az appconfig feature delete -n MyAppConfiguration --feature color --label MyLabel --yes
   - summary: Delete a feature using connection string.
     syntax: az appconfig feature delete --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label MyLabel
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --feature
     summary: Key of the feature to be deleted. Support star sign as filters, for instance \* means all key and abc\* means keys with abc as prefix. Comma separated keys are not supported. Please provide escaped string if your feature name contains comma.
     description: ''
+  optionalParameters:
   - name: --connection-string
     summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
@@ -27,32 +35,35 @@ directCommands:
   - name: --name -n
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 - uid: az_appconfig_feature_disable
   name: az appconfig feature disable
   summary: Disable a feature flag to turn it OFF for use.
   description: ''
+  syntax: >-
+    az appconfig feature disable --feature
+                                 [--connection-string]
+                                 [--label]
+                                 [--name]
+                                 [--subscription]
+                                 [--yes]
   examples:
   - summary: disable a feature using App Configuration name.
     syntax: az appconfig feature disable -n MyAppConfiguration --feature color --label test
   - summary: Force disabling a feature using connection string.
     syntax: az appconfig feature disable --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label test --yes
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --feature
     summary: Key of the feature to be disabled.
     description: ''
+  optionalParameters:
   - name: --connection-string
     summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
@@ -62,32 +73,35 @@ directCommands:
   - name: --name -n
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 - uid: az_appconfig_feature_enable
   name: az appconfig feature enable
   summary: Enable a feature flag to turn it ON for use.
   description: ''
+  syntax: >-
+    az appconfig feature enable --feature
+                                [--connection-string]
+                                [--label]
+                                [--name]
+                                [--subscription]
+                                [--yes]
   examples:
   - summary: enable a feature using App Configuration name.
     syntax: az appconfig feature enable -n MyAppConfiguration --feature color --label test
   - summary: Force enabling a feature using connection string.
     syntax: az appconfig feature enable --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label test --yes
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --feature
     summary: Key of the feature to be enabled.
     description: ''
+  optionalParameters:
   - name: --connection-string
     summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
@@ -97,22 +111,26 @@ directCommands:
   - name: --name -n
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 - uid: az_appconfig_feature_list
   name: az appconfig feature list
   summary: List feature flags.
   description: ''
+  syntax: >-
+    az appconfig feature list [--all]
+                              [--connection-string]
+                              [--feature]
+                              [--fields {conditions, description, key, label, last_modified, locked, state}]
+                              [--label]
+                              [--name]
+                              [--subscription]
+                              [--top]
   examples:
   - summary: List all feature flags.
     syntax: az appconfig feature list -n MyAppConfiguration
@@ -126,7 +144,7 @@ directCommands:
     syntax: az appconfig feature list --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx  --top 150
   - summary: List feature flags with multiple labels.
     syntax: az appconfig feature list --label test,prod,\0 -n MyAppConfiguration
-  parameters:
+  optionalParameters:
   - name: --all
     summary: List all feature flags.
     description: ''
@@ -146,32 +164,35 @@ directCommands:
   - name: --name -n
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
-  - name: --top -t
-    summary: Maximum number of items to return. Must be a positive integer. Default to 100.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --top -t
+    summary: Maximum number of items to return. Must be a positive integer. Default to 100.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 - uid: az_appconfig_feature_lock
   name: az appconfig feature lock
   summary: Lock a feature flag to prohibit write operations.
   description: ''
+  syntax: >-
+    az appconfig feature lock --feature
+                              [--connection-string]
+                              [--label]
+                              [--name]
+                              [--subscription]
+                              [--yes]
   examples:
   - summary: Lock a feature using App Configuration name.
     syntax: az appconfig feature lock -n MyAppConfiguration --feature color --label test
   - summary: Force locking a feature using connection string.
     syntax: az appconfig feature lock --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label test --yes
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --feature
     summary: Key of the feature to be locked.
     description: ''
+  optionalParameters:
   - name: --connection-string
     summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
@@ -181,32 +202,36 @@ directCommands:
   - name: --name -n
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 - uid: az_appconfig_feature_set
   name: az appconfig feature set
   summary: Set a feature flag.
   description: ''
+  syntax: >-
+    az appconfig feature set --feature
+                             [--connection-string]
+                             [--description]
+                             [--label]
+                             [--name]
+                             [--subscription]
+                             [--yes]
   examples:
   - summary: Set a feature flag with label MyLabel.
     syntax: az appconfig feature set -n MyAppConfiguration --feature color --label MyLabel
   - summary: Set a feature flag with null label using connection string and set a description.
     syntax: az appconfig feature set --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --description "This is a colorful feature"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --feature
     summary: Name of the feature flag to be set. Only alphanumeric characters, '.', '-' and '_' are allowed.
     description: ''
+  optionalParameters:
   - name: --connection-string
     summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
@@ -219,32 +244,35 @@ directCommands:
   - name: --name -n
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 - uid: az_appconfig_feature_show
   name: az appconfig feature show
   summary: Show all attributes of a feature flag.
   description: ''
+  syntax: >-
+    az appconfig feature show --feature
+                              [--connection-string]
+                              [--fields {conditions, description, key, label, last_modified, locked, state}]
+                              [--label]
+                              [--name]
+                              [--subscription]
   examples:
   - summary: Show a feature flag using App Configuration name with a specific label
     syntax: az appconfig feature show -n MyAppConfiguration --feature color --label MyLabel
   - summary: Show a feature flag using connection string and field filters
     syntax: az appconfig feature show --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --fields key locked conditions state
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --feature
     summary: Name of the feature flag to be retrieved.
     description: ''
+  optionalParameters:
   - name: --connection-string
     summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
@@ -261,26 +289,29 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 - uid: az_appconfig_feature_unlock
   name: az appconfig feature unlock
   summary: Unlock a feature to gain write operations.
   description: ''
+  syntax: >-
+    az appconfig feature unlock --feature
+                                [--connection-string]
+                                [--label]
+                                [--name]
+                                [--subscription]
+                                [--yes]
   examples:
   - summary: Unlock a feature using App Configuration name.
     syntax: az appconfig feature unlock -n MyAppConfiguration --feature color --label test
   - summary: Force unlocking a feature using connection string.
     syntax: az appconfig feature unlock --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --feature color --label test --yes
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --feature
     summary: Key of the feature to be unlocked.
     description: ''
+  optionalParameters:
   - name: --connection-string
     summary: Combination of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=<connection_string>` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING.
     description: ''
@@ -290,18 +321,13 @@ directCommands:
   - name: --name -n
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 commands:
 - az_appconfig_feature_delete
 - az_appconfig_feature_disable
@@ -332,6 +358,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/26e341bd9ce989aa68defdb81ceede36b6c5ba6f/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   updated_at: 5/7/2020 7:45:43 AM

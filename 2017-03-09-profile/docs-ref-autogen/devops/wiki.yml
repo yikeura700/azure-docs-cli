@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_devops_wiki
 name: az devops wiki
 summary: Manage wikis.
@@ -8,6 +8,16 @@ directCommands:
   name: az devops wiki create
   summary: Create a wiki.
   description: ''
+  syntax: >-
+    az devops wiki create [--detect {false, true}]
+                          [--mapped-path]
+                          [--name]
+                          [--org]
+                          [--project]
+                          [--repository]
+                          [--subscription]
+                          [--type {codewiki, projectwiki}]
+                          [--version]
   examples:
   - summary: Create a project wiki
     syntax: az devops wiki create --name myprojectwiki
@@ -16,7 +26,7 @@ directCommands:
       az devops wiki create --name WIKI_NAME --type codewiki --version BRANCH_NAME
 
       --repository REPO_NAME --mapped-path PATH_TO_PUBLISH
-  parameters:
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -36,6 +46,9 @@ directCommands:
   - name: --repository -r
     summary: '[Required for codewiki type] Name or ID of the repository to publish the wiki from.'
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --type --wiki-type
     defaultValue: projectwiki
     parameterValueGroup: codewiki, projectwiki
@@ -44,18 +57,23 @@ directCommands:
   - name: --version -v
     summary: '[Required for codewiki type] Repository branch name to publish the code wiki from.'
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
 - uid: az_devops_wiki_delete
   name: az devops wiki delete
   summary: Delete a wiki.
   description: ''
-  parameters:
+  syntax: >-
+    az devops wiki delete --wiki
+                          [--detect {false, true}]
+                          [--org]
+                          [--project]
+                          [--subscription]
+                          [--yes]
+  requiredParameters:
   - isRequired: true
     name: --wiki
     summary: Name or Id of the wiki to delete.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -66,22 +84,28 @@ directCommands:
   - name: --project -p
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
     description: ''
 - uid: az_devops_wiki_list
   name: az devops wiki list
   summary: List all the wikis in a project or organization.
   description: ''
+  syntax: >-
+    az devops wiki list [--detect {false, true}]
+                        [--org]
+                        [--project]
+                        [--scope {organization, project}]
+                        [--subscription]
   examples:
   - summary: List all wikis for a project
     syntax: az devops wiki list
   - summary: List all wikis in the organization
     syntax: az devops wiki list --scope organization
-  parameters:
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -104,11 +128,19 @@ directCommands:
   name: az devops wiki show
   summary: Show details of a wiki.
   description: ''
-  parameters:
+  syntax: >-
+    az devops wiki show --wiki
+                        [--detect {false, true}]
+                        [--open]
+                        [--org]
+                        [--project]
+                        [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --wiki
     summary: Name or Id of the wiki.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

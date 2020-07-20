@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_deploymentmanager_rollout
 name: az deploymentmanager rollout
 summary: Manage the rollouts.
@@ -8,7 +8,11 @@ directCommands:
   name: az deploymentmanager rollout delete
   summary: Deletes a rollout resource.
   description: Only rollouts in terminal state can be deleted.
-  parameters:
+  syntax: >-
+    az deploymentmanager rollout delete --name
+                                        --resource-group
+                                        [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name --rollout-name -n
     summary: The name of the rollout.
@@ -17,46 +21,47 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
 - uid: az_deploymentmanager_rollout_list
   name: az deploymentmanager rollout list
   summary: List all rollouts in a resource group.
   description: ''
+  syntax: >-
+    az deploymentmanager rollout list --resource-group
+                                      [--subscription]
   examples:
   - summary: List all rollouts in the resource group
     syntax: az deploymentmanager rollout list -g rg1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
 - uid: az_deploymentmanager_rollout_restart
   name: az deploymentmanager rollout restart
   summary: Restarts the rollout.
   description: ''
+  syntax: >-
+    az deploymentmanager rollout restart --name
+                                         --resource-group
+                                         [--skip-succeeded]
+                                         [--subscription]
+                                         [--yes]
   examples:
   - summary: Restart the rollout
     syntax: az deploymentmanager rollout restart -g rg1 -n contosoServiceRollout
   - summary: Restart the rollout and skip all steps that have succeeded in the previous run
     syntax: az deploymentmanager rollout restart -g rg1 -n contosoServiceRollout --skip-succeeded
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name --rollout-name -n
     summary: The name of the rollout.
@@ -65,31 +70,32 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --skip-succeeded
     summary: Skips all the steps that have succeeded in the previous retries of this rollout.
-    description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
 - uid: az_deploymentmanager_rollout_show
   name: az deploymentmanager rollout show
   summary: Gets the rollout.
   description: ''
+  syntax: >-
+    az deploymentmanager rollout show --name
+                                      --resource-group
+                                      [--retry-attempt]
+                                      [--subscription]
   examples:
   - summary: Gets the rollout
     syntax: az deploymentmanager rollout show -g rg1 -n contosoServiceRollout
   - summary: Gets the specific retry attempt of a rollout. Shows the steps run during that attempt.
     syntax: az deploymentmanager rollout show -g rg1 -n contosoServiceRollout --retry-attempt 1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name --rollout-name -n
     summary: The name of the rollout.
@@ -98,26 +104,27 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --retry-attempt
     summary: Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
 - uid: az_deploymentmanager_rollout_stop
   name: az deploymentmanager rollout stop
   summary: Stop the rollout.
   description: ''
+  syntax: >-
+    az deploymentmanager rollout stop --name
+                                      --resource-group
+                                      [--subscription]
+                                      [--yes]
   examples:
   - summary: Stops the rollout
     syntax: az deploymentmanager rollout stop -g rg1 -n contosoServiceRollout
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name --rollout-name -n
     summary: The name of the rollout.
@@ -126,18 +133,14 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
 commands:
 - az_deploymentmanager_rollout_delete
 - az_deploymentmanager_rollout_list
@@ -160,6 +163,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/f8fcf6fe53ac8443c852afa1f4a334d732a2cea4/src/azure-cli/azure/cli/command_modules/deploymentmanager/_help.py
   updated_at: 1/30/2020 1:38:16 PM

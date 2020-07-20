@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_eventgrid_az_eventgrid_domain_private_endpoint_connection
 name: az eventgrid domain private-endpoint-connection
 summary: Manage private endpoint connection resources of a domain.
@@ -8,10 +8,15 @@ directCommands:
   name: az eventgrid domain private-endpoint-connection approve
   summary: Approve a private endpoint connection request for a domain.
   description: ''
+  syntax: >-
+    az eventgrid domain private-endpoint-connection approve --domain-name
+                                                            --name
+                                                            --resource-group
+                                                            [--description]
   examples:
   - summary: Approve a private endpoint connection for a domain.
     syntax: az eventgrid domain private-endpoint-connection approve -g rg1 --domain-name domain1 -n domain1-PrivateEndpoint.6d90cf76-a022-452c-9994-6dac62a50c99 --description "Sample approval description"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --domain-name
     summary: Name of the domain.
@@ -24,6 +29,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --description
     summary: Comments for the approval.
     description: ''
@@ -31,10 +37,14 @@ directCommands:
   name: az eventgrid domain private-endpoint-connection delete
   summary: Delete a private endpoint connection for a domain.
   description: ''
+  syntax: >-
+    az eventgrid domain private-endpoint-connection delete --domain-name
+                                                           --name
+                                                           --resource-group
   examples:
   - summary: Delete private endpoint connection for a specific domain.
     syntax: az eventgrid domain private-endpoint-connection delete -g rg1 --domain-name domain1 -n connectionName1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --domain-name
     summary: Name of the domain.
@@ -51,10 +61,13 @@ directCommands:
   name: az eventgrid domain private-endpoint-connection list
   summary: List the properties of all the private endpoint connections for a domain.
   description: ''
+  syntax: >-
+    az eventgrid domain private-endpoint-connection list --name
+                                                         --resource-group
   examples:
   - summary: List a private endpoint connection for a domain.
     syntax: az eventgrid domain private-endpoint-connection list -g rg1 -n domain1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the domain.
@@ -67,10 +80,15 @@ directCommands:
   name: az eventgrid domain private-endpoint-connection reject
   summary: Reject a private endpoint connection request for a domain.
   description: ''
+  syntax: >-
+    az eventgrid domain private-endpoint-connection reject --domain-name
+                                                           --name
+                                                           --resource-group
+                                                           [--description]
   examples:
   - summary: Reject a private endpoint connection for a domain.
     syntax: az eventgrid domain private-endpoint-connection reject -g rg1 --domain-name domain1 -n domain1-PrivateEndpoint.6d90cf76-a022-452c-9994-6dac62a50c99 --description "Sample rejection description"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --domain-name
     summary: Name of the domain.
@@ -83,6 +101,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --description
     summary: Comments for the rejection.
     description: ''
@@ -90,10 +109,14 @@ directCommands:
   name: az eventgrid domain private-endpoint-connection show
   summary: Display the properties of a private endpoint connection for a domain.
   description: ''
+  syntax: >-
+    az eventgrid domain private-endpoint-connection show --domain-name
+                                                         --name
+                                                         --resource-group
   examples:
   - summary: Show a private endpoint connection for a domain.
     syntax: az eventgrid domain private-endpoint-connection show -g rg1 --domain-name domain1 -n connectionName1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --domain-name
     summary: Name of the domain.

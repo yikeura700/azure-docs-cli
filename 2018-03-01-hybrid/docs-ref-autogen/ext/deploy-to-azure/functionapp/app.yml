@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_deploy-to-azure_az_functionapp_app
 name: az functionapp app
 summary: Commands to manage Azure Functions app.
@@ -8,6 +8,11 @@ directCommands:
   name: az functionapp app up
   summary: Deploy to Azure Functions via GitHub actions.
   description: ''
+  syntax: >-
+    az functionapp app up [--app-name]
+                          [--branch-name]
+                          [--do-not-wait]
+                          [--repository]
   examples:
   - summary: Deploy/Setup GitHub action for a GitHub Repository to Azure Function - Run interactive mode
     syntax: az functionapp app up
@@ -18,7 +23,7 @@ directCommands:
       az functionapp app up --app-name AzFunctionPythonPreProd
   - summary: Deploy/Setup GitHub action for a GitHub Repository to Azure Function
     syntax: az functionapp app up --app-name AzFunctionPythonPreProd --repository https://github.com/azure/deploy-functions
-  parameters:
+  optionalParameters:
   - name: --app-name
     summary: FunctionApp name in the subscription.
     description: ''

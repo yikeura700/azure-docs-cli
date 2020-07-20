@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_boards_area_project
 name: az boards area project
 summary: Manage areas for a project.
@@ -8,11 +8,18 @@ directCommands:
   name: az boards area project create
   summary: Create area.
   description: ''
-  parameters:
+  syntax: >-
+    az boards area project create --name
+                                  [--detect {false, true}]
+                                  [--org]
+                                  [--path]
+                                  [--project]
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: Name of the area.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -30,11 +37,18 @@ directCommands:
   name: az boards area project delete
   summary: Delete area.
   description: ''
-  parameters:
+  syntax: >-
+    az boards area project delete --path
+                                  [--detect {false, true}]
+                                  [--org]
+                                  [--project]
+                                  [--yes]
+  requiredParameters:
   - isRequired: true
     name: --path
     summary: Absolute path of an area. Example:ProjectNameAreaAreaName.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -52,7 +66,13 @@ directCommands:
   name: az boards area project list
   summary: List areas for a project.
   description: ''
-  parameters:
+  syntax: >-
+    az boards area project list [--depth]
+                                [--detect {false, true}]
+                                [--org]
+                                [--path]
+                                [--project]
+  optionalParameters:
   - name: --depth
     defaultValue: "1"
     summary: 'Depth of child nodes to be fetched. Example: --depth 3.'
@@ -74,11 +94,17 @@ directCommands:
   name: az boards area project show
   summary: Show area details for a project.
   description: ''
-  parameters:
+  syntax: >-
+    az boards area project show --id
+                                [--detect {false, true}]
+                                [--org]
+                                [--project]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: Area ID.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -93,11 +119,19 @@ directCommands:
   name: az boards area project update
   summary: Update area.
   description: Move area or update area name.
-  parameters:
+  syntax: >-
+    az boards area project update --path
+                                  [--child-id]
+                                  [--detect {false, true}]
+                                  [--name]
+                                  [--org]
+                                  [--project]
+  requiredParameters:
   - isRequired: true
     name: --path
     summary: Absolute path of an area. Example:ProjectNameAreaAreaName.
     description: ''
+  optionalParameters:
   - name: --child-id
     summary: Move an existing area and add as child node for this area.
     description: ''

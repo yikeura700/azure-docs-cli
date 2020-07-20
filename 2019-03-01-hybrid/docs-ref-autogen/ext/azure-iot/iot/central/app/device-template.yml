@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-iot_az_iot_central_app_device_template
 name: az iot central app device-template
 summary: Manage and configure IoT Central device templates.
@@ -8,12 +8,18 @@ directCommands:
   name: az iot central app device-template create
   summary: Create a device template in IoT Central.
   description: ''
+  syntax: >-
+    az iot central app device-template create --app-id
+                                              --content
+                                              --device-template-id
+                                              [--central-api-uri]
+                                              [--token]
   examples:
   - summary: Create a device template with payload read from a file
     syntax: az iot central app device-template create --app-id {appid} --content {pathtofile} --device-template-id {devicetemplateid}
   - summary: Create a device template with payload read from raw json
     syntax: az iot central app device-template create --app-id {appid} --content {json} --device-template-id {devicetemplateid}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app-id
     summary: Target App.
@@ -26,6 +32,7 @@ directCommands:
     name: --device-template-id --dtid
     summary: 'Device template id. Example: somedevicetemplate.'
     description: ''
+  optionalParameters:
   - name: --central-api-uri --central-dns-suffix
     defaultValue: azureiotcentral.com
     summary: Central dns suffix. This enables running cli commands against non public/prod environments.
@@ -37,10 +44,15 @@ directCommands:
   name: az iot central app device-template delete
   summary: Delete a device template from IoT Central.
   description: 'Note: this is expected to fail if any devices are still associated to this template.'
+  syntax: >-
+    az iot central app device-template delete --app-id
+                                              --device-template-id
+                                              [--central-api-uri]
+                                              [--token]
   examples:
   - summary: Delete a device template from IoT Central
     syntax: az iot central app device-template delete --app-id {appid} --device-template-id {devicetemplateid}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app-id
     summary: Target App.
@@ -49,6 +61,7 @@ directCommands:
     name: --device-template-id --dtid
     summary: 'Device template id. Example: somedevicetemplate.'
     description: ''
+  optionalParameters:
   - name: --central-api-uri --central-dns-suffix
     defaultValue: azureiotcentral.com
     summary: Central dns suffix. This enables running cli commands against non public/prod environments.
@@ -60,14 +73,19 @@ directCommands:
   name: az iot central app device-template list
   summary: List all device templates in IoT Central.
   description: ''
+  syntax: >-
+    az iot central app device-template list --app-id
+                                            [--central-api-uri]
+                                            [--token]
   examples:
   - summary: List all device templates
     syntax: az iot central app device-template list --app-id {appid}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app-id
     summary: Target App.
     description: ''
+  optionalParameters:
   - name: --central-api-uri --central-dns-suffix
     defaultValue: azureiotcentral.com
     summary: Central dns suffix. This enables running cli commands against non public/prod environments.
@@ -79,14 +97,19 @@ directCommands:
   name: az iot central app device-template map
   summary: Returns a mapping of device template name to device template id.
   description: ''
+  syntax: >-
+    az iot central app device-template map --app-id
+                                           [--central-api-uri]
+                                           [--token]
   examples:
   - summary: Get device template name to id mapping
     syntax: az iot central app device-template map --app-id {appid}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app-id
     summary: Target App.
     description: ''
+  optionalParameters:
   - name: --central-api-uri --central-dns-suffix
     defaultValue: azureiotcentral.com
     summary: Central dns suffix. This enables running cli commands against non public/prod environments.
@@ -98,10 +121,15 @@ directCommands:
   name: az iot central app device-template show
   summary: Get a device template from IoT Central.
   description: ''
+  syntax: >-
+    az iot central app device-template show --app-id
+                                            --device-template-id
+                                            [--central-api-uri]
+                                            [--token]
   examples:
   - summary: Get a device template
     syntax: az iot central app device-template show --app-id {appid} --device-template-id {devicetemplateid}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app-id
     summary: Target App.
@@ -110,6 +138,7 @@ directCommands:
     name: --device-template-id --dtid
     summary: 'Device template id. Example: somedevicetemplate.'
     description: ''
+  optionalParameters:
   - name: --central-api-uri --central-dns-suffix
     defaultValue: azureiotcentral.com
     summary: Central dns suffix. This enables running cli commands against non public/prod environments.

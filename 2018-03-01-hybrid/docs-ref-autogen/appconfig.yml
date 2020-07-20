@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_appconfig
 name: az appconfig
 summary: Manage App Configurations.
@@ -8,6 +8,13 @@ directCommands:
   name: az appconfig create
   summary: Create an App Configuration.
   description: ''
+  syntax: >-
+    az appconfig create --location
+                        --name
+                        --resource-group
+                        --sku {free, standard}
+                        [--assign-identity]
+                        [--subscription]
   examples:
   - summary: Create an App Configuration with name, location, sku and resource group.
     syntax: az appconfig create -g MyResourceGroup -n MyAppConfiguration -l westus --sku Standard
@@ -15,7 +22,7 @@ directCommands:
     syntax: az appconfig create -g MyResourceGroup -n MyAppConfiguration -l westus --sku Standard --assign-identity
   - summary: Create an App Configuration with name, location, sku and resource group with user assigned identity.
     syntax: az appconfig create -g MyResourceGroup -n MyAppConfiguration -l westus --sku Standard --assign-identity /subscriptions/<SUBSCRIPTON ID>/resourcegroups/<RESOURCEGROUP>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myUserAssignedIdentity
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -33,93 +40,98 @@ directCommands:
     parameterValueGroup: free, standard
     summary: The sku of App Configuration.
     description: ''
+  optionalParameters:
   - name: --assign-identity
     summary: Accept system or user assigned identities separated by spaces. Use '[system]' to refer system assigned identity or a resource id to refer user assigned identity. Use system assigned identity if not specified.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 - uid: az_appconfig_delete
   name: az appconfig delete
   summary: Delete an App Configuration.
   description: ''
+  syntax: >-
+    az appconfig delete --name
+                        [--resource-group]
+                        [--subscription]
+                        [--yes]
   examples:
   - summary: Delete an App Configuration under resource group
     syntax: az appconfig delete -g MyResourceGroup -n MyAppConfiguration
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 - uid: az_appconfig_list
   name: az appconfig list
   summary: Lists all App Configurations under the current subscription.
   description: ''
+  syntax: >-
+    az appconfig list [--resource-group]
+                      [--subscription]
   examples:
   - summary: List all App Configurations under a resource group
     syntax: az appconfig list -g MyResourceGroup
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 - uid: az_appconfig_show
   name: az appconfig show
   summary: Show properties of an App Configuration.
   description: ''
+  syntax: >-
+    az appconfig show --name
+                      [--resource-group]
+                      [--subscription]
   examples:
   - summary: Show properties of an App Configuration
     syntax: az appconfig show -g MyResourceGroup -n MyAppConfiguration
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 - uid: az_appconfig_update
   name: az appconfig update
   summary: Update an App Configuration.
   description: ''
+  syntax: >-
+    az appconfig update --name
+                        [--encryption-key-name]
+                        [--encryption-key-vault]
+                        [--encryption-key-version]
+                        [--identity-client-id]
+                        [--resource-group]
+                        [--sku {free, standard}]
+                        [--subscription]
+                        [--tags]
   examples:
   - summary: Update tags of an App Configuration
     syntax: az appconfig update -g MyResourceGroup -n MyAppConfiguration --tags key1=value1 key2=value2
@@ -129,21 +141,12 @@ directCommands:
     syntax: az appconfig update -g MyResourceGroup -n MyAppConfiguration --encryption-key-name myKey --encryption-key-version keyVersion --encryption-key-vault https://keyVaultName.vault.azure.net
   - summary: Remove customer encryption key
     syntax: az appconfig update -g MyResourceGroup -n MyAppConfiguration --encryption-key-name ""
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --sku
-    parameterValueGroup: free, standard
-    summary: The sku of App Configuration.
-    description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
+  optionalParameters:
   - name: --encryption-key-name
     summary: The name of the KeyVault key.
     description: ''
@@ -156,15 +159,20 @@ directCommands:
   - name: --identity-client-id
     summary: Client ID of the managed identity with wrap and unwrap access to encryption key. Use system assigned identity by default.
     description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --sku
+    parameterValueGroup: free, standard
+    summary: The sku of App Configuration.
+    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 commands:
 - az_appconfig_create
 - az_appconfig_credential
@@ -221,6 +229,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/26e341bd9ce989aa68defdb81ceede36b6c5ba6f/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   updated_at: 5/7/2020 7:45:43 AM

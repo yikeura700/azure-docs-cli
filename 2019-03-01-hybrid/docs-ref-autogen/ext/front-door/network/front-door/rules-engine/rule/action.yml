@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_front-door_az_network_front_door_rules_engine_rule_action
 name: az network front-door rules-engine rule action
 summary: Manage Rules Engine actions for Front Door.
@@ -8,7 +8,35 @@ directCommands:
   name: az network front-door rules-engine rule action add
   summary: Add an action to a Rules Engine rule.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door rules-engine rule action add --action-type {ForwardRouteOverride, RedirectRouteOverride, RequestHeader, ResponseHeader}
+                                                       --front-door-name
+                                                       --name
+                                                       --resource-group
+                                                       --rules-engine-name
+                                                       [--backend-pool]
+                                                       [--cache-duration]
+                                                       [--caching {Disabled, Enabled}]
+                                                       [--custom-forwarding-path]
+                                                       [--custom-fragment]
+                                                       [--custom-host]
+                                                       [--custom-path]
+                                                       [--custom-query-string]
+                                                       [--dynamic-compression {Disabled, Enabled}]
+                                                       [--forwarding-protocol {HttpOnly, HttpsOnly, MatchRequest}]
+                                                       [--header-action {Append, Delete, Overwrite}]
+                                                       [--header-name]
+                                                       [--header-value]
+                                                       [--query-parameters]
+                                                       [--query-parameter-strip-directive {StripAll, StripAllExcept, StripNone, StripOnly}]
+                                                       [--redirect-protocol {HttpOnly, HttpsOnly, MatchRequest}]
+                                                       [--redirect-type {Found, Moved, PermanentRedirect, TemporaryRedirect}]
+  requiredParameters:
+  - isRequired: true
+    name: --action-type
+    parameterValueGroup: ForwardRouteOverride, RedirectRouteOverride, RequestHeader, ResponseHeader
+    summary: Action type to apply for a rule.
+    description: ''
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -25,21 +53,7 @@ directCommands:
     name: --rules-engine-name -r
     summary: Name of the Rules Engine.
     description: ''
-  - isRequired: true
-    name: --action-type
-    parameterValueGroup: ForwardRouteOverride, RedirectRouteOverride, RequestHeader, ResponseHeader
-    summary: Action type to apply for a rule.
-    description: ''
-  - name: --header-action
-    parameterValueGroup: Append, Delete, Overwrite
-    summary: Header action type for the requests.
-    description: ''
-  - name: --header-name
-    summary: Name of the header to modify.
-    description: ''
-  - name: --header-value
-    summary: Value of the header.
-    description: ''
+  optionalParameters:
   - name: --backend-pool
     summary: Name or ID of a backend pool.
     description: ''
@@ -53,21 +67,6 @@ directCommands:
   - name: --custom-forwarding-path
     summary: Custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
     description: ''
-  - name: --dynamic-compression
-    parameterValueGroup: Disabled, Enabled
-    summary: Use dynamic compression for cached content.
-    description: ''
-  - name: --forwarding-protocol
-    parameterValueGroup: HttpOnly, HttpsOnly, MatchRequest
-    summary: Protocol to use for forwarding traffic.
-    description: ''
-  - name: --query-parameter-strip-directive
-    parameterValueGroup: StripAll, StripAllExcept, StripNone, StripOnly
-    summary: Treatment of URL query terms when forming the cache key.
-    description: ''
-  - name: --query-parameters
-    summary: Query parameters to include or exclude (comma separated) when using query-parameter-strip-directive type StripAllExcept or StripOnly respectively.
-    description: ''
   - name: --custom-fragment
     summary: 'Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.'
     description: ''
@@ -79,6 +78,31 @@ directCommands:
     description: ''
   - name: --custom-query-string
     summary: The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
+    description: ''
+  - name: --dynamic-compression
+    parameterValueGroup: Disabled, Enabled
+    summary: Use dynamic compression for cached content.
+    description: ''
+  - name: --forwarding-protocol
+    parameterValueGroup: HttpOnly, HttpsOnly, MatchRequest
+    summary: Protocol to use for forwarding traffic.
+    description: ''
+  - name: --header-action
+    parameterValueGroup: Append, Delete, Overwrite
+    summary: Header action type for the requests.
+    description: ''
+  - name: --header-name
+    summary: Name of the header to modify.
+    description: ''
+  - name: --header-value
+    summary: Value of the header.
+    description: ''
+  - name: --query-parameters
+    summary: Query parameters to include or exclude (comma separated) when using query-parameter-strip-directive type StripAllExcept or StripOnly respectively.
+    description: ''
+  - name: --query-parameter-strip-directive
+    parameterValueGroup: StripAll, StripAllExcept, StripNone, StripOnly
+    summary: Treatment of URL query terms when forming the cache key.
     description: ''
   - name: --redirect-protocol
     defaultValue: MatchRequest
@@ -94,7 +118,12 @@ directCommands:
   name: az network front-door rules-engine rule action list
   summary: Show all actions that apply for a Rules Engine rule.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door rules-engine rule action list --front-door-name
+                                                        --name
+                                                        --resource-group
+                                                        --rules-engine-name
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -115,7 +144,19 @@ directCommands:
   name: az network front-door rules-engine rule action remove
   summary: Remove an action from a Rules Engine rule.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door rules-engine rule action remove --action-type {ForwardRouteOverride, RedirectRouteOverride, RequestHeader, ResponseHeader}
+                                                          --front-door-name
+                                                          --name
+                                                          --resource-group
+                                                          --rules-engine-name
+                                                          [--index]
+  requiredParameters:
+  - isRequired: true
+    name: --action-type
+    parameterValueGroup: ForwardRouteOverride, RedirectRouteOverride, RequestHeader, ResponseHeader
+    summary: Action type to apply for a rule.
+    description: ''
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -132,13 +173,9 @@ directCommands:
     name: --rules-engine-name -r
     summary: Name of the Rules Engine.
     description: ''
+  optionalParameters:
   - name: --index
     summary: 0-based index of the request or response header action to remove. Index parameter is not required for "ForwardRouteOverride" or "RedirectRouteOverride" action remove.
-    description: ''
-  - isRequired: true
-    name: --action-type
-    parameterValueGroup: ForwardRouteOverride, RedirectRouteOverride, RequestHeader, ResponseHeader
-    summary: Action type to apply for a rule.
     description: ''
 commands:
 - ext_front-door_az_network_front_door_rules_engine_rule_action_add

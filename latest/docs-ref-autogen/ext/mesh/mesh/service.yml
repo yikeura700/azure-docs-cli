@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_mesh_az_mesh_service
 name: az mesh service
 summary: Manage Service Fabric Mesh services.
@@ -8,7 +8,10 @@ directCommands:
   name: az mesh service list
   summary: Lists all the service resources.
   description: Gets the information about all services of an application resource. The information include the description and other properties of the Service.
-  parameters:
+  syntax: >-
+    az mesh service list --app-name
+                         --resource-group
+  requiredParameters:
   - isRequired: true
     name: --app-name --application-name
     summary: The name of the application.
@@ -21,7 +24,11 @@ directCommands:
   name: az mesh service show
   summary: Get the details of a service.
   description: ''
-  parameters:
+  syntax: >-
+    az mesh service show --app-name
+                         --name
+                         --resource-group
+  requiredParameters:
   - isRequired: true
     name: --app-name --application-name
     summary: The name of the application.

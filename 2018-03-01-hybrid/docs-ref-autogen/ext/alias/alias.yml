@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_alias_az_alias
 name: az alias
 summary: Manage Azure CLI Aliases.
@@ -8,6 +8,9 @@ directCommands:
   name: az alias create
   summary: Create an alias.
   description: ''
+  syntax: >-
+    az alias create --command
+                    --name
   examples:
   - summary: Create simple alias commands.
     syntax: >-
@@ -27,7 +30,7 @@ directCommands:
         --command 'storage blob list
           --account-name {{ url.replace("https://", "").split(".")[0] }}
           --container-name {{ url.replace("https://", "").split("/")[1] }}'
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --command -c
     summary: The command that the alias points to.
@@ -40,7 +43,10 @@ directCommands:
   name: az alias export
   summary: Export all registered aliases to a given path, as an INI configuration file. If no export path is specified, the alias configuration file is exported to the current working directory.
   description: ''
-  parameters:
+  syntax: >-
+    az alias export [--exclude]
+                    [--path]
+  optionalParameters:
   - name: --exclude -e
     summary: Space-separated aliases excluded from export.
     description: ''
@@ -51,7 +57,8 @@ directCommands:
   name: az alias import
   summary: Import aliases from an INI configuration file or an URL.
   description: ''
-  parameters:
+  syntax: az alias import --source
+  requiredParameters:
   - isRequired: true
     name: --source -s
     summary: The source of the aliases to import from.
@@ -60,12 +67,13 @@ directCommands:
   name: az alias list
   summary: List the registered aliases.
   description: ''
-  parameters: []
+  syntax: az alias list
 - uid: ext_alias_az_alias_remove
   name: az alias remove
   summary: Remove one or more aliases. Aliases to be removed are space-delimited.
   description: ''
-  parameters:
+  syntax: az alias remove --name
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Space-separated aliases.
@@ -74,7 +82,8 @@ directCommands:
   name: az alias remove-all
   summary: Remove all registered aliases.
   description: ''
-  parameters:
+  syntax: az alias remove-all [--yes]
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''

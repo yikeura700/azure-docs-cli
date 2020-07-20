@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-ml_az_ml_run
 name: az ml run
 summary: Commands for submitting, updating, and monitoring runs.
@@ -8,11 +8,20 @@ directCommands:
   name: az ml run cancel
   summary: Cancel run.
   description: ''
-  parameters:
+  syntax: >-
+    az ml run cancel --run
+                     [--experiment-name]
+                     [--output-metadata-file]
+                     [--path]
+                     [--resource-group]
+                     [--subscription-id]
+                     [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --run -r
     summary: The runId of an experiment run.
     description: ''
+  optionalParameters:
   - name: --experiment-name -e
     summary: Experiment name.
     description: ''
@@ -36,7 +45,16 @@ directCommands:
   name: az ml run download-logs
   summary: Download log files.
   description: ''
-  parameters:
+  syntax: >-
+    az ml run download-logs --output-dir
+                            --run
+                            [--experiment-name]
+                            [--output-metadata-file]
+                            [--path]
+                            [--resource-group]
+                            [--subscription-id]
+                            [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --output-dir -d
     summary: Output directory to download log files to.
@@ -45,6 +63,7 @@ directCommands:
     name: --run -r
     summary: The runId of an experiment run.
     description: ''
+  optionalParameters:
   - name: --experiment-name -e
     summary: Experiment name.
     description: ''
@@ -68,7 +87,21 @@ directCommands:
   name: az ml run list
   summary: List runs.
   description: ''
-  parameters:
+  syntax: >-
+    az ml run list [--compute-target-name]
+                   [--experiment-name]
+                   [--last]
+                   [--minimal]
+                   [--output-metadata-file]
+                   [--parent-run-id]
+                   [--path]
+                   [--pipeline-run-id]
+                   [--resource-group]
+                   [--status {Completed, Failed, Finalizing, Preparing, Provisioning, Queued, Running, Starting}]
+                   [--subscription-id]
+                   [--tags]
+                   [--workspace-name]
+  optionalParameters:
   - name: --compute-target-name
     summary: The compute target name.
     description: ''
@@ -115,11 +148,20 @@ directCommands:
   name: az ml run monitor-logs
   summary: Monitor the logs for an existing run.
   description: ''
-  parameters:
+  syntax: >-
+    az ml run monitor-logs --run
+                           [--experiment-name]
+                           [--output-metadata-file]
+                           [--path]
+                           [--resource-group]
+                           [--subscription-id]
+                           [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --run -r
     summary: The runId of an experiment run.
     description: ''
+  optionalParameters:
   - name: --experiment-name -e
     summary: Experiment name.
     description: ''
@@ -143,11 +185,21 @@ directCommands:
   name: az ml run monitor-tensorboard
   summary: Monitor an existing run using tensorboard.
   description: ''
-  parameters:
+  syntax: >-
+    az ml run monitor-tensorboard --run
+                                  [--experiment-name]
+                                  [--local-directory]
+                                  [--output-metadata-file]
+                                  [--path]
+                                  [--resource-group]
+                                  [--subscription-id]
+                                  [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --run -r
     summary: The runId of an experiment run.
     description: ''
+  optionalParameters:
   - name: --experiment-name -e
     summary: Experiment name.
     description: ''
@@ -174,11 +226,20 @@ directCommands:
   name: az ml run show
   summary: Show run.
   description: ''
-  parameters:
+  syntax: >-
+    az ml run show --run
+                   [--experiment-name]
+                   [--output-metadata-file]
+                   [--path]
+                   [--resource-group]
+                   [--subscription-id]
+                   [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --run -r
     summary: The runId of an experiment run.
     description: ''
+  optionalParameters:
   - name: --experiment-name -e
     summary: Experiment name.
     description: ''
@@ -202,10 +263,28 @@ directCommands:
   name: az ml run submit-hyperdrive
   summary: Submit a hyper parameter sweep using run config.
   description: ''
-  parameters:
+  syntax: >-
+    az ml run submit-hyperdrive --hyperdrive-configuration-name
+                                [<USER_SCRIPT_AND_ARGUMENTS>]
+                                [--async]
+                                [--conda-dependencies]
+                                [--ct]
+                                [--experiment-name]
+                                [--output-metadata-file]
+                                [--path]
+                                [--resource-group]
+                                [--run-configuration-name]
+                                [--source-directory]
+                                [--subscription-id]
+                                [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --hyperdrive-configuration-name
     summary: The full name of the hyperdrive configuration file. The file should be in a sub-folder of the directory specified by the path parameter.
+    description: ''
+  optionalParameters:
+  - name: <USER_SCRIPT_AND_ARGUMENTS>
+    summary: The run submit arguments, like script name and script arguments.
     description: ''
   - name: --async
     summary: Disable output streaming.
@@ -241,25 +320,34 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-  - name: <USER_SCRIPT_AND_ARGUMENTS>
-    summary: The run submit arguments, like script name and script arguments.
-    description: ''
 - uid: ext_azure-cli-ml_az_ml_run_submit_pipeline
   name: az ml run submit-pipeline
   summary: Submit a pipeline for execution, from a published pipeline ID or pipeline YAML file.
   description: ''
-  parameters:
+  syntax: >-
+    az ml run submit-pipeline [--datapaths]
+                              [--experiment-name]
+                              [--output_file]
+                              [--output-metadata-file]
+                              [--parameters]
+                              [--path]
+                              [--pipeline-id]
+                              [--pipeline-yaml]
+                              [--resource-group]
+                              [--subscription-id]
+                              [--workspace-name]
+  optionalParameters:
   - name: --datapaths -d
     summary: Comma-separated list of name=datastore/path pairs for datapath parameter assignments.
     description: ''
   - name: --experiment-name -n
     summary: Experiment name for run submission. If unspecified, use the pipeline name.
     description: ''
-  - name: --output-metadata-file -t
-    summary: Provide an optional output file location for structured object output.
-    description: ''
   - name: --output_file -f
     summary: File to write output in JSON format.
+    description: ''
+  - name: --output-metadata-file -t
+    summary: Provide an optional output file location for structured object output.
     description: ''
   - name: --parameters -p
     summary: Comma-separated list of name=value pairs for pipeline parameter assignments.
@@ -287,7 +375,23 @@ directCommands:
   name: az ml run submit-script
   summary: Submit a script for execution.
   description: ''
-  parameters:
+  syntax: >-
+    az ml run submit-script [<USER_SCRIPT_AND_ARGUMENTS>]
+                            [--async]
+                            [--conda-dependencies]
+                            [--ct]
+                            [--experiment-name]
+                            [--output-metadata-file]
+                            [--path]
+                            [--resource-group]
+                            [--run-configuration-name]
+                            [--source-directory]
+                            [--subscription-id]
+                            [--workspace-name]
+  optionalParameters:
+  - name: <USER_SCRIPT_AND_ARGUMENTS>
+    summary: The run submit arguments, like script name and script arguments.
+    description: ''
   - name: --async
     summary: Disable output streaming.
     description: ''
@@ -322,18 +426,25 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-  - name: <USER_SCRIPT_AND_ARGUMENTS>
-    summary: The run submit arguments, like script name and script arguments.
-    description: ''
 - uid: ext_azure-cli-ml_az_ml_run_update
   name: az ml run update
   summary: Update the run by adding tags.
   description: ''
-  parameters:
+  syntax: >-
+    az ml run update --run
+                     [--add-tag]
+                     [--experiment-name]
+                     [--output-metadata-file]
+                     [--path]
+                     [--resource-group]
+                     [--subscription-id]
+                     [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --run -r
     summary: The runId of an experiment run.
     description: ''
+  optionalParameters:
   - name: --add-tag
     summary: Tag the entitiy with 'key[=value]' syntax.
     description: ''

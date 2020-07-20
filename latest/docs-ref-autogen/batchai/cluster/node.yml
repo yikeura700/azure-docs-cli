@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_batchai_cluster_node
 name: az batchai cluster node
 summary: Commands to work with cluster nodes.
@@ -8,6 +8,16 @@ directCommands:
   name: az batchai cluster node exec
   summary: Executes a command line on a cluster's node with optional ports forwarding.
   description: ''
+  syntax: >-
+    az batchai cluster node exec --cluster
+                                 --resource-group
+                                 --workspace
+                                 [--address]
+                                 [--exec]
+                                 [--node-id]
+                                 [--password]
+                                 [--ssh-private-key]
+                                 [--subscription]
   examples:
   - summary: Report a snapshot of the current processes.
     syntax: >-
@@ -21,7 +31,7 @@ directCommands:
     syntax: >-
       az batchai cluster node exec -g MyResourceGroup -w MyWorkspace -c MyCluster \
           -n tvm-xxx -L 9000:localhost:9001
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster -c
     summary: Name of cluster.
@@ -34,6 +44,7 @@ directCommands:
     name: --workspace -w
     summary: Name of workspace.
     description: ''
+  optionalParameters:
   - name: --address -L
     summary: Specifies that connections to the given TCP port or Unix socket on the local (client) host are to be forwarded to the given host and port, or Unix socket, on the remote side. e.g. -L 8080:localhost:8080.
     description: ''
@@ -52,20 +63,20 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
 - uid: az_batchai_cluster_node_list
   name: az batchai cluster node list
   summary: List remote login information for cluster's nodes.
   description: List remote login information for cluster nodes. You can ssh to a particular node using the provided public IP address and the port number. E.g. ssh <admin user name>@<public ip> -p <node's SSH port number>.
+  syntax: >-
+    az batchai cluster node list --cluster
+                                 --resource-group
+                                 --workspace
+                                 [--subscription]
   examples:
   - summary: List remote login information for a cluster.
     syntax: az batchai cluster node list -g MyResourceGroup -w MyWorkspace -c MyCluster -o table
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster -c
     summary: Name of cluster.
@@ -78,15 +89,11 @@ directCommands:
     name: --workspace -w
     summary: Name of workspace.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
 commands:
 - az_batchai_cluster_node_exec
 - az_batchai_cluster_node_list
@@ -106,6 +113,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e1102d37a891598da84f80ba091b89a7532b90aa/src/azure-cli/azure/cli/command_modules/batchai/_help.py
   updated_at: 10/19/2019 10:02:34 AM

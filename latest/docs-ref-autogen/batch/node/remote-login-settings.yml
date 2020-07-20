@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_batch_node_remote_login_settings
 name: az batch node remote-login-settings
 summary: Retrieve the remote login settings for a Batch compute node.
@@ -8,7 +8,14 @@ directCommands:
   name: az batch node remote-login-settings show
   summary: Gets the settings required for remote login to a Compute Node.
   description: Before you can remotely login to a Compute Node using the remote login settings, you must create a user Account on the Compute Node. This API can be invoked only on Pools created with the virtual machine configuration property. For Pools created with a cloud service configuration, see the GetRemoteDesktop API.
-  parameters:
+  syntax: >-
+    az batch node remote-login-settings show --node-id
+                                             --pool-id
+                                             [--account-endpoint]
+                                             [--account-key]
+                                             [--account-name]
+                                             [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --node-id
     summary: The ID of the Compute Node for which to obtain the remote login settings.
@@ -17,6 +24,7 @@ directCommands:
     name: --pool-id
     summary: The ID of the Pool that contains the Compute Node.
     description: ''
+  optionalParameters:
   - name: --account-endpoint
     summary: 'Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT.'
     description: ''
@@ -29,12 +37,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
 commands:
 - az_batch_node_remote_login_settings_show
 globalParameters:
@@ -53,6 +56,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e1102d37a891598da84f80ba091b89a7532b90aa/src/azure-cli/azure/cli/command_modules/batch/_help.py
   updated_at: 10/19/2019 10:02:34 AM

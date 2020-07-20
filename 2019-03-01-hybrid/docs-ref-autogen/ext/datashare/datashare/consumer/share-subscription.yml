@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datashare_az_datashare_consumer_share_subscription
 name: az datashare consumer share-subscription
 summary: Commands for consumers to manage datashare share subscriptions.
@@ -8,10 +8,16 @@ directCommands:
   name: az datashare consumer share-subscription create
   summary: Create a share subscription in an account.
   description: ''
+  syntax: >-
+    az datashare consumer share-subscription create --account-name
+                                                    --invitation-id
+                                                    --name
+                                                    --resource-group
+                                                    --source-share-location
   examples:
   - summary: Create a share subscription
     syntax: az datashare consumer share-subscription create --account-name MyAccount --resource-group MyResourceGroup --invitation-id 00000000-0000-0000-0000-000000000000 --source-share-location "eastus2" --name MyShareSubscription
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -36,10 +42,16 @@ directCommands:
   name: az datashare consumer share-subscription delete
   summary: Delete a share subscription in an account.
   description: ''
+  syntax: >-
+    az datashare consumer share-subscription delete --account-name
+                                                    --name
+                                                    --resource-group
+                                                    [--no-wait]
+                                                    [--yes]
   examples:
   - summary: Delete a share subscription
     syntax: az datashare consumer share-subscription delete --account-name MyAccount --resource-group MyResourceGroup --name MyShareSubscription
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -52,6 +64,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -62,10 +75,13 @@ directCommands:
   name: az datashare consumer share-subscription list
   summary: List share subscriptions in an account.
   description: ''
+  syntax: >-
+    az datashare consumer share-subscription list --account-name
+                                                  --resource-group
   examples:
   - summary: List share subscriptions
     syntax: az datashare consumer share-subscription list --account-name MyAccount --resource-group MyResourceGroup
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -78,10 +94,14 @@ directCommands:
   name: az datashare consumer share-subscription list-source-dataset
   summary: List source datasets of a share subscription.
   description: ''
+  syntax: >-
+    az datashare consumer share-subscription list-source-dataset --account-name
+                                                                 --resource-group
+                                                                 --share-subscription-name
   examples:
   - summary: List source datasets
     syntax: az datashare consumer share-subscription list-source-dataset --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -98,10 +118,14 @@ directCommands:
   name: az datashare consumer share-subscription list-source-share-synchronization-setting
   summary: List synchronization settings set on a share.
   description: ''
+  syntax: >-
+    az datashare consumer share-subscription list-source-share-synchronization-setting --account-name
+                                                                                       --resource-group
+                                                                                       --share-subscription-name
   examples:
   - summary: List synchronization settings
     syntax: az datashare consumer share-subscription list-source-share-synchronization-setting --account-name MyAccount --resource-group MyResourceGroup --share-subscription-name MyShareSub
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -118,10 +142,14 @@ directCommands:
   name: az datashare consumer share-subscription show
   summary: Show a share subscription in an account.
   description: ''
+  syntax: >-
+    az datashare consumer share-subscription show --account-name
+                                                  --name
+                                                  --resource-group
   examples:
   - summary: Show a share subscription
     syntax: az datashare consumer share-subscription show --account-name MyAccount --resource-group MyResourceGroup --name MyShareSubscription
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -138,10 +166,21 @@ directCommands:
   name: az datashare consumer share-subscription wait
   summary: Place the CLI in a waiting state until a condition of the datashare share subscription is met.
   description: ''
+  syntax: >-
+    az datashare consumer share-subscription wait --account-name
+                                                  --name
+                                                  --resource-group
+                                                  [--created]
+                                                  [--custom]
+                                                  [--deleted]
+                                                  [--exists]
+                                                  [--interval]
+                                                  [--timeout]
+                                                  [--updated]
   examples:
   - summary: Pause executing next line of CLI script until the datashare share subscription is successfully provisioned.
     syntax: az datashare consumer share-subscription wait --account-name MyAccount --resource-group MyResourceGroup --name MyShareSubscription --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -154,6 +193,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_notification-hub_az_notification_hub
 name: az notification-hub
 summary: Manage Notification Hubs.
@@ -8,13 +8,17 @@ directCommands:
   name: az notification-hub check-availability
   summary: Check the availability of the given notificationHub in a namespace.
   description: ''
+  syntax: >-
+    az notification-hub check-availability --name
+                                           --namespace-name
+                                           --resource-group
   examples:
   - summary: Check the availability of the given notificationHub name
     syntax: >-
       az notification-hub check-availability --resource-group MyResourceGroup \
 
       --namespace-name "locp-newns" --name my-hub
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The notification hub name to check.
@@ -31,13 +35,20 @@ directCommands:
   name: az notification-hub create
   summary: Create a NotificationHub in a namespace.
   description: ''
+  syntax: >-
+    az notification-hub create --location
+                               --name
+                               --namespace-name
+                               --resource-group
+                               [--registration-ttl]
+                               [--tags]
   examples:
   - summary: Create a Notification Hub
     syntax: >-
       az notification-hub create --resource-group MyResourceGroup --namespace-name my-namespace \
 
       --name my-hub --location "South Central US"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -54,6 +65,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --registration-ttl
     summary: The RegistrationTtl of the created NotificationHub.
     description: ''
@@ -64,13 +76,18 @@ directCommands:
   name: az notification-hub delete
   summary: Delete a notification hub associated with a namespace.
   description: ''
+  syntax: >-
+    az notification-hub delete --name
+                               --namespace-name
+                               --resource-group
+                               [--yes]
   examples:
   - summary: Delete a notification hub
     syntax: >-
       az notification-hub delete --resource-group MyResourceGroup --namespace-name my-namespace \
 
       --name my-hub
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The notification hub name.
@@ -83,6 +100,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -90,10 +108,13 @@ directCommands:
   name: az notification-hub list
   summary: List the notification hubs associated with a namespace.
   description: ''
+  syntax: >-
+    az notification-hub list --namespace-name
+                             --resource-group
   examples:
   - summary: List the notification hubs
     syntax: az notification-hub list --resource-group MyResourceGroup --namespace-name my-namespace
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --namespace-name
     summary: The namespace name.
@@ -106,13 +127,17 @@ directCommands:
   name: az notification-hub show
   summary: Show the notification hub information.
   description: ''
+  syntax: >-
+    az notification-hub show --name
+                             --namespace-name
+                             --resource-group
   examples:
   - summary: Show the Notification Hub info
     syntax: >-
       az notification-hub show --resource-group MyResourceGroup --namespace-name my-namespace \
 
       --name my-hub
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The notification hub name.
@@ -129,6 +154,15 @@ directCommands:
   name: az notification-hub test-send
   summary: Test send a push notification.
   description: ''
+  syntax: >-
+    az notification-hub test-send --namespace-name
+                                  --notification-format {apple, baidu, gcm, template, windows, windowsphone}
+                                  --notification-hub-name
+                                  --resource-group
+                                  [--message]
+                                  [--payload]
+                                  [--tag]
+                                  [--title]
   examples:
   - summary: test send notification with message body
     syntax: >-
@@ -151,7 +185,7 @@ directCommands:
       my-namespace --notification-hub-name my-hub --notification-format gcm \
 
       --payload "{\"data\":{\"message\":\"test notification\"}}"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --namespace-name
     summary: The namespace name.
@@ -169,6 +203,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --message
     summary: The message body to send. If not None, payload will be ignored.
     description: ''
@@ -185,13 +220,18 @@ directCommands:
   name: az notification-hub update
   summary: Update a Notification Hub in a namespace.
   description: ''
+  syntax: >-
+    az notification-hub update --name
+                               --namespace-name
+                               --resource-group
+                               [--tags]
   examples:
   - summary: Update the Notification Hub
     syntax: >-
       az notification-hub update --resource-group MyResourceGroup --namespace-name \
 
       my-namespace --name "sdk-notificationHubs-8708"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The notification hub name.
@@ -204,6 +244,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''

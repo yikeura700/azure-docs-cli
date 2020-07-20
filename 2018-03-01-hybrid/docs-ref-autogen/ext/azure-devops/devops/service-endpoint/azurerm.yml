@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_devops_service_endpoint_azurerm
 name: az devops service-endpoint azurerm
 summary: Manage Azure RM service endpoints/connections.
@@ -8,7 +8,17 @@ directCommands:
   name: az devops service-endpoint azurerm create
   summary: Create an Azure RM type service endpoint.
   description: For automation, set service principal password/secret in AZURE_DEVOPS_EXT_AZURE_RM_SERVICE_PRINCIPAL_KEY environment variable. You can learn more about this at <a href="https://aka.ms/azure-devops-cli-azurerm-service-endpoint">https://aka.ms/azure-devops-cli-azurerm-service-endpoint</a>.
-  parameters:
+  syntax: >-
+    az devops service-endpoint azurerm create --azure-rm-service-principal-id
+                                              --azure-rm-subscription-id
+                                              --azure-rm-subscription-name
+                                              --azure-rm-tenant-id
+                                              --name
+                                              [--azure-rm-service-principal-certificate-path]
+                                              [--detect {false, true}]
+                                              [--org]
+                                              [--project]
+  requiredParameters:
   - isRequired: true
     name: --azure-rm-service-principal-id
     summary: Service principal id for creating azure rm service endpoint.
@@ -29,6 +39,7 @@ directCommands:
     name: --name
     summary: Name of service endpoint to create.
     description: ''
+  optionalParameters:
   - name: --azure-rm-service-principal-certificate-path
     summary: 'Path to (.pem) which is certificate. Create using command "openssl pkcs12 -in file.pfx -out file.pem -nodes -password pass:<password_here>". More details : <a href="https://aka.ms/azure-devops-cli-azurerm-service-endpoint">https://aka.ms/azure-devops-cli-azurerm-service-endpoint</a>.'
     description: ''

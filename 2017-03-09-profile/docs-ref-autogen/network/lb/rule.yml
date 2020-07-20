@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_lb_rule
 name: az network lb rule
 summary: Manage load balancing rules.
@@ -8,6 +8,20 @@ directCommands:
   name: az network lb rule create
   summary: Create a load balancing rule.
   description: ''
+  syntax: >-
+    az network lb rule create --backend-port
+                              --frontend-port
+                              --lb-name
+                              --name
+                              --protocol {Tcp, Udp}
+                              --resource-group
+                              [--backend-pool-name]
+                              [--floating-ip {false, true}]
+                              [--frontend-ip-name]
+                              [--idle-timeout]
+                              [--load-distribution {Default, SourceIP, SourceIPProtocol}]
+                              [--probe-name]
+                              [--subscription]
   examples:
   - summary: Create a load balancing rule that assigns a front-facing IP configuration and port to an address pool and port.
     syntax: >-
@@ -24,7 +38,7 @@ directCommands:
       az network lb rule create -g MyResourceGroup --lb-name MyLb -n MyHAPortsRule \
           --protocol All --frontend-port 0 --backend-port 0 --frontend-ip-name MyFrontendIp \
           --backend-pool-name MyAddressPool
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --backend-port
     summary: Port number.
@@ -50,6 +64,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --backend-pool-name
     summary: The name of the backend address pool. If only one exists, omit to use as default.
     description: ''
@@ -74,20 +89,20 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_lb_rule_delete
   name: az network lb rule delete
   summary: Delete a load balancing rule.
   description: ''
+  syntax: >-
+    az network lb rule delete --lb-name
+                              --name
+                              --resource-group
+                              [--subscription]
   examples:
   - summary: Delete a load balancing rule.
     syntax: az network lb rule delete -g MyResourceGroup --lb-name MyLb -n MyLbRule
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --lb-name
     summary: The name of the load balancer.
@@ -100,23 +115,23 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_lb_rule_list
   name: az network lb rule list
   summary: List load balancing rules.
   description: ''
+  syntax: >-
+    az network lb rule list --lb-name
+                            --resource-group
+                            [--subscription]
   examples:
   - summary: List load balancing rules.
     syntax: az network lb rule list -g MyResourceGroup --lb-name MyLb -o table
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --lb-name
     summary: The name of the load balancer.
@@ -125,23 +140,24 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_lb_rule_show
   name: az network lb rule show
   summary: Get the details of a load balancing rule.
   description: ''
+  syntax: >-
+    az network lb rule show --lb-name
+                            --name
+                            --resource-group
+                            [--subscription]
   examples:
   - summary: Get the details of a load balancing rule.
     syntax: az network lb rule show -g MyResourceGroup --lb-name MyLb -n MyLbRule
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --lb-name
     summary: The name of the load balancer.
@@ -154,19 +170,34 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_lb_rule_update
   name: az network lb rule update
   summary: Update a load balancing rule.
   description: ''
+  syntax: >-
+    az network lb rule update [--add]
+                              [--backend-pool-name]
+                              [--backend-port]
+                              [--floating-ip {false, true}]
+                              [--force-string]
+                              [--frontend-ip-name]
+                              [--frontend-port]
+                              [--idle-timeout]
+                              [--ids]
+                              [--lb-name]
+                              [--load-distribution {Default, SourceIP, SourceIPProtocol}]
+                              [--name]
+                              [--probe-name]
+                              [--protocol {Tcp, Udp}]
+                              [--remove]
+                              [--resource-group]
+                              [--set]
+                              [--subscription]
   examples:
   - summary: Update a load balancing rule to change the protocol to UDP.
     syntax: az network lb rule update -g MyResourceGroup --lb-name MyLb -n MyLbRule --protocol Udp
@@ -174,7 +205,10 @@ directCommands:
     syntax: az network lb rule update -g MyResourceGroup --lb-name MyLb -n MyLbRule \ --protocol All --frontend-port 0 --backend-port 0
   - summary: Update a load balancing rule. (autogenerated)
     syntax: az network lb rule update --disable-outbound-snat true --lb-name MyLb --name MyLbRule --resource-group MyResourceGroup
-  parameters:
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
   - name: --backend-pool-name
     summary: The name of the backend address pool.
     description: ''
@@ -185,6 +219,9 @@ directCommands:
     parameterValueGroup: false, true
     summary: Enable floating IP.
     description: ''
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+    description: ''
   - name: --frontend-ip-name
     summary: The name of the frontend IP configuration.
     description: ''
@@ -194,10 +231,19 @@ directCommands:
   - name: --idle-timeout
     summary: Idle timeout in minutes.
     description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --lb-name
+    summary: The load balancer name.
+    description: ''
   - name: --load-distribution
     defaultValue: default
     parameterValueGroup: Default, SourceIP, SourceIPProtocol
     summary: Affinity rule settings.
+    description: ''
+  - name: --name -n
+    summary: The name of the load balancing rule.
     description: ''
   - name: --probe-name
     summary: Name of an existing probe to associate with this rule.
@@ -206,39 +252,19 @@ directCommands:
     parameterValueGroup: Tcp, Udp
     summary: Network transport protocol.
     description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --lb-name
-    summary: The load balancer name.
-    description: ''
-  - name: --name -n
-    summary: The name of the load balancing rule.
+  - name: --remove
+    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-    description: ''
-  - name: --remove
-    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
-    description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_lb_rule_create
 - az_network_lb_rule_delete
@@ -261,6 +287,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

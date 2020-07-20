@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_logic_az_logic_integration_account
 name: az logic integration-account
 summary: Logic integration-account.
@@ -8,10 +8,18 @@ directCommands:
   name: az logic integration-account create
   summary: Creates or updates an integration account.
   description: ''
+  syntax: >-
+    az logic integration-account create --name
+                                        --resource-group
+                                        [--integration-service-environment]
+                                        [--location]
+                                        [--sku]
+                                        [--state {Completed, Deleted, Disabled, Enabled, NotSpecified, Suspended}]
+                                        [--tags]
   examples:
   - summary: Create or update an integration account
     syntax: az logic integration-account create --location "centralus" --sku name=Standard --name "test_integration_account" --resource-group "test_resource_group"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The integration account name.
@@ -20,6 +28,7 @@ directCommands:
     name: --resource-group -g
     summary: The resource group name.
     description: ''
+  optionalParameters:
   - name: --integration-service-environment
     summary: The integration service environment. See README.md For more information.
     description: ''
@@ -40,10 +49,14 @@ directCommands:
   name: az logic integration-account delete
   summary: Deletes an integration account.
   description: ''
+  syntax: >-
+    az logic integration-account delete --name
+                                        --resource-group
+                                        [--yes]
   examples:
   - summary: Delete an integration account
     syntax: az logic integration-account delete --name "test_integration_account" --resource-group "test_resource_group"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The integration account name.
@@ -52,6 +65,7 @@ directCommands:
     name: --resource-group -g
     summary: The resource group name.
     description: ''
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -59,10 +73,17 @@ directCommands:
   name: az logic integration-account import
   summary: Import an integration account from a JSON file.
   description: ''
+  syntax: >-
+    az logic integration-account import --input-path
+                                        --name
+                                        --resource-group
+                                        [--location]
+                                        [--sku]
+                                        [--tags]
   examples:
   - summary: Import an integration account.
     syntax: az logic integration-account import --name "test_integration_account" --resource-group "test_resource_group" --input-path "integration.json"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --input-path
     summary: Path to a intergration-account JSON file.
@@ -75,6 +96,7 @@ directCommands:
     name: --resource-group -g
     summary: The resource group name.
     description: ''
+  optionalParameters:
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
@@ -88,10 +110,13 @@ directCommands:
   name: az logic integration-account list
   summary: Gets a list of integration accounts by subscription.
   description: ''
+  syntax: >-
+    az logic integration-account list [--resource-group]
+                                      [--top]
   examples:
   - summary: List integration accounts by resource group name
     syntax: az logic integration-account list --resource-group "test_resource_group"
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: The resource group name.
     description: ''
@@ -102,10 +127,13 @@ directCommands:
   name: az logic integration-account show
   summary: Gets an integration account.
   description: ''
+  syntax: >-
+    az logic integration-account show --name
+                                      --resource-group
   examples:
   - summary: Get integration account by name
     syntax: az logic integration-account show --name "test_integration_account" --resource-group "test_resource_group"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The integration account name.
@@ -118,10 +146,17 @@ directCommands:
   name: az logic integration-account update
   summary: Updates an integration account.
   description: ''
+  syntax: >-
+    az logic integration-account update --name
+                                        --resource-group
+                                        [--integration-service-environment]
+                                        [--sku]
+                                        [--state {Completed, Deleted, Disabled, Enabled, NotSpecified, Suspended}]
+                                        [--tags]
   examples:
   - summary: Patch an integration account
     syntax: az logic integration-account update --sku name=Basic --tag atag=123 --name "test_integration_account" --resource-group "test_resource_group"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The integration account name.
@@ -130,6 +165,7 @@ directCommands:
     name: --resource-group -g
     summary: The resource group name.
     description: ''
+  optionalParameters:
   - name: --integration-service-environment
     summary: The integration service environment. See README.md For more information.
     description: ''

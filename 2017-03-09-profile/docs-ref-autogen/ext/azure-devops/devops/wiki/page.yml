@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_devops_wiki_page
 name: az devops wiki page
 summary: Manage wiki pages.
@@ -8,12 +8,22 @@ directCommands:
   name: az devops wiki page create
   summary: Add a new page.
   description: ''
+  syntax: >-
+    az devops wiki page create --path
+                               --wiki
+                               [--comment]
+                               [--content]
+                               [--detect {false, true}]
+                               [--encoding {ascii, utf-16be, utf-16le, utf-8}]
+                               [--file-path]
+                               [--org]
+                               [--project]
   examples:
   - summary: Create a new page with path 'my page' in a wiki named 'myprojectwiki' with inline content
     syntax: az devops wiki page create --path 'my page' --wiki myprojectwiki --content "Hello World"
   - summary: Create a new page with path 'my page' in a wiki named 'myprojectwiki' with content from a file
     syntax: az devops wiki page create --path 'my page' --wiki myprojectwiki --file-path a.txt            --encoding utf-8
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --path
     summary: Path of the wiki page.
@@ -22,6 +32,7 @@ directCommands:
     name: --wiki
     summary: Name or Id of the wiki.
     description: ''
+  optionalParameters:
   - name: --comment
     defaultValue: Added a new page using Azure DevOps CLI
     summary: Comment in the commit message of file add operation.
@@ -51,7 +62,15 @@ directCommands:
   name: az devops wiki page delete
   summary: Delete a page.
   description: ''
-  parameters:
+  syntax: >-
+    az devops wiki page delete --path
+                               --wiki
+                               [--comment]
+                               [--detect {false, true}]
+                               [--org]
+                               [--project]
+                               [--yes]
+  requiredParameters:
   - isRequired: true
     name: --path
     summary: Path of the wiki page.
@@ -60,6 +79,7 @@ directCommands:
     name: --wiki
     summary: Name or Id of the wiki.
     description: ''
+  optionalParameters:
   - name: --comment
     defaultValue: Deleted the page using Azure DevOps CLI
     summary: Comment in the commit message of delete operation.
@@ -81,7 +101,16 @@ directCommands:
   name: az devops wiki page show
   summary: Get the content of a page or open a page.
   description: ''
-  parameters:
+  syntax: >-
+    az devops wiki page show --path
+                             --wiki
+                             [--detect {false, true}]
+                             [--include-content]
+                             [--open]
+                             [--org]
+                             [--project]
+                             [--version]
+  requiredParameters:
   - isRequired: true
     name: --path
     summary: Path of the wiki page.
@@ -90,6 +119,7 @@ directCommands:
     name: --wiki
     summary: Name or Id of the wiki.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -113,12 +143,23 @@ directCommands:
   name: az devops wiki page update
   summary: Edit a page.
   description: ''
+  syntax: >-
+    az devops wiki page update --path
+                               --version
+                               --wiki
+                               [--comment]
+                               [--content]
+                               [--detect {false, true}]
+                               [--encoding {ascii, utf-16be, utf-16le, utf-8}]
+                               [--file-path]
+                               [--org]
+                               [--project]
   examples:
   - summary: Update content of page with path 'my page' in a wiki named 'myprojectwiki' with inline content
     syntax: az devops wiki page update --path 'my page' --wiki myprojectwiki --content "Hello World"            --version 4ae78ad5835cb7dd55072fe210c9ee7eb6d6413b
   - summary: Update content of page with path 'my page' in a wiki with content from a file
     syntax: az devops wiki page update --path 'my page' --wiki myprojectwiki --file-path a.txt            --encoding utf-8 --version 4ae78ad5835cb7dd55072fe210c9ee7eb6d6413b
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --path
     summary: Path of the wiki page.
@@ -131,6 +172,7 @@ directCommands:
     name: --wiki
     summary: Name or Id of the wiki.
     description: ''
+  optionalParameters:
   - name: --comment
     defaultValue: Updated the page using Azure DevOps CLI
     summary: Comment in the commit message of file edit operation.

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_csvmware_az_csvmware_virtual_network
 name: az csvmware virtual-network
 summary: Manage virtual networks.
@@ -8,10 +8,14 @@ directCommands:
   name: az csvmware virtual-network list
   summary: List details of available virtual networks in a private cloud.
   description: ''
+  syntax: >-
+    az csvmware virtual-network list --location
+                                     --private-cloud
+                                     --resource-pool
   examples:
   - summary: List details of virtual networks.
     syntax: az csvmware virtual-network list -p MyPrivateCloud -r MyResourcePool --location eastus
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: Region in which the private cloud is present.
@@ -28,10 +32,14 @@ directCommands:
   name: az csvmware virtual-network show
   summary: Get the details of a virtual network in a private cloud.
   description: ''
+  syntax: >-
+    az csvmware virtual-network show --location
+                                     --name
+                                     --private-cloud
   examples:
   - summary: Get the details of a virtual network.
     syntax: az csvmware virtual-network show -n MyVirtualNetwork -p MyPrivateCloud --location eastus
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: Region in which the private cloud is present.

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-ml_az_ml_dataset
 name: az ml dataset
 summary: Commands for managing datasets in Azure Machine Learning Workspace.
@@ -8,7 +8,15 @@ directCommands:
   name: az ml dataset archive
   summary: Archive an active or deprecated dataset.
   description: ''
-  parameters:
+  syntax: >-
+    az ml dataset archive [--id]
+                          [--name]
+                          [--output-metadata-file]
+                          [--path]
+                          [--resource-group]
+                          [--subscription-id]
+                          [--workspace-name]
+  optionalParameters:
   - name: --id -i
     summary: Dataset ID (guid).
     description: ''
@@ -35,11 +43,21 @@ directCommands:
   name: az ml dataset deprecate
   summary: Deprecate an active dataset in a workspace by another dataset.
   description: ''
-  parameters:
+  syntax: >-
+    az ml dataset deprecate --deprecate-by-id
+                            [--id]
+                            [--name]
+                            [--output-metadata-file]
+                            [--path]
+                            [--resource-group]
+                            [--subscription-id]
+                            [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --deprecate-by-id -d
     summary: Dataset ID (guid) which is the intended replacement for this Dataset.
     description: ''
+  optionalParameters:
   - name: --id -i
     summary: Dataset ID (guid).
     description: ''
@@ -66,7 +84,13 @@ directCommands:
   name: az ml dataset list
   summary: List all datasets in the workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml dataset list [--output-metadata-file]
+                       [--path]
+                       [--resource-group]
+                       [--subscription-id]
+                       [--workspace-name]
+  optionalParameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
     description: ''
@@ -87,7 +111,15 @@ directCommands:
   name: az ml dataset reactivate
   summary: Reactivate an archived or deprecated dataset.
   description: ''
-  parameters:
+  syntax: >-
+    az ml dataset reactivate [--id]
+                             [--name]
+                             [--output-metadata-file]
+                             [--path]
+                             [--resource-group]
+                             [--subscription-id]
+                             [--workspace-name]
+  optionalParameters:
   - name: --id -i
     summary: Dataset ID (guid).
     description: ''
@@ -114,7 +146,16 @@ directCommands:
   name: az ml dataset register
   summary: Register a new dataset from the specified file.
   description: ''
-  parameters:
+  syntax: >-
+    az ml dataset register [--file]
+                           [--output-metadata-file]
+                           [--path]
+                           [--resource-group]
+                           [--show-template]
+                           [--skip-validation]
+                           [--subscription-id]
+                           [--workspace-name]
+  optionalParameters:
   - name: --file -f
     summary: Specification file for dataset.
     description: ''
@@ -144,7 +185,16 @@ directCommands:
   name: az ml dataset show
   summary: Get details of a dataset by its id or registration name.
   description: ''
-  parameters:
+  syntax: >-
+    az ml dataset show [--id]
+                       [--name]
+                       [--output-metadata-file]
+                       [--path]
+                       [--resource-group]
+                       [--subscription-id]
+                       [--version]
+                       [--workspace-name]
+  optionalParameters:
   - name: --id -i
     summary: ID of the dataset saved to workspace.
     description: ''
@@ -175,7 +225,14 @@ directCommands:
   name: az ml dataset unregister
   summary: Unregister all versions under the specified registration name.
   description: ''
-  parameters:
+  syntax: >-
+    az ml dataset unregister [--name]
+                             [--output-metadata-file]
+                             [--path]
+                             [--resource-group]
+                             [--subscription-id]
+                             [--workspace-name]
+  optionalParameters:
   - name: --name -n
     summary: Registration name of the dataset.
     description: ''

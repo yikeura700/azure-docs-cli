@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_boards_iteration_team
 name: az boards iteration team
 summary: Manage iterations for a team.
@@ -8,7 +8,14 @@ directCommands:
   name: az boards iteration team add
   summary: Add iteration to a team.
   description: ''
-  parameters:
+  syntax: >-
+    az boards iteration team add --id
+                                 --team
+                                 [--detect {false, true}]
+                                 [--org]
+                                 [--project]
+                                 [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: Identifier of the iteration.
@@ -17,6 +24,7 @@ directCommands:
     name: --team
     summary: Name or ID of the team.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -34,11 +42,19 @@ directCommands:
   name: az boards iteration team list
   summary: List iterations for a team.
   description: ''
-  parameters:
+  syntax: >-
+    az boards iteration team list --team
+                                  [--detect {false, true}]
+                                  [--org]
+                                  [--project]
+                                  [--subscription]
+                                  [--timeframe]
+  requiredParameters:
   - isRequired: true
     name: --team
     summary: The name or id of the team.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -49,17 +65,24 @@ directCommands:
   - name: --project -p
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
-  - name: --timeframe
-    summary: A filter for which iterations are returned based on relative time. Only Current is supported currently.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --timeframe
+    summary: A filter for which iterations are returned based on relative time. Only Current is supported currently.
     description: ''
 - uid: az_boards_iteration_team_list_work_items
   name: az boards iteration team list-work-items
   summary: List work-items for an iteration.
   description: ''
-  parameters:
+  syntax: >-
+    az boards iteration team list-work-items --id
+                                             --team
+                                             [--detect {false, true}]
+                                             [--org]
+                                             [--project]
+                                             [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: Identifier of the iteration.
@@ -68,6 +91,7 @@ directCommands:
     name: --team
     summary: Name or ID of the team.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -85,7 +109,14 @@ directCommands:
   name: az boards iteration team remove
   summary: Remove iteration from a team.
   description: ''
-  parameters:
+  syntax: >-
+    az boards iteration team remove --id
+                                    --team
+                                    [--detect {false, true}]
+                                    [--org]
+                                    [--project]
+                                    [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: Identifier of the iteration.
@@ -94,6 +125,7 @@ directCommands:
     name: --team
     summary: Name or ID of the team.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -111,7 +143,14 @@ directCommands:
   name: az boards iteration team set-backlog-iteration
   summary: Set backlog iteration for a team.
   description: ''
-  parameters:
+  syntax: >-
+    az boards iteration team set-backlog-iteration --id
+                                                   --team
+                                                   [--detect {false, true}]
+                                                   [--org]
+                                                   [--project]
+                                                   [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: Identifier of the iteration which needs to be set as backlog iteration.
@@ -120,6 +159,7 @@ directCommands:
     name: --team
     summary: Name or ID of the team.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -137,11 +177,20 @@ directCommands:
   name: az boards iteration team set-default-iteration
   summary: Set default iteration for a team.
   description: ''
-  parameters:
+  syntax: >-
+    az boards iteration team set-default-iteration --team
+                                                   [--default-iteration-macro]
+                                                   [--detect {false, true}]
+                                                   [--id]
+                                                   [--org]
+                                                   [--project]
+                                                   [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --team
     summary: Name or ID of the team.
     description: ''
+  optionalParameters:
   - name: --default-iteration-macro
     summary: 'Default iteration macro. Example: @CurrentIteration.'
     description: ''
@@ -165,11 +214,18 @@ directCommands:
   name: az boards iteration team show-backlog-iteration
   summary: Show backlog iteration for a team.
   description: ''
-  parameters:
+  syntax: >-
+    az boards iteration team show-backlog-iteration --team
+                                                    [--detect {false, true}]
+                                                    [--org]
+                                                    [--project]
+                                                    [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --team
     summary: Name or ID of the team.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -187,11 +243,18 @@ directCommands:
   name: az boards iteration team show-default-iteration
   summary: Show default iteration for a team.
   description: ''
-  parameters:
+  syntax: >-
+    az boards iteration team show-default-iteration --team
+                                                    [--detect {false, true}]
+                                                    [--org]
+                                                    [--project]
+                                                    [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --team
     summary: Name or ID of the team.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

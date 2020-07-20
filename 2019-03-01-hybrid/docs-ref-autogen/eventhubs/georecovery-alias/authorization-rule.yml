@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_eventhubs_georecovery_alias_authorization_rule
 name: az eventhubs georecovery-alias authorization-rule
 summary: Manage Azure EventHubs Authorizationrule for Geo Recovery configuration Alias.
@@ -8,10 +8,15 @@ directCommands:
   name: az eventhubs georecovery-alias authorization-rule list
   summary: List of Authorizationrule by EventHubs Namespace.
   description: ''
+  syntax: >-
+    az eventhubs georecovery-alias authorization-rule list --alias
+                                                           --namespace-name
+                                                           --resource-group
+                                                           [--subscription]
   examples:
   - summary: List of Authorizationrule by EventHubs Namespace
     syntax: az eventhubs georecovery-alias authorization-rule list --resource-group myresourcegroup --namespace-name mynamespace --alias myaliasname
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --alias -a
     summary: Name of Geo-Disaster Recovery Configuration Alias.
@@ -24,23 +29,26 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
 - uid: az_eventhubs_georecovery_alias_authorization_rule_show
   name: az eventhubs georecovery-alias authorization-rule show
   summary: Show properties of EventHubs Geo-Disaster Recovery Configuration Alias and Namespace Authorizationrule.
   description: ''
+  syntax: >-
+    az eventhubs georecovery-alias authorization-rule show [--alias]
+                                                           [--ids]
+                                                           [--name]
+                                                           [--namespace-name]
+                                                           [--resource-group]
+                                                           [--subscription]
   examples:
   - summary: Show properties Authorizationrule by EventHubs Namespace
     syntax: az eventhubs georecovery-alias authorization-rule show --resource-group myresourcegroup --namespace-name mynamespace
-  parameters:
+  optionalParameters:
   - name: --alias -a
     summary: Name of Geo-Disaster Recovery Configuration Alias.
     description: ''
@@ -59,12 +67,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
 commands:
 - az_eventhubs_georecovery_alias_authorization_rule_keys
 - az_eventhubs_georecovery_alias_authorization_rule_keys_list
@@ -86,6 +89,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e4f67020bbaa8468157847986780c38a7f43970a/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   updated_at: 10/19/2019 11:44:55 AM

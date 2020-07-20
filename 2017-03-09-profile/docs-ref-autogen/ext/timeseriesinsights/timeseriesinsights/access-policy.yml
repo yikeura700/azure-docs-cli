@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_timeseriesinsights_az_timeseriesinsights_access_policy
 name: az timeseriesinsights access-policy
 summary: Commands to manage timeseriesinsights access policy.
@@ -8,10 +8,17 @@ directCommands:
   name: az timeseriesinsights access-policy create
   summary: Create or update an access policy in the specified environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights access-policy create --environment-name
+                                               --name
+                                               --resource-group
+                                               [--description]
+                                               [--principal-object-id]
+                                               [--roles {Contributor, Reader}]
   examples:
   - summary: Create access-policy
     syntax: az timeseriesinsights access-policy create -g {rg} --environment-name {env} -n ap1 --principal-object-id 001 --description "some description" --roles Contributor Reader
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.
@@ -24,6 +31,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --description
     summary: A description of the access policy.
     description: ''
@@ -38,10 +46,15 @@ directCommands:
   name: az timeseriesinsights access-policy delete
   summary: Delete the access policy with the specified name in the specified subscription, resource group, and environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights access-policy delete --environment-name
+                                               --name
+                                               --resource-group
+                                               [--yes]
   examples:
   - summary: Delete access-policy
     syntax: az timeseriesinsights access-policy delete -g {rg} --environment-name {env} -n {ap}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.
@@ -54,6 +67,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -61,10 +75,13 @@ directCommands:
   name: az timeseriesinsights access-policy list
   summary: List all the available access policies associated with the environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights access-policy list --environment-name
+                                             --resource-group
   examples:
   - summary: List access-policy by environment
     syntax: az timeseriesinsights access-policy list -g {rg} --environment-name {env}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.
@@ -77,10 +94,14 @@ directCommands:
   name: az timeseriesinsights access-policy show
   summary: Show the access policy with the specified name in the specified environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights access-policy show --environment-name
+                                             --name
+                                             --resource-group
   examples:
   - summary: Get access-policy
     syntax: az timeseriesinsights access-policy show -g {rg} --environment-name {env} -n {ap}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.
@@ -97,13 +118,19 @@ directCommands:
   name: az timeseriesinsights access-policy update
   summary: Create or update an access policy in the specified environment.
   description: ''
+  syntax: >-
+    az timeseriesinsights access-policy update --environment-name
+                                               --name
+                                               --resource-group
+                                               [--description]
+                                               [--roles {Contributor, Reader}]
   examples:
   - summary: Update access-policy
     syntax: >-
       az timeseriesinsights access-policy update -g {rg} --environment-name \
 
       {env} -n {ap} --roles "Reader,Contributor"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --environment-name
     summary: The name of the Time Series Insights environment associated with the specified resource group.
@@ -116,6 +143,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --description
     summary: A description of the access policy.
     description: ''

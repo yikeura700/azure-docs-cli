@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_dns
 name: az network dns
 summary: Manage DNS domains in Azure.
@@ -8,19 +8,17 @@ directCommands:
   name: az network dns list-references
   summary: Returns the DNS records specified by the referencing targetResourceIds.
   description: ''
-  parameters:
-  - name: --target-resources
-    summary: Space-separated list of resource IDs you wish to query.
-    description: ''
+  syntax: >-
+    az network dns list-references [--subscription]
+                                   [--target-resources]
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --target-resources
+    summary: Space-separated list of resource IDs you wish to query.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_dns_list_references
 - az_network_dns_record_set
@@ -123,6 +121,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_front-door_az_network_front_door_load_balancing
 name: az network front-door load-balancing
 summary: Manage Front Door load-balancing settings.
@@ -8,7 +8,14 @@ directCommands:
   name: az network front-door load-balancing create
   summary: Create Front Door load-balancing settings.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door load-balancing create --front-door-name
+                                                --name
+                                                --resource-group
+                                                --sample-size
+                                                --successful-samples-required
+                                                [--additional-latency]
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -29,6 +36,7 @@ directCommands:
     name: --successful-samples-required
     summary: The number of samples within the sample period that must succeed.
     description: ''
+  optionalParameters:
   - name: --additional-latency
     summary: The additional latency in milliseconds for probes to fall in the lowest latency bucket.
     description: ''
@@ -36,7 +44,11 @@ directCommands:
   name: az network front-door load-balancing delete
   summary: Delete Front Door load-balancing settings.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door load-balancing delete --front-door-name
+                                                --name
+                                                --resource-group
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -53,7 +65,10 @@ directCommands:
   name: az network front-door load-balancing list
   summary: List Front Door load-balancing settingss.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door load-balancing list --front-door-name
+                                              --resource-group
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.
@@ -66,7 +81,11 @@ directCommands:
   name: az network front-door load-balancing show
   summary: Get the details of a Front Door load-balancing settings bundle.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door load-balancing show --front-door-name
+                                              --name
+                                              --resource-group
+  requiredParameters:
   - isRequired: true
     name: --front-door-name -f
     summary: Name of the Front Door.

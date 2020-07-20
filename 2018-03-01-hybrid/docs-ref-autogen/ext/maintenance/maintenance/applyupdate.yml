@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_maintenance_az_maintenance_applyupdate
 name: az maintenance applyupdate
 summary: Manage Azure Maintenance update applications.
@@ -8,10 +8,17 @@ directCommands:
   name: az maintenance applyupdate create
   summary: Creates a ApplyUpdate request.
   description: ''
+  syntax: >-
+    az maintenance applyupdate create --provider-name
+                                      --resource-group
+                                      --resource-name
+                                      --resource-type
+                                      [--resource-parent-name]
+                                      [--resource-parent-type]
   examples:
   - summary: Creates a ApplyUpdate request.
     syntax: az maintenance applyupdate create -g smdtest --resource-name smdVM --resource-type virtualMachines --provider-name Microsoft.Compute
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --provider-name
     summary: Maintenance resource provider - Microsoft.Maintenance.
@@ -28,6 +35,7 @@ directCommands:
     name: --resource-type
     summary: Type of the azure resource e.g. virtualmachines, hosts etc.
     description: ''
+  optionalParameters:
   - name: --resource-parent-name
     summary: Name of the parent resource e.g. for dedicated hosts this would be the name of the dedicated host group, for VMSS VMs this would be the VMSS name.
     description: ''
@@ -38,10 +46,18 @@ directCommands:
   name: az maintenance applyupdate get
   summary: Gets the state of a ApplyUpdate request.
   description: ''
+  syntax: >-
+    az maintenance applyupdate get --apply-update-name
+                                   --provider-name
+                                   --resource-group
+                                   --resource-name
+                                   --resource-type
+                                   [--resource-parent-name]
+                                   [--resource-parent-type]
   examples:
   - summary: Gets the state of a ApplyUpdate request.
     syntax: az maintenance applyupdate get -g smdtest --resource-name smdVM --resource-type virtualMachines --provider-name Microsoft.Compute --apply-update-name 7b1b66dc-e93a-4183-81ff-591f1b2d4f07
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --apply-update-name
     summary: Name of apply update resource e.g. default.
@@ -62,6 +78,7 @@ directCommands:
     name: --resource-type
     summary: Type of the azure resource e.g. virtualmachines, hosts etc.
     description: ''
+  optionalParameters:
   - name: --resource-parent-name
     summary: Name of the parent resource e.g. for dedicated hosts this would be the name of the dedicated host group, for VMSS VMs this would be the VMSS name.
     description: ''
@@ -72,10 +89,18 @@ directCommands:
   name: az maintenance applyupdate show
   summary: Shows the state of a ApplyUpdate request.
   description: ''
+  syntax: >-
+    az maintenance applyupdate show --apply-update-name
+                                    --provider-name
+                                    --resource-group
+                                    --resource-name
+                                    --resource-type
+                                    [--resource-parent-name]
+                                    [--resource-parent-type]
   examples:
   - summary: Shows the state of a ApplyUpdate request.
     syntax: az maintenance applyupdate show -g smdtest --resource-name smdVM --resource-type virtualMachines --provider-name Microsoft.Compute --apply-update-name 7b1b66dc-e93a-4183-81ff-591f1b2d4f07
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --apply-update-name
     summary: Name of apply update resource e.g. default.
@@ -96,6 +121,7 @@ directCommands:
     name: --resource-type
     summary: Type of the azure resource e.g. virtualmachines, hosts etc.
     description: ''
+  optionalParameters:
   - name: --resource-parent-name
     summary: Name of the parent resource e.g. for dedicated hosts this would be the name of the dedicated host group, for VMSS VMs this would be the VMSS name.
     description: ''

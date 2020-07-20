@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_reservations_reservation_order
 name: az reservations reservation-order
 summary: Manage reservation order, which is container for reservations.
@@ -8,10 +8,24 @@ directCommands:
   name: az reservations reservation-order calculate
   summary: Calculate price for a reservation order.
   description: Calculate price for placing a reservation order.
+  syntax: >-
+    az reservations reservation-order calculate --applied-scope-type {Shared, Single}
+                                                --billing-scope
+                                                --display-name
+                                                --quantity
+                                                --reserved-resource-type {CosmosDb, RedHat, RedHatOsa, SqlDataWarehouse, SqlDatabases, SuseLinux, VMwareCloudSimple, VirtualMachines}
+                                                --sku
+                                                --term {P1Y, P3Y}
+                                                [--applied-scope]
+                                                [--billing-plan {Monthly, Upfront}]
+                                                [--instance-flexibility]
+                                                [--location]
+                                                [--renew {false, true}]
+                                                [--subscription]
   examples:
   - summary: Calculate price and get quote for specific resource type.
     syntax: az reservations reservation-order calculate --sku standard_b1ls --location westus --reserved-resource-type VirtualMachines --billing-scope {SubId} --term P1Y --billing-plan Upfront --quantity 1 --applied-scope-type Single --applied-scope SubId --display-name test
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --applied-scope-type
     parameterValueGroup: Shared, Single
@@ -43,6 +57,7 @@ directCommands:
     parameterValueGroup: P1Y, P3Y
     summary: Available reservation terms for this resource.
     description: ''
+  optionalParameters:
   - name: --applied-scope
     summary: Subscription that the benefit will be applied. Required if --applied-scope-type is Single. Do not specify if --applied-scope-type is Shared.
     description: ''
@@ -63,34 +78,40 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/reservations/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/reservations/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/reservations/_help.py
 - uid: az_reservations_reservation_order_list
   name: az reservations reservation-order list
   summary: Get all reservation orders.
   description: List of all the reservation orders that the user has access to in the current tenant.
-  parameters:
+  syntax: az reservations reservation-order list [--subscription]
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/reservations/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/reservations/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/reservations/_help.py
 - uid: az_reservations_reservation_order_purchase
   name: az reservations reservation-order purchase
   summary: Purchase reservation order.
   description: Purchase reservation order and create resource under the specified URI.
+  syntax: >-
+    az reservations reservation-order purchase --applied-scope-type {Shared, Single}
+                                               --billing-scope
+                                               --display-name
+                                               --quantity
+                                               --reservation-order-id
+                                               --reserved-resource-type {CosmosDb, RedHat, RedHatOsa, SqlDataWarehouse, SqlDatabases, SuseLinux, VMwareCloudSimple, VirtualMachines}
+                                               --sku
+                                               --term {P1Y, P3Y}
+                                               [--applied-scope]
+                                               [--billing-plan {Monthly, Upfront}]
+                                               [--instance-flexibility]
+                                               [--location]
+                                               [--renew {false, true}]
+                                               [--subscription]
   examples:
   - summary: Purchase reservation order
     syntax: az reservations reservation-order purchase --reservation-order-id {reservationOrderId} --sku standard_b1ls --location westus --reserved-resource-type VirtualMachines --billing-scope {SubId} --term P1Y --billing-plan Upfront --quantity 1 --applied-scope-type Single --applied-scope {SubId} --display-name test
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --applied-scope-type
     parameterValueGroup: Shared, Single
@@ -126,6 +147,7 @@ directCommands:
     parameterValueGroup: P1Y, P3Y
     summary: Available reservation terms for this resource.
     description: ''
+  optionalParameters:
   - name: --applied-scope
     summary: Subscription that the benefit will be applied. Required if --applied-scope-type is Single. Do not specify if --applied-scope-type is Shared.
     description: ''
@@ -146,33 +168,28 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/reservations/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/reservations/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/reservations/_help.py
 - uid: az_reservations_reservation_order_show
   name: az reservations reservation-order show
   summary: Get a specific reservation order.
   description: Get the details of the reservation order.
-  parameters:
+  syntax: >-
+    az reservations reservation-order show --reservation-order-id
+                                           [--expand]
+                                           [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --reservation-order-id
     summary: Id of reservation order to look up.
     description: ''
+  optionalParameters:
   - name: --expand
     summary: May be used to expand the planInformation.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/reservations/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/reservations/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/reservations/_help.py
 commands:
 - az_reservations_reservation_order_calculate
 - az_reservations_reservation_order_list
@@ -194,6 +211,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/reservations/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/ed1ac6f7cd47a50aff8e5dd88868d9c28b803051/src/azure-cli/azure/cli/command_modules/reservations/_help.py
   updated_at: 11/21/2019 9:22:32 AM

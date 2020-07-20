@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datashare_az_datashare_consumer_invitation
 name: az datashare consumer invitation
 summary: Commands for consumers to manage datashare invitations.
@@ -8,18 +8,21 @@ directCommands:
   name: az datashare consumer invitation list
   summary: List received invitations.
   description: ''
+  syntax: az datashare consumer invitation list
   examples:
   - summary: List invitations
     syntax: az datashare consumer invitation list
-  parameters: []
 - uid: ext_datashare_az_datashare_consumer_invitation_reject
   name: az datashare consumer invitation reject
   summary: Reject an invitation.
   description: ''
+  syntax: >-
+    az datashare consumer invitation reject --invitation-id
+                                            --location
   examples:
   - summary: Reject an invitation
     syntax: az datashare consumer invitation reject --invitation-id 00000000-0000-0000-0000-000000000000 --location "East US 2"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --invitation-id
     summary: An invitation id.
@@ -32,10 +35,13 @@ directCommands:
   name: az datashare consumer invitation show
   summary: Show a received invitation.
   description: ''
+  syntax: >-
+    az datashare consumer invitation show --invitation-id
+                                          --location
   examples:
   - summary: Show an invitation
     syntax: az datashare consumer invitation show --invitation-id 00000000-0000-0000-0000-000000000000 --location "East US 2"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --invitation-id
     summary: An invitation id.

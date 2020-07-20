@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_front-door_az_network_front_door_waf_policy_managed_rules
 name: az network front-door waf-policy managed-rules
 summary: Change and view managed rule sets associated with your WAF policy.
@@ -8,7 +8,12 @@ directCommands:
   name: az network front-door waf-policy managed-rules add
   summary: Add a managed rule set to a WAF policy.
   description: Use 'az network front-door waf-policy managed-rule-definition list' to see the available managed rulesets.
-  parameters:
+  syntax: >-
+    az network front-door waf-policy managed-rules add --policy-name
+                                                       --resource-group
+                                                       --type
+                                                       --version
+  requiredParameters:
   - isRequired: true
     name: --policy-name
     summary: Name of the WAF policy.
@@ -29,7 +34,10 @@ directCommands:
   name: az network front-door waf-policy managed-rules list
   summary: Show which managed rule sets are applied to a WAF policy.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door waf-policy managed-rules list --policy-name
+                                                        --resource-group
+  requiredParameters:
   - isRequired: true
     name: --policy-name
     summary: Name of the WAF policy.
@@ -42,7 +50,11 @@ directCommands:
   name: az network front-door waf-policy managed-rules remove
   summary: Remove a managed rule set from a WAF policy.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door waf-policy managed-rules remove --policy-name
+                                                          --resource-group
+                                                          --type
+  requiredParameters:
   - isRequired: true
     name: --policy-name
     summary: Name of the WAF policy.

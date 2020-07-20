@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_backup_restore
 name: az backup restore
 summary: Restore backed up items from recovery points in a Recovery Services vault.
@@ -8,10 +8,25 @@ directCommands:
   name: az backup restore restore-azurefiles
   summary: Restore backed up Azure files within a file-share to the same file-share or another file-share in registered storage accounts.
   description: ''
+  syntax: >-
+    az backup restore restore-azurefiles --container-name
+                                         --item-name
+                                         --resolve-conflict {Overwrite, Skip}
+                                         --restore-mode {AlternateLocation, OriginalLocation}
+                                         --rp-name
+                                         [--ids]
+                                         [--resource-group]
+                                         [--source-file-path]
+                                         [--source-file-type {Directory, File}]
+                                         [--subscription]
+                                         [--target-file-share]
+                                         [--target-folder]
+                                         [--target-storage-account]
+                                         [--vault-name]
   examples:
   - summary: Restore backed up Azure files within a file-share to the same file-share or another file-share in registered storage accounts.
     syntax: az backup restore restore-azurefiles --resource-group MyResourceGroup --vault-name MyVault --container-name MyContainer --item-name MyItem --rp-name recoverypoint --resolve-conflict Overwrite --restore-mode OriginalLocation --source-file-type File --source-file-path Filepath1 Filepath2
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --container-name -c
     summary: Name of the backup container. Accepts 'Name' or 'FriendlyName' from the output of az backup container list command. If 'FriendlyName' is passed then BackupManagementType is required.
@@ -33,6 +48,13 @@ directCommands:
   - isRequired: true
     name: --rp-name -r
     summary: Name of the recovery point.
+    description: ''
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --source-file-path
     summary: The absolute path of the file, to be restored within the file share, as a string. This path is the same path used in the 'az storage file download' or 'az storage file show' CLI commands.
@@ -41,6 +63,9 @@ directCommands:
     parameterValueGroup: Directory, File
     summary: Specify the source file type to be selected.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --target-file-share
     summary: Destination file share to which content will be restored.
     description: ''
@@ -50,32 +75,31 @@ directCommands:
   - name: --target-storage-account
     summary: Destination storage account to which content will be restored.
     description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
   - name: --vault-name -v
     summary: Name of the Recovery services vault.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/backup/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/backup/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
 - uid: az_backup_restore_restore_azurefileshare
   name: az backup restore restore-azurefileshare
   summary: Restore backed up Azure file shares to the same file-share or another file-share in registered storage accounts.
   description: ''
+  syntax: >-
+    az backup restore restore-azurefileshare --container-name
+                                             --item-name
+                                             --resolve-conflict {Overwrite, Skip}
+                                             --restore-mode {AlternateLocation, OriginalLocation}
+                                             --rp-name
+                                             [--ids]
+                                             [--resource-group]
+                                             [--subscription]
+                                             [--target-file-share]
+                                             [--target-folder]
+                                             [--target-storage-account]
+                                             [--vault-name]
   examples:
   - summary: Restore backed up Azure file shares to the same file-share or another file-share in registered storage accounts.
     syntax: az backup restore restore-azurefileshare --resource-group MyResourceGroup --vault-name MyVault --container-name MyContainer --item-name MyItem --rp-name recoverypoint --resolve-conflict Overwrite --restore-mode OriginalLocation
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --container-name -c
     summary: Name of the backup container. Accepts 'Name' or 'FriendlyName' from the output of az backup container list command. If 'FriendlyName' is passed then BackupManagementType is required.
@@ -98,6 +122,16 @@ directCommands:
     name: --rp-name -r
     summary: Name of the recovery point.
     description: ''
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --target-file-share
     summary: Destination file share to which content will be restored.
     description: ''
@@ -107,36 +141,29 @@ directCommands:
   - name: --target-storage-account
     summary: Destination storage account to which content will be restored.
     description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
   - name: --vault-name -v
     summary: Name of the Recovery services vault.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/backup/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/backup/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
 - uid: az_backup_restore_restore_azurewl
   name: az backup restore restore-azurewl
   summary: Restore backed up Azure Workloads in a Recovery services vault to another registered container or to the same container.
   description: ''
+  syntax: >-
+    az backup restore restore-azurewl --recovery-config
+                                      [--ids]
+                                      [--resource-group]
+                                      [--subscription]
+                                      [--vault-name]
   examples:
   - summary: Restore backed up Azure Workloads in a Recovery services vault to another registered container or to the same container.
     syntax: az backup restore restore-azurewl --resource-group MyResourceGroup --vault-name MyVault --recovery-config MyRecoveryConfig
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --recovery-config
     summary: Specify the recovery configuration of a backed up item. The configuration object can be obtained from 'backup recoveryconfig show' command.
     description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -149,20 +176,29 @@ directCommands:
   - name: --vault-name -v
     summary: Name of the Recovery services vault.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/backup/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/backup/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
 - uid: az_backup_restore_restore_disks
   name: az backup restore restore-disks
   summary: Restore disks of the backed VM from the specified recovery point.
   description: ''
+  syntax: >-
+    az backup restore restore-disks --container-name
+                                    --item-name
+                                    --rp-name
+                                    --storage-account
+                                    [--diskslist]
+                                    [--ids]
+                                    [--resource-group]
+                                    [--restore-as-unmanaged-disks {false, true}]
+                                    [--restore-only-osdisk {false, true}]
+                                    [--restore-to-staging-storage-account {false, true}]
+                                    [--subscription]
+                                    [--target-resource-group]
+                                    [--vault-name]
   examples:
   - summary: Restore disks of the backed VM from the specified recovery point. (autogenerated)
     syntax: az backup restore restore-disks --container-name MyContainer --item-name MyItem --resource-group MyResourceGroup --rp-name MyRp --storage-account mystorageaccount --vault-name MyVault
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --container-name -c
     summary: Name of the backup container. Accepts 'Name' or 'FriendlyName' from the output of az backup container list command. If 'FriendlyName' is passed then BackupManagementType is required.
@@ -179,8 +215,15 @@ directCommands:
     name: --storage-account
     summary: Name or ID of the staging storage account. The VM configuration will be restored to this storage account. See the help for --restore-to-staging-storage-account parameter for more info.
     description: ''
+  optionalParameters:
   - name: --diskslist
     summary: List of disks to be excluded or included.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --restore-as-unmanaged-disks
     parameterValueGroup: false, true
@@ -194,27 +237,16 @@ directCommands:
     parameterValueGroup: false, true
     summary: 'Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false.'
     description: ''
-  - name: --target-resource-group -t
-    summary: Use this to specify the target resource group in which the restored disks will be saved.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --target-resource-group -t
+    summary: Use this to specify the target resource group in which the restored disks will be saved.
     description: ''
   - name: --vault-name -v
     summary: Name of the Recovery services vault.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/backup/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/backup/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
 commands:
 - az_backup_restore_files
 - az_backup_restore_files_mount_rp
@@ -239,6 +271,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/fea0f92163e3b3eb1f5f54c818cb9be9ad7efcfd/src/azure-cli/azure/cli/command_modules/backup/_help.py
   updated_at: 3/12/2020 9:07:03 AM

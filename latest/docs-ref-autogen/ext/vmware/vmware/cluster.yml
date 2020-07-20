@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_vmware_az_vmware_cluster
 name: az vmware cluster
 summary: Commands to manage clusters in a private cloud.
@@ -8,7 +8,13 @@ directCommands:
   name: az vmware cluster create
   summary: Create a cluster in a private cloud. The maximum number of clusters is 4.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware cluster create --name
+                             --private-cloud
+                             --resource-group
+                             --size
+                             [--tags]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the cluster.
@@ -25,6 +31,7 @@ directCommands:
     name: --size
     summary: Number of hosts for the cluster. Minimum of 3 and a maximum of 16.
     description: ''
+  optionalParameters:
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
@@ -32,7 +39,11 @@ directCommands:
   name: az vmware cluster delete
   summary: Delete a cluster in a private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware cluster delete --name
+                             --private-cloud
+                             --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the cluster.
@@ -49,7 +60,10 @@ directCommands:
   name: az vmware cluster list
   summary: List clusters in a private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware cluster list --private-cloud
+                           --resource-group
+  requiredParameters:
   - isRequired: true
     name: --private-cloud -c
     summary: Name of the private cloud.
@@ -62,7 +76,11 @@ directCommands:
   name: az vmware cluster show
   summary: Show details of a cluster in a private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware cluster show --name
+                           --private-cloud
+                           --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the cluster.
@@ -79,7 +97,13 @@ directCommands:
   name: az vmware cluster update
   summary: Update a cluster in a private cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az vmware cluster update --name
+                             --private-cloud
+                             --resource-group
+                             --size
+                             [--tags]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the cluster.
@@ -96,6 +120,7 @@ directCommands:
     name: --size
     summary: Number of hosts for the cluster. Minimum of 3 and a maximum of 16.
     description: ''
+  optionalParameters:
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''

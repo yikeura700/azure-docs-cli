@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_powerbidedicated_az_powerbi_embedded_capacity
 name: az powerbi embedded-capacity
 summary: Manage PowerBI embedded capacity.
@@ -8,6 +8,15 @@ directCommands:
   name: az powerbi embedded-capacity create
   summary: Create a new PowerBI embedded capacity.
   description: ''
+  syntax: >-
+    az powerbi embedded-capacity create --location
+                                        --name
+                                        --resource-group
+                                        --sku-name {A1, A2, A3, A4, A5, A6}
+                                        [--administration-members]
+                                        [--no-wait]
+                                        [--sku-tier {PBIE_Azure}]
+                                        [--tags]
   examples:
   - summary: Create a new PowerBI embedded capacity.
     syntax: >-
@@ -23,7 +32,7 @@ directCommands:
       --location eastus --sku-name "A1" --sku-tier "PBIE_Azure" --administration-members \
 
       "azsdktest@microsoft.com" "azsdktest2@microsoft.com" --no-wait
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -41,6 +50,7 @@ directCommands:
     parameterValueGroup: A1, A2, A3, A4, A5, A6
     summary: Name of the SKU level. For more information, please refer to <a href="https://azure.microsoft.com/en-us/pricing/details/power-bi-embedded/">https://azure.microsoft.com/en-us/pricing/details/power-bi-embedded/</a>.
     description: ''
+  optionalParameters:
   - name: --administration-members
     summary: An array of administrator user identities.
     description: ''
@@ -58,6 +68,11 @@ directCommands:
   name: az powerbi embedded-capacity delete
   summary: Delete the specified PowerBI embedded capacity.
   description: ''
+  syntax: >-
+    az powerbi embedded-capacity delete --name
+                                        --resource-group
+                                        [--no-wait]
+                                        [--yes]
   examples:
   - summary: Delete a capacity in specified resource group.
     syntax: az powerbi embedded-capacity delete --resource-group "TestRG" --name "azsdktest"
@@ -65,7 +80,7 @@ directCommands:
     syntax: az powerbi embedded-capacity delete --resource-group "TestRG" --name "azsdktest" -y
   - summary: Delete a capacity in specified resource group without waiting.
     syntax: az powerbi embedded-capacity delete --resource-group "TestRG" --name "azsdktest" --no-wait
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the Dedicated capacity. It must be at least 3 characters in length, and no more than 63.
@@ -74,6 +89,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -84,12 +100,13 @@ directCommands:
   name: az powerbi embedded-capacity list
   summary: List all the embedded capacities for the given resource group.
   description: ''
+  syntax: az powerbi embedded-capacity list [--resource-group]
   examples:
   - summary: List capacities in resource group
     syntax: az powerbi embedded-capacity list --resource-group "TestRG"
   - summary: List all capacities in default subscription.
     syntax: az powerbi embedded-capacity list
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -97,10 +114,13 @@ directCommands:
   name: az powerbi embedded-capacity show
   summary: Get details about the specified PowerBI embedded capacity.
   description: ''
+  syntax: >-
+    az powerbi embedded-capacity show --name
+                                      --resource-group
   examples:
   - summary: Get details of a capacity
     syntax: az powerbi embedded-capacity show --resource-group "TestRG" --name "azsdktest"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the Dedicated capacity. It must be at least 3 characters in length, and no more than 63.
@@ -113,6 +133,14 @@ directCommands:
   name: az powerbi embedded-capacity update
   summary: Update the specified PowerBI embedded capacity.
   description: ''
+  syntax: >-
+    az powerbi embedded-capacity update --name
+                                        --resource-group
+                                        [--administration-members]
+                                        [--no-wait]
+                                        [--sku-name {A1, A2, A3, A4, A5, A6}]
+                                        [--sku-tier {PBIE_Azure}]
+                                        [--tags]
   examples:
   - summary: Update sku name for the specified PowerBI embedded capacity.
     syntax: az powerbi embedded-capacity update --resource-group "TestRG" --name "azsdktest" --sku-name "A1"
@@ -121,7 +149,7 @@ directCommands:
       az powerbi embedded-capacity update --resource-group "TestRG" --name "azsdktest" \
 
       --sku-name "A1" --administration-members "azsdktest3@microsoft.com" --no-wait
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the Dedicated capacity. It must be at least 3 characters in length, and no more than 63.
@@ -130,6 +158,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --administration-members
     summary: An array of administrator user identities.
     description: ''
@@ -151,10 +180,20 @@ directCommands:
   name: az powerbi embedded-capacity wait
   summary: Place the CLI in a waiting state until a condition of PowerBI embedded capacity is met.
   description: ''
+  syntax: >-
+    az powerbi embedded-capacity wait --name
+                                      --resource-group
+                                      [--created]
+                                      [--custom]
+                                      [--deleted]
+                                      [--exists]
+                                      [--interval]
+                                      [--timeout]
+                                      [--updated]
   examples:
   - summary: Place the CLI in a waiting state until the powerbi embedded capacity is created.
     syntax: az powerbi embedded-capacity wait --resource-group "TestRG" --name "azsdktest" --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the Dedicated capacity. It must be at least 3 characters in length, and no more than 63.
@@ -163,6 +202,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

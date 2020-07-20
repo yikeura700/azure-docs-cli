@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-iot_az_iot_hub_distributed_tracing
 name: az iot hub distributed-tracing
 summary: Manage distributed settings per-device.
@@ -8,10 +8,15 @@ directCommands:
   name: az iot hub distributed-tracing show
   summary: Get the distributed tracing settings for a device.
   description: ''
+  syntax: >-
+    az iot hub distributed-tracing show --device-id
+                                        --hub-name
+                                        [--login]
+                                        [--resource-group]
   examples:
   - summary: Get the distributed tracing settings for a device
     syntax: az iot hub distributed-tracing show -d {device_id} -n {iothub_name}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
@@ -20,6 +25,7 @@ directCommands:
     name: --hub-name -n
     summary: IoT Hub name.
     description: ''
+  optionalParameters:
   - name: --login -l
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority.
     description: ''
@@ -30,10 +36,17 @@ directCommands:
   name: az iot hub distributed-tracing update
   summary: Update the distributed tracing options for a device.
   description: ''
+  syntax: >-
+    az iot hub distributed-tracing update --device-id
+                                          --hub-name
+                                          --sampling-mode {off, on}
+                                          --sampling-rate
+                                          [--login]
+                                          [--resource-group]
   examples:
   - summary: Update the distributed tracing options for a device
     syntax: az iot hub distributed-tracing update -d {device_id} --sm on --sr 50 -n {iothub_name}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
@@ -51,6 +64,7 @@ directCommands:
     name: --sampling-rate --sr
     summary: Controls the amount of messages sampled for adding trace context. This value isa percentage. Only values from 0 to 100 (inclusive) are permitted.
     description: ''
+  optionalParameters:
   - name: --login -l
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority.
     description: ''

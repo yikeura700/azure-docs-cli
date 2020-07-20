@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_keyvault-preview_az_keyvault_certificate_issuer_admin
 name: az keyvault certificate issuer admin
 summary: Manage admin information for certificate issuers.
@@ -8,7 +8,14 @@ directCommands:
   name: az keyvault certificate issuer admin add
   summary: Add admin details for a specified certificate issuer.
   description: ''
-  parameters:
+  syntax: >-
+    az keyvault certificate issuer admin add --email
+                                             --issuer-name
+                                             --vault-name
+                                             [--first-name]
+                                             [--last-name]
+                                             [--phone]
+  requiredParameters:
   - isRequired: true
     name: --email
     summary: Admin e-mail address. Must be unique within the vault.
@@ -17,6 +24,11 @@ directCommands:
     name: --issuer-name
     summary: Certificate issuer name.
     description: ''
+  - isRequired: true
+    name: --vault-name
+    summary: Name of the key vault.
+    description: ''
+  optionalParameters:
   - name: --first-name
     summary: ''
     description: ''
@@ -26,15 +38,15 @@ directCommands:
   - name: --phone
     summary: Amin phone number.
     description: ''
-  - isRequired: true
-    name: --vault-name
-    summary: Name of the key vault.
-    description: ''
 - uid: ext_keyvault-preview_az_keyvault_certificate_issuer_admin_delete
   name: az keyvault certificate issuer admin delete
   summary: Remove admin details for the specified certificate issuer.
   description: ''
-  parameters:
+  syntax: >-
+    az keyvault certificate issuer admin delete --email
+                                                --issuer-name
+                                                --vault-name
+  requiredParameters:
   - isRequired: true
     name: --email
     summary: Admin e-mail address. Must be unique within the vault.
@@ -51,7 +63,10 @@ directCommands:
   name: az keyvault certificate issuer admin list
   summary: List admins for a specified certificate issuer.
   description: ''
-  parameters:
+  syntax: >-
+    az keyvault certificate issuer admin list --issuer-name
+                                              --vault-name
+  requiredParameters:
   - isRequired: true
     name: --issuer-name
     summary: Certificate issuer name.

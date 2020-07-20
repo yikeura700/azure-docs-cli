@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_internet-analyzer_az_internet_analyzer_test
 name: az internet-analyzer test
 summary: Commands to manage tests.
@@ -8,6 +8,18 @@ directCommands:
   name: az internet-analyzer test create
   summary: Create test.
   description: ''
+  syntax: >-
+    az internet-analyzer test create --name
+                                     --profile-name
+                                     --resource-group
+                                     [--description]
+                                     [--enabled-state {Disabled, Enabled}]
+                                     [--endpoint-a-endpoint]
+                                     [--endpoint-a-name]
+                                     [--endpoint-b-endpoint]
+                                     [--endpoint-b-name]
+                                     [--location]
+                                     [--tags]
   examples:
   - summary: Creates a test
     syntax: >-
@@ -18,7 +30,7 @@ directCommands:
       --endpoint-a-name "endpoint A" --endpoint-a-endpoint "endpointA.net" --endpoint-b-name \
 
       "endpoint B" --endpoint-b-endpoint "endpointB.net" --enabled-state "Enabled"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: The name of the Internet Analyzer test to be created.
@@ -31,6 +43,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --description
     summary: The description of the details or intents of the test.
     description: ''
@@ -60,13 +73,17 @@ directCommands:
   name: az internet-analyzer test delete
   summary: Delete test.
   description: ''
+  syntax: >-
+    az internet-analyzer test delete --name
+                                     --profile-name
+                                     --resource-group
   examples:
   - summary: Deletes a test
     syntax: >-
       az internet-analyzer test delete --resource-group "MyResourceGroup" --profile-name \
 
       "MyProfile" --name "MyExperiment"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: The name of the Internet Analyzer test to delete.
@@ -83,13 +100,16 @@ directCommands:
   name: az internet-analyzer test list
   summary: List tests.
   description: ''
+  syntax: >-
+    az internet-analyzer test list --profile-name
+                                   --resource-group
   examples:
   - summary: Gets a list of tests
     syntax: >-
       az internet-analyzer test list --resource-group "MyResourceGroup" --profile-name \
 
       "MyProfile"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --profile-name
     summary: The name of the Internet Analyzer profile for which to list tests.
@@ -102,13 +122,17 @@ directCommands:
   name: az internet-analyzer test show
   summary: Show test.
   description: ''
+  syntax: >-
+    az internet-analyzer test show --name
+                                   --profile-name
+                                   --resource-group
   examples:
   - summary: Gets a test by name
     syntax: >-
       az internet-analyzer test show --resource-group "MyResourceGroup" --profile-name \
 
       "MyProfile" --name "MyExperiment"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: The name of the Internet Analyzer test to show.
@@ -125,13 +149,25 @@ directCommands:
   name: az internet-analyzer test update
   summary: Update test.
   description: ''
+  syntax: >-
+    az internet-analyzer test update --name
+                                     --profile-name
+                                     --resource-group
+                                     [--description]
+                                     [--enabled-state {Disabled, Enabled}]
+                                     [--endpoint-a-endpoint]
+                                     [--endpoint-a-name]
+                                     [--endpoint-b-endpoint]
+                                     [--endpoint-b-name]
+                                     [--location]
+                                     [--tags]
   examples:
   - summary: Updates a test
     syntax: >-
       az internet-analyzer test update --resource-group "MyResourceGroup" --profile-name \
 
       "MyProfile" --name "MyExperiment" --description "string" --enabled-state "Enabled"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: The name of the Internet Analyzer test to be updated.
@@ -144,6 +180,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --description
     summary: The description of the details or intents of the test.
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_watcher_connection_monitor_output
 name: az network watcher connection-monitor output
 summary: Manage output of connection monitor.
@@ -8,7 +8,13 @@ directCommands:
   name: az network watcher connection-monitor output add
   summary: Add an output to a connection monitor.
   description: ''
-  parameters:
+  syntax: >-
+    az network watcher connection-monitor output add --connection-monitor
+                                                     --location
+                                                     --type {Workspace}
+                                                     [--subscription]
+                                                     [--workspace-id]
+  requiredParameters:
   - isRequired: true
     name: --connection-monitor
     summary: Connection monitor name.
@@ -22,23 +28,23 @@ directCommands:
     parameterValueGroup: Workspace
     summary: Connection monitor output destination type. Currently, only "Workspace" is supported.
     description: ''
-  - name: --workspace-id
-    summary: The id of log analytics workspace.
-    description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --workspace-id
+    summary: The id of log analytics workspace.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_watcher_connection_monitor_output_list
   name: az network watcher connection-monitor output list
   summary: List all output from a connection monitor.
   description: ''
-  parameters:
+  syntax: >-
+    az network watcher connection-monitor output list --connection-monitor
+                                                      --location
+                                                      [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --connection-monitor
     summary: Connection monitor name.
@@ -47,20 +53,20 @@ directCommands:
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_watcher_connection_monitor_output_remove
   name: az network watcher connection-monitor output remove
   summary: Remove all outputs from a connection monitor.
   description: ''
-  parameters:
+  syntax: >-
+    az network watcher connection-monitor output remove --connection-monitor
+                                                        --location
+                                                        [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --connection-monitor
     summary: Connection monitor name.
@@ -69,15 +75,11 @@ directCommands:
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_watcher_connection_monitor_output_add
 - az_network_watcher_connection_monitor_output_list
@@ -98,6 +100,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

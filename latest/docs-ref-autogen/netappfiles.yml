@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_netappfiles
 name: az netappfiles
 summary: Manage Azure NetApp Files (ANF) Resources.
@@ -8,10 +8,17 @@ directCommands:
   name: az netappfiles list-mount-targets
   summary: List the mount targets of an Azure NetApp Files (ANF) volume.
   description: ''
+  syntax: >-
+    az netappfiles list-mount-targets [--account-name]
+                                      [--ids]
+                                      [--pool-name]
+                                      [--resource-group]
+                                      [--subscription]
+                                      [--volume-name]
   examples:
   - summary: list the mount targets of an ANF volume
     syntax: az netappfiles list-mount-targets -g mygroup --account-name myaccname --pool-name mypoolname --volume-name myvolname
-  parameters:
+  optionalParameters:
   - name: --account-name -a
     summary: The name of the ANF account.
     description: ''
@@ -30,12 +37,7 @@ directCommands:
   - name: --volume-name -v
     summary: The name of the ANF pool.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
 commands:
 - az_netappfiles_account
 - az_netappfiles_account_ad
@@ -91,6 +93,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/ee84afb7c3604c924b225b79095feee55c466a1b/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   updated_at: 5/15/2020 10:20:28 AM

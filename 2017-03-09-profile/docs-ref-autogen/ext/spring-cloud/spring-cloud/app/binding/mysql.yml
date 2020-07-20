@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_spring-cloud_az_spring_cloud_app_binding_mysql
 name: az spring-cloud app binding mysql
 summary: Commands to manage Azure Database for MySQL bindings.
@@ -8,7 +8,16 @@ directCommands:
   name: az spring-cloud app binding mysql add
   summary: Bind an Azure Database for MySQL with the app.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud app binding mysql add --app
+                                          --database-name
+                                          --key
+                                          --name
+                                          --resource-group
+                                          --resource-id
+                                          --service
+                                          --username
+  requiredParameters:
   - isRequired: true
     name: --app
     summary: Name of app.
@@ -45,7 +54,15 @@ directCommands:
   name: az spring-cloud app binding mysql update
   summary: Update an Azure Database for MySQL service binding of the app.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud app binding mysql update --app
+                                             --name
+                                             --resource-group
+                                             --service
+                                             [--database-name]
+                                             [--key]
+                                             [--username]
+  requiredParameters:
   - isRequired: true
     name: --app
     summary: Name of app.
@@ -62,6 +79,7 @@ directCommands:
     name: --service -s
     summary: Name of Azure Spring Cloud, you can configure the default service using az configure --defaults spring-cloud=<name>.
     description: ''
+  optionalParameters:
   - name: --database-name
     summary: Database name.
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_pipelines_build_definition
 name: az pipelines build definition
 summary: Manage build definitions.
@@ -8,7 +8,16 @@ directCommands:
   name: az pipelines build definition list
   summary: List build definitions.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines build definition list [--detect {false, true}]
+                                       [--name]
+                                       [--org]
+                                       [--project]
+                                       [--repository]
+                                       [--repository-type {bitbucket, git, github, githubenterprise, svn, tfsgit, tfsversioncontrol}]
+                                       [--subscription]
+                                       [--top]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -29,17 +38,25 @@ directCommands:
     parameterValueGroup: bitbucket, git, github, githubenterprise, svn, tfsgit, tfsversioncontrol
     summary: Limit results to definitions associated with this repository type. It is mandatory to pass 'repository' argument along with this argument.
     description: ''
-  - name: --top
-    summary: Maximum number of definitions to list.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --top
+    summary: Maximum number of definitions to list.
     description: ''
 - uid: az_pipelines_build_definition_show
   name: az pipelines build definition show
   summary: Get the details of a build definition.
   description: ''
-  parameters:
+  syntax: >-
+    az pipelines build definition show [--detect {false, true}]
+                                       [--id]
+                                       [--name]
+                                       [--open]
+                                       [--org]
+                                       [--project]
+                                       [--subscription]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

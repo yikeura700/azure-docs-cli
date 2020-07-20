@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_local_context
 name: az local-context
 summary: Manage Local Context.
@@ -8,6 +8,13 @@ directCommands:
   name: az local-context delete
   summary: Delete local context data.
   description: ''
+  syntax: >-
+    az local-context delete [--all]
+                            [--name]
+                            [--purge]
+                            [--recursive]
+                            [--subscription]
+                            [--yes]
   examples:
   - summary: Delete resource_group_name from local context
     syntax: az local-context delete --name resource_group_name
@@ -17,7 +24,7 @@ directCommands:
     syntax: az local-context delete --all --purge
   - summary: Delete local context persistence file recursively
     syntax: az local-context delete --all --purge --recursive
-  parameters:
+  optionalParameters:
   - name: --all
     summary: Clear all local context data. Either --name or --all can be specified.
     description: ''
@@ -30,17 +37,18 @@ directCommands:
   - name: --recursive
     summary: Indicates this is recursive delete of local context. Only available when --all is specified.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation. Only available when --all is specified.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --yes -y
+    summary: Do not prompt for confirmation. Only available when --all is specified.
     description: ''
 - uid: az_local_context_off
   name: az local-context off
   summary: Turn off local context.
   description: ''
-  parameters:
+  syntax: az local-context off [--subscription]
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
@@ -48,7 +56,8 @@ directCommands:
   name: az local-context on
   summary: Turn on local context.
   description: ''
-  parameters:
+  syntax: az local-context on [--subscription]
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
@@ -56,12 +65,15 @@ directCommands:
   name: az local-context show
   summary: Show local context data.
   description: ''
+  syntax: >-
+    az local-context show [--name]
+                          [--subscription]
   examples:
   - summary: Show all local context value
     syntax: az local-context show
   - summary: Show resource_group_name local context value
     syntax: az local-context show --name resource_group_name
-  parameters:
+  optionalParameters:
   - name: --name -n
     summary: Space-separated list of local context parameter names.
     description: ''

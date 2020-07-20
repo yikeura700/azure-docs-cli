@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_iot_pnp_key
 name: az iot pnp key
 summary: Manage access keys to an IoT Plug and Play repository.
@@ -8,10 +8,15 @@ directCommands:
   name: az iot pnp key create
   summary: Create a key for the given repository.
   description: ''
+  syntax: >-
+    az iot pnp key create --repo-id
+                          --role {admin, contributer, reader}
+                          [--endpoint]
+                          [--subscription]
   examples:
   - summary: Create a key for the given repository.
     syntax: az iot pnp key create -r aaaabbbb11112222aaaabbbb1111222 --role Reader
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --repo-id -r
     summary: IoT Plug and Play repository Id.
@@ -21,6 +26,7 @@ directCommands:
     parameterValueGroup: admin, contributer, reader
     summary: User role of the access key for the given IoT Plug and Play repository.
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -28,20 +34,20 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
 - uid: az_iot_pnp_key_delete
   name: az iot pnp key delete
   summary: Delete a key from the given repository.
   description: ''
+  syntax: >-
+    az iot pnp key delete --key-id
+                          --repo-id
+                          [--endpoint]
+                          [--subscription]
   examples:
   - summary: Delete a key from the given repository.
     syntax: az iot pnp key delete -r aaaabbbb11112222aaaabbbb1111222 -k 12345
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --key-id -k
     summary: Access key for the given IoT Plug and Play repository.
@@ -50,6 +56,7 @@ directCommands:
     name: --repo-id -r
     summary: IoT Plug and Play repository Id.
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -57,24 +64,24 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
 - uid: az_iot_pnp_key_list
   name: az iot pnp key list
   summary: List repository's keys.
   description: ''
+  syntax: >-
+    az iot pnp key list --repo-id
+                        [--endpoint]
+                        [--subscription]
   examples:
   - summary: List repository's keys.
     syntax: az iot pnp key list -r aaaabbbb11112222aaaabbbb1111222
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --repo-id -r
     summary: IoT Plug and Play repository Id.
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -82,20 +89,20 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
 - uid: az_iot_pnp_key_show
   name: az iot pnp key show
   summary: Get the details of a repository key.
   description: ''
+  syntax: >-
+    az iot pnp key show --key-id
+                        --repo-id
+                        [--endpoint]
+                        [--subscription]
   examples:
   - summary: Get the details of a repository key.
     syntax: az iot pnp key show -r aaaabbbb11112222aaaabbbb1111222 -k 12345
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --key-id -k
     summary: Access key for the given IoT Plug and Play repository.
@@ -104,6 +111,7 @@ directCommands:
     name: --repo-id -r
     summary: IoT Plug and Play repository Id.
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -111,20 +119,21 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
 - uid: az_iot_pnp_key_update
   name: az iot pnp key update
   summary: Update the key for the given repository.
   description: ''
+  syntax: >-
+    az iot pnp key update --key-id
+                          --repo-id
+                          --role {admin, contributer, reader}
+                          [--endpoint]
+                          [--subscription]
   examples:
   - summary: Update the key for the given repository.
     syntax: az iot pnp key update -r aaaabbbb11112222aaaabbbb1111222 -k 12345 --role admin
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --key-id -k
     summary: Access key for the given IoT Plug and Play repository.
@@ -138,6 +147,7 @@ directCommands:
     parameterValueGroup: admin, contributer, reader
     summary: User role of the access key for the given IoT Plug and Play repository.
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -145,12 +155,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
 commands:
 - az_iot_pnp_key_create
 - az_iot_pnp_key_delete
@@ -173,6 +178,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/a6cad9c0a7d0bd9e724f23a8123f1e504989d8db/src/azure-cli/azure/cli/command_modules/iot/_help.py
   updated_at: 6/17/2020 6:34:23 AM

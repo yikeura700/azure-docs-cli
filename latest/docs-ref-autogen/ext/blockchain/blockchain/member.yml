@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_blockchain_az_blockchain_member
 name: az blockchain member
 summary: Blockchain member.
@@ -8,10 +8,23 @@ directCommands:
   name: az blockchain member create
   summary: Create a blockchain member.
   description: ''
+  syntax: >-
+    az blockchain member create --name
+                                --resource-group
+                                [--consortium]
+                                [--consortium-management-account-password]
+                                [--firewall-rules]
+                                [--location]
+                                [--no-wait]
+                                [--password]
+                                [--protocol {Corda, NotSpecified, Parity, Quorum}]
+                                [--sku {Basic, Standard}]
+                                [--tags]
+                                [--validator-nodes-sku]
   examples:
   - summary: Create a blockchain member.
     syntax: az blockchain member create --location "southeastasia" --consortium "ContoseConsortium" --consortium-management-account-password "1234abcdEFG1" --password "1234abcdEFG1" --validator-nodes-sku capacity=2 --protocol "Quorum" --name "contosemember1" --resource-group "mygroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Blockchain member name.
@@ -20,6 +33,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --consortium
     summary: Gets or sets the consortium for the blockchain member.
     description: ''
@@ -60,10 +74,15 @@ directCommands:
   name: az blockchain member delete
   summary: Delete a blockchain member.
   description: ''
+  syntax: >-
+    az blockchain member delete --name
+                                --resource-group
+                                [--no-wait]
+                                [--yes]
   examples:
   - summary: Delete a blockchain member.
     syntax: az blockchain member delete --name "contosemember1" --resource-group "mygroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Blockchain member name.
@@ -72,6 +91,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -82,10 +102,11 @@ directCommands:
   name: az blockchain member list
   summary: List the blockchain members.
   description: ''
+  syntax: az blockchain member list [--resource-group]
   examples:
   - summary: List the blockchain members in a resource group.
     syntax: az blockchain member list --resource-group "mygroup"
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -93,10 +114,13 @@ directCommands:
   name: az blockchain member list-api-key
   summary: List the API keys for a blockchain member.
   description: ''
+  syntax: >-
+    az blockchain member list-api-key --name
+                                      --resource-group
   examples:
   - summary: List the API keys for a blockchain member.
     syntax: az blockchain member list-api-key --name "contosemember1" --resource-group "mygroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Blockchain member name.
@@ -109,10 +133,13 @@ directCommands:
   name: az blockchain member list-consortium-member
   summary: List the consortium members for a blockchain member.
   description: ''
+  syntax: >-
+    az blockchain member list-consortium-member --name
+                                                --resource-group
   examples:
   - summary: List the consortium members for a blockchain member.
     syntax: az blockchain member list-consortium-member --name "contosemember1" --resource-group "mygroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Blockchain member name.
@@ -125,10 +152,14 @@ directCommands:
   name: az blockchain member regenerate-api-key
   summary: Regenerate the API keys for a blockchain member.
   description: ''
+  syntax: >-
+    az blockchain member regenerate-api-key --name
+                                            --resource-group
+                                            [--key-name {key1, key2}]
   examples:
   - summary: Regenerate the API keys for a blockchain member.
     syntax: az blockchain member regenerate-api-key --key-name "key1" --name "contosemember1" --resource-group "mygroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Blockchain member name.
@@ -137,6 +168,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --key-name
     parameterValueGroup: key1, key2
     summary: Gets or sets the API key name.
@@ -145,10 +177,13 @@ directCommands:
   name: az blockchain member show
   summary: Show the details about a blockchain member.
   description: ''
+  syntax: >-
+    az blockchain member show --name
+                              --resource-group
   examples:
   - summary: Show the details about a blockchain member.
     syntax: az blockchain member show --name "contosemember1" --resource-group "mygroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Blockchain member name.
@@ -161,10 +196,17 @@ directCommands:
   name: az blockchain member update
   summary: Update a blockchain member.
   description: ''
+  syntax: >-
+    az blockchain member update --name
+                                --resource-group
+                                [--consortium-management-account-password]
+                                [--firewall-rules]
+                                [--password]
+                                [--tags]
   examples:
   - summary: Update a blockchain member.
     syntax: az blockchain member update --consortium-management-account-password "1234abcdEFG1" --password "1234abcdEFG1" --name "ContoseMember1" --resource-group "mygroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Blockchain member name.
@@ -173,6 +215,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --consortium-management-account-password
     summary: Sets the managed consortium management account password.
     description: ''
@@ -193,10 +236,20 @@ directCommands:
   name: az blockchain member wait
   summary: Wait until a blockchain member is created or deleted.
   description: ''
+  syntax: >-
+    az blockchain member wait --name
+                              --resource-group
+                              [--created]
+                              [--custom]
+                              [--deleted]
+                              [--exists]
+                              [--interval]
+                              [--timeout]
+                              [--updated]
   examples:
   - summary: Wait until a blockchain member is created.
     syntax: az blockchain member wait --name "contosemember1" --resource-group "mygroup" --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Blockchain member name.
@@ -205,6 +258,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

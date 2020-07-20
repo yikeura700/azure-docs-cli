@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_application-insights_az_monitor_app_insights_metrics
 name: az monitor app-insights metrics
 summary: Retrieve metrics from an application.
@@ -8,14 +8,18 @@ directCommands:
   name: az monitor app-insights metrics get-metadata
   summary: Get the metadata for metrics on a particular application.
   description: ''
+  syntax: >-
+    az monitor app-insights metrics get-metadata --app
+                                                 [--resource-group]
   examples:
   - summary: Views the metadata for the provided app.
     syntax: az monitor app-insights metrics get-metadata --app e292531c-eb03-4079-9bb0-fe6b56b99f8b
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app -a
     summary: GUID, app name, or fully-qualified Azure resource name of Application Insights component. The application GUID may be acquired from the API Access menu item on any Application Insights resource in the Azure portal. If using an application name, please specify resource group.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -23,10 +27,23 @@ directCommands:
   name: az monitor app-insights metrics show
   summary: View the value of a single metric.
   description: ''
+  syntax: >-
+    az monitor app-insights metrics show --app
+                                         --metrics
+                                         [--aggregation]
+                                         [--end-time]
+                                         [--filter]
+                                         [--interval]
+                                         [--offset]
+                                         [--orderby]
+                                         [--resource-group]
+                                         [--segment]
+                                         [--start-time]
+                                         [--top]
   examples:
   - summary: View the count of availabilityResults events.
     syntax: az monitor app-insights metrics show --app e292531c-eb03-4079-9bb0-fe6b56b99f8b --metric availabilityResults/count
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app -a
     summary: GUID, app name, or fully-qualified Azure resource name of Application Insights component. The application GUID may be acquired from the API Access menu item on any Application Insights resource in the Azure portal. If using an application name, please specify resource group.
@@ -35,6 +52,7 @@ directCommands:
     name: --metrics -m
     summary: The metric to retrieve. May be either a standard AI metric or an application-specific custom metric.
     description: ''
+  optionalParameters:
   - name: --aggregation
     summary: The aggregation to use when computing the metric values. To retrieve more than one aggregation at a time, separate them with a comma. If no aggregation is specified, then the default aggregation for the metric is used.
     description: ''
@@ -43,6 +61,9 @@ directCommands:
     description: ''
   - name: --filter
     summary: An expression used to filter the results.  This value should be a valid OData filter expression where the keys of each clause should be applicable dimensions for the metric you are retrieving.
+    description: ''
+  - name: --interval
+    summary: 'The interval over which to aggregate metrics, in ##h##m format.'
     description: ''
   - name: --offset
     defaultValue: 1h
@@ -62,9 +83,6 @@ directCommands:
     description: ''
   - name: --top
     summary: The number of segments to return.  This value is only valid when segment is specified.
-    description: ''
-  - name: --interval
-    summary: 'The interval over which to aggregate metrics, in ##h##m format.'
     description: ''
 commands:
 - ext_application-insights_az_monitor_app_insights_metrics_get_metadata

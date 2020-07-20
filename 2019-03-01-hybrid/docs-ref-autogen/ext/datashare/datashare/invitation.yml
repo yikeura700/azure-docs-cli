@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datashare_az_datashare_invitation
 name: az datashare invitation
 summary: Commands for providers to manage datashare invitations.
@@ -8,10 +8,18 @@ directCommands:
   name: az datashare invitation create
   summary: Create an invitation.
   description: ''
+  syntax: >-
+    az datashare invitation create --account-name
+                                   --name
+                                   --resource-group
+                                   --share-name
+                                   [--target-active-directory-id]
+                                   [--target-email]
+                                   [--target-object-id]
   examples:
   - summary: Create an invitation
     syntax: az datashare invitation create --account-name MyAccount --target-email "receiver@microsoft.com" --name MyInvitation --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -28,6 +36,7 @@ directCommands:
     name: --share-name
     summary: The name of the share.
     description: ''
+  optionalParameters:
   - name: --target-active-directory-id
     summary: The target Azure AD Id. Can't be combined with email.
     description: ''
@@ -41,10 +50,16 @@ directCommands:
   name: az datashare invitation delete
   summary: Delete an invitation in a share.
   description: ''
+  syntax: >-
+    az datashare invitation delete --account-name
+                                   --name
+                                   --resource-group
+                                   --share-name
+                                   [--yes]
   examples:
   - summary: Delete an invitation
     syntax: az datashare invitation delete --account-name MyAccount --name MyInvitation --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -61,6 +76,7 @@ directCommands:
     name: --share-name
     summary: The name of the share.
     description: ''
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -68,10 +84,14 @@ directCommands:
   name: az datashare invitation list
   summary: List invitations in a share.
   description: ''
+  syntax: >-
+    az datashare invitation list --account-name
+                                 --resource-group
+                                 --share-name
   examples:
   - summary: List invitations
     syntax: az datashare invitation list --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -88,10 +108,15 @@ directCommands:
   name: az datashare invitation show
   summary: Show an invitation in a share.
   description: ''
+  syntax: >-
+    az datashare invitation show --account-name
+                                 --name
+                                 --resource-group
+                                 --share-name
   examples:
   - summary: Show an invitation
     syntax: az datashare invitation show --account-name MyAccount --name MyInvitation --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.

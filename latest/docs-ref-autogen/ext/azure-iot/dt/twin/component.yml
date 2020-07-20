@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-iot_az_dt_twin_component
 name: az dt twin component
 summary: Show and update the digital twin components of a Digital Twins instance.
@@ -8,10 +8,15 @@ directCommands:
   name: az dt twin component show
   summary: Show details of a digital twin component.
   description: ''
+  syntax: >-
+    az dt twin component show --component
+                              --dt-name
+                              --twin-id
+                              [--resource-group]
   examples:
   - summary: Show details of a digital twin component
     syntax: az dt twin component show -n {instance_name} --twin-id {twin_id} --component Thermostat
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --component
     summary: The path to the DTDL component.
@@ -24,6 +29,7 @@ directCommands:
     name: --twin-id -t
     summary: The digital twin Id.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Digital Twins instance resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -31,6 +37,12 @@ directCommands:
   name: az dt twin component update
   summary: Update a digital twin component via JSON patch specification.
   description: Updates to property values and $model elements may happen in the same request. Operations are limited to add, replace and remove.
+  syntax: >-
+    az dt twin component update --component
+                                --dt-name
+                                --json-patch
+                                --twin-id
+                                [--resource-group]
   examples:
   - summary: Update a digital twin component via JSON patch specification.
     syntax: "az dt twin component update -n {instance_name} --twin-id {twin_id} --component {component_path} --json-patch '{\"op\":\"replace\", \"path\":\"/Temperature\", \"value\": 20.5}'"
@@ -42,7 +54,7 @@ directCommands:
       ]'
   - summary: Update a digital twin component via JSON patch specification defined in a file.
     syntax: az dt twin component update -n {instance_name} --twin-id {twin_id} --component {component_path} --json-patch ./my/patch/document.json
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --component
     summary: The path to the DTDL component.
@@ -59,6 +71,7 @@ directCommands:
     name: --twin-id -t
     summary: The digital twin Id.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Digital Twins instance resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''

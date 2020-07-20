@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_spring-cloud_az_spring_cloud_config_server
 name: az spring-cloud config-server
 summary: Commands to manage Config Server in Azure Spring Cloud.
@@ -8,7 +8,10 @@ directCommands:
   name: az spring-cloud config-server clear
   summary: Erase all settings in Config Server.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud config-server clear --name
+                                        --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of Azure Spring Cloud.
@@ -21,7 +24,12 @@ directCommands:
   name: az spring-cloud config-server set
   summary: Set Config Server from a yaml file.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud config-server set --config-file
+                                      --name
+                                      --resource-group
+                                      [--no-wait]
+  requiredParameters:
   - isRequired: true
     name: --config-file
     summary: A yaml file path for the configuration of Spring Cloud config server.
@@ -34,6 +42,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -41,7 +50,10 @@ directCommands:
   name: az spring-cloud config-server show
   summary: Show Config Server.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud config-server show --name
+                                       --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of Azure Spring Cloud.

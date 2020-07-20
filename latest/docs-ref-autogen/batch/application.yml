@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_batch_application
 name: az batch application
 summary: Manage Batch applications.
@@ -8,7 +8,13 @@ directCommands:
   name: az batch application create
   summary: Adds an application to the specified Batch account.
   description: ''
-  parameters:
+  syntax: >-
+    az batch application create --application-name
+                                --name
+                                --resource-group
+                                [--parameters]
+                                [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --application-name
     summary: The name of the application. This must be unique within the account.
@@ -21,23 +27,25 @@ directCommands:
     name: --resource-group -g
     summary: Name of the resource group.
     description: ''
+  optionalParameters:
   - name: --parameters
     summary: The parameters for the request.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
 - uid: az_batch_application_delete
   name: az batch application delete
   summary: Deletes an application.
   description: ''
-  parameters:
+  syntax: >-
+    az batch application delete --application-name
+                                --name
+                                --resource-group
+                                [--subscription]
+                                [--yes]
+  requiredParameters:
   - isRequired: true
     name: --application-name
     summary: The name of the application. This must be unique within the account.
@@ -50,23 +58,24 @@ directCommands:
     name: --resource-group -g
     summary: Name of the resource group.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
 - uid: az_batch_application_list
   name: az batch application list
   summary: Lists all of the applications in the specified account.
   description: ''
-  parameters:
+  syntax: >-
+    az batch application list --name
+                              --resource-group
+                              [--maxresults]
+                              [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the Batch account.
@@ -75,23 +84,27 @@ directCommands:
     name: --resource-group -g
     summary: Name of the resource group.
     description: ''
+  optionalParameters:
   - name: --maxresults
     summary: The maximum number of items to return in the response.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
 - uid: az_batch_application_set
   name: az batch application set
   summary: Update properties for a Batch application.
   description: ''
-  parameters:
+  syntax: >-
+    az batch application set --application-name
+                             --name
+                             --resource-group
+                             [--allow-updates]
+                             [--default-version]
+                             [--display-name]
+                             [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --application-name
     summary: The name of the application.
@@ -104,6 +117,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of the resource group.
     description: ''
+  optionalParameters:
   - name: --allow-updates
     summary: Specify to indicate whether packages within the application may be overwritten using the same version string. Specify either 'true' or 'false' to update the property.
     description: ''
@@ -116,17 +130,17 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
 - uid: az_batch_application_show
   name: az batch application show
   summary: Gets information about the specified application.
   description: ''
-  parameters:
+  syntax: >-
+    az batch application show --application-name
+                              --name
+                              --resource-group
+                              [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --application-name
     summary: The name of the application. This must be unique within the account.
@@ -139,15 +153,11 @@ directCommands:
     name: --resource-group -g
     summary: Name of the resource group.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batch/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
 commands:
 - az_batch_application_create
 - az_batch_application_delete
@@ -179,6 +189,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e1102d37a891598da84f80ba091b89a7532b90aa/src/azure-cli/azure/cli/command_modules/batch/_help.py
   updated_at: 10/19/2019 10:02:34 AM

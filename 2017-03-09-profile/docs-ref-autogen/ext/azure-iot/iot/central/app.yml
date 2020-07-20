@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-iot_az_iot_central_app
 name: az iot central app
 summary: >-
@@ -21,6 +21,17 @@ directCommands:
     This command relies on and may install dependent Cython package (uamqp) upon first execution.
 
     <a href="https://github.com/Azure/azure-uamqp-python">https://github.com/Azure/azure-uamqp-python</a>.
+  syntax: >-
+    az iot central app monitor-events --app-id
+                                      [--central-api-uri]
+                                      [--cg]
+                                      [--device-id]
+                                      [--enqueued-time]
+                                      [--module-id]
+                                      [--properties {all, anno, app, sys}]
+                                      [--repair {false, true}]
+                                      [--timeout]
+                                      [--yes {false, true}]
   examples:
   - summary: Basic usage
     syntax: az iot central app monitor-events --app-id {app_id}
@@ -42,11 +53,12 @@ directCommands:
     syntax: az iot central app monitor-events --app-id {app_id} --props all
   - summary: Receive all messages and parse message payload as JSON
     syntax: az iot central app monitor-events --app-id {app_id} --output json
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app-id
     summary: Target App.
     description: ''
+  optionalParameters:
   - name: --central-api-uri --central-dns-suffix
     defaultValue: azureiotcentral.com
     summary: Central dns suffix. This enables running cli commands against non public/prod environments.
@@ -89,6 +101,21 @@ directCommands:
     This command relies on and may install dependent Cython package (uamqp) upon first execution.
 
     <a href="https://github.com/Azure/azure-uamqp-python">https://github.com/Azure/azure-uamqp-python</a>.
+  syntax: >-
+    az iot central app validate-messages --app-id
+                                         [--central-api-uri]
+                                         [--cg]
+                                         [--device-id]
+                                         [--dr]
+                                         [--enqueued-time]
+                                         [--max-messages]
+                                         [--minimum-severity {error, info, warning}]
+                                         [--module-id]
+                                         [--properties {all, anno, app, sys}]
+                                         [--repair {false, true}]
+                                         [--style {csv, json, scroll}]
+                                         [--timeout]
+                                         [--yes {false, true}]
   examples:
   - summary: Basic usage
     syntax: az iot central app validate-messages --app-id {app_id}
@@ -104,11 +131,12 @@ directCommands:
     syntax: az iot central app validate-messages --app-id {app_id} -m Module*
   - summary: Filter device and specify an Event Hub consumer group to bind to.
     syntax: az iot central app validate-messages --app-id {app_id} -d {device_id} --cg {consumer_group_name}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app-id
     summary: Target App.
     description: ''
+  optionalParameters:
   - name: --central-api-uri --central-dns-suffix
     defaultValue: azureiotcentral.com
     summary: Central dns suffix. This enables running cli commands against non public/prod environments.

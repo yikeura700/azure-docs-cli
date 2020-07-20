@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_eventgrid_az_eventgrid_topic_type
 name: az eventgrid topic-type
 summary: Get details for topic types.
@@ -8,15 +8,16 @@ directCommands:
   name: az eventgrid topic-type list
   summary: List registered topic types.
   description: ''
-  parameters: []
+  syntax: az eventgrid topic-type list
 - uid: ext_eventgrid_az_eventgrid_topic_type_list_event_types
   name: az eventgrid topic-type list-event-types
   summary: List the event types supported by a topic type.
   description: ''
+  syntax: az eventgrid topic-type list-event-types --name
   examples:
   - summary: List all event types supported by Azure Storage Accounts.
     syntax: az eventgrid topic-type list-event-types -n Microsoft.Storage.StorageAccounts
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the topic type.
@@ -25,7 +26,8 @@ directCommands:
   name: az eventgrid topic-type show
   summary: Get the details for a topic type.
   description: ''
-  parameters:
+  syntax: az eventgrid topic-type show --name
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the topic type.

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_sql_db_threat_policy
 name: az sql db threat-policy
 summary: Manage a database's threat detection policies.
@@ -8,7 +8,13 @@ directCommands:
   name: az sql db threat-policy show
   summary: Gets a database's threat detection policy.
   description: ''
-  parameters:
+  syntax: >-
+    az sql db threat-policy show [--ids]
+                                 [--name]
+                                 [--resource-group]
+                                 [--server]
+                                 [--subscription]
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -24,16 +30,29 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_db_threat_policy_update
   name: az sql db threat-policy update
   summary: Update a database's threat detection policy.
   description: If the policy is being enabled, storage_account or both storage_endpoint and storage_account_access_key must be specified.
+  syntax: >-
+    az sql db threat-policy update [--add]
+                                   [--disabled-alerts]
+                                   [--email-account-admins {Disabled, Enabled}]
+                                   [--email-addresses]
+                                   [--force-string]
+                                   [--ids]
+                                   [--name]
+                                   [--remove]
+                                   [--resource-group]
+                                   [--retention-days]
+                                   [--server]
+                                   [--set]
+                                   [--state {Disabled, Enabled, New}]
+                                   [--storage-account]
+                                   [--storage-endpoint]
+                                   [--storage-key]
+                                   [--subscription]
   examples:
   - summary: Enable by storage account name.
     syntax: >-
@@ -55,21 +74,12 @@ directCommands:
           --email-account-admins Enabled
   - summary: Disable a threat policy.
     syntax: az sql db threat-policy update -g mygroup -s myserver -n mydb --state Disabled
-  parameters:
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
-  - name: --name -n
-    summary: Name of the Azure SQL Database.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --server -s
-    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+  - name: --disabled-alerts
+    summary: List of disabled alerts.
     description: ''
   - name: --email-account-admins
     parameterValueGroup: Disabled, Enabled
@@ -78,11 +88,29 @@ directCommands:
   - name: --email-addresses
     summary: List of email addresses that alerts are sent to.
     description: ''
-  - name: --disabled-alerts
-    summary: List of disabled alerts.
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: Name of the Azure SQL Database.
+    description: ''
+  - name: --remove
+    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --retention-days
     summary: The number of days to retain threat detection logs.
+    description: ''
+  - name: --server -s
+    summary: Name of the Azure SQL server. You can configure the default using `az configure --defaults sql-server=<name>`.
+    description: ''
+  - name: --set
+    summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --state
     parameterValueGroup: Disabled, Enabled, New
@@ -97,24 +125,10 @@ directCommands:
   - name: --storage-key
     summary: Access key for the storage account.
     description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-    description: ''
-  - name: --remove
-    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
-    description: ''
-  - name: --set
-    summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 commands:
 - az_sql_db_threat_policy_show
 - az_sql_db_threat_policy_update
@@ -134,6 +148,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
   updated_at: 6/19/2020 1:04:35 AM

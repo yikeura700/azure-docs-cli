@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-ml_az_ml_computetarget_computeinstance
 name: az ml computetarget computeinstance
 summary: AzureML compute instance commands.
@@ -8,11 +8,20 @@ directCommands:
   name: az ml computetarget computeinstance restart
   summary: Restart a compute instance.
   description: ''
-  parameters:
+  syntax: >-
+    az ml computetarget computeinstance restart --name
+                                                [--no-wait]
+                                                [--path]
+                                                [--resource-group]
+                                                [--subscription-id]
+                                                [-v]
+                                                [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of compute instance to restart.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Flag to not wait for asynchronous calls.
     description: ''
@@ -25,21 +34,30 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace containing the compute target to restart.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace containing the compute target to restart.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_computetarget_computeinstance_start
   name: az ml computetarget computeinstance start
   summary: Start a compute instance.
   description: ''
-  parameters:
+  syntax: >-
+    az ml computetarget computeinstance start --name
+                                              [--no-wait]
+                                              [--path]
+                                              [--resource-group]
+                                              [--subscription-id]
+                                              [-v]
+                                              [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of compute instance to start.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Flag to not wait for asynchronous calls.
     description: ''
@@ -52,21 +70,30 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace containing the compute target to start.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace containing the compute target to start.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_computetarget_computeinstance_stop
   name: az ml computetarget computeinstance stop
   summary: Stop a compute instance.
   description: ''
-  parameters:
+  syntax: >-
+    az ml computetarget computeinstance stop --name
+                                             [--no-wait]
+                                             [--path]
+                                             [--resource-group]
+                                             [--subscription-id]
+                                             [-v]
+                                             [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of compute instance to stop.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Flag to not wait for asynchronous calls.
     description: ''
@@ -79,11 +106,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace containing the compute target to stop.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace containing the compute target to stop.
     description: ''
 commands:
 - ext_azure-cli-ml_az_ml_computetarget_computeinstance_restart

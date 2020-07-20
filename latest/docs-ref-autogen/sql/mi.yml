@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_sql_mi
 name: az sql mi
 summary: Manage SQL managed instances.
@@ -8,12 +8,33 @@ directCommands:
   name: az sql mi create
   summary: Create a managed instance.
   description: ''
+  syntax: >-
+    az sql mi create --admin-password
+                     --admin-user
+                     --name
+                     --resource-group
+                     --subnet
+                     [--assign-identity]
+                     [--capacity]
+                     [--collation]
+                     [--edition]
+                     [--family]
+                     [--license-type {BasePrice, LicenseIncluded}]
+                     [--location]
+                     [--minimal-tls-version {1.0, 1.1, 1.2, None}]
+                     [--no-wait]
+                     [--proxy-override {Default, Proxy, Redirect}]
+                     [--public-data-endpoint-enabled {false, true}]
+                     [--storage]
+                     [--subscription]
+                     [--timezone-id]
+                     [--vnet-name]
   examples:
   - summary: Create a managed instance with specified parameters and with identity
     syntax: az sql mi create -g mygroup -n myinstance -l mylocation -i -u myusername -p mypassword --license-type LicenseIncluded --subnet /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Network/virtualNetworks/{VNETName}/subnets/{SubnetName} --capacity 8 --storage 32GB --edition GeneralPurpose --family Gen4
   - summary: Create a managed instance with minimal set of parameters
     syntax: az sql mi create -g mygroup -n myinstance -l mylocation -i -u myusername -p mypassword --subnet /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Network/virtualNetworks/{VNETName}/subnets/{SubnetName}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --admin-password -p
     summary: The administrator login password (required for managed instance creation).
@@ -34,11 +55,21 @@ directCommands:
     name: --subnet
     summary: Name or ID of the subnet that allows access to an Azure Sql Managed Instance. If subnet name is provided, --vnet-name must be provided.
     description: ''
+  optionalParameters:
   - name: --assign-identity -i
     summary: Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault.
     description: ''
+  - name: --capacity -c
+    summary: The capacity of the managed instance in integer number of vcores.
+    description: ''
   - name: --collation
     summary: The collation of the managed instance.
+    description: ''
+  - name: --edition --tier -e
+    summary: 'The edition component of the sku. Allowed values include: GeneralPurpose, BusinessCritical.'
+    description: ''
+  - name: --family -f
+    summary: 'The compute generation component of the sku. Allowed values include: Gen4, Gen5.'
     description: ''
   - name: --license-type
     parameterValueGroup: BasePrice, LicenseIncluded
@@ -65,11 +96,138 @@ directCommands:
   - name: --storage
     summary: The storage size of the managed instance. Storage size must be specified in increments of 32 GB.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --timezone-id
     summary: The time zone id for the instance to set. A list of time zone ids is exposed through the sys.time_zone_info (Transact-SQL) view.
     description: ''
   - name: --vnet-name
     summary: The virtual network name.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+- uid: az_sql_mi_delete
+  name: az sql mi delete
+  summary: Delete a managed instance.
+  description: ''
+  syntax: >-
+    az sql mi delete [--ids]
+                     [--name]
+                     [--no-wait]
+                     [--resource-group]
+                     [--subscription]
+                     [--yes]
+  examples:
+  - summary: Delete a managed instance
+    syntax: az sql mi delete -g mygroup -n myinstance --yes
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: The managed instance name.
+    description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+- uid: az_sql_mi_list
+  name: az sql mi list
+  summary: List available managed instances.
+  description: ''
+  syntax: >-
+    az sql mi list [--resource-group]
+                   [--subscription]
+  examples:
+  - summary: List all managed instances in the current subscription.
+    syntax: az sql mi list
+  - summary: List all managed instances in a resource group.
+    syntax: az sql mi list -g mygroup
+  optionalParameters:
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+- uid: az_sql_mi_show
+  name: az sql mi show
+  summary: Get the details for a managed instance.
+  description: ''
+  syntax: >-
+    az sql mi show [--ids]
+                   [--name]
+                   [--resource-group]
+                   [--subscription]
+  examples:
+  - summary: Get the details for a managed instance
+    syntax: az sql mi show -g mygroup -n myinstance
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: The managed instance name.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+- uid: az_sql_mi_update
+  name: az sql mi update
+  summary: Update a managed instance.
+  description: ''
+  syntax: >-
+    az sql mi update [--add]
+                     [--admin-password]
+                     [--assign-identity]
+                     [--capacity]
+                     [--edition]
+                     [--family]
+                     [--force-string]
+                     [--ids]
+                     [--license-type {BasePrice, LicenseIncluded}]
+                     [--minimal-tls-version {1.0, 1.1, 1.2, None}]
+                     [--name]
+                     [--no-wait]
+                     [--proxy-override {Default, Proxy, Redirect}]
+                     [--public-data-endpoint-enabled {false, true}]
+                     [--remove]
+                     [--resource-group]
+                     [--set]
+                     [--storage]
+                     [--subscription]
+  examples:
+  - summary: Updates a mi with specified parameters and with identity
+    syntax: az sql mi update -g mygroup -n myinstance -i -p mypassword --license-type mylicensetype --capacity vcorecapacity --storage storagesize
+  - summary: Update mi edition and hardware family
+    syntax: az sql mi update -g mygroup -n myinstance --tier GeneralPurpose --family Gen5
+  - summary: Update a managed instance. (autogenerated)
+    syntax: az sql mi update --name myinstance --proxy-override Default --resource-group mygroup --subscription MySubscription
+  - summary: Update a managed instance. (autogenerated)
+    syntax: az sql mi update --name myinstance --public-data-endpoint-enabled true --resource-group mygroup --subscription MySubscription
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
+  - name: --admin-password -p
+    summary: The administrator login password (required for managed instance creation).
+    description: ''
+  - name: --assign-identity -i
+    summary: Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault. If identity is already assigned - do nothing.
     description: ''
   - name: --capacity -c
     summary: The capacity of the managed instance in integer number of vcores.
@@ -80,114 +238,11 @@ directCommands:
   - name: --family -f
     summary: 'The compute generation component of the sku. Allowed values include: Gen4, Gen5.'
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
-- uid: az_sql_mi_delete
-  name: az sql mi delete
-  summary: Delete a managed instance.
-  description: ''
-  examples:
-  - summary: Delete a managed instance
-    syntax: az sql mi delete -g mygroup -n myinstance --yes
-  parameters:
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --name -n
-    summary: The managed instance name.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
-- uid: az_sql_mi_list
-  name: az sql mi list
-  summary: List available managed instances.
-  description: ''
-  examples:
-  - summary: List all managed instances in the current subscription.
-    syntax: az sql mi list
-  - summary: List all managed instances in a resource group.
-    syntax: az sql mi list -g mygroup
-  parameters:
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
-- uid: az_sql_mi_show
-  name: az sql mi show
-  summary: Get the details for a managed instance.
-  description: ''
-  examples:
-  - summary: Get the details for a managed instance
-    syntax: az sql mi show -g mygroup -n myinstance
-  parameters:
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --name -n
-    summary: The managed instance name.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
-- uid: az_sql_mi_update
-  name: az sql mi update
-  summary: Update a managed instance.
-  description: ''
-  examples:
-  - summary: Updates a mi with specified parameters and with identity
-    syntax: az sql mi update -g mygroup -n myinstance -i -p mypassword --license-type mylicensetype --capacity vcorecapacity --storage storagesize
-  - summary: Update mi edition and hardware family
-    syntax: az sql mi update -g mygroup -n myinstance --tier GeneralPurpose --family Gen5
-  - summary: Update a managed instance. (autogenerated)
-    syntax: az sql mi update --name myinstance --proxy-override Default --resource-group mygroup --subscription MySubscription
-  - summary: Update a managed instance. (autogenerated)
-    syntax: az sql mi update --name myinstance --public-data-endpoint-enabled true --resource-group mygroup --subscription MySubscription
-  parameters:
-  - name: --admin-password -p
-    summary: The administrator login password (required for managed instance creation).
-    description: ''
-  - name: --assign-identity -i
-    summary: Generate and assign an Azure Active Directory Identity for this managed instance for use with key management services like Azure KeyVault. If identity is already assigned - do nothing.
     description: ''
   - name: --license-type
     parameterValueGroup: BasePrice, LicenseIncluded
@@ -196,6 +251,9 @@ directCommands:
   - name: --minimal-tls-version
     parameterValueGroup: 1.0, 1.1, 1.2, None
     summary: The minimal TLS version enforced by the managed instance for inbound connections.
+    description: ''
+  - name: --name -n
+    summary: The managed instance name.
     description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -208,48 +266,22 @@ directCommands:
     parameterValueGroup: false, true
     summary: Whether or not the public data endpoint is enabled for the instance.
     description: ''
-  - name: --storage
-    summary: The storage size of the managed instance. Storage size must be specified in increments of 32 GB.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --name -n
-    summary: The managed instance name.
+  - name: --remove
+    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --capacity -c
-    summary: The capacity of the managed instance in integer number of vcores.
-    description: ''
-  - name: --edition --tier -e
-    summary: 'The edition component of the sku. Allowed values include: GeneralPurpose, BusinessCritical.'
-    description: ''
-  - name: --family -f
-    summary: 'The compute generation component of the sku. Allowed values include: Gen4, Gen5.'
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-    description: ''
-  - name: --remove
-    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
-    description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --storage
+    summary: The storage size of the managed instance. Storage size must be specified in increments of 32 GB.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 commands:
 - az_sql_mi_ad_admin
 - az_sql_mi_ad_admin_create
@@ -289,6 +321,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
   updated_at: 6/19/2020 1:04:35 AM

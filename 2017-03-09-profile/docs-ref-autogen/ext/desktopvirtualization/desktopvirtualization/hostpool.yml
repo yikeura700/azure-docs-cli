@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_desktopvirtualization_az_desktopvirtualization_hostpool
 name: az desktopvirtualization hostpool
 summary: Desktopvirtualization hostpool.
@@ -8,10 +8,27 @@ directCommands:
   name: az desktopvirtualization hostpool create
   summary: Create or update a host pool.
   description: ''
+  syntax: >-
+    az desktopvirtualization hostpool create --host-pool-type {Personal, Pooled}
+                                             --load-balancer-type {BreadthFirst, DepthFirst, Persistent}
+                                             --location
+                                             --name
+                                             --personal-desktop-assignment-type {Automatic, Direct}
+                                             --resource-group
+                                             [--custom-rdp-property]
+                                             [--description]
+                                             [--friendly-name]
+                                             [--max-session-limit]
+                                             [--registration-info]
+                                             [--ring]
+                                             [--sso-context]
+                                             [--tags]
+                                             [--validation-environment {false, true}]
+                                             [--vm-template]
   examples:
   - summary: HostPool_Create
     syntax: az desktopvirtualization hostpool create --location "centralus" --description "des1" --friendly-name "friendly" --host-pool-type "Pooled" --load-balancer-type "BreadthFirst" --max-session-limit 999999 --personal-desktop-assignment-type "Automatic" --registration-info expiration-time="2020-10-01T14:01:54.9571247Z" registration-token-operation="Update" --sso-context "KeyVaultPath" --tags tag1="value1" tag2="value2" --name "MyHostPool" --resource-group "MyResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --host-pool-type
     parameterValueGroup: Personal, Pooled
@@ -39,6 +56,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --custom-rdp-property
     summary: Custom rdp property of HostPool.
     description: ''
@@ -82,10 +100,14 @@ directCommands:
   name: az desktopvirtualization hostpool delete
   summary: Remove a host pool.
   description: ''
+  syntax: >-
+    az desktopvirtualization hostpool delete --name
+                                             --resource-group
+                                             [--force {false, true}]
   examples:
   - summary: HostPool_Delete
     syntax: az desktopvirtualization hostpool delete --force true --name "MyHostPool" --resource-group "MyResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the host pool within the specified resource group.
@@ -94,6 +116,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --force
     parameterValueGroup: false, true
     summary: Force flag to delete sessionHost.
@@ -102,10 +125,11 @@ directCommands:
   name: az desktopvirtualization hostpool list
   summary: List hostPools in subscription.
   description: ''
+  syntax: az desktopvirtualization hostpool list [--resource-group]
   examples:
   - summary: HostPool_ListByResourceGroup
     syntax: az desktopvirtualization hostpool list --resource-group "MyResourceGroup"
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -113,10 +137,13 @@ directCommands:
   name: az desktopvirtualization hostpool show
   summary: Get a host pool.
   description: ''
+  syntax: >-
+    az desktopvirtualization hostpool show --name
+                                           --resource-group
   examples:
   - summary: HostPool_Get
     syntax: az desktopvirtualization hostpool show --name "MyHostPool" --resource-group "MyResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the host pool within the specified resource group.
@@ -129,10 +156,24 @@ directCommands:
   name: az desktopvirtualization hostpool update
   summary: Update a host pool.
   description: ''
+  syntax: >-
+    az desktopvirtualization hostpool update --name
+                                             --resource-group
+                                             [--custom-rdp-property]
+                                             [--description]
+                                             [--friendly-name]
+                                             [--load-balancer-type {BreadthFirst, DepthFirst, Persistent}]
+                                             [--max-session-limit]
+                                             [--personal-desktop-assignment-type {Automatic, Direct}]
+                                             [--registration-info]
+                                             [--ring]
+                                             [--sso-context]
+                                             [--tags]
+                                             [--validation-environment {false, true}]
   examples:
   - summary: HostPool_Update
     syntax: az desktopvirtualization hostpool update --description "des1" --friendly-name "friendly" --load-balancer-type "BreadthFirst" --max-session-limit 999999 --personal-desktop-assignment-type "Automatic" --registration-info expiration-time="2020-10-01T15:01:54.9571247Z" registration-token-operation="Update" --sso-context "KeyVaultPath" --tags tag1="value1" tag2="value2" --name "MyHostPool" --resource-group "MyResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the host pool within the specified resource group.
@@ -141,6 +182,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --custom-rdp-property
     summary: Custom rdp property of HostPool.
     description: ''

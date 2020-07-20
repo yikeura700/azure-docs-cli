@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_spring-cloud_az_spring_cloud_app_binding_cosmos
 name: az spring-cloud app binding cosmos
 summary: Commands to manage Azure Cosmos DB bindings.
@@ -8,10 +8,20 @@ directCommands:
   name: az spring-cloud app binding cosmos add
   summary: Bind an Azure Cosmos DB with the app.
   description: ''
+  syntax: >-
+    az spring-cloud app binding cosmos add --api-type {cassandra, gremlin, mongo, sql, table}
+                                           --app
+                                           --name
+                                           --resource-group
+                                           --resource-id
+                                           --service
+                                           [--collection-name]
+                                           [--database-name]
+                                           [--key-space]
   examples:
   - summary: Bind an Azure Cosmos DB.
     syntax: az spring-cloud app binding cosmos add -n cosmosProduction --app MyApp --resource-id ${COSMOSDB_ID} --api-type mongo --database mymongo -g MyResourceGroup -s MyService
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --api-type
     parameterValueGroup: cassandra, gremlin, mongo, sql, table
@@ -37,6 +47,7 @@ directCommands:
     name: --service -s
     summary: Name of Azure Spring Cloud, you can configure the default service using az configure --defaults spring-cloud=<name>.
     description: ''
+  optionalParameters:
   - name: --collection-name
     summary: Name of collection. Required for gremlin.
     description: ''
@@ -50,7 +61,15 @@ directCommands:
   name: az spring-cloud app binding cosmos update
   summary: Update an Azure Cosmos DB service binding of the app.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud app binding cosmos update --app
+                                              --name
+                                              --resource-group
+                                              --service
+                                              [--collection-name]
+                                              [--database-name]
+                                              [--key-space]
+  requiredParameters:
   - isRequired: true
     name: --app
     summary: Name of app.
@@ -67,6 +86,7 @@ directCommands:
     name: --service -s
     summary: Name of Azure Spring Cloud, you can configure the default service using az configure --defaults spring-cloud=<name>.
     description: ''
+  optionalParameters:
   - name: --collection-name
     summary: Name of collection. Required for gremlin.
     description: ''

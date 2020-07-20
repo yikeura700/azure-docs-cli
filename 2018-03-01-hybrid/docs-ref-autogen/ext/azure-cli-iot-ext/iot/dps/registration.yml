@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-iot-ext_az_iot_dps_registration
 name: az iot dps registration
 summary: Manage Azure IoT Hub Device Provisioning Service registrations.
@@ -8,7 +8,11 @@ directCommands:
   name: az iot dps registration delete
   summary: Delete a device registration in an Azure IoT Hub Device Provisioning Service.
   description: ''
-  parameters:
+  syntax: >-
+    az iot dps registration delete --dps-name
+                                   --registration-id
+                                   --resource-group
+  requiredParameters:
   - isRequired: true
     name: --dps-name
     summary: Name of the Azure IoT Hub device provisioning service.
@@ -25,7 +29,11 @@ directCommands:
   name: az iot dps registration list
   summary: List device registration state in an Azure IoT Hub Device Provisioning Service enrollment group.
   description: ''
-  parameters:
+  syntax: >-
+    az iot dps registration list --dps-name
+                                 --enrollment-id
+                                 --resource-group
+  requiredParameters:
   - isRequired: true
     name: --dps-name
     summary: Name of the Azure IoT Hub device provisioning service.
@@ -42,7 +50,11 @@ directCommands:
   name: az iot dps registration show
   summary: Get the device registration state in an Azure IoT Hub Device Provisioning Service.
   description: ''
-  parameters:
+  syntax: >-
+    az iot dps registration show --dps-name
+                                 --registration-id
+                                 --resource-group
+  requiredParameters:
   - isRequired: true
     name: --dps-name
     summary: Name of the Azure IoT Hub device provisioning service.

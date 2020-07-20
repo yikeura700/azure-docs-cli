@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_repos_ref
 name: az repos ref
 summary: Manage Git references.
@@ -8,7 +8,14 @@ directCommands:
   name: az repos ref create
   summary: Create a reference.
   description: ''
-  parameters:
+  syntax: >-
+    az repos ref create --name
+                        --object-id
+                        [--detect {false, true}]
+                        [--org]
+                        [--project]
+                        [--repository]
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: 'Name of the reference to create (example: heads/my_branch or tags/my_tag).'
@@ -17,6 +24,7 @@ directCommands:
     name: --object-id
     summary: Id of the object to create the reference from.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -34,7 +42,14 @@ directCommands:
   name: az repos ref delete
   summary: Delete a reference.
   description: ''
-  parameters:
+  syntax: >-
+    az repos ref delete --name
+                        --object-id
+                        [--detect {false, true}]
+                        [--org]
+                        [--project]
+                        [--repository]
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: 'Name of the reference to delete (example: heads/my_branch).'
@@ -43,6 +58,7 @@ directCommands:
     name: --object-id
     summary: Id of the reference to delete.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -60,7 +76,13 @@ directCommands:
   name: az repos ref list
   summary: List the references.
   description: ''
-  parameters:
+  syntax: >-
+    az repos ref list [--detect {false, true}]
+                      [--filter]
+                      [--org]
+                      [--project]
+                      [--repository]
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -81,11 +103,18 @@ directCommands:
   name: az repos ref lock
   summary: Lock a reference.
   description: ''
-  parameters:
+  syntax: >-
+    az repos ref lock --name
+                      [--detect {false, true}]
+                      [--org]
+                      [--project]
+                      [--repository]
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: 'Name of the reference to update (example: heads/my_branch).'
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -103,11 +132,18 @@ directCommands:
   name: az repos ref unlock
   summary: Unlock a reference.
   description: ''
-  parameters:
+  syntax: >-
+    az repos ref unlock --name
+                        [--detect {false, true}]
+                        [--org]
+                        [--project]
+                        [--repository]
+  requiredParameters:
   - isRequired: true
     name: --name
     summary: 'Name of the reference to update (example: heads/my_branch).'
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

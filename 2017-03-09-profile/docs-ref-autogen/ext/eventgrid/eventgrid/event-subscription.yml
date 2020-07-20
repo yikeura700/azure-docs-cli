@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_eventgrid_az_eventgrid_event_subscription
 name: az eventgrid event-subscription
 summary: Manage event subscriptions.
@@ -8,6 +8,31 @@ directCommands:
   name: az eventgrid event-subscription create
   summary: Create a new event subscription.
   description: ''
+  syntax: >-
+    az eventgrid event-subscription create --name
+                                           [--advanced-filter]
+                                           [--azure-active-directory-application-id-or-uri]
+                                           [--azure-active-directory-tenant-id]
+                                           [--deadletter-endpoint]
+                                           [--deadletter-identity {systemassigned}]
+                                           [--deadletter-identity-endpoint]
+                                           [--delivery-identity {systemassigned}]
+                                           [--delivery-identity-endpoint]
+                                           [--delivery-identity-endpoint-type {azurefunction, eventhub, hybridconnection, servicebusqueue, servicebustopic, storagequeue, webhook}]
+                                           [--endpoint]
+                                           [--endpoint-type {azurefunction, eventhub, hybridconnection, servicebusqueue, servicebustopic, storagequeue, webhook}]
+                                           [--event-delivery-schema {cloudeventschemav1_0, custominputschema, eventgridschema}]
+                                           [--event-ttl]
+                                           [--expiration-date]
+                                           [--included-event-types]
+                                           [--labels]
+                                           [--max-delivery-attempts]
+                                           [--max-events-per-batch]
+                                           [--preferred-batch-size-in-kilobytes]
+                                           [--source-resource-id]
+                                           [--subject-begins-with]
+                                           [--subject-case-sensitive {false, true}]
+                                           [--subject-ends-with]
   examples:
   - summary: Create a new event subscription for an Event Grid topic, using default filters.
     syntax: >-
@@ -107,11 +132,12 @@ directCommands:
       az eventgrid event-subscription create --source-resource-id /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/topics/topic1 \
           --delivery-identity-endpoint-type eventhub --delivery-identity systemassigned --delivery-identity-endpoint /subscriptions/{SubId2|}/resourceGroups/{RG2}/providers/Microsoft.eventhub/namespaces/{EventHubNamespace}/eventhubs/{EventhubName} \
           --deadletter-identity-endpoint /subscriptions/{SubID}/resourceGroups/TestRG/providers/Microsoft.Storage/storageAccounts/s2/blobServices/default/containers/blobcontainer1 --deadletter-identity systemassigned -n {EventSubscriptionName}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the event subscription.
     description: ''
+  optionalParameters:
   - name: --advanced-filter
     summary: An advanced filter enables filtering of events based on a specific event property.
     description: >-
@@ -234,6 +260,9 @@ directCommands:
   name: az eventgrid event-subscription delete
   summary: Delete an event subscription.
   description: ''
+  syntax: >-
+    az eventgrid event-subscription delete --name
+                                           [--source-resource-id]
   examples:
   - summary: Delete an event subscription for an Event Grid topic.
     syntax: >-
@@ -259,11 +288,12 @@ directCommands:
     syntax: >-
       az eventgrid event-subscription delete --name es3 \
           --source-resource-id /subscriptions/{SubID}/resourceGroups/{RG}/providers/microsoft.storage/storageaccounts/kalsegblob
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the event subscription.
     description: ''
+  optionalParameters:
   - name: --source-resource-id
     summary: Fully qualified identifier of the Azure resource whose event subscription needs to be deleted.
     description: >-
@@ -295,6 +325,12 @@ directCommands:
     3. To list all event subscriptions in a region (across all topic types), specify only the --location parameter.
 
     4. For both #2 and #3 above, to filter only by a resource group, you can additionally specify the --resource-group parameter.
+  syntax: >-
+    az eventgrid event-subscription list [--location]
+                                         [--odata-query]
+                                         [--resource-group]
+                                         [--source-resource-id]
+                                         [--topic-type-name]
   examples:
   - summary: List all event subscriptions created for an Event Grid topic.
     syntax: az eventgrid event-subscription list --source-resource-id /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/topics/topic1
@@ -326,7 +362,7 @@ directCommands:
     syntax: az eventgrid event-subscription list --source-resource-id /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/domains/d1 --odata-query "Contains(name, 'XYZ')"
   - summary: List all event subscriptions for an Event Grid domain except the event subscription with name "name1"
     syntax: az eventgrid event-subscription list --source-resource-id /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/domains/d1 --odata-query "NOT (name eq 'name1')"
-  parameters:
+  optionalParameters:
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
@@ -363,6 +399,10 @@ directCommands:
   name: az eventgrid event-subscription show
   summary: Get the details of an event subscription.
   description: ''
+  syntax: >-
+    az eventgrid event-subscription show --name
+                                         [--include-full-endpoint-url {false, true}]
+                                         [--source-resource-id]
   examples:
   - summary: Show the details of an event subscription for an Event Grid topic.
     syntax: >-
@@ -380,11 +420,12 @@ directCommands:
     syntax: >-
       az eventgrid event-subscription show --name es3 \
           --source-resource-id /subscriptions/{SubID}/resourceGroups/rg1/providers/microsoft.storage/storageaccounts/kalsegblob
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the event subscription.
     description: ''
+  optionalParameters:
   - name: --include-full-endpoint-url
     parameterValueGroup: false, true
     summary: Specify to indicate whether the full endpoint URL should be returned. True if flag present.
@@ -409,6 +450,26 @@ directCommands:
   name: az eventgrid event-subscription update
   summary: Update an event subscription.
   description: ''
+  syntax: >-
+    az eventgrid event-subscription update --name
+                                           [--add]
+                                           [--advanced-filter]
+                                           [--deadletter-endpoint]
+                                           [--deadletter-identity {systemassigned}]
+                                           [--deadletter-identity-endpoint]
+                                           [--delivery-identity {systemassigned}]
+                                           [--delivery-identity-endpoint]
+                                           [--delivery-identity-endpoint-type {azurefunction, eventhub, hybridconnection, servicebusqueue, servicebustopic, storagequeue, webhook}]
+                                           [--endpoint]
+                                           [--endpoint-type {azurefunction, eventhub, hybridconnection, servicebusqueue, servicebustopic, storagequeue, webhook}]
+                                           [--force-string]
+                                           [--included-event-types]
+                                           [--labels]
+                                           [--remove]
+                                           [--set]
+                                           [--source-resource-id]
+                                           [--subject-begins-with]
+                                           [--subject-ends-with]
   examples:
   - summary: Update an event subscription for an Event Grid topic to specify a new endpoint.
     syntax: >-
@@ -443,10 +504,14 @@ directCommands:
           --endpoint https://contoso.azurewebsites.net/api/f1?code=code
           --advanced-filter data.blobType StringIn BlockBlob
           --advanced-filter data.url StringBeginsWith https://myaccount.blob.core.windows.net
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the event subscription.
+    description: ''
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --advanced-filter
     summary: An advanced filter enables filtering of events based on a specific event property.
@@ -507,11 +572,20 @@ directCommands:
     parameterValueGroup: azurefunction, eventhub, hybridconnection, servicebusqueue, servicebustopic, storagequeue, webhook
     summary: The type of the destination endpoint.
     description: ''
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+    description: ''
   - name: --included-event-types
     summary: 'A space-separated list of event types. Example: Microsoft.Storage.BlobCreated Microsoft.Storage.BlobDeleted. To subscribe to all default event types, do not specify any value for this argument.'
     description: ''
   - name: --labels
     summary: A space-separated list of labels to associate with this event subscription.
+    description: ''
+  - name: --remove
+    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
+    description: ''
+  - name: --set
+    summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --source-resource-id
     summary: Fully qualified identifier of the Azure resource whose event subscription needs to be updated.
@@ -534,18 +608,6 @@ directCommands:
     description: ''
   - name: --subject-ends-with
     summary: An optional string to filter events for an event subscription based on a suffix. Wildcard characters are not supported.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-    description: ''
-  - name: --remove
-    summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
-    description: ''
-  - name: --set
-    summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
 - ext_eventgrid_az_eventgrid_event_subscription_create

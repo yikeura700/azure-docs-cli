@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_kusto_az_kusto_data_connection_event_grid
 name: az kusto data-connection event-grid
 summary: Kusto data-connection sub group event-grid.
@@ -8,23 +8,37 @@ directCommands:
   name: az kusto data-connection event-grid create
   summary: Creates or updates a data connection.
   description: ''
-  parameters:
+  syntax: >-
+    az kusto data-connection event-grid create --cluster-name
+                                               --database-name
+                                               --data-connection-name
+                                               --resource-group
+                                               [--consumer-group]
+                                               [--data-format {AVRO, CSV, JSON, MULTIJSON, ORC, PARQUET, PSV, RAW, SCSV, SINGLEJSON, SOHSV, TSV, TSVE, TXT}]
+                                               [--event-hub-resource-id]
+                                               [--location]
+                                               [--mapping-rule-name]
+                                               [--no-wait]
+                                               [--storage-account-resource-id]
+                                               [--table-name]
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
-    description: ''
-  - isRequired: true
-    name: --data-connection-name
-    summary: The name of the data connection.
     description: ''
   - isRequired: true
     name: --database-name
     summary: The name of the database in the Kusto cluster.
     description: ''
   - isRequired: true
+    name: --data-connection-name
+    summary: The name of the data connection.
+    description: ''
+  - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --consumer-group
     summary: The event hub consumer group.
     description: ''
@@ -54,7 +68,19 @@ directCommands:
   name: az kusto data-connection event-grid data-connection-validation
   summary: Checks that the data connection parameters are valid.
   description: ''
-  parameters:
+  syntax: >-
+    az kusto data-connection event-grid data-connection-validation --cluster-name
+                                                                   --database-name
+                                                                   --resource-group
+                                                                   [--consumer-group]
+                                                                   [--data-connection-name]
+                                                                   [--data-format {AVRO, CSV, JSON, MULTIJSON, ORC, PARQUET, PSV, RAW, SCSV, SINGLEJSON, SOHSV, TSV, TSVE, TXT}]
+                                                                   [--event-hub-resource-id]
+                                                                   [--location]
+                                                                   [--mapping-rule-name]
+                                                                   [--storage-account-resource-id]
+                                                                   [--table-name]
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
@@ -67,6 +93,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --consumer-group
     summary: The event hub consumer group.
     description: ''
@@ -96,23 +123,37 @@ directCommands:
   name: az kusto data-connection event-grid update
   summary: Updates a data connection.
   description: ''
-  parameters:
+  syntax: >-
+    az kusto data-connection event-grid update --cluster-name
+                                               --database-name
+                                               --data-connection-name
+                                               --resource-group
+                                               [--consumer-group]
+                                               [--data-format {AVRO, CSV, JSON, MULTIJSON, ORC, PARQUET, PSV, RAW, SCSV, SINGLEJSON, SOHSV, TSV, TSVE, TXT}]
+                                               [--event-hub-resource-id]
+                                               [--location]
+                                               [--mapping-rule-name]
+                                               [--no-wait]
+                                               [--storage-account-resource-id]
+                                               [--table-name]
+  requiredParameters:
   - isRequired: true
     name: --cluster-name
     summary: The name of the Kusto cluster.
-    description: ''
-  - isRequired: true
-    name: --data-connection-name
-    summary: The name of the data connection.
     description: ''
   - isRequired: true
     name: --database-name
     summary: The name of the database in the Kusto cluster.
     description: ''
   - isRequired: true
+    name: --data-connection-name
+    summary: The name of the data connection.
+    description: ''
+  - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --consumer-group
     summary: The event hub consumer group.
     description: ''

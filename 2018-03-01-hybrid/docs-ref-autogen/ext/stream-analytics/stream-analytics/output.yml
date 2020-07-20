@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_stream-analytics_az_stream_analytics_output
 name: az stream-analytics output
 summary: Commands to manage stream-analytics output.
@@ -8,6 +8,12 @@ directCommands:
   name: az stream-analytics output create
   summary: Create an output or replaces an already existing output under an existing streaming job.
   description: ''
+  syntax: >-
+    az stream-analytics output create --datasource
+                                      --job-name
+                                      --name
+                                      --resource-group
+                                      [--serialization]
   examples:
   - summary: Create an output
     syntax: >-
@@ -155,7 +161,7 @@ directCommands:
        {
            "type": "Avro"
        }
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --datasource
     summary: The datasource of the output.
@@ -172,6 +178,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --serialization
     summary: The serialization of the output.
     description: ''
@@ -179,13 +186,17 @@ directCommands:
   name: az stream-analytics output delete
   summary: Delete an output from the streaming job.
   description: ''
+  syntax: >-
+    az stream-analytics output delete --job-name
+                                      --name
+                                      --resource-group
   examples:
   - summary: Delete an output
     syntax: >-
       az stream-analytics output delete --resource-group MyResourceGroup --job-name MyJobName --name \
 
       MyOutputName
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --job-name
     summary: The name of the streaming job.
@@ -202,10 +213,13 @@ directCommands:
   name: az stream-analytics output list
   summary: List all of the outputs under the specified streaming job.
   description: ''
+  syntax: >-
+    az stream-analytics output list --job-name
+                                    --resource-group
   examples:
   - summary: List all outputs in a streaming job
     syntax: az stream-analytics output list --resource-group MyResourceGroup --job-name MyJobName
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --job-name
     summary: The name of the streaming job.
@@ -218,13 +232,17 @@ directCommands:
   name: az stream-analytics output show
   summary: Get details about the specified output.
   description: ''
+  syntax: >-
+    az stream-analytics output show --job-name
+                                    --name
+                                    --resource-group
   examples:
   - summary: Get details about an output
     syntax: >-
       az stream-analytics output show --resource-group MyResourceGroup --job-name MyJobName --name \
 
       MyOutputName
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --job-name
     summary: The name of the streaming job.
@@ -241,13 +259,18 @@ directCommands:
   name: az stream-analytics output test
   summary: Test an output.
   description: ''
+  syntax: >-
+    az stream-analytics output test --job-name
+                                    --name
+                                    --resource-group
+                                    [--no-wait]
   examples:
   - summary: Test the connection for an output
     syntax: >-
       az stream-analytics output test --resource-group MyResourceGroup --job-name MyJobName --name \
 
       MyOutputName
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --job-name
     summary: The name of the streaming job.
@@ -260,6 +283,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''

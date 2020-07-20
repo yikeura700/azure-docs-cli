@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_sql_mi_tde_key
 name: az sql mi tde-key
 summary: Manage a SQL Instance's encryption protector.
@@ -8,17 +8,25 @@ directCommands:
   name: az sql mi tde-key set
   summary: Sets the SQL Instance's encryption protector.
   description: ''
-  parameters:
+  syntax: >-
+    az sql mi tde-key set --server-key-type {AzureKeyVault, ServiceManaged}
+                          [--ids]
+                          [--kid]
+                          [--managed-instance]
+                          [--resource-group]
+                          [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --server-key-type -t
     parameterValueGroup: AzureKeyVault, ServiceManaged
     summary: The type of the server key.
     description: ''
-  - name: --kid -k
-    summary: The Azure Key Vault key identifier of the server key. An example key identifier is "<a href="https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901">https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901</a>".
-    description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --kid -k
+    summary: The Azure Key Vault key identifier of the server key. An example key identifier is "<a href="https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901">https://YourVaultName.vault.azure.net/keys/YourKeyName/01234567890123456789012345678901</a>".
     description: ''
   - name: --managed-instance --mi
     summary: Name of the Azure SQL managed instance.
@@ -29,17 +37,17 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_mi_tde_key_show
   name: az sql mi tde-key show
   summary: Gets a managed instance encryption protector.
   description: ''
-  parameters:
+  syntax: >-
+    az sql mi tde-key show [--ids]
+                           [--managed-instance]
+                           [--resource-group]
+                           [--subscription]
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -52,12 +60,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 commands:
 - az_sql_mi_tde_key_set
 - az_sql_mi_tde_key_show
@@ -77,6 +80,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
   updated_at: 6/19/2020 1:04:35 AM

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_sql_mi_op
 name: az sql mi op
 summary: Manage operations on a managed instance.
@@ -8,14 +8,21 @@ directCommands:
   name: az sql mi op cancel
   summary: Cancels the asynchronous operation on the managed instance.
   description: ''
+  syntax: >-
+    az sql mi op cancel --name
+                        [--ids]
+                        [--managed-instance]
+                        [--resource-group]
+                        [--subscription]
   examples:
   - summary: Cancel an operation.
     syntax: az sql mi op cancel -g mygroup --mi myManagedInstance -n d2896mydb-2ba8-4c84-bac1-387c430cce40
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The unique name of the operation to cancel.
     description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -28,17 +35,17 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_mi_op_list
   name: az sql mi op list
   summary: Gets a list of operations performed on the managed instance.
   description: ''
-  parameters:
+  syntax: >-
+    az sql mi op list [--ids]
+                      [--managed-instance]
+                      [--resource-group]
+                      [--subscription]
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -51,21 +58,23 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_mi_op_show
   name: az sql mi op show
   summary: Gets a management operation on a managed instance.
   description: ''
-  parameters:
+  syntax: >-
+    az sql mi op show --name
+                      [--ids]
+                      [--managed-instance]
+                      [--resource-group]
+                      [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The unique name of the operation to show.
     description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -78,12 +87,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/sql/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 commands:
 - az_sql_mi_op_cancel
 - az_sql_mi_op_list
@@ -104,6 +108,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
   updated_at: 6/19/2020 1:04:35 AM

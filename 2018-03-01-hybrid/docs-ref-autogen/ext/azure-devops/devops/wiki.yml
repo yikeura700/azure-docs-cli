@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_devops_wiki
 name: az devops wiki
 summary: Manage wikis.
@@ -8,6 +8,15 @@ directCommands:
   name: az devops wiki create
   summary: Create a wiki.
   description: ''
+  syntax: >-
+    az devops wiki create [--detect {false, true}]
+                          [--mapped-path]
+                          [--name]
+                          [--org]
+                          [--project]
+                          [--repository]
+                          [--type {codewiki, projectwiki}]
+                          [--version]
   examples:
   - summary: Create a project wiki
     syntax: az devops wiki create --name myprojectwiki
@@ -16,7 +25,7 @@ directCommands:
       az devops wiki create --name WIKI_NAME --type codewiki --version BRANCH_NAME
 
       --repository REPO_NAME --mapped-path PATH_TO_PUBLISH
-  parameters:
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -48,11 +57,18 @@ directCommands:
   name: az devops wiki delete
   summary: Delete a wiki.
   description: ''
-  parameters:
+  syntax: >-
+    az devops wiki delete --wiki
+                          [--detect {false, true}]
+                          [--org]
+                          [--project]
+                          [--yes]
+  requiredParameters:
   - isRequired: true
     name: --wiki
     summary: Name or Id of the wiki to delete.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -70,12 +86,17 @@ directCommands:
   name: az devops wiki list
   summary: List all the wikis in a project or organization.
   description: ''
+  syntax: >-
+    az devops wiki list [--detect {false, true}]
+                        [--org]
+                        [--project]
+                        [--scope {organization, project}]
   examples:
   - summary: List all wikis for a project
     syntax: az devops wiki list
   - summary: List all wikis in the organization
     syntax: az devops wiki list --scope organization
-  parameters:
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -95,11 +116,18 @@ directCommands:
   name: az devops wiki show
   summary: Show details of a wiki.
   description: ''
-  parameters:
+  syntax: >-
+    az devops wiki show --wiki
+                        [--detect {false, true}]
+                        [--open]
+                        [--org]
+                        [--project]
+  requiredParameters:
   - isRequired: true
     name: --wiki
     summary: Name or Id of the wiki.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

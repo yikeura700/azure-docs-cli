@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_eventgrid_az_eventgrid_partner_namespace
 name: az eventgrid partner namespace
 summary: Manage partner namespaces.
@@ -8,10 +8,16 @@ directCommands:
   name: az eventgrid partner namespace create
   summary: Create a partner namespace.
   description: ''
+  syntax: >-
+    az eventgrid partner namespace create --location
+                                          --name
+                                          --partner-registration-id
+                                          --resource-group
+                                          [--tags]
   examples:
   - summary: Create a new partner namespace.
     syntax: az eventgrid partner namespace create -g rg1 --name namespaceName1 -l westus2 --partner-registration-id 795c9f2f-6d2d-42ff-a570-42fd3043192c
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -28,6 +34,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
@@ -35,10 +42,13 @@ directCommands:
   name: az eventgrid partner namespace delete
   summary: Delete a partner namespace.
   description: ''
+  syntax: >-
+    az eventgrid partner namespace delete --name
+                                          --resource-group
   examples:
   - summary: Delete a specific partner namespace.
     syntax: az eventgrid partner namespace delete -g rg1 --name partnernamespace1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the partner namespace.
@@ -51,6 +61,9 @@ directCommands:
   name: az eventgrid partner namespace list
   summary: List available partner namespaces.
   description: ''
+  syntax: >-
+    az eventgrid partner namespace list [--odata-query]
+                                        [--resource-group]
   examples:
   - summary: List all partner namespaces in the current Azure subscription.
     syntax: az eventgrid partner namespace list
@@ -60,7 +73,7 @@ directCommands:
     syntax: az eventgrid partner namespace list -g rg1 --odata-query "Contains(name, 'XYZ')"
   - summary: List all partner namespaces in a resource group except the partner namespace with name "name1"
     syntax: az eventgrid partner namespace list -g rg1 --odata-query "NOT (name eq 'name1')"
-  parameters:
+  optionalParameters:
   - name: --odata-query
     summary: The query used to filter the results using OData syntax.
     description: ''
@@ -71,12 +84,15 @@ directCommands:
   name: az eventgrid partner namespace show
   summary: Get the details of a partner namespace.
   description: ''
+  syntax: >-
+    az eventgrid partner namespace show --name
+                                        --resource-group
   examples:
   - summary: Show the details of a partner namespace.
     syntax: az eventgrid partner namespace show -g rg1 -n partnernamespace1
   - summary: Show the details of a partner namespace based on resource ID.
     syntax: az eventgrid partner namespace show --ids /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.EventGrid/partnenamespaces/partnernamespace1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the partner namespace.

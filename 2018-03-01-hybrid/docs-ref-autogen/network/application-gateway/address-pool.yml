@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_application_gateway_address_pool
 name: az network application-gateway address-pool
 summary: Manage address pools of an application gateway.
@@ -8,12 +8,19 @@ directCommands:
   name: az network application-gateway address-pool create
   summary: Create an address pool.
   description: ''
+  syntax: >-
+    az network application-gateway address-pool create --gateway-name
+                                                       --name
+                                                       --resource-group
+                                                       [--no-wait]
+                                                       [--servers]
+                                                       [--subscription]
   examples:
   - summary: Create an address pool with two endpoints.
     syntax: >-
       az network application-gateway address-pool create -g MyResourceGroup \
           --gateway-name MyAppGateway -n MyAddressPool --servers 10.0.0.4 10.0.0.5
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --gateway-name
     summary: Name of the application gateway.
@@ -26,6 +33,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -35,23 +43,22 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_application_gateway_address_pool_delete
   name: az network application-gateway address-pool delete
   summary: Delete an address pool.
   description: ''
+  syntax: >-
+    az network application-gateway address-pool delete [--gateway-name]
+                                                       [--ids]
+                                                       [--name]
+                                                       [--no-wait]
+                                                       [--resource-group]
+                                                       [--subscription]
   examples:
   - summary: Delete an address pool.
     syntax: az network application-gateway address-pool delete -g MyResourceGroup --gateway-name MyAppGateway -n MyAddressPool
-  parameters:
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
+  optionalParameters:
   - name: --gateway-name
     summary: The name of the application gateway.
     description: ''
@@ -61,26 +68,28 @@ directCommands:
   - name: --name -n
     summary: The name of the backend address pool.
     description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_application_gateway_address_pool_list
   name: az network application-gateway address-pool list
   summary: List address pools.
   description: ''
+  syntax: >-
+    az network application-gateway address-pool list --gateway-name
+                                                     --resource-group
+                                                     [--subscription]
   examples:
   - summary: List address pools.
     syntax: az network application-gateway address-pool list -g MyResourceGroup --gateway-name MyAppGateway
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --gateway-name
     summary: The name of the application gateway.
@@ -89,23 +98,25 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_application_gateway_address_pool_show
   name: az network application-gateway address-pool show
   summary: Get the details of an address pool.
   description: ''
+  syntax: >-
+    az network application-gateway address-pool show [--gateway-name]
+                                                     [--ids]
+                                                     [--name]
+                                                     [--resource-group]
+                                                     [--subscription]
   examples:
   - summary: Get the details of an address pool.
     syntax: az network application-gateway address-pool show -g MyResourceGroup --gateway-name MyAppGateway -n MyAddressPool
-  parameters:
+  optionalParameters:
   - name: --gateway-name
     summary: The name of the application gateway.
     description: ''
@@ -121,16 +132,23 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_application_gateway_address_pool_update
   name: az network application-gateway address-pool update
   summary: Update an address pool.
   description: ''
+  syntax: >-
+    az network application-gateway address-pool update [--add]
+                                                       [--force-string]
+                                                       [--gateway-name]
+                                                       [--ids]
+                                                       [--name]
+                                                       [--no-wait]
+                                                       [--remove]
+                                                       [--resource-group]
+                                                       [--servers]
+                                                       [--set]
+                                                       [--subscription]
   examples:
   - summary: Update backend address pool.
     syntax: az network application-gateway address-pool update -g MyResourceGroup --gateway-name MyAppGateway \ -n MyAddressPool --servers 10.0.0.4 10.0.0.5 10.0.0.6
@@ -138,12 +156,12 @@ directCommands:
     syntax: >-
       az network application-gateway address-pool update -g MyResourceGroup --gateway-name MyAppGateway -n MyAddressPool \
           --add backendAddresses "{ "ip_address": "{10.0.0.13}" }"
-  parameters:
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
-  - name: --servers
-    summary: Space-separated list of IP addresses or DNS names corresponding to backend servers.
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --gateway-name
     summary: Name of the application gateway.
@@ -154,30 +172,25 @@ directCommands:
   - name: --name -n
     summary: The name of the backend address pool.
     description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --servers
+    summary: Space-separated list of IP addresses or DNS names corresponding to backend servers.
+    description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_application_gateway_address_pool_create
 - az_network_application_gateway_address_pool_delete
@@ -200,6 +213,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

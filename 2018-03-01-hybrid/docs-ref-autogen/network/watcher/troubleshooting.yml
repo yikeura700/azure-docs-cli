@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_watcher_troubleshooting
 name: az network watcher troubleshooting
 summary: Manage Network Watcher troubleshooting sessions.
@@ -8,14 +8,20 @@ directCommands:
   name: az network watcher troubleshooting show
   summary: Get the results of the last troubleshooting operation.
   description: ''
+  syntax: >-
+    az network watcher troubleshooting show --resource
+                                            [--resource-group]
+                                            [--resource-type {vnetGateway, vpnConnection}]
+                                            [--subscription]
   examples:
   - summary: Show the results or status of a troubleshooting operation for a Vnet Gateway.
     syntax: az network watcher troubleshooting show -g MyResourceGroup --resource MyVnetGateway --resource-type vnetGateway
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --resource
     summary: Name or ID of the resource to troubleshoot.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -26,23 +32,26 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_watcher_troubleshooting_start
   name: az network watcher troubleshooting start
   summary: Troubleshoot issues with VPN connections or gateway connectivity.
   description: ''
+  syntax: >-
+    az network watcher troubleshooting start --resource
+                                             --storage-account
+                                             --storage-path
+                                             [--no-wait]
+                                             [--resource-group]
+                                             [--resource-type {vnetGateway, vpnConnection}]
+                                             [--subscription]
   examples:
   - summary: Start a troubleshooting operation on a VPN Connection.
     syntax: >-
       az network watcher troubleshooting start -g MyResourceGroup --resource MyVPNConnection \
           --resource-type vpnConnection --storage-account MyStorageAccount \
           --storage-path https://{storageAccountName}.blob.core.windows.net/{containerName}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --resource
     summary: Name or ID of the resource to troubleshoot.
@@ -55,6 +64,7 @@ directCommands:
     name: --storage-path
     summary: Fully qualified URI to the storage blob container in which to store the troubleshooting results.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -68,12 +78,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_watcher_troubleshooting_show
 - az_network_watcher_troubleshooting_start
@@ -93,6 +98,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

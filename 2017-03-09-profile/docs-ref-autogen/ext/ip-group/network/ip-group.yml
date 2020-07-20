@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_ip-group_az_network_ip_group
 name: az network ip-group
 summary: Commands to manage IpGroup.
@@ -8,7 +8,13 @@ directCommands:
   name: az network ip-group create
   summary: Create an IpGroup.
   description: ''
-  parameters:
+  syntax: >-
+    az network ip-group create --ip-addresses
+                               --name
+                               --resource-group
+                               [--location]
+                               [--tags]
+  requiredParameters:
   - isRequired: true
     name: --ip-addresses
     summary: Space-separated list of IpAddress or IpAddressPrefix.
@@ -21,6 +27,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
@@ -31,7 +38,10 @@ directCommands:
   name: az network ip-group delete
   summary: Delete an IpGroup.
   description: ''
-  parameters:
+  syntax: >-
+    az network ip-group delete --name
+                               --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the IpGroup.
@@ -44,7 +54,8 @@ directCommands:
   name: az network ip-group list
   summary: List all of IpGroup.
   description: ''
-  parameters:
+  syntax: az network ip-group list [--resource-group]
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -52,7 +63,11 @@ directCommands:
   name: az network ip-group show
   summary: Show details of an IpGroup.
   description: ''
-  parameters:
+  syntax: >-
+    az network ip-group show --name
+                             --resource-group
+                             [--expand]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the IpGroup.
@@ -61,6 +76,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --expand
     summary: Expands resourceIds (of Firewalls/Network Security Groups etc.) back referenced by the IpGroups resource.
     description: ''
@@ -68,7 +84,16 @@ directCommands:
   name: az network ip-group update
   summary: Update an IpGroup.
   description: ''
-  parameters:
+  syntax: >-
+    az network ip-group update --name
+                               --resource-group
+                               [--add]
+                               [--force-string]
+                               [--ip-addresses]
+                               [--remove]
+                               [--set]
+                               [--tags]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the IpGroup.
@@ -77,23 +102,24 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --ip-addresses
-    summary: Space-separated list of IpAddress or IpAddressPrefix.
-    description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
+  optionalParameters:
   - name: --add
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --force-string
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
+  - name: --ip-addresses
+    summary: Space-separated list of IpAddress or IpAddressPrefix.
+    description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
+    description: ''
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
 commands:
 - ext_ip-group_az_network_ip_group_create

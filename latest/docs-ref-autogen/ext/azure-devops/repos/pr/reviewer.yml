@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_repos_pr_reviewer
 name: az repos pr reviewer
 summary: Manage pull request reviewers.
@@ -8,7 +8,12 @@ directCommands:
   name: az repos pr reviewer add
   summary: Add one or more reviewers to a pull request.
   description: ''
-  parameters:
+  syntax: >-
+    az repos pr reviewer add --id
+                             --reviewers
+                             [--detect {false, true}]
+                             [--org]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: ID of the pull request.
@@ -17,6 +22,7 @@ directCommands:
     name: --reviewers
     summary: Users or groups to include as reviewers on a pull request. Space separated.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -28,11 +34,16 @@ directCommands:
   name: az repos pr reviewer list
   summary: List reviewers of a pull request.
   description: ''
-  parameters:
+  syntax: >-
+    az repos pr reviewer list --id
+                              [--detect {false, true}]
+                              [--org]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: ID of the pull request.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -44,7 +55,12 @@ directCommands:
   name: az repos pr reviewer remove
   summary: Remove one or more reviewers from a pull request.
   description: ''
-  parameters:
+  syntax: >-
+    az repos pr reviewer remove --id
+                                --reviewers
+                                [--detect {false, true}]
+                                [--org]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: ID of the pull request.
@@ -53,6 +69,7 @@ directCommands:
     name: --reviewers
     summary: Users or groups to remove as reviewers on a pull request. Space separated.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.

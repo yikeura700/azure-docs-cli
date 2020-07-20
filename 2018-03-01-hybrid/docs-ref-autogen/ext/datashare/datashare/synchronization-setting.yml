@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datashare_az_datashare_synchronization_setting
 name: az datashare synchronization-setting
 summary: Commands for providers to manage datashare synchronization settings.
@@ -8,10 +8,18 @@ directCommands:
   name: az datashare synchronization-setting create
   summary: Create a synchronization setting.
   description: ''
+  syntax: >-
+    az datashare synchronization-setting create --account-name
+                                                --name
+                                                --recurrence-interval {Day, Hour}
+                                                --resource-group
+                                                --share-name
+                                                --synchronization-time
+                                                [--kind {ScheduleBased}]
   examples:
   - summary: Create a synchronization setting
     syntax: az datashare synchronization-setting create --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --name MyDataset --recurrence-interval Day --synchronization-time "2020-04-05 10:50:00 +00:00" --kind ScheduleBased
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -19,6 +27,11 @@ directCommands:
   - isRequired: true
     name: --name -n
     summary: The name of the synchronizationSetting.
+    description: ''
+  - isRequired: true
+    name: --recurrence-interval
+    parameterValueGroup: Day, Hour
+    summary: Synchronization Recurrence Interval.
     description: ''
   - isRequired: true
     name: --resource-group -g
@@ -29,14 +42,10 @@ directCommands:
     summary: The name of the share.
     description: ''
   - isRequired: true
-    name: --recurrence-interval
-    parameterValueGroup: Day, Hour
-    summary: Synchronization Recurrence Interval.
-    description: ''
-  - isRequired: true
     name: --synchronization-time
     summary: 'Synchronization time. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).'
     description: ''
+  optionalParameters:
   - name: --kind
     defaultValue: ScheduleBased
     parameterValueGroup: ScheduleBased
@@ -46,10 +55,17 @@ directCommands:
   name: az datashare synchronization-setting delete
   summary: Delete a synchronization setting in a share.
   description: ''
+  syntax: >-
+    az datashare synchronization-setting delete --account-name
+                                                --name
+                                                --resource-group
+                                                --share-name
+                                                [--no-wait]
+                                                [--yes]
   examples:
   - summary: Delete a synchronization setting
     syntax: az datashare synchronization-setting delete --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --name MySyncrhonizationSetting
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -66,6 +82,7 @@ directCommands:
     name: --share-name
     summary: The name of the share.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -76,10 +93,14 @@ directCommands:
   name: az datashare synchronization-setting list
   summary: List synchronization settings in a share.
   description: ''
+  syntax: >-
+    az datashare synchronization-setting list --account-name
+                                              --resource-group
+                                              --share-name
   examples:
   - summary: List synchronization settings
     syntax: az datashare synchronization-setting list --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -96,10 +117,15 @@ directCommands:
   name: az datashare synchronization-setting show
   summary: Show a synchronization setting in a share.
   description: ''
+  syntax: >-
+    az datashare synchronization-setting show --account-name
+                                              --name
+                                              --resource-group
+                                              --share-name
   examples:
   - summary: Show a synchronization setting
     syntax: az datashare synchronization-setting show --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --name MySyncrhonizationSetting
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -120,10 +146,22 @@ directCommands:
   name: az datashare synchronization-setting wait
   summary: Place the CLI in a waiting state until a condition of the datashare synchronization setting is met.
   description: ''
+  syntax: >-
+    az datashare synchronization-setting wait --account-name
+                                              --name
+                                              --resource-group
+                                              --share-name
+                                              [--created]
+                                              [--custom]
+                                              [--deleted]
+                                              [--exists]
+                                              [--interval]
+                                              [--timeout]
+                                              [--updated]
   examples:
   - summary: Pause executing next line of CLI script until the datashare synchronization setting is successfully provisioned.
     syntax: az datashare synchronization-setting wait --account-name MyAccount --resource-group MyResourceGroup --share-name MyShare --name MySyncrhonizationSetting --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name
     summary: The name of the share account.
@@ -140,6 +178,7 @@ directCommands:
     name: --share-name
     summary: The name of the share.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

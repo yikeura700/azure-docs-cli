@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_front-door_az_network_front_door
 name: az network front-door
 summary: Manage Front Doors.
@@ -8,7 +8,11 @@ directCommands:
   name: az network front-door check-custom-domain
   summary: Validates the custom domain mapping to ensure it maps to the correct Front Door endpoint in DNS.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door check-custom-domain --host-name
+                                              --name
+                                              --resource-group
+  requiredParameters:
   - isRequired: true
     name: --host-name
     summary: The host name of the custom domain. Must be a domain name.
@@ -25,7 +29,30 @@ directCommands:
   name: az network front-door create
   summary: Create a Front Door.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door create --backend-address
+                                 --name
+                                 --resource-group
+                                 [--accepted-protocols]
+                                 [--backend-host-header]
+                                 [--disabled {false, true}]
+                                 [--enforce-certificate-name-check {Disabled, Enabled}]
+                                 [--forwarding-protocol {HttpOnly, HttpsOnly, MatchRequest}]
+                                 [--friendly-name]
+                                 [--frontend-host-name]
+                                 [--interval]
+                                 [--no-wait]
+                                 [--path]
+                                 [--patterns]
+                                 [--probeMethod {GET, HEAD}]
+                                 [--protocol {Http, Https}]
+                                 [--send-recv-timeout]
+                                 [--tags]
+  requiredParameters:
+  - isRequired: true
+    name: --backend-address
+    summary: FQDN of the backend endpoint.
+    description: ''
   - isRequired: true
     name: --name -n
     summary: Name of the Front Door.
@@ -34,33 +61,29 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --disabled
-    parameterValueGroup: false, true
-    summary: Create in a disabled state.
-    description: ''
-  - name: --friendly-name
-    summary: Friendly name of the Front Door.
-    description: ''
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
-  - isRequired: true
-    name: --backend-address
-    summary: FQDN of the backend endpoint.
+  optionalParameters:
+  - name: --accepted-protocols
+    summary: 'Space-separated list of protocols to accept. Default: Http.'
     description: ''
   - name: --backend-host-header
     summary: Host header sent to the backend.
+    description: ''
+  - name: --disabled
+    parameterValueGroup: false, true
+    summary: Create in a disabled state.
     description: ''
   - name: --enforce-certificate-name-check
     defaultValue: Enabled
     parameterValueGroup: Disabled, Enabled
     summary: Whether to disable certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
     description: ''
-  - name: --send-recv-timeout
-    summary: Send and receive timeout in seconds on forwarding request to the backend. When timeout is reached, the request fails and returns.
+  - name: --forwarding-protocol
+    defaultValue: MatchRequest
+    parameterValueGroup: HttpOnly, HttpsOnly, MatchRequest
+    summary: Protocol to use for forwarding traffic.
+    description: ''
+  - name: --friendly-name
+    summary: Friendly name of the Front Door.
     description: ''
   - name: --frontend-host-name
     summary: Domain name of the frontend endpoint.
@@ -69,9 +92,15 @@ directCommands:
     defaultValue: "30"
     summary: Interval in seconds between probes.
     description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
   - name: --path
     defaultValue: /
     summary: Path to probe.
+    description: ''
+  - name: --patterns
+    summary: "Space-separated list of patterns to match. Default: '/\\*'."
     description: ''
   - name: --probeMethod
     defaultValue: HEAD
@@ -83,22 +112,21 @@ directCommands:
     parameterValueGroup: Http, Https
     summary: Protocol to use for sending probes.
     description: ''
-  - name: --accepted-protocols
-    summary: 'Space-separated list of protocols to accept. Default: Http.'
+  - name: --send-recv-timeout
+    summary: Send and receive timeout in seconds on forwarding request to the backend. When timeout is reached, the request fails and returns.
     description: ''
-  - name: --forwarding-protocol
-    defaultValue: MatchRequest
-    parameterValueGroup: HttpOnly, HttpsOnly, MatchRequest
-    summary: Protocol to use for forwarding traffic.
-    description: ''
-  - name: --patterns
-    summary: "Space-separated list of patterns to match. Default: '/\\*'."
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
 - uid: ext_front-door_az_network_front_door_delete
   name: az network front-door delete
   summary: Delete a Front Door.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door delete --name
+                                 --resource-group
+                                 [--no-wait]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the Front Door.
@@ -107,6 +135,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -114,7 +143,8 @@ directCommands:
   name: az network front-door list
   summary: List Front Doors.
   description: ''
-  parameters:
+  syntax: az network front-door list [--resource-group]
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -122,7 +152,11 @@ directCommands:
   name: az network front-door purge-endpoint
   summary: Removes a content from Front Door.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door purge-endpoint --content-paths
+                                         --name
+                                         --resource-group
+  requiredParameters:
   - isRequired: true
     name: --content-paths
     summary: The path to the content to be purged. Can describe a file path or a wild card directory.
@@ -139,7 +173,10 @@ directCommands:
   name: az network front-door show
   summary: Get the details of a Front Door.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door show --name
+                               --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the Front Door.
@@ -152,7 +189,17 @@ directCommands:
   name: az network front-door update
   summary: Update settings of a Front Door.
   description: ''
-  parameters:
+  syntax: >-
+    az network front-door update --name
+                                 --resource-group
+                                 [--add]
+                                 [--enforce-certificate-name-check {Disabled, Enabled}]
+                                 [--force-string]
+                                 [--remove]
+                                 [--send-recv-timeout]
+                                 [--set]
+                                 [--tags]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the Front Door.
@@ -161,18 +208,13 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --enforce-certificate-name-check
     parameterValueGroup: Disabled, Enabled
     summary: Whether to disable certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
-    description: ''
-  - name: --send-recv-timeout
-    summary: Send and receive timeout in seconds on forwarding request to the backend. When timeout is reached, the request fails and returns.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --force-string
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
@@ -180,8 +222,14 @@ directCommands:
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
+  - name: --send-recv-timeout
+    summary: Send and receive timeout in seconds on forwarding request to the backend. When timeout is reached, the request fails and returns.
+    description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
+    description: ''
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
 commands:
 - ext_front-door_az_network_front_door_backend_pool

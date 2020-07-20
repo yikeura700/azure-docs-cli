@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_ams_streaming_endpoint_akamai
 name: az ams streaming-endpoint akamai
 summary: Manage AkamaiAccessControl objects to be used on streaming endpoints.
@@ -8,7 +8,19 @@ directCommands:
   name: az ams streaming-endpoint akamai add
   summary: Add an AkamaiAccessControl to an existing streaming endpoint.
   description: ''
-  parameters:
+  syntax: >-
+    az ams streaming-endpoint akamai add [--account-name]
+                                         [--base64-key]
+                                         [--expiration]
+                                         [--identifier]
+                                         [--ids]
+                                         [--name]
+                                         [--resource-group]
+                                         [--subscription]
+  optionalParameters:
+  - name: --account-name -a
+    summary: The name of the Azure Media Services account.
+    description: ''
   - name: --base64-key
     summary: Base64-encoded authentication key that will be used by the CDN. The authentication key provided by Akamai is an ASCII encoded string, and must be converted to bytes and then base64 encoded.
     description: ''
@@ -18,9 +30,6 @@ directCommands:
   - name: --identifier
     summary: The identifier for the authentication key. This is the nonce provided by Akamai.
     description: ''
-  - name: --account-name -a
-    summary: The name of the Azure Media Services account.
-    description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -33,21 +42,24 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
 - uid: az_ams_streaming_endpoint_akamai_remove
   name: az ams streaming-endpoint akamai remove
   summary: Remove an AkamaiAccessControl from an existing streaming endpoint.
   description: ''
-  parameters:
+  syntax: >-
+    az ams streaming-endpoint akamai remove --identifier
+                                            [--account-name]
+                                            [--ids]
+                                            [--name]
+                                            [--resource-group]
+                                            [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --identifier
     summary: The identifier for the authentication key. This is the nonce provided by Akamai.
     description: ''
+  optionalParameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
     description: ''
@@ -63,12 +75,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
 commands:
 - az_ams_streaming_endpoint_akamai_add
 - az_ams_streaming_endpoint_akamai_remove
@@ -88,6 +95,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
   updated_at: 3/25/2020 2:12:45 AM

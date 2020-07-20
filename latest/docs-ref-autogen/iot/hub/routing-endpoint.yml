@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_iot_hub_routing_endpoint
 name: az iot hub routing-endpoint
 summary: Manage custom endpoints of an IoT hub.
@@ -8,6 +8,23 @@ directCommands:
   name: az iot hub routing-endpoint create
   summary: Add an endpoint to your IoT Hub.
   description: Create a new custom endpoint in your IoT Hub.
+  syntax: >-
+    az iot hub routing-endpoint create --endpoint-name
+                                       --endpoint-resource-group
+                                       --endpoint-subscription-id
+                                       --endpoint-type {azurestoragecontainer, eventhub, servicebusqueue, servicebustopic}
+                                       --hub-name
+                                       [--auth-type {identitybased, keybased}]
+                                       [--batch-frequency]
+                                       [--chunk-size]
+                                       [--connection-string]
+                                       [--container]
+                                       [--encoding {avro, json}]
+                                       [--endpoint-uri]
+                                       [--entity-path]
+                                       [--ff]
+                                       [--resource-group]
+                                       [--subscription]
   examples:
   - summary: Add a new endpoint "E2" of type EventHub to "MyIotHub" IoT Hub.
     syntax: az iot hub routing-endpoint create --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-name E2 --endpoint-type eventhub --endpoint-resource-group {ResourceGroup} --endpoint-subscription-id {SubscriptionId} --connection-string {ConnectionString}
@@ -24,7 +41,7 @@ directCommands:
       --ff {iothub}-{partition}-{YYYY}-{MM}-{DD}-{HH}-{mm}
   - summary: Add a new identity-based EventHub endpoint named "EventHubIdentity"
     syntax: az iot hub routing-endpoint create --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-name EventHubIdentity --endpoint-type eventhub --endpoint-resource-group {ResourceGroup} --endpoint-subscription-id {SubscriptionId} --auth-type identityBased --endpoint-uri {EventHubEndpointUri} --entity-path {EntityPath}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --endpoint-name --name -n
     summary: Name of the Routing Endpoint.
@@ -46,6 +63,7 @@ directCommands:
     name: --hub-name
     summary: IoT Hub name.
     description: ''
+  optionalParameters:
   - name: --auth-type
     parameterValueGroup: identitybased, keybased
     summary: Authentication type for the endpoint. The default is keyBased.
@@ -84,16 +102,18 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
 - uid: az_iot_hub_routing_endpoint_delete
   name: az iot hub routing-endpoint delete
   summary: Delete all or mentioned endpoint for your IoT Hub.
   description: Delete an endpoint for your IoT Hub. We recommend that you delete any routes to the endpoint, before deleting the endpoint.
+  syntax: >-
+    az iot hub routing-endpoint delete [--endpoint-name]
+                                       [--endpoint-type {azurestoragecontainer, eventhub, servicebusqueue, servicebustopic}]
+                                       [--hub-name]
+                                       [--ids]
+                                       [--resource-group]
+                                       [--subscription]
   examples:
   - summary: Delete endpoint "E2" from "MyIotHub" IoT Hub.
     syntax: az iot hub routing-endpoint delete --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-name E2
@@ -101,7 +121,7 @@ directCommands:
     syntax: az iot hub routing-endpoint delete --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-type eventhub
   - summary: Delete all the endpoints from "MyIotHub" IoT Hub.
     syntax: az iot hub routing-endpoint delete --resource-group MyResourceGroup --hub-name MyIotHub
-  parameters:
+  optionalParameters:
   - name: --endpoint-name --name -n
     summary: Name of the Routing Endpoint.
     description: ''
@@ -121,22 +141,23 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
 - uid: az_iot_hub_routing_endpoint_list
   name: az iot hub routing-endpoint list
   summary: Get information on all the endpoints for your IoT Hub.
   description: Get information on all endpoints in your IoT Hub. You can also specify which endpoint type you want to get informaiton on.
+  syntax: >-
+    az iot hub routing-endpoint list [--endpoint-type {azurestoragecontainer, eventhub, servicebusqueue, servicebustopic}]
+                                     [--hub-name]
+                                     [--ids]
+                                     [--resource-group]
+                                     [--subscription]
   examples:
   - summary: Get all the endpoints from "MyIotHub" IoT Hub.
     syntax: az iot hub routing-endpoint list -g MyResourceGroup --hub-name MyIotHub
   - summary: Get all the endpoints of type "EventHub" from "MyIotHub" IoT Hub.
     syntax: az iot hub routing-endpoint list -g MyResourceGroup --hub-name MyIotHub --endpoint-type eventhub
-  parameters:
+  optionalParameters:
   - name: --endpoint-type --type -t
     parameterValueGroup: azurestoragecontainer, eventhub, servicebusqueue, servicebustopic
     summary: Type of the Routing Endpoint.
@@ -153,27 +174,29 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
 - uid: az_iot_hub_routing_endpoint_show
   name: az iot hub routing-endpoint show
   summary: Get information on mentioned endpoint for your IoT Hub.
   description: Get information on a specific endpoint in your IoT Hub.
+  syntax: >-
+    az iot hub routing-endpoint show --endpoint-name
+                                     [--hub-name]
+                                     [--ids]
+                                     [--resource-group]
+                                     [--subscription]
   examples:
   - summary: Get an endpoint information from "MyIotHub" IoT Hub.
     syntax: >-
       az iot hub routing-endpoint show --resource-group MyResourceGroup --hub-name MyIotHub \
 
       --endpoint-name {endpointName}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --endpoint-name --name -n
     summary: Name of the Routing Endpoint.
     description: ''
+  optionalParameters:
   - name: --hub-name
     summary: IoT Hub name.
     description: ''
@@ -186,12 +209,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/iot/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
 commands:
 - az_iot_hub_routing_endpoint_create
 - az_iot_hub_routing_endpoint_delete
@@ -213,6 +231,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/a6cad9c0a7d0bd9e724f23a8123f1e504989d8db/src/azure-cli/azure/cli/command_modules/iot/_help.py
   updated_at: 6/17/2020 6:34:23 AM

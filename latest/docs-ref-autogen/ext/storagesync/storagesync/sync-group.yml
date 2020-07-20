@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_storagesync_az_storagesync_sync_group
 name: az storagesync sync-group
 summary: Manage sync group.
@@ -8,13 +8,17 @@ directCommands:
   name: az storagesync sync-group create
   summary: Create a new sync group.
   description: ''
+  syntax: >-
+    az storagesync sync-group create --name
+                                     --storage-sync-service
+                                     [--resource-group]
   examples:
   - summary: Create a new sync group "SampleSyncGroup" in storage sync service "SampleStorageSyncService".
     syntax: >-
       az storagesync sync-group create --resource-group "SampleResourceGroup" \
 
       --storage-sync-service "SampleStorageSyncService" --name "SampleSyncGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of sync group.
@@ -23,6 +27,7 @@ directCommands:
     name: --storage-sync-service
     summary: The name or ID of storage sync service.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -30,13 +35,18 @@ directCommands:
   name: az storagesync sync-group delete
   summary: Delete a given sync group.
   description: ''
+  syntax: >-
+    az storagesync sync-group delete --name
+                                     --storage-sync-service
+                                     [--resource-group]
+                                     [--yes]
   examples:
   - summary: Delete sync group "SampleSyncGroup" in storage sync service "SampleStorageSyncService".
     syntax: >-
       az storagesync sync-group delete --resource-group "SampleResourceGroup" \
 
       --storage-sync-service "SampleStorageSyncService" --name "SampleSyncGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of sync group.
@@ -45,6 +55,7 @@ directCommands:
     name: --storage-sync-service
     summary: The name or ID of storage sync service.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -55,17 +66,21 @@ directCommands:
   name: az storagesync sync-group list
   summary: List all sync groups in a storage sync service.
   description: ''
+  syntax: >-
+    az storagesync sync-group list --storage-sync-service
+                                   [--resource-group]
   examples:
   - summary: List all sync groups in storage sync service "SampleStorageSyncService".
     syntax: >-
       az storagesync sync-group list --resource-group "SampleResourceGroup" \
 
       --storage-sync-service "SampleStorageSyncService"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --storage-sync-service
     summary: The name or ID of storage sync service.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -73,13 +88,17 @@ directCommands:
   name: az storagesync sync-group show
   summary: Show the properties for a given sync group.
   description: ''
+  syntax: >-
+    az storagesync sync-group show --name
+                                   --storage-sync-service
+                                   [--resource-group]
   examples:
   - summary: Show the properties for sync group "SampleSyncGroup" in storage sync service "SampleStorageSyncService".
     syntax: >-
       az storagesync sync-group show --resource-group "SampleResourceGroup" \
 
       --storage-sync-service "SampleStorageSyncService" --name "SampleSyncGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of sync group.
@@ -88,6 +107,7 @@ directCommands:
     name: --storage-sync-service
     summary: The name or ID of storage sync service.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''

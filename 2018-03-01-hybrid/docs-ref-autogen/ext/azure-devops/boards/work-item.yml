@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_boards_work_item
 name: az boards work-item
 summary: Manage work items.
@@ -8,7 +8,21 @@ directCommands:
   name: az boards work-item create
   summary: Create a work item.
   description: ''
-  parameters:
+  syntax: >-
+    az boards work-item create --title
+                               --type
+                               [--area]
+                               [--assigned-to]
+                               [--description]
+                               [--detect {false, true}]
+                               [--discussion]
+                               [--fields]
+                               [--iteration]
+                               [--open]
+                               [--org]
+                               [--project]
+                               [--reason]
+  requiredParameters:
   - isRequired: true
     name: --title
     summary: Title of the work item.
@@ -17,6 +31,7 @@ directCommands:
     name: --type
     summary: Name of the work item type (e.g. Bug).
     description: ''
+  optionalParameters:
   - name: --area
     summary: Area the work item is assigned to (e.g. Demos).
     description: ''
@@ -55,11 +70,19 @@ directCommands:
   name: az boards work-item delete
   summary: Delete a work item.
   description: ''
-  parameters:
+  syntax: >-
+    az boards work-item delete --id
+                               [--destroy]
+                               [--detect {false, true}]
+                               [--org]
+                               [--project]
+                               [--yes]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: Unique id of the work item.
     description: ''
+  optionalParameters:
   - name: --destroy
     summary: Permanently delete this work item.
     description: ''
@@ -80,11 +103,20 @@ directCommands:
   name: az boards work-item show
   summary: Show details for a work item.
   description: ''
-  parameters:
+  syntax: >-
+    az boards work-item show --id
+                             [--as-of]
+                             [--detect {false, true}]
+                             [--expand {all, fields, links, none, relations}]
+                             [--fields]
+                             [--open]
+                             [--org]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: The ID of the work item.
     description: ''
+  optionalParameters:
   - name: --as-of
     summary: "Work item details as of a particular date and time. Provide a date or date time string. Assumes local time zone. Example: '2019-01-20', '2019-01-20 00:20:00'. For UTC, append 'UTC' to the date time string, '2019-01-20 00:20:00 UTC'."
     description: ''
@@ -110,11 +142,26 @@ directCommands:
   name: az boards work-item update
   summary: Update work items.
   description: ''
-  parameters:
+  syntax: >-
+    az boards work-item update --id
+                               [--area]
+                               [--assigned-to]
+                               [--description]
+                               [--detect {false, true}]
+                               [--discussion]
+                               [--fields]
+                               [--iteration]
+                               [--open]
+                               [--org]
+                               [--reason]
+                               [--state]
+                               [--title]
+  requiredParameters:
   - isRequired: true
     name: --id
     summary: The id of the work item to update.
     description: ''
+  optionalParameters:
   - name: --area
     summary: Area the work item is assigned to (e.g. Demos).
     description: ''

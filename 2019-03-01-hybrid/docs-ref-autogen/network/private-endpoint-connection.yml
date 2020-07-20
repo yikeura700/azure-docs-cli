@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_private_endpoint_connection
 name: az network private-endpoint-connection
 summary: Manage private endpoint connections.
@@ -8,6 +8,14 @@ directCommands:
   name: az network private-endpoint-connection approve
   summary: Approve a private endpoint connection.
   description: ''
+  syntax: >-
+    az network private-endpoint-connection approve [--description]
+                                                   [--id]
+                                                   [--name]
+                                                   [--resource-group]
+                                                   [--resource-name]
+                                                   [--subscription]
+                                                   [--type {Microsoft.Batch/batchAccounts, Microsoft.ContainerRegistry/registries, Microsoft.DBforMariaDB/servers, Microsoft.DBforMySQL/servers, Microsoft.DBforPostgreSQL/servers, Microsoft.Devices/IotHubs, Microsoft.DocumentDB/databaseAccounts, Microsoft.EventGrid/domains, Microsoft.EventGrid/topics, Microsoft.Keyvault/vaults, Microsoft.Storage/storageAccounts, Microsoft.Web/sites, microsoft.insights/privateLinkScopes}]
   examples:
   - summary: Approve a private endpoint connection for a storage account.
     syntax: az network private-endpoint-connection approve -g MyResourceGroup -n MyPrivateEndpoint --resource-name MySA --type Microsoft.Storage/storageAccounts --description "Approved"
@@ -15,7 +23,7 @@ directCommands:
     syntax: az network private-endpoint-connection approve -g MyResourceGroup -n MyPrivateEndpoint --resource-name MyKV --type Microsoft.Keyvault/vaults --description "Approved"
   - summary: Approve a private endpoint connection for an ACR.
     syntax: az network private-endpoint-connection approve --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002/privateEndpointConnections/testreg000002.6e6bf72bc59d41cc89c698d4cc5ee79d --description "Approved"
-  parameters:
+  optionalParameters:
   - name: --description -d
     summary: Comments for the approval.
     description: ''
@@ -31,23 +39,26 @@ directCommands:
   - name: --resource-name
     summary: Name of the resource.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --type
     parameterValueGroup: Microsoft.Batch/batchAccounts, Microsoft.ContainerRegistry/registries, Microsoft.DBforMariaDB/servers, Microsoft.DBforMySQL/servers, Microsoft.DBforPostgreSQL/servers, Microsoft.Devices/IotHubs, Microsoft.DocumentDB/databaseAccounts, Microsoft.EventGrid/domains, Microsoft.EventGrid/topics, Microsoft.Keyvault/vaults, Microsoft.Storage/storageAccounts, Microsoft.Web/sites, microsoft.insights/privateLinkScopes
     summary: Type of the resource.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_private_endpoint_connection_delete
   name: az network private-endpoint-connection delete
   summary: Delete a private endpoint connection.
   description: ''
+  syntax: >-
+    az network private-endpoint-connection delete [--id]
+                                                  [--name]
+                                                  [--resource-group]
+                                                  [--resource-name]
+                                                  [--subscription]
+                                                  [--type {Microsoft.Batch/batchAccounts, Microsoft.ContainerRegistry/registries, Microsoft.DBforMariaDB/servers, Microsoft.DBforMySQL/servers, Microsoft.DBforPostgreSQL/servers, Microsoft.Devices/IotHubs, Microsoft.DocumentDB/databaseAccounts, Microsoft.EventGrid/domains, Microsoft.EventGrid/topics, Microsoft.Keyvault/vaults, Microsoft.Storage/storageAccounts, Microsoft.Web/sites, microsoft.insights/privateLinkScopes}]
+                                                  [--yes]
   examples:
   - summary: Delete a private endpoint connection for a storage account.
     syntax: az network private-endpoint-connection delete -g MyResourceGroup -n MyPrivateEndpoint --resource-name MySA --type Microsoft.Storage/storageAccounts
@@ -55,7 +66,7 @@ directCommands:
     syntax: az network private-endpoint-connection delete -g MyResourceGroup -n MyPrivateEndpoint --resource-name MyKV --type Microsoft.Keyvault/vaults
   - summary: Delete a private endpoint connection for an ACR.
     syntax: az network private-endpoint-connection delete --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002/privateEndpointConnections/testreg000002.6e6bf72bc59d41cc89c698d4cc5ee79d
-  parameters:
+  optionalParameters:
   - name: --id
     summary: ID of the private endpoint connection.
     description: ''
@@ -68,6 +79,9 @@ directCommands:
   - name: --resource-name
     summary: Name of the resource.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --type
     parameterValueGroup: Microsoft.Batch/batchAccounts, Microsoft.ContainerRegistry/registries, Microsoft.DBforMariaDB/servers, Microsoft.DBforMySQL/servers, Microsoft.DBforPostgreSQL/servers, Microsoft.Devices/IotHubs, Microsoft.DocumentDB/databaseAccounts, Microsoft.EventGrid/domains, Microsoft.EventGrid/topics, Microsoft.Keyvault/vaults, Microsoft.Storage/storageAccounts, Microsoft.Web/sites, microsoft.insights/privateLinkScopes
     summary: Type of the resource.
@@ -75,19 +89,17 @@ directCommands:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_private_endpoint_connection_list
   name: az network private-endpoint-connection list
   summary: List all private endpoint connections.
   description: ''
+  syntax: >-
+    az network private-endpoint-connection list [--id]
+                                                [--name]
+                                                [--resource-group]
+                                                [--subscription]
+                                                [--type {Microsoft.Batch/batchAccounts, Microsoft.ContainerRegistry/registries, Microsoft.DBforMariaDB/servers, Microsoft.DBforMySQL/servers, Microsoft.DBforPostgreSQL/servers, Microsoft.Devices/IotHubs, Microsoft.DocumentDB/databaseAccounts, Microsoft.EventGrid/domains, Microsoft.EventGrid/topics, Microsoft.Keyvault/vaults, Microsoft.Storage/storageAccounts, Microsoft.Web/sites, microsoft.insights/privateLinkScopes}]
   examples:
   - summary: List all private endpoint connections for a storage account.
     syntax: az network private-endpoint-connection list -g MyResourceGroup -n MySA --type Microsoft.Storage/storageAccounts
@@ -95,7 +107,7 @@ directCommands:
     syntax: az network private-endpoint-connection list -g MyResourceGroup -n MyKV --type Microsoft.Keyvault/vaults
   - summary: List all private endpoint connections for an ACR.
     syntax: az network private-endpoint-connection list --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002
-  parameters:
+  optionalParameters:
   - name: --id
     summary: ID of the resource.
     description: ''
@@ -105,23 +117,26 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --type
     parameterValueGroup: Microsoft.Batch/batchAccounts, Microsoft.ContainerRegistry/registries, Microsoft.DBforMariaDB/servers, Microsoft.DBforMySQL/servers, Microsoft.DBforPostgreSQL/servers, Microsoft.Devices/IotHubs, Microsoft.DocumentDB/databaseAccounts, Microsoft.EventGrid/domains, Microsoft.EventGrid/topics, Microsoft.Keyvault/vaults, Microsoft.Storage/storageAccounts, Microsoft.Web/sites, microsoft.insights/privateLinkScopes
     summary: Type of the resource.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_private_endpoint_connection_reject
   name: az network private-endpoint-connection reject
   summary: Reject a private endpoint connection.
   description: ''
+  syntax: >-
+    az network private-endpoint-connection reject [--description]
+                                                  [--id]
+                                                  [--name]
+                                                  [--resource-group]
+                                                  [--resource-name]
+                                                  [--subscription]
+                                                  [--type {Microsoft.Batch/batchAccounts, Microsoft.ContainerRegistry/registries, Microsoft.DBforMariaDB/servers, Microsoft.DBforMySQL/servers, Microsoft.DBforPostgreSQL/servers, Microsoft.Devices/IotHubs, Microsoft.DocumentDB/databaseAccounts, Microsoft.EventGrid/domains, Microsoft.EventGrid/topics, Microsoft.Keyvault/vaults, Microsoft.Storage/storageAccounts, Microsoft.Web/sites, microsoft.insights/privateLinkScopes}]
   examples:
   - summary: Reject a private endpoint connection for a storage account.
     syntax: az network private-endpoint-connection reject -g MyResourceGroup -n MyPrivateEndpoint --resource-name MySA --type Microsoft.Storage/storageAccounts --description "Rejected"
@@ -129,7 +144,7 @@ directCommands:
     syntax: az network private-endpoint-connection reject -g MyResourceGroup -n MyPrivateEndpoint --resource-name MyKV --type Microsoft.Keyvault/vaults --description "Rejected"
   - summary: Reject a private endpoint connection for an ACR.
     syntax: az network private-endpoint-connection reject --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002/privateEndpointConnections/testreg000002.6e6bf72bc59d41cc89c698d4cc5ee79d --description "Rejected"
-  parameters:
+  optionalParameters:
   - name: --description -d
     summary: Comments for the rejection.
     description: ''
@@ -145,23 +160,25 @@ directCommands:
   - name: --resource-name
     summary: Name of the resource.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --type
     parameterValueGroup: Microsoft.Batch/batchAccounts, Microsoft.ContainerRegistry/registries, Microsoft.DBforMariaDB/servers, Microsoft.DBforMySQL/servers, Microsoft.DBforPostgreSQL/servers, Microsoft.Devices/IotHubs, Microsoft.DocumentDB/databaseAccounts, Microsoft.EventGrid/domains, Microsoft.EventGrid/topics, Microsoft.Keyvault/vaults, Microsoft.Storage/storageAccounts, Microsoft.Web/sites, microsoft.insights/privateLinkScopes
     summary: Type of the resource.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_private_endpoint_connection_show
   name: az network private-endpoint-connection show
   summary: Show a private endpoint connection.
   description: ''
+  syntax: >-
+    az network private-endpoint-connection show [--id]
+                                                [--name]
+                                                [--resource-group]
+                                                [--resource-name]
+                                                [--subscription]
+                                                [--type {Microsoft.Batch/batchAccounts, Microsoft.ContainerRegistry/registries, Microsoft.DBforMariaDB/servers, Microsoft.DBforMySQL/servers, Microsoft.DBforPostgreSQL/servers, Microsoft.Devices/IotHubs, Microsoft.DocumentDB/databaseAccounts, Microsoft.EventGrid/domains, Microsoft.EventGrid/topics, Microsoft.Keyvault/vaults, Microsoft.Storage/storageAccounts, Microsoft.Web/sites, microsoft.insights/privateLinkScopes}]
   examples:
   - summary: Show a private endpoint connection for a storage account.
     syntax: az network private-endpoint-connection show -g MyResourceGroup -n MyPrivateEndpoint --resource-name MySA --type Microsoft.Storage/storageAccounts
@@ -169,7 +186,7 @@ directCommands:
     syntax: az network private-endpoint-connection show -g MyResourceGroup -n MyPrivateEndpoint --resource-name MyKV --type Microsoft.Keyvault/vaults
   - summary: Show a private endpoint connection for an ACR.
     syntax: az network private-endpoint-connection show --id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.ContainerRegistry/registries/testreg000002/privateEndpointConnections/testreg000002.6e6bf72bc59d41cc89c698d4cc5ee79d
-  parameters:
+  optionalParameters:
   - name: --id
     summary: ID of the private endpoint connection.
     description: ''
@@ -182,19 +199,14 @@ directCommands:
   - name: --resource-name
     summary: Name of the resource.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --type
     parameterValueGroup: Microsoft.Batch/batchAccounts, Microsoft.ContainerRegistry/registries, Microsoft.DBforMariaDB/servers, Microsoft.DBforMySQL/servers, Microsoft.DBforPostgreSQL/servers, Microsoft.Devices/IotHubs, Microsoft.DocumentDB/databaseAccounts, Microsoft.EventGrid/domains, Microsoft.EventGrid/topics, Microsoft.Keyvault/vaults, Microsoft.Storage/storageAccounts, Microsoft.Web/sites, microsoft.insights/privateLinkScopes
     summary: Type of the resource.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_private_endpoint_connection_approve
 - az_network_private_endpoint_connection_delete
@@ -217,6 +229,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

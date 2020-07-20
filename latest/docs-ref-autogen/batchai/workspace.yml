@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_batchai_workspace
 name: az batchai workspace
 summary: Commands to manage workspaces.
@@ -8,10 +8,15 @@ directCommands:
   name: az batchai workspace create
   summary: Create a workspace.
   description: ''
+  syntax: >-
+    az batchai workspace create --resource-group
+                                --workspace
+                                [--location]
+                                [--subscription]
   examples:
   - summary: Create a workspace in East US region.
     syntax: az batchai workspace create -g MyResourceGroup -n MyWorkspace -l eastus
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -20,34 +25,34 @@ directCommands:
     name: --workspace -n
     summary: Name of workspace.
     description: ''
+  optionalParameters:
   - name: --location -l
     summary: Location of the workspace. If omitted, the location of the resource group will be used.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
 - uid: az_batchai_workspace_delete
   name: az batchai workspace delete
   summary: Delete a workspace.
   description: ''
+  syntax: >-
+    az batchai workspace delete [--ids]
+                                [--no-wait]
+                                [--resource-group]
+                                [--subscription]
+                                [--workspace]
+                                [--yes]
   examples:
   - summary: Delete a workspace.
     syntax: az batchai workspace delete -g MyResourceGroup -n MyWorkspace
-  parameters:
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -58,42 +63,43 @@ directCommands:
   - name: --workspace -n
     summary: Name of workspace.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
 - uid: az_batchai_workspace_list
   name: az batchai workspace list
   summary: List workspaces.
   description: ''
+  syntax: >-
+    az batchai workspace list [--resource-group]
+                              [--subscription]
   examples:
   - summary: List all workspaces under the current subscription.
     syntax: az batchai workspace list -o table
   - summary: List workspaces in the given resource group.
     syntax: az batchai workspace list -g MyResourceGroup -o table
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
 - uid: az_batchai_workspace_show
   name: az batchai workspace show
   summary: Show information about a workspace.
   description: ''
+  syntax: >-
+    az batchai workspace show [--ids]
+                              [--resource-group]
+                              [--subscription]
+                              [--workspace]
   examples:
   - summary: Show information about a workspace.
     syntax: az batchai workspace show -g MyResourceGroup -n MyWorkspace -o table
-  parameters:
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -106,12 +112,7 @@ directCommands:
   - name: --workspace -n
     summary: Name of workspace.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
 commands:
 - az_batchai_workspace_create
 - az_batchai_workspace_delete
@@ -133,6 +134,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e1102d37a891598da84f80ba091b89a7532b90aa/src/azure-cli/azure/cli/command_modules/batchai/_help.py
   updated_at: 10/19/2019 10:02:34 AM

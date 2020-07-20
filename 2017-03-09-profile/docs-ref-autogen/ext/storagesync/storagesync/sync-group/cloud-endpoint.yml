@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_storagesync_az_storagesync_sync_group_cloud_endpoint
 name: az storagesync sync-group cloud-endpoint
 summary: Manage cloud endpoint.
@@ -8,6 +8,15 @@ directCommands:
   name: az storagesync sync-group cloud-endpoint create
   summary: Create a new cloud endpoint.
   description: ''
+  syntax: >-
+    az storagesync sync-group cloud-endpoint create --name
+                                                    --storage-sync-service
+                                                    --sync-group-name
+                                                    [--azure-file-share-name]
+                                                    [--no-wait]
+                                                    [--resource-group]
+                                                    [--storage-account]
+                                                    [--storage-account-tenant-id]
   examples:
   - summary: Create a new cloud endpoint "SampleCloudEndpoint" in sync group "SampleSyncGroup".
     syntax: >-
@@ -18,7 +27,7 @@ directCommands:
       "SampleSyncGroup" --name "SampleCloudEndpoint" --storage-account storageaccountnameorid --azure-file-share-name \
 
       "cvcloud-afscv-0719-058-a94a1354-a1fd-4e9a-9a50-919fad8c4ba4"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of cloud endpoint.
@@ -31,6 +40,7 @@ directCommands:
     name: --sync-group-name
     summary: The name of sync group.
     description: ''
+  optionalParameters:
   - name: --azure-file-share-name
     summary: The name of Azure file share.
     description: ''
@@ -50,6 +60,13 @@ directCommands:
   name: az storagesync sync-group cloud-endpoint delete
   summary: Delete a given cloud endpoint.
   description: ''
+  syntax: >-
+    az storagesync sync-group cloud-endpoint delete --name
+                                                    --storage-sync-service
+                                                    --sync-group-name
+                                                    [--no-wait]
+                                                    [--resource-group]
+                                                    [--yes]
   examples:
   - summary: Delete cloud endpoint "SampleCloudEndpoint".
     syntax: >-
@@ -58,7 +75,7 @@ directCommands:
       --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
       "SampleSyncGroup" --name "SampleCloudEndpoint"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of cloud endpoint.
@@ -71,6 +88,7 @@ directCommands:
     name: --sync-group-name
     summary: The name of sync group.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -84,6 +102,10 @@ directCommands:
   name: az storagesync sync-group cloud-endpoint list
   summary: List all cloud endpoints in a sync group.
   description: ''
+  syntax: >-
+    az storagesync sync-group cloud-endpoint list --storage-sync-service
+                                                  --sync-group-name
+                                                  [--resource-group]
   examples:
   - summary: List all cloud endpoints in sync group "SampleSyncGroup".
     syntax: >-
@@ -92,7 +114,7 @@ directCommands:
       --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
       "SampleSyncGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --storage-sync-service
     summary: The name or ID of storage sync service.
@@ -101,6 +123,7 @@ directCommands:
     name: --sync-group-name
     summary: The name of sync group.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -108,6 +131,11 @@ directCommands:
   name: az storagesync sync-group cloud-endpoint show
   summary: Show the properties for a given cloud endpoint.
   description: ''
+  syntax: >-
+    az storagesync sync-group cloud-endpoint show --name
+                                                  --storage-sync-service
+                                                  --sync-group-name
+                                                  [--resource-group]
   examples:
   - summary: Show the properties for cloud endpoint "SampleCloudEndpoint".
     syntax: >-
@@ -116,7 +144,7 @@ directCommands:
       --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
       "SampleSyncGroup" --name "SampleCloudEndpoint"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of cloud endpoint.
@@ -129,6 +157,7 @@ directCommands:
     name: --sync-group-name
     summary: The name of sync group.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -136,6 +165,18 @@ directCommands:
   name: az storagesync sync-group cloud-endpoint wait
   summary: Place the CLI in a waiting state until a condition of a cloud endpoint is met.
   description: ''
+  syntax: >-
+    az storagesync sync-group cloud-endpoint wait --name
+                                                  --resource-group
+                                                  --storage-sync-service-name
+                                                  --sync-group-name
+                                                  [--created]
+                                                  [--custom]
+                                                  [--deleted]
+                                                  [--exists]
+                                                  [--interval]
+                                                  [--timeout]
+                                                  [--updated]
   examples:
   - summary: Place the CLI in a waiting state until a condition of a cloud endpoint is created.
     syntax: >-
@@ -144,7 +185,7 @@ directCommands:
       --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
       "SampleSyncGroup" --name "SampleCloudEndpoint" --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of cloud endpoint.
@@ -161,6 +202,7 @@ directCommands:
     name: --sync-group-name
     summary: Name of Sync Group resource.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

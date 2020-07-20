@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_eventgrid_az_eventgrid_extension_topic
 name: az eventgrid extension-topic
 summary: Manage Azure Event Grid extension topics.
@@ -8,10 +8,11 @@ directCommands:
   name: az eventgrid extension-topic show
   summary: Get the details of an extension topic.
   description: ''
+  syntax: az eventgrid extension-topic show --scope
   examples:
   - summary: Show the details of an extension topic.
     syntax: az eventgrid extension-topic show --scope /subscriptions/{SubID}/resourceGroups/{RG}/providers/Microsoft.Storage/storageAccounts/{StorageAccountName}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --scope
     summary: The identifier of the resource to which extension topic is queried. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace. For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for Azure resource.

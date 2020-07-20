@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_blueprint_az_blueprint_artifact
 name: az blueprint artifact
 summary: Commands to manage blueprint artifact.
@@ -8,6 +8,12 @@ directCommands:
   name: az blueprint artifact delete
   summary: Delete a blueprint artifact.
   description: ''
+  syntax: >-
+    az blueprint artifact delete --blueprint-name
+                                 --name
+                                 [--management-group]
+                                 [--subscription]
+                                 [--yes]
   examples:
   - summary: Delete a role assignment artifact
     syntax: >-
@@ -19,7 +25,7 @@ directCommands:
       az blueprint artifact delete --management-group MyManagementGroup --blueprint-name \
 
       MyBlueprint --name StorageTemplate
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --blueprint-name
     summary: Name of the blueprint definition.
@@ -28,19 +34,24 @@ directCommands:
     name: --name -n
     summary: Name of the blueprint artifact.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
+  optionalParameters:
   - name: --management-group -m
     summary: Use management group for the scope of the blueprint.
     description: ''
   - name: --subscription -s
     summary: Use subscription for the scope of the blueprint. If --management-group is not specified, --subscription value or the default subscription will be used as the scope.
     description: ''
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
 - uid: ext_blueprint_az_blueprint_artifact_list
   name: az blueprint artifact list
   summary: List artifacts for a given blueprint definition.
   description: ''
+  syntax: >-
+    az blueprint artifact list --blueprint-name
+                               [--management-group]
+                               [--subscription]
   examples:
   - summary: List artifcats for a management group blueprint
     syntax: >-
@@ -52,11 +63,12 @@ directCommands:
       az blueprint artifact list --subscription MySubscription \
 
       --blueprint-name MyBlueprint
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --blueprint-name
     summary: Name of the blueprint definition.
     description: ''
+  optionalParameters:
   - name: --management-group -m
     summary: Use management group for the scope of the blueprint.
     description: ''
@@ -67,6 +79,11 @@ directCommands:
   name: az blueprint artifact show
   summary: Get a blueprint artifact.
   description: ''
+  syntax: >-
+    az blueprint artifact show --blueprint-name
+                               --name
+                               [--management-group]
+                               [--subscription]
   examples:
   - summary: Show an artifact of a subscription blueprint
     syntax: >-
@@ -78,7 +95,7 @@ directCommands:
       az blueprint artifact show --management-group MyManagementGroup --blueprint-name \
 
       MyBlueprint --name StorageTemplate
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --blueprint-name
     summary: Name of the blueprint definition.
@@ -87,6 +104,7 @@ directCommands:
     name: --name -n
     summary: Name of the blueprint artifact.
     description: ''
+  optionalParameters:
   - name: --management-group -m
     summary: Use management group for the scope of the blueprint.
     description: ''

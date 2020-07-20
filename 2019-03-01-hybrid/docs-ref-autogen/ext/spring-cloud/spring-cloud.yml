@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_spring-cloud_az_spring_cloud
 name: az spring-cloud
 summary: Commands to manage Azure Spring Cloud.
@@ -8,6 +8,16 @@ directCommands:
   name: az spring-cloud create
   summary: Create an Azure Spring Cloud.
   description: ''
+  syntax: >-
+    az spring-cloud create --name
+                           --resource-group
+                           [--app-insights]
+                           [--app-insights-key]
+                           [--disable-distributed-tracing {false, true}]
+                           [--location]
+                           [--no-wait]
+                           [--sku]
+                           [--tags]
   examples:
   - summary: Create a new Azure Spring Cloud in westus.
     syntax: az spring-cloud create -n MyService -g MyResourceGroup -l westus
@@ -15,7 +25,7 @@ directCommands:
     syntax: az spring-cloud create -n MyService -g MyResourceGroup -l westus --app-insights-key MyInstrumentationKey
   - summary: Create a new Azure Spring Cloud with distributed tracing disabled.
     syntax: az spring-cloud create -n MyService -g MyResourceGroup --disable-distributed-tracing
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of Azure Spring Cloud.
@@ -24,6 +34,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --app-insights
     summary: Name of the existing Application Insights in the same Resource Group. Or Resource ID of the existing Application Insights in a different Resource Group.
     description: ''
@@ -50,7 +61,11 @@ directCommands:
   name: az spring-cloud delete
   summary: Delete an Azure Spring Cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud delete --name
+                           --resource-group
+                           [--no-wait]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of Azure Spring Cloud.
@@ -59,6 +74,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -66,7 +82,8 @@ directCommands:
   name: az spring-cloud list
   summary: List all Azure Spring Cloud in the given resource group, otherwise list the subscription's.
   description: ''
-  parameters:
+  syntax: az spring-cloud list [--resource-group]
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -74,7 +91,10 @@ directCommands:
   name: az spring-cloud show
   summary: Show the details for an Azure Spring Cloud.
   description: ''
-  parameters:
+  syntax: >-
+    az spring-cloud show --name
+                         --resource-group
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of Azure Spring Cloud.
@@ -87,6 +107,15 @@ directCommands:
   name: az spring-cloud update
   summary: Update an Azure Spring Cloud.
   description: ''
+  syntax: >-
+    az spring-cloud update --name
+                           --resource-group
+                           [--app-insights]
+                           [--app-insights-key]
+                           [--disable-distributed-tracing {false, true}]
+                           [--no-wait]
+                           [--sku]
+                           [--tags]
   examples:
   - summary: Update pricing tier.
     syntax: az spring-cloud update -n MyService --sku Standard -g MyResourceGroup
@@ -94,7 +123,7 @@ directCommands:
     syntax: az spring-cloud update -n MyService -g MyResourceGroup --disable-distributed-tracing false
   - summary: Update the tags of the existing Azure Spring Cloud.
     syntax: az spring-cloud update -n MyService -g MyResourceGroup --tags key1=value1 key2=value2
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of Azure Spring Cloud.
@@ -103,6 +132,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --app-insights
     summary: Name of the existing Application Insights in the same Resource Group. Or Resource ID of the existing Application Insights in a different Resource Group.
     description: ''

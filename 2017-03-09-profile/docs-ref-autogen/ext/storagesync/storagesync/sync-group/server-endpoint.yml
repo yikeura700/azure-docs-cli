@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_storagesync_az_storagesync_sync_group_server_endpoint
 name: az storagesync sync-group server-endpoint
 summary: Manage server endpoint.
@@ -8,6 +8,19 @@ directCommands:
   name: az storagesync sync-group server-endpoint create
   summary: Create a new server endpoint.
   description: ''
+  syntax: >-
+    az storagesync sync-group server-endpoint create --name
+                                                     --registered-server-id
+                                                     --server-local-path
+                                                     --storage-sync-service
+                                                     --sync-group-name
+                                                     [--cloud-tiering {off, on}]
+                                                     [--no-wait]
+                                                     [--offline-data-transfer {off, on}]
+                                                     [--offline-data-transfer-share-name]
+                                                     [--resource-group]
+                                                     [--tier-files-older-than-days]
+                                                     [--volume-free-space-percent]
   examples:
   - summary: Create a new server endpoint "SampleServerEndpoint" in sync group "SampleSyncGroup".
     syntax: >-
@@ -20,7 +33,7 @@ directCommands:
       --server-local-path "d:\abc" --cloud-tiering "off" --volume-free-space-percent 80 --tier-files-older-than-days 20 \
 
       --offline-data-transfer "on" --offline-data-transfer-share-name "myfileshare"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of server endpoint.
@@ -41,6 +54,7 @@ directCommands:
     name: --sync-group-name
     summary: The name of sync group.
     description: ''
+  optionalParameters:
   - name: --cloud-tiering
     parameterValueGroup: off, on
     summary: A switch to enable or disable cloud tiering. With cloud tiering, infrequently used or accessed files can be tiered to Azure Files.
@@ -68,6 +82,13 @@ directCommands:
   name: az storagesync sync-group server-endpoint delete
   summary: Delete a given server endpoint.
   description: ''
+  syntax: >-
+    az storagesync sync-group server-endpoint delete --name
+                                                     --storage-sync-service
+                                                     --sync-group-name
+                                                     [--no-wait]
+                                                     [--resource-group]
+                                                     [--yes]
   examples:
   - summary: Delete a server endpoint "SampleServerEndpoint".
     syntax: >-
@@ -76,7 +97,7 @@ directCommands:
       --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
       "SampleSyncGroup" --name "SampleServerEndpoint"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of server endpoint.
@@ -89,6 +110,7 @@ directCommands:
     name: --sync-group-name
     summary: The name of sync group.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -102,6 +124,10 @@ directCommands:
   name: az storagesync sync-group server-endpoint list
   summary: List all server endpoints in a sync group.
   description: ''
+  syntax: >-
+    az storagesync sync-group server-endpoint list --storage-sync-service
+                                                   --sync-group-name
+                                                   [--resource-group]
   examples:
   - summary: List all server endpoints in sync group "SampleSyncGroup".
     syntax: >-
@@ -110,7 +136,7 @@ directCommands:
       --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
       "SampleSyncGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --storage-sync-service
     summary: The name or ID of storage sync service.
@@ -119,6 +145,7 @@ directCommands:
     name: --sync-group-name
     summary: The name of sync group.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -126,6 +153,11 @@ directCommands:
   name: az storagesync sync-group server-endpoint show
   summary: Show the properties for a given server endpoint.
   description: ''
+  syntax: >-
+    az storagesync sync-group server-endpoint show --name
+                                                   --storage-sync-service
+                                                   --sync-group-name
+                                                   [--resource-group]
   examples:
   - summary: Show the properties for server endpoint "SampleServerEndpoint".
     syntax: >-
@@ -134,7 +166,7 @@ directCommands:
       --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
       "SampleSyncGroup" --name "SampleServerEndpoint"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of server endpoint.
@@ -147,6 +179,7 @@ directCommands:
     name: --sync-group-name
     summary: The name of sync group.
     description: ''
+  optionalParameters:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
@@ -154,6 +187,17 @@ directCommands:
   name: az storagesync sync-group server-endpoint update
   summary: Update the properties for a given server endpoint.
   description: ''
+  syntax: >-
+    az storagesync sync-group server-endpoint update --name
+                                                     --storage-sync-service
+                                                     --sync-group-name
+                                                     [--cloud-tiering {off, on}]
+                                                     [--no-wait]
+                                                     [--offline-data-transfer {off, on}]
+                                                     [--offline-data-transfer-share-name]
+                                                     [--resource-group]
+                                                     [--tier-files-older-than-days]
+                                                     [--volume-free-space-percent]
   examples:
   - summary: Update the properties for server endpoint "SampleServerEndpoint".
     syntax: >-
@@ -166,7 +210,7 @@ directCommands:
       --volume-free-space-percent "100" --tier-files-older-than-days "0" \
 
       --offline-data-transfer "off"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of server endpoint.
@@ -179,6 +223,7 @@ directCommands:
     name: --sync-group-name
     summary: The name of sync group.
     description: ''
+  optionalParameters:
   - name: --cloud-tiering
     parameterValueGroup: off, on
     summary: A switch to enable or disable cloud tiering. With cloud tiering, infrequently used or accessed files can be tiered to Azure Files.
@@ -206,6 +251,18 @@ directCommands:
   name: az storagesync sync-group server-endpoint wait
   summary: Place the CLI in a waiting state until a condition of a server endpoint is met.
   description: ''
+  syntax: >-
+    az storagesync sync-group server-endpoint wait --name
+                                                   --resource-group
+                                                   --storage-sync-service-name
+                                                   --sync-group-name
+                                                   [--created]
+                                                   [--custom]
+                                                   [--deleted]
+                                                   [--exists]
+                                                   [--interval]
+                                                   [--timeout]
+                                                   [--updated]
   examples:
   - summary: Place the CLI in a waiting state until a condition of a server endpoint is created.
     syntax: >-
@@ -214,7 +271,7 @@ directCommands:
       --storage-sync-service "SampleStorageSyncService" --sync-group-name \
 
       "SampleSyncGroup" --name "SampleServerEndpoint" --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of server endpoint.
@@ -231,6 +288,7 @@ directCommands:
     name: --sync-group-name
     summary: Name of Sync Group resource.
     description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''

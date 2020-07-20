@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-ml_az_ml_datastore
 name: az ml datastore
 summary: Commands for managing and using datastores with the Azure ML Workspace.
@@ -8,7 +8,23 @@ directCommands:
   name: az ml datastore attach-adls
   summary: Attach an ADLS datastore.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore attach-adls --client-id
+                                --client-secret
+                                --name
+                                --store-name
+                                --tenant-id
+                                [--adls-resource-group]
+                                [--adls-subscription-id]
+                                [--authority-url]
+                                [--include-secret]
+                                [--output-metadata-file]
+                                [--path]
+                                [--resource-group]
+                                [--resource-url]
+                                [--subscription-id]
+                                [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --client-id
     summary: The service principal's client/application ID.
@@ -29,6 +45,7 @@ directCommands:
     name: --tenant-id
     summary: The service principal Tenant ID.
     description: ''
+  optionalParameters:
   - name: --adls-resource-group
     summary: The resource group the ADLS store belongs to.
     description: ''
@@ -66,7 +83,24 @@ directCommands:
   name: az ml datastore attach-adls-gen2
   summary: Attach a ADLS Gen2 datastore.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore attach-adls-gen2 --account-name
+                                     --client-id
+                                     --client-secret
+                                     --file-system
+                                     --name
+                                     --tenant-id
+                                     [--authority-url]
+                                     [--endpoint]
+                                     [--include-secret]
+                                     [--output-metadata-file]
+                                     [--path]
+                                     [--protocol]
+                                     [--resource-group]
+                                     [--resource-url]
+                                     [--subscription-id]
+                                     [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the storage account.
@@ -91,6 +125,7 @@ directCommands:
     name: --tenant-id
     summary: The service principal Tenant ID.
     description: ''
+  optionalParameters:
   - name: --authority-url
     defaultValue: <a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a>
     summary: Authority url used to authenticate the user.
@@ -130,7 +165,24 @@ directCommands:
   name: az ml datastore attach-blob
   summary: Attach a blob storage datastore.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore attach-blob --account-name
+                                --container-name
+                                --name
+                                [--account-key]
+                                [--endpoint]
+                                [--grant-workspace-msi-access]
+                                [--include-secret]
+                                [--output-metadata-file]
+                                [--path]
+                                [--protocol]
+                                [--resource-group]
+                                [--sas-token]
+                                [--storage-account-resource-group]
+                                [--storage-account-subscription-id]
+                                [--subscription-id]
+                                [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the storage account.
@@ -143,6 +195,7 @@ directCommands:
     name: --name -n
     summary: The datastore name.
     description: ''
+  optionalParameters:
   - name: --account-key -k
     summary: The storage account key.
     description: ''
@@ -189,11 +242,19 @@ directCommands:
   name: az ml datastore attach-dbfs
   summary: Attach a Databricks File System datastore.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore attach-dbfs --name
+                                [--output-metadata-file]
+                                [--path]
+                                [--resource-group]
+                                [--subscription-id]
+                                [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The datastore name.
     description: ''
+  optionalParameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
     description: ''
@@ -214,7 +275,21 @@ directCommands:
   name: az ml datastore attach-file
   summary: Attach a file share datastore.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore attach-file --account-name
+                                --name
+                                --share-name
+                                [--account-key]
+                                [--endpoint]
+                                [--include-secret]
+                                [--output-metadata-file]
+                                [--path]
+                                [--protocol]
+                                [--resource-group]
+                                [--sas-token]
+                                [--subscription-id]
+                                [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the storage account.
@@ -227,6 +302,7 @@ directCommands:
     name: --share-name -c
     summary: The file share name.
     description: ''
+  optionalParameters:
   - name: --account-key -k
     summary: The storage account key.
     description: ''
@@ -264,7 +340,21 @@ directCommands:
   name: az ml datastore attach-mysqldb
   summary: Attach an Azure MySQL datastore.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore attach-mysqldb --database-name
+                                   --name
+                                   --password
+                                   --server-name
+                                   --user-id
+                                   [--endpoint]
+                                   [--include-secret]
+                                   [--output-metadata-file]
+                                   [--path]
+                                   [--port]
+                                   [--resource-group]
+                                   [--subscription-id]
+                                   [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --database-name -d
     summary: The database name.
@@ -285,6 +375,7 @@ directCommands:
     name: --user-id -u
     summary: The user ID.
     description: ''
+  optionalParameters:
   - name: --endpoint
     defaultValue: mysql.database.azure.com
     summary: The endpoint of the server. Defaults to mysql.database.azure.com.
@@ -316,7 +407,22 @@ directCommands:
   name: az ml datastore attach-psqldb
   summary: Attach an Azure PostgreSQL datastore.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore attach-psqldb --database-name
+                                  --name
+                                  --password
+                                  --server-name
+                                  --user-id
+                                  [--endpoint]
+                                  [--enforce-ssl]
+                                  [--include-secret]
+                                  [--output-metadata-file]
+                                  [--path]
+                                  [--port]
+                                  [--resource-group]
+                                  [--subscription-id]
+                                  [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --database-name -d
     summary: The database name.
@@ -337,6 +443,7 @@ directCommands:
     name: --user-id -u
     summary: The user ID.
     description: ''
+  optionalParameters:
   - name: --endpoint
     defaultValue: postgres.database.azure.com
     summary: The endpoint of the server. Defaults to postgres.database.azure.com.
@@ -372,7 +479,25 @@ directCommands:
   name: az ml datastore attach-sqldb
   summary: Attach an Azure SQL datastore.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore attach-sqldb --database-name
+                                 --name
+                                 --server-name
+                                 [--authority-url]
+                                 [--client-id]
+                                 [--client-secret]
+                                 [--endpoint]
+                                 [--include-secret]
+                                 [--output-metadata-file]
+                                 [--password]
+                                 [--path]
+                                 [--resource-group]
+                                 [--resource-url]
+                                 [--subscription-id]
+                                 [--tenant-id]
+                                 [--username]
+                                 [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --database-name -d
     summary: The database name.
@@ -385,6 +510,7 @@ directCommands:
     name: --server-name
     summary: The SQL/PostgreSQL/MySQL server name.
     description: ''
+  optionalParameters:
   - name: --authority-url
     defaultValue: <a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a>
     summary: Authority url used to authenticate the user.
@@ -435,11 +561,19 @@ directCommands:
   name: az ml datastore detach
   summary: Detach a datastore by name.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore detach --name
+                           [--output-metadata-file]
+                           [--path]
+                           [--resource-group]
+                           [--subscription-id]
+                           [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The datastore name.
     description: ''
+  optionalParameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
     description: ''
@@ -460,7 +594,18 @@ directCommands:
   name: az ml datastore download
   summary: Download files from a Datastore.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore download --name
+                             --target-path
+                             [--hide-progress]
+                             [--output-metadata-file]
+                             [--overwrite]
+                             [--path]
+                             [--prefix]
+                             [--resource-group]
+                             [--subscription-id]
+                             [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The datastore name.
@@ -469,6 +614,7 @@ directCommands:
     name: --target-path -d
     summary: Target path for the downloaded files.
     description: ''
+  optionalParameters:
   - name: --hide-progress
     summary: Whether to hide progress of operation.
     description: ''
@@ -498,7 +644,14 @@ directCommands:
   name: az ml datastore list
   summary: List datastores in the workspace.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore list [--include-secret]
+                         [--output-metadata-file]
+                         [--path]
+                         [--resource-group]
+                         [--subscription-id]
+                         [--workspace-name]
+  optionalParameters:
   - name: --include-secret
     summary: Show the registered secret for the datastores.
     description: ''
@@ -522,11 +675,19 @@ directCommands:
   name: az ml datastore set-default
   summary: Set the workspace default datastore by name.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore set-default --name
+                                [--output-metadata-file]
+                                [--path]
+                                [--resource-group]
+                                [--subscription-id]
+                                [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The datastore name.
     description: ''
+  optionalParameters:
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
     description: ''
@@ -547,11 +708,20 @@ directCommands:
   name: az ml datastore show
   summary: Show a single datastore by name.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore show --name
+                         [--include-secret]
+                         [--output-metadata-file]
+                         [--path]
+                         [--resource-group]
+                         [--subscription-id]
+                         [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The datastore name.
     description: ''
+  optionalParameters:
   - name: --include-secret
     summary: Show the registered secret for the datastores.
     description: ''
@@ -575,7 +745,14 @@ directCommands:
   name: az ml datastore show-default
   summary: Show the workspace default datastore.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore show-default [--include-secret]
+                                 [--output-metadata-file]
+                                 [--path]
+                                 [--resource-group]
+                                 [--subscription-id]
+                                 [--workspace-name]
+  optionalParameters:
   - name: --include-secret
     summary: Show the registered secret for the datastores.
     description: ''
@@ -599,7 +776,18 @@ directCommands:
   name: az ml datastore upload
   summary: Upload files to a Datastore.
   description: ''
-  parameters:
+  syntax: >-
+    az ml datastore upload --name
+                           --src-path
+                           [--hide-progress]
+                           [--output-metadata-file]
+                           [--overwrite]
+                           [--path]
+                           [--resource-group]
+                           [--subscription-id]
+                           [--target-path]
+                           [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The datastore name.
@@ -608,6 +796,7 @@ directCommands:
     name: --src-path -p
     summary: Path from which to upload data.
     description: ''
+  optionalParameters:
   - name: --hide-progress
     summary: Whether to hide progress of operation.
     description: ''

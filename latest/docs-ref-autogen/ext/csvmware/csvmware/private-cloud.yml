@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_csvmware_az_csvmware_private_cloud
 name: az csvmware private-cloud
 summary: Manage VMware private clouds.
@@ -8,10 +8,11 @@ directCommands:
   name: az csvmware private-cloud list
   summary: List details of private clouds in a region.
   description: ''
+  syntax: az csvmware private-cloud list --location
   examples:
   - summary: List details of private clouds in East US.
     syntax: az csvmware private-cloud list --location eastus
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: Region in which the private cloud is present.
@@ -20,10 +21,13 @@ directCommands:
   name: az csvmware private-cloud show
   summary: Get the details of a private cloud in a region.
   description: ''
+  syntax: >-
+    az csvmware private-cloud show --location
+                                   --name
   examples:
   - summary: Get the details of a private cloud which is in East US.
     syntax: az csvmware private-cloud show -n MyPrivateCloud --location eastus
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --location -l
     summary: Region in which the private cloud is present.

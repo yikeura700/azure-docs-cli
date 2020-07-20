@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-iot_az_iot_device_c2d_message
 name: az iot device c2d-message
 summary: Cloud-to-device messaging commands.
@@ -8,7 +8,13 @@ directCommands:
   name: az iot device c2d-message abandon
   summary: Abandon a cloud-to-device message.
   description: ''
-  parameters:
+  syntax: >-
+    az iot device c2d-message abandon --device-id
+                                      --etag
+                                      [--hub-name]
+                                      [--login]
+                                      [--resource-group]
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
@@ -17,6 +23,7 @@ directCommands:
     name: --etag -e
     summary: Entity tag value.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''
@@ -30,7 +37,13 @@ directCommands:
   name: az iot device c2d-message complete
   summary: Complete a cloud-to-device message.
   description: ''
-  parameters:
+  syntax: >-
+    az iot device c2d-message complete --device-id
+                                       --etag
+                                       [--hub-name]
+                                       [--login]
+                                       [--resource-group]
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
@@ -39,6 +52,7 @@ directCommands:
     name: --etag -e
     summary: Entity tag value.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''
@@ -52,11 +66,18 @@ directCommands:
   name: az iot device c2d-message receive
   summary: Receive a cloud-to-device message.
   description: ''
-  parameters:
+  syntax: >-
+    az iot device c2d-message receive --device-id
+                                      [--hub-name]
+                                      [--lock-timeout]
+                                      [--login]
+                                      [--resource-group]
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''
@@ -74,7 +95,13 @@ directCommands:
   name: az iot device c2d-message reject
   summary: Reject or deadletter a cloud-to-device message.
   description: ''
-  parameters:
+  syntax: >-
+    az iot device c2d-message reject --device-id
+                                     --etag
+                                     [--hub-name]
+                                     [--login]
+                                     [--resource-group]
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
@@ -83,6 +110,7 @@ directCommands:
     name: --etag -e
     summary: Entity tag value.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''
@@ -101,6 +129,23 @@ directCommands:
     This command relies on and may install dependent Cython package (uamqp) upon first execution.
 
     <a href="https://github.com/Azure/azure-uamqp-python">https://github.com/Azure/azure-uamqp-python</a>.
+  syntax: >-
+    az iot device c2d-message send --device-id
+                                   [--ack {full, negative, positive}]
+                                   [--ce]
+                                   [--cid]
+                                   [--content-type]
+                                   [--da]
+                                   [--expiry]
+                                   [--hub-name]
+                                   [--login]
+                                   [--message-id]
+                                   [--properties]
+                                   [--repair {false, true}]
+                                   [--resource-group]
+                                   [--uid]
+                                   [--wait {false, true}]
+                                   [--yes {false, true}]
   examples:
   - summary: Basic usage with default message body
     syntax: az iot device c2d-message send -d {device_id} -n {iothub_name}
@@ -108,11 +153,12 @@ directCommands:
     syntax: az iot device c2d-message send -d {device_id} -n {iothub_name} --data 'Hello World' --props 'key0=value0;key1=value1'
   - summary: Send a C2D message and wait for device acknowledgement
     syntax: az iot device c2d-message send -d {device_id} -n {iothub_name} --ack full --wait
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
     description: ''
+  optionalParameters:
   - name: --ack
     parameterValueGroup: full, negative, positive
     summary: 'Request the delivery of per-message feedback regarding the final state of that message. The description of ack values is as follows. Positive: If the c2d message reaches the Completed state, IoT Hub generates a feedback message. Negative: If the c2d message reaches the Dead lettered state, IoT Hub generates a feedback message. Full: IoT Hub generates a feedback message in either case. By default, no ack is requested.'

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_dla_catalog_tvf
 name: az dla catalog tvf
 summary: Manage Data Lake Analytics catalog table valued functions.
@@ -8,34 +8,43 @@ directCommands:
   name: az dla catalog tvf list
   summary: List table valued functions in a database or schema.
   description: ''
-  parameters:
+  syntax: >-
+    az dla catalog tvf list --database-name
+                            [--account]
+                            [--ids]
+                            [--schema-name]
+                            [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --database-name
     summary: The name of the database.
     description: ''
-  - name: --schema-name
-    summary: The name of the schema assocated with table valued functions to list.
-    description: ''
+  optionalParameters:
   - name: --account -n
     summary: Name of the Data Lake Analytics account.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
+  - name: --schema-name
+    summary: The name of the schema assocated with table valued functions to list.
+    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_catalog_tvf_show
   name: az dla catalog tvf show
   summary: Retrieves the specified table valued function from the Data Lake Analytics catalog.
   description: ''
-  parameters:
+  syntax: >-
+    az dla catalog tvf show --database-name
+                            --schema-name
+                            --table-valued-function-name
+                            [--account]
+                            [--ids]
+                            [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --database-name
     summary: The name of the database containing the table valued function.
@@ -48,6 +57,7 @@ directCommands:
     name: --table-valued-function-name
     summary: The name of the tableValuedFunction.
     description: ''
+  optionalParameters:
   - name: --account -n
     summary: Name of the Data Lake Analytics account.
     description: ''
@@ -57,12 +67,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 commands:
 - az_dla_catalog_tvf_list
 - az_dla_catalog_tvf_show
@@ -82,6 +87,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/dc914cb8b85cfb556230244c8bba6bdedcb5b741/src/azure-cli/azure/cli/command_modules/dla/_help.py
   updated_at: 9/16/2019 10:35:08 AM

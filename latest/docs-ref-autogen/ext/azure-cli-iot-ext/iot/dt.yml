@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-iot-ext_az_iot_dt
 name: az iot dt
 summary: Manage digital twin of an IoT Plug and Play device.
@@ -8,12 +8,21 @@ directCommands:
   name: az iot dt invoke-command
   summary: Executes a command on an IoT Plug and Play device.
   description: You can leverage az login and provide --hub-name instead of --login for every command.
+  syntax: >-
+    az iot dt invoke-command --cn
+                             --device-id
+                             --interface
+                             [--command-payload]
+                             [--hub-name]
+                             [--login]
+                             [--resource-group]
+                             [--timeout]
   examples:
   - summary: Execute a command on device .
     syntax: az iot dt invoke-command --login {iothub_cs} --interface {plug_and_play_interface} --device-id {device_id} --command-name {command_name} --command-payload {payload}
   - summary: Execute a command on device within current session.
     syntax: az iot dt invoke-command --hub-name {iothub_name} --interface {plug_and_play_interface} --device-id {device_id} --command-name {command_name} --command-payload {payload}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cn --command-name
     summary: IoT Plug and Play interface command name.
@@ -26,6 +35,7 @@ directCommands:
     name: --interface -i
     summary: Target interface name. This should be the name of the interface not the urn-id.
     description: ''
+  optionalParameters:
   - name: --command-payload --cp --cv
     summary: IoT Plug and Play interface command payload. Content can be directly input or extracted from a file path.
     description: ''
@@ -46,6 +56,17 @@ directCommands:
   name: az iot dt list-commands
   summary: List commands of an IoT Plug and Play devices interface(s).
   description: You can leverage az login and provide --hub-name instead of --login for every command.
+  syntax: >-
+    az iot dt list-commands --device-id
+                            --source {device, private, public}
+                            [--endpoint]
+                            [--hub-name]
+                            [--interface]
+                            [--login]
+                            [--repo-id]
+                            [--repo-login]
+                            [--resource-group]
+                            [--schema]
   examples:
   - summary: List all commands of all private interfaces on an IoT Plug and Play device.
     syntax: az iot dt list-commands --login {iothub_cs} --source private --device-id {device_id} --repo-id {plug_and_play_model_repository_id}
@@ -55,7 +76,7 @@ directCommands:
     syntax: az iot dt list-commands --login {iothub_cs} --source public --device-id {device_id}
   - summary: List all commands of device's interface on an IoT Plug and Play device.
     syntax: az iot dt list-commands --login {iothub_cs} --source device --device-id {device_id} --interface {plug_and_play_interface}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
@@ -65,6 +86,7 @@ directCommands:
     parameterValueGroup: device, private, public
     summary: Choose your option to get model definition from specified source.
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -94,16 +116,22 @@ directCommands:
   name: az iot dt list-interfaces
   summary: List interfaces of a target IoT Plug and Play device.
   description: You can leverage az login and provide --hub-name instead of --login for every command.
+  syntax: >-
+    az iot dt list-interfaces --device-id
+                              [--hub-name]
+                              [--login]
+                              [--resource-group]
   examples:
   - summary: List all IoT Plug and Play interfaces on a device.
     syntax: az iot dt list-interfaces --login {iothub_cs} --device-id {device_id}
   - summary: List all IoT Plug and Play interfaces on a device within current session.
     syntax: az iot dt list-interfaces --hub-name {iothub_name} --device-id {device_id}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''
@@ -117,6 +145,17 @@ directCommands:
   name: az iot dt list-properties
   summary: List properties of a target IoT Plug and Play device interface(s).
   description: You can leverage az login and provide --hub-name instead of --login for every command.
+  syntax: >-
+    az iot dt list-properties --device-id
+                              --source {device, private, public}
+                              [--endpoint]
+                              [--hub-name]
+                              [--interface]
+                              [--login]
+                              [--repo-id]
+                              [--repo-login]
+                              [--resource-group]
+                              [--schema]
   examples:
   - summary: List all properties of all device's interfaces on an IoT Plug and Play device.
     syntax: az iot dt list-properties --login {iothub_cs} --source device --device-id {device_id}
@@ -124,7 +163,7 @@ directCommands:
     syntax: az iot dt list-properties --hub-name {iothub_name} --device-id {device_id} --source public
   - summary: List all properties of device's interface on an IoT Plug and Play device.
     syntax: az iot dt list-properties --login {iothub_cs} --source device --device-id {device_id} --interface {plug_and_play_interface}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
@@ -134,6 +173,7 @@ directCommands:
     parameterValueGroup: device, private, public
     summary: Choose your option to get model definition from specified source.
     description: ''
+  optionalParameters:
   - name: --endpoint -e
     defaultValue: <a href="https://provider.azureiotrepository.com">https://provider.azureiotrepository.com</a>
     summary: IoT Plug and Play endpoint.
@@ -163,6 +203,20 @@ directCommands:
   name: az iot dt monitor-events
   summary: Monitor Digital Twin events.
   description: You can leverage az login and provide --hub-name instead of --login for every command.
+  syntax: >-
+    az iot dt monitor-events [--cg]
+                             [--content-type]
+                             [--device-id]
+                             [--device-query]
+                             [--enqueued-time]
+                             [--hub-name]
+                             [--interface]
+                             [--login]
+                             [--properties {all, anno, app, sys}]
+                             [--repair {false, true}]
+                             [--resource-group]
+                             [--timeout]
+                             [--yes {false, true}]
   examples:
   - summary: Basic usage monitoring events of all devices and all interfaces using the logged in session.
     syntax: az iot dt monitor-events -n {iothub_name}
@@ -174,7 +228,7 @@ directCommands:
     syntax: az iot dt monitor-events -n {iothub_name} -q "select * from devices where tags.location.region = 'US'"
   - summary: Filter events on a device with a particular interface. Use a custom consumer group when binding and see all message properties.
     syntax: az iot dt monitor-events --login {iothub_cs} --device-id {device_id} --interface {plug_and_play_interface} --consumer-group {consumer_group_name} --properties all
-  parameters:
+  optionalParameters:
   - name: --cg --consumer-group -c
     defaultValue: $Default
     summary: Specify the consumer group to use when connecting to event hub endpoint.
@@ -223,12 +277,18 @@ directCommands:
   name: az iot dt update-property
   summary: Update an IoT Plug and Play device interfaces writable property.
   description: ''
+  syntax: >-
+    az iot dt update-property --device-id
+                              --interface-payload
+                              [--hub-name]
+                              [--login]
+                              [--resource-group]
   examples:
   - summary: Update an IoT Plug and Play device interfaces read-write property.
     syntax: az iot dt update-property --login {iothub_cs} --device-id {device_id} --interface-payload {payload}
   - summary: Update an IoT Plug and Play device interfaces read-write property within current session.
     syntax: az iot dt update-property --hub-name {iothub_name} --device-id {device_id} --interface-payload {payload}
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --device-id -d
     summary: Target Device.
@@ -237,6 +297,7 @@ directCommands:
     name: --interface-payload --ip --iv
     summary: IoT Plug and Play interface payload. Content can be directly input or extracted from a file path.
     description: ''
+  optionalParameters:
   - name: --hub-name -n
     summary: IoT Hub name.
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_netappfiles_volume
 name: az netappfiles volume
 summary: Manage Azure NetApp Files (ANF) Volume Resources.
@@ -8,10 +8,29 @@ directCommands:
   name: az netappfiles volume create
   summary: Create a new Azure NetApp Files (ANF) volume. Export policies are applied with the subgroup commands but note that volumes are always created with a default export policy.
   description: ''
+  syntax: >-
+    az netappfiles volume create --account-name
+                                 --file-path
+                                 --location
+                                 --name
+                                 --pool-name
+                                 --resource-group
+                                 --usage-threshold
+                                 --vnet
+                                 [--endpoint-type]
+                                 [--protocol-types]
+                                 [--remote-volume-resource-id]
+                                 [--replication-schedule]
+                                 [--service-level {Premium, Standard, Ultra}]
+                                 [--snapshot-id]
+                                 [--subnet]
+                                 [--subscription]
+                                 [--tags]
+                                 [--volume-type]
   examples:
   - summary: Create an ANF volume
     syntax: az netappfiles volume create -g mygroup --account-name myaccname --pool-name mypoolname --name myvolname -l westus2 --service-level premium --usage-threshold 100 --file-path "unique-file-path" --vnet myvnet --subnet mysubnet --protocol-types NFSv3 NFSv4.1
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the ANF account.
@@ -44,6 +63,7 @@ directCommands:
     name: --vnet
     summary: The ARM Id or name of the vnet for the volume.
     description: ''
+  optionalParameters:
   - name: --endpoint-type
     summary: Whether the volume is source ("src") or destination ("dst").
     description: ''
@@ -67,29 +87,31 @@ directCommands:
     defaultValue: default
     summary: The ARM Id or name of the subnet for the vnet. If omitted 'default' will be used.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --tags
     summary: Space-separated tags in `key[=value]` format.
     description: ''
   - name: --volume-type
     summary: Whether the volume should be a data protection volume ("DataProtection"), empty if this is not a data protection volume.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
 - uid: az_netappfiles_volume_delete
   name: az netappfiles volume delete
   summary: Delete the specified ANF volume.
   description: ''
+  syntax: >-
+    az netappfiles volume delete [--account-name]
+                                 [--ids]
+                                 [--name]
+                                 [--pool-name]
+                                 [--resource-group]
+                                 [--subscription]
   examples:
   - summary: Delete an ANF volume
     syntax: az netappfiles volume delete -g mygroup --account-name myaccname --pool-name mypoolname --name myvolname
-  parameters:
+  optionalParameters:
   - name: --account-name -a
     summary: The name of the ANF account.
     description: ''
@@ -108,20 +130,20 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
 - uid: az_netappfiles_volume_list
   name: az netappfiles volume list
   summary: List the ANF Pools for the specified account.
   description: ''
+  syntax: >-
+    az netappfiles volume list --account-name
+                               --pool-name
+                               --resource-group
+                               [--subscription]
   examples:
   - summary: List the ANF volumes of the pool
     syntax: az netappfiles volume list -g mygroup --account-name myaccname --pool-name mypoolname
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the ANF account.
@@ -134,23 +156,26 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
 - uid: az_netappfiles_volume_show
   name: az netappfiles volume show
   summary: Get the specified ANF volume.
   description: ''
+  syntax: >-
+    az netappfiles volume show [--account-name]
+                               [--ids]
+                               [--name]
+                               [--pool-name]
+                               [--resource-group]
+                               [--subscription]
   examples:
   - summary: Returns the properties of the given ANF volume
     syntax: az netappfiles volume show -g mygroup --account-name myaccname --pool-name mypoolname --name myvolname
-  parameters:
+  optionalParameters:
   - name: --account-name -a
     summary: The name of the ANF account.
     description: ''
@@ -169,35 +194,38 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
 - uid: az_netappfiles_volume_update
   name: az netappfiles volume update
   summary: Update the specified ANF volume with the values provided. Unspecified values will remain unchanged. Export policies are amended/created with the subgroup commands.
   description: ''
+  syntax: >-
+    az netappfiles volume update [--account-name]
+                                 [--add]
+                                 [--force-string]
+                                 [--ids]
+                                 [--name]
+                                 [--pool-name]
+                                 [--protocol-types]
+                                 [--remove]
+                                 [--resource-group]
+                                 [--service-level {Premium, Standard, Ultra}]
+                                 [--set]
+                                 [--subscription]
+                                 [--tags]
+                                 [--usage-threshold]
   examples:
   - summary: Update an ANF volume
     syntax: az netappfiles volume update -g mygroup --account-name myaccname --pool-name mypoolname --name myvolname --service-level ultra --usage-threshold 100 --tags mytag=specialvol
-  parameters:
-  - name: --protocol-types
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
-  - name: --service-level
-    parameterValueGroup: Premium, Standard, Ultra
-    summary: The service level.
-    description: ''
-  - name: --tags
-    summary: Space-separated tags in `key[=value]` format.
-    description: ''
-  - name: --usage-threshold
-    summary: The maximum storage quota allowed for a file system as integer number of GiB. Min 100 GiB, max 100TiB".
-    description: ''
+  optionalParameters:
   - name: --account-name -a
     summary: The name of the ANF account.
+    description: ''
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -208,30 +236,32 @@ directCommands:
   - name: --pool-name -p
     summary: The name of the ANF pool.
     description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+  - name: --protocol-types
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --service-level
+    parameterValueGroup: Premium, Standard, Ultra
+    summary: The service level.
+    description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --tags
+    summary: Space-separated tags in `key[=value]` format.
+    description: ''
+  - name: --usage-threshold
+    summary: The maximum storage quota allowed for a file system as integer number of GiB. Min 100 GiB, max 100TiB".
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
 commands:
 - az_netappfiles_volume_create
 - az_netappfiles_volume_delete
@@ -264,6 +294,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/ee84afb7c3604c924b225b79095feee55c466a1b/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   updated_at: 5/15/2020 10:20:28 AM

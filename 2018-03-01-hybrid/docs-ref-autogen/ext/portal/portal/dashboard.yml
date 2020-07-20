@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_portal_az_portal_dashboard
 name: az portal dashboard
 summary: Manage portal dashboards.
@@ -8,6 +8,12 @@ directCommands:
   name: az portal dashboard create
   summary: Creates or updates a dashboard.
   description: ''
+  syntax: >-
+    az portal dashboard create --input-path
+                               --name
+                               --resource-group
+                               [--location]
+                               [--tags]
   examples:
   - summary: Create or update a Dashboard
     syntax: >-
@@ -16,7 +22,7 @@ directCommands:
       --resource-group "testRG" --input-path "/src/json/properties.json" \
 
       --tags aKey=aValue anotherKey=anotherValue
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --input-path
     summary: The path to the dashboard properties JSON file.
@@ -29,6 +35,7 @@ directCommands:
     name: --resource-group -g
     summary: The name of the resource group.
     description: ''
+  optionalParameters:
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
@@ -39,10 +46,14 @@ directCommands:
   name: az portal dashboard delete
   summary: Deletes a dashboard.
   description: ''
+  syntax: >-
+    az portal dashboard delete --name
+                               --resource-group
+                               [--yes]
   examples:
   - summary: Delete a Dashboard
     syntax: az portal dashboard delete --name "testDashboard" --resource-group "testRG"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the dashboard.
@@ -51,6 +62,7 @@ directCommands:
     name: --resource-group -g
     summary: The name of the resource group.
     description: ''
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -58,13 +70,17 @@ directCommands:
   name: az portal dashboard import
   summary: Imports a dashboard from a JSON file.
   description: ''
+  syntax: >-
+    az portal dashboard import --input-path
+                               --resource-group
+                               [--name]
   examples:
   - summary: Import a Dashboard
     syntax: >-
       az portal dashboard import --name "testDashboard" --resource-group "testRG" \
 
       --input-path "/src/json/dashboard.json"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --input-path
     summary: The path to the dashboard json file.
@@ -73,6 +89,7 @@ directCommands:
     name: --resource-group -g
     summary: The name of the resource group.
     description: ''
+  optionalParameters:
   - name: --name -n
     summary: The name of the dashboard.
     description: ''
@@ -80,12 +97,13 @@ directCommands:
   name: az portal dashboard list
   summary: Lists the dashboards within a subscription or resource group.
   description: ''
+  syntax: az portal dashboard list [--resource-group]
   examples:
   - summary: List all dashboards in a resourceGroup
     syntax: az portal dashboard list --resource-group "testRG"
   - summary: List all dashboards in a subscription
     syntax: az portal dashboard list
-  parameters:
+  optionalParameters:
   - name: --resource-group -g
     summary: The name of the resource group.
     description: ''
@@ -93,10 +111,13 @@ directCommands:
   name: az portal dashboard show
   summary: Gets details for a single dashboard.
   description: ''
+  syntax: >-
+    az portal dashboard show --name
+                             --resource-group
   examples:
   - summary: Get a Dashboard
     syntax: az portal dashboard show --name "testDashboard" --resource-group "testRG"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the dashboard.
@@ -109,13 +130,17 @@ directCommands:
   name: az portal dashboard update
   summary: Updates an existing dashboard.
   description: ''
+  syntax: >-
+    az portal dashboard update --input-path
+                               --name
+                               --resource-group
   examples:
   - summary: Update a Dashboard
     syntax: >-
       az portal dashboard update --name "testDashboard" --resource-group "testRG" \
 
       --input-path "/src/json/properties.json"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --input-path
     summary: The path to the dashboard properties JSON file.

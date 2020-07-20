@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_application-insights_az_monitor_app_insights_component
 name: az monitor app-insights component
 summary: Manage an Application Insights component or its subcomponents.
@@ -8,10 +8,20 @@ directCommands:
   name: az monitor app-insights component create
   summary: Create a new Application Insights resource.
   description: ''
+  syntax: >-
+    az monitor app-insights component create --app
+                                             --location
+                                             --resource-group
+                                             [--application-type]
+                                             [--ingestion-access {Disabled, Enabled}]
+                                             [--kind]
+                                             [--query-access {Disabled, Enabled}]
+                                             [--tags]
+                                             [--workspace]
   examples:
   - summary: Create a component with kind web and location.
     syntax: az monitor app-insights component create --app demoApp --location westus2 --kind web -g demoRg --application-type web
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app -a
     summary: GUID, app name, or fully-qualified Azure resource name of Application Insights component. The application GUID may be acquired from the API Access menu item on any Application Insights resource in the Azure portal. If using an application name, please specify resource group.
@@ -24,6 +34,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --application-type
     defaultValue: web
     summary: Type of application being monitored.
@@ -50,10 +61,13 @@ directCommands:
   name: az monitor app-insights component delete
   summary: Delete a new Application Insights resource.
   description: ''
+  syntax: >-
+    az monitor app-insights component delete --app
+                                             --resource-group
   examples:
   - summary: Delete a component with kind web and location.
     syntax: az monitor app-insights component delete --app demoApp -g demoRg
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app -a
     summary: GUID, app name, or fully-qualified Azure resource name of Application Insights component. The application GUID may be acquired from the API Access menu item on any Application Insights resource in the Azure portal. If using an application name, please specify resource group.
@@ -66,6 +80,9 @@ directCommands:
   name: az monitor app-insights component show
   summary: Get an Application Insights resource.
   description: ''
+  syntax: >-
+    az monitor app-insights component show [--app]
+                                           [--resource-group]
   examples:
   - summary: Get a component by name.
     syntax: az monitor app-insights component show --app demoApp -g demoRg
@@ -73,7 +90,7 @@ directCommands:
     syntax: az monitor app-insights component show -g demoRg
   - summary: List components in the currently selected subscription.
     syntax: az monitor app-insights component show
-  parameters:
+  optionalParameters:
   - name: --app -a
     summary: GUID, app name, or fully-qualified Azure resource name of Application Insights component. The application GUID may be acquired from the API Access menu item on any Application Insights resource in the Azure portal. If using an application name, please specify resource group.
     description: ''
@@ -84,10 +101,17 @@ directCommands:
   name: az monitor app-insights component update
   summary: Update properties on an existing Application Insights resource. The primary value which can be updated is kind, which customizes the UI experience.
   description: ''
+  syntax: >-
+    az monitor app-insights component update --app
+                                             --resource-group
+                                             [--ingestion-access {Disabled, Enabled}]
+                                             [--kind]
+                                             [--query-access {Disabled, Enabled}]
+                                             [--workspace]
   examples:
   - summary: Update a component with kind web.
     syntax: az monitor app-insights component update --app demoApp -k web -g demoRg
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app -a
     summary: GUID, app name, or fully-qualified Azure resource name of Application Insights component. The application GUID may be acquired from the API Access menu item on any Application Insights resource in the Azure portal. If using an application name, please specify resource group.
@@ -96,6 +120,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --ingestion-access
     parameterValueGroup: Disabled, Enabled
     summary: The public network access type for accessing Application Insights ingestion.
@@ -114,10 +139,14 @@ directCommands:
   name: az monitor app-insights component update-tags
   summary: Update tags on an existing Application Insights resource.
   description: ''
+  syntax: >-
+    az monitor app-insights component update-tags --app
+                                                  --resource-group
+                                                  --tags
   examples:
   - summary: Update the tag 'name' to equal 'value'.
     syntax: az monitor app-insights component update-tags --app demoApp --tags name=value -g demoRg
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --app -a
     summary: GUID, app name, or fully-qualified Azure resource name of Application Insights component. The application GUID may be acquired from the API Access menu item on any Application Insights resource in the Azure portal. If using an application name, please specify resource group.

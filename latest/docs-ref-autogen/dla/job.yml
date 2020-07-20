@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_dla_job
 name: az dla job
 summary: Manage Data Lake Analytics jobs.
@@ -8,11 +8,17 @@ directCommands:
   name: az dla job cancel
   summary: Cancel a Data Lake Analytics job.
   description: ''
-  parameters:
+  syntax: >-
+    az dla job cancel --job-identity
+                      [--account]
+                      [--ids]
+                      [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --job-identity
     summary: JobInfo ID to cancel.
     description: ''
+  optionalParameters:
   - name: --account -n
     summary: Name of the Data Lake Analytics account.
     description: ''
@@ -22,17 +28,31 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_job_list
   name: az dla job list
   summary: List Data Lake Analytics jobs.
   description: ''
-  parameters:
+  syntax: >-
+    az dla job list [--account]
+                    [--ids]
+                    [--name]
+                    [--pipeline-id]
+                    [--recurrence-id]
+                    [--result {Cancelled, Failed, None, Succeeded}]
+                    [--state {Accepted, Compiling, Ended, New, Paused, Queued, Running, Scheduling, Starting, WaitingForCapacity}]
+                    [--submitted-after]
+                    [--submitted-before]
+                    [--submitter]
+                    [--subscription]
+                    [--top]
+  optionalParameters:
+  - name: --account -n
+    summary: Name of the Data Lake Analytics account.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --name
     summary: A filter which returns jobs only by the specified friendly name.
     description: ''
@@ -59,34 +79,29 @@ directCommands:
   - name: --submitter
     summary: A filter which returns jobs only by the specified submitter.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --top
     defaultValue: "500"
     summary: Maximum number of items to return.
     description: ''
-  - name: --account -n
-    summary: Name of the Data Lake Analytics account.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_job_show
   name: az dla job show
   summary: Get information for a Data Lake Analytics job.
   description: ''
-  parameters:
+  syntax: >-
+    az dla job show --job-identity
+                    [--account]
+                    [--ids]
+                    [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --job-identity
     summary: JobInfo ID.
     description: ''
+  optionalParameters:
   - name: --account -n
     summary: Name of the Data Lake Analytics account.
     description: ''
@@ -96,17 +111,29 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 - uid: az_dla_job_submit
   name: az dla job submit
   summary: Submit a job to a Data Lake Analytics account.
   description: ''
-  parameters:
+  syntax: >-
+    az dla job submit --job-name
+                      --script
+                      [--account]
+                      [--compile-mode {Full, Semantic, SingleBox}]
+                      [--compile-only]
+                      [--degree-of-parallelism]
+                      [--ids]
+                      [--pipeline-id]
+                      [--pipeline-name]
+                      [--pipeline-uri]
+                      [--priority]
+                      [--recurrence-id]
+                      [--recurrence-name]
+                      [--run-id]
+                      [--runtime-version]
+                      [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --job-name
     summary: Name for the submitted job.
@@ -114,6 +141,10 @@ directCommands:
   - isRequired: true
     name: --script
     summary: Script to submit. This may be '@{file}' to load from a file.
+    description: ''
+  optionalParameters:
+  - name: --account -n
+    summary: Name of the Data Lake Analytics account.
     description: ''
   - name: --compile-mode
     parameterValueGroup: Full, Semantic, SingleBox
@@ -126,6 +157,9 @@ directCommands:
     defaultValue: "1"
     summary: The degree of parallelism for the job.
     description: Higher values equate to more parallelism and will usually yield faster running jobs, at the cost of more AUs.
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --pipeline-id
     summary: Job relationship pipeline GUID.
     description: ''
@@ -151,53 +185,45 @@ directCommands:
   - name: --runtime-version
     summary: The runtime version to use.
     description: This parameter is used for explicitly overwriting the default runtime. It should only be done if you know what you are doing.
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
+- uid: az_dla_job_wait
+  name: az dla job wait
+  summary: Wait for a Data Lake Analytics job to finish.
+  description: This command exits when the job completes.
+  syntax: >-
+    az dla job wait --job-id
+                    [--account]
+                    [--ids]
+                    [--max-wait-time-sec]
+                    [--subscription]
+                    [--wait-interval-sec]
+  requiredParameters:
+  - isRequired: true
+    name: --job-id
+    summary: Job ID to poll for completion.
+    description: ''
+  optionalParameters:
   - name: --account -n
     summary: Name of the Data Lake Analytics account.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
-- uid: az_dla_job_wait
-  name: az dla job wait
-  summary: Wait for a Data Lake Analytics job to finish.
-  description: This command exits when the job completes.
-  parameters:
-  - isRequired: true
-    name: --job-id
-    summary: Job ID to poll for completion.
     description: ''
   - name: --max-wait-time-sec
     defaultValue: "-1"
     summary: The maximum amount of time to wait before erroring out. Default value is to never timeout. Any value <= 0 means never timeout.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --wait-interval-sec
     defaultValue: "5"
     summary: The polling interval between checks for the job status, in seconds.
     description: ''
-  - name: --account -n
-    summary: Name of the Data Lake Analytics account.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/dla/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
 commands:
 - az_dla_job_cancel
 - az_dla_job_list
@@ -226,6 +252,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dla/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/dc914cb8b85cfb556230244c8bba6bdedcb5b741/src/azure-cli/azure/cli/command_modules/dla/_help.py
   updated_at: 9/16/2019 10:35:08 AM

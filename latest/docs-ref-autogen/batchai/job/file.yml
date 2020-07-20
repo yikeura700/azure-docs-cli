@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_batchai_job_file
 name: az batchai job file
 summary: Commands to list and stream files in job's output directories.
@@ -8,6 +8,15 @@ directCommands:
   name: az batchai job file list
   summary: List job's output files in a directory with given id.
   description: List job's output files in a directory with given id if the output directory is located on mounted Azure File Share or Blob Container.
+  syntax: >-
+    az batchai job file list --experiment
+                             --job
+                             --resource-group
+                             --workspace
+                             [--expiry]
+                             [--output-directory-id]
+                             [--path]
+                             [--subscription]
   examples:
   - summary: List files in the standard output directory of the job.
     syntax: az batchai job file list -g MyResourceGroup -w MyWorkspace -e MyExperiment -j MyJob
@@ -21,7 +30,7 @@ directCommands:
     syntax: >-
       az batchai job file list -g MyResourceGroup -w MyWorkspace -e MyExperiment -j MyJob \
           --expiry 15
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --experiment -e
     summary: Name of experiment.
@@ -38,6 +47,7 @@ directCommands:
     name: --workspace -w
     summary: Name of workspace.
     description: ''
+  optionalParameters:
   - name: --expiry
     defaultValue: "60"
     summary: Time in minutes for how long generated download URL should remain valid.
@@ -53,16 +63,20 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
 - uid: az_batchai_job_file_stream
   name: az batchai job file stream
   summary: Stream the content of a file (similar to 'tail -f').
   description: Waits for the job to create the given file and starts streaming it similar to 'tail -f' command. The command completes when the job finished execution.
+  syntax: >-
+    az batchai job file stream --experiment
+                               --file-name
+                               --job
+                               --resource-group
+                               --workspace
+                               [--output-directory-id]
+                               [--path]
+                               [--subscription]
   examples:
   - summary: Stream standard output file of the job.
     syntax: >-
@@ -72,7 +86,7 @@ directCommands:
     syntax: >-
       az batchai job file stream -g MyResourceGroup -w MyWorkspace -e MyExperiment -j MyJob \
           -d OUTPUTS -p logs -f log.txt
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --experiment -e
     summary: Name of experiment.
@@ -93,6 +107,7 @@ directCommands:
     name: --workspace -w
     summary: Name of workspace.
     description: ''
+  optionalParameters:
   - name: --output-directory-id -d
     defaultValue: stdouterr
     summary: The Id of the job's output directory (as specified by "id" element in outputDirectories collection in the job create parameters).
@@ -104,12 +119,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/batchai/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
 commands:
 - az_batchai_job_file_list
 - az_batchai_job_file_stream
@@ -129,6 +139,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e1102d37a891598da84f80ba091b89a7532b90aa/src/azure-cli/azure/cli/command_modules/batchai/_help.py
   updated_at: 10/19/2019 10:02:34 AM

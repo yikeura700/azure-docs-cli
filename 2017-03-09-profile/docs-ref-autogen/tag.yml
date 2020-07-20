@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_tag
 name: az tag
 summary: Manage resource tags.
@@ -8,10 +8,14 @@ directCommands:
   name: az tag add-value
   summary: Create a tag value.
   description: ''
+  syntax: >-
+    az tag add-value --name
+                     --value
+                     [--subscription]
   examples:
   - summary: Create a tag value.
     syntax: az tag add-value --name MyTag --value MyValue
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the tag.
@@ -20,76 +24,70 @@ directCommands:
     name: --value
     summary: The value of the tag.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
 - uid: az_tag_create
   name: az tag create
   summary: Create a tag in the subscription.
   description: ''
+  syntax: >-
+    az tag create --name
+                  [--subscription]
   examples:
   - summary: Create a tag in the subscription.
     syntax: az tag create --name MyTag
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the tag.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
 - uid: az_tag_delete
   name: az tag delete
   summary: Delete a tag in the subscription.
   description: ''
+  syntax: >-
+    az tag delete --name
+                  [--subscription]
   examples:
   - summary: Delete a tag from the subscription.
     syntax: az tag delete --name MyTag
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the tag.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
 - uid: az_tag_list
   name: az tag list
   summary: Get a list of subscription resource tags.
   description: ''
-  parameters:
+  syntax: az tag list [--subscription]
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
 - uid: az_tag_remove_value
   name: az tag remove-value
   summary: Delete a subscription resource tag value.
   description: ''
-  parameters:
+  syntax: >-
+    az tag remove-value --name
+                        --value
+                        [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the tag.
@@ -98,15 +96,11 @@ directCommands:
     name: --value
     summary: The value of the tag.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/resource/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
 commands:
 - az_tag_add_value
 - az_tag_create
@@ -129,6 +123,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/17064a23dc9885db8c851747c2be6c8ff4aa595f/src/azure-cli/azure/cli/command_modules/resource/_help.py
   updated_at: 6/16/2020 5:44:37 AM

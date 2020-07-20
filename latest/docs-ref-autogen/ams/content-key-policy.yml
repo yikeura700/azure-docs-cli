@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_ams_content_key_policy
 name: az ams content-key-policy
 summary: Manage content key policies for an Azure Media Services account.
@@ -8,10 +8,38 @@ directCommands:
   name: az ams content-key-policy create
   summary: Create a new content key policy.
   description: ''
+  syntax: >-
+    az ams content-key-policy create --account-name
+                                     --name
+                                     --policy-option-name
+                                     --resource-group
+                                     [--alt-rsa-token-keys]
+                                     [--alt-symmetric-token-keys]
+                                     [--alt-x509-token-keys]
+                                     [--ask]
+                                     [--audience]
+                                     [--clear-key-configuration]
+                                     [--description]
+                                     [--fair-play-pfx]
+                                     [--fair-play-pfx-password]
+                                     [--fp-playback-duration-seconds]
+                                     [--fp-storage-duration-seconds]
+                                     [--issuer]
+                                     [--open-id-connect-discovery-document]
+                                     [--open-restriction]
+                                     [--play-ready-template]
+                                     [--rental-and-lease-key-type]
+                                     [--rental-duration]
+                                     [--subscription]
+                                     [--token-claims]
+                                     [--token-key]
+                                     [--token-key-type]
+                                     [--token-type]
+                                     [--widevine-template]
   examples:
   - summary: Create an content-key-policy with a FairPlay Configuration.
     syntax: az ams content-key-policy create -a amsAccount -g resourceGroup -n contentKeyPolicyName --policy-option-name policyOptionName --open-restriction --ask "ask-32-chars-hex-string" --fair-play-pfx pfxPath --fair-play-pfx-password "pfxPassword" --rental-and-lease-key-type PersistentUnlimited --rental-duration 5000
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -28,14 +56,27 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --description
-    summary: The content key policy description.
+  optionalParameters:
+  - name: --alt-rsa-token-keys
+    summary: Space-separated list of alternate rsa token keys.
+    description: ''
+  - name: --alt-symmetric-token-keys
+    summary: Space-separated list of alternate symmetric token keys.
+    description: ''
+  - name: --alt-x509-token-keys
+    summary: Space-separated list of alternate x509 certificate token keys.
+    description: ''
+  - name: --ask
+    summary: The key that must be used as FairPlay Application Secret Key, which is a 32 character hex string.
+    description: ''
+  - name: --audience
+    summary: The audience for the token.
     description: ''
   - name: --clear-key-configuration
     summary: Use Clear Key configuration, a.k.a AES encryption. It's intended for non-DRM keys.
     description: ''
-  - name: --ask
-    summary: The key that must be used as FairPlay Application Secret Key, which is a 32 character hex string.
+  - name: --description
+    summary: The content key policy description.
     description: ''
   - name: --fair-play-pfx
     summary: The filepath to a FairPlay certificate file in PKCS 12 (pfx) format (including private key).
@@ -49,11 +90,11 @@ directCommands:
   - name: --fp-storage-duration-seconds
     summary: Storage duration.
     description: ''
-  - name: --rental-and-lease-key-type
-    summary: 'The rental and lease key type. Available values: Undefined, DualExpiry, PersistentUnlimited, PersistentLimited.'
+  - name: --issuer
+    summary: The token issuer.
     description: ''
-  - name: --rental-duration
-    summary: The rental duration. Must be greater than or equal to 0.
+  - name: --open-id-connect-discovery-document
+    summary: The OpenID connect discovery document.
     description: ''
   - name: --open-restriction
     summary: Use open restriction. License or key will be delivered on every request. Not recommended for production environments.
@@ -61,23 +102,14 @@ directCommands:
   - name: --play-ready-template
     summary: JSON PlayReady license template. Use @{file} to load from a file.
     description: ''
-  - name: --alt-rsa-token-keys
-    summary: Space-separated list of alternate rsa token keys.
+  - name: --rental-and-lease-key-type
+    summary: 'The rental and lease key type. Available values: Undefined, DualExpiry, PersistentUnlimited, PersistentLimited.'
     description: ''
-  - name: --alt-symmetric-token-keys
-    summary: Space-separated list of alternate symmetric token keys.
+  - name: --rental-duration
+    summary: The rental duration. Must be greater than or equal to 0.
     description: ''
-  - name: --alt-x509-token-keys
-    summary: Space-separated list of alternate x509 certificate token keys.
-    description: ''
-  - name: --audience
-    summary: The audience for the token.
-    description: ''
-  - name: --issuer
-    summary: The token issuer.
-    description: ''
-  - name: --open-id-connect-discovery-document
-    summary: The OpenID connect discovery document.
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --token-claims
     summary: Space-separated required token claims in '[key=value]' format.
@@ -94,20 +126,18 @@ directCommands:
   - name: --widevine-template
     summary: JSON Widevine license template. Use @{file} to load from a file.
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
 - uid: az_ams_content_key_policy_delete
   name: az ams content-key-policy delete
   summary: Delete a content key policy.
   description: ''
-  parameters:
+  syntax: >-
+    az ams content-key-policy delete [--account-name]
+                                     [--ids]
+                                     [--name]
+                                     [--resource-group]
+                                     [--subscription]
+  optionalParameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
     description: ''
@@ -123,17 +153,19 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
 - uid: az_ams_content_key_policy_list
   name: az ams content-key-policy list
   summary: List all the content key policies within an Azure Media Services account.
   description: ''
-  parameters:
+  syntax: >-
+    az ams content-key-policy list --account-name
+                                   --resource-group
+                                   [--filter]
+                                   [--orderby]
+                                   [--subscription]
+                                   [--top]
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the Azure Media Services account.
@@ -142,32 +174,32 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --filter
     summary: Restricts the set of items returned.
     description: ''
   - name: --orderby
     summary: Specifies the key by which the result collection should be ordered.
     description: ''
-  - name: --top
-    summary: Specifies a non-negative integer n that limits the number of items returned from a collection. The service returns the number of available items up to but not greater than the specified value n.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --top
+    summary: Specifies a non-negative integer n that limits the number of items returned from a collection. The service returns the number of available items up to but not greater than the specified value n.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
 - uid: az_ams_content_key_policy_show
   name: az ams content-key-policy show
   summary: Show an existing content key policy.
   description: ''
-  parameters:
-  - name: --with-secrets
-    summary: Include secret values of the content key policy.
-    description: ''
+  syntax: >-
+    az ams content-key-policy show [--account-name]
+                                   [--ids]
+                                   [--name]
+                                   [--resource-group]
+                                   [--subscription]
+                                   [--with-secrets]
+  optionalParameters:
   - name: --account-name -a
     summary: The name of the Azure Media Services account.
     description: ''
@@ -183,25 +215,40 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --with-secrets
+    summary: Include secret values of the content key policy.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
 - uid: az_ams_content_key_policy_update
   name: az ams content-key-policy update
   summary: Update an existing content key policy.
   description: ''
+  syntax: >-
+    az ams content-key-policy update [--account-name]
+                                     [--add]
+                                     [--description]
+                                     [--force-string]
+                                     [--ids]
+                                     [--name]
+                                     [--remove]
+                                     [--resource-group]
+                                     [--set]
+                                     [--subscription]
   examples:
   - summary: Update an existing content-key-policy, set a new description and edit its first option setting a new issuer and audience.
     syntax: az ams content-key-policy update -n contentKeyPolicyName -a amsAccount --description newDescription --set options[0].restriction.issuer=newIssuer --set options[0].restriction.audience=newAudience
-  parameters:
+  optionalParameters:
+  - name: --account-name -a
+    summary: The name of the Azure Media Services account.
+    description: ''
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
   - name: --description
     summary: The content key policy description.
     description: ''
-  - name: --account-name -a
-    summary: The name of the Azure Media Services account.
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -209,30 +256,19 @@ directCommands:
   - name: --name -n
     summary: The content key policy name.
     description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-    description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/ams/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
 commands:
 - az_ams_content_key_policy_create
 - az_ams_content_key_policy_delete
@@ -259,6 +295,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/dd62da8e5059af7c52237643ae48ffd389ef763b/src/azure-cli/azure/cli/command_modules/ams/_help.py
   updated_at: 3/25/2020 2:12:45 AM

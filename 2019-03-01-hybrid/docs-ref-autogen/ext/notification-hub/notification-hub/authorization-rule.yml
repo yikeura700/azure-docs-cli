@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_notification-hub_az_notification_hub_authorization_rule
 name: az notification-hub authorization-rule
 summary: Commands to manage notification hubs authorization rule.
@@ -8,6 +8,12 @@ directCommands:
   name: az notification-hub authorization-rule create
   summary: Create an authorization rule for a NotificationHub.
   description: ''
+  syntax: >-
+    az notification-hub authorization-rule create --name
+                                                  --namespace-name
+                                                  --notification-hub-name
+                                                  --resource-group
+                                                  --rights
   examples:
   - summary: Create an authorization rule
     syntax: >-
@@ -16,7 +22,7 @@ directCommands:
       --namespace-name my-namespace --notification-hub-name my-hub --name \
 
       DefaultListenSharedAccessSignature --rights Listen Send
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The authorization rule name.
@@ -41,6 +47,11 @@ directCommands:
   name: az notification-hub authorization-rule delete
   summary: Delete a notificationHub authorization rule.
   description: ''
+  syntax: >-
+    az notification-hub authorization-rule delete --name
+                                                  --namespace-name
+                                                  --notification-hub-name
+                                                  --resource-group
   examples:
   - summary: Delete the authorization rule
     syntax: >-
@@ -49,7 +60,7 @@ directCommands:
       --namespace-name my-namespace --notification-hub-name my-hub --name \
 
       DefaultListenSharedAccessSignature
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The authorization rule name.
@@ -70,13 +81,17 @@ directCommands:
   name: az notification-hub authorization-rule list
   summary: List the authorization rules for a NotificationHub.
   description: ''
+  syntax: >-
+    az notification-hub authorization-rule list --namespace-name
+                                                --notification-hub-name
+                                                --resource-group
   examples:
   - summary: List authorization rules
     syntax: >-
       az notification-hub authorization-rule list --resource-group MyResourceGroup \
 
       --namespace-name my-namespace --notification-hub-name my-hub
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --namespace-name
     summary: The namespace name.
@@ -93,13 +108,18 @@ directCommands:
   name: az notification-hub authorization-rule list-keys
   summary: List the Primary and Secondary ConnectionStrings to the NotificationHub.
   description: ''
+  syntax: >-
+    az notification-hub authorization-rule list-keys --name
+                                                     --namespace-name
+                                                     --notification-hub-name
+                                                     --resource-group
   examples:
   - summary: List connectionStrings of the authorization rule
     syntax: >-
       az notification-hub authorization-rule list-keys --resource-group MyResourceGroup --namespace-name my-namespace \
 
       --notification-hub-name my-hub --name "sdk-AuthRules-5800"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The authorization rule name.
@@ -120,6 +140,12 @@ directCommands:
   name: az notification-hub authorization-rule regenerate-keys
   summary: Regenerate the Primary/Secondary Keys to the NotificationHub Authorization Rule.
   description: ''
+  syntax: >-
+    az notification-hub authorization-rule regenerate-keys --name
+                                                           --namespace-name
+                                                           --notification-hub-name
+                                                           --policy-key {Primary Key, Secondary Key}
+                                                           --resource-group
   examples:
   - summary: Regenerate the Notification Hub authorization rule
     syntax: >-
@@ -128,7 +154,7 @@ directCommands:
       my-namespace --notification-hub-name my-hub --name \
 
       DefaultListenSharedAccessSignature --policy-key "Secondary Key"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The authorization rule name.
@@ -154,6 +180,11 @@ directCommands:
   name: az notification-hub authorization-rule show
   summary: Show an authorization rule for a NotificationHub by name.
   description: ''
+  syntax: >-
+    az notification-hub authorization-rule show --name
+                                                --namespace-name
+                                                --notification-hub-name
+                                                --resource-group
   examples:
   - summary: Show the authorization rule information
     syntax: >-
@@ -162,7 +193,7 @@ directCommands:
       --namespace-name my-namespace --notification-hub-name my-hub --name \
 
       DefaultListenSharedAccessSignature
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The authorization rule name.

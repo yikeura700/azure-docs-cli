@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_sf_application_type
 name: az sf application-type
 summary: Manage application types on an Azure Service Fabric cluster.
@@ -8,10 +8,15 @@ directCommands:
   name: az sf application-type create
   summary: Create a new application type on an Azure Service Fabric cluster.
   description: ''
+  syntax: >-
+    az sf application-type create --application-type-name
+                                  --cluster-name
+                                  --resource-group
+                                  [--subscription]
   examples:
   - summary: Create new application type.
     syntax: az sf application-type create -g testRG -c testCluster --application-type-name testAppType
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --application-type-name --name
     summary: Specify the application type name.
@@ -24,6 +29,7 @@ directCommands:
     name: --resource-group -g
     summary: Specify the resource group name. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
@@ -31,10 +37,15 @@ directCommands:
   name: az sf application-type delete
   summary: Delete an application type.
   description: ''
+  syntax: >-
+    az sf application-type delete --application-type-name
+                                  --cluster-name
+                                  --resource-group
+                                  [--subscription]
   examples:
   - summary: Delete application type.
     syntax: az sf application-type delete -g testRG -c testCluster --application-type-name CalcServiceApp
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --application-type-name --name
     summary: Specify the application type name.
@@ -47,6 +58,7 @@ directCommands:
     name: --resource-group -g
     summary: Specify the resource group name. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
@@ -54,10 +66,14 @@ directCommands:
   name: az sf application-type list
   summary: List application types of a given cluster.
   description: ''
+  syntax: >-
+    az sf application-type list --cluster-name
+                                --resource-group
+                                [--subscription]
   examples:
   - summary: List application types for a given cluster.
     syntax: az sf application-type list -g testRG -c testCluster
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name -c
     summary: Specify the name of the cluster, if not given it will be same as resource group name.
@@ -66,6 +82,7 @@ directCommands:
     name: --resource-group -g
     summary: Specify the resource group name. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
@@ -73,10 +90,15 @@ directCommands:
   name: az sf application-type show
   summary: Show the properties of an application type on an Azure Service Fabric cluster.
   description: ''
+  syntax: >-
+    az sf application-type show --application-type-name
+                                --cluster-name
+                                --resource-group
+                                [--subscription]
   examples:
   - summary: Get application type.
     syntax: az sf application-type show -g testRG -c testCluster --application-type-name CalcServiceApp
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --application-type-name --name
     summary: Specify the application type name.
@@ -89,6 +111,7 @@ directCommands:
     name: --resource-group -g
     summary: Specify the resource group name. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''

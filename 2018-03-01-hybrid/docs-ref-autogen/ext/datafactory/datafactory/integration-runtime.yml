@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_datafactory_az_datafactory_integration_runtime
 name: az datafactory integration-runtime
 summary: Datafactory integration-runtime.
@@ -8,10 +8,14 @@ directCommands:
   name: az datafactory integration-runtime delete
   summary: Deletes an integration runtime.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime delete --factory-name
+                                              --name
+                                              --resource-group
   examples:
   - summary: IntegrationRuntimes_Delete
     syntax: az datafactory integration-runtime delete --factory-name "myFactoryName" --name "myIntegrationRuntime" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -28,10 +32,14 @@ directCommands:
   name: az datafactory integration-runtime get-connection-info
   summary: Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime get-connection-info --factory-name
+                                                           --name
+                                                           --resource-group
   examples:
   - summary: IntegrationRuntimes_GetConnectionInfo
     syntax: az datafactory integration-runtime get-connection-info --factory-name "myFactoryName" --name "myIntegrationRuntime" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -48,10 +56,14 @@ directCommands:
   name: az datafactory integration-runtime get-monitoring-data
   summary: Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime get-monitoring-data --factory-name
+                                                           --name
+                                                           --resource-group
   examples:
   - summary: IntegrationRuntimes_GetMonitoringData
     syntax: az datafactory integration-runtime get-monitoring-data --factory-name "myFactoryName" --name "myIntegrationRuntime" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -68,10 +80,14 @@ directCommands:
   name: az datafactory integration-runtime get-status
   summary: Gets detailed status information for an integration runtime.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime get-status --factory-name
+                                                  --name
+                                                  --resource-group
   examples:
   - summary: IntegrationRuntimes_GetStatus
     syntax: az datafactory integration-runtime get-status --factory-name "myFactoryName" --name "myIntegrationRuntime" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -88,10 +104,13 @@ directCommands:
   name: az datafactory integration-runtime list
   summary: Lists integration runtimes.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime list --factory-name
+                                            --resource-group
   examples:
   - summary: IntegrationRuntimes_ListByFactory
     syntax: az datafactory integration-runtime list --factory-name "myFactoryName" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -104,10 +123,14 @@ directCommands:
   name: az datafactory integration-runtime list-auth-key
   summary: Retrieves the authentication keys for an integration runtime.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime list-auth-key --factory-name
+                                                     --name
+                                                     --resource-group
   examples:
   - summary: IntegrationRuntimes_ListAuthKeys
     syntax: az datafactory integration-runtime list-auth-key --factory-name "myFactoryName" --name "myIntegrationRuntime" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -124,10 +147,15 @@ directCommands:
   name: az datafactory integration-runtime regenerate-auth-key
   summary: Regenerates the authentication key for an integration runtime.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime regenerate-auth-key --factory-name
+                                                           --name
+                                                           --resource-group
+                                                           [--key-name {authKey1, authKey2}]
   examples:
   - summary: IntegrationRuntimes_RegenerateAuthKey
     syntax: az datafactory integration-runtime regenerate-auth-key --factory-name "myFactoryName" --name "myIntegrationRuntime" --key-name "authKey2" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -140,6 +168,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --key-name
     parameterValueGroup: authKey1, authKey2
     summary: The name of the authentication key to regenerate.
@@ -148,10 +177,15 @@ directCommands:
   name: az datafactory integration-runtime remove-link
   summary: Remove all linked integration runtimes under specific data factory in a self-hosted integration runtime.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime remove-link --factory-name
+                                                   --linked-factory-name
+                                                   --name
+                                                   --resource-group
   examples:
   - summary: IntegrationRuntimes_Upgrade
     syntax: az datafactory integration-runtime remove-link --factory-name "myFactoryName" --name "myIntegrationRuntime" --linked-factory-name "myFactoryName-linked" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -172,10 +206,15 @@ directCommands:
   name: az datafactory integration-runtime show
   summary: Gets an integration runtime.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime show --factory-name
+                                            --name
+                                            --resource-group
+                                            [--if-none-match]
   examples:
   - summary: IntegrationRuntimes_Get
     syntax: az datafactory integration-runtime show --factory-name "myFactoryName" --name "myIntegrationRuntime" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -188,6 +227,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --if-none-match
     summary: ETag of the integration runtime entity. Should only be specified for get. If the ETag matches the existing entity tag, or if \* was provided, then no content will be returned.
     description: ''
@@ -195,10 +235,15 @@ directCommands:
   name: az datafactory integration-runtime start
   summary: Starts a ManagedReserved type integration runtime.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime start --factory-name
+                                             --name
+                                             --resource-group
+                                             [--no-wait]
   examples:
   - summary: IntegrationRuntimes_Start
     syntax: az datafactory integration-runtime start --factory-name "myFactoryName" --name "myManagedIntegrationRuntime" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -211,6 +256,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -218,10 +264,15 @@ directCommands:
   name: az datafactory integration-runtime stop
   summary: Stops a ManagedReserved type integration runtime.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime stop --factory-name
+                                            --name
+                                            --resource-group
+                                            [--no-wait]
   examples:
   - summary: IntegrationRuntimes_Stop
     syntax: az datafactory integration-runtime stop --factory-name "myFactoryName" --name "myManagedIntegrationRuntime" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -234,6 +285,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -241,10 +293,14 @@ directCommands:
   name: az datafactory integration-runtime sync-credentials
   summary: Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node. If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime sync-credentials --factory-name
+                                                        --name
+                                                        --resource-group
   examples:
   - summary: IntegrationRuntimes_SyncCredentials
     syntax: az datafactory integration-runtime sync-credentials --factory-name "myFactoryName" --name "myIntegrationRuntime" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -261,10 +317,16 @@ directCommands:
   name: az datafactory integration-runtime update
   summary: Updates an integration runtime.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime update --factory-name
+                                              --name
+                                              --resource-group
+                                              [--auto-update {Off, On}]
+                                              [--update-delay-offset]
   examples:
   - summary: IntegrationRuntimes_Update
     syntax: az datafactory integration-runtime update --factory-name "myFactoryName" --name "myIntegrationRuntime" --resource-group "myResourceGroup" --auto-update "Off" --update-delay-offset "\"PT3H\""
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -277,6 +339,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --auto-update
     parameterValueGroup: Off, On
     summary: Enables or disables the auto-update feature of the self-hosted integration runtime. See <a href="https://go.microsoft.com/fwlink/?linkid=854189">https://go.microsoft.com/fwlink/?linkid=854189</a>.
@@ -288,10 +351,14 @@ directCommands:
   name: az datafactory integration-runtime upgrade
   summary: Upgrade self-hosted integration runtime to latest version if availability.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime upgrade --factory-name
+                                               --name
+                                               --resource-group
   examples:
   - summary: IntegrationRuntimes_Upgrade
     syntax: az datafactory integration-runtime upgrade --factory-name "myFactoryName" --name "myIntegrationRuntime" --resource-group "myResourceGroup"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -308,10 +375,22 @@ directCommands:
   name: az datafactory integration-runtime wait
   summary: Place the CLI in a waiting state until a condition of the datafactory integration-runtime is met.
   description: ''
+  syntax: >-
+    az datafactory integration-runtime wait --factory-name
+                                            --name
+                                            --resource-group
+                                            [--created]
+                                            [--custom]
+                                            [--deleted]
+                                            [--exists]
+                                            [--if-none-match]
+                                            [--interval]
+                                            [--timeout]
+                                            [--updated]
   examples:
   - summary: Pause executing next line of CLI script until the datafactory integration-runtime is successfully created.
     syntax: az datafactory integration-runtime wait --factory-name "myFactoryName" --name "myIntegrationRuntime" --resource-group "myResourceGroup" --created
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --factory-name
     summary: The factory name.
@@ -324,9 +403,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - name: --if-none-match
-    summary: ETag of the integration runtime entity. Should only be specified for get. If the ETag matches the existing entity tag, or if \* was provided, then no content will be returned.
-    description: ''
+  optionalParameters:
   - name: --created
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
@@ -338,6 +415,9 @@ directCommands:
     description: ''
   - name: --exists
     summary: Wait until the resource exists.
+    description: ''
+  - name: --if-none-match
+    summary: ETag of the integration runtime entity. Should only be specified for get. If the ETag matches the existing entity tag, or if \* was provided, then no content will be returned.
     description: ''
   - name: --interval
     defaultValue: "30"

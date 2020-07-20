@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_peering_az_peering_legacy
 name: az peering legacy
 summary: Peering legacy.
@@ -8,10 +8,14 @@ directCommands:
   name: az peering legacy list
   summary: Lists all of the legacy peerings under the given subscription matching the specified kind and location.
   description: ''
+  syntax: >-
+    az peering legacy list --kind {Direct, Exchange}
+                           --peering-location
+                           [--asn]
   examples:
   - summary: List legacy peerings
     syntax: az peering legacy list --kind "Exchange" --peering-location "peeringLocation0"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --kind
     parameterValueGroup: Direct, Exchange
@@ -21,6 +25,7 @@ directCommands:
     name: --peering-location
     summary: The location of the peering.
     description: ''
+  optionalParameters:
   - name: --asn
     summary: The ASN number associated with a legacy peering.
     description: ''

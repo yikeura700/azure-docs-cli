@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_virtual-wan_az_network_vhub_route_table
 name: az network vhub route-table
 summary: Manage route table in the virtual hub.
@@ -8,14 +8,30 @@ directCommands:
   name: az network vhub route-table create
   summary: Create a route table in the virtual hub.
   description: ''
+  syntax: >-
+    az network vhub route-table create --connections {All_Branches, All_Vnets}
+                                       --destinations
+                                       --destination-type {CIDR, Service}
+                                       --name
+                                       --next-hops
+                                       --next-hop-type {IPAddress}
+                                       --resource-group
+                                       --vhub-name
+                                       [--location]
+                                       [--no-wait]
+                                       [--tags]
   examples:
   - summary: Create a route table in the virtual hub.
     syntax: az network vhub route-table create -n MyRouteTable -g MyResourceGroup --vhub-name MyVhub --connections All_Vnets --destination-type CIDR --destinations "10.4.0.0/16" "10.6.0.0/16" --next-hop-type IPAddress --next-hops "10.0.0.68"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --connections
     parameterValueGroup: All_Branches, All_Vnets
     summary: List of all connections attached to this route table.
+    description: ''
+  - isRequired: true
+    name: --destinations
+    summary: Space-separated list of all destinations.
     description: ''
   - isRequired: true
     name: --destination-type
@@ -23,21 +39,17 @@ directCommands:
     summary: The type of destinations.
     description: ''
   - isRequired: true
-    name: --destinations
-    summary: Space-separated list of all destinations.
-    description: ''
-  - isRequired: true
     name: --name -n
     summary: Name of the virtual hub route table.
+    description: ''
+  - isRequired: true
+    name: --next-hops
+    summary: Space-separated list of IP address of the next hop.
     description: ''
   - isRequired: true
     name: --next-hop-type
     parameterValueGroup: IPAddress
     summary: The type of next hops. Currently it only supports IP Address.
-    description: ''
-  - isRequired: true
-    name: --next-hops
-    summary: Space-separated list of IP address of the next hop.
     description: ''
   - isRequired: true
     name: --resource-group -g
@@ -47,6 +59,7 @@ directCommands:
     name: --vhub-name
     summary: Name of the virtual hub.
     description: ''
+  optionalParameters:
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
@@ -60,10 +73,14 @@ directCommands:
   name: az network vhub route-table delete
   summary: Delete a route table in the virtual hub.
   description: ''
+  syntax: >-
+    az network vhub route-table delete --name
+                                       --resource-group
+                                       --vhub-name
   examples:
   - summary: Delete a route table in the virtual hub.
     syntax: az network vhub route-table delete -n MyRouteTable -g MyResourceGroup --vhub-name MyVhub
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the virtual hub route table.
@@ -80,7 +97,10 @@ directCommands:
   name: az network vhub route-table list
   summary: List all route tables in the virtual hub.
   description: ''
-  parameters:
+  syntax: >-
+    az network vhub route-table list --resource-group
+                                     --vhub-name
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -93,7 +113,11 @@ directCommands:
   name: az network vhub route-table show
   summary: Show a route table in the virtual hub.
   description: ''
-  parameters:
+  syntax: >-
+    az network vhub route-table show --name
+                                     --resource-group
+                                     --vhub-name
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the virtual hub route table.
@@ -110,10 +134,21 @@ directCommands:
   name: az network vhub route-table update
   summary: Update a route table in the virtual hub.
   description: ''
+  syntax: >-
+    az network vhub route-table update --name
+                                       --resource-group
+                                       --vhub-name
+                                       [--add]
+                                       [--connections {All_Branches, All_Vnets}]
+                                       [--force-string]
+                                       [--no-wait]
+                                       [--remove]
+                                       [--set]
+                                       [--tags]
   examples:
   - summary: Create a route table in the virtual hub.
     syntax: az network vhub route-table update -n MyRouteTable -g MyResourceGroup --vhub-name MyVhub --connections All_Vnets All_Branches
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the virtual hub route table.
@@ -126,27 +161,28 @@ directCommands:
     name: --vhub-name
     summary: Name of the virtual hub.
     description: ''
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
   - name: --connections
     parameterValueGroup: All_Branches, All_Vnets
     summary: List of all connections attached to this route table.
     description: ''
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
-  - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
-    description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
   - name: --force-string
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+    description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
+    description: ''
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
 commands:
 - ext_virtual-wan_az_network_vhub_route_table_create

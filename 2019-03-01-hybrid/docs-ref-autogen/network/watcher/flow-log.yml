@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_watcher_flow_log
 name: az network watcher flow-log
 summary: Manage network security group flow logging.
@@ -8,16 +8,24 @@ directCommands:
   name: az network watcher flow-log configure
   summary: Configure flow logging on a network security group.
   description: ''
+  syntax: >-
+    az network watcher flow-log configure --nsg
+                                          [--enabled {false, true}]
+                                          [--resource-group]
+                                          [--retention]
+                                          [--storage-account]
+                                          [--subscription]
   examples:
   - summary: Enable NSG flow logs.
     syntax: az network watcher flow-log configure -g MyResourceGroup --enabled true --nsg MyNsg --storage-account MyStorageAccount
   - summary: Disable NSG flow logs.
     syntax: az network watcher flow-log configure -g MyResourceGroup --enabled false --nsg MyNsg
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --nsg
     summary: Name or ID of the Network Security Group to target.
     description: ''
+  optionalParameters:
   - name: --enabled
     defaultValue: "true"
     parameterValueGroup: false, true
@@ -35,22 +43,22 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_watcher_flow_log_show
   name: az network watcher flow-log show
   summary: Get the flow log configuration of a network security group.
   description: ''
+  syntax: >-
+    az network watcher flow-log show [--location]
+                                     [--nsg]
+                                     [--resource-group]
+                                     [--subscription]
   examples:
   - summary: Show NSG flow logs. (Deprecated)
     syntax: az network watcher flow-log show -g MyResourceGroup --nsg MyNsg
   - summary: Show NSG flow logs with Azure Resource Management formatted.
     syntax: az network watcher flow-log show --location MyNetworkWatcher --name MyFlowLog
-  parameters:
+  optionalParameters:
   - name: --location -l
     summary: Location to identify the exclusive Network Watcher under a region. Only one Network Watcher can be existed per subscription and region.
     description: ''
@@ -63,12 +71,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_watcher_flow_log_configure
 - az_network_watcher_flow_log_show
@@ -88,6 +91,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM

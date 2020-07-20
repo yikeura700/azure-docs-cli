@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_k8sconfiguration_az_k8sconfiguration
 name: az k8sconfiguration
 summary: Commands to manage Kubernetes configuration.
@@ -8,6 +8,20 @@ directCommands:
   name: az k8sconfiguration create
   summary: Create a Kubernetes configuration.
   description: ''
+  syntax: >-
+    az k8sconfiguration create --cluster-name
+                               --cluster-type {connectedClusters, managedClusters}
+                               --name
+                               --repository-url
+                               --resource-group
+                               --scope {cluster, namespace}
+                               [--enable-helm-operator {false, true}]
+                               [--helm-operator-params]
+                               [--helm-operator-version]
+                               [--operator-instance-name]
+                               [--operator-namespace]
+                               [--operator-params]
+                               [--operator-type]
   examples:
   - summary: Create a Kubernetes configuration
     syntax: >-
@@ -20,7 +34,7 @@ directCommands:
       --operator-params "'--git-readonly'" --enable-helm-operator --helm-operator-version 0.6.0 \
 
       --scope namespace --helm-operator-params '--set helm.versions=v3'
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name -c
     summary: Name of the Kubernetes cluster.
@@ -47,6 +61,7 @@ directCommands:
     parameterValueGroup: cluster, namespace
     summary: Specify scope of the operator to be 'namespace' or 'cluster'.
     description: ''
+  optionalParameters:
   - name: --enable-helm-operator
     parameterValueGroup: false, true
     summary: Enable support for Helm chart deployments.
@@ -76,13 +91,19 @@ directCommands:
   name: az k8sconfiguration delete
   summary: Delete a Kubernetes configuration.
   description: ''
+  syntax: >-
+    az k8sconfiguration delete --cluster-name
+                               --cluster-type {connectedClusters, managedClusters}
+                               --name
+                               --resource-group
+                               [--yes]
   examples:
   - summary: Delete a Kubernetes configuration
     syntax: >-
       az k8sconfiguration delete --resource-group MyResourceGroup --cluster-name MyClusterName \
 
       --cluster-type connectedClusters --name MyConfigurationName
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name -c
     summary: Name of the Kubernetes cluster.
@@ -100,6 +121,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -107,13 +129,17 @@ directCommands:
   name: az k8sconfiguration list
   summary: List Kubernetes configurations.
   description: ''
+  syntax: >-
+    az k8sconfiguration list --cluster-name
+                             --cluster-type {connectedClusters, managedClusters}
+                             --resource-group
   examples:
   - summary: List all Kubernetes configurations of a cluster
     syntax: >-
       az k8sconfiguration list --resource-group MyResourceGroup --cluster-name MyClusterName \
 
       --cluster-type connectedClusters
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name -c
     summary: Name of the Kubernetes cluster.
@@ -131,13 +157,18 @@ directCommands:
   name: az k8sconfiguration show
   summary: Show details of a Kubernetes configuration.
   description: ''
+  syntax: >-
+    az k8sconfiguration show --cluster-name
+                             --cluster-type {connectedClusters, managedClusters}
+                             --name
+                             --resource-group
   examples:
   - summary: Show a Kubernetes configuration
     syntax: >-
       az k8sconfiguration show --resource-group MyResourceGroup --cluster-name MyClusterName \
 
       --cluster-type connectedClusters --name MyConfigurationName
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name -c
     summary: Name of the Kubernetes cluster.
@@ -159,6 +190,16 @@ directCommands:
   name: az k8sconfiguration update
   summary: Update a Kubernetes configuration.
   description: ''
+  syntax: >-
+    az k8sconfiguration update --cluster-name
+                               --cluster-type {connectedClusters, managedClusters}
+                               --name
+                               --resource-group
+                               [--enable-helm-operator {false, true}]
+                               [--helm-operator-params]
+                               [--helm-operator-version]
+                               [--operator-params]
+                               [--repository-url]
   examples:
   - summary: Update an existing Kubernetes configuration
     syntax: >-
@@ -169,7 +210,7 @@ directCommands:
       --repository-url git://github.com/fluxHowTo/flux-get-started --operator-params "'--git-readonly'" \
 
       --helm-operator-version 0.6.0 --helm-operator-params '--set helm.versions=v3'
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cluster-name -c
     summary: Name of the Kubernetes cluster.
@@ -187,6 +228,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --enable-helm-operator
     parameterValueGroup: false, true
     summary: Enable support for Helm chart deployments.

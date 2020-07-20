@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_hpc-cache_az_hpc_cache_nfs_storage_target
 name: az hpc-cache nfs-storage-target
 summary: Commands to create hpc cache nfs storage target.
@@ -8,6 +8,13 @@ directCommands:
   name: az hpc-cache nfs-storage-target add
   summary: Create or update a nfs Storage Target. This operation is allowed at any time, but if the Cache is down or unhealthy, the actual creation/modification of the Storage Target may be delayed until the Cache is healthy again.
   description: ''
+  syntax: >-
+    az hpc-cache nfs-storage-target add --cache-name
+                                        --junction
+                                        --name
+                                        --nfs3-target
+                                        --nfs3-usage-model
+                                        --resource-group
   examples:
   - summary: StorageTargets_CreateOrUpdate
     syntax: >-
@@ -18,7 +25,7 @@ directCommands:
       --junction namespace-path="/nt2" nfs-export="/export/a" target-path="/1" \
 
       --junction namespace-path="/nt3" nfs-export="/export/b"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --cache-name
     summary: Name of Cache.
@@ -47,7 +54,14 @@ directCommands:
   name: az hpc-cache nfs-storage-target update
   summary: Create or update a nfs Storage Target. This operation is allowed at any time, but if the Cache is down or unhealthy, the actual creation/modification of the Storage Target may be delayed until the Cache is healthy again.
   description: ''
-  parameters:
+  syntax: >-
+    az hpc-cache nfs-storage-target update --cache-name
+                                           --name
+                                           --resource-group
+                                           [--junction]
+                                           [--nfs3-target]
+                                           [--nfs3-usage-model]
+  requiredParameters:
   - isRequired: true
     name: --cache-name
     summary: Name of Cache.
@@ -60,6 +74,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --junction
     summary: List of Cache namespace junctions to target for namespace associations.
     description: ''

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_virtual-wan_az_network_vpn_gateway_connection
 name: az network vpn-gateway connection
 summary: Manage VPN gateway connections.
@@ -8,7 +8,20 @@ directCommands:
   name: az network vpn-gateway connection create
   summary: Create a VPN gateway connection.
   description: ''
-  parameters:
+  syntax: >-
+    az network vpn-gateway connection create --gateway-name
+                                             --name
+                                             --remote-vpn-site
+                                             --resource-group
+                                             [--connection-bandwidth]
+                                             [--enable-bgp {false, true}]
+                                             [--internet-security {false, true}]
+                                             [--no-wait]
+                                             [--protocol-type {IKEv1, IKEv2}]
+                                             [--rate-limiting {false, true}]
+                                             [--routing-weight]
+                                             [--shared-key]
+  requiredParameters:
   - isRequired: true
     name: --gateway-name
     summary: Name of the VPN gateway.
@@ -25,6 +38,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --connection-bandwidth
     summary: Expected bandwidth in Mbps.
     description: ''
@@ -57,7 +71,11 @@ directCommands:
   name: az network vpn-gateway connection delete
   summary: Delete a VPN gateway connection.
   description: ''
-  parameters:
+  syntax: >-
+    az network vpn-gateway connection delete --gateway-name
+                                             --name
+                                             --resource-group
+  requiredParameters:
   - isRequired: true
     name: --gateway-name
     summary: Name of the VPN gateway.
@@ -74,7 +92,10 @@ directCommands:
   name: az network vpn-gateway connection list
   summary: List VPN gateway connections.
   description: ''
-  parameters:
+  syntax: >-
+    az network vpn-gateway connection list --gateway-name
+                                           --resource-group
+  requiredParameters:
   - isRequired: true
     name: --gateway-name
     summary: Name of the VPN gateway.
@@ -87,7 +108,11 @@ directCommands:
   name: az network vpn-gateway connection show
   summary: Get the details of a VPN gateway connection.
   description: ''
-  parameters:
+  syntax: >-
+    az network vpn-gateway connection show --gateway-name
+                                           --name
+                                           --resource-group
+  requiredParameters:
   - isRequired: true
     name: --gateway-name
     summary: Name of the VPN gateway.

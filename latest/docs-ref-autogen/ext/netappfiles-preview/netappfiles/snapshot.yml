@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_netappfiles-preview_az_netappfiles_snapshot
 name: az netappfiles snapshot
 summary: Manage Azure NetApp Files (ANF) Snapshot Resources.
@@ -8,10 +8,18 @@ directCommands:
   name: az netappfiles snapshot create
   summary: Create a new Azure NetApp Files (ANF) snapshot.
   description: ''
+  syntax: >-
+    az netappfiles snapshot create --account-name
+                                   --location
+                                   --pool-name
+                                   --resource-group
+                                   --snapshot-name
+                                   --volume-name
+                                   [--file-system-id]
   examples:
   - summary: Create an ANF snapshot
     syntax: az netappfiles snapshot create -g group --account-name account-name --pool-name pname --volume-name vname --snapshot-name sname -l location --file-system-id volume-uuid
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the ANF account.
@@ -36,6 +44,7 @@ directCommands:
     name: --volume-name -v
     summary: The name of the ANF volume.
     description: ''
+  optionalParameters:
   - name: --file-system-id
     summary: The uuid of the volume.
     description: ''
@@ -43,10 +52,16 @@ directCommands:
   name: az netappfiles snapshot delete
   summary: Delete the specified ANF snapshot.
   description: ''
+  syntax: >-
+    az netappfiles snapshot delete --account-name
+                                   --pool-name
+                                   --resource-group
+                                   --snapshot-name
+                                   --volume-name
   examples:
   - summary: Delete an ANF snapshot
     syntax: az netappfiles snapshot delete -g group --account-name aname --pool-name pname --volume-name vname --snapshot-name sname
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the ANF account.
@@ -71,10 +86,15 @@ directCommands:
   name: az netappfiles snapshot list
   summary: List the snapshots of an ANF volume.
   description: ''
+  syntax: >-
+    az netappfiles snapshot list --account-name
+                                 --pool-name
+                                 --resource-group
+                                 --volume-name
   examples:
   - summary: list the snapshots of an ANF volume
     syntax: az netappfiles snapshot list -g group --account-name aname --pool-name pname --volume-name vname
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the ANF account.
@@ -95,10 +115,16 @@ directCommands:
   name: az netappfiles snapshot show
   summary: Get the specified ANF snapshot.
   description: ''
+  syntax: >-
+    az netappfiles snapshot show --account-name
+                                 --pool-name
+                                 --resource-group
+                                 --snapshot-name
+                                 --volume-name
   examples:
   - summary: Return the specified ANF snapshot
     syntax: az netappfiles snapshot show -g group --account-name aname --pool-name pname --volume-name vname --snapshot-name sname
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --account-name -a
     summary: The name of the ANF account.

@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_eventgrid_topic_type
 name: az eventgrid topic-type
 summary: Get details for topic types.
@@ -8,55 +8,49 @@ directCommands:
   name: az eventgrid topic-type list
   summary: List registered topic types.
   description: ''
-  parameters:
+  syntax: az eventgrid topic-type list [--subscription]
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
 - uid: az_eventgrid_topic_type_list_event_types
   name: az eventgrid topic-type list-event-types
   summary: List the event types supported by a topic type.
   description: ''
+  syntax: >-
+    az eventgrid topic-type list-event-types --name
+                                             [--subscription]
   examples:
   - summary: List all event types supported by Azure Storage Accounts.
     syntax: az eventgrid topic-type list-event-types -n Microsoft.Storage.StorageAccounts
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the topic type.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
 - uid: az_eventgrid_topic_type_show
   name: az eventgrid topic-type show
   summary: Get the details for a topic type.
   description: ''
-  parameters:
+  syntax: >-
+    az eventgrid topic-type show --name
+                                 [--subscription]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of the topic type.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
 commands:
 - az_eventgrid_topic_type_list
 - az_eventgrid_topic_type_list_event_types
@@ -77,6 +71,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/e4f67020bbaa8468157847986780c38a7f43970a/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   updated_at: 10/19/2019 11:44:55 AM

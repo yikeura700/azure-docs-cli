@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_deploy-to-azure_az_aks_app
 name: az aks app
 summary: Commands to manage AKS app.
@@ -8,7 +8,14 @@ directCommands:
   name: az aks app up
   summary: Deploy to AKS via GitHub actions.
   description: ''
-  parameters:
+  syntax: >-
+    az aks app up [--acr]
+                  [--aks-cluster]
+                  [--branch-name]
+                  [--do-not-wait]
+                  [--port]
+                  [--repository]
+  optionalParameters:
   - name: --acr
     summary: Name of the Azure Container Registry to be used for pushing the image.
     description: ''

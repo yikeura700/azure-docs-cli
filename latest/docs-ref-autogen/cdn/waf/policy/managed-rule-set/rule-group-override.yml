@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_cdn_waf_policy_managed_rule_set_rule_group_override
 name: az cdn waf policy managed-rule-set rule-group-override
 summary: Manage rule group overrides of a managed rule on a CDN WAF policy.
@@ -8,10 +8,19 @@ directCommands:
   name: az cdn waf policy managed-rule-set rule-group-override delete
   summary: Remove a rule group override from a managed rule set on a CDN WAF policy.
   description: ''
+  syntax: >-
+    az cdn waf policy managed-rule-set rule-group-override delete --name
+                                                                  --rule-set-type
+                                                                  --rule-set-version
+                                                                  [--ids]
+                                                                  [--policy-name]
+                                                                  [--resource-group]
+                                                                  [--subscription]
+                                                                  [--yes]
   examples:
   - summary: Remove the rule group override for SQLI from DefaultRuleSet_1.0 on a CDN WAF policy.
     syntax: az cdn waf policy managed-rule-set rule-group-override delete -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0 -n SQLI
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the rule group.
@@ -24,9 +33,7 @@ directCommands:
     name: --rule-set-version
     summary: The version of the managed rule set.
     description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
-    description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -39,20 +46,24 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
 - uid: az_cdn_waf_policy_managed_rule_set_rule_group_override_list
   name: az cdn waf policy managed-rule-set rule-group-override list
   summary: List rule group overrides of a managed rule on a CDN WAF policy.
   description: ''
+  syntax: >-
+    az cdn waf policy managed-rule-set rule-group-override list --policy-name
+                                                                --resource-group
+                                                                --rule-set-type
+                                                                --rule-set-version
+                                                                [--subscription]
   examples:
   - summary: List rule group overrides of a managed rule on a CDN WAF policy.
     syntax: az cdn waf policy managed-rule-set rule-group-override list -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --policy-name
     summary: Name of the CDN WAF policy.
@@ -69,23 +80,23 @@ directCommands:
     name: --rule-set-version
     summary: The version of the managed rule set.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
 - uid: az_cdn_waf_policy_managed_rule_set_rule_group_override_list_available
   name: az cdn waf policy managed-rule-set rule-group-override list-available
   summary: List available CDN WAF managed rule groups of a managed rule set.
   description: ''
+  syntax: >-
+    az cdn waf policy managed-rule-set rule-group-override list-available --rule-set-type
+                                                                          --rule-set-version
+                                                                          [--subscription]
   examples:
   - summary: List available rule groups for DefaultRuleSet_1.0.
     syntax: az cdn waf policy managed-rule-set rule-group-override list-available --rule-set-type DefaultRuleSet --rule-set-version 1.0
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --rule-set-type
     summary: The type of the managed rule set.
@@ -94,25 +105,30 @@ directCommands:
     name: --rule-set-version
     summary: The version of the managed rule set.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
 - uid: az_cdn_waf_policy_managed_rule_set_rule_group_override_set
   name: az cdn waf policy managed-rule-set rule-group-override set
   summary: Add or update a rule group override to a managed rule set on a CDN WAF policy.
   description: ''
+  syntax: >-
+    az cdn waf policy managed-rule-set rule-group-override set --name
+                                                               --rule-override
+                                                               --rule-set-type
+                                                               --rule-set-version
+                                                               [--ids]
+                                                               [--policy-name]
+                                                               [--resource-group]
+                                                               [--subscription]
   examples:
   - summary: Add a rule group override for SQL injections to DefaultRuleSet_1.0 on a CDN WAF policy.
     syntax: az cdn waf policy managed-rule-set rule-group-override set -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0 -n SQLI -r id=942440 action=Redirect enabled=Enabled
   - summary: Add multiple rule group overrides to DefaultRuleSet_1.0 on a CDN WAF policy.
     syntax: az cdn waf policy managed-rule-set rule-group-override set -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0 -n SQLI -r id=942440 action=Redirect enabled=Enabled -r id=942120 -r id=942100
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the rule group.
@@ -129,6 +145,7 @@ directCommands:
     name: --rule-set-version
     summary: The version of the managed rule set.
     description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -141,20 +158,23 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
 - uid: az_cdn_waf_policy_managed_rule_set_rule_group_override_show
   name: az cdn waf policy managed-rule-set rule-group-override show
   summary: Show a rule group override of a managed rule on a CDN WAF policy.
   description: ''
+  syntax: >-
+    az cdn waf policy managed-rule-set rule-group-override show --name
+                                                                --rule-set-type
+                                                                --rule-set-version
+                                                                [--ids]
+                                                                [--policy-name]
+                                                                [--resource-group]
+                                                                [--subscription]
   examples:
   - summary: Get the rule group override for rule group SQLI of DefaultRuleSet_1.0 on a CDN WAF policy.
     syntax: az cdn waf policy managed-rule-set rule-group-override show -g group --policy-name policy --rule-set-type DefaultRuleSet --rule-set-version 1.0 -n SQLI
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the rule group.
@@ -167,6 +187,7 @@ directCommands:
     name: --rule-set-version
     summary: The version of the managed rule set.
     description: ''
+  optionalParameters:
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
@@ -179,12 +200,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/cdn/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
 commands:
 - az_cdn_waf_policy_managed_rule_set_rule_group_override_delete
 - az_cdn_waf_policy_managed_rule_set_rule_group_override_list
@@ -207,6 +223,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/0bb45ecd541c1a6109ad67be4f45afe3ce47f2b5/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   updated_at: 6/3/2020 1:56:07 AM

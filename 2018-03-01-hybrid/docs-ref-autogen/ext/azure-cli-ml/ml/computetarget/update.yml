@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-cli-ml_az_ml_computetarget_update
 name: az ml computetarget update
 summary: Update a compute target (aks or amlcompute).
@@ -8,11 +8,29 @@ directCommands:
   name: az ml computetarget update aks
   summary: Update an AKS compute target.
   description: ''
-  parameters:
+  syntax: >-
+    az ml computetarget update aks --name
+                                   [--load-balancer-subnet]
+                                   [--load-balancer-type]
+                                   [--no-wait]
+                                   [--path]
+                                   [--resource-group]
+                                   [--ssl-cert-file]
+                                   [--ssl-cname]
+                                   [--ssl-disable]
+                                   [--ssl-key-file]
+                                   [--ssl-leaf-domain-label]
+                                   [--ssl-overwrite-domain]
+                                   [--ssl-renew]
+                                   [--subscription-id]
+                                   [-v]
+                                   [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of compute target to update.
     description: ''
+  optionalParameters:
   - name: --load-balancer-subnet
     summary: You can specify subnet for the AKS cluster when Internal Load Balancer is used as load balancer type. Default is "aks-subnet".
     description: ''
@@ -52,21 +70,32 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace to create this compute target under.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace to create this compute target under.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_computetarget_update_amlcompute
   name: az ml computetarget update amlcompute
   summary: Update an AzureML compute target.
   description: ''
-  parameters:
+  syntax: >-
+    az ml computetarget update amlcompute --name
+                                          [--idle-seconds-before-scaledown]
+                                          [--max-nodes]
+                                          [--min-nodes]
+                                          [--path]
+                                          [--resource-group]
+                                          [--subscription-id]
+                                          [-v]
+                                          [--workspace-name]
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: Name of compute target to provision.
     description: ''
+  optionalParameters:
   - name: --idle-seconds-before-scaledown
     summary: Node idle time in seconds before scaling down the cluster.
     description: ''
@@ -85,11 +114,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: --workspace-name -w
-    summary: Name of the workspace to create this compute target under.
-    description: ''
   - name: -v
     summary: Verbosity flag.
+    description: ''
+  - name: --workspace-name -w
+    summary: Name of the workspace to create this compute target under.
     description: ''
 commands:
 - ext_azure-cli-ml_az_ml_computetarget_update_aks

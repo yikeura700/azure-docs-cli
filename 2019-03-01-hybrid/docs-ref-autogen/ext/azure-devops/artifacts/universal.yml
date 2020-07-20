@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_azure-devops_az_artifacts_universal
 name: az artifacts universal
 summary: Manage Universal Packages.
@@ -8,7 +8,17 @@ directCommands:
   name: az artifacts universal download
   summary: Download a package.
   description: ''
-  parameters:
+  syntax: >-
+    az artifacts universal download --feed
+                                    --name
+                                    --path
+                                    --version
+                                    [--detect {false, true}]
+                                    [--file-filter]
+                                    [--org]
+                                    [--project]
+                                    [--scope {organization, project}]
+  requiredParameters:
   - isRequired: true
     name: --feed
     summary: Name or ID of the feed.
@@ -25,6 +35,7 @@ directCommands:
     name: --version -v
     summary: Version of the package, e.g. 1.0.0.
     description: ''
+  optionalParameters:
   - name: --detect
     parameterValueGroup: false, true
     summary: Automatically detect organization.
@@ -47,7 +58,17 @@ directCommands:
   name: az artifacts universal publish
   summary: Publish a package to a feed.
   description: ''
-  parameters:
+  syntax: >-
+    az artifacts universal publish --feed
+                                   --name
+                                   --path
+                                   --version
+                                   [--description]
+                                   [--detect {false, true}]
+                                   [--org]
+                                   [--project]
+                                   [--scope {organization, project}]
+  requiredParameters:
   - isRequired: true
     name: --feed
     summary: Name or ID of the feed.
@@ -64,6 +85,7 @@ directCommands:
     name: --version -v
     summary: Version of the package, e.g. '1.0.0'.
     description: ''
+  optionalParameters:
   - name: --description -d
     summary: Description of the package.
     description: ''

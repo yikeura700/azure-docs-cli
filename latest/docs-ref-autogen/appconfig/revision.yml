@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_appconfig_revision
 name: az appconfig revision
 summary: Manage revisions for key-values stored in an App Configuration.
@@ -8,6 +8,16 @@ directCommands:
   name: az appconfig revision list
   summary: Lists revision history of key-values.
   description: ''
+  syntax: >-
+    az appconfig revision list [--all]
+                               [--connection-string]
+                               [--datetime]
+                               [--fields {content_type, etag, key, label, last_modified, locked, tags, value}]
+                               [--key]
+                               [--label]
+                               [--name]
+                               [--subscription]
+                               [--top]
   examples:
   - summary: List revision history of a key-value using App Configuration name.
     syntax: az appconfig revision list -n MyAppConfiguration --key color --label test
@@ -15,7 +25,7 @@ directCommands:
     syntax: az appconfig revision list -n MyAppConfiguration --key color --label test,prod,\0
   - summary: List revision history for key "color" with any labels using connection string
     syntax: az appconfig revision list --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --key color --datetime "2019-05-01T11:24:12Z"
-  parameters:
+  optionalParameters:
   - name: --all
     summary: List all items.
     description: ''
@@ -38,18 +48,13 @@ directCommands:
   - name: --name -n
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
-  - name: --top -t
-    summary: Maximum number of items to return. Must be a positive integer. Default to 100.
-    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/appconfig/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --top -t
+    summary: Maximum number of items to return. Must be a positive integer. Default to 100.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
 commands:
 - az_appconfig_revision_list
 globalParameters:
@@ -68,6 +73,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/26e341bd9ce989aa68defdb81ceede36b6c5ba6f/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   updated_at: 5/7/2020 7:45:43 AM

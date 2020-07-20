@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_peering_az_peering_asn
 name: az peering asn
 summary: Peering asn.
@@ -8,14 +8,21 @@ directCommands:
   name: az peering asn create
   summary: Creates a new peer ASN or updates an existing peer ASN with the specified name under the given subscription.
   description: ''
+  syntax: >-
+    az peering asn create --peer-asn-name
+                          [--peer-asn]
+                          [--peer-contact-detail]
+                          [--peer-name]
+                          [--validation-state {Approved, Failed, None, Pending}]
   examples:
   - summary: Create a peer ASN
     syntax: az peering asn create --peer-asn 65000 --peer-contact-detail email="noc@contoso.com" phone="+1 (234) 567-8999" role="Noc" --peer-contact-detail email="abc@contoso.com" phone="+1 (234) 567-8900" role="Policy" --peer-contact-detail email="xyz@contoso.com" phone="+1 (234) 567-8900" role="Technical" --peer-name "Contoso" --peer-asn-name "peerAsnName"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --peer-asn-name
     summary: The peer ASN name.
     description: ''
+  optionalParameters:
   - name: --peer-asn
     summary: The Autonomous System Number (ASN) of the peer.
     description: ''
@@ -33,10 +40,11 @@ directCommands:
   name: az peering asn delete
   summary: Deletes an existing peer ASN with the specified name under the given subscription.
   description: ''
+  syntax: az peering asn delete --peer-asn-name
   examples:
   - summary: Delete a peer ASN
     syntax: az peering asn delete --peer-asn-name "peerAsnName"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --peer-asn-name
     summary: The peer ASN name.
@@ -45,18 +53,19 @@ directCommands:
   name: az peering asn list
   summary: Lists all of the peer ASNs under the given subscription.
   description: ''
+  syntax: az peering asn list
   examples:
   - summary: List peer ASNs in a subscription
     syntax: az peering asn list
-  parameters: []
 - uid: ext_peering_az_peering_asn_show
   name: az peering asn show
   summary: Gets the peer ASN with the specified name under the given subscription.
   description: ''
+  syntax: az peering asn show --peer-asn-name
   examples:
   - summary: Get a peer ASN
     syntax: az peering asn show --peer-asn-name "peerAsnName"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --peer-asn-name
     summary: The peer ASN name.

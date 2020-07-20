@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: ext_notification-hub_az_notification_hub_namespace_authorization_rule
 name: az notification-hub namespace authorization-rule
 summary: Commands to manage notification hubs namespace authorization rule.
@@ -8,13 +8,18 @@ directCommands:
   name: az notification-hub namespace authorization-rule create
   summary: Create an authorization rule for a namespace.
   description: ''
+  syntax: >-
+    az notification-hub namespace authorization-rule create --name
+                                                            --namespace-name
+                                                            --resource-group
+                                                            --rights
   examples:
   - summary: Create a namespace authorization rule
     syntax: >-
       az notification-hub namespace authorization-rule create --resource-group \
 
       MyResourceGroup --namespace-name my-namespace --name "sdk-AuthRules-1788" --rights Listen Send
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The authorization rule name.
@@ -35,13 +40,18 @@ directCommands:
   name: az notification-hub namespace authorization-rule delete
   summary: Delete a namespace authorization rule.
   description: ''
+  syntax: >-
+    az notification-hub namespace authorization-rule delete --name
+                                                            --namespace-name
+                                                            --resource-group
+                                                            [--yes]
   examples:
   - summary: Delete a namespace authorization rule
     syntax: >-
       az notification-hub namespace authorization-rule delete --resource-group MyResourceGroup \
 
       --namespace-name my-namespace --name "RootManageSharedAccessKey"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The authorization rule name.
@@ -54,6 +64,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  optionalParameters:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -61,13 +72,16 @@ directCommands:
   name: az notification-hub namespace authorization-rule list
   summary: List the authorization rules for a namespace.
   description: ''
+  syntax: >-
+    az notification-hub namespace authorization-rule list --namespace-name
+                                                          --resource-group
   examples:
   - summary: List authorization rules of the namespace
     syntax: >-
       az notification-hub namespace authorization-rule list --resource-group MyResourceGroup \
 
       --namespace-name my-namespace
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --namespace-name
     summary: The namespace name.
@@ -80,13 +94,17 @@ directCommands:
   name: az notification-hub namespace authorization-rule list-keys
   summary: List the Primary and Secondary ConnectionStrings to the namespace.
   description: ''
+  syntax: >-
+    az notification-hub namespace authorization-rule list-keys --name
+                                                               --namespace-name
+                                                               --resource-group
   examples:
   - summary: List keys of the namesapce authorization rule
     syntax: >-
       az notification-hub namespace authorization-rule list-keys --resource-group MyResourceGroup --namespace-name \
 
       my-namespace --name "RootManageSharedAccessKey"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The authorization rule name.
@@ -103,13 +121,18 @@ directCommands:
   name: az notification-hub namespace authorization-rule regenerate-keys
   summary: Regenerate the Primary/Secondary Keys to the Namespace Authorization Rule.
   description: ''
+  syntax: >-
+    az notification-hub namespace authorization-rule regenerate-keys --name
+                                                                     --namespace-name
+                                                                     --policy-key {Primary Key, Secondary Key}
+                                                                     --resource-group
   examples:
   - summary: Regenerate keys of the namesapce authorization rule
     syntax: >-
       az notification-hub namespace authorization-rule regenerate-keys --resource-group MyResourceGroup --namespace-name \
 
       my-namespace --name "RootManageSharedAccessKey" --policy-key "Secondary Key"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The authorization rule name.
@@ -131,13 +154,17 @@ directCommands:
   name: az notification-hub namespace authorization-rule show
   summary: Show an authorization rule for a namespace by name.
   description: ''
+  syntax: >-
+    az notification-hub namespace authorization-rule show --name
+                                                          --namespace-name
+                                                          --resource-group
   examples:
   - summary: Show namespace authorization rule info
     syntax: >-
       az notification-hub namespace authorization-rule show --resource-group MyResourceGroup \
 
       --namespace-name my-namespace --name "RootManageSharedAccessKey"
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The authorization rule name.

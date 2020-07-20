@@ -1,4 +1,4 @@
-### YamlMime:CLIGroup
+### YamlMime:AzureCLIGroup
 uid: az_network_dns_record_set_aaaa
 name: az network dns record-set aaaa
 summary: Manage DNS AAAA records.
@@ -8,12 +8,20 @@ directCommands:
   name: az network dns record-set aaaa add-record
   summary: Add an AAAA record.
   description: ''
+  syntax: >-
+    az network dns record-set aaaa add-record --ipv6-address
+                                              --record-set-name
+                                              --resource-group
+                                              --zone-name
+                                              [--if-none-match]
+                                              [--subscription]
+                                              [--ttl]
   examples:
   - summary: Add an AAAA record.
     syntax: >-
       az network dns record-set aaaa add-record -g MyResourceGroup -z www.mysite.com \
           -n MyRecordSet -a MyIpv6Address
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --ipv6-address -a
     summary: IPv6 address in string notation.
@@ -30,30 +38,35 @@ directCommands:
     name: --zone-name -z
     summary: The name of the zone.
     description: ''
+  optionalParameters:
   - name: --if-none-match
     summary: Create the record set only if it does not already exist.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --ttl
     defaultValue: "3600"
     summary: Record set TTL (time-to-live).
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_dns_record_set_aaaa_create
   name: az network dns record-set aaaa create
   summary: Create an empty AAAA record set.
   description: ''
+  syntax: >-
+    az network dns record-set aaaa create --name
+                                          --resource-group
+                                          --zone-name
+                                          [--if-match]
+                                          [--if-none-match]
+                                          [--metadata]
+                                          [--subscription]
+                                          [--ttl]
   examples:
   - summary: Create an empty AAAA record set.
     syntax: az network dns record-set aaaa create -g MyResourceGroup -z www.mysite.com -n MyRecordSet
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the record set, relative to the name of the zone.
@@ -66,6 +79,7 @@ directCommands:
     name: --zone-name -z
     summary: The name of the zone.
     description: ''
+  optionalParameters:
   - name: --if-match
     summary: The etag of the record set. Omit this value to always overwrite the current record set. Specify the last-seen etag value to prevent accidentally overwritting any concurrent changes.
     description: ''
@@ -75,27 +89,29 @@ directCommands:
   - name: --metadata
     summary: Metadata in space-separated key=value pairs. This overwrites any existing metadata.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --ttl
     defaultValue: "3600"
     summary: Record set TTL (time-to-live).
     description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_dns_record_set_aaaa_delete
   name: az network dns record-set aaaa delete
   summary: Delete an AAAA record set and all associated records.
   description: ''
+  syntax: >-
+    az network dns record-set aaaa delete --name
+                                          --resource-group
+                                          --zone-name
+                                          [--if-match]
+                                          [--subscription]
+                                          [--yes]
   examples:
   - summary: Delete an AAAA record set and all associated records.
     syntax: az network dns record-set aaaa delete -g MyResourceGroup -z www.mysite.com -n MyRecordSet
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the record set, relative to the name of the zone.
@@ -108,31 +124,31 @@ directCommands:
     name: --zone-name -z
     summary: The name of the zone.
     description: ''
+  optionalParameters:
   - name: --if-match
     summary: The etag of the record set. Omit this value to always delete the current record set. Specify the last-seen etag value to prevent accidentally deleting any concurrent changes.
-    description: ''
-  - name: --yes -y
-    summary: Do not prompt for confirmation.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  - name: --yes -y
+    summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_dns_record_set_aaaa_list
   name: az network dns record-set aaaa list
   summary: List all AAAA record sets in a zone.
   description: ''
+  syntax: >-
+    az network dns record-set aaaa list --resource-group
+                                        --zone-name
+                                        [--subscription]
   examples:
   - summary: List all AAAA record sets in a zone.
     syntax: az network dns record-set aaaa list -g MyResourceGroup -z www.mysite.com
   - summary: List all AAAA record sets in a zone. (autogenerated)
     syntax: az network dns record-set aaaa list --resource-group MyResourceGroup --subscription MySubscription --zone-name www.mysite.com
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
@@ -141,25 +157,28 @@ directCommands:
     name: --zone-name -z
     summary: The name of the zone.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_dns_record_set_aaaa_remove_record
   name: az network dns record-set aaaa remove-record
   summary: Remove AAAA record from its record set.
   description: By default, if the last record in a set is removed, the record set is deleted. To retain the empty record set, include --keep-empty-record-set.
+  syntax: >-
+    az network dns record-set aaaa remove-record --ipv6-address
+                                                 --record-set-name
+                                                 --resource-group
+                                                 --zone-name
+                                                 [--keep-empty-record-set]
+                                                 [--subscription]
   examples:
   - summary: Remove an AAAA record from its record set.
     syntax: >-
       az network dns record-set aaaa remove-record -g MyResourceGroup -z www.mysite.com \
           -n MyRecordSet -a MyIpv6Address
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --ipv6-address -a
     summary: IPv6 address in string notation.
@@ -176,26 +195,27 @@ directCommands:
     name: --zone-name -z
     summary: The name of the zone.
     description: ''
+  optionalParameters:
   - name: --keep-empty-record-set
     summary: Keep the empty record set if the last record is removed.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_dns_record_set_aaaa_show
   name: az network dns record-set aaaa show
   summary: Get the details of an AAAA record set.
   description: ''
+  syntax: >-
+    az network dns record-set aaaa show --name
+                                        --resource-group
+                                        --zone-name
+                                        [--subscription]
   examples:
   - summary: Get the details of an AAAA record set.
     syntax: az network dns record-set aaaa show -g MyResourceGroup -z www.mysite.com -n MyRecordSet
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the record set, relative to the name of the zone.
@@ -208,25 +228,33 @@ directCommands:
     name: --zone-name -z
     summary: The name of the zone.
     description: ''
+  optionalParameters:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_dns_record_set_aaaa_update
   name: az network dns record-set aaaa update
   summary: Update an AAAA record set.
   description: ''
+  syntax: >-
+    az network dns record-set aaaa update --name
+                                          --resource-group
+                                          --zone-name
+                                          [--add]
+                                          [--force-string]
+                                          [--if-match]
+                                          [--if-none-match]
+                                          [--metadata]
+                                          [--remove]
+                                          [--set]
+                                          [--subscription]
   examples:
   - summary: Update an AAAA record set.
     syntax: >-
       az network dns record-set aaaa update -g MyResourceGroup -z www.mysite.com \
           -n MyRecordSet --metadata owner=WebTeam
-  parameters:
+  requiredParameters:
   - isRequired: true
     name: --name -n
     summary: The name of the record set, relative to the name of the zone.
@@ -238,6 +266,13 @@ directCommands:
   - isRequired: true
     name: --zone-name -z
     summary: The name of the zone.
+    description: ''
+  optionalParameters:
+  - name: --add
+    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
+  - name: --force-string
+    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --if-match
     summary: The etag of the record set. Omit this value to always overwrite the current record set. Specify the last-seen etag value to prevent accidentally overwritting any concurrent changes.
@@ -248,12 +283,6 @@ directCommands:
   - name: --metadata
     summary: Metadata in space-separated key=value pairs. This overwrites any existing metadata.
     description: ''
-  - name: --add
-    summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
-    description: ''
-  - name: --force-string
-    summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-    description: ''
   - name: --remove
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
@@ -263,12 +292,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  source:
-    path: src/azure-cli/azure/cli/command_modules/network/_help.py
-    remote:
-      branch: dev
-      path: src/azure-cli/azure/cli/command_modules/network/_help.py
-      repo: https://github.com/Azure/azure-cli.git
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 commands:
 - az_network_dns_record_set_aaaa_add_record
 - az_network_dns_record_set_aaaa_create
@@ -293,6 +317,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
   updated_at: 6/18/2020 6:20:50 AM
