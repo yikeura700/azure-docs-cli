@@ -162,8 +162,8 @@ directCommands:
                                     [--storage-account-id]
                                     [--storage-container]
                                     [--storage-directory]
-                                    [--timeframe {BillingMonthToDate, Custom, MonthToDate, TheLastBillingMonth, TheLastMonth, WeekToDate}]
                                     [--time-period]
+                                    [--timeframe {BillingMonthToDate, Custom, MonthToDate, TheLastBillingMonth, TheLastMonth, WeekToDate}]
   examples:
   - summary: Update an export in a ManagementGroup scope
     syntax: az costmanagement export update --name "TestExport" --dataset-configuration columns="Date" columns="MeterId" columns="InstanceId" columns="ResourceLocation" columns="PreTaxCost" --dataset-grouping name="SubscriptionName" type="Dimension" --dataset-grouping name="Environment" type="Tag" --timeframe "MonthToDate" --storage-container="exports" --storage-account-id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Storage/storageAccounts/ccmeastusdiag182" --storage-directory="ad-hoc" --recurrence "Weekly" --recurrence-period from="2018-06-01T00:00:00Z" to="2018-10-31T00:00:00Z" --schedule-status "Active" --scope "providers/Microsoft.Management/managementGroups/TestMG"
@@ -207,12 +207,12 @@ directCommands:
   - name: --storage-directory
     summary: The root directory in the storage container to store exports.
     description: ''
+  - name: --time-period
+    summary: 'Has time period for pulling data for the query. Expect value: from=TIMESTAMP1 to=TIMESTAMP2. The timestamp format is like 2020-05-01T00:00:00.The TIMESTAMP1 must in the future and TIMESTAMP2 must be greater than TIMESTAMP1.'
+    description: ''
   - name: --timeframe
     parameterValueGroup: BillingMonthToDate, Custom, MonthToDate, TheLastBillingMonth, TheLastMonth, WeekToDate
     summary: The time frame for pulling data for the query. If custom, then a specific time period must be provided.
-    description: ''
-  - name: --time-period
-    summary: 'Has time period for pulling data for the query. Expect value: from=TIMESTAMP1 to=TIMESTAMP2. The timestamp format is like 2020-05-01T00:00:00.The TIMESTAMP1 must in the future and TIMESTAMP2 must be greater than TIMESTAMP1.'
     description: ''
 commands:
 - ext_costmanagement_az_costmanagement_export_create

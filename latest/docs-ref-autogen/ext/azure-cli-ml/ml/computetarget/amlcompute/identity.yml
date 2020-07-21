@@ -14,8 +14,8 @@ directCommands:
                                                    [--path]
                                                    [--resource-group]
                                                    [--subscription-id]
-                                                   [-v]
                                                    [--workspace-name]
+                                                   [-v]
   requiredParameters:
   - isRequired: true
     name: --identities
@@ -35,11 +35,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace to create this compute target under.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_computetarget_amlcompute_identity_remove
   name: az ml computetarget amlcompute identity remove
@@ -51,8 +51,8 @@ directCommands:
                                                    [--path]
                                                    [--resource-group]
                                                    [--subscription-id]
-                                                   [-v]
                                                    [--workspace-name]
+                                                   [-v]
   requiredParameters:
   - isRequired: true
     name: --identities
@@ -72,11 +72,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace to create this compute target under.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_computetarget_amlcompute_identity_show
   name: az ml computetarget amlcompute identity show
@@ -87,8 +87,8 @@ directCommands:
                                                  [--path]
                                                  [--resource-group]
                                                  [--subscription-id]
-                                                 [-v]
                                                  [--workspace-name]
+                                                 [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -104,11 +104,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace to create this compute target under.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 commands:
 - ext_azure-cli-ml_az_ml_computetarget_amlcompute_identity_assign

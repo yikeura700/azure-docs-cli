@@ -34,8 +34,8 @@ directCommands:
                                               [--dynamic-compression {Disabled, Enabled}]
                                               [--forwarding-protocol {HttpOnly, HttpsOnly, MatchRequest}]
                                               [--patterns]
-                                              [--query-parameters]
                                               [--query-parameter-strip-directive {StripAll, StripAllExcept, StripNone, StripOnly}]
+                                              [--query-parameters]
                                               [--redirect-protocol {HttpOnly, HttpsOnly, MatchRequest}]
                                               [--redirect-type {Found, Moved, PermanentRedirect, TemporaryRedirect}]
                                               [--rules-engine]
@@ -105,12 +105,12 @@ directCommands:
   - name: --patterns
     summary: "Space-separated list of patterns to match. Default: '/\\*'."
     description: ''
-  - name: --query-parameters
-    summary: Query parameters to include or exclude (comma separated) when using query-parameter-strip-directive type StripAllExcept or StripOnly respectively.
-    description: ''
   - name: --query-parameter-strip-directive
     parameterValueGroup: StripAll, StripAllExcept, StripNone, StripOnly
     summary: Treatment of URL query terms when forming the cache key.
+    description: ''
+  - name: --query-parameters
+    summary: Query parameters to include or exclude (comma separated) when using query-parameter-strip-directive type StripAllExcept or StripOnly respectively.
     description: ''
   - name: --redirect-protocol
     defaultValue: MatchRequest
@@ -207,8 +207,8 @@ directCommands:
                                               [--forwarding-protocol {HttpOnly, HttpsOnly, MatchRequest}]
                                               [--frontend-endpoints]
                                               [--patterns]
-                                              [--query-parameters]
                                               [--query-parameter-strip-directive {StripAll, StripAllExcept, StripNone, StripOnly}]
+                                              [--query-parameters]
                                               [--redirect-protocol {HttpOnly, HttpsOnly, MatchRequest}]
                                               [--redirect-type {Found, Moved, PermanentRedirect, TemporaryRedirect}]
                                               [--remove]
@@ -280,12 +280,12 @@ directCommands:
   - name: --patterns
     summary: "Space-separated list of patterns to match. Default: '/\\*'."
     description: ''
-  - name: --query-parameters
-    summary: Query parameters to include or exclude (comma separated) when using query-parameter-strip-directive type StripAllExcept or StripOnly respectively.
-    description: ''
   - name: --query-parameter-strip-directive
     parameterValueGroup: StripAll, StripAllExcept, StripNone, StripOnly
     summary: Treatment of URL query terms when forming the cache key.
+    description: ''
+  - name: --query-parameters
+    summary: Query parameters to include or exclude (comma separated) when using query-parameter-strip-directive type StripAllExcept or StripOnly respectively.
     description: ''
   - name: --redirect-protocol
     parameterValueGroup: HttpOnly, HttpsOnly, MatchRequest

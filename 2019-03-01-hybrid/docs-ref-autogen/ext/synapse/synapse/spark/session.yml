@@ -38,8 +38,8 @@ directCommands:
   summary: Create a Spark session.
   description: ''
   syntax: >-
-    az synapse spark session create --executors
-                                    --executor-size {Large, Medium, Small}
+    az synapse spark session create --executor-size {Large, Medium, Small}
+                                    --executors
                                     --name
                                     --spark-pool-name
                                     --workspace-name
@@ -54,13 +54,13 @@ directCommands:
       --spark-pool-name testsparkpool --executor-size Small --executors 4
   requiredParameters:
   - isRequired: true
-    name: --executors
-    summary: The number of executors.
-    description: ''
-  - isRequired: true
     name: --executor-size
     parameterValueGroup: Large, Medium, Small
     summary: The executor size.
+    description: ''
+  - isRequired: true
+    name: --executors
+    summary: The number of executors.
     description: ''
   - isRequired: true
     name: --name -n

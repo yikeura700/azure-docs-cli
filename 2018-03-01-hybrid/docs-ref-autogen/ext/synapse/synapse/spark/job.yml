@@ -90,8 +90,8 @@ directCommands:
   summary: Submit a Spark job.
   description: ''
   syntax: >-
-    az synapse spark job submit --executors
-                                --executor-size {Large, Medium, Small}
+    az synapse spark job submit --executor-size {Large, Medium, Small}
+                                --executors
                                 --main-class-name
                                 --main-definition-file
                                 --name
@@ -121,13 +121,13 @@ directCommands:
       --executors 2 --executor-size Small
   requiredParameters:
   - isRequired: true
-    name: --executors
-    summary: The number of executors.
-    description: ''
-  - isRequired: true
     name: --executor-size
     parameterValueGroup: Large, Medium, Small
     summary: The executor size.
+    description: ''
+  - isRequired: true
+    name: --executors
+    summary: The number of executors.
     description: ''
   - isRequired: true
     name: --main-class-name

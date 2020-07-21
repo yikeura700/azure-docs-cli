@@ -10,11 +10,11 @@ directCommands:
   description: ''
   syntax: >-
     az network vhub route-table create --connections {All_Branches, All_Vnets}
-                                       --destinations
                                        --destination-type {CIDR, Service}
+                                       --destinations
                                        --name
-                                       --next-hops
                                        --next-hop-type {IPAddress}
+                                       --next-hops
                                        --resource-group
                                        --vhub-name
                                        [--location]
@@ -30,26 +30,26 @@ directCommands:
     summary: List of all connections attached to this route table.
     description: ''
   - isRequired: true
-    name: --destinations
-    summary: Space-separated list of all destinations.
-    description: ''
-  - isRequired: true
     name: --destination-type
     parameterValueGroup: CIDR, Service
     summary: The type of destinations.
+    description: ''
+  - isRequired: true
+    name: --destinations
+    summary: Space-separated list of all destinations.
     description: ''
   - isRequired: true
     name: --name -n
     summary: Name of the virtual hub route table.
     description: ''
   - isRequired: true
-    name: --next-hops
-    summary: Space-separated list of IP address of the next hop.
-    description: ''
-  - isRequired: true
     name: --next-hop-type
     parameterValueGroup: IPAddress
     summary: The type of next hops. Currently it only supports IP Address.
+    description: ''
+  - isRequired: true
+    name: --next-hops
+    summary: Space-separated list of IP address of the next hop.
     description: ''
   - isRequired: true
     name: --resource-group -g

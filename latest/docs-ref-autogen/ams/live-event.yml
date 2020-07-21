@@ -26,8 +26,8 @@ directCommands:
                              [--preset-name]
                              [--preview-ips]
                              [--preview-locator]
-                             [--streaming-policy-name]
                              [--stream-options {Default, LowLatency}]
+                             [--streaming-policy-name]
                              [--subscription]
                              [--tags]
                              [--vanity-url {false, true}]
@@ -90,12 +90,12 @@ directCommands:
   - name: --preview-locator
     summary: The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.
     description: ''
-  - name: --streaming-policy-name
-    summary: The name of streaming policy used for the live event preview. This can be specified at creation time but cannot be updated.
-    description: ''
   - name: --stream-options
     parameterValueGroup: Default, LowLatency
     summary: The options to use for the LiveEvent. This value is specified at creation time and cannot be updated.
+    description: ''
+  - name: --streaming-policy-name
+    summary: The name of streaming policy used for the live event preview. This can be specified at creation time but cannot be updated.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.

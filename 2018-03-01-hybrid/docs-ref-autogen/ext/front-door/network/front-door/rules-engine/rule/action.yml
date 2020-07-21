@@ -27,8 +27,8 @@ directCommands:
                                                        [--header-action {Append, Delete, Overwrite}]
                                                        [--header-name]
                                                        [--header-value]
-                                                       [--query-parameters]
                                                        [--query-parameter-strip-directive {StripAll, StripAllExcept, StripNone, StripOnly}]
+                                                       [--query-parameters]
                                                        [--redirect-protocol {HttpOnly, HttpsOnly, MatchRequest}]
                                                        [--redirect-type {Found, Moved, PermanentRedirect, TemporaryRedirect}]
   requiredParameters:
@@ -97,12 +97,12 @@ directCommands:
   - name: --header-value
     summary: Value of the header.
     description: ''
-  - name: --query-parameters
-    summary: Query parameters to include or exclude (comma separated) when using query-parameter-strip-directive type StripAllExcept or StripOnly respectively.
-    description: ''
   - name: --query-parameter-strip-directive
     parameterValueGroup: StripAll, StripAllExcept, StripNone, StripOnly
     summary: Treatment of URL query terms when forming the cache key.
+    description: ''
+  - name: --query-parameters
+    summary: Query parameters to include or exclude (comma separated) when using query-parameter-strip-directive type StripAllExcept or StripOnly respectively.
     description: ''
   - name: --redirect-protocol
     defaultValue: MatchRequest

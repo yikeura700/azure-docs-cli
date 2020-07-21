@@ -23,12 +23,12 @@ directCommands:
                         [--max-surge]
                         [--min-count]
                         [--mode {System, User}]
+                        [--no-wait]
                         [--node-count]
                         [--node-osdisk-size]
                         [--node-taints]
                         [--node-vm-size]
                         [--node-zones {1, 2, 3}]
-                        [--no-wait]
                         [--os-type]
                         [--ppg]
                         [--priority {Regular, Spot}]
@@ -87,6 +87,9 @@ directCommands:
     parameterValueGroup: System, User
     summary: The mode for a node pool which defines a node pool's primary function. If set as "System", AKS prefers system pods scheduling to node pools with mode `System`. Learn more at <a href="https://aka.ms/aks/nodepool/mode">https://aka.ms/aks/nodepool/mode</a>.
     description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
   - name: --node-count -c
     defaultValue: "3"
     summary: Number of nodes in the Kubernetes agent pool. After creating a cluster, you can change the size of its node pool with `az aks scale`.
@@ -103,9 +106,6 @@ directCommands:
   - name: --node-zones --zones -z
     parameterValueGroup: 1, 2, 3
     summary: (will be deprecated, use --zones) Availability zones where agent nodes will be placed.
-    description: ''
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --os-type
     defaultValue: Linux
@@ -179,8 +179,8 @@ directCommands:
     az aks nodepool scale --cluster-name
                           --name
                           --resource-group
-                          [--node-count]
                           [--no-wait]
+                          [--node-count]
   requiredParameters:
   - isRequired: true
     name: --cluster-name
@@ -195,12 +195,12 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   optionalParameters:
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
   - name: --node-count -c
     defaultValue: "3"
     summary: Number of nodes in the Kubernetes node pool.
-    description: ''
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: ext_aks-preview_az_aks_nodepool_show
   name: az aks nodepool show
@@ -301,8 +301,8 @@ directCommands:
                             --resource-group
                             [--kubernetes-version]
                             [--max-surge]
-                            [--node-image-only]
                             [--no-wait]
+                            [--node-image-only]
   requiredParameters:
   - isRequired: true
     name: --cluster-name
@@ -323,11 +323,11 @@ directCommands:
   - name: --max-surge
     summary: Extra nodes used to speed upgrade. When specified, it represents the number or percent used, eg. 5 or 33%.
     description: ''
-  - name: --node-image-only
-    summary: Only upgrade agent pool's node image.
-    description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
+    description: ''
+  - name: --node-image-only
+    summary: Only upgrade agent pool's node image.
     description: ''
 commands:
 - ext_aks-preview_az_aks_nodepool_add

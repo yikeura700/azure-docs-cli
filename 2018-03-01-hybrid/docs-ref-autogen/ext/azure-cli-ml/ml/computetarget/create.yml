@@ -28,11 +28,11 @@ directCommands:
                                    [--ssl-overwrite-domain]
                                    [--subnet-name]
                                    [--subscription-id]
-                                   [-v]
                                    [--vm-size]
                                    [--vnet-name]
                                    [--vnet-resourcegroup-name]
                                    [--workspace-name]
+                                   [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -93,9 +93,6 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --vm-size -s
     summary: 'VM size to use for the compute target. A full list of options can be found here: <a href="https://aka.ms/azureml-aks-details">https://aka.ms/azureml-aks-details</a> Default: Standard_D3_v2.'
     description: ''
@@ -108,6 +105,9 @@ directCommands:
   - name: --workspace-name -w
     summary: Name of the workspace to create this compute target under.
     description: ''
+  - name: -v
+    summary: Verbosity flag.
+    description: ''
 - uid: ext_azure-cli-ml_az_ml_computetarget_create_amlcompute
   name: az ml computetarget create amlcompute
   summary: Create an AzureML compute target.
@@ -116,9 +116,9 @@ directCommands:
     az ml computetarget create amlcompute --max-nodes
                                           --name
                                           --vm-size
-                                          [--admin-username]
                                           [--admin-user-password]
                                           [--admin-user-ssh-key]
+                                          [--admin-username]
                                           [--assign-identity]
                                           [--description]
                                           [--idle-seconds-before-scaledown]
@@ -130,11 +130,11 @@ directCommands:
                                           [--subnet-name]
                                           [--subscription-id]
                                           [--tag]
-                                          [-v]
                                           [--vm-priority]
                                           [--vnet-name]
                                           [--vnet-resourcegroup-name]
                                           [--workspace-name]
+                                          [-v]
   requiredParameters:
   - isRequired: true
     name: --max-nodes
@@ -149,14 +149,14 @@ directCommands:
     summary: 'VM size to use for the compute target. More details can be found here: <a href="https://aka.ms/azureml-vm-details">https://aka.ms/azureml-vm-details</a> Default: Standard_NC6.'
     description: ''
   optionalParameters:
-  - name: --admin-username
-    summary: Name of the administrator user account which can be used to SSH into nodes.
-    description: ''
   - name: --admin-user-password
     summary: Password of the administrator user account.
     description: ''
   - name: --admin-user-ssh-key
     summary: SSH public key of the administrator user account.
+    description: ''
+  - name: --admin-username
+    summary: Name of the administrator user account which can be used to SSH into nodes.
     description: ''
   - name: --assign-identity
     summary: Use '[system]' to set a system assigned identity else input resource IDs separated by commas (ie <ResourceID1>,<ResourceID2>) to set user assigned identities.
@@ -191,9 +191,6 @@ directCommands:
   - name: --tag
     summary: Key/value tag to add (e.g. key=value ). Multiple tags can be specified with multiple --tag options.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --vm-priority -p
     summary: "VM priority to use for the compute target. (Options are 'dedicated', 'lowpriority') Default: dedicated."
     description: ''
@@ -205,6 +202,9 @@ directCommands:
     description: ''
   - name: --workspace-name -w
     summary: Name of the workspace to create this compute target under.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_computetarget_create_computeinstance
   name: az ml computetarget create computeinstance
@@ -222,10 +222,10 @@ directCommands:
                                                [--subnet-name]
                                                [--subscription-id]
                                                [--tag]
-                                               [-v]
                                                [--vnet-name]
                                                [--vnet-resourcegroup-name]
                                                [--workspace-name]
+                                               [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -263,9 +263,6 @@ directCommands:
   - name: --tag
     summary: Key/value tag to add (e.g. key=value ). Multiple tags can be specified with multiple --tag options.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --vnet-name
     summary: Name of the virtual network.
     description: ''
@@ -274,6 +271,9 @@ directCommands:
     description: ''
   - name: --workspace-name -w
     summary: Name of the workspace to create this compute target under.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_computetarget_create_datafactory
   name: az ml computetarget create datafactory
@@ -286,8 +286,8 @@ directCommands:
                                            [--path]
                                            [--resource-group]
                                            [--subscription-id]
-                                           [-v]
                                            [--workspace-name]
+                                           [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -309,11 +309,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace to create this compute target under.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 commands:
 - ext_azure-cli-ml_az_ml_computetarget_create_aks

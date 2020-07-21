@@ -135,8 +135,8 @@ directCommands:
                                        --resource-group
                                        [--add]
                                        [--force-string]
-                                       [--notes]
                                        [--no-wait]
+                                       [--notes]
                                        [--provisioning-state {NotProvisioned, Provisioned, Provisioning}]
                                        [--remove]
                                        [--set]
@@ -156,11 +156,11 @@ directCommands:
   - name: --force-string
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
-  - name: --notes
-    summary: Service provider notes.
-    description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
+    description: ''
+  - name: --notes
+    summary: Service provider notes.
     description: ''
   - name: --provisioning-state
     parameterValueGroup: NotProvisioned, Provisioned, Provisioning

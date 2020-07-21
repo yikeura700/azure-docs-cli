@@ -13,11 +13,11 @@ directCommands:
                        --resource-group
                        [--bypass {AzureServices, None}]
                        [--default-action {Allow, Deny}]
+                       [--enable-purge-protection {false, true}]
+                       [--enable-soft-delete {false, true}]
                        [--enabled-for-deployment {false, true}]
                        [--enabled-for-disk-encryption {false, true}]
                        [--enabled-for-template-deployment {false, true}]
-                       [--enable-purge-protection {false, true}]
-                       [--enable-soft-delete {false, true}]
                        [--location]
                        [--no-self-perms {false, true}]
                        [--sku {premium, standard}]
@@ -40,6 +40,14 @@ directCommands:
     parameterValueGroup: Allow, Deny
     summary: Default action to apply when no rule matches.
     description: ''
+  - name: --enable-purge-protection
+    parameterValueGroup: false, true
+    summary: Prevents manual purging of deleted vault, and all contained entities.
+    description: ''
+  - name: --enable-soft-delete
+    parameterValueGroup: false, true
+    summary: Enable vault deletion recovery for the vault, and all contained entities.
+    description: ''
   - name: --enabled-for-deployment
     parameterValueGroup: false, true
     summary: Allow Virtual Machines to retrieve certificates stored as secrets from the vault.
@@ -51,14 +59,6 @@ directCommands:
   - name: --enabled-for-template-deployment
     parameterValueGroup: false, true
     summary: Allow Resource Manager to retrieve secrets from the vault.
-    description: ''
-  - name: --enable-purge-protection
-    parameterValueGroup: false, true
-    summary: Prevents manual purging of deleted vault, and all contained entities.
-    description: ''
-  - name: --enable-soft-delete
-    parameterValueGroup: false, true
-    summary: Enable vault deletion recovery for the vault, and all contained entities.
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -243,11 +243,11 @@ directCommands:
                        [--add]
                        [--bypass {AzureServices, None}]
                        [--default-action {Allow, Deny}]
+                       [--enable-purge-protection {false, true}]
+                       [--enable-soft-delete {false, true}]
                        [--enabled-for-deployment {false, true}]
                        [--enabled-for-disk-encryption {false, true}]
                        [--enabled-for-template-deployment {false, true}]
-                       [--enable-purge-protection {false, true}]
-                       [--enable-soft-delete {false, true}]
                        [--force-string]
                        [--remove]
                        [--resource-group]
@@ -269,6 +269,14 @@ directCommands:
     parameterValueGroup: Allow, Deny
     summary: Default action to apply when no rule matches.
     description: ''
+  - name: --enable-purge-protection
+    parameterValueGroup: false, true
+    summary: Prevents manual purging of deleted vault, and all contained entities.
+    description: ''
+  - name: --enable-soft-delete
+    parameterValueGroup: false, true
+    summary: Enable vault deletion recovery for the vault, and all contained entities.
+    description: ''
   - name: --enabled-for-deployment
     parameterValueGroup: false, true
     summary: Allow Virtual Machines to retrieve certificates stored as secrets from the vault.
@@ -280,14 +288,6 @@ directCommands:
   - name: --enabled-for-template-deployment
     parameterValueGroup: false, true
     summary: Allow Resource Manager to retrieve secrets from the vault.
-    description: ''
-  - name: --enable-purge-protection
-    parameterValueGroup: false, true
-    summary: Prevents manual purging of deleted vault, and all contained entities.
-    description: ''
-  - name: --enable-soft-delete
-    parameterValueGroup: false, true
-    summary: Enable vault deletion recovery for the vault, and all contained entities.
     description: ''
   - name: --force-string
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.

@@ -20,11 +20,11 @@ directCommands:
                         [--max-pods]
                         [--min-count]
                         [--mode {System, User}]
+                        [--no-wait]
                         [--node-count]
                         [--node-osdisk-size]
                         [--node-taints]
                         [--node-vm-size]
-                        [--no-wait]
                         [--os-type]
                         [--subscription]
                         [--tags]
@@ -71,6 +71,9 @@ directCommands:
     parameterValueGroup: System, User
     summary: The mode for a node pool which defines a node pool's primary function. If set as "System", AKS prefers system pods scheduling to node pools with mode `System`. Learn more at <a href="https://aka.ms/aks/nodepool/mode">https://aka.ms/aks/nodepool/mode</a>.
     description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
   - name: --node-count -c
     defaultValue: "3"
     summary: Number of nodes in the Kubernetes agent pool. After creating a cluster, you can change the size of its node pool with `az aks scale`.
@@ -83,9 +86,6 @@ directCommands:
     description: ''
   - name: --node-vm-size -s
     summary: Size of Virtual Machines to create as Kubernetes nodes.
-    description: ''
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --os-type
     defaultValue: Linux
@@ -166,8 +166,8 @@ directCommands:
     az aks nodepool scale --cluster-name
                           --name
                           --resource-group
-                          [--node-count]
                           [--no-wait]
+                          [--node-count]
                           [--subscription]
   requiredParameters:
   - isRequired: true
@@ -183,12 +183,12 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   optionalParameters:
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
   - name: --node-count -c
     defaultValue: "3"
     summary: Number of nodes in the Kubernetes node pool.
-    description: ''
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.

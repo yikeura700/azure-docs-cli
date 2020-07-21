@@ -265,7 +265,6 @@ directCommands:
   description: ''
   syntax: >-
     az ml run submit-hyperdrive --hyperdrive-configuration-name
-                                [<USER_SCRIPT_AND_ARGUMENTS>]
                                 [--async]
                                 [--conda-dependencies]
                                 [--ct]
@@ -277,15 +276,13 @@ directCommands:
                                 [--source-directory]
                                 [--subscription-id]
                                 [--workspace-name]
+                                [<USER_SCRIPT_AND_ARGUMENTS>]
   requiredParameters:
   - isRequired: true
     name: --hyperdrive-configuration-name
     summary: The full name of the hyperdrive configuration file. The file should be in a sub-folder of the directory specified by the path parameter.
     description: ''
   optionalParameters:
-  - name: <USER_SCRIPT_AND_ARGUMENTS>
-    summary: The run submit arguments, like script name and script arguments.
-    description: ''
   - name: --async
     summary: Disable output streaming.
     description: ''
@@ -320,6 +317,9 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
+  - name: <USER_SCRIPT_AND_ARGUMENTS>
+    summary: The run submit arguments, like script name and script arguments.
+    description: ''
 - uid: ext_azure-cli-ml_az_ml_run_submit_pipeline
   name: az ml run submit-pipeline
   summary: Submit a pipeline for execution, from a published pipeline ID or pipeline YAML file.
@@ -327,8 +327,8 @@ directCommands:
   syntax: >-
     az ml run submit-pipeline [--datapaths]
                               [--experiment-name]
-                              [--output_file]
                               [--output-metadata-file]
+                              [--output_file]
                               [--parameters]
                               [--path]
                               [--pipeline-id]
@@ -343,11 +343,11 @@ directCommands:
   - name: --experiment-name -n
     summary: Experiment name for run submission. If unspecified, use the pipeline name.
     description: ''
-  - name: --output_file -f
-    summary: File to write output in JSON format.
-    description: ''
   - name: --output-metadata-file -t
     summary: Provide an optional output file location for structured object output.
+    description: ''
+  - name: --output_file -f
+    summary: File to write output in JSON format.
     description: ''
   - name: --parameters -p
     summary: Comma-separated list of name=value pairs for pipeline parameter assignments.
@@ -376,8 +376,7 @@ directCommands:
   summary: Submit a script for execution.
   description: ''
   syntax: >-
-    az ml run submit-script [<USER_SCRIPT_AND_ARGUMENTS>]
-                            [--async]
+    az ml run submit-script [--async]
                             [--conda-dependencies]
                             [--ct]
                             [--experiment-name]
@@ -388,10 +387,8 @@ directCommands:
                             [--source-directory]
                             [--subscription-id]
                             [--workspace-name]
+                            [<USER_SCRIPT_AND_ARGUMENTS>]
   optionalParameters:
-  - name: <USER_SCRIPT_AND_ARGUMENTS>
-    summary: The run submit arguments, like script name and script arguments.
-    description: ''
   - name: --async
     summary: Disable output streaming.
     description: ''
@@ -425,6 +422,9 @@ directCommands:
     description: ''
   - name: --workspace-name -w
     summary: Workspace name.
+    description: ''
+  - name: <USER_SCRIPT_AND_ARGUMENTS>
+    summary: The run submit arguments, like script name and script arguments.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_run_update
   name: az ml run update

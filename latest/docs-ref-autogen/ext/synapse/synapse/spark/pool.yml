@@ -22,8 +22,8 @@ directCommands:
                                  [--library-requirements-file]
                                  [--max-node-count]
                                  [--min-node-count]
-                                 [--node-size-family]
                                  [--no-wait]
+                                 [--node-size-family]
                                  [--spark-events-folder]
                                  [--tags]
   examples:
@@ -83,12 +83,12 @@ directCommands:
   - name: --min-node-count
     summary: The min node count.
     description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
   - name: --node-size-family
     defaultValue: MemoryOptimized
     summary: The node size family.
-    description: ''
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --spark-events-folder
     defaultValue: /events
@@ -188,9 +188,9 @@ directCommands:
                                  [--library-requirements-file]
                                  [--max-node-count]
                                  [--min-node-count]
+                                 [--no-wait]
                                  [--node-count]
                                  [--node-size {Large, Medium, Small}]
-                                 [--no-wait]
                                  [--tags]
   examples:
   - summary: Update the Spark pool's tags.
@@ -241,15 +241,15 @@ directCommands:
   - name: --min-node-count
     summary: The min node count.
     description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
   - name: --node-count
     summary: The number of node.
     description: ''
   - name: --node-size
     parameterValueGroup: Large, Medium, Small
     summary: The node size.
-    description: ''
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'

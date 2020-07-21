@@ -10,8 +10,8 @@ directCommands:
   description: ''
   syntax: >-
     az kusto data-connection event-grid create --cluster-name
-                                               --database-name
                                                --data-connection-name
+                                               --database-name
                                                --resource-group
                                                [--consumer-group]
                                                [--data-format {AVRO, CSV, JSON, MULTIJSON, ORC, PARQUET, PSV, RAW, SCSV, SINGLEJSON, SOHSV, TSV, TSVE, TXT}]
@@ -27,12 +27,12 @@ directCommands:
     summary: The name of the Kusto cluster.
     description: ''
   - isRequired: true
-    name: --database-name
-    summary: The name of the database in the Kusto cluster.
-    description: ''
-  - isRequired: true
     name: --data-connection-name
     summary: The name of the data connection.
+    description: ''
+  - isRequired: true
+    name: --database-name
+    summary: The name of the database in the Kusto cluster.
     description: ''
   - isRequired: true
     name: --resource-group -g
@@ -125,8 +125,8 @@ directCommands:
   description: ''
   syntax: >-
     az kusto data-connection event-grid update --cluster-name
-                                               --database-name
                                                --data-connection-name
+                                               --database-name
                                                --resource-group
                                                [--consumer-group]
                                                [--data-format {AVRO, CSV, JSON, MULTIJSON, ORC, PARQUET, PSV, RAW, SCSV, SINGLEJSON, SOHSV, TSV, TSVE, TXT}]
@@ -142,12 +142,12 @@ directCommands:
     summary: The name of the Kusto cluster.
     description: ''
   - isRequired: true
-    name: --database-name
-    summary: The name of the database in the Kusto cluster.
-    description: ''
-  - isRequired: true
     name: --data-connection-name
     summary: The name of the data connection.
+    description: ''
+  - isRequired: true
+    name: --database-name
+    summary: The name of the database in the Kusto cluster.
     description: ''
   - isRequired: true
     name: --resource-group -g

@@ -10,7 +10,6 @@ directCommands:
   description: ''
   syntax: >-
     az acr build --registry
-                 [<SOURCE_LOCATION>]
                  [--agent-pool]
                  [--auth-mode {Default, None}]
                  [--build-arg]
@@ -26,6 +25,7 @@ directCommands:
                  [--subscription]
                  [--target]
                  [--timeout]
+                 [<SOURCE_LOCATION>]
   examples:
   - summary: Queue a local context as a Linux build, tag it, and push it to the registry.
     syntax: az acr build -t sample/hello-world:{{.Run.ID}} -r MyRegistry .
@@ -45,9 +45,6 @@ directCommands:
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   optionalParameters:
-  - name: <SOURCE_LOCATION>
-    summary: The local source code directory path (e.g., './src') or the URL to a git repository (e.g., '<a href="https://github.com/Azure-Samples/acr-build-helloworld-node.git">https://github.com/Azure-Samples/acr-build-helloworld-node.git</a>') or a remote tarball (e.g., '<a href="http://server/context.tar.gz">http://server/context.tar.gz</a>').
-    description: ''
   - name: --agent-pool
     summary: The name of the agent pool.
     description: ''
@@ -93,6 +90,9 @@ directCommands:
     description: ''
   - name: --timeout
     summary: The timeout in seconds.
+    description: ''
+  - name: <SOURCE_LOCATION>
+    summary: The local source code directory path (e.g., './src') or the URL to a git repository (e.g., '<a href="https://github.com/Azure-Samples/acr-build-helloworld-node.git">https://github.com/Azure-Samples/acr-build-helloworld-node.git</a>') or a remote tarball (e.g., '<a href="http://server/context.tar.gz">http://server/context.tar.gz</a>').
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 - uid: az_acr_check_health
@@ -366,7 +366,6 @@ directCommands:
   description: ''
   syntax: >-
     az acr run --registry
-               [<SOURCE_LOCATION>]
                [--agent-pool]
                [--auth-mode {Default, None}]
                [--cmd]
@@ -381,6 +380,7 @@ directCommands:
                [--subscription]
                [--timeout]
                [--values]
+               [<SOURCE_LOCATION>]
   examples:
   - summary: Queue a run to execute a container command.
     syntax: az acr run -r MyRegistry --cmd '$Registry/myimage' /dev/null
@@ -400,9 +400,6 @@ directCommands:
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   optionalParameters:
-  - name: <SOURCE_LOCATION>
-    summary: The local source code directory path (e.g., './src') or the URL to a git repository (e.g., '<a href="https://github.com/Azure-Samples/acr-build-helloworld-node.git">https://github.com/Azure-Samples/acr-build-helloworld-node.git</a>') or a remote tarball (e.g., '<a href="http://server/context.tar.gz">http://server/context.tar.gz</a>'). If '/dev/null' is specified, the value will be set to None and ignored.
-    description: ''
   - name: --agent-pool
     summary: The name of the agent pool.
     description: ''
@@ -445,6 +442,9 @@ directCommands:
     description: ''
   - name: --values
     summary: The task values file path relative to the source context.
+    description: ''
+  - name: <SOURCE_LOCATION>
+    summary: The local source code directory path (e.g., './src') or the URL to a git repository (e.g., '<a href="https://github.com/Azure-Samples/acr-build-helloworld-node.git">https://github.com/Azure-Samples/acr-build-helloworld-node.git</a>') or a remote tarball (e.g., '<a href="http://server/context.tar.gz">http://server/context.tar.gz</a>'). If '/dev/null' is specified, the value will be set to None and ignored.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 - uid: az_acr_show

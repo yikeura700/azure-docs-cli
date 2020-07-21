@@ -17,10 +17,10 @@ directCommands:
                                           [--connection-draining-timeout]
                                           [--custom-error-pages]
                                           [--frontend-port]
-                                          [--http2 {Disabled, Enabled}]
                                           [--http-settings-cookie-based-affinity {Disabled, Enabled}]
                                           [--http-settings-port]
                                           [--http-settings-protocol {Http, Https}]
+                                          [--http2 {Disabled, Enabled}]
                                           [--identity]
                                           [--key-vault-secret-id]
                                           [--location]
@@ -79,10 +79,6 @@ directCommands:
   - name: --frontend-port
     summary: The front end port number.
     description: ''
-  - name: --http2
-    parameterValueGroup: Disabled, Enabled
-    summary: Use HTTP2 for the application gateway.
-    description: ''
   - name: --http-settings-cookie-based-affinity
     defaultValue: disabled
     parameterValueGroup: Disabled, Enabled
@@ -96,6 +92,10 @@ directCommands:
     defaultValue: Http
     parameterValueGroup: Http, Https
     summary: The HTTP settings protocol.
+    description: ''
+  - name: --http2
+    parameterValueGroup: Disabled, Enabled
+    summary: Use HTTP2 for the application gateway.
     description: ''
   - name: --identity
     summary: Name or ID of the ManagedIdentity Resource.

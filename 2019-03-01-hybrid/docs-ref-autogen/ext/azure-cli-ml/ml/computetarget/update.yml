@@ -23,8 +23,8 @@ directCommands:
                                    [--ssl-overwrite-domain]
                                    [--ssl-renew]
                                    [--subscription-id]
-                                   [-v]
                                    [--workspace-name]
+                                   [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -70,11 +70,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace to create this compute target under.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_computetarget_update_amlcompute
   name: az ml computetarget update amlcompute
@@ -88,8 +88,8 @@ directCommands:
                                           [--path]
                                           [--resource-group]
                                           [--subscription-id]
-                                          [-v]
                                           [--workspace-name]
+                                          [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -114,11 +114,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace to create this compute target under.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 commands:
 - ext_azure-cli-ml_az_ml_computetarget_update_aks

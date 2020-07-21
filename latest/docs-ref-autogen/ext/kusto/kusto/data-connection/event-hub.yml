@@ -10,8 +10,8 @@ directCommands:
   description: ''
   syntax: >-
     az kusto data-connection event-hub create --cluster-name
-                                              --database-name
                                               --data-connection-name
+                                              --database-name
                                               --resource-group
                                               [--compression {GZip, None}]
                                               [--consumer-group]
@@ -31,12 +31,12 @@ directCommands:
     summary: The name of the Kusto cluster.
     description: ''
   - isRequired: true
-    name: --database-name
-    summary: The name of the database in the Kusto cluster.
-    description: ''
-  - isRequired: true
     name: --data-connection-name
     summary: The name of the data connection.
+    description: ''
+  - isRequired: true
+    name: --database-name
+    summary: The name of the database in the Kusto cluster.
     description: ''
   - isRequired: true
     name: --resource-group -g
@@ -141,8 +141,8 @@ directCommands:
   description: ''
   syntax: >-
     az kusto data-connection event-hub update --cluster-name
-                                              --database-name
                                               --data-connection-name
+                                              --database-name
                                               --resource-group
                                               [--compression {GZip, None}]
                                               [--consumer-group]
@@ -162,12 +162,12 @@ directCommands:
     summary: The name of the Kusto cluster.
     description: ''
   - isRequired: true
-    name: --database-name
-    summary: The name of the database in the Kusto cluster.
-    description: ''
-  - isRequired: true
     name: --data-connection-name
     summary: The name of the data connection.
+    description: ''
+  - isRequired: true
+    name: --database-name
+    summary: The name of the database in the Kusto cluster.
     description: ''
   - isRequired: true
     name: --resource-group -g

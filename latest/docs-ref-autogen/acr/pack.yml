@@ -12,7 +12,6 @@ directCommands:
     az acr pack build --builder
                       --image
                       --registry
-                      [<SOURCE_LOCATION>]
                       [--agent-pool]
                       [--auth-mode {Default, None}]
                       [--no-format]
@@ -24,6 +23,7 @@ directCommands:
                       [--resource-group]
                       [--subscription]
                       [--timeout]
+                      [<SOURCE_LOCATION>]
   examples:
   - summary: Queue a build for the current directory with the CloudFoundry builder.
     syntax: az acr pack build -r MyRegistry -t {{.Run.Registry}}/node-app:{{.Run.ID}} --builder cloudfoundry/cnb:bionic .
@@ -43,9 +43,6 @@ directCommands:
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   optionalParameters:
-  - name: <SOURCE_LOCATION>
-    summary: The local source code directory path (e.g., './src') or the URL to a git repository (e.g., '<a href="https://github.com/Azure-Samples/acr-build-helloworld-node.git">https://github.com/Azure-Samples/acr-build-helloworld-node.git</a>') or a remote tarball (e.g., '<a href="http://server/context.tar.gz">http://server/context.tar.gz</a>').
-    description: ''
   - name: --agent-pool
     summary: The name of the agent pool.
     description: ''
@@ -80,6 +77,9 @@ directCommands:
     description: ''
   - name: --timeout
     summary: The timeout in seconds.
+    description: ''
+  - name: <SOURCE_LOCATION>
+    summary: The local source code directory path (e.g., './src') or the URL to a git repository (e.g., '<a href="https://github.com/Azure-Samples/acr-build-helloworld-node.git">https://github.com/Azure-Samples/acr-build-helloworld-node.git</a>') or a remote tarball (e.g., '<a href="http://server/context.tar.gz">http://server/context.tar.gz</a>').
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 commands:

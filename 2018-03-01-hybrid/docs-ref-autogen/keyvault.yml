@@ -11,12 +11,12 @@ directCommands:
   syntax: >-
     az keyvault create --name
                        --resource-group
-                       [--enabled-for-deployment {false, true}]
-                       [--enabled-for-disk-encryption {false, true}]
-                       [--enabled-for-template-deployment {false, true}]
                        [--enable-purge-protection {false, true}]
                        [--enable-rbac-authorization {false, true}]
                        [--enable-soft-delete {false, true}]
+                       [--enabled-for-deployment {false, true}]
+                       [--enabled-for-disk-encryption {false, true}]
+                       [--enabled-for-template-deployment {false, true}]
                        [--location]
                        [--network-acls]
                        [--network-acls-ips]
@@ -49,18 +49,6 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   optionalParameters:
-  - name: --enabled-for-deployment
-    parameterValueGroup: false, true
-    summary: Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
-    description: ''
-  - name: --enabled-for-disk-encryption
-    parameterValueGroup: false, true
-    summary: Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
-    description: ''
-  - name: --enabled-for-template-deployment
-    parameterValueGroup: false, true
-    summary: Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
-    description: ''
   - name: --enable-purge-protection
     parameterValueGroup: false, true
     summary: Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
@@ -72,6 +60,18 @@ directCommands:
   - name: --enable-soft-delete
     parameterValueGroup: false, true
     summary: Property specifying whether recoverable deletion is enabled for this key vault. Setting this property to true activates the soft delete feature, whereby vaults or vault entities can be recovered after deletion. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
+    description: ''
+  - name: --enabled-for-deployment
+    parameterValueGroup: false, true
+    summary: Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
+    description: ''
+  - name: --enabled-for-disk-encryption
+    parameterValueGroup: false, true
+    summary: Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
+    description: ''
+  - name: --enabled-for-template-deployment
+    parameterValueGroup: false, true
+    summary: Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -320,12 +320,12 @@ directCommands:
   syntax: >-
     az keyvault update --name
                        [--add]
-                       [--enabled-for-deployment {false, true}]
-                       [--enabled-for-disk-encryption {false, true}]
-                       [--enabled-for-template-deployment {false, true}]
                        [--enable-purge-protection {false, true}]
                        [--enable-rbac-authorization {false, true}]
                        [--enable-soft-delete {false, true}]
+                       [--enabled-for-deployment {false, true}]
+                       [--enabled-for-disk-encryption {false, true}]
+                       [--enabled-for-template-deployment {false, true}]
                        [--force-string]
                        [--remove]
                        [--resource-group]
@@ -344,18 +344,6 @@ directCommands:
   - name: --add
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
-  - name: --enabled-for-deployment
-    parameterValueGroup: false, true
-    summary: Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
-    description: ''
-  - name: --enabled-for-disk-encryption
-    parameterValueGroup: false, true
-    summary: Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
-    description: ''
-  - name: --enabled-for-template-deployment
-    parameterValueGroup: false, true
-    summary: Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
-    description: ''
   - name: --enable-purge-protection
     parameterValueGroup: false, true
     summary: Property specifying whether protection against purge is enabled for this vault. Setting this property to true activates protection against purge for this vault and its content - only the Key Vault service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
@@ -367,6 +355,18 @@ directCommands:
   - name: --enable-soft-delete
     parameterValueGroup: false, true
     summary: Property specifying whether recoverable deletion is enabled for this key vault. Setting this property to true activates the soft delete feature, whereby vaults or vault entities can be recovered after deletion. Enabling this functionality is irreversible - that is, the property does not accept false as its value.
+    description: ''
+  - name: --enabled-for-deployment
+    parameterValueGroup: false, true
+    summary: Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault.
+    description: ''
+  - name: --enabled-for-disk-encryption
+    parameterValueGroup: false, true
+    summary: Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys.
+    description: ''
+  - name: --enabled-for-template-deployment
+    parameterValueGroup: false, true
+    summary: Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault.
     description: ''
   - name: --force-string
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.

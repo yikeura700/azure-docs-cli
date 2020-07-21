@@ -53,8 +53,8 @@ directCommands:
                         [--vnet-name]
                         [--workernode-count]
                         [--workernode-data-disk-size]
-                        [--workernode-data-disks-per-node]
                         [--workernode-data-disk-storage-account-type {premium_lrs, standard_lrs}]
+                        [--workernode-data-disks-per-node]
                         [--workernode-size]
                         [--zookeepernode-size]
   examples:
@@ -292,12 +292,12 @@ directCommands:
   - name: --workernode-data-disk-size
     summary: The size of the data disk in GB, e.g. 1023.
     description: ''
-  - name: --workernode-data-disks-per-node
-    summary: The number of data disks to use per worker node.
-    description: ''
   - name: --workernode-data-disk-storage-account-type
     parameterValueGroup: premium_lrs, standard_lrs
     summary: 'The type of storage account that will be used for the data disks: standard_lrs or premium_lrs.'
+    description: ''
+  - name: --workernode-data-disks-per-node
+    summary: The number of data disks to use per worker node.
     description: ''
   - name: --workernode-size
     defaultValue: large

@@ -15,8 +15,8 @@ directCommands:
                                [--name]
                                [--resource-group]
                                [--subscription]
-                               [--weekly-retention]
                                [--week-of-year]
+                               [--weekly-retention]
                                [--yearly-retention]
   examples:
   - summary: Set long term retention for a managed database.
@@ -40,11 +40,11 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-  - name: --weekly-retention
-    summary: Retention for the weekly backup. If just a number is passed instead of an ISO 8601 string, days will be assumed as the units.There is a minimum of 7 days and a maximum of 10 years.
-    description: ''
   - name: --week-of-year
     summary: The Week of Year, 1 to 52, in which to take the yearly LTR backup.
+    description: ''
+  - name: --weekly-retention
+    summary: Retention for the weekly backup. If just a number is passed instead of an ISO 8601 string, days will be assumed as the units.There is a minimum of 7 days and a maximum of 10 years.
     description: ''
   - name: --yearly-retention
     summary: Retention for the yearly backup. If just a number is passed instead of an ISO 8601 string, days will be assumed as the units.There is a minimum of 7 days and a maximum of 10 years.

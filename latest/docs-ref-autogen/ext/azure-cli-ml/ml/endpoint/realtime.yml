@@ -49,8 +49,8 @@ directCommands:
                                            [--subscription-id]
                                            [--timeout-seconds]
                                            [--tp]
-                                           [-v]
                                            [--workspace-name]
+                                           [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -175,11 +175,11 @@ directCommands:
   - name: --tp --traffic-percentile
     summary: The traffic percentile this version takes in Endpoint.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace containing the service to update.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_endpoint_realtime_delete
   name: az ml endpoint realtime delete
@@ -190,8 +190,8 @@ directCommands:
                                    [--path]
                                    [--resource-group]
                                    [--subscription-id]
-                                   [-v]
                                    [--workspace-name]
+                                   [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -207,11 +207,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace containing the endpoint to delete.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_endpoint_realtime_delete_version
   name: az ml endpoint realtime delete-version
@@ -224,8 +224,8 @@ directCommands:
                                            [--path]
                                            [--resource-group]
                                            [--subscription-id]
-                                           [-v]
                                            [--workspace-name]
+                                           [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -248,11 +248,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace containing the endpoint to delete.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_endpoint_realtime_get_access_token
   name: az ml endpoint realtime get-access-token
@@ -263,8 +263,8 @@ directCommands:
                                              [--path]
                                              [--resource-group]
                                              [--subscription-id]
-                                             [-v]
                                              [--workspace-name]
+                                             [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -280,11 +280,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace containing the endpoint to show.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_endpoint_realtime_get_keys
   name: az ml endpoint realtime get-keys
@@ -295,8 +295,8 @@ directCommands:
                                      [--path]
                                      [--resource-group]
                                      [--subscription-id]
-                                     [-v]
                                      [--workspace-name]
+                                     [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -312,11 +312,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace containing the endpoint to show.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_endpoint_realtime_get_logs
   name: az ml endpoint realtime get-logs
@@ -329,8 +329,8 @@ directCommands:
                                      [--path]
                                      [--resource-group]
                                      [--subscription-id]
-                                     [-v]
                                      [--workspace-name]
+                                     [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -353,11 +353,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace containing the endpoint to show.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_endpoint_realtime_list
   name: az ml endpoint realtime list
@@ -372,8 +372,8 @@ directCommands:
                                  [--resource-group]
                                  [--subscription-id]
                                  [--tag]
-                                 [-v]
                                  [--workspace-name]
+                                 [-v]
   optionalParameters:
   - name: --compute-type -c
     summary: If provided, will only show services that have the specified compute type. (Options are 'ACI', 'AKS', 'AKSENDPOINT').
@@ -399,11 +399,11 @@ directCommands:
   - name: --tag
     summary: If provided, will filter based on the provided key/value (e.g. key, or key=value). Multiple tags can be specified with multiple --tag options.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace containing the endpoints to list.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_endpoint_realtime_regen_key
   name: az ml endpoint realtime regen-key
@@ -416,8 +416,8 @@ directCommands:
                                       [--resource-group]
                                       [--set-key]
                                       [--subscription-id]
-                                      [-v]
                                       [--workspace-name]
+                                      [-v]
   requiredParameters:
   - isRequired: true
     name: --key -k
@@ -440,11 +440,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace containing the endpoint to show.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_endpoint_realtime_run
   name: az ml endpoint realtime run
@@ -456,8 +456,8 @@ directCommands:
                                 [--path]
                                 [--resource-group]
                                 [--subscription-id]
-                                [-v]
                                 [--workspace-name]
+                                [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -476,11 +476,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace containing the endpoint to run.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_endpoint_realtime_show
   name: az ml endpoint realtime show
@@ -491,8 +491,8 @@ directCommands:
                                  [--path]
                                  [--resource-group]
                                  [--subscription-id]
-                                 [-v]
                                  [--workspace-name]
+                                 [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -508,11 +508,11 @@ directCommands:
   - name: --subscription-id
     summary: Specifies the subscription Id.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace containing the endpoint to show.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_endpoint_realtime_update
   name: az ml endpoint realtime update
@@ -531,8 +531,8 @@ directCommands:
                                    [--resource-group]
                                    [--subscription-id]
                                    [--token-auth-enabled]
-                                   [-v]
                                    [--workspace-name]
+                                   [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -572,11 +572,11 @@ directCommands:
   - name: --token-auth-enabled
     summary: Whether or not to enable token auth for this Endpoint. Defaults to False.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace containing the Endpoint to update.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 - uid: ext_azure-cli-ml_az_ml_endpoint_realtime_update_version
   name: az ml endpoint realtime update-version
@@ -623,8 +623,8 @@ directCommands:
                                            [--subscription-id]
                                            [--timeout-seconds]
                                            [--tp]
-                                           [-v]
                                            [--workspace-name]
+                                           [-v]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -749,11 +749,11 @@ directCommands:
   - name: --tp --traffic-percentile
     summary: The traffic percentile this version takes in Endpoint.
     description: ''
-  - name: -v
-    summary: Verbosity flag.
-    description: ''
   - name: --workspace-name -w
     summary: Name of the workspace containing the service to update.
+    description: ''
+  - name: -v
+    summary: Verbosity flag.
     description: ''
 commands:
 - ext_azure-cli-ml_az_ml_endpoint_realtime_create_version

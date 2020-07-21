@@ -9,8 +9,8 @@ directCommands:
   summary: Create a digital twin on an instance.
   description: --properties can be inline JSON or file path.
   syntax: >-
-    az dt twin create --dtmi
-                      --dt-name
+    az dt twin create --dt-name
+                      --dtmi
                       --twin-id
                       [--properties]
                       [--resource-group]
@@ -30,12 +30,12 @@ directCommands:
       }'
   requiredParameters:
   - isRequired: true
-    name: --dtmi --model-id -m
-    summary: 'Digital Twins model Id. Example: dtmi:example:Room;2.'
-    description: ''
-  - isRequired: true
     name: --dt-name --dtn -n
     summary: Digital Twins instance name.
+    description: ''
+  - isRequired: true
+    name: --dtmi --model-id -m
+    summary: 'Digital Twins model Id. Example: dtmi:example:Room;2.'
     description: ''
   - isRequired: true
     name: --twin-id -t

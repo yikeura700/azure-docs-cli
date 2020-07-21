@@ -88,17 +88,17 @@ directCommands:
                   [--min-count]
                   [--network-plugin {azure, kubenet}]
                   [--network-policy]
+                  [--no-ssh-key]
+                  [--no-wait]
                   [--node-count]
                   [--node-osdisk-diskencryptionset-id]
                   [--node-osdisk-size]
-                  [--nodepool-labels]
-                  [--nodepool-name]
-                  [--nodepool-tags]
                   [--node-resource-group]
                   [--node-vm-size]
                   [--node-zones {1, 2, 3}]
-                  [--no-ssh-key]
-                  [--no-wait]
+                  [--nodepool-labels]
+                  [--nodepool-name]
+                  [--nodepool-tags]
                   [--outbound-type {loadBalancer, userDefinedRouting}]
                   [--pod-cidr]
                   [--ppg]
@@ -296,6 +296,12 @@ directCommands:
       Specify "azure" for Azure network policy manager and "calico" for calico network policy controller.
 
       Defaults to "" (network policy disabled).
+  - name: --no-ssh-key -x
+    summary: Do not use or create a local SSH key.
+    description: To access nodes after creating a cluster with this option, use the Azure Portal.
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
   - name: --node-count -c
     defaultValue: "3"
     summary: Number of nodes in the Kubernetes node pool. It is required when --enable-cluster-autoscaler specified. After creating a cluster, you can change the size of its node pool with `az aks scale`.
@@ -305,16 +311,6 @@ directCommands:
     description: ''
   - name: --node-osdisk-size
     summary: Size in GB of the OS disk for each node in the node pool. Minimum 30 GB.
-    description: ''
-  - name: --nodepool-labels
-    summary: 'Space-separated labels: key[=value] [key[=value] ...]. You can not change the node labels through CLI after creation. See <a href="https://aka.ms/node-labels">https://aka.ms/node-labels</a> for syntax of labels.'
-    description: ''
-  - name: --nodepool-name
-    defaultValue: nodepool1
-    summary: Node pool name, upto 12 alphanumeric characters.
-    description: ''
-  - name: --nodepool-tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
   - name: --node-resource-group
     summary: The node resource group is the resource group where all customer's resources will be created in, such as virtual machines.
@@ -327,11 +323,15 @@ directCommands:
     parameterValueGroup: 1, 2, 3
     summary: (--node-zones will be deprecated, use --zones) Space-separated list of availability zones where agent nodes will be placed.
     description: ''
-  - name: --no-ssh-key -x
-    summary: Do not use or create a local SSH key.
-    description: To access nodes after creating a cluster with this option, use the Azure Portal.
-  - name: --no-wait
-    summary: Do not wait for the long-running operation to finish.
+  - name: --nodepool-labels
+    summary: 'Space-separated labels: key[=value] [key[=value] ...]. You can not change the node labels through CLI after creation. See <a href="https://aka.ms/node-labels">https://aka.ms/node-labels</a> for syntax of labels.'
+    description: ''
+  - name: --nodepool-name
+    defaultValue: nodepool1
+    summary: Node pool name, upto 12 alphanumeric characters.
+    description: ''
+  - name: --nodepool-tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
   - name: --outbound-type
     parameterValueGroup: loadBalancer, userDefinedRouting
@@ -661,8 +661,8 @@ directCommands:
     az aks scale --name
                  --node-count
                  --resource-group
-                 [--nodepool-name]
                  [--no-wait]
+                 [--nodepool-name]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -677,11 +677,11 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   optionalParameters:
-  - name: --nodepool-name
-    summary: Node pool name, upto 12 alphanumeric characters.
-    description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
+    description: ''
+  - name: --nodepool-name
+    summary: Node pool name, upto 12 alphanumeric characters.
     description: ''
 - uid: ext_aks-preview_az_aks_show
   name: az aks show
@@ -837,8 +837,8 @@ directCommands:
                    --resource-group
                    [--control-plane-only]
                    [--kubernetes-version]
-                   [--node-image-only]
                    [--no-wait]
+                   [--node-image-only]
                    [--yes]
   requiredParameters:
   - isRequired: true
@@ -857,11 +857,11 @@ directCommands:
     summary: Version of Kubernetes to upgrade the cluster to, such as "1.11.12".
     description: ''
     valueFrom: '`az aks get-upgrades`'
-  - name: --node-image-only
-    summary: Only upgrade node image for agent pools.
-    description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
+    description: ''
+  - name: --node-image-only
+    summary: Only upgrade node image for agent pools.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.

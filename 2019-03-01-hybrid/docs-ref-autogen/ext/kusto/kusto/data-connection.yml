@@ -10,8 +10,8 @@ directCommands:
   description: ''
   syntax: >-
     az kusto data-connection delete --cluster-name
-                                    --database-name
                                     --data-connection-name
+                                    --database-name
                                     --resource-group
                                     [--no-wait]
   examples:
@@ -23,12 +23,12 @@ directCommands:
     summary: The name of the Kusto cluster.
     description: ''
   - isRequired: true
-    name: --database-name
-    summary: The name of the database in the Kusto cluster.
-    description: ''
-  - isRequired: true
     name: --data-connection-name
     summary: The name of the data connection.
+    description: ''
+  - isRequired: true
+    name: --database-name
+    summary: The name of the database in the Kusto cluster.
     description: ''
   - isRequired: true
     name: --resource-group -g
@@ -68,8 +68,8 @@ directCommands:
   description: ''
   syntax: >-
     az kusto data-connection show --cluster-name
-                                  --database-name
                                   --data-connection-name
+                                  --database-name
                                   --resource-group
   examples:
   - summary: KustoDataConnectionsGet
@@ -80,12 +80,12 @@ directCommands:
     summary: The name of the Kusto cluster.
     description: ''
   - isRequired: true
-    name: --database-name
-    summary: The name of the database in the Kusto cluster.
-    description: ''
-  - isRequired: true
     name: --data-connection-name
     summary: The name of the data connection.
+    description: ''
+  - isRequired: true
+    name: --database-name
+    summary: The name of the database in the Kusto cluster.
     description: ''
   - isRequired: true
     name: --resource-group -g
@@ -97,8 +97,8 @@ directCommands:
   description: If an operation on a cluster was interrupted or was started with `--no-wait`, use this command to wait for it to complete.
   syntax: >-
     az kusto data-connection wait --cluster-name
-                                  --database-name
                                   --data-connection-name
+                                  --database-name
                                   --resource-group
                                   [--created]
                                   [--custom]
@@ -113,12 +113,12 @@ directCommands:
     summary: The name of the Kusto cluster.
     description: ''
   - isRequired: true
-    name: --database-name
-    summary: The name of the database in the Kusto cluster.
-    description: ''
-  - isRequired: true
     name: --data-connection-name
     summary: The name of the data connection.
+    description: ''
+  - isRequired: true
+    name: --database-name
+    summary: The name of the database in the Kusto cluster.
     description: ''
   - isRequired: true
     name: --resource-group -g

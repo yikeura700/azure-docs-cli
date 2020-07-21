@@ -38,20 +38,20 @@ directCommands:
   summary: Delete a model. A model can only be deleted if no other models reference it.
   description: ''
   syntax: >-
-    az dt model delete --dtmi
-                       --dt-name
+    az dt model delete --dt-name
+                       --dtmi
                        [--resource-group]
   examples:
   - summary: Delete a target model.
     syntax: az dt model delete -n {instance_name} --dtmi "dtmi:example:Floor;1"
   requiredParameters:
   - isRequired: true
-    name: --dtmi --model-id -m
-    summary: 'Digital Twins model Id. Example: dtmi:example:Room;2.'
-    description: ''
-  - isRequired: true
     name: --dt-name --dtn -n
     summary: Digital Twins instance name.
+    description: ''
+  - isRequired: true
+    name: --dtmi --model-id -m
+    summary: 'Digital Twins model Id. Example: dtmi:example:Room;2.'
     description: ''
   optionalParameters:
   - name: --resource-group -g
@@ -94,8 +94,8 @@ directCommands:
   summary: Retrieve a target model or model definition.
   description: ''
   syntax: >-
-    az dt model show --dtmi
-                     --dt-name
+    az dt model show --dt-name
+                     --dtmi
                      [--def {false, true}]
                      [--resource-group]
   examples:
@@ -105,12 +105,12 @@ directCommands:
     syntax: az dt model show -n {instance_name} --dtmi "dtmi:example:Floor;1" --definition
   requiredParameters:
   - isRequired: true
-    name: --dtmi --model-id -m
-    summary: 'Digital Twins model Id. Example: dtmi:example:Room;2.'
-    description: ''
-  - isRequired: true
     name: --dt-name --dtn -n
     summary: Digital Twins instance name.
+    description: ''
+  - isRequired: true
+    name: --dtmi --model-id -m
+    summary: 'Digital Twins model Id. Example: dtmi:example:Room;2.'
     description: ''
   optionalParameters:
   - name: --def --definition
@@ -125,8 +125,8 @@ directCommands:
   summary: Updates the metadata for a model. Currently a model can only be decommisioned.
   description: ''
   syntax: >-
-    az dt model update --dtmi
-                       --dt-name
+    az dt model update --dt-name
+                       --dtmi
                        [--decommission {false, true}]
                        [--resource-group]
   examples:
@@ -134,12 +134,12 @@ directCommands:
     syntax: az dt model update -n {instance_name} --dtmi "dtmi:example:Floor;1" --decommission
   requiredParameters:
   - isRequired: true
-    name: --dtmi --model-id -m
-    summary: 'Digital Twins model Id. Example: dtmi:example:Room;2.'
-    description: ''
-  - isRequired: true
     name: --dt-name --dtn -n
     summary: Digital Twins instance name.
+    description: ''
+  - isRequired: true
+    name: --dtmi --model-id -m
+    summary: 'Digital Twins model Id. Example: dtmi:example:Room;2.'
     description: ''
   optionalParameters:
   - name: --decommission

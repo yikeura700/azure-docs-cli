@@ -10,7 +10,6 @@ directCommands:
   description: ''
   syntax: >-
     az acr helm delete --name
-                       [<CHART>]
                        [--password]
                        [--prov]
                        [--resource-group]
@@ -19,6 +18,7 @@ directCommands:
                        [--username]
                        [--version]
                        [--yes]
+                       [<CHART>]
   examples:
   - summary: Delete all versions of a helm chart in an Azure Container Registry
     syntax: az acr helm delete -n MyRegistry mychart
@@ -30,9 +30,6 @@ directCommands:
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   optionalParameters:
-  - name: <CHART>
-    summary: The helm chart name.
-    description: ''
   - name: --password -p
     summary: The password used to log into a container registry.
     description: ''
@@ -56,6 +53,9 @@ directCommands:
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
+    description: ''
+  - name: <CHART>
+    summary: The helm chart name.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 - uid: az_acr_helm_install_cli
@@ -134,13 +134,13 @@ directCommands:
   description: ''
   syntax: >-
     az acr helm push --name
-                     [<CHART_PACKAGE>]
                      [--force]
                      [--password]
                      [--resource-group]
                      [--subscription]
                      [--suffix]
                      [--username]
+                     [<CHART_PACKAGE>]
   examples:
   - summary: Push a chart package to an Azure Container Registry
     syntax: az acr helm push -n MyRegistry mychart-0.3.2.tgz
@@ -152,9 +152,6 @@ directCommands:
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   optionalParameters:
-  - name: <CHART_PACKAGE>
-    summary: The helm chart package.
-    description: ''
   - name: --force
     summary: Overwrite the existing chart package.
     description: ''
@@ -173,6 +170,9 @@ directCommands:
   - name: --username -u
     summary: The username used to log into a container registry.
     description: ''
+  - name: <CHART_PACKAGE>
+    summary: The helm chart package.
+    description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 - uid: az_acr_helm_show
   name: az acr helm show
@@ -180,13 +180,13 @@ directCommands:
   description: ''
   syntax: >-
     az acr helm show --name
-                     [<CHART>]
                      [--password]
                      [--resource-group]
                      [--subscription]
                      [--suffix]
                      [--username]
                      [--version]
+                     [<CHART>]
   examples:
   - summary: Show all versions of a helm chart in an Azure Container Registry
     syntax: az acr helm show -n MyRegistry mychart
@@ -198,9 +198,6 @@ directCommands:
     summary: The name of the container registry. You can configure the default registry name using `az configure --defaults acr=<registry name>`.
     description: ''
   optionalParameters:
-  - name: <CHART>
-    summary: The helm chart name.
-    description: ''
   - name: --password -p
     summary: The password used to log into a container registry.
     description: ''
@@ -218,6 +215,9 @@ directCommands:
     description: ''
   - name: --version
     summary: The helm chart version.
+    description: ''
+  - name: <CHART>
+    summary: The helm chart name.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 commands:

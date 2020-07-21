@@ -24,8 +24,8 @@ directCommands:
                                                          [--http-method {Get, Post}]
                                                          [--http-path]
                                                          [--http-port]
-                                                         [--https-prefer {false, true}]
                                                          [--http-valid-status-codes]
+                                                         [--https-prefer {false, true}]
                                                          [--icmp-disable-trace-route {false, true}]
                                                          [--preferred-ip-version {IPv4, IPv6}]
                                                          [--protocol {Http, Icmp, Tcp}]
@@ -97,12 +97,12 @@ directCommands:
   - name: --http-port
     summary: The port to connect to.
     description: ''
+  - name: --http-valid-status-codes
+    summary: Space-separated list of HTTP status codes to consider successful. For instance, "2xx 301-304 418".
+    description: ''
   - name: --https-prefer
     parameterValueGroup: false, true
     summary: Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
-    description: ''
-  - name: --http-valid-status-codes
-    summary: Space-separated list of HTTP status codes to consider successful. For instance, "2xx 301-304 418".
     description: ''
   - name: --icmp-disable-trace-route
     parameterValueGroup: false, true

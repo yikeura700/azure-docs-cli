@@ -59,8 +59,8 @@ directCommands:
                                [--enable-data-integrity-validation]
                                [--enable-query-analysis-validation]
                                [--enable-schema-validation]
-                               [--validated-task-name]
                                [--validate-only]
+                               [--validated-task-name]
   examples:
   - summary: Create and start a SQL Task which performs no validation checks.
     syntax: "az dms project task create --database-options-json C:\\CliFiles\\databaseOptions.json -n mytask --project-name myproject -g myresourcegroup --service-name mydms --source-connection-json '{'dataSource': 'myserver', 'authentication': 'SqlAuthentication', 'encryptConnection': 'true', 'trustServerCertificate': 'true'}' --target-connection-json C:\\CliFiles\\targetConnection.json --task-type offlinemigration"
@@ -286,11 +286,11 @@ directCommands:
   - name: --enable-schema-validation
     summary: (For SQL only) Whether to compare the schema information between source and target.
     description: ''
-  - name: --validated-task-name
-    summary: (For MongoDB to Cosmos DB only) When running a migration it is neceaary to pass in the name of a previously run 'validate only' task.
-    description: ''
   - name: --validate-only
     summary: (For MongoDB to Cosmos DB only) Whether to run validation only and NOT run migration. It is mandatory to run a 'validate only' task before attempting an actual migration. Once the validation is complete, pass the name of this 'validate only' task to a new task's 'validated task name' argument.
+    description: ''
+  - name: --validated-task-name
+    summary: (For MongoDB to Cosmos DB only) When running a migration it is neceaary to pass in the name of a previously run 'validate only' task.
     description: ''
 - uid: ext_dms-preview_az_dms_project_task_cutover
   name: az dms project task cutover
