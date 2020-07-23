@@ -55,7 +55,7 @@ directCommands:
     syntax: az iot central app monitor-events --app-id {app_id} --output json
   requiredParameters:
   - isRequired: true
-    name: --app-id
+    name: --app-id -n
     summary: Target App.
     description: ''
   optionalParameters:
@@ -91,6 +91,36 @@ directCommands:
   - name: --yes -y
     parameterValueGroup: false, true
     summary: 'Skip user prompts. Indicates acceptance of dependency installation (if required). Used primarily for automation scenarios. Default: false.'
+    description: ''
+- uid: ext_azure-iot_az_iot_central_app_monitor_properties
+  name: az iot central app monitor-properties
+  summary: Monitor desired and reported properties sent to/from the IoT Hub for an IoT Central app.
+  description: >-
+    Polls device-twin from central and compares it to the last device-twin
+
+    Parses out properties from device-twin, and detects if changes were made
+
+    Prints subset of properties that were changed within the polling interval.
+  syntax: >-
+    az iot central app monitor-properties --app-id
+                                          --device-id
+                                          [--central-api-uri]
+  examples:
+  - summary: Basic usage
+    syntax: az iot central app monitor-properties --app-id {app_id} -d {device_id}
+  requiredParameters:
+  - isRequired: true
+    name: --app-id -n
+    summary: Target App.
+    description: ''
+  - isRequired: true
+    name: --device-id -d
+    summary: Target Device.
+    description: ''
+  optionalParameters:
+  - name: --central-api-uri --central-dns-suffix
+    defaultValue: azureiotcentral.com
+    summary: Central dns suffix. This enables running cli commands against non public/prod environments.
     description: ''
 - uid: ext_azure-iot_az_iot_central_app_validate_messages
   name: az iot central app validate-messages
@@ -133,7 +163,7 @@ directCommands:
     syntax: az iot central app validate-messages --app-id {app_id} -d {device_id} --cg {consumer_group_name}
   requiredParameters:
   - isRequired: true
-    name: --app-id
+    name: --app-id -n
     summary: Target App.
     description: ''
   optionalParameters:
@@ -188,6 +218,43 @@ directCommands:
     parameterValueGroup: false, true
     summary: 'Skip user prompts. Indicates acceptance of dependency installation (if required). Used primarily for automation scenarios. Default: false.'
     description: ''
+- uid: ext_azure-iot_az_iot_central_app_validate_properties
+  name: az iot central app validate-properties
+  summary: Validate reported properties sent to IoT Central app.
+  description: >-
+    Performs validations on reported property updates:
+
+    1) Warning - Properties sent by device that are not modeled in central.
+
+    2) Warning - Properties with same name declared in multiple interfaces
+       should have interface name included as part of the property update.
+  syntax: >-
+    az iot central app validate-properties --app-id
+                                           --device-id
+                                           [--central-api-uri]
+                                           [--minimum-severity {error, info, warning}]
+  examples:
+  - summary: Basic usage
+    syntax: az iot central app validate-properties --app-id {app_id} -d {device_id}
+  requiredParameters:
+  - isRequired: true
+    name: --app-id -n
+    summary: Target App.
+    description: ''
+  - isRequired: true
+    name: --device-id -d
+    summary: Target Device.
+    description: ''
+  optionalParameters:
+  - name: --central-api-uri --central-dns-suffix
+    defaultValue: azureiotcentral.com
+    summary: Central dns suffix. This enables running cli commands against non public/prod environments.
+    description: ''
+  - name: --minimum-severity
+    defaultValue: warning
+    parameterValueGroup: error, info, warning
+    summary: Minimum severity of issue required for reporting.
+    description: ''
 commands:
 - ext_azure-iot_az_iot_central_app_device
 - ext_azure-iot_az_iot_central_app_device_create
@@ -195,7 +262,10 @@ commands:
 - ext_azure-iot_az_iot_central_app_device_list
 - ext_azure-iot_az_iot_central_app_device_registration_info
 - ext_azure-iot_az_iot_central_app_device_registration_summary
+- ext_azure-iot_az_iot_central_app_device_run_command
 - ext_azure-iot_az_iot_central_app_device_show
+- ext_azure-iot_az_iot_central_app_device_show_command_history
+- ext_azure-iot_az_iot_central_app_device_show_credentials
 - ext_azure-iot_az_iot_central_app_device_template
 - ext_azure-iot_az_iot_central_app_device_template_create
 - ext_azure-iot_az_iot_central_app_device_template_delete
@@ -205,7 +275,9 @@ commands:
 - ext_azure-iot_az_iot_central_app_device_twin
 - ext_azure-iot_az_iot_central_app_device_twin_show
 - ext_azure-iot_az_iot_central_app_monitor_events
+- ext_azure-iot_az_iot_central_app_monitor_properties
 - ext_azure-iot_az_iot_central_app_validate_messages
+- ext_azure-iot_az_iot_central_app_validate_properties
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

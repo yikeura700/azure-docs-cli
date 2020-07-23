@@ -27,7 +27,7 @@ directCommands:
                    [--disk-iops-read-write]
                    [--disk-mbps-read-only]
                    [--disk-mbps-read-write]
-                   [--encryption-type {EncryptionAtRestWithCustomerKey, EncryptionAtRestWithPlatformKey}]
+                   [--encryption-type]
                    [--for-upload {false, true}]
                    [--gallery-image-reference]
                    [--gallery-image-reference-lun]
@@ -89,7 +89,6 @@ directCommands:
     summary: The bandwidth allowed for this disk. Only settable for UltraSSD disks. MBps means millions of bytes per second with ISO notation of powers of 10.
     description: ''
   - name: --encryption-type
-    parameterValueGroup: EncryptionAtRestWithCustomerKey, EncryptionAtRestWithPlatformKey
     summary: 'Encryption type. EncryptionAtRestWithPlatformKey: Disk is encrypted with XStore managed key at rest. It is the default encryption type. EncryptionAtRestWithCustomerKey: Disk is encrypted with Customer managed key at rest.'
     description: ''
   - name: --for-upload
@@ -295,7 +294,7 @@ directCommands:
                    [--disk-encryption-set]
                    [--disk-iops-read-write]
                    [--disk-mbps-read-write]
-                   [--encryption-type {EncryptionAtRestWithCustomerKey, EncryptionAtRestWithPlatformKey}]
+                   [--encryption-type]
                    [--force-string]
                    [--ids]
                    [--name]
@@ -323,7 +322,6 @@ directCommands:
     summary: The bandwidth allowed for this disk. Only settable for UltraSSD disks. MBps means millions of bytes per second with ISO notation of powers of 10.
     description: ''
   - name: --encryption-type
-    parameterValueGroup: EncryptionAtRestWithCustomerKey, EncryptionAtRestWithPlatformKey
     summary: 'Encryption type. EncryptionAtRestWithPlatformKey: Disk is encrypted with XStore managed key at rest. It is the default encryption type. EncryptionAtRestWithCustomerKey: Disk is encrypted with Customer managed key at rest.'
     description: ''
   - name: --force-string

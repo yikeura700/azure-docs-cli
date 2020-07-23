@@ -15,7 +15,10 @@ commands:
 - ext_azure-iot_az_iot_central_app_device_list
 - ext_azure-iot_az_iot_central_app_device_registration_info
 - ext_azure-iot_az_iot_central_app_device_registration_summary
+- ext_azure-iot_az_iot_central_app_device_run_command
 - ext_azure-iot_az_iot_central_app_device_show
+- ext_azure-iot_az_iot_central_app_device_show_command_history
+- ext_azure-iot_az_iot_central_app_device_show_credentials
 - ext_azure-iot_az_iot_central_app_device_template
 - ext_azure-iot_az_iot_central_app_device_template_create
 - ext_azure-iot_az_iot_central_app_device_template_delete
@@ -25,7 +28,9 @@ commands:
 - ext_azure-iot_az_iot_central_app_device_twin
 - ext_azure-iot_az_iot_central_app_device_twin_show
 - ext_azure-iot_az_iot_central_app_monitor_events
+- ext_azure-iot_az_iot_central_app_monitor_properties
 - ext_azure-iot_az_iot_central_app_validate_messages
+- ext_azure-iot_az_iot_central_app_validate_properties
 - ext_azure-iot_az_iot_central_device_twin
 - ext_azure-iot_az_iot_central_device_twin_show
 - ext_azure-iot_az_iot_device
@@ -55,13 +60,6 @@ commands:
 - ext_azure-iot_az_iot_dps_registration_delete
 - ext_azure-iot_az_iot_dps_registration_list
 - ext_azure-iot_az_iot_dps_registration_show
-- ext_azure-iot_az_iot_dt
-- ext_azure-iot_az_iot_dt_invoke_command
-- ext_azure-iot_az_iot_dt_list_commands
-- ext_azure-iot_az_iot_dt_list_interfaces
-- ext_azure-iot_az_iot_dt_list_properties
-- ext_azure-iot_az_iot_dt_monitor_events
-- ext_azure-iot_az_iot_dt_update_property
 - ext_azure-iot_az_iot_edge
 - ext_azure-iot_az_iot_edge_deployment
 - ext_azure-iot_az_iot_edge_deployment_create
@@ -123,20 +121,22 @@ commands:
 - ext_azure-iot_az_iot_hub_monitor_feedback
 - ext_azure-iot_az_iot_hub_query
 - ext_azure-iot_az_iot_pnp
-- ext_azure-iot_az_iot_pnp_capability_model
-- ext_azure-iot_az_iot_pnp_capability_model_create
-- ext_azure-iot_az_iot_pnp_capability_model_delete
-- ext_azure-iot_az_iot_pnp_capability_model_list
-- ext_azure-iot_az_iot_pnp_capability_model_publish
-- ext_azure-iot_az_iot_pnp_capability_model_show
-- ext_azure-iot_az_iot_pnp_capability_model_update
-- ext_azure-iot_az_iot_pnp_interface
-- ext_azure-iot_az_iot_pnp_interface_create
-- ext_azure-iot_az_iot_pnp_interface_delete
-- ext_azure-iot_az_iot_pnp_interface_list
-- ext_azure-iot_az_iot_pnp_interface_publish
-- ext_azure-iot_az_iot_pnp_interface_show
-- ext_azure-iot_az_iot_pnp_interface_update
+- ext_azure-iot_az_iot_pnp_model
+- ext_azure-iot_az_iot_pnp_model_create
+- ext_azure-iot_az_iot_pnp_model_list
+- ext_azure-iot_az_iot_pnp_model_publish
+- ext_azure-iot_az_iot_pnp_model_show
+- ext_azure-iot_az_iot_pnp_repo
+- ext_azure-iot_az_iot_pnp_repo_create
+- ext_azure-iot_az_iot_pnp_repo_list
+- ext_azure-iot_az_iot_pnp_role_assignment
+- ext_azure-iot_az_iot_pnp_role_assignment_create
+- ext_azure-iot_az_iot_pnp_role_assignment_delete
+- ext_azure-iot_az_iot_pnp_role_assignment_list
+- ext_azure-iot_az_iot_pnp_twin
+- ext_azure-iot_az_iot_pnp_twin_invoke_command
+- ext_azure-iot_az_iot_pnp_twin_show
+- ext_azure-iot_az_iot_pnp_twin_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

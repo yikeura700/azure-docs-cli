@@ -29,10 +29,12 @@ directCommands:
     az storage account create --name
                               --resource-group
                               [--access-tier {Cool, Hot}]
+                              [--allow-blob-public-access]
                               [--custom-domain]
                               [--https-only {false, true}]
                               [--kind {BlobStorage, Storage}]
                               [--location]
+                              [--min-tls-version]
                               [--require-infrastructure-encryption]
                               [--sku {Premium_LRS, Standard_GRS, Standard_LRS, Standard_RAGRS, Standard_ZRS}]
                               [--subscription]
@@ -56,6 +58,9 @@ directCommands:
     parameterValueGroup: Cool, Hot
     summary: The access tier used for billing StandardBlob accounts. Cannot be set for StandardLRS, StandardGRS, StandardRAGRS, or PremiumLRS account types. It is required for StandardBlob accounts during creation.
     description: ''
+  - name: --allow-blob-public-access
+    summary: ''
+    description: ''
   - name: --custom-domain
     summary: User domain assigned to the storage account. Name is the CNAME source.
     description: ''
@@ -70,6 +75,9 @@ directCommands:
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
+    description: ''
+  - name: --min-tls-version
+    summary: ''
     description: ''
   - name: --require-infrastructure-encryption
     summary: ''
@@ -342,7 +350,7 @@ globalParameters:
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
-  updated_at: 6/4/2020 1:53:34 PM
-  ms.date: 06/04/2020
+  gitcommit: https://github.com/Azure/azure-cli/blob/9a8302043cdd0c6e6f3f5f51b64b296bda7708d5/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  updated_at: 7/16/2020 5:46:58 AM
+  ms.date: 07/16/2020
   description: Manage storage accounts.

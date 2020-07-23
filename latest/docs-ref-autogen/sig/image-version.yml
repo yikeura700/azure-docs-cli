@@ -134,7 +134,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --gallery-image-version -e
-    summary: The name of the gallery Image Version to be deleted.
+    summary: Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. `<MajorVersion>.<MinorVersion>.<Patch>`.
     description: ''
   - isRequired: true
     name: --gallery-name -r
@@ -192,7 +192,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --gallery-image-version -e
-    summary: The name of the gallery Image Version to be retrieved.
+    summary: Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. `<MajorVersion>.<MinorVersion>.<Patch>`.
     description: ''
   - isRequired: true
     name: --gallery-name -r
@@ -231,6 +231,8 @@ directCommands:
     syntax: az sig image-version update -g MyResourceGroup --gallery-name MyGallery --gallery-image-definition MyImage --gallery-image-version 1.0.0 --target-regions westcentralus=2 eastus2
   - summary: Replicate to one more region
     syntax: az sig image-version update -g MyResourceGroup --gallery-name MyGallery --gallery-image-definition MyImage --gallery-image-version 1.0.0 --add publishingProfile.targetRegions name=westcentralus
+  - summary: Update --exclude-from-latest. If it is set to true, people deploying VMs with version omitted will not use this version.
+    syntax: az sig image-version update -g MyResourceGroup --gallery-name MyGallery --gallery-image-definition MyImage --gallery-image-version 1.0.0 --set publishingProfile.excludeFromLatest=true
   requiredParameters:
   - isRequired: true
     name: --gallery-image-definition -i
@@ -238,7 +240,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --gallery-image-version -e
-    summary: 'The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>.'
+    summary: Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. `<MajorVersion>.<MinorVersion>.<Patch>`.
     description: ''
   - isRequired: true
     name: --gallery-name -r
@@ -301,7 +303,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --gallery-image-version -e
-    summary: The name of the gallery Image Version to be retrieved.
+    summary: Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. `<MajorVersion>.<MinorVersion>.<Patch>`.
     description: ''
   - isRequired: true
     name: --gallery-name -r

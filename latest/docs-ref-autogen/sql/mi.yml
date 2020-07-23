@@ -27,13 +27,16 @@ directCommands:
                      [--public-data-endpoint-enabled {false, true}]
                      [--storage]
                      [--subscription]
+                     [--tags]
                      [--timezone-id]
                      [--vnet-name]
   examples:
-  - summary: Create a managed instance with specified parameters and with identity
-    syntax: az sql mi create -g mygroup -n myinstance -l mylocation -i -u myusername -p mypassword --license-type LicenseIncluded --subnet /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Network/virtualNetworks/{VNETName}/subnets/{SubnetName} --capacity 8 --storage 32GB --edition GeneralPurpose --family Gen4
   - summary: Create a managed instance with minimal set of parameters
     syntax: az sql mi create -g mygroup -n myinstance -l mylocation -i -u myusername -p mypassword --subnet /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Network/virtualNetworks/{VNETName}/subnets/{SubnetName}
+  - summary: Create a managed instance with specified parameters and with identity
+    syntax: az sql mi create -g mygroup -n myinstance -l mylocation -i -u myusername -p mypassword --license-type LicenseIncluded --subnet /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Network/virtualNetworks/{VNETName}/subnets/{SubnetName} --capacity 8 --storage 32GB --edition GeneralPurpose --family Gen5
+  - summary: Create managed instance with specified parameters and tags
+    syntax: az sql mi create -g mygroup -n myinstance -l mylocation -i -u myusername -p mypassword --license-type LicenseIncluded --subnet /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Network/virtualNetworks/{VNETName}/subnets/{SubnetName} --capacity 8 --storage 32GB --edition GeneralPurpose --family Gen5 --tags tagName1=tagValue1 tagName2=tagValue2
   requiredParameters:
   - isRequired: true
     name: --admin-password -p
@@ -99,6 +102,9 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
   - name: --timezone-id
     summary: The time zone id for the instance to set. A list of time zone ids is exposed through the sys.time_zone_info (Transact-SQL) view.
     description: ''
@@ -138,6 +144,42 @@ directCommands:
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
+- uid: az_sql_mi_failover
+  name: az sql mi failover
+  summary: Failover a managed instance.
+  description: ''
+  syntax: >-
+    az sql mi failover [--ids]
+                       [--name]
+                       [--no-wait]
+                       [--replica-type]
+                       [--resource-group]
+                       [--subscription]
+  examples:
+  - summary: Failover a managed instance primary replica
+    syntax: az sql mi failover -g mygroup -n myinstance
+  - summary: Failover a managed instance readable secodary replica
+    syntax: az sql mi failover -g mygroup -n myinstance --replica-type ReadableSecondary
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: The managed instance name.
+    description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
+  - name: --replica-type
+    summary: The type of replica to be failed over.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_mi_list
@@ -210,11 +252,16 @@ directCommands:
                      [--set]
                      [--storage]
                      [--subscription]
+                     [--tags]
   examples:
   - summary: Updates a mi with specified parameters and with identity
     syntax: az sql mi update -g mygroup -n myinstance -i -p mypassword --license-type mylicensetype --capacity vcorecapacity --storage storagesize
   - summary: Update mi edition and hardware family
     syntax: az sql mi update -g mygroup -n myinstance --tier GeneralPurpose --family Gen5
+  - summary: Add or update a tag.
+    syntax: az sql mi update -g mygroup -n myinstance --set tags.tagName=tagValue
+  - summary: Remove a tag.
+    syntax: az sql mi update -g mygroup -n myinstance --remove tags.tagName
   - summary: Update a managed instance. (autogenerated)
     syntax: az sql mi update --name myinstance --proxy-override Default --resource-group mygroup --subscription MySubscription
   - summary: Update a managed instance. (autogenerated)
@@ -281,6 +328,9 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
+  - name: --tags
+    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 commands:
 - az_sql_mi_ad_admin
@@ -290,6 +340,7 @@ commands:
 - az_sql_mi_ad_admin_update
 - az_sql_mi_create
 - az_sql_mi_delete
+- az_sql_mi_failover
 - az_sql_mi_key
 - az_sql_mi_key_create
 - az_sql_mi_key_delete
@@ -323,7 +374,7 @@ globalParameters:
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
-  gitcommit: https://github.com/Azure/azure-cli/blob/eb12724c32418096f258bcdb1ca1c0eb69e25de3/src/azure-cli/azure/cli/command_modules/sql/_help.py
-  updated_at: 6/19/2020 1:04:35 AM
-  ms.date: 06/19/2020
+  gitcommit: https://github.com/Azure/azure-cli/blob/6a87eb946e924c23ab348fd50d649d12d707be20/src/azure-cli/azure/cli/command_modules/sql/_help.py
+  updated_at: 7/9/2020 5:44:39 AM
+  ms.date: 07/09/2020
   description: Manage SQL managed instances.

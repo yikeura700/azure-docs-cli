@@ -21,7 +21,7 @@ directCommands:
     syntax: az iot central app device-template create --app-id {appid} --content {json} --device-template-id {devicetemplateid}
   requiredParameters:
   - isRequired: true
-    name: --app-id
+    name: --app-id -n
     summary: Target App.
     description: ''
   - isRequired: true
@@ -54,7 +54,7 @@ directCommands:
     syntax: az iot central app device-template delete --app-id {appid} --device-template-id {devicetemplateid}
   requiredParameters:
   - isRequired: true
-    name: --app-id
+    name: --app-id -n
     summary: Target App.
     description: ''
   - isRequired: true
@@ -82,7 +82,7 @@ directCommands:
     syntax: az iot central app device-template list --app-id {appid}
   requiredParameters:
   - isRequired: true
-    name: --app-id
+    name: --app-id -n
     summary: Target App.
     description: ''
   optionalParameters:
@@ -106,7 +106,7 @@ directCommands:
     syntax: az iot central app device-template map --app-id {appid}
   requiredParameters:
   - isRequired: true
-    name: --app-id
+    name: --app-id -n
     summary: Target App.
     description: ''
   optionalParameters:
@@ -131,7 +131,7 @@ directCommands:
     syntax: az iot central app device-template show --app-id {appid} --device-template-id {devicetemplateid}
   requiredParameters:
   - isRequired: true
-    name: --app-id
+    name: --app-id -n
     summary: Target App.
     description: ''
   - isRequired: true

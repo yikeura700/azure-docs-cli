@@ -13,8 +13,8 @@ directCommands:
                                                     [--resource-group]
                                                     [--subscription]
   examples:
-  - summary: Show the properties of the storage account 'MyStorageAccount' in resource group 'MyResourceGroup'.
-    syntax: az storage account blob-service-properties show -n MyStorageAccount -g MyResourceGroup
+  - summary: Show the properties of the storage account 'mystorageaccount' in resource group 'MyResourceGroup'.
+    syntax: az storage account blob-service-properties show -n mystorageaccount -g MyResourceGroup
   requiredParameters:
   - isRequired: true
     name: --account-name -n
@@ -47,12 +47,12 @@ directCommands:
                                                       [--set]
                                                       [--subscription]
   examples:
-  - summary: Enable the change feed for the storage account 'MyStorageAccount' in resource group 'MyResourceGroup'.
-    syntax: az storage account blob-service-properties update --enable-change-feed true -n MyStorageAccount -g MyResourceGroup
-  - summary: Enable delete retention policy and set delete retention days to 100 for the storage account 'MyStorageAccount' in resource group 'MyResourceGroup'.
-    syntax: az storage account blob-service-properties update --enable-delete-retention true --delete-retention-days 100 -n MyStorageAccount -g MyResourceGroup
-  - summary: Enable versioning for the storage account 'MyStorageAccount' in resource group 'MyResourceGroup'.
-    syntax: az storage account blob-service-properties update --enable-versioning -n MyStorageAccount -g MyResourceGroup
+  - summary: Enable the change feed for the storage account 'mystorageaccount' in resource group 'MyResourceGroup'.
+    syntax: az storage account blob-service-properties update --enable-change-feed true -n mystorageaccount -g MyResourceGroup
+  - summary: Enable delete retention policy and set delete retention days to 100 for the storage account 'mystorageaccount' in resource group 'MyResourceGroup'.
+    syntax: az storage account blob-service-properties update --enable-delete-retention true --delete-retention-days 100 -n mystorageaccount -g MyResourceGroup
+  - summary: Enable versioning for the storage account 'mystorageaccount' in resource group 'MyResourceGroup'.
+    syntax: az storage account blob-service-properties update --enable-versioning -n mystorageaccount -g MyResourceGroup
   requiredParameters:
   - isRequired: true
     name: --account-name -n
@@ -121,7 +121,7 @@ globalParameters:
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
-  updated_at: 6/4/2020 1:53:34 PM
-  ms.date: 06/04/2020
+  gitcommit: https://github.com/Azure/azure-cli/blob/9a8302043cdd0c6e6f3f5f51b64b296bda7708d5/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  updated_at: 7/16/2020 5:46:58 AM
+  ms.date: 07/16/2020
   description: Manage the properties of a storage account's blob service.

@@ -157,9 +157,7 @@ directCommands:
   summary: Generates a shared access signature for the share.
   description: ''
   syntax: >-
-    az storage share generate-sas --expiry
-                                  --name
-                                  --permissions
+    az storage share generate-sas --name
                                   [--account-key]
                                   [--account-name]
                                   [--cache-control]
@@ -168,8 +166,10 @@ directCommands:
                                   [--content-encoding]
                                   [--content-language]
                                   [--content-type]
+                                  [--expiry]
                                   [--https-only]
                                   [--ip]
+                                  [--permissions]
                                   [--policy-name]
                                   [--start]
                                   [--subscription]
@@ -187,16 +187,8 @@ directCommands:
     syntax: az storage share generate-sas --connection-string $connectionString --expiry 2019-02-01T12:20Z --name MyShare --permissions dlrw
   requiredParameters:
   - isRequired: true
-    name: --expiry
-    summary: Specifies the UTC datetime (Y-m-d'T'H:M'Z') at which the SAS becomes invalid. Do not use if a stored access policy is referenced with --id that specifies this value.
-    description: ''
-  - isRequired: true
     name: --name -n
     summary: The file share name.
-    description: ''
-  - isRequired: true
-    name: --permissions
-    summary: 'The permissions the SAS grants. Allowed values: (d)elete (l)ist (r)ead (w)rite. Do not use if a stored access policy is referenced with --id that specifies this value. Can be combined.'
     description: ''
   optionalParameters:
   - name: --account-key
@@ -223,11 +215,17 @@ directCommands:
   - name: --content-type
     summary: Response header value for Content-Type when resource is accessed using this shared access signature.
     description: ''
+  - name: --expiry
+    summary: Specifies the UTC datetime (Y-m-d'T'H:M'Z') at which the SAS becomes invalid. Do not use if a stored access policy is referenced with --id that specifies this value.
+    description: ''
   - name: --https-only
     summary: Only permit requests made with the HTTPS protocol. If omitted, requests from both the HTTP and HTTPS protocol are permitted.
     description: ''
   - name: --ip
     summary: Specifies the IP address or range of IP addresses from which to accept requests. Supports only IPv4 style addresses.
+    description: ''
+  - name: --permissions
+    summary: 'The permissions the SAS grants. Allowed values: (d)elete (l)ist (r)ead (w)rite. Do not use if a stored access policy is referenced with --id that specifies this value. Can be combined.'
     description: ''
   - name: --policy-name
     summary: The name of a stored access policy within the share's ACL.
@@ -540,7 +538,7 @@ globalParameters:
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
-  updated_at: 6/4/2020 1:53:34 PM
-  ms.date: 06/04/2020
+  gitcommit: https://github.com/Azure/azure-cli/blob/9a8302043cdd0c6e6f3f5f51b64b296bda7708d5/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  updated_at: 7/16/2020 5:46:58 AM
+  ms.date: 07/16/2020
   description: Manage file shares.

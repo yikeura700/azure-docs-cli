@@ -1,7 +1,7 @@
 ### YamlMime:AzureCLIGroup
 uid: az_eventgrid
 name: az eventgrid
-summary: Manage Azure Event Grid topics, event subscriptions, domains and domain topics.
+summary: Manage Azure Event Grid topics, domains, domain topics, system topics partner topics, event subscriptions, system topic event subscriptions and partner topic event subscriptions.
 description: ''
 commands:
 - az_eventgrid_domain
@@ -24,6 +24,51 @@ commands:
 - az_eventgrid_event_subscription_list
 - az_eventgrid_event_subscription_show
 - az_eventgrid_event_subscription_update
+- az_eventgrid_extension_topic
+- az_eventgrid_extension_topic_show
+- az_eventgrid_partner
+- az_eventgrid_partner_namespace
+- az_eventgrid_partner_namespace_create
+- az_eventgrid_partner_namespace_delete
+- az_eventgrid_partner_namespace_event_channel
+- az_eventgrid_partner_namespace_event_channel_create
+- az_eventgrid_partner_namespace_event_channel_delete
+- az_eventgrid_partner_namespace_event_channel_list
+- az_eventgrid_partner_namespace_event_channel_show
+- az_eventgrid_partner_namespace_key
+- az_eventgrid_partner_namespace_key_list
+- az_eventgrid_partner_namespace_key_regenerate
+- az_eventgrid_partner_namespace_list
+- az_eventgrid_partner_namespace_show
+- az_eventgrid_partner_registration
+- az_eventgrid_partner_registration_create
+- az_eventgrid_partner_registration_delete
+- az_eventgrid_partner_registration_list
+- az_eventgrid_partner_registration_show
+- az_eventgrid_partner_topic
+- az_eventgrid_partner_topic_activate
+- az_eventgrid_partner_topic_deactivate
+- az_eventgrid_partner_topic_delete
+- az_eventgrid_partner_topic_event_subscription
+- az_eventgrid_partner_topic_event_subscription_create
+- az_eventgrid_partner_topic_event_subscription_delete
+- az_eventgrid_partner_topic_event_subscription_list
+- az_eventgrid_partner_topic_event_subscription_show
+- az_eventgrid_partner_topic_event_subscription_update
+- az_eventgrid_partner_topic_list
+- az_eventgrid_partner_topic_show
+- az_eventgrid_system_topic
+- az_eventgrid_system_topic_create
+- az_eventgrid_system_topic_delete
+- az_eventgrid_system_topic_event_subscription
+- az_eventgrid_system_topic_event_subscription_create
+- az_eventgrid_system_topic_event_subscription_delete
+- az_eventgrid_system_topic_event_subscription_list
+- az_eventgrid_system_topic_event_subscription_show
+- az_eventgrid_system_topic_event_subscription_update
+- az_eventgrid_system_topic_list
+- az_eventgrid_system_topic_show
+- az_eventgrid_system_topic_update
 - az_eventgrid_topic
 - az_eventgrid_topic_create
 - az_eventgrid_topic_delete
@@ -55,7 +100,7 @@ globalParameters:
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
-  gitcommit: https://github.com/Azure/azure-cli/blob/e4f67020bbaa8468157847986780c38a7f43970a/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
-  updated_at: 10/19/2019 11:44:55 AM
-  ms.date: 10/19/2019
-  description: Manage Azure Event Grid topics, event subscriptions, domains and domain topics.
+  gitcommit: https://github.com/Azure/azure-cli/blob/2c3a93df944060f0d58809cec67f1ff92edecc2c/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
+  updated_at: 7/6/2020 10:48:42 AM
+  ms.date: 07/06/2020
+  description: Manage Azure Event Grid topics, domains, domain topics, system topics partner topics, event subscriptions, system topic event subscriptions and partner topic event subscriptions.

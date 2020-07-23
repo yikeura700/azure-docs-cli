@@ -58,6 +58,7 @@ directCommands:
                   [--appgw-subnet-id]
                   [--appgw-subnet-prefix]
                   [--appgw-watch-namespace]
+                  [--assign-identity]
                   [--attach-acr]
                   [--client-secret]
                   [--cluster-autoscaler-profile]
@@ -67,6 +68,7 @@ directCommands:
                   [--docker-bridge-address]
                   [--enable-aad]
                   [--enable-addons]
+                  [--enable-azure-rbac]
                   [--enable-cluster-autoscaler]
                   [--enable-managed-identity]
                   [--enable-node-public-ip]
@@ -142,6 +144,8 @@ directCommands:
     syntax: az aks create -g MyResourceGroup -n MyManagedCluster --node-osdisk-diskencryptionset-id <disk-encryption-set-resource-id>
   - summary: Create a kubernetes cluster with userDefinedRouting, standard load balancer SKU and a custom subnet preconfigured with a route table
     syntax: az aks create -g MyResourceGroup -n MyManagedCluster --outbound-type userDefinedRouting --load-balancer-sku standard --vnet-subnet-id customUserSubnetVnetID
+  - summary: Create a kubernetes cluster with managed AAD enabled.
+    syntax: az aks create -g MyResourceGroup -n MyManagedCluster --enable-aad --aad-admin-group-object-ids <id-1,id-2> --aad-tenant-id <id>
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -192,6 +196,9 @@ directCommands:
   - name: --appgw-watch-namespace
     summary: Specify the namespace, which AGIC should watch. This could be a single string value, or a comma-separated list of namespaces.
     description: ''
+  - name: --assign-identity
+    summary: (PREVIEW) Specify an existing user assigned identity to manage cluster resource group.
+    description: ''
   - name: --attach-acr
     summary: Grant the 'acrpull' role assignment to the ACR specified by name or resource ID.
     description: ''
@@ -226,11 +233,14 @@ directCommands:
           virtual-node              - enable AKS Virtual Node (PREVIEW). Requires --subnet-name to provide the name of an existing subnet for the Virtual Node to use.
           azure-policy              - enable Azure policy (PREVIEW).
           ingress-appgw             - enable Applicaiton Gateway Ingress Controller addon (PREVIEW).
+  - name: --enable-azure-rbac
+    summary: Whether to enable Azure RBAC for Kubernetes authorization.
+    description: ''
   - name: --enable-cluster-autoscaler
     summary: Enable cluster autoscaler, default value is false.
     description: If specified, please make sure the kubernetes version is larger than 1.10.6.
   - name: --enable-managed-identity
-    summary: (PREVIEW) Using a system assigned managed identity to manage cluster resource group.
+    summary: (PREVIEW) Using managed identity to manage cluster resource group.
     description: ''
   - name: --enable-node-public-ip
     summary: Enable VMSS node public IP.
@@ -718,6 +728,7 @@ directCommands:
                   [--detach-acr]
                   [--disable-cluster-autoscaler]
                   [--disable-pod-security-policy]
+                  [--enable-aad]
                   [--enable-cluster-autoscaler]
                   [--enable-pod-security-policy]
                   [--load-balancer-idle-timeout]
@@ -755,6 +766,10 @@ directCommands:
     syntax: az aks update -g MyResourceGroup -n MyManagedCluster --api-server-authorized-ip-ranges ""
   - summary: Restrict apiserver traffic in a kubernetes cluster to agentpool nodes.
     syntax: az aks update -g MyResourceGroup -n MyManagedCluster --api-server-authorized-ip-ranges 0.0.0.0/32
+  - summary: Update a AKS-managed AAD cluster with tenant ID or admin group object IDs.
+    syntax: az aks update -g MyResourceGroup -n MyManagedCluster --aad-admin-group-object-ids <id-1,id-2> --aad-tenant-id <id>
+  - summary: Migrate a AKS AAD-Integrated cluster or a non-AAAAD cluster to a AKS-managed AAD cluster.
+    syntax: az aks update -g MyResourceGroup -n MyManagedCluster --enable-aad --aad-admin-group-object-ids <id-1,id-2> --aad-tenant-id <id>
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -791,6 +806,9 @@ directCommands:
     description: ''
   - name: --disable-pod-security-policy
     summary: (PREVIEW) Disable pod security policy.
+    description: ''
+  - name: --enable-aad
+    summary: Enable managed AAD feature for cluster.
     description: ''
   - name: --enable-cluster-autoscaler -e
     summary: Enable cluster autoscaler.

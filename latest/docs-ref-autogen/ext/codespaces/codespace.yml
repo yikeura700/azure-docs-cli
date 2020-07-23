@@ -19,7 +19,7 @@ directCommands:
                         [--git-user-name]
                         [--instance-type]
                         [--resource-group]
-                        [--suspend-after {120, 30, 5}]
+                        [--suspend-after {120, 30, 5, 60}]
   examples:
   - summary: Create a Codespace with default plan settings
     syntax: az codespace create -g my-rg --plan my-plan --name my-codespace
@@ -65,7 +65,7 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --suspend-after
-    parameterValueGroup: 120, 30, 5
+    parameterValueGroup: 120, 30, 5, 60
     summary: Automatically suspend the inactive Codespace after this many minutes.
     description: ''
 - uid: ext_codespaces_az_codespace_delete
@@ -84,7 +84,7 @@ directCommands:
   - summary: Delete a Codespace given id
     syntax: az codespace delete -g my-rg --plan my-plan --id 00000000-0000-0000-0000-000000000000
   - summary: Delete a Codespace given plan id and Codespace name
-    syntax: az codespace delete --plan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.VSOnline/plans/my-plan --name my-codespace
+    syntax: az codespace delete --plan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.Codespaces/plans/my-plan --name my-codespace
   requiredParameters:
   - isRequired: true
     name: --plan -p
@@ -115,7 +115,7 @@ directCommands:
   - summary: List Codespaces
     syntax: az codespace list -g my-rg --plan my-plan
   - summary: List Codespaces given plan id
-    syntax: az codespace list --plan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.VSOnline/plans/my-plan
+    syntax: az codespace list --plan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.Codespaces/plans/my-plan
   requiredParameters:
   - isRequired: true
     name: --plan -p
@@ -144,7 +144,7 @@ directCommands:
   - summary: Open a Codespace given id
     syntax: az codespace open -g my-rg --plan my-plan --id 00000000-0000-0000-0000-000000000000
   - summary: Open a Codespace given plan id and Codespace name
-    syntax: az codespace open --plan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.VSOnline/plans/my-plan --name my-codespace
+    syntax: az codespace open --plan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.Codespaces/plans/my-plan --name my-codespace
   requiredParameters:
   - isRequired: true
     name: --plan -p
@@ -178,7 +178,7 @@ directCommands:
   - summary: Resume a Codespace given id
     syntax: az codespace resume -g my-rg --plan my-plan --id 00000000-0000-0000-0000-000000000000
   - summary: Resume a Codespace given plan id and Codespace name
-    syntax: az codespace resume --plan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.VSOnline/plans/my-plan --name my-codespace
+    syntax: az codespace resume --plan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.Codespaces/plans/my-plan --name my-codespace
   requiredParameters:
   - isRequired: true
     name: --plan -p
@@ -227,7 +227,7 @@ directCommands:
   - summary: Show details of a Codespace given id
     syntax: az codespace show -g my-rg --plan my-plan --id 00000000-0000-0000-0000-000000000000
   - summary: Show details of a Codespace given plan id and Codespace name
-    syntax: az codespace show --plan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.VSOnline/plans/my-plan --name my-codespace
+    syntax: az codespace show --plan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.Codespaces/plans/my-plan --name my-codespace
   requiredParameters:
   - isRequired: true
     name: --plan -p
@@ -263,7 +263,7 @@ directCommands:
   - summary: Suspend a Codespace given id
     syntax: az codespace suspend -g my-rg --plan my-plan --id 00000000-0000-0000-0000-000000000000
   - summary: Suspend a Codespace given plan id and Codespace name
-    syntax: az codespace suspend --plan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.VSOnline/plans/my-plan --name my-codespace
+    syntax: az codespace suspend --plan /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-rg/providers/Microsoft.Codespaces/plans/my-plan --name my-codespace
   requiredParameters:
   - isRequired: true
     name: --plan -p
@@ -289,7 +289,7 @@ directCommands:
                         [--instance-type]
                         [--name]
                         [--resource-group]
-                        [--suspend-after {120, 30, 5}]
+                        [--suspend-after {120, 30, 5, 60}]
   examples:
   - summary: Update a Codespace with a different instance type
     syntax: az codespace update -g my-rg --plan my-plan --name my-codespace --instance-type premiumLinux
@@ -314,7 +314,7 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --suspend-after
-    parameterValueGroup: 120, 30, 5
+    parameterValueGroup: 120, 30, 5, 60
     summary: Automatically suspend the inactive Codespace after this many minutes.
     description: ''
 commands:

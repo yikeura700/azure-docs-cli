@@ -29,6 +29,7 @@ directCommands:
     az storage account create --name
                               --resource-group
                               [--access-tier {Cool, Hot}]
+                              [--allow-blob-public-access]
                               [--assign-identity]
                               [--bypass {AzureServices, Logging, Metrics, None}]
                               [--custom-domain]
@@ -37,6 +38,7 @@ directCommands:
                               [--https-only {false, true}]
                               [--kind {BlobStorage, Storage, StorageV2}]
                               [--location]
+                              [--min-tls-version]
                               [--require-infrastructure-encryption]
                               [--sku {Premium_LRS, Standard_GRS, Standard_LRS, Standard_RAGRS, Standard_ZRS}]
                               [--subscription]
@@ -59,6 +61,9 @@ directCommands:
   - name: --access-tier
     parameterValueGroup: Cool, Hot
     summary: The access tier used for billing StandardBlob accounts. Cannot be set for StandardLRS, StandardGRS, StandardRAGRS, or PremiumLRS account types. It is required for StandardBlob accounts during creation.
+    description: ''
+  - name: --allow-blob-public-access
+    summary: ''
     description: ''
   - name: --assign-identity
     summary: Generate and assign a new Storage Account Identity for this storage account for use with key management services like Azure KeyVault.
@@ -89,6 +94,9 @@ directCommands:
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
+    description: ''
+  - name: --min-tls-version
+    summary: ''
     description: ''
   - name: --require-infrastructure-encryption
     summary: ''
@@ -338,6 +346,7 @@ directCommands:
   syntax: >-
     az storage account update [--access-tier {Cool, Hot}]
                               [--add]
+                              [--allow-blob-public-access]
                               [--assign-identity]
                               [--bypass {AzureServices, Logging, Metrics, None}]
                               [--custom-domain]
@@ -350,6 +359,7 @@ directCommands:
                               [--force-string]
                               [--https-only {false, true}]
                               [--ids]
+                              [--min-tls-version]
                               [--name]
                               [--remove]
                               [--resource-group]
@@ -368,6 +378,9 @@ directCommands:
     description: ''
   - name: --add
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
+    description: ''
+  - name: --allow-blob-public-access
+    summary: ''
     description: ''
   - name: --assign-identity
     summary: Generate and assign a new Storage Account Identity for this storage account for use with key management services like Azure KeyVault.
@@ -409,6 +422,9 @@ directCommands:
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --min-tls-version
+    summary: ''
     description: ''
   - name: --name -n
     summary: The storage account name.
@@ -472,7 +488,7 @@ globalParameters:
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
-  updated_at: 6/4/2020 1:53:34 PM
-  ms.date: 06/04/2020
+  gitcommit: https://github.com/Azure/azure-cli/blob/9a8302043cdd0c6e6f3f5f51b64b296bda7708d5/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  updated_at: 7/16/2020 5:46:58 AM
+  ms.date: 07/16/2020
   description: Manage storage accounts.

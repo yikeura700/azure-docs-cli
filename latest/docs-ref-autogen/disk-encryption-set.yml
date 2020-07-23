@@ -13,13 +13,16 @@ directCommands:
                                   --name
                                   --resource-group
                                   --source-vault
+                                  [--encryption-type {EncryptionAtRestWithCustomerKey, EncryptionAtRestWithPlatformAndCustomerKeys, EncryptionAtRestWithPlatformKey}]
                                   [--location]
                                   [--no-wait]
                                   [--subscription]
                                   [--tags]
   examples:
-  - summary: Create a disk encryption set
+  - summary: Create a disk encryption set.
     syntax: az disk-encryption-set create --resource-group MyResourceGroup --name MyDiskEncryptionSet --key-url MyKey --source-vault MyVault
+  - summary: Create a disk encryption set that supports double encryption.
+    syntax: az disk-encryption-set create --resource-group MyResourceGroup --name MyDiskEncryptionSet --key-url MyKey --source-vault MyVault --encryption-type EncryptionAtRestWithPlatformAndCustomerKeys
   requiredParameters:
   - isRequired: true
     name: --key-url
@@ -38,6 +41,10 @@ directCommands:
     summary: Name or ID of the KeyVault containing the key or secret.
     description: ''
   optionalParameters:
+  - name: --encryption-type
+    parameterValueGroup: EncryptionAtRestWithCustomerKey, EncryptionAtRestWithPlatformAndCustomerKeys, EncryptionAtRestWithPlatformKey
+    summary: 'The type of key used to encrypt the data of the disk. EncryptionAtRestWithPlatformKey: Disk is encrypted at rest with Platform managed key. It is the default encryption type. EncryptionAtRestWithCustomerKey: Disk is encrypted at rest with Customer managed key that can be changed and revoked by a customer. EncryptionAtRestWithPlatformAndCustomerKeys: Disk is encrypted at rest with 2 layers of encryption. One of the keys is Customer managed and the other key is Platform managed.'
+    description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''

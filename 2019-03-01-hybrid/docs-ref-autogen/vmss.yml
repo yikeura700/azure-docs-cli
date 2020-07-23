@@ -28,6 +28,7 @@ directCommands:
                    [--data-disk-sizes-gb]
                    [--disable-overprovision]
                    [--dns-servers]
+                   [--encryption-at-host {false, true}]
                    [--eviction-policy {Deallocate, Delete}]
                    [--generate-ssh-keys]
                    [--health-probe]
@@ -179,6 +180,10 @@ directCommands:
     description: ''
   - name: --dns-servers
     summary: Space-separated IP addresses of DNS servers, e.g. 10.0.0.5 10.0.0.6.
+    description: ''
+  - name: --encryption-at-host
+    parameterValueGroup: false, true
+    summary: Enable Host Encryption for the VM or VMSS. This will enable the encryption for all the disks including Resource/Temp disk at host itself.
     description: ''
   - name: --eviction-policy
     parameterValueGroup: Deallocate, Delete
@@ -555,10 +560,10 @@ directCommands:
                            [--subscription]
   optionalParameters:
   - name: --expand
-    summary: The expand expression to apply to the operation.
+    summary: The expand expression to apply to the operation. Allowed values are 'instanceView'.
     description: ''
   - name: --filter
-    summary: The filter to apply to the operation.
+    summary: The filter to apply to the operation. Allowed values are 'startswith(instanceView/statuses/code, 'PowerState') eq true', 'properties/latestModelApplied eq true', 'properties/latestModelApplied eq false'.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -570,7 +575,7 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --select
-    summary: The list parameters.
+    summary: The list parameters. Allowed values are 'instanceView', 'instanceView/statuses'.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -1104,7 +1109,7 @@ globalParameters:
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
-  gitcommit: https://github.com/Azure/azure-cli/blob/f55acfa0a4074843c2a9fd392157a42afe8d2e59/src/azure-cli/azure/cli/command_modules/vm/_help.py
-  updated_at: 6/10/2020 7:38:50 AM
-  ms.date: 06/10/2020
+  gitcommit: https://github.com/Azure/azure-cli/blob/92c8bb1c276b38434733770262a12d1993b7a44d/src/azure-cli/azure/cli/command_modules/vm/_help.py
+  updated_at: 7/10/2020 5:22:00 AM
+  ms.date: 07/10/2020
   description: Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).

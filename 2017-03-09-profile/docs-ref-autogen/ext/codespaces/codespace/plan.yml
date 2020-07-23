@@ -12,7 +12,7 @@ directCommands:
     az codespace plan create --name
                              --resource-group
                              [--default-instance-type]
-                             [--default-suspend-after {120, 30, 5}]
+                             [--default-suspend-after {120, 30, 5, 60}]
                              [--location]
                              [--subnet]
                              [--tags]
@@ -43,7 +43,7 @@ directCommands:
     summary: Default Instance Type for Codespaces in this plan.
     description: ''
   - name: --default-suspend-after
-    parameterValueGroup: 120, 30, 5
+    parameterValueGroup: 120, 30, 5, 60
     summary: Default minutes Codespaces in this plan should suspend after.
     description: ''
   - name: --location -l

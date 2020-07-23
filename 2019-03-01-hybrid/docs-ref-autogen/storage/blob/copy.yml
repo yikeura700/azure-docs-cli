@@ -183,7 +183,7 @@ directCommands:
     summary: The blob snapshot for the source storage account.
     description: ''
   - name: --source-uri -u
-    summary: 'A URL of up to 2 KB in length that specifies an Azure file or blob. The value should be URL-encoded as it would appear in a request URI. If the source is in another account, the source must either be public or must be authenticated via a shared access signature. If the source is public, no authentication is required. Examples: <a href="https://myaccount.blob.core.windows.net/mycontainer/myblob">https://myaccount.blob.core.windows.net/mycontainer/myblob</a> <a href="https://myaccount.blob.core.windows.net/mycontainer/myblob">https://myaccount.blob.core.windows.net/mycontainer/myblob</a>?snapshot=<DateTime> <a href="https://otheraccount.blob.core.windows.net/mycontainer/myblob?sastoken">https://otheraccount.blob.core.windows.net/mycontainer/myblob?sastoken</a>.'
+    summary: 'A URL of up to 2 KB in length that specifies an Azure file or blob. The value should be URL-encoded as it would appear in a request URI. If the source is in another account, the source must either be public or must be authenticated via a shared access signature. If the source is public, no authentication is required. Examples: `https://myaccount.blob.core.windows.net/mycontainer/myblob`, `https://myaccount.blob.core.windows.net/mycontainer/myblob?snapshot=<DateTime>`, `https://otheraccount.blob.core.windows.net/mycontainer/myblob?sastoken`.'
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -289,7 +289,7 @@ globalParameters:
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-  gitcommit: https://github.com/Azure/azure-cli/blob/e3dc0e12dbb72be6ccc77d4d94e3a102ebed7c3c/src/azure-cli/azure/cli/command_modules/storage/_help.py
-  updated_at: 6/4/2020 1:53:34 PM
-  ms.date: 06/04/2020
+  gitcommit: https://github.com/Azure/azure-cli/blob/9a8302043cdd0c6e6f3f5f51b64b296bda7708d5/src/azure-cli/azure/cli/command_modules/storage/_help.py
+  updated_at: 7/16/2020 5:46:58 AM
+  ms.date: 07/16/2020
   description: Manage blob copy operations. Use `az storage blob show` to check the status of the blobs.

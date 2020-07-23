@@ -12,7 +12,7 @@ directCommands:
     az snapshot create --name
                        --resource-group
                        [--disk-encryption-set]
-                       [--encryption-type {EncryptionAtRestWithCustomerKey, EncryptionAtRestWithPlatformKey}]
+                       [--encryption-type]
                        [--for-upload {false, true}]
                        [--hyper-v-generation {V1, V2}]
                        [--incremental {false, true}]
@@ -47,7 +47,6 @@ directCommands:
     summary: Name or ID of disk encryption set that is used to encrypt the disk.
     description: ''
   - name: --encryption-type
-    parameterValueGroup: EncryptionAtRestWithCustomerKey, EncryptionAtRestWithPlatformKey
     summary: 'Encryption type. EncryptionAtRestWithPlatformKey: Disk is encrypted with XStore managed key at rest. It is the default encryption type. EncryptionAtRestWithCustomerKey: Disk is encrypted with Customer managed key at rest.'
     description: ''
   - name: --for-upload
@@ -216,7 +215,7 @@ directCommands:
   syntax: >-
     az snapshot update [--add]
                        [--disk-encryption-set]
-                       [--encryption-type {EncryptionAtRestWithCustomerKey, EncryptionAtRestWithPlatformKey}]
+                       [--encryption-type]
                        [--force-string]
                        [--ids]
                        [--name]
@@ -237,7 +236,6 @@ directCommands:
     summary: Name or ID of disk encryption set that is used to encrypt the disk.
     description: ''
   - name: --encryption-type
-    parameterValueGroup: EncryptionAtRestWithCustomerKey, EncryptionAtRestWithPlatformKey
     summary: 'Encryption type. EncryptionAtRestWithPlatformKey: Disk is encrypted with XStore managed key at rest. It is the default encryption type. EncryptionAtRestWithCustomerKey: Disk is encrypted with Customer managed key at rest.'
     description: ''
   - name: --force-string

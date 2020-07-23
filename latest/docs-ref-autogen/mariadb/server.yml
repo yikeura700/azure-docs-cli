@@ -18,6 +18,7 @@ directCommands:
                              [--auto-grow {Disabled, Enabled}]
                              [--backup-retention]
                              [--geo-redundant-backup {Disabled, Enabled}]
+                             [--infrastructure-encryption {Disabled, Enabled}]
                              [--location]
                              [--public-network-access {Disabled, Enabled}]
                              [--ssl-enforcement {Disabled, Enabled}]
@@ -72,6 +73,10 @@ directCommands:
   - name: --geo-redundant-backup
     parameterValueGroup: Disabled, Enabled
     summary: Enable or disable geo-redundant backups. Default value is Disabled. Not supported in Basic pricing tier.
+    description: ''
+  - name: --infrastructure-encryption -i
+    parameterValueGroup: Disabled, Enabled
+    summary: Add an optional second layer of encryption for data using new encryption algorithm. Default value is Disabled.
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'

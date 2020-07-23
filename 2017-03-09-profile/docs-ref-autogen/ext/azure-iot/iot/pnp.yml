@@ -1,23 +1,25 @@
 ### YamlMime:AzureCLIGroup
 uid: ext_azure-iot_az_iot_pnp
 name: az iot pnp
-summary: Manage entities of an IoT Plug and Play model repository.
+summary: Manage Azure IoT Plug-and-Play repositories and models.
 description: ''
 commands:
-- ext_azure-iot_az_iot_pnp_capability_model
-- ext_azure-iot_az_iot_pnp_capability_model_create
-- ext_azure-iot_az_iot_pnp_capability_model_delete
-- ext_azure-iot_az_iot_pnp_capability_model_list
-- ext_azure-iot_az_iot_pnp_capability_model_publish
-- ext_azure-iot_az_iot_pnp_capability_model_show
-- ext_azure-iot_az_iot_pnp_capability_model_update
-- ext_azure-iot_az_iot_pnp_interface
-- ext_azure-iot_az_iot_pnp_interface_create
-- ext_azure-iot_az_iot_pnp_interface_delete
-- ext_azure-iot_az_iot_pnp_interface_list
-- ext_azure-iot_az_iot_pnp_interface_publish
-- ext_azure-iot_az_iot_pnp_interface_show
-- ext_azure-iot_az_iot_pnp_interface_update
+- ext_azure-iot_az_iot_pnp_model
+- ext_azure-iot_az_iot_pnp_model_create
+- ext_azure-iot_az_iot_pnp_model_list
+- ext_azure-iot_az_iot_pnp_model_publish
+- ext_azure-iot_az_iot_pnp_model_show
+- ext_azure-iot_az_iot_pnp_repo
+- ext_azure-iot_az_iot_pnp_repo_create
+- ext_azure-iot_az_iot_pnp_repo_list
+- ext_azure-iot_az_iot_pnp_role_assignment
+- ext_azure-iot_az_iot_pnp_role_assignment_create
+- ext_azure-iot_az_iot_pnp_role_assignment_delete
+- ext_azure-iot_az_iot_pnp_role_assignment_list
+- ext_azure-iot_az_iot_pnp_twin
+- ext_azure-iot_az_iot_pnp_twin_invoke_command
+- ext_azure-iot_az_iot_pnp_twin_show
+- ext_azure-iot_az_iot_pnp_twin_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -34,4 +36,4 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  description: Manage entities of an IoT Plug and Play model repository.
+  description: Manage Azure IoT Plug-and-Play repositories and models.

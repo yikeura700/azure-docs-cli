@@ -241,6 +241,7 @@ directCommands:
                            [--output-metadata-file]
                            [--path]
                            [--resource-group]
+                           [--sku]
                            [--subscription-id]
                            [--tags]
                            [--workspace-name]
@@ -263,6 +264,9 @@ directCommands:
     description: ''
   - name: --resource-group -g
     summary: Resource group name.
+    description: ''
+  - name: --sku
+    summary: Sku of the workspace, upgrade only.
     description: ''
   - name: --subscription-id
     summary: Specifies the subscription Id.

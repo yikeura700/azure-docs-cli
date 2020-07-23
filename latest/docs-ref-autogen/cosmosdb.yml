@@ -36,7 +36,9 @@ directCommands:
                        [--capabilities]
                        [--default-consistency-level {BoundedStaleness, ConsistentPrefix, Eventual, Session, Strong}]
                        [--disable-key-based-metadata-write-access {false, true}]
+                       [--enable-analytical-storage {false, true}]
                        [--enable-automatic-failover {false, true}]
+                       [--enable-free-tier {false, true}]
                        [--enable-multiple-write-locations {false, true}]
                        [--enable-public-network {false, true}]
                        [--enable-virtual-network {false, true}]
@@ -46,6 +48,7 @@ directCommands:
                        [--locations]
                        [--max-interval]
                        [--max-staleness-prefix]
+                       [--server-version {3.2, 3.6}]
                        [--subscription]
                        [--tags]
                        [--virtual-network-rules]
@@ -75,9 +78,17 @@ directCommands:
     parameterValueGroup: false, true
     summary: Disable write operations on metadata resources (databases, containers, throughput) via account keys.
     description: ''
+  - name: --enable-analytical-storage
+    parameterValueGroup: false, true
+    summary: Flag to enable log storage on the account.
+    description: ''
   - name: --enable-automatic-failover
     parameterValueGroup: false, true
     summary: Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.
+    description: ''
+  - name: --enable-free-tier
+    parameterValueGroup: false, true
+    summary: If enabled the account is free-tier.
     description: ''
   - name: --enable-multiple-write-locations
     parameterValueGroup: false, true
@@ -123,6 +134,10 @@ directCommands:
   - name: --max-staleness-prefix
     defaultValue: "100"
     summary: When used with Bounded Staleness consistency, this value represents the number of stale requests tolerated. Accepted range for this value is 1 - 2,147,483,647.
+    description: ''
+  - name: --server-version
+    parameterValueGroup: 3.2, 3.6
+    summary: Valid only for MongoDB accounts.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -356,6 +371,7 @@ directCommands:
     az cosmosdb update [--capabilities]
                        [--default-consistency-level {BoundedStaleness, ConsistentPrefix, Eventual, Session, Strong}]
                        [--disable-key-based-metadata-write-access {false, true}]
+                       [--enable-analytical-storage {false, true}]
                        [--enable-automatic-failover {false, true}]
                        [--enable-multiple-write-locations {false, true}]
                        [--enable-public-network {false, true}]
@@ -386,6 +402,10 @@ directCommands:
   - name: --disable-key-based-metadata-write-access
     parameterValueGroup: false, true
     summary: Disable write operations on metadata resources (databases, containers, throughput) via account keys.
+    description: ''
+  - name: --enable-analytical-storage
+    parameterValueGroup: false, true
+    summary: Flag to enable log storage on the account.
     description: ''
   - name: --enable-automatic-failover
     parameterValueGroup: false, true

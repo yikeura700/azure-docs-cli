@@ -16,6 +16,7 @@ directCommands:
                                           [--cert-password]
                                           [--connection-draining-timeout]
                                           [--custom-error-pages]
+                                          [--enable-private-link]
                                           [--frontend-port]
                                           [--http-settings-cookie-based-affinity {Disabled, Enabled}]
                                           [--http-settings-port]
@@ -28,6 +29,10 @@ directCommands:
                                           [--min-capacity]
                                           [--no-wait]
                                           [--private-ip-address]
+                                          [--private-link-ip-address]
+                                          [--private-link-primary {false, true}]
+                                          [--private-link-subnet]
+                                          [--private-link-subnet-prefix]
                                           [--public-ip-address]
                                           [--public-ip-address-allocation]
                                           [--routing-rule-type {Basic, PathBasedRouting}]
@@ -76,6 +81,9 @@ directCommands:
   - name: --custom-error-pages
     summary: Space-separated list of custom error pages in `STATUS_CODE=URL` format.
     description: ''
+  - name: --enable-private-link
+    summary: Enable Private Link feature for this application gateway.
+    description: ''
   - name: --frontend-port
     summary: The front end port number.
     description: ''
@@ -117,6 +125,21 @@ directCommands:
     description: ''
   - name: --private-ip-address
     summary: Static private IP address to use.
+    description: ''
+  - name: --private-link-ip-address
+    summary: The static private IP address of a subnet for Private Link. If omitting, a dynamic one will be created.
+    description: ''
+  - name: --private-link-primary
+    parameterValueGroup: false, true
+    summary: Whether the IP configuration is primary or not.
+    description: ''
+  - name: --private-link-subnet
+    defaultValue: PrivateLinkDefaultSubnet
+    summary: The name of the subnet within the same vnet of an application gateway.
+    description: ''
+  - name: --private-link-subnet-prefix
+    defaultValue: 10.0.1.0/24
+    summary: The CIDR prefix to use when creating a new subnet.
     description: ''
   - name: --public-ip-address
     summary: Name or ID of a public IP address. Uses existing resource or creates new if specified, or none if omitted.
@@ -502,6 +525,16 @@ commands:
 - az_network_application_gateway_identity_remove
 - az_network_application_gateway_identity_show
 - az_network_application_gateway_list
+- az_network_application_gateway_private_link
+- az_network_application_gateway_private_link_add
+- az_network_application_gateway_private_link_ip_config
+- az_network_application_gateway_private_link_ip_config_add
+- az_network_application_gateway_private_link_ip_config_list
+- az_network_application_gateway_private_link_ip_config_remove
+- az_network_application_gateway_private_link_ip_config_show
+- az_network_application_gateway_private_link_list
+- az_network_application_gateway_private_link_remove
+- az_network_application_gateway_private_link_show
 - az_network_application_gateway_probe
 - az_network_application_gateway_probe_create
 - az_network_application_gateway_probe_delete
@@ -627,7 +660,7 @@ globalParameters:
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
-  gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
-  updated_at: 6/18/2020 6:20:50 AM
-  ms.date: 06/18/2020
+  gitcommit: https://github.com/Azure/azure-cli/blob/50f3a3750542be0e06c33a28ac43ce7d49cca040/src/azure-cli/azure/cli/command_modules/network/_help.py
+  updated_at: 7/10/2020 1:55:33 AM
+  ms.date: 07/10/2020
   description: To learn more about Application Gateway, visit <a href="https://docs.microsoft.com/azure/application-gateway/application-gateway-create-gateway-cli">https://docs.microsoft.com/azure/application-gateway/application-gateway-create-gateway-cli</a>.

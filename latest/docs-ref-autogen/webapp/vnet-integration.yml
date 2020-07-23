@@ -7,7 +7,7 @@ directCommands:
 - uid: az_webapp_vnet_integration_add
   name: az webapp vnet-integration add
   summary: Add a regional virtual network integration to a webapp.
-  description: ''
+  description: If there are multiple vnets of the same name across different resource groups, use vnet resource id to specify which vnet to use. If vnet name is used, by default, the vnet in the same resource group as the webapp will be used.
   syntax: >-
     az webapp vnet-integration add --name
                                    --resource-group
@@ -16,8 +16,10 @@ directCommands:
                                    [--slot]
                                    [--subscription]
   examples:
-  - summary: add a regional virtual network integration to a webapp
+  - summary: Add a regional virtual network integration to a webapp
     syntax: az webapp vnet-integration add -g MyResourceGroup -n MyWebapp --vnet MyVnetName --subnet MySubnetName -s [slot]
+  - summary: Add a regional virtual network integration to a webapp using vnet resource id
+    syntax: az webapp vnet-integration add -g MyResourceGroup -n MyWebapp --vnet '/subscriptions/[sub id]/resourceGroups/[rg]/providers/Microsoft.Network/virtualNetworks/[virtual network name]' --subnet MySubnetName -s [slot]
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -29,11 +31,11 @@ directCommands:
     description: ''
   - isRequired: true
     name: --subnet
-    summary: Subnet name.
+    summary: The name of the subnet.
     description: ''
   - isRequired: true
     name: --vnet
-    summary: Vnet name.
+    summary: The name or resource ID of the Vnet.
     description: ''
   optionalParameters:
   - name: --slot -s

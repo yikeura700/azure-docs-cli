@@ -15,6 +15,7 @@ directCommands:
                                           [--cert-file]
                                           [--cert-password]
                                           [--connection-draining-timeout]
+                                          [--enable-private-link]
                                           [--frontend-port]
                                           [--http-settings-cookie-based-affinity {Disabled, Enabled}]
                                           [--http-settings-port]
@@ -25,6 +26,10 @@ directCommands:
                                           [--location]
                                           [--no-wait]
                                           [--private-ip-address]
+                                          [--private-link-ip-address]
+                                          [--private-link-primary {false, true}]
+                                          [--private-link-subnet]
+                                          [--private-link-subnet-prefix]
                                           [--public-ip-address]
                                           [--public-ip-address-allocation]
                                           [--routing-rule-type {Basic, PathBasedRouting}]
@@ -69,6 +74,9 @@ directCommands:
   - name: --connection-draining-timeout
     summary: 'The time in seconds after a backend server is removed during which on open connection remains active. Range: 0 (disabled) to 3600.'
     description: ''
+  - name: --enable-private-link
+    summary: Enable Private Link feature for this application gateway.
+    description: ''
   - name: --frontend-port
     summary: The front end port number.
     description: ''
@@ -104,6 +112,21 @@ directCommands:
     description: ''
   - name: --private-ip-address
     summary: Static private IP address to use.
+    description: ''
+  - name: --private-link-ip-address
+    summary: The static private IP address of a subnet for Private Link. If omitting, a dynamic one will be created.
+    description: ''
+  - name: --private-link-primary
+    parameterValueGroup: false, true
+    summary: Whether the IP configuration is primary or not.
+    description: ''
+  - name: --private-link-subnet
+    defaultValue: PrivateLinkDefaultSubnet
+    summary: The name of the subnet within the same vnet of an application gateway.
+    description: ''
+  - name: --private-link-subnet-prefix
+    defaultValue: 10.0.1.0/24
+    summary: The CIDR prefix to use when creating a new subnet.
     description: ''
   - name: --public-ip-address
     summary: Name or ID of a public IP address. Uses existing resource or creates new if specified, or none if omitted.
@@ -545,7 +568,7 @@ globalParameters:
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   original_content_git_url: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
-  gitcommit: https://github.com/Azure/azure-cli/blob/8e00952f560978e0339f713403f57cba483250e2/src/azure-cli/azure/cli/command_modules/network/_help.py
-  updated_at: 6/18/2020 6:20:50 AM
-  ms.date: 06/18/2020
+  gitcommit: https://github.com/Azure/azure-cli/blob/50f3a3750542be0e06c33a28ac43ce7d49cca040/src/azure-cli/azure/cli/command_modules/network/_help.py
+  updated_at: 7/10/2020 1:55:33 AM
+  ms.date: 07/10/2020
   description: To learn more about Application Gateway, visit <a href="https://docs.microsoft.com/azure/application-gateway/application-gateway-create-gateway-cli">https://docs.microsoft.com/azure/application-gateway/application-gateway-create-gateway-cli</a>.

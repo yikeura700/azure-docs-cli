@@ -20,7 +20,7 @@ directCommands:
                   [--tags]
                   [--target-name]
                   [--target-subscription]
-                  [--temporary_resource_group_name]
+                  [--temporary-resource-group-name]
                   [--timeout]
   examples:
   - summary: Copy an image to several regions and cleanup at the end.
@@ -73,9 +73,9 @@ directCommands:
   - name: --target-subscription
     summary: Name or ID of the subscription where the final image should be created.
     description: ''
-  - name: --temporary_resource_group_name
+  - name: --temporary-resource-group-name --temporary_resource_group_name
     defaultValue: image-copy-rg
-    summary: Resource Group name where temporary storage account will be created.
+    summary: Resource Group name where temporary storage account will be created. --temporary_resource_group_name will be deprecated in 0.2.7.
     description: ''
   - name: --timeout
     defaultValue: "3600"
