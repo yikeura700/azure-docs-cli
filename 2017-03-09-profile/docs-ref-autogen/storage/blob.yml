@@ -798,10 +798,10 @@ directCommands:
     summary: 'Exclude these paths. This option does not support wildcard characters (\*). Checks relative path prefix. For example: myFolder;myFolder/subDirName/file.pdf.'
     description: ''
   - name: --exclude-pattern
-    summary: 'Exclude these files where the name matches the pattern list. For example: .jpg;.pdf;exactName. This option supports wildcard characters (\*).'
+    summary: 'Exclude these files where the name matches the pattern list. For example: \*.jpg;\*.pdf;exactName. This option supports wildcard characters (\*).'
     description: ''
   - name: --include-pattern
-    summary: 'Include only these files where the name matches the pattern list. For example: .jpg;.pdf;exactName. This option supports wildcard characters (\*).'
+    summary: 'Include only these files where the name matches the pattern list. For example: \*.jpg;\*.pdf;exactName. This option supports wildcard characters (\*).'
     description: ''
   - name: --sas-token
     summary: 'A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.'
