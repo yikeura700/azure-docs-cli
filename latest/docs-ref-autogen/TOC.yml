@@ -1,0 +1,476 @@
+- name: Extensions Reference
+  items:
+  - name: azsphere-cloudmanagement
+    items:
+    - name: Overview
+      uid: ext_azsphere-cloudmanagement_azsphere
+    - name: ca-certificate
+      displayName: azsphere ca-certificate
+      items:
+      - name: Overview
+        uid: ext_azsphere-cloudmanagement_azsphere_ca_certificate
+        displayName: azsphere ca-certificate
+      - name: download
+        uid: ext_azsphere-cloudmanagement_azsphere_ca_certificate_download
+        displayName: azsphere ca-certificate download
+      - name: download-chain
+        uid: ext_azsphere-cloudmanagement_azsphere_ca_certificate_download_chain
+        displayName: azsphere ca-certificate download-chain
+      - name: download-proof
+        uid: ext_azsphere-cloudmanagement_azsphere_ca_certificate_download_proof
+        displayName: azsphere ca-certificate download-proof
+      - name: list
+        uid: ext_azsphere-cloudmanagement_azsphere_ca_certificate_list
+        displayName: azsphere ca-certificate list
+    - name: device
+      displayName: azsphere device
+      items:
+      - name: Overview
+        uid: ext_azsphere-cloudmanagement_azsphere_device
+        displayName: azsphere device
+      - name: list
+        uid: ext_azsphere-cloudmanagement_azsphere_device_list
+        displayName: azsphere device list
+      - name: show-count
+        uid: ext_azsphere-cloudmanagement_azsphere_device_show_count
+        displayName: azsphere device show-count
+    - name: device-group
+      displayName: azsphere device-group
+      items:
+      - name: Overview
+        uid: ext_azsphere-cloudmanagement_azsphere_device_group
+        displayName: azsphere device-group
+      - name: create
+        uid: ext_azsphere-cloudmanagement_azsphere_device_group_create
+        displayName: azsphere device-group create
+      - name: list
+        uid: ext_azsphere-cloudmanagement_azsphere_device_group_list
+        displayName: azsphere device-group list
+      - name: show
+        uid: ext_azsphere-cloudmanagement_azsphere_device_group_show
+        displayName: azsphere device-group show
+      - name: update
+        uid: ext_azsphere-cloudmanagement_azsphere_device_group_update
+        displayName: azsphere device-group update
+      - name: deployment
+        displayName: azsphere device-group deployment
+        items:
+        - name: Overview
+          uid: ext_azsphere-cloudmanagement_azsphere_device_group_deployment
+          displayName: azsphere device-group deployment
+        - name: create
+          uid: ext_azsphere-cloudmanagement_azsphere_device_group_deployment_create
+          displayName: azsphere device-group deployment create
+        - name: list
+          uid: ext_azsphere-cloudmanagement_azsphere_device_group_deployment_list
+          displayName: azsphere device-group deployment list
+      - name: device
+        displayName: azsphere device-group device
+        items:
+        - name: Overview
+          uid: ext_azsphere-cloudmanagement_azsphere_device_group_device
+          displayName: azsphere device-group device
+        - name: list
+          uid: ext_azsphere-cloudmanagement_azsphere_device_group_device_list
+          displayName: azsphere device-group device list
+        - name: show-count
+          uid: ext_azsphere-cloudmanagement_azsphere_device_group_device_show_count
+          displayName: azsphere device-group device show-count
+    - name: image
+      displayName: azsphere image
+      items:
+      - name: Overview
+        uid: ext_azsphere-cloudmanagement_azsphere_image
+        displayName: azsphere image
+      - name: download
+        uid: ext_azsphere-cloudmanagement_azsphere_image_download
+        displayName: azsphere image download
+      - name: show
+        uid: ext_azsphere-cloudmanagement_azsphere_image_show
+        displayName: azsphere image show
+    - name: product
+      displayName: azsphere product
+      items:
+      - name: Overview
+        uid: ext_azsphere-cloudmanagement_azsphere_product
+        displayName: azsphere product
+      - name: create
+        uid: ext_azsphere-cloudmanagement_azsphere_product_create
+        displayName: azsphere product create
+      - name: list
+        uid: ext_azsphere-cloudmanagement_azsphere_product_list
+        displayName: azsphere product list
+      - name: show
+        uid: ext_azsphere-cloudmanagement_azsphere_product_show
+        displayName: azsphere product show
+      - name: update
+        uid: ext_azsphere-cloudmanagement_azsphere_product_update
+        displayName: azsphere product update
+      - name: device
+        displayName: azsphere product device
+        items:
+        - name: Overview
+          uid: ext_azsphere-cloudmanagement_azsphere_product_device
+          displayName: azsphere product device
+        - name: list
+          uid: ext_azsphere-cloudmanagement_azsphere_product_device_list
+          displayName: azsphere product device list
+        - name: show-count
+          uid: ext_azsphere-cloudmanagement_azsphere_product_device_show_count
+          displayName: azsphere product device show-count
+      - name: device-group
+        displayName: azsphere product device-group
+        items:
+        - name: Overview
+          uid: ext_azsphere-cloudmanagement_azsphere_product_device_group
+          displayName: azsphere product device-group
+        - name: create-defaults
+          uid: ext_azsphere-cloudmanagement_azsphere_product_device_group_create_defaults
+          displayName: azsphere product device-group create-defaults
+        - name: list
+          uid: ext_azsphere-cloudmanagement_azsphere_product_device_group_list
+          displayName: azsphere product device-group list
+    - name: role
+      displayName: azsphere role
+      items:
+      - name: Overview
+        uid: ext_azsphere-cloudmanagement_azsphere_role
+        displayName: azsphere role
+      - name: add
+        uid: ext_azsphere-cloudmanagement_azsphere_role_add
+        displayName: azsphere role add
+      - name: delete
+        uid: ext_azsphere-cloudmanagement_azsphere_role_delete
+        displayName: azsphere role delete
+      - name: list
+        uid: ext_azsphere-cloudmanagement_azsphere_role_list
+        displayName: azsphere role list
+      - name: show
+        uid: ext_azsphere-cloudmanagement_azsphere_role_show
+        displayName: azsphere role show
+      - name: show-types
+        uid: ext_azsphere-cloudmanagement_azsphere_role_show_types
+        displayName: azsphere role show-types
+    - name: tenant
+      displayName: azsphere tenant
+      items:
+      - name: Overview
+        uid: ext_azsphere-cloudmanagement_azsphere_tenant
+        displayName: azsphere tenant
+      - name: list
+        uid: ext_azsphere-cloudmanagement_azsphere_tenant_list
+        displayName: azsphere tenant list
+      - name: select
+        uid: ext_azsphere-cloudmanagement_azsphere_tenant_select
+        displayName: azsphere tenant select
+      - name: show-selected
+        uid: ext_azsphere-cloudmanagement_azsphere_tenant_show_selected
+        displayName: azsphere tenant show-selected
+  - name: azsphere-devicemanagement
+    items:
+    - name: Overview
+      uid: ext_azsphere-devicemanagement_azsphere
+    - name: device
+      displayName: azsphere device
+      items:
+      - name: Overview
+        uid: ext_azsphere-devicemanagement_azsphere_device
+        displayName: azsphere device
+      - name: capability
+        displayName: azsphere device capability
+        items:
+        - name: Overview
+          uid: ext_azsphere-devicemanagement_azsphere_device_capability
+          displayName: azsphere device capability
+        - name: download
+          uid: ext_azsphere-devicemanagement_azsphere_device_capability_download
+          displayName: azsphere device capability download
+        - name: select
+          uid: ext_azsphere-devicemanagement_azsphere_device_capability_select
+          displayName: azsphere device capability select
+        - name: show-attached
+          uid: ext_azsphere-devicemanagement_azsphere_device_capability_show_attached
+          displayName: azsphere device capability show-attached
+        - name: update
+          uid: ext_azsphere-devicemanagement_azsphere_device_capability_update
+          displayName: azsphere device capability update
+      - name: network
+        displayName: azsphere device network
+        items:
+        - name: Overview
+          uid: ext_azsphere-devicemanagement_azsphere_device_network
+          displayName: azsphere device network
+        - name: proxy
+          displayName: azsphere device network proxy
+          items:
+          - name: Overview
+            uid: ext_azsphere-devicemanagement_azsphere_device_network_proxy
+            displayName: azsphere device network proxy
+          - name: apply
+            uid: ext_azsphere-devicemanagement_azsphere_device_network_proxy_apply
+            displayName: azsphere device network proxy apply
+          - name: delete
+            uid: ext_azsphere-devicemanagement_azsphere_device_network_proxy_delete
+            displayName: azsphere device network proxy delete
+          - name: show
+            uid: ext_azsphere-devicemanagement_azsphere_device_network_proxy_show
+            displayName: azsphere device network proxy show
+      - name: sideload
+        displayName: azsphere device sideload
+        items:
+        - name: Overview
+          uid: ext_azsphere-devicemanagement_azsphere_device_sideload
+          displayName: azsphere device sideload
+        - name: set-deployment-timeout
+          uid: ext_azsphere-devicemanagement_azsphere_device_sideload_set_deployment_timeout
+          displayName: azsphere device sideload set-deployment-timeout
+        - name: show-deployment-timeout
+          uid: ext_azsphere-devicemanagement_azsphere_device_sideload_show_deployment_timeout
+          displayName: azsphere device sideload show-deployment-timeout
+  - name: azsphere-mammoth
+    items:
+    - name: Overview
+      uid: ext_azsphere-mammoth_azsphere
+    - name: register-user
+      uid: ext_azsphere-mammoth_azsphere_register_user
+      displayName: azsphere register-user
+    - name: device
+      displayName: azsphere device
+      items:
+      - name: Overview
+        uid: ext_azsphere-mammoth_azsphere_device
+        displayName: azsphere device
+      - name: claim
+        uid: ext_azsphere-mammoth_azsphere_device_claim
+        displayName: azsphere device claim
+      - name: enable-cloud-test
+        uid: ext_azsphere-mammoth_azsphere_device_enable_cloud_test
+        displayName: azsphere device enable-cloud-test
+      - name: enable-development
+        uid: ext_azsphere-mammoth_azsphere_device_enable_development
+        displayName: azsphere device enable-development
+      - name: list-attached
+        uid: ext_azsphere-mammoth_azsphere_device_list_attached
+        displayName: azsphere device list-attached
+      - name: prep-debug
+        uid: ext_azsphere-mammoth_azsphere_device_prep_debug
+        displayName: azsphere device prep-debug
+      - name: prep-field
+        uid: ext_azsphere-mammoth_azsphere_device_prep_field
+        displayName: azsphere device prep-field
+      - name: recover
+        uid: ext_azsphere-mammoth_azsphere_device_recover
+        displayName: azsphere device recover
+      - name: rescan-attached
+        uid: ext_azsphere-mammoth_azsphere_device_rescan_attached
+        displayName: azsphere device rescan-attached
+      - name: restart
+        uid: ext_azsphere-mammoth_azsphere_device_restart
+        displayName: azsphere device restart
+      - name: show
+        uid: ext_azsphere-mammoth_azsphere_device_show
+        displayName: azsphere device show
+      - name: show-attached
+        uid: ext_azsphere-mammoth_azsphere_device_show_attached
+        displayName: azsphere device show-attached
+      - name: show-deployment-status
+        uid: ext_azsphere-mammoth_azsphere_device_show_deployment_status
+        displayName: azsphere device show-deployment-status
+      - name: show-os-version
+        uid: ext_azsphere-mammoth_azsphere_device_show_os_version
+        displayName: azsphere device show-os-version
+      - name: update
+        uid: ext_azsphere-mammoth_azsphere_device_update
+        displayName: azsphere device update
+      - name: app
+        displayName: azsphere device app
+        items:
+        - name: Overview
+          uid: ext_azsphere-mammoth_azsphere_device_app
+          displayName: azsphere device app
+        - name: show-quota
+          uid: ext_azsphere-mammoth_azsphere_device_app_show_quota
+          displayName: azsphere device app show-quota
+        - name: show-status
+          uid: ext_azsphere-mammoth_azsphere_device_app_show_status
+          displayName: azsphere device app show-status
+        - name: start
+          uid: ext_azsphere-mammoth_azsphere_device_app_start
+          displayName: azsphere device app start
+        - name: stop
+          uid: ext_azsphere-mammoth_azsphere_device_app_stop
+          displayName: azsphere device app stop
+      - name: certificate
+        displayName: azsphere device certificate
+        items:
+        - name: Overview
+          uid: ext_azsphere-mammoth_azsphere_device_certificate
+          displayName: azsphere device certificate
+        - name: add
+          uid: ext_azsphere-mammoth_azsphere_device_certificate_add
+          displayName: azsphere device certificate add
+        - name: delete
+          uid: ext_azsphere-mammoth_azsphere_device_certificate_delete
+          displayName: azsphere device certificate delete
+        - name: list
+          uid: ext_azsphere-mammoth_azsphere_device_certificate_list
+          displayName: azsphere device certificate list
+        - name: show
+          uid: ext_azsphere-mammoth_azsphere_device_certificate_show
+          displayName: azsphere device certificate show
+        - name: show-quota
+          uid: ext_azsphere-mammoth_azsphere_device_certificate_show_quota
+          displayName: azsphere device certificate show-quota
+      - name: image
+        displayName: azsphere device image
+        items:
+        - name: Overview
+          uid: ext_azsphere-mammoth_azsphere_device_image
+          displayName: azsphere device image
+        - name: list-installed
+          uid: ext_azsphere-mammoth_azsphere_device_image_list_installed
+          displayName: azsphere device image list-installed
+        - name: list-targeted
+          uid: ext_azsphere-mammoth_azsphere_device_image_list_targeted
+          displayName: azsphere device image list-targeted
+      - name: manufacturing-state
+        displayName: azsphere device manufacturing-state
+        items:
+        - name: Overview
+          uid: ext_azsphere-mammoth_azsphere_device_manufacturing_state
+          displayName: azsphere device manufacturing-state
+        - name: show
+          uid: ext_azsphere-mammoth_azsphere_device_manufacturing_state_show
+          displayName: azsphere device manufacturing-state show
+        - name: update
+          uid: ext_azsphere-mammoth_azsphere_device_manufacturing_state_update
+          displayName: azsphere device manufacturing-state update
+      - name: network
+        displayName: azsphere device network
+        items:
+        - name: Overview
+          uid: ext_azsphere-mammoth_azsphere_device_network
+          displayName: azsphere device network
+        - name: list-firewall-rules
+          uid: ext_azsphere-mammoth_azsphere_device_network_list_firewall_rules
+          displayName: azsphere device network list-firewall-rules
+        - name: list-interfaces
+          uid: ext_azsphere-mammoth_azsphere_device_network_list_interfaces
+          displayName: azsphere device network list-interfaces
+        - name: show-diagnostics
+          uid: ext_azsphere-mammoth_azsphere_device_network_show_diagnostics
+          displayName: azsphere device network show-diagnostics
+        - name: show-status
+          uid: ext_azsphere-mammoth_azsphere_device_network_show_status
+          displayName: azsphere device network show-status
+        - name: update-interface
+          uid: ext_azsphere-mammoth_azsphere_device_network_update_interface
+          displayName: azsphere device network update-interface
+      - name: sideload
+        displayName: azsphere device sideload
+        items:
+        - name: Overview
+          uid: ext_azsphere-mammoth_azsphere_device_sideload
+          displayName: azsphere device sideload
+        - name: delete
+          uid: ext_azsphere-mammoth_azsphere_device_sideload_delete
+          displayName: azsphere device sideload delete
+        - name: deploy
+          uid: ext_azsphere-mammoth_azsphere_device_sideload_deploy
+          displayName: azsphere device sideload deploy
+        - name: install
+          uid: ext_azsphere-mammoth_azsphere_device_sideload_install
+          displayName: azsphere device sideload install
+        - name: stage
+          uid: ext_azsphere-mammoth_azsphere_device_sideload_stage
+          displayName: azsphere device sideload stage
+      - name: wifi
+        displayName: azsphere device wifi
+        items:
+        - name: Overview
+          uid: ext_azsphere-mammoth_azsphere_device_wifi
+          displayName: azsphere device wifi
+        - name: add
+          uid: ext_azsphere-mammoth_azsphere_device_wifi_add
+          displayName: azsphere device wifi add
+        - name: disable
+          uid: ext_azsphere-mammoth_azsphere_device_wifi_disable
+          displayName: azsphere device wifi disable
+        - name: enable
+          uid: ext_azsphere-mammoth_azsphere_device_wifi_enable
+          displayName: azsphere device wifi enable
+        - name: forget
+          uid: ext_azsphere-mammoth_azsphere_device_wifi_forget
+          displayName: azsphere device wifi forget
+        - name: list
+          uid: ext_azsphere-mammoth_azsphere_device_wifi_list
+          displayName: azsphere device wifi list
+        - name: reload-config
+          uid: ext_azsphere-mammoth_azsphere_device_wifi_reload_config
+          displayName: azsphere device wifi reload-config
+        - name: scan
+          uid: ext_azsphere-mammoth_azsphere_device_wifi_scan
+          displayName: azsphere device wifi scan
+        - name: show
+          uid: ext_azsphere-mammoth_azsphere_device_wifi_show
+          displayName: azsphere device wifi show
+        - name: show-status
+          uid: ext_azsphere-mammoth_azsphere_device_wifi_show_status
+          displayName: azsphere device wifi show-status
+    - name: hardware-definition
+      displayName: azsphere hardware-definition
+      items:
+      - name: Overview
+        uid: ext_azsphere-mammoth_azsphere_hardware_definition
+        displayName: azsphere hardware-definition
+      - name: generate-header
+        uid: ext_azsphere-mammoth_azsphere_hardware_definition_generate_header
+        displayName: azsphere hardware-definition generate-header
+      - name: test-header
+        uid: ext_azsphere-mammoth_azsphere_hardware_definition_test_header
+        displayName: azsphere hardware-definition test-header
+    - name: image
+      displayName: azsphere image
+      items:
+      - name: Overview
+        uid: ext_azsphere-mammoth_azsphere_image
+        displayName: azsphere image
+      - name: add
+        uid: ext_azsphere-mammoth_azsphere_image_add
+        displayName: azsphere image add
+    - name: image-package
+      displayName: azsphere image-package
+      items:
+      - name: Overview
+        uid: ext_azsphere-mammoth_azsphere_image_package
+        displayName: azsphere image-package
+      - name: pack-application
+        uid: ext_azsphere-mammoth_azsphere_image_package_pack_application
+        displayName: azsphere image-package pack-application
+      - name: pack-board-config
+        uid: ext_azsphere-mammoth_azsphere_image_package_pack_board_config
+        displayName: azsphere image-package pack-board-config
+      - name: show
+        uid: ext_azsphere-mammoth_azsphere_image_package_show
+        displayName: azsphere image-package show
+    - name: role
+      displayName: azsphere role
+      items:
+      - name: Overview
+        uid: ext_azsphere-mammoth_azsphere_role
+        displayName: azsphere role
+      - name: remove-legacy-access
+        uid: ext_azsphere-mammoth_azsphere_role_remove_legacy_access
+        displayName: azsphere role remove-legacy-access
+    - name: tenant
+      displayName: azsphere tenant
+      items:
+      - name: Overview
+        uid: ext_azsphere-mammoth_azsphere_tenant
+        displayName: azsphere tenant
+      - name: create
+        uid: ext_azsphere-mammoth_azsphere_tenant_create
+        displayName: azsphere tenant create
+      - name: download-error-report
+        uid: ext_azsphere-mammoth_azsphere_tenant_download_error_report
+        displayName: azsphere tenant download-error-report

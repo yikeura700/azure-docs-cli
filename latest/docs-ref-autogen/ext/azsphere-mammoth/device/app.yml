@@ -1,0 +1,103 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-mammoth_azsphere_device_app
+name: azsphere device app
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-mammoth_azsphere_device_app_show_quota
+  name: azsphere device app show-quota
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device app show-quota [--component-id]
+                                   [--device-ip]
+                                   [--device-location]
+  optionalParameters:
+  - name: --component-id -i
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_app_show_status
+  name: azsphere device app show-status
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device app show-status [--component-id]
+                                    [--device-ip]
+                                    [--device-location]
+  optionalParameters:
+  - name: --component-id -i
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_app_start
+  name: azsphere device app start
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device app start [--component-id]
+                              [--debug-mode]
+                              [--device-ip]
+                              [--device-location]
+  optionalParameters:
+  - name: --component-id -i
+    summary: ''
+    description: ''
+  - name: --debug-mode -d
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_app_stop
+  name: azsphere device app stop
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device app stop [--component-id]
+                             [--device-ip]
+                             [--device-location]
+  optionalParameters:
+  - name: --component-id -i
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+commands:
+- ext_azsphere-mammoth_azsphere_device_app_show_quota
+- ext_azsphere-mammoth_azsphere_device_app_show_status
+- ext_azsphere-mammoth_azsphere_device_app_start
+- ext_azsphere-mammoth_azsphere_device_app_stop
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

@@ -1,0 +1,212 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-mammoth_azsphere_device_wifi
+name: azsphere device wifi
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-mammoth_azsphere_device_wifi_add
+  name: azsphere device wifi add
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device wifi add --ssid
+                             [--client-cert-id]
+                             [--client-id]
+                             [--config-name]
+                             [--device-ip]
+                             [--device-location]
+                             [--psk]
+                             [--root-ca-cert-id]
+                             [--targeted-scan]
+  requiredParameters:
+  - isRequired: true
+    name: --ssid -s
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --client-cert-id
+    summary: ''
+    description: ''
+  - name: --client-id
+    summary: ''
+    description: ''
+  - name: --config-name
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+  - name: --psk -p
+    summary: ''
+    description: ''
+  - name: --root-ca-cert-id
+    summary: ''
+    description: ''
+  - name: --targeted-scan
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_wifi_disable
+  name: azsphere device wifi disable
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device wifi disable --id
+                                 [--device-ip]
+                                 [--device-location]
+  requiredParameters:
+  - isRequired: true
+    name: --id -i
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_wifi_enable
+  name: azsphere device wifi enable
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device wifi enable --id
+                                [--device-ip]
+                                [--device-location]
+  requiredParameters:
+  - isRequired: true
+    name: --id -i
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_wifi_forget
+  name: azsphere device wifi forget
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device wifi forget --id
+                                [--device-ip]
+                                [--device-location]
+  requiredParameters:
+  - isRequired: true
+    name: --id -i
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_wifi_list
+  name: azsphere device wifi list
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device wifi list [--device-ip]
+                              [--device-location]
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_wifi_reload_config
+  name: azsphere device wifi reload-config
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device wifi reload-config [--device-ip]
+                                       [--device-location]
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_wifi_scan
+  name: azsphere device wifi scan
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device wifi scan [--device-ip]
+                              [--device-location]
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_wifi_show
+  name: azsphere device wifi show
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device wifi show --id
+                              [--device-ip]
+                              [--device-location]
+  requiredParameters:
+  - isRequired: true
+    name: --id -i
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_wifi_show_status
+  name: azsphere device wifi show-status
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device wifi show-status [--device-ip]
+                                     [--device-location]
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+commands:
+- ext_azsphere-mammoth_azsphere_device_wifi_add
+- ext_azsphere-mammoth_azsphere_device_wifi_disable
+- ext_azsphere-mammoth_azsphere_device_wifi_enable
+- ext_azsphere-mammoth_azsphere_device_wifi_forget
+- ext_azsphere-mammoth_azsphere_device_wifi_list
+- ext_azsphere-mammoth_azsphere_device_wifi_reload_config
+- ext_azsphere-mammoth_azsphere_device_wifi_scan
+- ext_azsphere-mammoth_azsphere_device_wifi_show
+- ext_azsphere-mammoth_azsphere_device_wifi_show_status
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

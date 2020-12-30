@@ -1,0 +1,127 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-cloudmanagement_azsphere_device_group
+name: azsphere device-group
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-cloudmanagement_azsphere_device_group_create
+  name: azsphere device-group create
+  summary: Create a new device-group in your Tenant (device-group create).
+  description: ''
+  syntax: >-
+    azsphere device-group create --name
+                                 --product
+                                 [--application-update {No3rdPartyAppUpdates, NoUpdates, UpdateAll}]
+                                 [--description]
+                                 [--os-feed {Retail, RetailEval}]
+                                 [--tenant]
+  requiredParameters:
+  - isRequired: true
+    name: --name -n
+    summary: ''
+    description: ''
+  - isRequired: true
+    name: --product -p
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --application-update -a
+    defaultValue: UpdateAll
+    parameterValueGroup: No3rdPartyAppUpdates, NoUpdates, UpdateAll
+    summary: ''
+    description: ''
+  - name: --description -d
+    summary: ''
+    description: ''
+  - name: --os-feed -f
+    defaultValue: Retail
+    parameterValueGroup: Retail, RetailEval
+    summary: ''
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_device_group_list
+  name: azsphere device-group list
+  summary: List device-groups (device-group list).
+  description: ''
+  syntax: azsphere device-group list [--tenant]
+  optionalParameters:
+  - name: --tenant -t
+    summary: ''
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_device_group_show
+  name: azsphere device-group show
+  summary: Gets a DeviceGroup by ID.
+  description: Gets a DeviceGroup by ID.
+  syntax: >-
+    azsphere device-group show --device-group
+                               [--tenant]
+  requiredParameters:
+  - isRequired: true
+    name: --device-group -g
+    summary: The ID of the DeviceGroup.
+    description: ''
+  optionalParameters:
+  - name: --tenant -t
+    summary: The Azure Sphere tenant ID.
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_device_group_update
+  name: azsphere device-group update
+  summary: Patches a DeviceGroup.
+  description: Patches a DeviceGroup.
+  syntax: >-
+    azsphere device-group update --device-group
+                                 [--description]
+                                 [--name]
+                                 [--os-feed-type]
+                                 [--tenant]
+                                 [--update-policy]
+  requiredParameters:
+  - isRequired: true
+    name: --device-group -g
+    summary: The DeviceGroup ID.
+    description: ''
+  optionalParameters:
+  - name: --description
+    summary: The description of the device group.
+    description: ''
+  - name: --name
+    summary: The name of the device group.
+    description: ''
+  - name: --os-feed-type
+    summary: The unique ID of the osfeed type that this device group uses for OS updates.
+    description: ''
+  - name: --tenant -t
+    summary: The Azure Sphere tenant ID.
+    description: ''
+  - name: --update-policy
+    summary: The update policy that determines which software is updated.
+    description: ''
+commands:
+- ext_azsphere-cloudmanagement_azsphere_device_group_create
+- ext_azsphere-cloudmanagement_azsphere_device_group_deployment
+- ext_azsphere-cloudmanagement_azsphere_device_group_deployment_create
+- ext_azsphere-cloudmanagement_azsphere_device_group_deployment_list
+- ext_azsphere-cloudmanagement_azsphere_device_group_device
+- ext_azsphere-cloudmanagement_azsphere_device_group_device_list
+- ext_azsphere-cloudmanagement_azsphere_device_group_device_show_count
+- ext_azsphere-cloudmanagement_azsphere_device_group_list
+- ext_azsphere-cloudmanagement_azsphere_device_group_show
+- ext_azsphere-cloudmanagement_azsphere_device_group_update
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

@@ -1,0 +1,59 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-mammoth_azsphere_device_manufacturing_state
+name: azsphere device manufacturing-state
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-mammoth_azsphere_device_manufacturing_state_show
+  name: azsphere device manufacturing-state show
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device manufacturing-state show [--device-ip]
+                                             [--device-location]
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_manufacturing_state_update
+  name: azsphere device manufacturing-state update
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device manufacturing-state update --state
+                                               [--device-ip]
+                                               [--device-location]
+  requiredParameters:
+  - isRequired: true
+    name: --state -s
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+commands:
+- ext_azsphere-mammoth_azsphere_device_manufacturing_state_show
+- ext_azsphere-mammoth_azsphere_device_manufacturing_state_update
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

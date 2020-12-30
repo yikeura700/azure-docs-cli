@@ -1,0 +1,57 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-cloudmanagement_azsphere_product_device
+name: azsphere product device
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-cloudmanagement_azsphere_product_device_list
+  name: azsphere product device list
+  summary: List devices targeted by a product (product device list).
+  description: ''
+  syntax: >-
+    azsphere product device list --product
+                                 [--tenant]
+  requiredParameters:
+  - isRequired: true
+    name: --product -p
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --tenant -t
+    summary: ''
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_product_device_show_count
+  name: azsphere product device show-count
+  summary: Gets the number of devices within the specified Product.
+  description: Gets the number of devices within the specified Product.
+  syntax: >-
+    azsphere product device show-count --product
+                                       [--tenant]
+  requiredParameters:
+  - isRequired: true
+    name: --product -p
+    summary: The Product ID.
+    description: ''
+  optionalParameters:
+  - name: --tenant -t
+    summary: The Azure Sphere tenant ID.
+    description: ''
+commands:
+- ext_azsphere-cloudmanagement_azsphere_product_device_list
+- ext_azsphere-cloudmanagement_azsphere_product_device_show_count
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

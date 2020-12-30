@@ -1,0 +1,35 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-devicemanagement_azsphere_device
+name: azsphere device
+summary: ''
+description: ''
+commands:
+- ext_azsphere-devicemanagement_azsphere_device_capability
+- ext_azsphere-devicemanagement_azsphere_device_capability_download
+- ext_azsphere-devicemanagement_azsphere_device_capability_select
+- ext_azsphere-devicemanagement_azsphere_device_capability_show_attached
+- ext_azsphere-devicemanagement_azsphere_device_capability_update
+- ext_azsphere-devicemanagement_azsphere_device_network
+- ext_azsphere-devicemanagement_azsphere_device_network_proxy
+- ext_azsphere-devicemanagement_azsphere_device_network_proxy_apply
+- ext_azsphere-devicemanagement_azsphere_device_network_proxy_delete
+- ext_azsphere-devicemanagement_azsphere_device_network_proxy_show
+- ext_azsphere-devicemanagement_azsphere_device_sideload
+- ext_azsphere-devicemanagement_azsphere_device_sideload_set_deployment_timeout
+- ext_azsphere-devicemanagement_azsphere_device_sideload_show_deployment_timeout
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

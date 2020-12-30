@@ -1,0 +1,45 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-cloudmanagement_azsphere_tenant
+name: azsphere tenant
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-cloudmanagement_azsphere_tenant_list
+  name: azsphere tenant list
+  summary: Get all tenants.
+  description: 'Get all tenants.  :keyword callable cls: A custom type or function that will be passed the direct response :return: list of MicrosoftAzureSpherePublicApiContractsTenantIdentity, or the result of cls(response) :rtype: list[~azure.sphere.publicapi.models.MicrosoftAzureSpherePublicApiContractsTenantIdentity] :raises: ~azure.core.exceptions.HttpResponseError.'
+  syntax: azsphere tenant list
+- uid: ext_azsphere-cloudmanagement_azsphere_tenant_select
+  name: azsphere tenant select
+  summary: Command to set the default tenant (tenant select).
+  description: Sets this in the local config file.
+  syntax: azsphere tenant select [--tenant]
+  optionalParameters:
+  - name: --tenant -t
+    summary: Tenant id to select.
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_tenant_show_selected
+  name: azsphere tenant show-selected
+  summary: Command to show the default tenant (tenant show-selected).
+  description: 'Gets this from the local config file.  :return: output message :rtype: str.'
+  syntax: azsphere tenant show-selected
+commands:
+- ext_azsphere-cloudmanagement_azsphere_tenant_list
+- ext_azsphere-cloudmanagement_azsphere_tenant_select
+- ext_azsphere-cloudmanagement_azsphere_tenant_show_selected
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

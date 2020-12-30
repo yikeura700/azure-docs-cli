@@ -1,0 +1,88 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-devicemanagement_azsphere_device_network_proxy
+name: azsphere device network proxy
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-devicemanagement_azsphere_device_network_proxy_apply
+  name: azsphere device network proxy apply
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device network proxy apply --address
+                                        --authentication {anonymous, basic}
+                                        --port
+                                        [--device]
+                                        [--enabled {false, true}]
+                                        [--no-proxy-addresses]
+                                        [--password]
+                                        [--username]
+  requiredParameters:
+  - isRequired: true
+    name: --address -a
+    summary: ''
+    description: ''
+  - isRequired: true
+    name: --authentication -t
+    parameterValueGroup: anonymous, basic
+    summary: ''
+    description: ''
+  - isRequired: true
+    name: --port -r
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --device -d
+    summary: ''
+    description: ''
+  - name: --enabled -e
+    parameterValueGroup: false, true
+    summary: ''
+    description: ''
+  - name: --no-proxy-addresses -n
+    summary: ''
+    description: ''
+  - name: --password -p
+    summary: ''
+    description: ''
+  - name: --username -u
+    summary: ''
+    description: ''
+- uid: ext_azsphere-devicemanagement_azsphere_device_network_proxy_delete
+  name: azsphere device network proxy delete
+  summary: Deletes the network proxy.
+  description: 'Deletes the network proxy.  :keyword callable cls: A custom type or function that will be passed the direct response :return: object, or the result of cls(response) :rtype: object :raises: ~azure.core.exceptions.HttpResponseError.'
+  syntax: azsphere device network proxy delete [--device]
+  optionalParameters:
+  - name: --device -d
+    summary: ''
+    description: ''
+- uid: ext_azsphere-devicemanagement_azsphere_device_network_proxy_show
+  name: azsphere device network proxy show
+  summary: Gets network proxy.
+  description: 'Gets network proxy.  :keyword callable cls: A custom type or function that will be passed the direct response :return: object, or the result of cls(response) :rtype: object :raises: ~azure.core.exceptions.HttpResponseError.'
+  syntax: azsphere device network proxy show [--device]
+  optionalParameters:
+  - name: --device -d
+    summary: ''
+    description: ''
+commands:
+- ext_azsphere-devicemanagement_azsphere_device_network_proxy_apply
+- ext_azsphere-devicemanagement_azsphere_device_network_proxy_delete
+- ext_azsphere-devicemanagement_azsphere_device_network_proxy_show
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

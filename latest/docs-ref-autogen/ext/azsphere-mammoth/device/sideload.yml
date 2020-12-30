@@ -1,0 +1,111 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-mammoth_azsphere_device_sideload
+name: azsphere device sideload
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-mammoth_azsphere_device_sideload_delete
+  name: azsphere device sideload delete
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device sideload delete [--component-id]
+                                    [--device-ip]
+                                    [--device-location]
+  optionalParameters:
+  - name: --component-id -i
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_sideload_deploy
+  name: azsphere device sideload deploy
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device sideload deploy --image-package
+                                    [--device-ip]
+                                    [--device-location]
+                                    [--force]
+                                    [--manual-start]
+  requiredParameters:
+  - isRequired: true
+    name: --image-package -p
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+  - name: --force
+    summary: ''
+    description: ''
+  - name: --manual-start -m
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_sideload_install
+  name: azsphere device sideload install
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device sideload install [--device-ip]
+                                     [--device-location]
+                                     [--manual-start]
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+  - name: --manual-start -m
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_sideload_stage
+  name: azsphere device sideload stage
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device sideload stage --image-package
+                                   [--device-ip]
+                                   [--device-location]
+  requiredParameters:
+  - isRequired: true
+    name: --image-package -p
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+commands:
+- ext_azsphere-mammoth_azsphere_device_sideload_delete
+- ext_azsphere-mammoth_azsphere_device_sideload_deploy
+- ext_azsphere-mammoth_azsphere_device_sideload_install
+- ext_azsphere-mammoth_azsphere_device_sideload_stage
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

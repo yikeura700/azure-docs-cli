@@ -1,0 +1,97 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-mammoth_azsphere_image_package
+name: azsphere image-package
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-mammoth_azsphere_image_package_pack_application
+  name: azsphere image-package pack-application
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere image-package pack-application --destination-file
+                                            --input
+                                            [--application-manifest-path]
+                                            [--executables]
+                                            [--hardware-definitions]
+                                            [--target-api-set]
+                                            [--target-definition-filename]
+  requiredParameters:
+  - isRequired: true
+    name: --destination-file -f
+    summary: ''
+    description: ''
+  - isRequired: true
+    name: --input -i
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --application-manifest-path -a
+    summary: ''
+    description: ''
+  - name: --executables -x
+    summary: ''
+    description: ''
+  - name: --hardware-definitions
+    summary: ''
+    description: ''
+  - name: --target-api-set
+    summary: ''
+    description: ''
+  - name: --target-definition-filename
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_image_package_pack_board_config
+  name: azsphere image-package pack-board-config
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere image-package pack-board-config --destination-file
+                                             [--input]
+                                             [--name]
+                                             [--preset]
+  requiredParameters:
+  - isRequired: true
+    name: --destination-file -f
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --input -i
+    summary: ''
+    description: ''
+  - name: --name -n
+    summary: ''
+    description: ''
+  - name: --preset -p
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_image_package_show
+  name: azsphere image-package show
+  summary: ''
+  description: ''
+  syntax: azsphere image-package show --file-path
+  requiredParameters:
+  - isRequired: true
+    name: --file-path -f
+    summary: ''
+    description: ''
+commands:
+- ext_azsphere-mammoth_azsphere_image_package_pack_application
+- ext_azsphere-mammoth_azsphere_image_package_pack_board_config
+- ext_azsphere-mammoth_azsphere_image_package_show
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

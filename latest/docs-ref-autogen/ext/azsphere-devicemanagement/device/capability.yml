@@ -1,0 +1,92 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-devicemanagement_azsphere_device_capability
+name: azsphere device capability
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-devicemanagement_azsphere_device_capability_download
+  name: azsphere device capability download
+  summary: Downloads and saves a capability file.
+  description: ''
+  syntax: >-
+    azsphere device capability download --type {appdevelopment, fieldservicing, none}
+                                        [--destination-file]
+                                        [--device]
+                                        [--tenant]
+  requiredParameters:
+  - isRequired: true
+    name: --type -c
+    parameterValueGroup: appdevelopment, fieldservicing, none
+    summary: Capability type.
+    description: ''
+  optionalParameters:
+  - name: --destination-file -f
+    summary: 'Destination file to save the capability. If not provided, the file will be saved in the current directory, with the name format e.g: fieldservice-12345678.bin.'
+    description: ''
+  - name: --device -d
+    summary: Device id.
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+- uid: ext_azsphere-devicemanagement_azsphere_device_capability_select
+  name: azsphere device capability select
+  summary: Selects a capability file and starts a capability session.
+  description: ''
+  syntax: >-
+    azsphere device capability select [--file-path]
+                                      [--none {false, true}]
+  optionalParameters:
+  - name: --file-path -f
+    summary: Capability file_path.
+    description: ''
+  - name: --none -n
+    parameterValueGroup: false, true
+    summary: Flag which can end the capability session.
+    description: ''
+- uid: ext_azsphere-devicemanagement_azsphere_device_capability_show_attached
+  name: azsphere device capability show-attached
+  summary: Get device's capabilities.
+  description: "Get device's capabilities.  :keyword callable cls: A custom type or function that will be passed the direct response :return: Paths1Os34ArDeviceCapabilitiesGetResponses200ContentApplicationJsonSchema, or the result of cls(response) :rtype: ~azure.sphere.gatewayd.models.Paths1Os34ArDeviceCapabilitiesGetResponses200ContentApplicationJsonSchema :raises: ~azure.core.exceptions.HttpResponseError."
+  syntax: azsphere device capability show-attached [--device]
+  optionalParameters:
+  - name: --device -d
+    summary: ''
+    description: ''
+- uid: ext_azsphere-devicemanagement_azsphere_device_capability_update
+  name: azsphere device capability update
+  summary: Sideloads the capability file on the device.
+  description: ''
+  syntax: >-
+    azsphere device capability update --file-path
+                                      [--device]
+  requiredParameters:
+  - isRequired: true
+    name: --file-path -f
+    summary: Capability file path.
+    description: ''
+  optionalParameters:
+  - name: --device -d
+    summary: ''
+    description: ''
+commands:
+- ext_azsphere-devicemanagement_azsphere_device_capability_download
+- ext_azsphere-devicemanagement_azsphere_device_capability_select
+- ext_azsphere-devicemanagement_azsphere_device_capability_show_attached
+- ext_azsphere-devicemanagement_azsphere_device_capability_update
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

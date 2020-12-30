@@ -1,0 +1,345 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-mammoth_azsphere_device
+name: azsphere device
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-mammoth_azsphere_device_claim
+  name: azsphere device claim
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device claim [--device-id]
+                          [--device-ip]
+                          [--device-location]
+                          [--force]
+                          [--tenant]
+  optionalParameters:
+  - name: --device-id -i
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+  - name: --force
+    summary: ''
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_enable_cloud_test
+  name: azsphere device enable-cloud-test
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device enable-cloud-test [--device-group]
+                                      [--device-ip]
+                                      [--device-location]
+                                      [--product]
+                                      [--tenant]
+  optionalParameters:
+  - name: --device-group -g
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+  - name: --product -p
+    summary: ''
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_enable_development
+  name: azsphere device enable-development
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device enable-development [--device-group]
+                                       [--device-ip]
+                                       [--device-location]
+                                       [--enable-rt-core-debugging]
+                                       [--product]
+                                       [--tenant]
+  optionalParameters:
+  - name: --device-group -g
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+  - name: --enable-rt-core-debugging -r
+    summary: ''
+    description: ''
+  - name: --product -p
+    summary: ''
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_list_attached
+  name: azsphere device list-attached
+  summary: ''
+  description: ''
+  syntax: azsphere device list-attached
+- uid: ext_azsphere-mammoth_azsphere_device_prep_debug
+  name: azsphere device prep-debug
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device prep-debug [--device-group]
+                               [--deviceip]
+                               [--devicelocation]
+                               [--enable-rt-core-debugging]
+                               [--product]
+  optionalParameters:
+  - name: --device-group -g
+    summary: ''
+    description: ''
+  - name: --deviceip -ip
+    summary: ''
+    description: ''
+  - name: --devicelocation -l
+    summary: ''
+    description: ''
+  - name: --enable-rt-core-debugging -r
+    summary: ''
+    description: ''
+  - name: --product -p
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_prep_field
+  name: azsphere device prep-field
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device prep-field [--device-group]
+                               [--deviceip]
+                               [--devicelocation]
+                               [--product]
+  optionalParameters:
+  - name: --device-group -g
+    summary: ''
+    description: ''
+  - name: --deviceip -ip
+    summary: ''
+    description: ''
+  - name: --devicelocation -l
+    summary: ''
+    description: ''
+  - name: --product -p
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_recover
+  name: azsphere device recover
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device recover [--capability]
+                            [--device-ip]
+                            [--device-location]
+                            [--images]
+  optionalParameters:
+  - name: --capability -c
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+  - name: --images -i
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_rescan_attached
+  name: azsphere device rescan-attached
+  summary: ''
+  description: ''
+  syntax: azsphere device rescan-attached
+- uid: ext_azsphere-mammoth_azsphere_device_restart
+  name: azsphere device restart
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device restart [--device-ip]
+                            [--device-location]
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_show
+  name: azsphere device show
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device show [--device-id]
+                         [--device-ip]
+                         [--device-location]
+                         [--tenant]
+  optionalParameters:
+  - name: --device-id -i
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_show_attached
+  name: azsphere device show-attached
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device show-attached [--device-ip]
+                                  [--device-location]
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_show_deployment_status
+  name: azsphere device show-deployment-status
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device show-deployment-status [--device-ip]
+                                           [--device-location]
+                                           [--tenant]
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_show_os_version
+  name: azsphere device show-os-version
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device show-os-version [--device-ip]
+                                    [--device-location]
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_update
+  name: azsphere device update
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device update [--device-group]
+                           [--device-id]
+                           [--device-ip]
+                           [--device-location]
+                           [--tenant]
+  optionalParameters:
+  - name: --device-group -g
+    summary: ''
+    description: ''
+  - name: --device-id -i
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+commands:
+- ext_azsphere-mammoth_azsphere_device_app
+- ext_azsphere-mammoth_azsphere_device_app_show_quota
+- ext_azsphere-mammoth_azsphere_device_app_show_status
+- ext_azsphere-mammoth_azsphere_device_app_start
+- ext_azsphere-mammoth_azsphere_device_app_stop
+- ext_azsphere-mammoth_azsphere_device_certificate
+- ext_azsphere-mammoth_azsphere_device_certificate_add
+- ext_azsphere-mammoth_azsphere_device_certificate_delete
+- ext_azsphere-mammoth_azsphere_device_certificate_list
+- ext_azsphere-mammoth_azsphere_device_certificate_show
+- ext_azsphere-mammoth_azsphere_device_certificate_show_quota
+- ext_azsphere-mammoth_azsphere_device_claim
+- ext_azsphere-mammoth_azsphere_device_enable_cloud_test
+- ext_azsphere-mammoth_azsphere_device_enable_development
+- ext_azsphere-mammoth_azsphere_device_image
+- ext_azsphere-mammoth_azsphere_device_image_list_installed
+- ext_azsphere-mammoth_azsphere_device_image_list_targeted
+- ext_azsphere-mammoth_azsphere_device_list_attached
+- ext_azsphere-mammoth_azsphere_device_manufacturing_state
+- ext_azsphere-mammoth_azsphere_device_manufacturing_state_show
+- ext_azsphere-mammoth_azsphere_device_manufacturing_state_update
+- ext_azsphere-mammoth_azsphere_device_network
+- ext_azsphere-mammoth_azsphere_device_network_list_firewall_rules
+- ext_azsphere-mammoth_azsphere_device_network_list_interfaces
+- ext_azsphere-mammoth_azsphere_device_network_show_diagnostics
+- ext_azsphere-mammoth_azsphere_device_network_show_status
+- ext_azsphere-mammoth_azsphere_device_network_update_interface
+- ext_azsphere-mammoth_azsphere_device_prep_debug
+- ext_azsphere-mammoth_azsphere_device_prep_field
+- ext_azsphere-mammoth_azsphere_device_recover
+- ext_azsphere-mammoth_azsphere_device_rescan_attached
+- ext_azsphere-mammoth_azsphere_device_restart
+- ext_azsphere-mammoth_azsphere_device_show
+- ext_azsphere-mammoth_azsphere_device_show_attached
+- ext_azsphere-mammoth_azsphere_device_show_deployment_status
+- ext_azsphere-mammoth_azsphere_device_show_os_version
+- ext_azsphere-mammoth_azsphere_device_sideload
+- ext_azsphere-mammoth_azsphere_device_sideload_delete
+- ext_azsphere-mammoth_azsphere_device_sideload_deploy
+- ext_azsphere-mammoth_azsphere_device_sideload_install
+- ext_azsphere-mammoth_azsphere_device_sideload_stage
+- ext_azsphere-mammoth_azsphere_device_update
+- ext_azsphere-mammoth_azsphere_device_wifi
+- ext_azsphere-mammoth_azsphere_device_wifi_add
+- ext_azsphere-mammoth_azsphere_device_wifi_disable
+- ext_azsphere-mammoth_azsphere_device_wifi_enable
+- ext_azsphere-mammoth_azsphere_device_wifi_forget
+- ext_azsphere-mammoth_azsphere_device_wifi_list
+- ext_azsphere-mammoth_azsphere_device_wifi_reload_config
+- ext_azsphere-mammoth_azsphere_device_wifi_scan
+- ext_azsphere-mammoth_azsphere_device_wifi_show
+- ext_azsphere-mammoth_azsphere_device_wifi_show_status
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

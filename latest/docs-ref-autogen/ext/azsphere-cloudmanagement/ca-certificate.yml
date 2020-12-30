@@ -1,0 +1,113 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-cloudmanagement_azsphere_ca_certificate
+name: azsphere ca-certificate
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-cloudmanagement_azsphere_ca_certificate_download
+  name: azsphere ca-certificate download
+  summary: Download the ca-certificate.
+  description: (ca-certificate download).
+  syntax: >-
+    azsphere ca-certificate download --destination-file
+                                     [--index]
+                                     [--tenant]
+                                     [--thumbprint]
+  requiredParameters:
+  - isRequired: true
+    name: --destination-file -f
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --index
+    summary: ''
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+  - name: --thumbprint
+    summary: ''
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_ca_certificate_download_chain
+  name: azsphere ca-certificate download-chain
+  summary: Download the ca-certificate chain.
+  description: (ca-certificate download-chain).
+  syntax: >-
+    azsphere ca-certificate download-chain --destination-file
+                                           [--index]
+                                           [--tenant]
+                                           [--thumbprint]
+  requiredParameters:
+  - isRequired: true
+    name: --destination-file -f
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --index
+    summary: ''
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+  - name: --thumbprint
+    summary: ''
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_ca_certificate_download_proof
+  name: azsphere ca-certificate download-proof
+  summary: Download the ca-certificate verification proof.
+  description: (ca-certificate download-proof).
+  syntax: >-
+    azsphere ca-certificate download-proof --destination-file
+                                           --verification-code
+                                           [--index]
+                                           [--tenant]
+                                           [--thumbprint]
+  requiredParameters:
+  - isRequired: true
+    name: --destination-file -f
+    summary: ''
+    description: ''
+  - isRequired: true
+    name: --verification-code -c
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --index
+    summary: ''
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+  - name: --thumbprint
+    summary: ''
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_ca_certificate_list
+  name: azsphere ca-certificate list
+  summary: Gets a list of public Tenant CA Certificates for the specified Azure Sphere tenant Id.
+  description: Gets a list of public Tenant CA Certificates for the specified Azure Sphere tenant Id.
+  syntax: azsphere ca-certificate list [--tenant]
+  optionalParameters:
+  - name: --tenant -t
+    summary: The Id of the Azure Sphere tenant.
+    description: ''
+commands:
+- ext_azsphere-cloudmanagement_azsphere_ca_certificate_download
+- ext_azsphere-cloudmanagement_azsphere_ca_certificate_download_chain
+- ext_azsphere-cloudmanagement_azsphere_ca_certificate_download_proof
+- ext_azsphere-cloudmanagement_azsphere_ca_certificate_list
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

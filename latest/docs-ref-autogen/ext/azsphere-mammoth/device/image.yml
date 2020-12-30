@@ -1,0 +1,69 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-mammoth_azsphere_device_image
+name: azsphere device image
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-mammoth_azsphere_device_image_list_installed
+  name: azsphere device image list-installed
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device image list-installed [--device-ip]
+                                         [--device-location]
+                                         [--full]
+  optionalParameters:
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+  - name: --full -f
+    summary: ''
+    description: ''
+- uid: ext_azsphere-mammoth_azsphere_device_image_list_targeted
+  name: azsphere device image list-targeted
+  summary: ''
+  description: ''
+  syntax: >-
+    azsphere device image list-targeted [--device-id]
+                                        [--device-ip]
+                                        [--device-location]
+                                        [--full]
+                                        [--tenant]
+  optionalParameters:
+  - name: --device-id -i
+    summary: ''
+    description: ''
+  - name: --device-ip
+    summary: ''
+    description: ''
+  - name: --device-location
+    summary: ''
+    description: ''
+  - name: --full -f
+    summary: ''
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+commands:
+- ext_azsphere-mammoth_azsphere_device_image_list_installed
+- ext_azsphere-mammoth_azsphere_device_image_list_targeted
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

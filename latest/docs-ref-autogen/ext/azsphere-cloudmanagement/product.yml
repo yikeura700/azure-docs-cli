@@ -1,0 +1,106 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-cloudmanagement_azsphere_product
+name: azsphere product
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-cloudmanagement_azsphere_product_create
+  name: azsphere product create
+  summary: Create a new product in your Tenant (product create).
+  description: ''
+  syntax: >-
+    azsphere product create --name
+                            [--description]
+                            [--no-default-device-groups]
+                            [--tenant]
+  requiredParameters:
+  - isRequired: true
+    name: --name -n
+    summary: ''
+    description: ''
+  optionalParameters:
+  - name: --description -d
+    summary: ''
+    description: ''
+  - name: --no-default-device-groups -g
+    summary: ''
+    description: ''
+  - name: --tenant -t
+    summary: ''
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_product_list
+  name: azsphere product list
+  summary: List all products in your Azure Sphere tenant (product list).
+  description: ''
+  syntax: azsphere product list [--tenant]
+  optionalParameters:
+  - name: --tenant -t
+    summary: ''
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_product_show
+  name: azsphere product show
+  summary: Gets a Product by ID.
+  description: Gets a Product by ID.
+  syntax: >-
+    azsphere product show --product
+                          [--tenant]
+  requiredParameters:
+  - isRequired: true
+    name: --product -p
+    summary: The ID of the Product to retrieve.
+    description: ''
+  optionalParameters:
+  - name: --tenant -t
+    summary: The Azure Sphere tenant ID.
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_product_update
+  name: azsphere product update
+  summary: Patches the Product with the specified ID.
+  description: Patches the Product with the specified ID.
+  syntax: >-
+    azsphere product update --product
+                            [--new-description]
+                            [--new-name]
+                            [--tenant]
+  requiredParameters:
+  - isRequired: true
+    name: --product -p
+    summary: The Product ID.
+    description: ''
+  optionalParameters:
+  - name: --new-description -d
+    summary: The description of the product.
+    description: ''
+  - name: --new-name -n
+    summary: The name of the product.
+    description: ''
+  - name: --tenant -t
+    summary: The Azure Sphere tenant ID.
+    description: ''
+commands:
+- ext_azsphere-cloudmanagement_azsphere_product_create
+- ext_azsphere-cloudmanagement_azsphere_product_device
+- ext_azsphere-cloudmanagement_azsphere_product_device_list
+- ext_azsphere-cloudmanagement_azsphere_product_device_show_count
+- ext_azsphere-cloudmanagement_azsphere_product_device_group
+- ext_azsphere-cloudmanagement_azsphere_product_device_group_create_defaults
+- ext_azsphere-cloudmanagement_azsphere_product_device_group_list
+- ext_azsphere-cloudmanagement_azsphere_product_list
+- ext_azsphere-cloudmanagement_azsphere_product_show
+- ext_azsphere-cloudmanagement_azsphere_product_update
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

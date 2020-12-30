@@ -1,0 +1,41 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-mammoth_azsphere
+name: azsphere-mammoth
+summary: Azure Sphere command line tool.
+description: ''
+directCommands:
+- uid: ext_azsphere-mammoth_azsphere_register_user
+  name: azsphere register-user
+  summary: ''
+  description: ''
+  syntax: azsphere register-user --new-user
+  requiredParameters:
+  - isRequired: true
+    name: --new-user -u
+    summary: ''
+    description: ''
+commands:
+- ext_azsphere-mammoth_azsphere_device
+- ext_azsphere-mammoth_azsphere_hardware_definition
+- ext_azsphere-mammoth_azsphere_image
+- ext_azsphere-mammoth_azsphere_image_package
+- ext_azsphere-mammoth_azsphere_register_user
+- ext_azsphere-mammoth_azsphere_role
+- ext_azsphere-mammoth_azsphere_tenant
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata:
+  description: Azure Sphere command line tool.

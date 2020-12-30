@@ -1,0 +1,100 @@
+### YamlMime:AzureCLIGroup
+uid: ext_azsphere-cloudmanagement_azsphere_role
+name: azsphere role
+summary: ''
+description: ''
+directCommands:
+- uid: ext_azsphere-cloudmanagement_azsphere_role_add
+  name: azsphere role add
+  summary: Assign a role to principal.
+  description: Assign a role to principal.
+  syntax: >-
+    azsphere role add --role
+                      --user
+                      [--tenant]
+  requiredParameters:
+  - isRequired: true
+    name: --role -r
+    summary: The name of the role to assign to userId. Some supported role names include 'Administrator' and 'Contributor'. For a list of all supported role names, use /v2/tenants/{tenantId}/users/{userId}/role API.
+    description: ''
+  - isRequired: true
+    name: --user -u
+    summary: Principal ID or email address to assign role to.
+    description: ''
+  optionalParameters:
+  - name: --tenant -t
+    summary: The tenant ID in which to assign the role..
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_role_delete
+  name: azsphere role delete
+  summary: Unassign a role from principal.
+  description: Unassign a role from principal.
+  syntax: >-
+    azsphere role delete --role
+                         --user
+                         [--tenant]
+  requiredParameters:
+  - isRequired: true
+    name: --role -r
+    summary: The name of the role to unassign from userId. Some supported role names include 'Administrator' and 'Contributor'. For a list of all supported role names, use /v2/tenants/{tenantId}/users/{userId}/role API.
+    description: ''
+  - isRequired: true
+    name: --user -u
+    summary: Principal ID or email address to unassign role.
+    description: ''
+  optionalParameters:
+  - name: --tenant -t
+    summary: The tenant ID in which to unassign the role.
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_role_list
+  name: azsphere role list
+  summary: Get all of the principals (user) which have roles assigned to them within the scope of a tenant.
+  description: Get all of the principals (user) which have roles assigned to them within the scope of a tenant.
+  syntax: azsphere role list [--tenant]
+  optionalParameters:
+  - name: --tenant -t
+    summary: The tenant ID in which to get roles.
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_role_show
+  name: azsphere role show
+  summary: Get the roles assigned to a user within the scope of a tenant.
+  description: Get the roles assigned to a user within the scope of a tenant.
+  syntax: >-
+    azsphere role show --user
+                       [--tenant]
+  requiredParameters:
+  - isRequired: true
+    name: --user -u
+    summary: Principal ID or email address to get roles for..
+    description: ''
+  optionalParameters:
+  - name: --tenant -t
+    summary: The tenant ID in which to get roles.
+    description: ''
+- uid: ext_azsphere-cloudmanagement_azsphere_role_show_types
+  name: azsphere role show-types
+  summary: Get the list of currently available roles.
+  description: 'Get the list of currently available roles.  :keyword callable cls: A custom type or function that will be passed the direct response :return: list of str, or the result of cls(response) :rtype: list[str] :raises: ~azure.core.exceptions.HttpResponseError.'
+  syntax: azsphere role show-types
+commands:
+- ext_azsphere-cloudmanagement_azsphere_role_add
+- ext_azsphere-cloudmanagement_azsphere_role_delete
+- ext_azsphere-cloudmanagement_azsphere_role_list
+- ext_azsphere-cloudmanagement_azsphere_role_show
+- ext_azsphere-cloudmanagement_azsphere_role_show_types
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}
