@@ -3,6 +3,35 @@ uid: az_monitor_log_analytics
 name: az monitor log-analytics
 summary: Manage Azure log analytics.
 description: ''
+directCommands:
+- uid: az_monitor_log_analytics_query
+  name: az monitor log-analytics query
+  summary: Query a Log Analytics workspace.
+  description: ''
+  syntax: >-
+    az monitor log-analytics query --analytics-query
+                                   --workspace
+                                   [--timespan]
+                                   [--workspaces]
+  examples:
+  - summary: Execute a simple query over past 3.5 days.
+    syntax: az monitor log-analytics query -w b8317023-66e4-4edc-8a5b-7c002b22f92f --analytics-query "AzureActivity | summarize count() by bin(timestamp, 1h)" -t P3DT12H
+  requiredParameters:
+  - isRequired: true
+    name: --analytics-query
+    summary: Query to execute over Log Analytics data.
+    description: ''
+  - isRequired: true
+    name: --workspace -w
+    summary: GUID of the Log Analytics Workspace.
+    description: ''
+  optionalParameters:
+  - name: --timespan -t
+    summary: Timespan over which to query. Defaults to querying all available data.
+    description: ''
+  - name: --workspaces
+    summary: Additional workspaces to union data for querying. Specify additional workspace IDs separated by space.
+    description: ''
 commands:
 - az_monitor_log_analytics_cluster
 - az_monitor_log_analytics_cluster_create
@@ -57,6 +86,13 @@ commands:
 - az_monitor_log_analytics_workspace_table_show
 - az_monitor_log_analytics_workspace_table_update
 - az_monitor_log_analytics_workspace_update
+- az_monitor_log_analytics_query
+- az_monitor_log_analytics_solution
+- az_monitor_log_analytics_solution_create
+- az_monitor_log_analytics_solution_delete
+- az_monitor_log_analytics_solution_list
+- az_monitor_log_analytics_solution_show
+- az_monitor_log_analytics_solution_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

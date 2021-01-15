@@ -1183,5 +1183,653 @@
             "isRequired": "false",
             "summary": "Increase logging verbosity. Use --debug for full debug logs."
         }
-    ] 
+    ],
+    "ServicePages":[
+        {
+          "name": "Azure Machine Learning",
+          "summary": "description for Azure Machine Learning",
+          "commandGroups": ["az batchai", "az ml"],
+          "children": null
+        },
+        {
+          "name": "Azure Managed Services",
+          "summary": "description for Azure Managed Services",
+          "commandGroups": ["az managedservices"],
+          "children": null
+        },
+        {
+          "name": "Microsoft AI",
+          "summary": "description for Microsoft AI",
+          "commandGroups": ["az ai-did-you-mean-this", "az ai-examples"],
+          "children": null
+        },
+        {
+          "name": "Microsoft Windows",
+          "summary": "description for Microsoft Windows",
+          "commandGroups": ["az baremetalinstance"],
+          "children": null
+        },
+        {
+          "name": "Visual Studio",
+          "summary": "description for Visual Studio",
+          "commandGroups": ["az codespace"],
+          "children": null
+        },
+        {
+          "name": "Azure IoT",
+          "summary": "description for Azure IoT",
+          "commandGroups": ["az dt", "az iot", "az iotcentral"],
+          "children": null
+        },
+        {
+          "name": "Azure Monitor",
+          "summary": "description for Azure Monitor",
+          "commandGroups": ["az footprint", "az monitor"],
+          "children": null
+        },
+        {
+          "name": "Microsoft Partner Network",
+          "summary": "description for Microsoft Partner Network",
+          "commandGroups": ["az managementpartner"],
+          "children": null
+        },
+        {
+          "name": "Azure Stack HCI",
+          "summary": "description for Azure Stack HCI",
+          "commandGroups": ["az stack-hci"],
+          "children": null
+        },
+        {
+          "name": "Azure Support",
+          "summary": "description for Azure Support",
+          "commandGroups": ["az support"],
+          "children": null
+        },
+        {
+          "name": "Azure core",
+          "summary": "description for Azure core",
+          "commandGroups": ["az account", "az rest"],
+          "children": null
+        },
+        {
+          "name": "Azure Container Registries",
+          "summary": "description for Azure Container Registries",
+          "commandGroups": ["az acr"],
+          "children": null
+        },
+        {
+          "name": "Azure Container Services",
+          "summary": "description for Azure Container Services",
+          "commandGroups": ["az acs"],
+          "children": null
+        },
+        {
+          "name": "Azure Active Directory",
+          "summary": "description for Azure Active Directory",
+          "commandGroups": ["az ad", "az identity"],
+          "children": null
+        },
+        {
+          "name": "Azure Advisor",
+          "summary": "description for Azure Advisor",
+          "commandGroups": ["az advisor"],
+          "children": null
+        },
+        {
+          "name": "Azure Kubernetes Service",
+          "summary": "description for Azure Kubernetes Service",
+          "commandGroups": ["az aks", "az connectedk8s", "az k8sconfiguration"],
+          "children": null
+        },
+        {
+          "name": "Azure Media Services",
+          "summary": "description for Azure Media Services",
+          "commandGroups": ["az ams"],
+          "children": null
+        },
+        {
+          "name": "API Management",
+          "summary": "description for API Management",
+          "commandGroups": ["az apim"],
+          "children": null
+        },
+        {
+          "name": "Azure App Configuration",
+          "summary": "description for Azure App Configuration",
+          "commandGroups": ["az appconfig"],
+          "children": null
+        },
+        {
+          "name": "Azure App Service",
+          "summary": "description for Azure App Service",
+          "commandGroups": ["az appservice"],
+          "children": null
+        },
+        {
+          "name": "Azure Red Hat OpenShift",
+          "summary": "description for Azure Red Hat OpenShift",
+          "commandGroups": ["az aro", "az openshift"],
+          "children": null
+        },
+        {
+          "name": "Azure Artifacts",
+          "summary": "description for Azure Artifacts",
+          "commandGroups": ["az artifacts"],
+          "children": null
+        },
+        {
+          "name": "Azure Backup",
+          "summary": "description for Azure Backup",
+          "commandGroups": ["az backup"],
+          "children": null
+        },
+        {
+          "name": "Azure Batch",
+          "summary": "description for Azure Batch",
+          "commandGroups": ["az batch"],
+          "children": null
+        },
+        {
+          "name": "Azure Cost Management + Billing",
+          "summary": "description for Azure Cost Management + Billing",
+          "commandGroups": ["az billing", "az consumption", "az costmanagement"],
+          "children": null
+        },
+        {
+          "name": "Azure Boards",
+          "summary": "description for Azure Boards",
+          "commandGroups": ["az boards"],
+          "children": null
+        },
+        {
+          "name": "Azure Bot Service",
+          "summary": "description for Azure Bot Service",
+          "commandGroups": ["az bot"],
+          "children": null
+        },
+        {
+          "name": "Azure CLI",
+          "summary": "description for Azure CLI",
+          "commandGroups": [
+            "az cache",
+            "az config",
+            "az configure",
+            "az extension",
+            "az feedback",
+            "az interactive",
+            "az local-context",
+            "az login",
+            "az logout",
+            "az self-test",
+            "az upgrade",
+            "az version",
+            "az alias",
+            "az cli-translator",
+            "az demo",
+            "az fzf"
+          ],
+          "children": null
+        },
+        {
+          "name": "Azure Network",
+          "summary": "description for Azure Network",
+          "commandGroups": ["az cdn", "az network", "az internet-analyzer", "az peering"],
+          "children": null
+        },
+        {
+          "name": "Azure cloud services",
+          "summary": "description for Azure cloud services",
+          "commandGroups": ["az cloud"],
+          "children": null
+        },
+        {
+          "name": "Azure Cognitive Service",
+          "summary": "description for Azure Cognitive Service",
+          "commandGroups": ["az cognitiveservices"],
+          "children": null
+        },
+        {
+          "name": "Azure Container Instances",
+          "summary": "description for Azure Container Instances",
+          "commandGroups": ["az container"],
+          "children": null
+        },
+        {
+          "name": "Azure Cosmos DB",
+          "summary": "description for Azure Cosmos DB",
+          "commandGroups": ["az cosmosdb"],
+          "children": null
+        },
+        {
+          "name": "Azure Stack Edge",
+          "summary": "description for Azure Stack Edge",
+          "commandGroups": ["az databoxedge"],
+          "children": null
+        },
+        {
+          "name": "Azure Resource Manager",
+          "summary": "description for Azure Resource Manager",
+          "commandGroups": [
+            "az deployment",
+            "az deploymentmanager",
+            "az deployment-scripts",
+            "az group",
+            "az lock",
+            "az provider",
+            "az resource",
+            "az tag",
+            "az ts"
+          ],
+          "children": null
+        },
+        {
+          "name": "Azure DevOps",
+          "summary": "description for Azure DevOps",
+          "commandGroups": ["az devops"],
+          "children": null
+        },
+        {
+          "name": "Azure Disk Storage",
+          "summary": "description for Azure Disk Storage",
+          "commandGroups": ["az disk", "az disk-access", "az disk-encryption-set"],
+          "children": null
+        },
+        {
+          "name": "Azure Data Lake Analytics",
+          "summary": "description for Azure Data Lake Analytics",
+          "commandGroups": ["az dla"],
+          "children": null
+        },
+        {
+          "name": "Azure Data Lake Storage",
+          "summary": "description for Azure Data Lake Storage",
+          "commandGroups": ["az dls"],
+          "children": null
+        },
+        {
+          "name": "Azure Data Migration",
+          "summary": "description for Azure Data Migration",
+          "commandGroups": ["az dms"],
+          "children": null
+        },
+        {
+          "name": "Azure Event Grid",
+          "summary": "description for Azure Event Grid",
+          "commandGroups": ["az eventgrid"],
+          "children": null
+        },
+        {
+          "name": "Azure Event Hubs",
+          "summary": "description for Azure Event Hubs",
+          "commandGroups": ["az eventhubs"],
+          "children": null
+        },
+        {
+          "name": "Azure resource providers",
+          "summary": "description for Azure resource providers",
+          "commandGroups": ["az feature"],
+          "children": null
+        },
+        {
+          "name": "Azure Application Insights",
+          "summary": "description for Azure Application Insights",
+          "commandGroups": ["az find"],
+          "children": null
+        },
+        {
+          "name": "Azure Functions",
+          "summary": "description for Azure Functions",
+          "commandGroups": ["az functionapp"],
+          "children": null
+        },
+        {
+          "name": "Azure HDInsight",
+          "summary": "description for Azure HDInsight",
+          "commandGroups": ["az hdinsight"],
+          "children": null
+        },
+        {
+          "name": "Azure Virtual Machines",
+          "summary": "description for Azure Virtual Machines",
+          "commandGroups": [
+            "az image",
+            "az ppg",
+            "az sig",
+            "az vm",
+            "az desktopvirtualization",
+            "az maintenance",
+            "az ssh"
+          ],
+          "children": null
+        },
+        {
+          "name": "Azure Key Vault",
+          "summary": "description for Azure Key Vault",
+          "commandGroups": ["az keyvault"],
+          "children": null
+        },
+        {
+          "name": "Azure Data Explorer",
+          "summary": "description for Azure Data Explorer",
+          "commandGroups": ["az kusto"],
+          "children": null
+        },
+        {
+          "name": "Azure DevTest Labs",
+          "summary": "description for Azure DevTest Labs",
+          "commandGroups": ["az lab"],
+          "children": null
+        },
+        {
+          "name": "Azure Managed Applications",
+          "summary": "description for Azure Managed Applications",
+          "commandGroups": ["az managedapp"],
+          "children": null
+        },
+        {
+          "name": "Azure Maps",
+          "summary": "description for Azure Maps",
+          "commandGroups": ["az maps"],
+          "children": null
+        },
+        {
+          "name": "Azure Database for MariaDB",
+          "summary": "description for Azure Database for MariaDB",
+          "commandGroups": ["az mariadb"],
+          "children": null
+        },
+        {
+          "name": "Azure Database for MySQL",
+          "summary": "description for Azure Database for MySQL",
+          "commandGroups": ["az mysql"],
+          "children": null
+        },
+        {
+          "name": "Azure NetApp Files",
+          "summary": "description for Azure NetApp Files",
+          "commandGroups": ["az netappfiles"],
+          "children": null
+        },
+        {
+          "name": "Azure Pipelines",
+          "summary": "description for Azure Pipelines",
+          "commandGroups": ["az pipelines"],
+          "children": null
+        },
+        {
+          "name": "Azure Policy",
+          "summary": "description for Azure Policy",
+          "commandGroups": ["az policy", "az guestconfig"],
+          "children": null
+        },
+        {
+          "name": "Azure Database for PostgreSQL",
+          "summary": "description for Azure Database for PostgreSQL",
+          "commandGroups": ["az postgres"],
+          "children": null
+        },
+        {
+          "name": "Azure Cache for Redis",
+          "summary": "description for Azure Cache for Redis",
+          "commandGroups": ["az redis"],
+          "children": null
+        },
+        {
+          "name": "Azure Relay",
+          "summary": "description for Azure Relay",
+          "commandGroups": ["az relay"],
+          "children": null
+        },
+        {
+          "name": "Azure Repos",
+          "summary": "description for Azure Repos",
+          "commandGroups": ["az repos"],
+          "children": null
+        },
+        {
+          "name": "Azure Reservations",
+          "summary": "description for Azure Reservations",
+          "commandGroups": ["az reservations"],
+          "children": null
+        },
+        {
+          "name": "Azure role-based access Control",
+          "summary": "description for Azure role-based access Control",
+          "commandGroups": ["az role"],
+          "children": null
+        },
+        {
+          "name": "Azure Cognitive Search",
+          "summary": "description for Azure Cognitive Search",
+          "commandGroups": ["az search"],
+          "children": null
+        },
+        {
+          "name": "Azure Security Center",
+          "summary": "description for Azure Security Center",
+          "commandGroups": ["az security"],
+          "children": null
+        },
+        {
+          "name": "Azure Service Bus Messaging",
+          "summary": "description for Azure Service Bus Messaging",
+          "commandGroups": ["az servicebus"],
+          "children": null
+        },
+        {
+          "name": "Azure Service Fabric",
+          "summary": "description for Azure Service Fabric",
+          "commandGroups": ["az sf"],
+          "children": null
+        },
+        {
+          "name": "Azure SignalR",
+          "summary": "description for Azure SignalR",
+          "commandGroups": ["az signalr"],
+          "children": null
+        },
+        {
+          "name": "Azure Storage",
+          "summary": "description for Azure Storage",
+          "commandGroups": [
+            "az snapshot",
+            "az storage",
+            "az import-export",
+            "az storagesync"
+          ],
+          "children": null
+        },
+        {
+          "name": "Azure SQL Server",
+          "summary": "description for Azure SQL Server",
+          "commandGroups": ["az sql"],
+          "children": null
+        },
+        {
+          "name": "Azure Web Apps",
+          "summary": "description for Azure Web Apps",
+          "commandGroups": ["az staticwebapp", "az webapp"],
+          "children": null
+        },
+        {
+          "name": "Azure Synapse Analytics",
+          "summary": "description for Azure Synapse Analytics",
+          "commandGroups": ["az synapse"],
+          "children": null
+        },
+        {
+          "name": "Azure Virtual Machine scale sets",
+          "summary": "description for Azure Virtual Machine scale sets",
+          "commandGroups": ["az vmss"],
+          "children": null
+        },
+        {
+          "name": "Azure Attestation",
+          "summary": "description for Azure Attestation",
+          "commandGroups": ["az attestation"],
+          "children": null
+        },
+        {
+          "name": "Azure Automation",
+          "summary": "description for Azure Automation",
+          "commandGroups": ["az automation"],
+          "children": null
+        },
+        {
+          "name": "Azure Blockchain",
+          "summary": "description for Azure Blockchain",
+          "commandGroups": ["az blockchain"],
+          "children": null
+        },
+        {
+          "name": "Azure Blueprint",
+          "summary": "description for Azure Blueprint",
+          "commandGroups": ["az blueprint"],
+          "children": null
+        },
+        {
+          "name": "Azure Communication Service",
+          "summary": "description for Azure Communication Service",
+          "commandGroups": ["az communication"],
+          "children": null
+        },
+        {
+          "name": "Azure Arc",
+          "summary": "description for Azure Arc",
+          "commandGroups": ["az connectedmachine"],
+          "children": null
+        },
+        {
+          "name": "Azure VMWare Solution",
+          "summary": "description for Azure VMWare Solution",
+          "commandGroups": ["az csvmware", "az vmware"],
+          "children": null
+        },
+        {
+          "name": "Azure Custom Providers",
+          "summary": "description for Azure Custom Providers",
+          "commandGroups": ["az custom-providers"],
+          "children": null
+        },
+        {
+          "name": "Azure Databox",
+          "summary": "description for Azure Databox",
+          "commandGroups": ["az databox"],
+          "children": null
+        },
+        {
+          "name": "Azure Databricks",
+          "summary": "description for Azure Databricks",
+          "commandGroups": ["az databricks"],
+          "children": null
+        },
+        {
+          "name": "Azure Data Factory",
+          "summary": "description for Azure Data Factory",
+          "commandGroups": ["az datafactory"],
+          "children": null
+        },
+        {
+          "name": "Azure Data Share",
+          "summary": "description for Azure Data Share",
+          "commandGroups": ["az datashare"],
+          "children": null
+        },
+        {
+          "name": "Azure Dedicated HSM",
+          "summary": "description for Azure Dedicated HSM",
+          "commandGroups": ["az dedicated-hsm"],
+          "children": null
+        },
+        {
+          "name": "Azure Graph",
+          "summary": "description for Azure Graph",
+          "commandGroups": ["az graph"],
+          "children": null
+        },
+        {
+          "name": "Azure Lab Services",
+          "summary": "description for Azure Lab Services",
+          "commandGroups": ["az hack"],
+          "children": null
+        },
+        {
+          "name": "SAP HANA on Azure",
+          "summary": "description for SAP HANA on Azure",
+          "commandGroups": ["az hanainstance", "az sapmonitor"],
+          "children": null
+        },
+        {
+          "name": "Azure API for FHIR",
+          "summary": "description for Azure API for FHIR",
+          "commandGroups": ["az healthcareapis"],
+          "children": null
+        },
+        {
+          "name": "Azure HPC Cache",
+          "summary": "description for Azure HPC Cache",
+          "commandGroups": ["az hpc-cache"],
+          "children": null
+        },
+        {
+          "name": "Azure Logic Apps",
+          "summary": "description for Azure Logic Apps",
+          "commandGroups": ["az logic"],
+          "children": null
+        },
+        {
+          "name": "Azure Service Fabric Mesh",
+          "summary": "description for Azure Service Fabric Mesh",
+          "commandGroups": ["az mesh"],
+          "children": null
+        },
+        {
+          "name": "Azure Notification Hubs",
+          "summary": "description for Azure Notification Hubs",
+          "commandGroups": ["az notification-hub"],
+          "children": null
+        },
+        {
+          "name": "Azure portal",
+          "summary": "description for Azure portal",
+          "commandGroups": ["az portal"],
+          "children": null
+        },
+        {
+          "name": "Power BI",
+          "summary": "description for Power BI",
+          "commandGroups": ["az powerbi"],
+          "children": null
+        },
+        {
+          "name": "Azure Sentinel",
+          "summary": "description for Azure Sentinel",
+          "commandGroups": ["az sentinel"],
+          "children": null
+        },
+        {
+          "name": "Azure Spatial Anchors",
+          "summary": "description for Azure Spatial Anchors",
+          "commandGroups": ["az spatial-anchors-account"],
+          "children": null
+        },
+        {
+          "name": "Azure Spring Cloud",
+          "summary": "description for Azure Spring Cloud",
+          "commandGroups": ["az spring-cloud"],
+          "children": null
+        },
+        {
+          "name": "Azure Stream Analytics",
+          "summary": "description for Azure Stream Analytics",
+          "commandGroups": ["az stream-analytics"],
+          "children": null
+        },
+        {
+          "name": "Azure Time Series Insights",
+          "summary": "description for Azure Time Series Insights",
+          "commandGroups": ["az timeseriesinsights"],
+          "children": null
+        }
+      ]      
 }

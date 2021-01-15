@@ -1,0 +1,104 @@
+### YamlMime:AzureCLIGroup
+uid: az_datafactory
+name: az datafactory
+extensionInformation: >-
+  > [!Note]
+
+  > This reference is part of the **datafactory** extension for Azure CLI and requires version 2.11.0 or higher.  The extension will automatically install the first time you run an **az datafactory** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
+summary: ''
+description: ''
+commands:
+- az_datafactory_activity_run
+- az_datafactory_activity_run_query_by_pipeline_run
+- az_datafactory_dataset
+- az_datafactory_dataset_create
+- az_datafactory_dataset_delete
+- az_datafactory_dataset_list
+- az_datafactory_dataset_show
+- az_datafactory_dataset_update
+- az_datafactory_factory
+- az_datafactory_factory_configure_factory_repo
+- az_datafactory_factory_create
+- az_datafactory_factory_delete
+- az_datafactory_factory_get_data_plane_access
+- az_datafactory_factory_get_git_hub_access_token
+- az_datafactory_factory_list
+- az_datafactory_factory_show
+- az_datafactory_factory_update
+- az_datafactory_integration_runtime
+- az_datafactory_integration_runtime_delete
+- az_datafactory_integration_runtime_get_connection_info
+- az_datafactory_integration_runtime_get_monitoring_data
+- az_datafactory_integration_runtime_get_status
+- az_datafactory_integration_runtime_linked_integration_runtime
+- az_datafactory_integration_runtime_linked_integration_runtime_create
+- az_datafactory_integration_runtime_list
+- az_datafactory_integration_runtime_list_auth_key
+- az_datafactory_integration_runtime_managed
+- az_datafactory_integration_runtime_managed_create
+- az_datafactory_integration_runtime_regenerate_auth_key
+- az_datafactory_integration_runtime_remove_link
+- az_datafactory_integration_runtime_self_hosted
+- az_datafactory_integration_runtime_self_hosted_create
+- az_datafactory_integration_runtime_show
+- az_datafactory_integration_runtime_start
+- az_datafactory_integration_runtime_stop
+- az_datafactory_integration_runtime_sync_credentials
+- az_datafactory_integration_runtime_update
+- az_datafactory_integration_runtime_upgrade
+- az_datafactory_integration_runtime_wait
+- az_datafactory_integration_runtime_node
+- az_datafactory_integration_runtime_node_delete
+- az_datafactory_integration_runtime_node_get_ip_address
+- az_datafactory_integration_runtime_node_show
+- az_datafactory_integration_runtime_node_update
+- az_datafactory_linked_service
+- az_datafactory_linked_service_create
+- az_datafactory_linked_service_delete
+- az_datafactory_linked_service_list
+- az_datafactory_linked_service_show
+- az_datafactory_linked_service_update
+- az_datafactory_pipeline
+- az_datafactory_pipeline_create
+- az_datafactory_pipeline_create_run
+- az_datafactory_pipeline_delete
+- az_datafactory_pipeline_list
+- az_datafactory_pipeline_show
+- az_datafactory_pipeline_update
+- az_datafactory_pipeline_run
+- az_datafactory_pipeline_run_cancel
+- az_datafactory_pipeline_run_query_by_factory
+- az_datafactory_pipeline_run_show
+- az_datafactory_trigger
+- az_datafactory_trigger_create
+- az_datafactory_trigger_delete
+- az_datafactory_trigger_get_event_subscription_status
+- az_datafactory_trigger_list
+- az_datafactory_trigger_query_by_factory
+- az_datafactory_trigger_show
+- az_datafactory_trigger_start
+- az_datafactory_trigger_stop
+- az_datafactory_trigger_subscribe_to_event
+- az_datafactory_trigger_unsubscribe_from_event
+- az_datafactory_trigger_update
+- az_datafactory_trigger_wait
+- az_datafactory_trigger_run
+- az_datafactory_trigger_run_cancel
+- az_datafactory_trigger_run_query_by_factory
+- az_datafactory_trigger_run_rerun
+globalParameters:
+- name: --debug
+  summary: Increase logging verbosity to show all debug logs.
+- name: --help -h
+  summary: Show this help message and exit.
+- name: --only-show-errors
+  summary: Only show errors, suppressing warnings.
+- name: --output -o
+  defaultValue: json
+  parameterValueGroup: json, jsonc, table, tsv
+  summary: Output format.
+- name: --query
+  summary: JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+- name: --verbose
+  summary: Increase logging verbosity. Use --debug for full debug logs.
+metadata: {}

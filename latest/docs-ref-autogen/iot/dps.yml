@@ -176,6 +176,25 @@ directCommands:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
+- uid: az_iot_dps_compute_device_key
+  name: az iot dps compute-device-key
+  summary: Generate a derived device SAS key.
+  description: Generate a derived device key from a DPS enrollment group symmetric key.
+  syntax: >-
+    az iot dps compute-device-key --key
+                                  --registration-id
+  examples:
+  - summary: Basic usage
+    syntax: az iot dps compute-device-key --key {enrollement_group_symmetric_key} --registration-id {registration_id}
+  requiredParameters:
+  - isRequired: true
+    name: --key --symmetric-key
+    summary: The symmetric shared access key for the enrollment group.
+    description: ''
+  - isRequired: true
+    name: --registration-id
+    summary: ID of device registration.
+    description: ''
 commands:
 - az_iot_dps_access_policy
 - az_iot_dps_access_policy_create
@@ -202,6 +221,23 @@ commands:
 - az_iot_dps_list
 - az_iot_dps_show
 - az_iot_dps_update
+- az_iot_dps_enrollment
+- az_iot_dps_enrollment_create
+- az_iot_dps_enrollment_delete
+- az_iot_dps_enrollment_list
+- az_iot_dps_enrollment_show
+- az_iot_dps_enrollment_update
+- az_iot_dps_enrollment_group
+- az_iot_dps_enrollment_group_create
+- az_iot_dps_enrollment_group_delete
+- az_iot_dps_enrollment_group_list
+- az_iot_dps_enrollment_group_show
+- az_iot_dps_enrollment_group_update
+- az_iot_dps_registration
+- az_iot_dps_registration_delete
+- az_iot_dps_registration_list
+- az_iot_dps_registration_show
+- az_iot_dps_compute_device_key
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
