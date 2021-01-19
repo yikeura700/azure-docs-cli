@@ -189,7 +189,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_container_generate_sas
+- uid: az_storage_container_generate-sas
   name: az storage container generate-sas
   summary: Generate a SAS token for a storage container.
   description: ''
@@ -340,7 +340,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_container_set_permission
+- uid: az_storage_container_set-permission
   name: az storage container set-permission
   summary: Sets the permissions for the specified container or stored access  policies that may be used with Shared Access Signatures.
   description: The permissions indicate whether blobs in a container may be accessed publicly.
@@ -449,7 +449,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_container_show_permission
+- uid: az_storage_container_show-permission
   name: az storage container show-permission
   summary: Gets the permissions for the specified container.
   description: The permissions indicate whether container data may be accessed publicly.
@@ -545,7 +545,7 @@ commands:
 - az_storage_container_create
 - az_storage_container_delete
 - az_storage_container_exists
-- az_storage_container_generate_sas
+- az_storage_container_generate-sas
 - az_storage_container_lease
 - az_storage_container_lease_acquire
 - az_storage_container_lease_break
@@ -562,9 +562,9 @@ commands:
 - az_storage_container_policy_list
 - az_storage_container_policy_show
 - az_storage_container_policy_update
-- az_storage_container_set_permission
+- az_storage_container_set-permission
 - az_storage_container_show
-- az_storage_container_show_permission
+- az_storage_container_show-permission
 - az_storage_container_restore
 globalParameters:
 - name: --debug

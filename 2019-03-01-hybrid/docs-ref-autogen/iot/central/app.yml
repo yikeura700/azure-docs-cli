@@ -194,7 +194,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
-- uid: az_iot_central_app_monitor_events
+- uid: az_iot_central_app_monitor-events
   name: az iot central app monitor-events
   summary: Monitor device telemetry & messages sent to the IoT Hub for an IoT Central app.
   description: >-
@@ -272,9 +272,9 @@ commands:
 - az_iot_central_app_list
 - az_iot_central_app_show
 - az_iot_central_app_update
-- az_iot_central_app_monitor_events
-- az_iot_central_app_device_twin
-- az_iot_central_app_device_twin_show
+- az_iot_central_app_monitor-events
+- az_iot_central_app_device-twin
+- az_iot_central_app_device-twin_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

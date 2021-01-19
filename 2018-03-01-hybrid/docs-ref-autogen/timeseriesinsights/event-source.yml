@@ -1,5 +1,5 @@
 ### YamlMime:AzureCLIGroup
-uid: az_timeseriesinsights_event_source
+uid: az_timeseriesinsights_event-source
 name: az timeseriesinsights event-source
 extensionInformation: >-
   > [!Note]
@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Commands to manage timeseriesinsights event source.
 description: ''
 directCommands:
-- uid: az_timeseriesinsights_event_source_delete
+- uid: az_timeseriesinsights_event-source_delete
   name: az timeseriesinsights event-source delete
   summary: Delete the event source with the specified name in the specified subscription, resource group, and environment.
   description: ''
@@ -37,7 +37,7 @@ directCommands:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
-- uid: az_timeseriesinsights_event_source_list
+- uid: az_timeseriesinsights_event-source_list
   name: az timeseriesinsights event-source list
   summary: List all the available event sources associated with the subscription and within the specified resource group and environment.
   description: ''
@@ -56,7 +56,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_timeseriesinsights_event_source_show
+- uid: az_timeseriesinsights_event-source_show
   name: az timeseriesinsights event-source show
   summary: Show the event source with the specified name in the specified environment.
   description: ''
@@ -81,15 +81,15 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 commands:
-- az_timeseriesinsights_event_source_delete
-- az_timeseriesinsights_event_source_eventhub
-- az_timeseriesinsights_event_source_eventhub_create
-- az_timeseriesinsights_event_source_eventhub_update
-- az_timeseriesinsights_event_source_iothub
-- az_timeseriesinsights_event_source_iothub_create
-- az_timeseriesinsights_event_source_iothub_update
-- az_timeseriesinsights_event_source_list
-- az_timeseriesinsights_event_source_show
+- az_timeseriesinsights_event-source_delete
+- az_timeseriesinsights_event-source_eventhub
+- az_timeseriesinsights_event-source_eventhub_create
+- az_timeseriesinsights_event-source_eventhub_update
+- az_timeseriesinsights_event-source_iothub
+- az_timeseriesinsights_event-source_iothub_create
+- az_timeseriesinsights_event-source_iothub_update
+- az_timeseriesinsights_event-source_list
+- az_timeseriesinsights_event-source_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

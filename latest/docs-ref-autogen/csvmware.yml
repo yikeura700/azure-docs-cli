@@ -8,15 +8,15 @@ extensionInformation: >-
 summary: Manage Azure VMware Solution by CloudSimple.
 description: ''
 commands:
-- az_csvmware_private_cloud
-- az_csvmware_private_cloud_list
-- az_csvmware_private_cloud_show
-- az_csvmware_resource_pool
-- az_csvmware_resource_pool_list
-- az_csvmware_resource_pool_show
-- az_csvmware_virtual_network
-- az_csvmware_virtual_network_list
-- az_csvmware_virtual_network_show
+- az_csvmware_private-cloud
+- az_csvmware_private-cloud_list
+- az_csvmware_private-cloud_show
+- az_csvmware_resource-pool
+- az_csvmware_resource-pool_list
+- az_csvmware_resource-pool_show
+- az_csvmware_virtual-network
+- az_csvmware_virtual-network_list
+- az_csvmware_virtual-network_show
 - az_csvmware_vm
 - az_csvmware_vm_create
 - az_csvmware_vm_delete
@@ -35,9 +35,9 @@ commands:
 - az_csvmware_vm_start
 - az_csvmware_vm_stop
 - az_csvmware_vm_update
-- az_csvmware_vm_template
-- az_csvmware_vm_template_list
-- az_csvmware_vm_template_show
+- az_csvmware_vm-template
+- az_csvmware_vm-template_list
+- az_csvmware_vm-template_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

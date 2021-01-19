@@ -1,5 +1,5 @@
 ### YamlMime:AzureCLIGroup
-uid: az_timeseriesinsights_event_source_iothub
+uid: az_timeseriesinsights_event-source_iothub
 name: az timeseriesinsights event-source iothub
 extensionInformation: >-
   > [!Note]
@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Create or update an iothub event source under the specified environment.
 description: ''
 directCommands:
-- uid: az_timeseriesinsights_event_source_iothub_create
+- uid: az_timeseriesinsights_event-source_iothub_create
   name: az timeseriesinsights event-source iothub create
   summary: Create or update an iothub event source under the specified environment.
   description: ''
@@ -74,7 +74,7 @@ directCommands:
   - name: --timestamp-property-name
     summary: The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
     description: ''
-- uid: az_timeseriesinsights_event_source_iothub_update
+- uid: az_timeseriesinsights_event-source_iothub_update
   name: az timeseriesinsights event-source iothub update
   summary: Create or update an event source under the specified environment.
   description: ''
@@ -121,8 +121,8 @@ directCommands:
     summary: The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
     description: ''
 commands:
-- az_timeseriesinsights_event_source_iothub_create
-- az_timeseriesinsights_event_source_iothub_update
+- az_timeseriesinsights_event-source_iothub_create
+- az_timeseriesinsights_event-source_iothub_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

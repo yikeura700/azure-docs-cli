@@ -4,7 +4,7 @@ name: az backup protection
 summary: Manage protection of your items, enable protection or disable it, or take on-demand backups.
 description: ''
 directCommands:
-- uid: az_backup_protection_auto_disable_for_azurewl
+- uid: az_backup_protection_auto-disable-for-azurewl
   name: az backup protection auto-disable-for-azurewl
   summary: Disable auto-protection for the specified item.
   description: ''
@@ -36,7 +36,7 @@ directCommands:
     summary: Name of the Recovery services vault.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
-- uid: az_backup_protection_auto_enable_for_azurewl
+- uid: az_backup_protection_auto-enable-for-azurewl
   name: az backup protection auto-enable-for-azurewl
   summary: Automatically protect all existing unprotected DBs and any DB which will be added later with the given policy.
   description: ''
@@ -90,7 +90,7 @@ directCommands:
     summary: Name of the Recovery services vault.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
-- uid: az_backup_protection_backup_now
+- uid: az_backup_protection_backup-now
   name: az backup protection backup-now
   summary: Perform an on-demand backup of a backed up item.
   description: ''
@@ -149,7 +149,7 @@ directCommands:
     summary: Specifiy the type of applications within the Resource which should be discovered and protected by Azure Backup.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
-- uid: az_backup_protection_check_vm
+- uid: az_backup_protection_check-vm
   name: az backup protection check-vm
   summary: Find out whether the virtual machine is protected or not. If protected, it returns the recovery services vault ID, otherwise it returns empty.
   description: ''
@@ -225,7 +225,7 @@ directCommands:
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
-- uid: az_backup_protection_enable_for_azurefileshare
+- uid: az_backup_protection_enable-for-azurefileshare
   name: az backup protection enable-for-azurefileshare
   summary: Start protecting a previously unprotected Azure File share within an Azure Storage account as per the specified policy to a Recovery services vault.
   description: ''
@@ -267,7 +267,7 @@ directCommands:
     summary: Name of the Recovery services vault.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
-- uid: az_backup_protection_enable_for_azurewl
+- uid: az_backup_protection_enable-for-azurewl
   name: az backup protection enable-for-azurewl
   summary: Start protecting a previously unprotected workload within an Azure VM as per the specified policy to a Recovery services vault. Provide the workload details as a protectable item.
   description: ''
@@ -321,7 +321,7 @@ directCommands:
     summary: Name of the Recovery services vault.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
-- uid: az_backup_protection_enable_for_vm
+- uid: az_backup_protection_enable-for-vm
   name: az backup protection enable-for-vm
   summary: Start protecting a previously unprotected Azure VM as per the specified policy to a Recovery services vault.
   description: ''
@@ -472,7 +472,7 @@ directCommands:
     summary: Specifiy the type of applications within the Resource which should be discovered and protected by Azure Backup.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
-- uid: az_backup_protection_update_for_vm
+- uid: az_backup_protection_update-for-vm
   name: az backup protection update-for-vm
   summary: Update disk exclusion settings associated with a backed up VM item.
   description: ''
@@ -524,17 +524,17 @@ directCommands:
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
 commands:
-- az_backup_protection_auto_disable_for_azurewl
-- az_backup_protection_auto_enable_for_azurewl
-- az_backup_protection_backup_now
-- az_backup_protection_check_vm
+- az_backup_protection_auto-disable-for-azurewl
+- az_backup_protection_auto-enable-for-azurewl
+- az_backup_protection_backup-now
+- az_backup_protection_check-vm
 - az_backup_protection_disable
-- az_backup_protection_enable_for_azurefileshare
-- az_backup_protection_enable_for_azurewl
-- az_backup_protection_enable_for_vm
+- az_backup_protection_enable-for-azurefileshare
+- az_backup_protection_enable-for-azurewl
+- az_backup_protection_enable-for-vm
 - az_backup_protection_resume
 - az_backup_protection_undelete
-- az_backup_protection_update_for_vm
+- az_backup_protection_update-for-vm
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

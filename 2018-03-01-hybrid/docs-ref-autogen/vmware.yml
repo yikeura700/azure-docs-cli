@@ -19,23 +19,23 @@ commands:
 - az_vmware_cluster_list
 - az_vmware_cluster_show
 - az_vmware_cluster_update
-- az_vmware_hcx_enterprise_site
-- az_vmware_hcx_enterprise_site_create
-- az_vmware_hcx_enterprise_site_delete
-- az_vmware_hcx_enterprise_site_list
-- az_vmware_hcx_enterprise_site_show
+- az_vmware_hcx-enterprise-site
+- az_vmware_hcx-enterprise-site_create
+- az_vmware_hcx-enterprise-site_delete
+- az_vmware_hcx-enterprise-site_list
+- az_vmware_hcx-enterprise-site_show
 - az_vmware_location
 - az_vmware_location_checkquotaavailability
 - az_vmware_location_checktrialavailability
-- az_vmware_private_cloud
-- az_vmware_private_cloud_addidentitysource
-- az_vmware_private_cloud_create
-- az_vmware_private_cloud_delete
-- az_vmware_private_cloud_deleteidentitysource
-- az_vmware_private_cloud_list
-- az_vmware_private_cloud_listadmincredentials
-- az_vmware_private_cloud_show
-- az_vmware_private_cloud_update
+- az_vmware_private-cloud
+- az_vmware_private-cloud_addidentitysource
+- az_vmware_private-cloud_create
+- az_vmware_private-cloud_delete
+- az_vmware_private-cloud_deleteidentitysource
+- az_vmware_private-cloud_list
+- az_vmware_private-cloud_listadmincredentials
+- az_vmware_private-cloud_show
+- az_vmware_private-cloud_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

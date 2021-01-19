@@ -101,7 +101,7 @@ directCommands:
     summary: The local source code directory path (e.g., './src'), or the URL to a git repository (e.g., '<a href="https://github.com/Azure-Samples/acr-build-helloworld-node.git">https://github.com/Azure-Samples/acr-build-helloworld-node.git</a>') or a remote tarball (e.g., '<a href="http://server/context.tar.gz">http://server/context.tar.gz</a>'), or the repository of an OCI artifact in an Azure container registry (e.g., 'oci://myregistry.azurecr.io/myartifact:mytag').
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-- uid: az_acr_check_health
+- uid: az_acr_check-health
   name: az acr check-health
   summary: Gets health information on the environment and optionally a target registry.
   description: ''
@@ -129,7 +129,7 @@ directCommands:
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-- uid: az_acr_check_name
+- uid: az_acr_check-name
   name: az acr check-name
   summary: Checks if an Azure Container Registry name is valid and available for use.
   description: ''
@@ -493,7 +493,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-- uid: az_acr_show_endpoints
+- uid: az_acr_show-endpoints
   name: az acr show-endpoints
   summary: Display registry endpoints.
   description: ''
@@ -514,7 +514,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-- uid: az_acr_show_usage
+- uid: az_acr_show-usage
   name: az acr show-usage
   summary: Get the storage usage for an Azure Container Registry.
   description: ''
@@ -617,12 +617,12 @@ commands:
 - az_acr_agentpool_show
 - az_acr_agentpool_update
 - az_acr_build
-- az_acr_check_health
-- az_acr_check_name
+- az_acr_check-health
+- az_acr_check-name
 - az_acr_config
-- az_acr_config_content_trust
-- az_acr_config_content_trust_show
-- az_acr_config_content_trust_update
+- az_acr_config_content-trust
+- az_acr_config_content-trust_show
+- az_acr_config_content-trust_update
 - az_acr_config_retention
 - az_acr_config_retention_show
 - az_acr_config_retention_update
@@ -632,11 +632,11 @@ commands:
 - az_acr_credential_show
 - az_acr_delete
 - az_acr_encryption
-- az_acr_encryption_rotate_key
+- az_acr_encryption_rotate-key
 - az_acr_encryption_show
 - az_acr_helm
 - az_acr_helm_delete
-- az_acr_helm_install_cli
+- az_acr_helm_install-cli
 - az_acr_helm_list
 - az_acr_helm_push
 - az_acr_helm_repo
@@ -649,20 +649,20 @@ commands:
 - az_acr_import
 - az_acr_list
 - az_acr_login
-- az_acr_network_rule
-- az_acr_network_rule_add
-- az_acr_network_rule_list
-- az_acr_network_rule_remove
+- az_acr_network-rule
+- az_acr_network-rule_add
+- az_acr_network-rule_list
+- az_acr_network-rule_remove
 - az_acr_pack
 - az_acr_pack_build
-- az_acr_private_endpoint_connection
-- az_acr_private_endpoint_connection_approve
-- az_acr_private_endpoint_connection_delete
-- az_acr_private_endpoint_connection_list
-- az_acr_private_endpoint_connection_reject
-- az_acr_private_endpoint_connection_show
-- az_acr_private_link_resource
-- az_acr_private_link_resource_list
+- az_acr_private-endpoint-connection
+- az_acr_private-endpoint-connection_approve
+- az_acr_private-endpoint-connection_delete
+- az_acr_private-endpoint-connection_list
+- az_acr_private-endpoint-connection_reject
+- az_acr_private-endpoint-connection_show
+- az_acr_private-link-resource
+- az_acr_private-link-resource_list
 - az_acr_replication
 - az_acr_replication_create
 - az_acr_replication_delete
@@ -673,22 +673,22 @@ commands:
 - az_acr_repository_delete
 - az_acr_repository_list
 - az_acr_repository_show
-- az_acr_repository_show_manifests
-- az_acr_repository_show_tags
+- az_acr_repository_show-manifests
+- az_acr_repository_show-tags
 - az_acr_repository_untag
 - az_acr_repository_update
 - az_acr_run
-- az_acr_scope_map
-- az_acr_scope_map_create
-- az_acr_scope_map_delete
-- az_acr_scope_map_list
-- az_acr_scope_map_show
-- az_acr_scope_map_update
+- az_acr_scope-map
+- az_acr_scope-map_create
+- az_acr_scope-map_delete
+- az_acr_scope-map_list
+- az_acr_scope-map_show
+- az_acr_scope-map_update
 - az_acr_show
-- az_acr_show_endpoints
-- az_acr_show_usage
+- az_acr_show-endpoints
+- az_acr_show-usage
 - az_acr_task
-- az_acr_task_cancel_run
+- az_acr_task_cancel-run
 - az_acr_task_create
 - az_acr_task_credential
 - az_acr_task_credential_add
@@ -701,18 +701,18 @@ commands:
 - az_acr_task_identity_remove
 - az_acr_task_identity_show
 - az_acr_task_list
-- az_acr_task_list_runs
+- az_acr_task_list-runs
 - az_acr_task_logs
 - az_acr_task_run
 - az_acr_task_show
-- az_acr_task_show_run
+- az_acr_task_show-run
 - az_acr_task_timer
 - az_acr_task_timer_add
 - az_acr_task_timer_list
 - az_acr_task_timer_remove
 - az_acr_task_timer_update
 - az_acr_task_update
-- az_acr_task_update_run
+- az_acr_task_update-run
 - az_acr_taskrun
 - az_acr_taskrun_delete
 - az_acr_taskrun_list
@@ -731,9 +731,9 @@ commands:
 - az_acr_webhook
 - az_acr_webhook_create
 - az_acr_webhook_delete
-- az_acr_webhook_get_config
+- az_acr_webhook_get-config
 - az_acr_webhook_list
-- az_acr_webhook_list_events
+- az_acr_webhook_list-events
 - az_acr_webhook_ping
 - az_acr_webhook_show
 - az_acr_webhook_update

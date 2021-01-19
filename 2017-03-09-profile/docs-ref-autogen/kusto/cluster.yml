@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Kusto cluster.
 description: ''
 directCommands:
-- uid: az_kusto_cluster_add_language_extension
+- uid: az_kusto_cluster_add-language-extension
   name: az kusto cluster add-language-extension
   summary: Add a list of language extensions that can run within KQL queries.
   description: ''
@@ -206,7 +206,7 @@ directCommands:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
-- uid: az_kusto_cluster_detach_follower_database
+- uid: az_kusto_cluster_detach-follower-database
   name: az kusto cluster detach-follower-database
   summary: Detaches all followers of a database owned by this cluster.
   description: ''
@@ -240,7 +240,7 @@ directCommands:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
-- uid: az_kusto_cluster_diagnose_virtual_network
+- uid: az_kusto_cluster_diagnose-virtual-network
   name: az kusto cluster diagnose-virtual-network
   summary: Diagnoses network connectivity status for external resources on which the service is dependent on.
   description: ''
@@ -276,7 +276,7 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_kusto_cluster_list_follower_database
+- uid: az_kusto_cluster_list-follower-database
   name: az kusto cluster list-follower-database
   summary: Returns a list of databases that are owned by this cluster and were followed by another cluster.
   description: ''
@@ -295,7 +295,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_kusto_cluster_list_language_extension
+- uid: az_kusto_cluster_list-language-extension
   name: az kusto cluster list-language-extension
   summary: Returns a list of language extensions that can run within KQL queries.
   description: ''
@@ -314,7 +314,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_kusto_cluster_list_sku
+- uid: az_kusto_cluster_list-sku
   name: az kusto cluster list-sku
   summary: Lists eligible SKUs for Kusto resource provider.
   description: ''
@@ -331,7 +331,7 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_kusto_cluster_remove_language_extension
+- uid: az_kusto_cluster_remove-language-extension
   name: az kusto cluster remove-language-extension
   summary: Remove a list of language extensions that can run within KQL queries.
   description: ''
@@ -617,16 +617,16 @@ directCommands:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- az_kusto_cluster_add_language_extension
+- az_kusto_cluster_add-language-extension
 - az_kusto_cluster_create
 - az_kusto_cluster_delete
-- az_kusto_cluster_detach_follower_database
-- az_kusto_cluster_diagnose_virtual_network
+- az_kusto_cluster_detach-follower-database
+- az_kusto_cluster_diagnose-virtual-network
 - az_kusto_cluster_list
-- az_kusto_cluster_list_follower_database
-- az_kusto_cluster_list_language_extension
-- az_kusto_cluster_list_sku
-- az_kusto_cluster_remove_language_extension
+- az_kusto_cluster_list-follower-database
+- az_kusto_cluster_list-language-extension
+- az_kusto_cluster_list-sku
+- az_kusto_cluster_remove-language-extension
 - az_kusto_cluster_show
 - az_kusto_cluster_start
 - az_kusto_cluster_stop

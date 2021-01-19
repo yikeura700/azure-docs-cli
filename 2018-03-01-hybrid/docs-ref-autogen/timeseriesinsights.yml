@@ -8,12 +8,12 @@ extensionInformation: >-
 summary: Manage Azure Time Series Insights.
 description: ''
 commands:
-- az_timeseriesinsights_access_policy
-- az_timeseriesinsights_access_policy_create
-- az_timeseriesinsights_access_policy_delete
-- az_timeseriesinsights_access_policy_list
-- az_timeseriesinsights_access_policy_show
-- az_timeseriesinsights_access_policy_update
+- az_timeseriesinsights_access-policy
+- az_timeseriesinsights_access-policy_create
+- az_timeseriesinsights_access-policy_delete
+- az_timeseriesinsights_access-policy_list
+- az_timeseriesinsights_access-policy_show
+- az_timeseriesinsights_access-policy_update
 - az_timeseriesinsights_environment
 - az_timeseriesinsights_environment_delete
 - az_timeseriesinsights_environment_list
@@ -24,22 +24,22 @@ commands:
 - az_timeseriesinsights_environment_standard
 - az_timeseriesinsights_environment_standard_create
 - az_timeseriesinsights_environment_standard_update
-- az_timeseriesinsights_event_source
-- az_timeseriesinsights_event_source_delete
-- az_timeseriesinsights_event_source_eventhub
-- az_timeseriesinsights_event_source_eventhub_create
-- az_timeseriesinsights_event_source_eventhub_update
-- az_timeseriesinsights_event_source_iothub
-- az_timeseriesinsights_event_source_iothub_create
-- az_timeseriesinsights_event_source_iothub_update
-- az_timeseriesinsights_event_source_list
-- az_timeseriesinsights_event_source_show
-- az_timeseriesinsights_reference_data_set
-- az_timeseriesinsights_reference_data_set_create
-- az_timeseriesinsights_reference_data_set_delete
-- az_timeseriesinsights_reference_data_set_list
-- az_timeseriesinsights_reference_data_set_show
-- az_timeseriesinsights_reference_data_set_update
+- az_timeseriesinsights_event-source
+- az_timeseriesinsights_event-source_delete
+- az_timeseriesinsights_event-source_eventhub
+- az_timeseriesinsights_event-source_eventhub_create
+- az_timeseriesinsights_event-source_eventhub_update
+- az_timeseriesinsights_event-source_iothub
+- az_timeseriesinsights_event-source_iothub_create
+- az_timeseriesinsights_event-source_iothub_update
+- az_timeseriesinsights_event-source_list
+- az_timeseriesinsights_event-source_show
+- az_timeseriesinsights_reference-data-set
+- az_timeseriesinsights_reference-data-set_create
+- az_timeseriesinsights_reference-data-set_delete
+- az_timeseriesinsights_reference-data-set_list
+- az_timeseriesinsights_reference-data-set_show
+- az_timeseriesinsights_reference-data-set_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

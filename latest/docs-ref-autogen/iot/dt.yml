@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Manage digital twin of an IoT Plug and Play device.
 description: ''
 directCommands:
-- uid: az_iot_dt_invoke_command
+- uid: az_iot_dt_invoke-command
   name: az iot dt invoke-command
   summary: Executes a command on an IoT Plug and Play device.
   description: You can leverage az login and provide --hub-name instead of --login for every command.
@@ -56,7 +56,7 @@ directCommands:
     defaultValue: "10"
     summary: Maximum number of seconds to wait for device method result.
     description: ''
-- uid: az_iot_dt_list_commands
+- uid: az_iot_dt_list-commands
   name: az iot dt list-commands
   summary: List commands of an IoT Plug and Play devices interface(s).
   description: You can leverage az login and provide --hub-name instead of --login for every command.
@@ -116,7 +116,7 @@ directCommands:
   - name: --schema
     summary: Show interface with entity schema.
     description: ''
-- uid: az_iot_dt_list_interfaces
+- uid: az_iot_dt_list-interfaces
   name: az iot dt list-interfaces
   summary: List interfaces of a target IoT Plug and Play device.
   description: You can leverage az login and provide --hub-name instead of --login for every command.
@@ -145,7 +145,7 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_iot_dt_list_properties
+- uid: az_iot_dt_list-properties
   name: az iot dt list-properties
   summary: List properties of a target IoT Plug and Play device interface(s).
   description: You can leverage az login and provide --hub-name instead of --login for every command.
@@ -203,7 +203,7 @@ directCommands:
   - name: --schema
     summary: Show interface with entity schema.
     description: ''
-- uid: az_iot_dt_monitor_events
+- uid: az_iot_dt_monitor-events
   name: az iot dt monitor-events
   summary: Monitor Digital Twin events.
   description: You can leverage az login and provide --hub-name instead of --login for every command.
@@ -277,7 +277,7 @@ directCommands:
     parameterValueGroup: false, true
     summary: 'Skip user prompts. Indicates acceptance of dependency installation (if required). Used primarily for automation scenarios. Default: false.'
     description: ''
-- uid: az_iot_dt_update_property
+- uid: az_iot_dt_update-property
   name: az iot dt update-property
   summary: Update an IoT Plug and Play device interfaces writable property.
   description: ''
@@ -312,12 +312,12 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 commands:
-- az_iot_dt_invoke_command
-- az_iot_dt_list_commands
-- az_iot_dt_list_interfaces
-- az_iot_dt_list_properties
-- az_iot_dt_monitor_events
-- az_iot_dt_update_property
+- az_iot_dt_invoke-command
+- az_iot_dt_list-commands
+- az_iot_dt_list-interfaces
+- az_iot_dt_list-properties
+- az_iot_dt_monitor-events
+- az_iot_dt_update-property
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

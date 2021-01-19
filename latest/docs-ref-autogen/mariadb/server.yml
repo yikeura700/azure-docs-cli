@@ -208,7 +208,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-- uid: az_mariadb_server_list_skus
+- uid: az_mariadb_server_list-skus
   name: az mariadb server list-skus
   summary: List available sku's in the given region.
   description: ''
@@ -508,22 +508,22 @@ commands:
 - az_mariadb_server_configuration_show
 - az_mariadb_server_create
 - az_mariadb_server_delete
-- az_mariadb_server_firewall_rule
-- az_mariadb_server_firewall_rule_create
-- az_mariadb_server_firewall_rule_delete
-- az_mariadb_server_firewall_rule_list
-- az_mariadb_server_firewall_rule_show
-- az_mariadb_server_firewall_rule_update
+- az_mariadb_server_firewall-rule
+- az_mariadb_server_firewall-rule_create
+- az_mariadb_server_firewall-rule_delete
+- az_mariadb_server_firewall-rule_list
+- az_mariadb_server_firewall-rule_show
+- az_mariadb_server_firewall-rule_update
 - az_mariadb_server_georestore
 - az_mariadb_server_list
-- az_mariadb_server_list_skus
-- az_mariadb_server_private_endpoint_connection
-- az_mariadb_server_private_endpoint_connection_approve
-- az_mariadb_server_private_endpoint_connection_delete
-- az_mariadb_server_private_endpoint_connection_reject
-- az_mariadb_server_private_endpoint_connection_show
-- az_mariadb_server_private_link_resource
-- az_mariadb_server_private_link_resource_list
+- az_mariadb_server_list-skus
+- az_mariadb_server_private-endpoint-connection
+- az_mariadb_server_private-endpoint-connection_approve
+- az_mariadb_server_private-endpoint-connection_delete
+- az_mariadb_server_private-endpoint-connection_reject
+- az_mariadb_server_private-endpoint-connection_show
+- az_mariadb_server_private-link-resource
+- az_mariadb_server_private-link-resource_list
 - az_mariadb_server_replica
 - az_mariadb_server_replica_create
 - az_mariadb_server_replica_list
@@ -534,12 +534,12 @@ commands:
 - az_mariadb_server_start
 - az_mariadb_server_stop
 - az_mariadb_server_update
-- az_mariadb_server_vnet_rule
-- az_mariadb_server_vnet_rule_create
-- az_mariadb_server_vnet_rule_delete
-- az_mariadb_server_vnet_rule_list
-- az_mariadb_server_vnet_rule_show
-- az_mariadb_server_vnet_rule_update
+- az_mariadb_server_vnet-rule
+- az_mariadb_server_vnet-rule_create
+- az_mariadb_server_vnet-rule_delete
+- az_mariadb_server_vnet-rule_list
+- az_mariadb_server_vnet-rule_show
+- az_mariadb_server_vnet-rule_update
 - az_mariadb_server_wait
 globalParameters:
 - name: --debug

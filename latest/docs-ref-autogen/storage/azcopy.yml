@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: '[EXPERIMENTAL] Manage storage operations utilizing AzCopy.'
 description: 'Open issues here: <a href="https://github.com/Azure/azure-storage-azcopy">https://github.com/Azure/azure-storage-azcopy</a>.'
 directCommands:
-- uid: az_storage_azcopy_run_command
+- uid: az_storage_azcopy_run-command
   name: az storage azcopy run-command
   summary: Run a command directly using the AzCopy CLI. Please use SAS tokens for authentication.
   description: ''
@@ -23,7 +23,7 @@ commands:
 - az_storage_azcopy_blob_download
 - az_storage_azcopy_blob_sync
 - az_storage_azcopy_blob_upload
-- az_storage_azcopy_run_command
+- az_storage_azcopy_run-command
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

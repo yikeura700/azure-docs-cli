@@ -4,7 +4,7 @@ name: az cosmosdb
 summary: Manage Azure Cosmos DB database accounts.
 description: ''
 directCommands:
-- uid: az_cosmosdb_check_name_exists
+- uid: az_cosmosdb_check-name-exists
   name: az cosmosdb check-name-exists
   summary: Checks if an Azure Cosmos DB account name exists.
   description: ''
@@ -179,7 +179,7 @@ directCommands:
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-- uid: az_cosmosdb_failover_priority_change
+- uid: az_cosmosdb_failover-priority-change
   name: az cosmosdb failover-priority-change
   summary: Changes the failover priority for the Azure Cosmos DB database account.
   description: ''
@@ -230,7 +230,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-- uid: az_cosmosdb_list_connection_strings
+- uid: az_cosmosdb_list-connection-strings
   name: az cosmosdb list-connection-strings
   summary: List the connection strings for a Azure Cosmos DB database account.
   description: ''
@@ -256,7 +256,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-- uid: az_cosmosdb_list_keys
+- uid: az_cosmosdb_list-keys
   name: az cosmosdb list-keys
   summary: List the access keys for a Azure Cosmos DB database account.
   description: ''
@@ -282,7 +282,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-- uid: az_cosmosdb_list_read_only_keys
+- uid: az_cosmosdb_list-read-only-keys
   name: az cosmosdb list-read-only-keys
   summary: List the read-only access keys for a Azure Cosmos DB database account.
   description: ''
@@ -308,7 +308,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
-- uid: az_cosmosdb_regenerate_key
+- uid: az_cosmosdb_regenerate-key
   name: az cosmosdb regenerate-key
   summary: Regenerate an access key for a Azure Cosmos DB database account.
   description: ''
@@ -496,7 +496,7 @@ commands:
 - az_cosmosdb_cassandra_table_throughput_show
 - az_cosmosdb_cassandra_table_throughput_update
 - az_cosmosdb_cassandra_table_update
-- az_cosmosdb_check_name_exists
+- az_cosmosdb_check-name-exists
 - az_cosmosdb_collection
 - az_cosmosdb_collection_create
 - az_cosmosdb_collection_delete
@@ -512,7 +512,7 @@ commands:
 - az_cosmosdb_database_list
 - az_cosmosdb_database_show
 - az_cosmosdb_delete
-- az_cosmosdb_failover_priority_change
+- az_cosmosdb_failover-priority-change
 - az_cosmosdb_gremlin
 - az_cosmosdb_gremlin_database
 - az_cosmosdb_gremlin_database_create
@@ -539,9 +539,9 @@ commands:
 - az_cosmosdb_keys_list
 - az_cosmosdb_keys_regenerate
 - az_cosmosdb_list
-- az_cosmosdb_list_connection_strings
-- az_cosmosdb_list_keys
-- az_cosmosdb_list_read_only_keys
+- az_cosmosdb_list-connection-strings
+- az_cosmosdb_list-keys
+- az_cosmosdb_list-read-only-keys
 - az_cosmosdb_mongodb
 - az_cosmosdb_mongodb_collection
 - az_cosmosdb_mongodb_collection_create
@@ -564,18 +564,18 @@ commands:
 - az_cosmosdb_mongodb_database_throughput_migrate
 - az_cosmosdb_mongodb_database_throughput_show
 - az_cosmosdb_mongodb_database_throughput_update
-- az_cosmosdb_network_rule
-- az_cosmosdb_network_rule_add
-- az_cosmosdb_network_rule_list
-- az_cosmosdb_network_rule_remove
-- az_cosmosdb_private_endpoint_connection
-- az_cosmosdb_private_endpoint_connection_approve
-- az_cosmosdb_private_endpoint_connection_delete
-- az_cosmosdb_private_endpoint_connection_reject
-- az_cosmosdb_private_endpoint_connection_show
-- az_cosmosdb_private_link_resource
-- az_cosmosdb_private_link_resource_list
-- az_cosmosdb_regenerate_key
+- az_cosmosdb_network-rule
+- az_cosmosdb_network-rule_add
+- az_cosmosdb_network-rule_list
+- az_cosmosdb_network-rule_remove
+- az_cosmosdb_private-endpoint-connection
+- az_cosmosdb_private-endpoint-connection_approve
+- az_cosmosdb_private-endpoint-connection_delete
+- az_cosmosdb_private-endpoint-connection_reject
+- az_cosmosdb_private-endpoint-connection_show
+- az_cosmosdb_private-link-resource
+- az_cosmosdb_private-link-resource_list
+- az_cosmosdb_regenerate-key
 - az_cosmosdb_show
 - az_cosmosdb_sql
 - az_cosmosdb_sql_container
@@ -599,24 +599,24 @@ commands:
 - az_cosmosdb_sql_database_throughput_migrate
 - az_cosmosdb_sql_database_throughput_show
 - az_cosmosdb_sql_database_throughput_update
-- az_cosmosdb_sql_stored_procedure
-- az_cosmosdb_sql_stored_procedure_create
-- az_cosmosdb_sql_stored_procedure_delete
-- az_cosmosdb_sql_stored_procedure_list
-- az_cosmosdb_sql_stored_procedure_show
-- az_cosmosdb_sql_stored_procedure_update
+- az_cosmosdb_sql_stored-procedure
+- az_cosmosdb_sql_stored-procedure_create
+- az_cosmosdb_sql_stored-procedure_delete
+- az_cosmosdb_sql_stored-procedure_list
+- az_cosmosdb_sql_stored-procedure_show
+- az_cosmosdb_sql_stored-procedure_update
 - az_cosmosdb_sql_trigger
 - az_cosmosdb_sql_trigger_create
 - az_cosmosdb_sql_trigger_delete
 - az_cosmosdb_sql_trigger_list
 - az_cosmosdb_sql_trigger_show
 - az_cosmosdb_sql_trigger_update
-- az_cosmosdb_sql_user_defined_function
-- az_cosmosdb_sql_user_defined_function_create
-- az_cosmosdb_sql_user_defined_function_delete
-- az_cosmosdb_sql_user_defined_function_list
-- az_cosmosdb_sql_user_defined_function_show
-- az_cosmosdb_sql_user_defined_function_update
+- az_cosmosdb_sql_user-defined-function
+- az_cosmosdb_sql_user-defined-function_create
+- az_cosmosdb_sql_user-defined-function_delete
+- az_cosmosdb_sql_user-defined-function_list
+- az_cosmosdb_sql_user-defined-function_show
+- az_cosmosdb_sql_user-defined-function_update
 - az_cosmosdb_table
 - az_cosmosdb_table_create
 - az_cosmosdb_table_delete

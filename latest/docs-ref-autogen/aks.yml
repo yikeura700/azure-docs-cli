@@ -411,7 +411,7 @@ directCommands:
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
-- uid: az_aks_disable_addons
+- uid: az_aks_disable-addons
   name: az aks disable-addons
   summary: Disable Kubernetes addons.
   description: ''
@@ -445,7 +445,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
-- uid: az_aks_enable_addons
+- uid: az_aks_enable-addons
   name: az aks enable-addons
   summary: Enable Kubernetes addons.
   description: >-
@@ -494,7 +494,7 @@ directCommands:
     summary: The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
-- uid: az_aks_get_credentials
+- uid: az_aks_get-credentials
   name: az aks get-credentials
   summary: Get access credentials for a managed Kubernetes cluster.
   description: ''
@@ -536,7 +536,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
-- uid: az_aks_get_upgrades
+- uid: az_aks_get-upgrades
   name: az aks get-upgrades
   summary: Get the upgrade versions available for a managed Kubernetes cluster.
   description: ''
@@ -561,7 +561,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
-- uid: az_aks_get_versions
+- uid: az_aks_get-versions
   name: az aks get-versions
   summary: Get the versions available for creating a managed Kubernetes cluster.
   description: ''
@@ -581,7 +581,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
-- uid: az_aks_install_cli
+- uid: az_aks_install-cli
   name: az aks install-cli
   summary: Download and install kubectl, the Kubernetes command-line tool. Download and install kubelogin, a client-go credential (exec) plugin implementing azure authentication.
   description: ''
@@ -639,7 +639,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
-- uid: az_aks_remove_dev_spaces
+- uid: az_aks_remove-dev-spaces
   name: az aks remove-dev-spaces
   summary: Remove Azure Dev Spaces from a managed Kubernetes cluster.
   description: ''
@@ -670,7 +670,7 @@ directCommands:
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
-- uid: az_aks_rotate_certs
+- uid: az_aks_rotate-certs
   name: az aks rotate-certs
   summary: Rotate certificates and keys on a managed Kubernetes cluster.
   description: Kubernetes will be unavailable during cluster certificate rotation.
@@ -898,7 +898,7 @@ directCommands:
     summary: Enable a paid managed cluster service with a financially backed SLA.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
-- uid: az_aks_update_credentials
+- uid: az_aks_update-credentials
   name: az aks update-credentials
   summary: Update credentials for a managed Kubernetes cluster, like service principal.
   description: ''
@@ -1007,7 +1007,7 @@ directCommands:
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
-- uid: az_aks_use_dev_spaces
+- uid: az_aks_use-dev-spaces
   name: az aks use-dev-spaces
   summary: Use Azure Dev Spaces with a managed Kubernetes cluster.
   description: ''
@@ -1241,42 +1241,42 @@ commands:
 - az_aks_browse
 - az_aks_create
 - az_aks_delete
-- az_aks_disable_addons
-- az_aks_enable_addons
-- az_aks_get_credentials
-- az_aks_get_upgrades
-- az_aks_get_versions
-- az_aks_install_cli
+- az_aks_disable-addons
+- az_aks_enable-addons
+- az_aks_get-credentials
+- az_aks_get-upgrades
+- az_aks_get-versions
+- az_aks_install-cli
 - az_aks_list
 - az_aks_nodepool
 - az_aks_nodepool_add
 - az_aks_nodepool_delete
-- az_aks_nodepool_get_upgrades
+- az_aks_nodepool_get-upgrades
 - az_aks_nodepool_list
 - az_aks_nodepool_scale
 - az_aks_nodepool_show
 - az_aks_nodepool_update
 - az_aks_nodepool_upgrade
-- az_aks_remove_dev_spaces
-- az_aks_rotate_certs
+- az_aks_remove-dev-spaces
+- az_aks_rotate-certs
 - az_aks_scale
 - az_aks_show
 - az_aks_update
-- az_aks_update_credentials
+- az_aks_update-credentials
 - az_aks_upgrade
-- az_aks_use_dev_spaces
+- az_aks_use-dev-spaces
 - az_aks_wait
 - az_aks_kanalyze
 - az_aks_kollect
-- az_aks_pod_identity
-- az_aks_pod_identity_add
-- az_aks_pod_identity_delete
-- az_aks_pod_identity_exception
-- az_aks_pod_identity_exception_add
-- az_aks_pod_identity_exception_delete
-- az_aks_pod_identity_exception_list
-- az_aks_pod_identity_exception_update
-- az_aks_pod_identity_list
+- az_aks_pod-identity
+- az_aks_pod-identity_add
+- az_aks_pod-identity_delete
+- az_aks_pod-identity_exception
+- az_aks_pod-identity_exception_add
+- az_aks_pod-identity_exception_delete
+- az_aks_pod-identity_exception_list
+- az_aks_pod-identity_exception_update
+- az_aks_pod-identity_list
 - az_aks_start
 - az_aks_stop
 - az_aks_app

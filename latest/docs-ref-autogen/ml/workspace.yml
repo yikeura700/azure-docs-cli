@@ -150,7 +150,7 @@ directCommands:
   - name: --resource-group -g
     summary: Resource group name.
     description: ''
-- uid: az_ml_workspace_list_keys
+- uid: az_ml_workspace_list-keys
   name: az ml workspace list-keys
   summary: List workspace keys for dependent resources such as storage, acr, and app insights.
   description: ''
@@ -242,7 +242,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_workspace_sync_keys
+- uid: az_ml_workspace_sync-keys
   name: az ml workspace sync-keys
   summary: Sync workspace keys for dependent resources such as storage, acr, and app insights.
   description: ''
@@ -316,14 +316,14 @@ commands:
 - az_ml_workspace_create
 - az_ml_workspace_delete
 - az_ml_workspace_list
-- az_ml_workspace_list_keys
-- az_ml_workspace_private_endpoint
-- az_ml_workspace_private_endpoint_add
-- az_ml_workspace_private_endpoint_delete
-- az_ml_workspace_private_endpoint_list
+- az_ml_workspace_list-keys
+- az_ml_workspace_private-endpoint
+- az_ml_workspace_private-endpoint_add
+- az_ml_workspace_private-endpoint_delete
+- az_ml_workspace_private-endpoint_list
 - az_ml_workspace_share
 - az_ml_workspace_show
-- az_ml_workspace_sync_keys
+- az_ml_workspace_sync-keys
 - az_ml_workspace_update
 globalParameters:
 - name: --debug

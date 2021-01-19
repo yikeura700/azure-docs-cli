@@ -1,5 +1,5 @@
 ### YamlMime:AzureCLIGroup
-uid: az_internet_analyzer
+uid: az_internet-analyzer
 name: az internet-analyzer
 extensionInformation: >-
   > [!Note]
@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Commands to manage internet analyzer.
 description: ''
 directCommands:
-- uid: az_internet_analyzer_show_scorecard
+- uid: az_internet-analyzer_show-scorecard
   name: az internet-analyzer show-scorecard
   summary: Show latency scorecard for a test.
   description: ''
@@ -43,7 +43,7 @@ directCommands:
   - name: --end-date-time-utc
     summary: The end DateTime of the Latency Scorecard in UTC.
     description: ''
-- uid: az_internet_analyzer_show_timeseries
+- uid: az_internet-analyzer_show-timeseries
   name: az internet-analyzer show-timeseries
   summary: Show timeseries for a test.
   description: ''
@@ -95,22 +95,22 @@ directCommands:
     summary: The country associated with the Latency Scorecard. Values are country ISO codes as specified here - <a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a>.
     description: ''
 commands:
-- az_internet_analyzer_preconfigured_endpoint
-- az_internet_analyzer_preconfigured_endpoint_list
-- az_internet_analyzer_profile
-- az_internet_analyzer_profile_create
-- az_internet_analyzer_profile_delete
-- az_internet_analyzer_profile_list
-- az_internet_analyzer_profile_show
-- az_internet_analyzer_profile_update
-- az_internet_analyzer_show_scorecard
-- az_internet_analyzer_show_timeseries
-- az_internet_analyzer_test
-- az_internet_analyzer_test_create
-- az_internet_analyzer_test_delete
-- az_internet_analyzer_test_list
-- az_internet_analyzer_test_show
-- az_internet_analyzer_test_update
+- az_internet-analyzer_preconfigured-endpoint
+- az_internet-analyzer_preconfigured-endpoint_list
+- az_internet-analyzer_profile
+- az_internet-analyzer_profile_create
+- az_internet-analyzer_profile_delete
+- az_internet-analyzer_profile_list
+- az_internet-analyzer_profile_show
+- az_internet-analyzer_profile_update
+- az_internet-analyzer_show-scorecard
+- az_internet-analyzer_show-timeseries
+- az_internet-analyzer_test
+- az_internet-analyzer_test_create
+- az_internet-analyzer_test_delete
+- az_internet-analyzer_test_list
+- az_internet-analyzer_test_show
+- az_internet-analyzer_test_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

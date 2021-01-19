@@ -1,10 +1,10 @@
 ### YamlMime:AzureCLIGroup
-uid: az_backup_protectable_item
+uid: az_backup_protectable-item
 name: az backup protectable-item
 summary: Manage the item which is yet to be protected or backed up to an Azure Recovery services vault with an associated policy.
 description: ''
 directCommands:
-- uid: az_backup_protectable_item_initialize
+- uid: az_backup_protectable-item_initialize
   name: az backup protectable-item initialize
   summary: Trigger the discovery of any unprotected items of the given workload type in the given container.
   description: ''
@@ -40,7 +40,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
-- uid: az_backup_protectable_item_list
+- uid: az_backup_protectable-item_list
   name: az backup protectable-item list
   summary: Retrieve all protectable items within a certain container or across all registered containers.
   description: ''
@@ -79,7 +79,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
-- uid: az_backup_protectable_item_show
+- uid: az_backup_protectable-item_show
   name: az backup protectable-item show
   summary: Retrieve the specified protectable item within the given container.
   description: ''
@@ -131,9 +131,9 @@ directCommands:
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
 commands:
-- az_backup_protectable_item_initialize
-- az_backup_protectable_item_list
-- az_backup_protectable_item_show
+- az_backup_protectable-item_initialize
+- az_backup_protectable-item_list
+- az_backup_protectable-item_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

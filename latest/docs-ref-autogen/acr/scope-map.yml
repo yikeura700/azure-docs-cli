@@ -1,10 +1,10 @@
 ### YamlMime:AzureCLIGroup
-uid: az_acr_scope_map
+uid: az_acr_scope-map
 name: az acr scope-map
 summary: Manage scope access maps for Azure Container Registries.
 description: ''
 directCommands:
-- uid: az_acr_scope_map_create
+- uid: az_acr_scope-map_create
   name: az acr scope-map create
   summary: Create a scope map for an Azure Container Registry.
   description: ''
@@ -42,7 +42,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-- uid: az_acr_scope_map_delete
+- uid: az_acr_scope-map_delete
   name: az acr scope-map delete
   summary: Delete a scope map for an Azure Container Registry.
   description: ''
@@ -75,7 +75,7 @@ directCommands:
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-- uid: az_acr_scope_map_list
+- uid: az_acr_scope-map_list
   name: az acr scope-map list
   summary: List all scope maps for an Azure Container Registry.
   description: ''
@@ -103,7 +103,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-- uid: az_acr_scope_map_show
+- uid: az_acr_scope-map_show
   name: az acr scope-map show
   summary: Show details and attributes of a scope map for an Azure Container Registry.
   description: ''
@@ -136,7 +136,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
-- uid: az_acr_scope_map_update
+- uid: az_acr_scope-map_update
   name: az acr scope-map update
   summary: Update a scope map for an Azure Container Registry.
   description: ''
@@ -178,11 +178,11 @@ directCommands:
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
 commands:
-- az_acr_scope_map_create
-- az_acr_scope_map_delete
-- az_acr_scope_map_list
-- az_acr_scope_map_show
-- az_acr_scope_map_update
+- az_acr_scope-map_create
+- az_acr_scope-map_delete
+- az_acr_scope-map_list
+- az_acr_scope-map_show
+- az_acr_scope-map_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

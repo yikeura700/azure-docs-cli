@@ -1,5 +1,5 @@
 ### YamlMime:AzureCLIGroup
-uid: az_iot_hub_device_twin
+uid: az_iot_hub_device-twin
 name: az iot hub device-twin
 extensionInformation: >-
   > [!Note]
@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Manage IoT device twin configuration.
 description: ''
 directCommands:
-- uid: az_iot_hub_device_twin_replace
+- uid: az_iot_hub_device-twin_replace
   name: az iot hub device-twin replace
   summary: Replace device twin definition with target json.
   description: Input json directly or use a file path.
@@ -40,7 +40,7 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_iot_hub_device_twin_show
+- uid: az_iot_hub_device-twin_show
   name: az iot hub device-twin show
   summary: Get a device twin definition.
   description: ''
@@ -64,7 +64,7 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_iot_hub_device_twin_update
+- uid: az_iot_hub_device-twin_update
   name: az iot hub device-twin update
   summary: Update device twin definition.
   description: Use --set followed by property assignments for updating a device twin. Leverage properties returned from 'iot hub device-twin show'.
@@ -110,9 +110,9 @@ directCommands:
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
-- az_iot_hub_device_twin_replace
-- az_iot_hub_device_twin_show
-- az_iot_hub_device_twin_update
+- az_iot_hub_device-twin_replace
+- az_iot_hub_device-twin_show
+- az_iot_hub_device-twin_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

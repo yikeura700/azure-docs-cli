@@ -14,21 +14,21 @@ commands:
 - az_blockchain_member_create
 - az_blockchain_member_delete
 - az_blockchain_member_list
-- az_blockchain_member_list_api_key
-- az_blockchain_member_list_consortium_member
-- az_blockchain_member_regenerate_api_key
+- az_blockchain_member_list-api-key
+- az_blockchain_member_list-consortium-member
+- az_blockchain_member_regenerate-api-key
 - az_blockchain_member_show
 - az_blockchain_member_update
 - az_blockchain_member_wait
-- az_blockchain_transaction_node
-- az_blockchain_transaction_node_create
-- az_blockchain_transaction_node_delete
-- az_blockchain_transaction_node_list
-- az_blockchain_transaction_node_list_api_key
-- az_blockchain_transaction_node_regenerate_api_key
-- az_blockchain_transaction_node_show
-- az_blockchain_transaction_node_update
-- az_blockchain_transaction_node_wait
+- az_blockchain_transaction-node
+- az_blockchain_transaction-node_create
+- az_blockchain_transaction-node_delete
+- az_blockchain_transaction-node_list
+- az_blockchain_transaction-node_list-api-key
+- az_blockchain_transaction-node_regenerate-api-key
+- az_blockchain_transaction-node_show
+- az_blockchain_transaction-node_update
+- az_blockchain_transaction-node_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

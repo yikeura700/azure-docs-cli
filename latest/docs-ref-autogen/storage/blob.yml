@@ -85,7 +85,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_blob_delete_batch
+- uid: az_storage_blob_delete-batch
   name: az storage blob delete-batch
   summary: Delete blobs from a blob container recursively.
   description: ''
@@ -278,7 +278,7 @@ directCommands:
     summary: If set to true, validates an MD5 hash for each retrieved portion of the blob. This is primarily valuable for detecting bitflips on the wire if using http instead of https as https (the default) will already validate. Note that the service will only return transactional MD5s for chunks 4MB or less so the first get request will be of size self.MAX_CHUNK_GET_SIZE instead of self.MAX_SINGLE_GET_SIZE. If self.MAX_CHUNK_GET_SIZE was set to greater than 4MB an error will be thrown. As computing the MD5 takes processing time and more requests will need to be done due to the reduced chunk size there may be some increase in latency.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_blob_download_batch
+- uid: az_storage_blob_download-batch
   name: az storage blob download-batch
   summary: Download blobs from a blob container recursively.
   description: ''
@@ -405,7 +405,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_blob_generate_sas
+- uid: az_storage_blob_generate-sas
   name: az storage blob generate-sas
   summary: Generate a shared access signature for the blob.
   description: ''
@@ -632,7 +632,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_blob_set_tier
+- uid: az_storage_blob_set-tier
   name: az storage blob set-tier
   summary: Set the block or page tiers on the blob.
   description: For block blob this command only supports block blob on standard storage accounts. For page blob, this command only supports for page blobs on premium accounts.
@@ -1196,7 +1196,7 @@ directCommands:
     summary: Specifies that an MD5 hash shall be calculated for each chunk of the blob and verified by the service when the chunk has arrived.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_blob_upload_batch
+- uid: az_storage_blob_upload-batch
   name: az storage blob upload-batch
   summary: Upload files from a local directory to a blob container.
   description: ''
@@ -1507,16 +1507,16 @@ commands:
 - az_storage_blob_copy
 - az_storage_blob_copy_cancel
 - az_storage_blob_copy_start
-- az_storage_blob_copy_start_batch
+- az_storage_blob_copy_start-batch
 - az_storage_blob_delete
-- az_storage_blob_delete_batch
+- az_storage_blob_delete-batch
 - az_storage_blob_download
-- az_storage_blob_download_batch
+- az_storage_blob_download-batch
 - az_storage_blob_exists
-- az_storage_blob_generate_sas
-- az_storage_blob_incremental_copy
-- az_storage_blob_incremental_copy_cancel
-- az_storage_blob_incremental_copy_start
+- az_storage_blob_generate-sas
+- az_storage_blob_incremental-copy
+- az_storage_blob_incremental-copy_cancel
+- az_storage_blob_incremental-copy_start
 - az_storage_blob_lease
 - az_storage_blob_lease_acquire
 - az_storage_blob_lease_break
@@ -1528,20 +1528,20 @@ commands:
 - az_storage_blob_metadata_show
 - az_storage_blob_metadata_update
 - az_storage_blob_restore
-- az_storage_blob_service_properties
-- az_storage_blob_service_properties_delete_policy
-- az_storage_blob_service_properties_delete_policy_show
-- az_storage_blob_service_properties_delete_policy_update
-- az_storage_blob_service_properties_show
-- az_storage_blob_service_properties_update
-- az_storage_blob_set_tier
+- az_storage_blob_service-properties
+- az_storage_blob_service-properties_delete-policy
+- az_storage_blob_service-properties_delete-policy_show
+- az_storage_blob_service-properties_delete-policy_update
+- az_storage_blob_service-properties_show
+- az_storage_blob_service-properties_update
+- az_storage_blob_set-tier
 - az_storage_blob_show
 - az_storage_blob_snapshot
 - az_storage_blob_sync
 - az_storage_blob_undelete
 - az_storage_blob_update
 - az_storage_blob_upload
-- az_storage_blob_upload_batch
+- az_storage_blob_upload-batch
 - az_storage_blob_url
 - az_storage_blob_filter
 - az_storage_blob_tag

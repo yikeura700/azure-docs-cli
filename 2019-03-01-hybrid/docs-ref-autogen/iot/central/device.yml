@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Manage and configure IoT Central devices.
 description: ''
 directCommands:
-- uid: az_iot_central_device_compute_device_key
+- uid: az_iot_central_device_compute-device-key
   name: az iot central device compute-device-key
   summary: Generate a derived device SAS key.
   description: Generate a derived device key from a group-level SAS key.
@@ -100,7 +100,7 @@ directCommands:
   - name: --token
     summary: "Authorization token for request. More info available here: <a href=\"https://docs.microsoft.com/en-us/learn/modules/manage-iot-central-apps-with-rest-api/\">https://docs.microsoft.com/en-us/learn/modules/manage-iot-central-apps-with-rest-api/</a> MUST INCLUDE type (e.g. 'SharedAccessToken ...', 'Bearer ...'). Example: 'Bearer someBearerTokenHere'."
     description: ''
-- uid: az_iot_central_device_registration_info
+- uid: az_iot_central_device_registration-info
   name: az iot central device registration-info
   summary: Get registration info on device(s) from IoT Central.
   description: >-
@@ -161,7 +161,7 @@ directCommands:
   - name: --token
     summary: "Authorization token for request. More info available here: <a href=\"https://docs.microsoft.com/en-us/learn/modules/manage-iot-central-apps-with-rest-api/\">https://docs.microsoft.com/en-us/learn/modules/manage-iot-central-apps-with-rest-api/</a> MUST INCLUDE type (e.g. 'SharedAccessToken ...', 'Bearer ...'). Example: 'Bearer someBearerTokenHere'."
     description: ''
-- uid: az_iot_central_device_show_credentials
+- uid: az_iot_central_device_show-credentials
   name: az iot central device show-credentials
   summary: Get device credentials from IoT Central.
   description: ''
@@ -194,12 +194,12 @@ commands:
 - az_iot_central_device_command
 - az_iot_central_device_command_history
 - az_iot_central_device_command_run
-- az_iot_central_device_compute_device_key
+- az_iot_central_device_compute-device-key
 - az_iot_central_device_create
 - az_iot_central_device_delete
-- az_iot_central_device_registration_info
+- az_iot_central_device_registration-info
 - az_iot_central_device_show
-- az_iot_central_device_show_credentials
+- az_iot_central_device_show-credentials
 - az_iot_central_device_twin
 - az_iot_central_device_twin_show
 globalParameters:

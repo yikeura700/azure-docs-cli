@@ -1,5 +1,5 @@
 ### YamlMime:AzureCLIGroup
-uid: az_notification_hub
+uid: az_notification-hub
 name: az notification-hub
 extensionInformation: >-
   > [!Note]
@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Manage Notification Hubs.
 description: ''
 directCommands:
-- uid: az_notification_hub_check_availability
+- uid: az_notification-hub_check-availability
   name: az notification-hub check-availability
   summary: Check the availability of the given notificationHub in a namespace.
   description: ''
@@ -35,7 +35,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_notification_hub_create
+- uid: az_notification-hub_create
   name: az notification-hub create
   summary: Create a NotificationHub in a namespace.
   description: ''
@@ -76,7 +76,7 @@ directCommands:
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
-- uid: az_notification_hub_delete
+- uid: az_notification-hub_delete
   name: az notification-hub delete
   summary: Delete a notification hub associated with a namespace.
   description: ''
@@ -108,7 +108,7 @@ directCommands:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
-- uid: az_notification_hub_list
+- uid: az_notification-hub_list
   name: az notification-hub list
   summary: List the notification hubs associated with a namespace.
   description: ''
@@ -127,7 +127,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_notification_hub_show
+- uid: az_notification-hub_show
   name: az notification-hub show
   summary: Show the notification hub information.
   description: ''
@@ -154,7 +154,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_notification_hub_test_send
+- uid: az_notification-hub_test-send
   name: az notification-hub test-send
   summary: Test send a push notification.
   description: ''
@@ -220,7 +220,7 @@ directCommands:
   - name: --title
     summary: The title of the notification.
     description: ''
-- uid: az_notification_hub_update
+- uid: az_notification-hub_update
   name: az notification-hub update
   summary: Update a Notification Hub in a namespace.
   description: ''
@@ -253,49 +253,49 @@ directCommands:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
 commands:
-- az_notification_hub_authorization_rule
-- az_notification_hub_authorization_rule_create
-- az_notification_hub_authorization_rule_delete
-- az_notification_hub_authorization_rule_list
-- az_notification_hub_authorization_rule_list_keys
-- az_notification_hub_authorization_rule_regenerate_keys
-- az_notification_hub_authorization_rule_show
-- az_notification_hub_check_availability
-- az_notification_hub_create
-- az_notification_hub_credential
-- az_notification_hub_credential_adm
-- az_notification_hub_credential_adm_update
-- az_notification_hub_credential_apns
-- az_notification_hub_credential_apns_update
-- az_notification_hub_credential_baidu
-- az_notification_hub_credential_baidu_update
-- az_notification_hub_credential_gcm
-- az_notification_hub_credential_gcm_update
-- az_notification_hub_credential_list
-- az_notification_hub_credential_mpns
-- az_notification_hub_credential_mpns_update
-- az_notification_hub_credential_wns
-- az_notification_hub_credential_wns_update
-- az_notification_hub_delete
-- az_notification_hub_list
-- az_notification_hub_namespace
-- az_notification_hub_namespace_authorization_rule
-- az_notification_hub_namespace_authorization_rule_create
-- az_notification_hub_namespace_authorization_rule_delete
-- az_notification_hub_namespace_authorization_rule_list
-- az_notification_hub_namespace_authorization_rule_list_keys
-- az_notification_hub_namespace_authorization_rule_regenerate_keys
-- az_notification_hub_namespace_authorization_rule_show
-- az_notification_hub_namespace_check_availability
-- az_notification_hub_namespace_create
-- az_notification_hub_namespace_delete
-- az_notification_hub_namespace_list
-- az_notification_hub_namespace_show
-- az_notification_hub_namespace_update
-- az_notification_hub_namespace_wait
-- az_notification_hub_show
-- az_notification_hub_test_send
-- az_notification_hub_update
+- az_notification-hub_authorization-rule
+- az_notification-hub_authorization-rule_create
+- az_notification-hub_authorization-rule_delete
+- az_notification-hub_authorization-rule_list
+- az_notification-hub_authorization-rule_list-keys
+- az_notification-hub_authorization-rule_regenerate-keys
+- az_notification-hub_authorization-rule_show
+- az_notification-hub_check-availability
+- az_notification-hub_create
+- az_notification-hub_credential
+- az_notification-hub_credential_adm
+- az_notification-hub_credential_adm_update
+- az_notification-hub_credential_apns
+- az_notification-hub_credential_apns_update
+- az_notification-hub_credential_baidu
+- az_notification-hub_credential_baidu_update
+- az_notification-hub_credential_gcm
+- az_notification-hub_credential_gcm_update
+- az_notification-hub_credential_list
+- az_notification-hub_credential_mpns
+- az_notification-hub_credential_mpns_update
+- az_notification-hub_credential_wns
+- az_notification-hub_credential_wns_update
+- az_notification-hub_delete
+- az_notification-hub_list
+- az_notification-hub_namespace
+- az_notification-hub_namespace_authorization-rule
+- az_notification-hub_namespace_authorization-rule_create
+- az_notification-hub_namespace_authorization-rule_delete
+- az_notification-hub_namespace_authorization-rule_list
+- az_notification-hub_namespace_authorization-rule_list-keys
+- az_notification-hub_namespace_authorization-rule_regenerate-keys
+- az_notification-hub_namespace_authorization-rule_show
+- az_notification-hub_namespace_check-availability
+- az_notification-hub_namespace_create
+- az_notification-hub_namespace_delete
+- az_notification-hub_namespace_list
+- az_notification-hub_namespace_show
+- az_notification-hub_namespace_update
+- az_notification-hub_namespace_wait
+- az_notification-hub_show
+- az_notification-hub_test-send
+- az_notification-hub_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

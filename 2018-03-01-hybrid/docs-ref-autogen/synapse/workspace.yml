@@ -4,7 +4,7 @@ name: az synapse workspace
 summary: Manage Synapse workspaces.
 description: ''
 directCommands:
-- uid: az_synapse_workspace_check_name
+- uid: az_synapse_workspace_check-name
   name: az synapse workspace check-name
   summary: Check if a Synapse workspace name is available or not.
   description: ''
@@ -271,15 +271,15 @@ directCommands:
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
 commands:
-- az_synapse_workspace_check_name
+- az_synapse_workspace_check-name
 - az_synapse_workspace_create
 - az_synapse_workspace_delete
-- az_synapse_workspace_firewall_rule
-- az_synapse_workspace_firewall_rule_create
-- az_synapse_workspace_firewall_rule_delete
-- az_synapse_workspace_firewall_rule_list
-- az_synapse_workspace_firewall_rule_show
-- az_synapse_workspace_firewall_rule_wait
+- az_synapse_workspace_firewall-rule
+- az_synapse_workspace_firewall-rule_create
+- az_synapse_workspace_firewall-rule_delete
+- az_synapse_workspace_firewall-rule_list
+- az_synapse_workspace_firewall-rule_show
+- az_synapse_workspace_firewall-rule_wait
 - az_synapse_workspace_list
 - az_synapse_workspace_show
 - az_synapse_workspace_update

@@ -80,7 +80,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_blob_delete_batch
+- uid: az_storage_blob_delete-batch
   name: az storage blob delete-batch
   summary: Delete blobs from a blob container recursively.
   description: ''
@@ -273,7 +273,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_blob_download_batch
+- uid: az_storage_blob_download-batch
   name: az storage blob download-batch
   summary: Download blobs from a blob container recursively.
   description: ''
@@ -390,7 +390,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_blob_generate_sas
+- uid: az_storage_blob_generate-sas
   name: az storage blob generate-sas
   summary: Generate a shared access signature for the blob.
   description: ''
@@ -554,7 +554,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_blob_set_tier
+- uid: az_storage_blob_set-tier
   name: az storage blob set-tier
   summary: Set the block or page tiers on the blob.
   description: For block blob this command only supports block blob on standard storage accounts. For page blob, this command only supports for page blobs on premium accounts.
@@ -1027,7 +1027,7 @@ directCommands:
     summary: Defaults to 'page' for \*.vhd files, or 'block' otherwise.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
-- uid: az_storage_blob_upload_batch
+- uid: az_storage_blob_upload-batch
   name: az storage blob upload-batch
   summary: Upload files from a local directory to a blob container.
   description: ''
@@ -1366,13 +1366,13 @@ commands:
 - az_storage_blob_copy
 - az_storage_blob_copy_cancel
 - az_storage_blob_copy_start
-- az_storage_blob_copy_start_batch
+- az_storage_blob_copy_start-batch
 - az_storage_blob_delete
-- az_storage_blob_delete_batch
+- az_storage_blob_delete-batch
 - az_storage_blob_download
-- az_storage_blob_download_batch
+- az_storage_blob_download-batch
 - az_storage_blob_exists
-- az_storage_blob_generate_sas
+- az_storage_blob_generate-sas
 - az_storage_blob_lease
 - az_storage_blob_lease_acquire
 - az_storage_blob_lease_break
@@ -1383,16 +1383,16 @@ commands:
 - az_storage_blob_metadata
 - az_storage_blob_metadata_show
 - az_storage_blob_metadata_update
-- az_storage_blob_service_properties
-- az_storage_blob_service_properties_show
-- az_storage_blob_service_properties_update
-- az_storage_blob_set_tier
+- az_storage_blob_service-properties
+- az_storage_blob_service-properties_show
+- az_storage_blob_service-properties_update
+- az_storage_blob_set-tier
 - az_storage_blob_show
 - az_storage_blob_snapshot
 - az_storage_blob_sync
 - az_storage_blob_update
 - az_storage_blob_upload
-- az_storage_blob_upload_batch
+- az_storage_blob_upload-batch
 - az_storage_blob_url
 - az_storage_blob_filter
 - az_storage_blob_tag

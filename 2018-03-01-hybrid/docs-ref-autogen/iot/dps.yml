@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Manage entities in an Azure IoT Hub Device Provisioning Service. Augmented with the IoT extension.
 description: ''
 directCommands:
-- uid: az_iot_dps_compute_device_key
+- uid: az_iot_dps_compute-device-key
   name: az iot dps compute-device-key
   summary: Generate a derived device SAS key.
   description: Generate a derived device key from a DPS enrollment group symmetric key.
@@ -34,17 +34,17 @@ commands:
 - az_iot_dps_enrollment_list
 - az_iot_dps_enrollment_show
 - az_iot_dps_enrollment_update
-- az_iot_dps_enrollment_group
-- az_iot_dps_enrollment_group_create
-- az_iot_dps_enrollment_group_delete
-- az_iot_dps_enrollment_group_list
-- az_iot_dps_enrollment_group_show
-- az_iot_dps_enrollment_group_update
+- az_iot_dps_enrollment-group
+- az_iot_dps_enrollment-group_create
+- az_iot_dps_enrollment-group_delete
+- az_iot_dps_enrollment-group_list
+- az_iot_dps_enrollment-group_show
+- az_iot_dps_enrollment-group_update
 - az_iot_dps_registration
 - az_iot_dps_registration_delete
 - az_iot_dps_registration_list
 - az_iot_dps_registration_show
-- az_iot_dps_compute_device_key
+- az_iot_dps_compute-device-key
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

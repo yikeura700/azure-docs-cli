@@ -1,5 +1,5 @@
 ### YamlMime:AzureCLIGroup
-uid: az_spring_cloud
+uid: az_spring-cloud
 name: az spring-cloud
 extensionInformation: >-
   > [!Note]
@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Commands to manage Azure Spring Cloud.
 description: ''
 directCommands:
-- uid: az_spring_cloud_create
+- uid: az_spring-cloud_create
   name: az spring-cloud create
   summary: Create an Azure Spring Cloud.
   description: ''
@@ -89,7 +89,7 @@ directCommands:
   - name: --vnet
     summary: The name or ID of an existing Virtual Network into which to deploy the Spring Cloud instance.
     description: ''
-- uid: az_spring_cloud_delete
+- uid: az_spring-cloud_delete
   name: az spring-cloud delete
   summary: Delete an Azure Spring Cloud.
   description: ''
@@ -110,7 +110,7 @@ directCommands:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
-- uid: az_spring_cloud_list
+- uid: az_spring-cloud_list
   name: az spring-cloud list
   summary: List all Azure Spring Cloud in the given resource group, otherwise list the subscription's.
   description: ''
@@ -119,7 +119,7 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_spring_cloud_show
+- uid: az_spring-cloud_show
   name: az spring-cloud show
   summary: Show the details for an Azure Spring Cloud.
   description: ''
@@ -135,7 +135,7 @@ directCommands:
     name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-- uid: az_spring_cloud_update
+- uid: az_spring-cloud_update
   name: az spring-cloud update
   summary: Update an Azure Spring Cloud.
   description: ''
@@ -185,76 +185,76 @@ directCommands:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
 commands:
-- az_spring_cloud_app
-- az_spring_cloud_app_binding
-- az_spring_cloud_app_binding_cosmos
-- az_spring_cloud_app_binding_cosmos_add
-- az_spring_cloud_app_binding_cosmos_update
-- az_spring_cloud_app_binding_list
-- az_spring_cloud_app_binding_mysql
-- az_spring_cloud_app_binding_mysql_add
-- az_spring_cloud_app_binding_mysql_update
-- az_spring_cloud_app_binding_redis
-- az_spring_cloud_app_binding_redis_add
-- az_spring_cloud_app_binding_redis_update
-- az_spring_cloud_app_binding_remove
-- az_spring_cloud_app_binding_show
-- az_spring_cloud_app_create
-- az_spring_cloud_app_custom_domain
-- az_spring_cloud_app_custom_domain_bind
-- az_spring_cloud_app_custom_domain_list
-- az_spring_cloud_app_custom_domain_show
-- az_spring_cloud_app_custom_domain_unbind
-- az_spring_cloud_app_custom_domain_update
-- az_spring_cloud_app_delete
-- az_spring_cloud_app_deploy
-- az_spring_cloud_app_deployment
-- az_spring_cloud_app_deployment_create
-- az_spring_cloud_app_deployment_delete
-- az_spring_cloud_app_deployment_list
-- az_spring_cloud_app_deployment_show
-- az_spring_cloud_app_identity
-- az_spring_cloud_app_identity_assign
-- az_spring_cloud_app_identity_remove
-- az_spring_cloud_app_identity_show
-- az_spring_cloud_app_list
-- az_spring_cloud_app_log
-- az_spring_cloud_app_log_tail
-- az_spring_cloud_app_logs
-- az_spring_cloud_app_restart
-- az_spring_cloud_app_scale
-- az_spring_cloud_app_set_deployment
-- az_spring_cloud_app_show
-- az_spring_cloud_app_show_deploy_log
-- az_spring_cloud_app_start
-- az_spring_cloud_app_stop
-- az_spring_cloud_app_update
-- az_spring_cloud_certificate
-- az_spring_cloud_certificate_add
-- az_spring_cloud_certificate_list
-- az_spring_cloud_certificate_remove
-- az_spring_cloud_certificate_show
-- az_spring_cloud_config_server
-- az_spring_cloud_config_server_clear
-- az_spring_cloud_config_server_git
-- az_spring_cloud_config_server_git_repo
-- az_spring_cloud_config_server_git_repo_add
-- az_spring_cloud_config_server_git_repo_list
-- az_spring_cloud_config_server_git_repo_remove
-- az_spring_cloud_config_server_git_repo_update
-- az_spring_cloud_config_server_git_set
-- az_spring_cloud_config_server_set
-- az_spring_cloud_config_server_show
-- az_spring_cloud_create
-- az_spring_cloud_delete
-- az_spring_cloud_list
-- az_spring_cloud_show
-- az_spring_cloud_test_endpoint
-- az_spring_cloud_test_endpoint_disable
-- az_spring_cloud_test_endpoint_enable
-- az_spring_cloud_test_endpoint_list
-- az_spring_cloud_test_endpoint_renew_key
-- az_spring_cloud_update
+- az_spring-cloud_app
+- az_spring-cloud_app_binding
+- az_spring-cloud_app_binding_cosmos
+- az_spring-cloud_app_binding_cosmos_add
+- az_spring-cloud_app_binding_cosmos_update
+- az_spring-cloud_app_binding_list
+- az_spring-cloud_app_binding_mysql
+- az_spring-cloud_app_binding_mysql_add
+- az_spring-cloud_app_binding_mysql_update
+- az_spring-cloud_app_binding_redis
+- az_spring-cloud_app_binding_redis_add
+- az_spring-cloud_app_binding_redis_update
+- az_spring-cloud_app_binding_remove
+- az_spring-cloud_app_binding_show
+- az_spring-cloud_app_create
+- az_spring-cloud_app_custom-domain
+- az_spring-cloud_app_custom-domain_bind
+- az_spring-cloud_app_custom-domain_list
+- az_spring-cloud_app_custom-domain_show
+- az_spring-cloud_app_custom-domain_unbind
+- az_spring-cloud_app_custom-domain_update
+- az_spring-cloud_app_delete
+- az_spring-cloud_app_deploy
+- az_spring-cloud_app_deployment
+- az_spring-cloud_app_deployment_create
+- az_spring-cloud_app_deployment_delete
+- az_spring-cloud_app_deployment_list
+- az_spring-cloud_app_deployment_show
+- az_spring-cloud_app_identity
+- az_spring-cloud_app_identity_assign
+- az_spring-cloud_app_identity_remove
+- az_spring-cloud_app_identity_show
+- az_spring-cloud_app_list
+- az_spring-cloud_app_log
+- az_spring-cloud_app_log_tail
+- az_spring-cloud_app_logs
+- az_spring-cloud_app_restart
+- az_spring-cloud_app_scale
+- az_spring-cloud_app_set-deployment
+- az_spring-cloud_app_show
+- az_spring-cloud_app_show-deploy-log
+- az_spring-cloud_app_start
+- az_spring-cloud_app_stop
+- az_spring-cloud_app_update
+- az_spring-cloud_certificate
+- az_spring-cloud_certificate_add
+- az_spring-cloud_certificate_list
+- az_spring-cloud_certificate_remove
+- az_spring-cloud_certificate_show
+- az_spring-cloud_config-server
+- az_spring-cloud_config-server_clear
+- az_spring-cloud_config-server_git
+- az_spring-cloud_config-server_git_repo
+- az_spring-cloud_config-server_git_repo_add
+- az_spring-cloud_config-server_git_repo_list
+- az_spring-cloud_config-server_git_repo_remove
+- az_spring-cloud_config-server_git_repo_update
+- az_spring-cloud_config-server_git_set
+- az_spring-cloud_config-server_set
+- az_spring-cloud_config-server_show
+- az_spring-cloud_create
+- az_spring-cloud_delete
+- az_spring-cloud_list
+- az_spring-cloud_show
+- az_spring-cloud_test-endpoint
+- az_spring-cloud_test-endpoint_disable
+- az_spring-cloud_test-endpoint_enable
+- az_spring-cloud_test-endpoint_list
+- az_spring-cloud_test-endpoint_renew-key
+- az_spring-cloud_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

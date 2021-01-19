@@ -1,10 +1,10 @@
 ### YamlMime:AzureCLIGroup
-uid: az_mysql_flexible_server
+uid: az_mysql_flexible-server
 name: az mysql flexible-server
 summary: Manage Azure Database for MySQL Flexible Servers.
 description: ''
 directCommands:
-- uid: az_mysql_flexible_server_create
+- uid: az_mysql_flexible-server_create
   name: az mysql flexible-server create
   summary: Create a flexible server.
   description: ''
@@ -111,7 +111,7 @@ directCommands:
   - name: --zone, -z
     summary: Availability zone into which to provision the resource.
     description: ''
-- uid: az_mysql_flexible_server_delete
+- uid: az_mysql_flexible-server_delete
   name: az mysql flexible-server delete
   summary: Delete a flexible server.
   description: ''
@@ -142,7 +142,7 @@ directCommands:
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
-- uid: az_mysql_flexible_server_list
+- uid: az_mysql_flexible-server_list
   name: az mysql flexible-server list
   summary: List available flexible servers.
   description: ''
@@ -165,7 +165,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-- uid: az_mysql_flexible_server_list_skus
+- uid: az_mysql_flexible-server_list-skus
   name: az mysql flexible-server list-skus
   summary: Lists available sku's in the given region.
   description: ''
@@ -184,7 +184,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-- uid: az_mysql_flexible_server_restart
+- uid: az_mysql_flexible-server_restart
   name: az mysql flexible-server restart
   summary: Restart a flexible server.
   description: ''
@@ -209,7 +209,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-- uid: az_mysql_flexible_server_restore
+- uid: az_mysql_flexible-server_restore
   name: az mysql flexible-server restore
   summary: Restore a flexible server from backup.
   description: ''
@@ -258,7 +258,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-- uid: az_mysql_flexible_server_show
+- uid: az_mysql_flexible-server_show
   name: az mysql flexible-server show
   summary: Get the details of a flexible server.
   description: ''
@@ -287,7 +287,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-- uid: az_mysql_flexible_server_show_connection_string
+- uid: az_mysql_flexible-server_show-connection-string
   name: az mysql flexible-server show-connection-string
   summary: Show the connection strings for a MySQL flexible-server database.
   description: ''
@@ -321,7 +321,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-- uid: az_mysql_flexible_server_start
+- uid: az_mysql_flexible-server_start
   name: az mysql flexible-server start
   summary: Start a flexible server.
   description: ''
@@ -346,7 +346,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-- uid: az_mysql_flexible_server_stop
+- uid: az_mysql_flexible-server_stop
   name: az mysql flexible-server stop
   summary: Stop a flexible server.
   description: ''
@@ -371,7 +371,7 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
-- uid: az_mysql_flexible_server_update
+- uid: az_mysql_flexible-server_update
   name: az mysql flexible-server update
   summary: Update a flexible server.
   description: ''
@@ -465,7 +465,7 @@ directCommands:
   - name: --tier
     summary: 'Compute tier of the server. Accepted values: Burstable, GeneralPurpose, Memory Optimized.'
     description: ''
-- uid: az_mysql_flexible_server_wait
+- uid: az_mysql_flexible-server_wait
   name: az mysql flexible-server wait
   summary: Wait for the flexible server to satisfy certain conditions.
   description: ''
@@ -521,37 +521,37 @@ directCommands:
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
-- az_mysql_flexible_server_create
-- az_mysql_flexible_server_db
-- az_mysql_flexible_server_db_create
-- az_mysql_flexible_server_db_delete
-- az_mysql_flexible_server_db_list
-- az_mysql_flexible_server_db_show
-- az_mysql_flexible_server_delete
-- az_mysql_flexible_server_firewall_rule
-- az_mysql_flexible_server_firewall_rule_create
-- az_mysql_flexible_server_firewall_rule_delete
-- az_mysql_flexible_server_firewall_rule_list
-- az_mysql_flexible_server_firewall_rule_show
-- az_mysql_flexible_server_firewall_rule_update
-- az_mysql_flexible_server_list
-- az_mysql_flexible_server_list_skus
-- az_mysql_flexible_server_parameter
-- az_mysql_flexible_server_parameter_list
-- az_mysql_flexible_server_parameter_set
-- az_mysql_flexible_server_parameter_show
-- az_mysql_flexible_server_replica
-- az_mysql_flexible_server_replica_create
-- az_mysql_flexible_server_replica_list
-- az_mysql_flexible_server_replica_stop_replication
-- az_mysql_flexible_server_restart
-- az_mysql_flexible_server_restore
-- az_mysql_flexible_server_show
-- az_mysql_flexible_server_show_connection_string
-- az_mysql_flexible_server_start
-- az_mysql_flexible_server_stop
-- az_mysql_flexible_server_update
-- az_mysql_flexible_server_wait
+- az_mysql_flexible-server_create
+- az_mysql_flexible-server_db
+- az_mysql_flexible-server_db_create
+- az_mysql_flexible-server_db_delete
+- az_mysql_flexible-server_db_list
+- az_mysql_flexible-server_db_show
+- az_mysql_flexible-server_delete
+- az_mysql_flexible-server_firewall-rule
+- az_mysql_flexible-server_firewall-rule_create
+- az_mysql_flexible-server_firewall-rule_delete
+- az_mysql_flexible-server_firewall-rule_list
+- az_mysql_flexible-server_firewall-rule_show
+- az_mysql_flexible-server_firewall-rule_update
+- az_mysql_flexible-server_list
+- az_mysql_flexible-server_list-skus
+- az_mysql_flexible-server_parameter
+- az_mysql_flexible-server_parameter_list
+- az_mysql_flexible-server_parameter_set
+- az_mysql_flexible-server_parameter_show
+- az_mysql_flexible-server_replica
+- az_mysql_flexible-server_replica_create
+- az_mysql_flexible-server_replica_list
+- az_mysql_flexible-server_replica_stop-replication
+- az_mysql_flexible-server_restart
+- az_mysql_flexible-server_restore
+- az_mysql_flexible-server_show
+- az_mysql_flexible-server_show-connection-string
+- az_mysql_flexible-server_start
+- az_mysql_flexible-server_stop
+- az_mysql_flexible-server_update
+- az_mysql_flexible-server_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

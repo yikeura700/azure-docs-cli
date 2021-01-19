@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Holds group of commands which cater to webapp scans. Currently available only for Linux based webapps.
 description: ''
 directCommands:
-- uid: az_webapp_scan_list_result
+- uid: az_webapp_scan_list-result
   name: az webapp scan list-result
   summary: Get details of all scans conducted on webapp, upto max scan limit set on the webapp This will get you the scan log results in addition to the scan status of each scan conducted on the webapp.
   description: ''
@@ -29,7 +29,7 @@ directCommands:
   - name: --slot
     summary: ''
     description: ''
-- uid: az_webapp_scan_show_result
+- uid: az_webapp_scan_show-result
   name: az webapp scan show-result
   summary: Get results of specified scan-id. This will fetch you the Scan log results of the specified scan-id.
   description: ''
@@ -128,8 +128,8 @@ directCommands:
     summary: ''
     description: ''
 commands:
-- az_webapp_scan_list_result
-- az_webapp_scan_show_result
+- az_webapp_scan_list-result
+- az_webapp_scan_show-result
 - az_webapp_scan_start
 - az_webapp_scan_stop
 - az_webapp_scan_track

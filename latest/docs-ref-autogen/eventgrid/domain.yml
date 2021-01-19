@@ -233,15 +233,15 @@ commands:
 - az_eventgrid_domain_topic_list
 - az_eventgrid_domain_topic_show
 - az_eventgrid_domain_update
-- az_eventgrid_domain_private_endpoint_connection
-- az_eventgrid_domain_private_endpoint_connection_approve
-- az_eventgrid_domain_private_endpoint_connection_delete
-- az_eventgrid_domain_private_endpoint_connection_list
-- az_eventgrid_domain_private_endpoint_connection_reject
-- az_eventgrid_domain_private_endpoint_connection_show
-- az_eventgrid_domain_private_link_resource
-- az_eventgrid_domain_private_link_resource_list
-- az_eventgrid_domain_private_link_resource_show
+- az_eventgrid_domain_private-endpoint-connection
+- az_eventgrid_domain_private-endpoint-connection_approve
+- az_eventgrid_domain_private-endpoint-connection_delete
+- az_eventgrid_domain_private-endpoint-connection_list
+- az_eventgrid_domain_private-endpoint-connection_reject
+- az_eventgrid_domain_private-endpoint-connection_show
+- az_eventgrid_domain_private-link-resource
+- az_eventgrid_domain_private-link-resource_list
+- az_eventgrid_domain_private-link-resource_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

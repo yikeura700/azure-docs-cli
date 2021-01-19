@@ -1,5 +1,5 @@
 ### YamlMime:AzureCLIGroup
-uid: az_timeseriesinsights_event_source_eventhub
+uid: az_timeseriesinsights_event-source_eventhub
 name: az timeseriesinsights event-source eventhub
 extensionInformation: >-
   > [!Note]
@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Create or update an event hub event source under the specified environment.
 description: ''
 directCommands:
-- uid: az_timeseriesinsights_event_source_eventhub_create
+- uid: az_timeseriesinsights_event-source_eventhub_create
   name: az timeseriesinsights event-source eventhub create
   summary: Create or update an event hub event source under the specified environment.
   description: ''
@@ -78,7 +78,7 @@ directCommands:
   - name: --timestamp-property-name
     summary: The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
     description: ''
-- uid: az_timeseriesinsights_event_source_eventhub_update
+- uid: az_timeseriesinsights_event-source_eventhub_update
   name: az timeseriesinsights event-source eventhub update
   summary: Create or update an event source under the specified environment.
   description: ''
@@ -125,8 +125,8 @@ directCommands:
     summary: The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
     description: ''
 commands:
-- az_timeseriesinsights_event_source_eventhub_create
-- az_timeseriesinsights_event_source_eventhub_update
+- az_timeseriesinsights_event-source_eventhub_create
+- az_timeseriesinsights_event-source_eventhub_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

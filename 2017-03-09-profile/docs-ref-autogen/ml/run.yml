@@ -45,7 +45,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_run_download_logs
+- uid: az_ml_run_download-logs
   name: az ml run download-logs
   summary: Download log files.
   description: ''
@@ -148,7 +148,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_run_monitor_logs
+- uid: az_ml_run_monitor-logs
   name: az ml run monitor-logs
   summary: Monitor the logs for an existing run.
   description: ''
@@ -185,7 +185,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_run_monitor_tensorboard
+- uid: az_ml_run_monitor-tensorboard
   name: az ml run monitor-tensorboard
   summary: Monitor an existing run using tensorboard.
   description: ''
@@ -263,7 +263,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_run_submit_hyperdrive
+- uid: az_ml_run_submit-hyperdrive
   name: az ml run submit-hyperdrive
   summary: Submit a hyper parameter sweep using run config.
   description: ''
@@ -324,7 +324,7 @@ directCommands:
   - name: <USER_SCRIPT_AND_ARGUMENTS>
     summary: The run submit arguments, like script name and script arguments.
     description: ''
-- uid: az_ml_run_submit_pipeline
+- uid: az_ml_run_submit-pipeline
   name: az ml run submit-pipeline
   summary: Submit a pipeline for execution, from a published pipeline ID or pipeline YAML file.
   description: ''
@@ -375,7 +375,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_run_submit_script
+- uid: az_ml_run_submit-script
   name: az ml run submit-script
   summary: Submit a script for execution.
   description: ''
@@ -473,14 +473,14 @@ directCommands:
     description: ''
 commands:
 - az_ml_run_cancel
-- az_ml_run_download_logs
+- az_ml_run_download-logs
 - az_ml_run_list
-- az_ml_run_monitor_logs
-- az_ml_run_monitor_tensorboard
+- az_ml_run_monitor-logs
+- az_ml_run_monitor-tensorboard
 - az_ml_run_show
-- az_ml_run_submit_hyperdrive
-- az_ml_run_submit_pipeline
-- az_ml_run_submit_script
+- az_ml_run_submit-hyperdrive
+- az_ml_run_submit-pipeline
+- az_ml_run_submit-script
 - az_ml_run_update
 globalParameters:
 - name: --debug
