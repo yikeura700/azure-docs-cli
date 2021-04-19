@@ -989,6 +989,75 @@
           uid: az_devops_wiki_page
           displayName: az devops wiki page
           items: []
+    - name: pipelines
+      items:
+      - name: Summary
+        uid: az_pipelines
+        displayName: az pipelines
+      - name: agent
+        uid: az_pipelines_agent
+        displayName: az pipelines agent
+        items: []
+      - name: build
+        items:
+        - name: Summary
+          uid: az_pipelines_build
+          displayName: az pipelines build
+        - name: definition
+          uid: az_pipelines_build_definition
+          displayName: az pipelines build definition
+          items: []
+        - name: tag
+          uid: az_pipelines_build_tag
+          displayName: az pipelines build tag
+          items: []
+      - name: folder
+        uid: az_pipelines_folder
+        displayName: az pipelines folder
+        items: []
+      - name: pool
+        uid: az_pipelines_pool
+        displayName: az pipelines pool
+        items: []
+      - name: queue
+        uid: az_pipelines_queue
+        displayName: az pipelines queue
+        items: []
+      - name: release
+        items:
+        - name: Summary
+          uid: az_pipelines_release
+          displayName: az pipelines release
+        - name: definition
+          uid: az_pipelines_release_definition
+          displayName: az pipelines release definition
+          items: []
+      - name: runs
+        items:
+        - name: Summary
+          uid: az_pipelines_runs
+          displayName: az pipelines runs
+        - name: artifact
+          uid: az_pipelines_runs_artifact
+          displayName: az pipelines runs artifact
+          items: []
+        - name: tag
+          uid: az_pipelines_runs_tag
+          displayName: az pipelines runs tag
+          items: []
+      - name: variable
+        uid: az_pipelines_variable
+        displayName: az pipelines variable
+        items: []
+      - name: variable-group
+        items:
+        - name: Summary
+          uid: az_pipelines_variable-group
+          displayName: az pipelines variable-group
+        - name: variable
+          uid: az_pipelines_variable-group_variable
+          displayName: az pipelines variable-group variable
+          items: []
   - name: Azure DevTest Labs
     uid: sp-Azure_DevTest_Labs
     displayName: Azure DevTest Labs
