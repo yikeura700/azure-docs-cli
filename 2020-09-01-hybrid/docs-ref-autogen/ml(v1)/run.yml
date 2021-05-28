@@ -8,7 +8,7 @@ extensionInformation: >-
 summary: Commands for submitting, updating, and monitoring runs.
 description: ''
 directCommands:
-- uid: az_ml_run_cancel
+- uid: az_ml(v1)_run_cancel
   name: az ml run cancel
   summary: Cancel run.
   description: ''
@@ -45,7 +45,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_run_download-logs
+- uid: az_ml(v1)_run_download-logs
   name: az ml run download-logs
   summary: Download log files.
   description: ''
@@ -87,7 +87,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_run_list
+- uid: az_ml(v1)_run_list
   name: az ml run list
   summary: List runs.
   description: ''
@@ -148,7 +148,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_run_monitor-logs
+- uid: az_ml(v1)_run_monitor-logs
   name: az ml run monitor-logs
   summary: Monitor the logs for an existing run.
   description: ''
@@ -185,7 +185,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_run_monitor-tensorboard
+- uid: az_ml(v1)_run_monitor-tensorboard
   name: az ml run monitor-tensorboard
   summary: Monitor an existing run using tensorboard.
   description: ''
@@ -226,7 +226,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_run_show
+- uid: az_ml(v1)_run_show
   name: az ml run show
   summary: Show run.
   description: ''
@@ -263,7 +263,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_run_submit-hyperdrive
+- uid: az_ml(v1)_run_submit-hyperdrive
   name: az ml run submit-hyperdrive
   summary: Submit a hyper parameter sweep using run config.
   description: ''
@@ -324,7 +324,7 @@ directCommands:
   - name: <USER_SCRIPT_AND_ARGUMENTS>
     summary: The run submit arguments, like script name and script arguments.
     description: ''
-- uid: az_ml_run_submit-pipeline
+- uid: az_ml(v1)_run_submit-pipeline
   name: az ml run submit-pipeline
   summary: Submit a pipeline for execution, from a published pipeline ID or pipeline YAML file.
   description: ''
@@ -375,7 +375,7 @@ directCommands:
   - name: --workspace-name -w
     summary: Workspace name.
     description: ''
-- uid: az_ml_run_submit-script
+- uid: az_ml(v1)_run_submit-script
   name: az ml run submit-script
   summary: Submit a script for execution.
   description: ''
@@ -430,7 +430,7 @@ directCommands:
   - name: <USER_SCRIPT_AND_ARGUMENTS>
     summary: The run submit arguments, like script name and script arguments.
     description: ''
-- uid: az_ml_run_update
+- uid: az_ml(v1)_run_update
   name: az ml run update
   summary: Update the run by adding tags.
   description: ''
