@@ -800,15 +800,15 @@ directCommands:
     summary: Verbosity flag.
     description: ''
 commands:
-- az_ml_model_delete
-- az_ml_model_deploy
-- az_ml_model_download
-- az_ml_model_list
-- az_ml_model_package
-- az_ml_model_profile
-- az_ml_model_register
-- az_ml_model_show
-- az_ml_model_update
+- az_ml(v1)_model_delete
+- az_ml(v1)_model_deploy
+- az_ml(v1)_model_download
+- az_ml(v1)_model_list
+- az_ml(v1)_model_package
+- az_ml(v1)_model_profile
+- az_ml(v1)_model_register
+- az_ml(v1)_model_show
+- az_ml(v1)_model_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

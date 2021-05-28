@@ -257,13 +257,13 @@ directCommands:
     summary: Workspace name.
     description: ''
 commands:
-- az_ml_dataset_archive
-- az_ml_dataset_deprecate
-- az_ml_dataset_list
-- az_ml_dataset_reactivate
-- az_ml_dataset_register
-- az_ml_dataset_show
-- az_ml_dataset_unregister
+- az_ml(v1)_dataset_archive
+- az_ml(v1)_dataset_deprecate
+- az_ml(v1)_dataset_list
+- az_ml(v1)_dataset_reactivate
+- az_ml(v1)_dataset_register
+- az_ml(v1)_dataset_show
+- az_ml(v1)_dataset_unregister
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

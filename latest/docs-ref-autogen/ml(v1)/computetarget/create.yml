@@ -328,10 +328,10 @@ directCommands:
     summary: Verbosity flag.
     description: ''
 commands:
-- az_ml_computetarget_create_aks
-- az_ml_computetarget_create_amlcompute
-- az_ml_computetarget_create_computeinstance
-- az_ml_computetarget_create_datafactory
+- az_ml(v1)_computetarget_create_aks
+- az_ml(v1)_computetarget_create_amlcompute
+- az_ml(v1)_computetarget_create_computeinstance
+- az_ml(v1)_computetarget_create_datafactory
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

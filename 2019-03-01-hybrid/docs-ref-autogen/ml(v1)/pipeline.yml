@@ -611,29 +611,29 @@ directCommands:
     summary: Workspace name.
     description: ''
 commands:
-- az_ml_pipeline_clone
-- az_ml_pipeline_clone-draft
-- az_ml_pipeline_create
-- az_ml_pipeline_create-draft
-- az_ml_pipeline_create-schedule
-- az_ml_pipeline_delete-draft
-- az_ml_pipeline_disable
-- az_ml_pipeline_disable-schedule
-- az_ml_pipeline_enable
-- az_ml_pipeline_enable-schedule
-- az_ml_pipeline_get
-- az_ml_pipeline_last-pipeline-run
-- az_ml_pipeline_list
-- az_ml_pipeline_list-drafts
-- az_ml_pipeline_list-steps
-- az_ml_pipeline_pipeline-runs-list
-- az_ml_pipeline_publish-draft
-- az_ml_pipeline_show
-- az_ml_pipeline_show-draft
-- az_ml_pipeline_show-schedule
-- az_ml_pipeline_submit-draft
-- az_ml_pipeline_update-draft
-- az_ml_pipeline_update-schedule
+- az_ml(v1)_pipeline_clone
+- az_ml(v1)_pipeline_clone-draft
+- az_ml(v1)_pipeline_create
+- az_ml(v1)_pipeline_create-draft
+- az_ml(v1)_pipeline_create-schedule
+- az_ml(v1)_pipeline_delete-draft
+- az_ml(v1)_pipeline_disable
+- az_ml(v1)_pipeline_disable-schedule
+- az_ml(v1)_pipeline_enable
+- az_ml(v1)_pipeline_enable-schedule
+- az_ml(v1)_pipeline_get
+- az_ml(v1)_pipeline_last-pipeline-run
+- az_ml(v1)_pipeline_list
+- az_ml(v1)_pipeline_list-drafts
+- az_ml(v1)_pipeline_list-steps
+- az_ml(v1)_pipeline_pipeline-runs-list
+- az_ml(v1)_pipeline_publish-draft
+- az_ml(v1)_pipeline_show
+- az_ml(v1)_pipeline_show-draft
+- az_ml(v1)_pipeline_show-schedule
+- az_ml(v1)_pipeline_submit-draft
+- az_ml(v1)_pipeline_update-draft
+- az_ml(v1)_pipeline_update-schedule
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

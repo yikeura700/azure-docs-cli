@@ -190,11 +190,11 @@ directCommands:
     summary: Workspace name.
     description: ''
 commands:
-- az_ml_environment_download
-- az_ml_environment_list
-- az_ml_environment_register
-- az_ml_environment_scaffold
-- az_ml_environment_show
+- az_ml(v1)_environment_download
+- az_ml(v1)_environment_list
+- az_ml(v1)_environment_register
+- az_ml(v1)_environment_scaffold
+- az_ml(v1)_environment_show
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

@@ -472,16 +472,16 @@ directCommands:
     summary: Workspace name.
     description: ''
 commands:
-- az_ml_run_cancel
-- az_ml_run_download-logs
-- az_ml_run_list
-- az_ml_run_monitor-logs
-- az_ml_run_monitor-tensorboard
-- az_ml_run_show
-- az_ml_run_submit-hyperdrive
-- az_ml_run_submit-pipeline
-- az_ml_run_submit-script
-- az_ml_run_update
+- az_ml(v1)_run_cancel
+- az_ml(v1)_run_download-logs
+- az_ml(v1)_run_list
+- az_ml(v1)_run_monitor-logs
+- az_ml(v1)_run_monitor-tensorboard
+- az_ml(v1)_run_show
+- az_ml(v1)_run_submit-hyperdrive
+- az_ml(v1)_run_submit-pipeline
+- az_ml(v1)_run_submit-script
+- az_ml(v1)_run_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

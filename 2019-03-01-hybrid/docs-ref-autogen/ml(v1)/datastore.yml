@@ -855,21 +855,21 @@ directCommands:
     summary: Workspace name.
     description: ''
 commands:
-- az_ml_datastore_attach-adls
-- az_ml_datastore_attach-adls-gen2
-- az_ml_datastore_attach-blob
-- az_ml_datastore_attach-dbfs
-- az_ml_datastore_attach-file
-- az_ml_datastore_attach-mysqldb
-- az_ml_datastore_attach-psqldb
-- az_ml_datastore_attach-sqldb
-- az_ml_datastore_detach
-- az_ml_datastore_download
-- az_ml_datastore_list
-- az_ml_datastore_set-default
-- az_ml_datastore_show
-- az_ml_datastore_show-default
-- az_ml_datastore_upload
+- az_ml(v1)_datastore_attach-adls
+- az_ml(v1)_datastore_attach-adls-gen2
+- az_ml(v1)_datastore_attach-blob
+- az_ml(v1)_datastore_attach-dbfs
+- az_ml(v1)_datastore_attach-file
+- az_ml(v1)_datastore_attach-mysqldb
+- az_ml(v1)_datastore_attach-psqldb
+- az_ml(v1)_datastore_attach-sqldb
+- az_ml(v1)_datastore_detach
+- az_ml(v1)_datastore_download
+- az_ml(v1)_datastore_list
+- az_ml(v1)_datastore_set-default
+- az_ml(v1)_datastore_show
+- az_ml(v1)_datastore_show-default
+- az_ml(v1)_datastore_upload
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.

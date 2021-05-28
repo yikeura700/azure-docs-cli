@@ -549,15 +549,15 @@ directCommands:
     summary: Verbosity flag.
     description: ''
 commands:
-- az_ml_service_delete
-- az_ml_service_get-access-token
-- az_ml_service_get-keys
-- az_ml_service_get-logs
-- az_ml_service_list
-- az_ml_service_regen-key
-- az_ml_service_run
-- az_ml_service_show
-- az_ml_service_update
+- az_ml(v1)_service_delete
+- az_ml(v1)_service_get-access-token
+- az_ml(v1)_service_get-keys
+- az_ml(v1)_service_get-logs
+- az_ml(v1)_service_list
+- az_ml(v1)_service_regen-key
+- az_ml(v1)_service_run
+- az_ml(v1)_service_show
+- az_ml(v1)_service_update
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
