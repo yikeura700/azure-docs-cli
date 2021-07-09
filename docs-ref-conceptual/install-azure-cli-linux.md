@@ -19,6 +19,8 @@ It is recommended to install the Azure CLI using your Linux distribution's packa
 
 [!INCLUDE [current-version](includes/current-version.md)]
 
+## Overview Out of pivot
+
 ::: zone pivot="apt"
 
 [!INCLUDE [cli-install-linux-apt](includes/cli-install-linux-apt.md)]
