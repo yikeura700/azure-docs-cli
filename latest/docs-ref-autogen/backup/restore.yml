@@ -150,6 +150,7 @@ directCommands:
                                       [--rehydration-duration]
                                       [--rehydration-priority {High, Standard}]
                                       [--subscription]
+                                      [--use-secondary-region]
   examples:
   - summary: Restore backed up Azure Workloads in a Recovery services vault to another registered container or to the same container.
     syntax: az backup restore restore-azurewl --resource-group MyResourceGroup --vault-name MyVault --recovery-config MyRecoveryConfig
@@ -169,7 +170,7 @@ directCommands:
   optionalParameters:
   - name: --rehydration-duration
     defaultValue: "15"
-    summary: 'Set the maximum time, in days (between 10-30, both inclusive) for which the recovery point stays in hydrated state. Default: 15.'
+    summary: Set the maximum time, in days (between 10-30, both inclusive) for which the recovery point stays in hydrated state.
     description: ''
   - name: --rehydration-priority
     parameterValueGroup: High, Standard
@@ -177,6 +178,9 @@ directCommands:
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --use-secondary-region
+    summary: Use this flag to restore from a recoverypoint in secondary region.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
 - uid: az_backup_restore_restore-disks
@@ -186,9 +190,12 @@ directCommands:
   syntax: >-
     az backup restore restore-disks --storage-account
                                     [--container-name]
+                                    [--disk-encryption-set-id]
                                     [--diskslist]
                                     [--ids]
                                     [--item-name]
+                                    [--mi-system-assigned]
+                                    [--mi-user-assigned]
                                     [--rehydration-duration]
                                     [--rehydration-priority {High, Standard}]
                                     [--resource-group]
@@ -198,6 +205,7 @@ directCommands:
                                     [--rp-name]
                                     [--subscription]
                                     [--target-resource-group]
+                                    [--target-zone {1, 2, 3}]
                                     [--use-secondary-region]
                                     [--vault-name]
   examples:
@@ -212,6 +220,9 @@ directCommands:
   - name: --container-name -c
     summary: Name of the backup container. Accepts 'Name' or 'FriendlyName' from the output of az backup container list command. If 'FriendlyName' is passed then BackupManagementType is required.
     description: ''
+  - name: --disk-encryption-set-id
+    summary: The disk encryption set id is used for encrypting restored disks. Please ensure access to disk encryption set id that is specified here.
+    description: ''
   - name: --diskslist
     summary: List of disks to be excluded or included.
     description: ''
@@ -221,9 +232,15 @@ directCommands:
   - name: --item-name -i
     summary: Name of the backed up item.
     description: ''
+  - name: --mi-system-assigned
+    summary: Use this flag to specify whether a system-assigned managed identity should be used for the restore operation. MI option is not applicable for restoring unmanaged disks.
+    description: ''
+  - name: --mi-user-assigned
+    summary: ARM ID of the user-assigned managed identity to use for the restore operation. Specify a value for this parameter if you do not want to use a system-assigned MI for restoring the backup item.
+    description: ''
   - name: --rehydration-duration
     defaultValue: "15"
-    summary: 'Set the maximum time, in days (between 10-30, both inclusive) for which the recovery point stays in hydrated state. Default: 15.'
+    summary: Set the maximum time, in days (between 10-30, both inclusive) for which the recovery point stays in hydrated state.
     description: ''
   - name: --rehydration-priority
     parameterValueGroup: High, Standard
@@ -253,8 +270,12 @@ directCommands:
   - name: --target-resource-group -t
     summary: Use this to specify the target resource group in which the restored disks will be saved.
     description: ''
+  - name: --target-zone
+    parameterValueGroup: 1, 2, 3
+    summary: A primary region currently can have three Azure availability zones. Use this argument to specify the target zone number while doing Cross Zonal Restore.
+    description: ''
   - name: --use-secondary-region
-    summary: Use this flag to show recoverypoints in secondary region.
+    summary: Use this flag to restore from a recoverypoint in secondary region.
     description: ''
   - name: --vault-name -v
     summary: Name of the Recovery services vault.
@@ -285,5 +306,5 @@ globalParameters:
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-  ms.date: 06/30/2021
+  ms.date: 10/26/2021
   description: Restore backed up items from recovery points in a Recovery Services vault.

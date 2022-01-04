@@ -23,6 +23,7 @@ commands:
 - az_iot_central_device_compute-device-key
 - az_iot_central_device_create
 - az_iot_central_device_delete
+- az_iot_central_device_list
 - az_iot_central_device_manual-failback
 - az_iot_central_device_manual-failover
 - az_iot_central_device_registration-info
@@ -30,9 +31,12 @@ commands:
 - az_iot_central_device_show-credentials
 - az_iot_central_device_twin
 - az_iot_central_device_twin_show
+- az_iot_central_device-group
+- az_iot_central_device-group_list
 - az_iot_central_device-template
 - az_iot_central_device-template_create
 - az_iot_central_device-template_delete
+- az_iot_central_device-template_list
 - az_iot_central_device-template_show
 - az_iot_central_diagnostics
 - az_iot_central_diagnostics_monitor-events
@@ -40,6 +44,39 @@ commands:
 - az_iot_central_diagnostics_registration-summary
 - az_iot_central_diagnostics_validate-messages
 - az_iot_central_diagnostics_validate-properties
+- az_iot_central_export
+- az_iot_central_export_create
+- az_iot_central_export_delete
+- az_iot_central_export_destination
+- az_iot_central_export_destination_create
+- az_iot_central_export_destination_delete
+- az_iot_central_export_destination_list
+- az_iot_central_export_destination_show
+- az_iot_central_export_destination_update
+- az_iot_central_export_list
+- az_iot_central_export_show
+- az_iot_central_export_update
+- az_iot_central_file-upload-config
+- az_iot_central_file-upload-config_create
+- az_iot_central_file-upload-config_delete
+- az_iot_central_file-upload-config_show
+- az_iot_central_job
+- az_iot_central_job_create
+- az_iot_central_job_get-devices
+- az_iot_central_job_list
+- az_iot_central_job_rerun
+- az_iot_central_job_resume
+- az_iot_central_job_show
+- az_iot_central_job_stop
+- az_iot_central_organization
+- az_iot_central_organization_create
+- az_iot_central_organization_delete
+- az_iot_central_organization_list
+- az_iot_central_organization_show
+- az_iot_central_query
+- az_iot_central_role
+- az_iot_central_role_list
+- az_iot_central_role_show
 - az_iot_central_user
 - az_iot_central_user_create
 - az_iot_central_user_delete
@@ -72,6 +109,8 @@ commands:
 - az_iot_dps_certificate_update
 - az_iot_dps_certificate_verify
 - az_iot_dps_compute-device-key
+- az_iot_dps_connection-string
+- az_iot_dps_connection-string_show
 - az_iot_dps_create
 - az_iot_dps_delete
 - az_iot_dps_enrollment
@@ -258,5 +297,5 @@ globalParameters:
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-  ms.date: 05/21/2021
+  ms.date: 08/30/2021
   description: Comprehensive IoT data-plane functionality is available in the Azure IoT CLI Extension. For more info and install guide go to https://github.com/Azure/azure-iot-cli-extension.

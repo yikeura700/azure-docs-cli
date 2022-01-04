@@ -135,6 +135,14 @@ directCommands:
     summary: Server version.
     description: ''
 commands:
+- az_postgres_arc-server
+- az_postgres_arc-server_create
+- az_postgres_arc-server_delete
+- az_postgres_arc-server_edit
+- az_postgres_arc-server_endpoint
+- az_postgres_arc-server_endpoint_list
+- az_postgres_arc-server_list
+- az_postgres_arc-server_show
 - az_postgres_db
 - az_postgres_db_create
 - az_postgres_db_delete
@@ -163,6 +171,7 @@ commands:
 - az_postgres_flexible-server_list
 - az_postgres_flexible-server_list-skus
 - az_postgres_flexible-server_migration
+- az_postgres_flexible-server_migration_check-name-availability
 - az_postgres_flexible-server_migration_create
 - az_postgres_flexible-server_migration_delete
 - az_postgres_flexible-server_migration_list

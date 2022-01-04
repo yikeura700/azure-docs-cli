@@ -12,6 +12,7 @@ directCommands:
     az storage copy [--account-key]
                     [--account-name]
                     [--blob-type {AppendBlob, BlockBlob, PageBlob}]
+                    [--cap-mbps]
                     [--connection-string]
                     [--content-type]
                     [--destination]
@@ -111,6 +112,9 @@ directCommands:
     parameterValueGroup: AppendBlob, BlockBlob, PageBlob
     summary: The type of blob at the destination.
     description: ''
+  - name: --cap-mbps
+    summary: Caps the transfer rate, in megabits per second. Moment-by-moment throughput might vary slightly from the cap. If this option is set to zero, or it is omitted, the throughput isn't capped.
+    description: ''
   - name: --connection-string
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
@@ -155,7 +159,7 @@ directCommands:
     description: ''
   - name: --preserve-s2s-access-tier
     parameterValueGroup: false, true
-    summary: Preserve access tier during service to service copy. Please refer to https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers to ensure destination storage account support setting access tier. In the cases that setting access tier is not supported, please use `--preserve-s2s-access-tier false` to bypass copying access tier. (Default true).
+    summary: Preserve access tier during service to service copy. Please refer to https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers to ensure destination storage account support setting access tier. In the cases that setting access tier is not supported, please use `--preserve-s2s-access-tier false` to bypass copying access tier. (Default true).
     description: ''
   - name: --put-md5
     summary: Create an MD5 hash of each file, and save the hash as the Content-MD5 property of the destination blob/file.Only available when uploading.
@@ -305,6 +309,9 @@ commands:
 - az_storage_account_file-service-properties_show
 - az_storage_account_file-service-properties_update
 - az_storage_account_generate-sas
+- az_storage_account_hns-migration
+- az_storage_account_hns-migration_start
+- az_storage_account_hns-migration_stop
 - az_storage_account_keys
 - az_storage_account_keys_list
 - az_storage_account_keys_renew
@@ -381,6 +388,9 @@ commands:
 - az_storage_blob_exists
 - az_storage_blob_filter
 - az_storage_blob_generate-sas
+- az_storage_blob_immutability-policy
+- az_storage_blob_immutability-policy_delete
+- az_storage_blob_immutability-policy_set
 - az_storage_blob_incremental-copy
 - az_storage_blob_incremental-copy_cancel
 - az_storage_blob_incremental-copy_start
@@ -403,6 +413,7 @@ commands:
 - az_storage_blob_service-properties_delete-policy_update
 - az_storage_blob_service-properties_show
 - az_storage_blob_service-properties_update
+- az_storage_blob_set-legal-hold
 - az_storage_blob_set-tier
 - az_storage_blob_show
 - az_storage_blob_snapshot
@@ -455,6 +466,7 @@ commands:
 - az_storage_container-rm_delete
 - az_storage_container-rm_exists
 - az_storage_container-rm_list
+- az_storage_container-rm_migrate-vlw
 - az_storage_container-rm_show
 - az_storage_container-rm_update
 - az_storage_copy
@@ -534,6 +546,7 @@ commands:
 - az_storage_fs_file_move
 - az_storage_fs_file_show
 - az_storage_fs_file_upload
+- az_storage_fs_generate-sas
 - az_storage_fs_list
 - az_storage_fs_list-deleted-path
 - az_storage_fs_metadata
@@ -576,11 +589,13 @@ commands:
 - az_storage_queue_stats
 - az_storage_remove
 - az_storage_share
+- az_storage_share_close-handle
 - az_storage_share_create
 - az_storage_share_delete
 - az_storage_share_exists
 - az_storage_share_generate-sas
 - az_storage_share_list
+- az_storage_share_list-handle
 - az_storage_share_metadata
 - az_storage_share_metadata_show
 - az_storage_share_metadata_update
@@ -635,5 +650,5 @@ globalParameters:
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-  ms.date: 07/01/2021
+  ms.date: 11/08/2021
   description: Manage Azure Cloud Storage resources.

@@ -85,8 +85,12 @@ directCommands:
           --public-ip-per-vm --vm-domain-name myvmss --dns-servers 10.0.0.6 10.0.0.5
   - summary: 'Create a Linux VM scale set using a cloud-init script for configuration. See: https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init'
     syntax: az vmss create -g MyResourceGroup -n MyVmss --image debian --custom-data MyCloudInitScript.yml
-  - summary: Create a Linux VM scale set from a specialized image version.
-    syntax: az vmss create -n MyVmss -g MyResourceGroup --image $id --specialized
+  - summary: Create a VMSS from a generalized gallery image version.
+    syntax: az vmss create -g MyResourceGroup -n MyVmss --image /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/galleries/myGallery/images/myImage/versions/1.0.0
+  - summary: Create a VMSS from a specialized gallery image version.
+    syntax: az vmss create -g MyResourceGroup -n MyVmss --image /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/galleries/myGallery/images/myImage/versions/1.0.0 --specialized
+  - summary: Create a VMSS from the latest version of a gallery image
+    syntax: az vmss create -g MyResourceGroup -n MyVmss --image /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/galleries/myGallery/images/myImage
   - summary: Create a Debian VM scaleset using Key Vault secrets.
     syntax: >-
       az keyvault certificate create --vault-name vaultname -n cert1 \
@@ -106,6 +110,12 @@ directCommands:
     syntax: az vmss create -n MyVmss -g rg1 --image debian --assign-identity  /subscriptions/99999999-1bf0-4dda-aec3-cb9272f09590/resourcegroups/myRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myID
   - summary: Create a debian VM scaleset with both system and user assigned identity.
     syntax: az vmss create -n MyVmss -g rg1 --image debian --assign-identity  [system] /subscriptions/99999999-1bf0-4dda-aec3-cb9272f09590/resourcegroups/myRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myID
+  - summary: Create a VMSS that supports SpotRestore.
+    syntax: az vmss create -n MyVmss -g MyResourceGroup  --location NorthEurope --instance-count 2 --image Centos --priority Spot --eviction-policy Deallocate --single-placement-group --enable-spot-restore True --spot-restore-timeout PT1H
+  - summary: Create a VMSS from shared gallery image. (private preview feature, please contact shared image gallery team by email sigpmdev@microsoft.com to register for preview if you're interested in using this feature).
+    syntax: az vmss create -n MyVmss -g MyResourceGroup --image /SharedGalleries/{gallery_unique_name}/Images/{image}/Versions/{version}
+  - summary: Create a Windows VMSS with patch mode 'Manual' (Currently patch mode 'AutomaticByPlatform' is not supported during VMSS creation as health extension which is required for 'AutomaticByPlatform' mode cannot be set during VMSS creation).
+    syntax: az vmss create -n MyVmss -g MyResourceGroup --image Win2019Datacenter --enable-agent --enable-auto-update false --patch-mode Manual --orchestration-mode Flexible
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -120,7 +130,7 @@ directCommands:
     summary: Password for the VM if authentication type is 'Password'.
     description: ''
   - name: --admin-username
-    summary: Username for the VM. Default value is current username of OS. If the default value is system reserved, then default value will be set to azureuser. Please refer to https://docs.microsoft.com/en-us/rest/api/compute/virtualmachines/createorupdate#osprofile to get a full list of reserved values.
+    summary: Username for the VM. Default value is current username of OS. If the default value is system reserved, then default value will be set to azureuser. Please refer to https://docs.microsoft.com/rest/api/compute/virtualmachines/createorupdate#osprofile to get a full list of reserved values.
     description: ''
   - name: --app-gateway
     summary: Name to use when creating a new application gateway (default) or referencing an existing one. Can also reference an existing application gateway by ID or specify "" for none.
@@ -175,9 +185,9 @@ directCommands:
     summary: Probe name from the existing load balancer, mainly used for rolling upgrade or automatic repairs.
     description: ''
   - name: --image
-    summary: 'The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. Valid URN format: "Publisher:Offer:Sku:Version".'
+    summary: 'The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. In addition, it also supports shared gallery image. Valid URN format: "Publisher:Offer:Sku:Version".'
     description: ''
-    valueFrom: az vm image list, az vm image show
+    valueFrom: az vm image list, az vm image show, az sig image-version show-shared
   - name: --instance-count
     defaultValue: "2"
     summary: Number of VMs in the scale set.
@@ -510,8 +520,8 @@ directCommands:
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vmss_list-instances
   name: az vmss list-instances
-  summary: Gets a list of all virtual machines in a VM scale sets.
-  description: ''
+  summary: Get a list of all virtual machines in a VM scale sets.
+  description: Return a list of virtual machines managed by VMSS. For VMSS in Flexible Orchestration mode, please use "az vm list" to get full details.
   syntax: >-
     az vmss list-instances [--expand]
                            [--filter]
@@ -794,6 +804,7 @@ directCommands:
                    [--scale-in-policy]
                    [--set]
                    [--subscription]
+                   [--vm-sku]
   examples:
   - summary: Update a VMSS' license type for Azure Hybrid Benefit.
     syntax: az vmss update --name MyScaleSet --resource-group MyResourceGroup --license-type windows_server
@@ -807,6 +818,8 @@ directCommands:
     syntax: az vmss update --name MyScaleSet --resource-group MyResourceGroup --set virtualMachineProfile.storageProfile.dataDisks[0].diskMBpsReadWrite=66
   - summary: Update a VM to use a custom image.
     syntax: az vmss update --name MyScaleSet --resource-group MyResourceGroup --set virtualMachineProfile.storageProfile.imageReference.id=imageID
+  - summary: Update a Linux VMSS to patch mode 'AutomaticByPlatform'.
+    syntax: az vmss update -n MyVmss -g MyResourceGroup --set virtualMachineProfile.osProfile.linuxConfiguration.patchSettings.patchMode=AutomaticByPlatform
   optionalParameters:
   - name: --add
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
@@ -844,6 +857,9 @@ directCommands:
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --vm-sku
+    summary: The new size of the virtual machine instances in the scale set. Default to "Standard_DS1_v2". See https://azure.microsoft.com/pricing/details/virtual-machines/ for size info.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vmss_update-instances
@@ -1001,5 +1017,5 @@ globalParameters:
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-  ms.date: 06/23/2021
+  ms.date: 11/18/2021
   description: Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).

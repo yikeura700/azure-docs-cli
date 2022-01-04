@@ -15,6 +15,8 @@ directCommands:
   syntax: >-
     az iot central device compute-device-key --device-id
                                              --pk
+                                             [--api-version {1.0, 1.1-preview, preview}]
+                                             [--central-api-uri]
   examples:
   - summary: Basic usage
     syntax: az iot central device compute-device-key --pk {primaryKey} --device-id {deviceid}
@@ -27,6 +29,16 @@ directCommands:
     name: --pk --primary-key
     summary: The primary symmetric shared access key stored in base64 format.
     description: ''
+  optionalParameters:
+  - name: --api-version --av
+    defaultValue: "1.0"
+    parameterValueGroup: 1.0, 1.1-preview, preview
+    summary: The API version for the requested operation.
+    description: ''
+  - name: --central-api-uri --central-dns-suffix
+    defaultValue: azureiotcentral.com
+    summary: 'The IoT Central DNS suffix associated with your application. Default value is: azureiotcentral.com.'
+    description: ''
 - uid: az_iot_central_device_create
   name: az iot central device create
   summary: Create a device in IoT Central.
@@ -34,9 +46,10 @@ directCommands:
   syntax: >-
     az iot central device create --app-id
                                  --device-id
-                                 [--api-version {1.0, preview}]
+                                 [--api-version {1.0, 1.1-preview, preview}]
                                  [--central-api-uri]
                                  [--device-name]
+                                 [--organizations]
                                  [--simulated {false, true}]
                                  [--template]
                                  [--token]
@@ -52,12 +65,12 @@ directCommands:
     description: ''
   - isRequired: true
     name: --device-id -d
-    summary: "Provide a unique identifier for the device. A case-sensitive string (up to 128 characters long) of ASCII 7-bit alphanumeric characters plus certain special characters: - . + % _ # \\* ? ! ( ) , : = @ $ '."
+    summary: "Unique identifier for the device. A case-sensitive string (up to 128 characters long) of ASCII 7-bit alphanumeric characters plus certain special characters: - . + % _ # \\* ? ! ( ) , : = @ $ '."
     description: ''
   optionalParameters:
   - name: --api-version --av
     defaultValue: "1.0"
-    parameterValueGroup: 1.0, preview
+    parameterValueGroup: 1.0, 1.1-preview, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
@@ -66,6 +79,9 @@ directCommands:
     description: ''
   - name: --device-name
     summary: 'Human readable device name. Example: Fridge.'
+    description: ''
+  - name: --organizations --orgs
+    summary: 'Assign the device to the specified organizations. Comma separated list of organization ids. Minimum supported version: 1.1-preview.'
     description: ''
   - name: --simulated
     parameterValueGroup: false, true
@@ -84,7 +100,7 @@ directCommands:
   syntax: >-
     az iot central device delete --app-id
                                  --device-id
-                                 [--api-version {1.0, preview}]
+                                 [--api-version {1.0, 1.1-preview, preview}]
                                  [--central-api-uri]
                                  [--token]
   examples:
@@ -102,7 +118,37 @@ directCommands:
   optionalParameters:
   - name: --api-version --av
     defaultValue: "1.0"
-    parameterValueGroup: 1.0, preview
+    parameterValueGroup: 1.0, 1.1-preview, preview
+    summary: The API version for the requested operation.
+    description: ''
+  - name: --central-api-uri --central-dns-suffix
+    defaultValue: azureiotcentral.com
+    summary: 'The IoT Central DNS suffix associated with your application. Default value is: azureiotcentral.com.'
+    description: ''
+  - name: --token
+    summary: If you'd prefer to submit your request without authenticating against the Azure CLI, you can specify a valid user token to authenticate your request. You must specify the type of key as part of the request. Learn more at https://aka.ms/iotcentraldocsapi.
+    description: ''
+- uid: az_iot_central_device_list
+  name: az iot central device list
+  summary: Get the list of devices for an IoT Central application.
+  description: ''
+  syntax: >-
+    az iot central device list --app-id
+                               [--api-version {1.0, 1.1-preview, preview}]
+                               [--central-api-uri]
+                               [--token]
+  examples:
+  - summary: List all devices in an application, sorted by device Id (default)
+    syntax: az iot central device list --app-id {appid}
+  requiredParameters:
+  - isRequired: true
+    name: --app-id -n
+    summary: The App ID of the IoT Central app you want to manage. You can find the App ID in the "About" page for your application under the help menu.
+    description: ''
+  optionalParameters:
+  - name: --api-version --av
+    defaultValue: "1.0"
+    parameterValueGroup: 1.0, 1.1-preview, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
@@ -119,6 +165,7 @@ directCommands:
   syntax: >-
     az iot central device manual-failback --app-id
                                           --device-id
+                                          [--api-version {1.0, 1.1-preview, preview}]
                                           [--central-api-uri]
                                           [--token]
   examples:
@@ -134,6 +181,11 @@ directCommands:
     summary: The ID of the target device, You can find the Device Id by clicking on the Connect button on the Device Details page.
     description: ''
   optionalParameters:
+  - name: --api-version --av
+    defaultValue: "1.0"
+    parameterValueGroup: 1.0, 1.1-preview, preview
+    summary: The API version for the requested operation.
+    description: ''
   - name: --central-api-uri --central-dns-suffix
     defaultValue: azureiotcentral.com
     summary: 'The IoT Central DNS suffix associated with your application. Default value is: azureiotcentral.com.'
@@ -148,6 +200,7 @@ directCommands:
   syntax: >-
     az iot central device manual-failover --app-id
                                           --device-id
+                                          [--api-version {1.0, 1.1-preview, preview}]
                                           [--central-api-uri]
                                           [--token]
                                           [--ttl]
@@ -164,6 +217,11 @@ directCommands:
     summary: The ID of the target device, You can find the Device Id by clicking on the Connect button on the Device Details page.
     description: ''
   optionalParameters:
+  - name: --api-version --av
+    defaultValue: "1.0"
+    parameterValueGroup: 1.0, 1.1-preview, preview
+    summary: The API version for the requested operation.
+    description: ''
   - name: --central-api-uri --central-dns-suffix
     defaultValue: azureiotcentral.com
     summary: 'The IoT Central DNS suffix associated with your application. Default value is: azureiotcentral.com.'
@@ -181,6 +239,7 @@ directCommands:
   syntax: >-
     az iot central device registration-info --app-id
                                             --device-id
+                                            [--api-version {1.0, 1.1-preview, preview}]
                                             [--central-api-uri]
                                             [--token]
   examples:
@@ -196,6 +255,11 @@ directCommands:
     summary: The ID of the target device, You can find the Device Id by clicking on the Connect button on the Device Details page.
     description: ''
   optionalParameters:
+  - name: --api-version --av
+    defaultValue: "1.0"
+    parameterValueGroup: 1.0, 1.1-preview, preview
+    summary: The API version for the requested operation.
+    description: ''
   - name: --central-api-uri --central-dns-suffix
     defaultValue: azureiotcentral.com
     summary: 'The IoT Central DNS suffix associated with your application. Default value is: azureiotcentral.com.'
@@ -210,7 +274,7 @@ directCommands:
   syntax: >-
     az iot central device show --app-id
                                --device-id
-                               [--api-version {1.0, preview}]
+                               [--api-version {1.0, 1.1-preview, preview}]
                                [--central-api-uri]
                                [--token]
   examples:
@@ -228,7 +292,7 @@ directCommands:
   optionalParameters:
   - name: --api-version --av
     defaultValue: "1.0"
-    parameterValueGroup: 1.0, preview
+    parameterValueGroup: 1.0, 1.1-preview, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
@@ -245,6 +309,7 @@ directCommands:
   syntax: >-
     az iot central device show-credentials --app-id
                                            --device-id
+                                           [--api-version {1.0, 1.1-preview, preview}]
                                            [--central-api-uri]
                                            [--token]
   examples:
@@ -260,6 +325,11 @@ directCommands:
     summary: The ID of the target device, You can find the Device Id by clicking on the Connect button on the Device Details page.
     description: ''
   optionalParameters:
+  - name: --api-version --av
+    defaultValue: "1.0"
+    parameterValueGroup: 1.0, 1.1-preview, preview
+    summary: The API version for the requested operation.
+    description: ''
   - name: --central-api-uri --central-dns-suffix
     defaultValue: azureiotcentral.com
     summary: 'The IoT Central DNS suffix associated with your application. Default value is: azureiotcentral.com.'
@@ -274,6 +344,7 @@ commands:
 - az_iot_central_device_compute-device-key
 - az_iot_central_device_create
 - az_iot_central_device_delete
+- az_iot_central_device_list
 - az_iot_central_device_manual-failback
 - az_iot_central_device_manual-failover
 - az_iot_central_device_registration-info

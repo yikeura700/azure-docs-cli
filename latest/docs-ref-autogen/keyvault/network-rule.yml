@@ -23,7 +23,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --ip-address
-    summary: IPv4 address or CIDR range.
+    summary: 'IPv4 address or CIDR range. Can supply a list: --ip-address ip1 [ip2]...'
     description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -179,5 +179,5 @@ globalParameters:
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-  ms.date: 06/01/2021
+  ms.date: 11/30/2021
   description: Manage vault network ACLs.

@@ -14,6 +14,7 @@ directCommands:
   description: ''
   syntax: >-
     az quantum execute [--job-name]
+                       [--job-params]
                        [--location]
                        [--no-build]
                        [--project]
@@ -25,10 +26,17 @@ directCommands:
                        [<PROGRAM_ARGS>]
   examples:
   - summary: Submit the Q# program from the current folder and wait for the result.
-    syntax: az quantum execute -g MyResourceGroup -w MyWorkspace -l MyLocation
+    syntax: az quantum execute -g MyResourceGroup -w MyWorkspace -l MyLocation -t MyTarget
+  - summary: Submit and wait for a Q# program from the current folder with job and program parameters.
+    syntax: >-
+      az quantum execute -g MyResourceGroup -w MyWorkspace -l MyLocation -t MyTarget \
+          --job-params key1=value1 key2=value2 -- --n-qubits=3
   optionalParameters:
   - name: --job-name
     summary: A friendly name to give to this run of the program.
+    description: ''
+  - name: --job-params
+    summary: Job parameters passed to the target as a list of key=value pairs.
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -49,7 +57,7 @@ directCommands:
     summary: If specified, the ConnectionString of an Azure Storage is used to store job data and results.
     description: ''
   - name: --target-id -t
-    summary: Execution engine for quantum computing jobs. When a workspace is configured with a set of provider, they each enable one or more targets.
+    summary: Execution engine for quantum computing jobs. When a workspace is configured with a set of provider, they each enable one or more targets. You can configure the default target using `az quantum target set`.
     description: ''
   - name: --workspace-name -w
     summary: Name of the Quantum Workspace. You can configure the default workspace using `az quantum workspace set`.
@@ -63,6 +71,7 @@ directCommands:
   description: ''
   syntax: >-
     az quantum run [--job-name]
+                   [--job-params]
                    [--location]
                    [--no-build]
                    [--project]
@@ -74,10 +83,17 @@ directCommands:
                    [<PROGRAM_ARGS>]
   examples:
   - summary: Submit the Q# program from the current folder and wait for the result.
-    syntax: az quantum run -g MyResourceGroup -w MyWorkspace -l MyLocation
+    syntax: az quantum run -g MyResourceGroup -w MyWorkspace -l MyLocation -t MyTarget
+  - summary: Submit and wait for a Q# program from the current folder with job and program parameters.
+    syntax: >-
+      az quantum run -g MyResourceGroup -w MyWorkspace -l MyLocation -t MyTarget \
+          --job-params key1=value1 key2=value2 -- --n-qubits=3
   optionalParameters:
   - name: --job-name
     summary: A friendly name to give to this run of the program.
+    description: ''
+  - name: --job-params
+    summary: Job parameters passed to the target as a list of key=value pairs.
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -98,7 +114,7 @@ directCommands:
     summary: If specified, the ConnectionString of an Azure Storage is used to store job data and results.
     description: ''
   - name: --target-id -t
-    summary: Execution engine for quantum computing jobs. When a workspace is configured with a set of provider, they each enable one or more targets.
+    summary: Execution engine for quantum computing jobs. When a workspace is configured with a set of provider, they each enable one or more targets. You can configure the default target using `az quantum target set`.
     description: ''
   - name: --workspace-name -w
     summary: Name of the Quantum Workspace. You can configure the default workspace using `az quantum workspace set`.
@@ -109,6 +125,7 @@ directCommands:
 commands:
 - az_quantum_execute
 - az_quantum_job
+- az_quantum_job_cancel
 - az_quantum_job_list
 - az_quantum_job_output
 - az_quantum_job_show

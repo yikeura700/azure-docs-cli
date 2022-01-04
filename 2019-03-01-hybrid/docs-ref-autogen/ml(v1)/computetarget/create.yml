@@ -125,7 +125,9 @@ directCommands:
                                           [--admin-username]
                                           [--assign-identity]
                                           [--description]
+                                          [--enable-node-public-ip]
                                           [--idle-seconds-before-scaledown]
+                                          [--location]
                                           [--min-nodes]
                                           [--no-wait]
                                           [--path]
@@ -168,8 +170,16 @@ directCommands:
   - name: --description
     summary: Description of the compute target.
     description: ''
+  - name: --enable-node-public-ip
+    defaultValue: "1"
+    summary: ''
+    description: ''
   - name: --idle-seconds-before-scaledown
-    summary: 'Node idle time in seconds before scaling down the cluster. Default: 120.'
+    defaultValue: "1800"
+    summary: Node idle time in seconds before scaling down the cluster.
+    description: ''
+  - name: --location -l
+    summary: Location to provision cluster in. If not specified, will default to workspace location.
     description: ''
   - name: --min-nodes
     summary: 'Minimum number of nodes to use. Default: 0.'

@@ -31,6 +31,7 @@ directCommands:
                         [--node-public-ip-prefix-id]
                         [--node-taints]
                         [--node-vm-size]
+                        [--os-sku]
                         [--os-type]
                         [--ppg]
                         [--priority {Regular, Spot}]
@@ -46,6 +47,8 @@ directCommands:
     syntax: az aks nodepool add -g MyResourceGroup -n nodepool1 --cluster-name MyManagedCluster --enable-encryption-at-host
   - summary: Create a nodepool with UltraSSD enabled.
     syntax: az aks nodepool add -g MyResourceGroup -n nodepool1 --cluster-name MyManagedCluster --enable-ultra-ssd
+  - summary: Create a nodepool cluster with a specific OS SKU
+    syntax: az aks nodepool add -g MyResourceGroup -n nodepool1 --cluster-name MyManagedCluster --os-sku Ubuntu
   requiredParameters:
   - isRequired: true
     name: --cluster-name
@@ -82,7 +85,7 @@ directCommands:
     description: ''
     valueFrom: '`az aks get-versions`'
   - name: --labels
-    summary: The node labels for the node pool. You can't change the node labels through CLI after the node pool is created. See https://aka.ms/node-labels for syntax of labels.
+    summary: The node labels for the node pool. See https://aka.ms/node-labels for syntax of labels.
     description: ''
   - name: --max-count
     summary: Maximum nodes count used for autoscaler, when "--enable-cluster-autoscaler" specified. Please specify the value in the range of [1, 100].
@@ -112,7 +115,7 @@ directCommands:
     summary: Size in GB of the OS disk for each node in the agent pool. Minimum 30 GB.
     description: ''
   - name: --node-osdisk-type
-    summary: OS disk type to be used for machines in a given agent pool. Defaults to 'Ephemeral' when possible in conjunction with VM size and OS disk size. May not be changed for this pool after creation.
+    summary: OS disk type to be used for machines in a given agent pool. Defaults to 'Ephemeral' when possible in conjunction with VM size and OS disk size. May not be changed for this pool after creation. ('Ephemeral' or 'Managed').
     description: ''
   - name: --node-public-ip-prefix-id
     summary: Public IP prefix ID used to assign public IPs to VMSS nodes.
@@ -122,6 +125,9 @@ directCommands:
     description: ''
   - name: --node-vm-size -s
     summary: Size of Virtual Machines to create as Kubernetes nodes.
+    description: ''
+  - name: --os-sku
+    summary: The OS SKU of the agent node pool. Ubuntu or CBLMariner.
     description: ''
   - name: --os-type
     defaultValue: Linux
@@ -307,6 +313,72 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
+- uid: az_aks_nodepool_start
+  name: az aks nodepool start
+  summary: Start stopped agent pool in the managed Kubernetes cluster.
+  description: ''
+  syntax: >-
+    az aks nodepool start --cluster-name
+                          --nodepool-name
+                          --resource-group
+                          [--aks-custom-headers]
+                          [--no-wait]
+  examples:
+  - summary: Start agent pool in the managed cluster
+    syntax: az aks nodepool start --nodepool-name nodepool1 -g MyResourceGroup --cluster-name MyManagedCluster
+  requiredParameters:
+  - isRequired: true
+    name: --cluster-name
+    summary: The cluster name.
+    description: ''
+  - isRequired: true
+    name: --nodepool-name
+    summary: Agent pool name.
+    description: ''
+  - isRequired: true
+    name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  optionalParameters:
+  - name: --aks-custom-headers
+    summary: Send custom headers. When specified, format should be Key1=Value1,Key2=Value2.
+    description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
+- uid: az_aks_nodepool_stop
+  name: az aks nodepool stop
+  summary: Stop running agent pool in the managed Kubernetes cluster.
+  description: ''
+  syntax: >-
+    az aks nodepool stop --cluster-name
+                         --nodepool-name
+                         --resource-group
+                         [--aks-custom-headers]
+                         [--no-wait]
+  examples:
+  - summary: Stop agent pool in the managed cluster
+    syntax: az aks nodepool stop --nodepool-name nodepool1 -g MyResourceGroup --cluster-name MyManagedCluster
+  requiredParameters:
+  - isRequired: true
+    name: --cluster-name
+    summary: The cluster name.
+    description: ''
+  - isRequired: true
+    name: --nodepool-name
+    summary: Agent pool name.
+    description: ''
+  - isRequired: true
+    name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  optionalParameters:
+  - name: --aks-custom-headers
+    summary: Send custom headers. When specified, format should be Key1=Value1,Key2=Value2.
+    description: ''
+  - name: --no-wait
+    summary: Do not wait for the long-running operation to finish.
+    description: ''
 - uid: az_aks_nodepool_update
   name: az aks nodepool update
   summary: Update a node pool to enable/disable cluster-autoscaler or change min-count or max-count.
@@ -317,6 +389,7 @@ directCommands:
                            --resource-group
                            [--disable-cluster-autoscaler]
                            [--enable-cluster-autoscaler]
+                           [--labels]
                            [--max-count]
                            [--max-surge]
                            [--min-count]
@@ -351,6 +424,9 @@ directCommands:
     description: ''
   - name: --enable-cluster-autoscaler -e
     summary: Enable cluster autoscaler.
+    description: ''
+  - name: --labels
+    summary: The node labels for the node pool. See https://aka.ms/node-labels for syntax of labels.
     description: ''
   - name: --max-count
     summary: Maximum nodes count used for autoscaler, when "--enable-cluster-autoscaler" specified. Please specify the value in the range of [1, 100].
@@ -409,7 +485,7 @@ directCommands:
     summary: Version of Kubernetes to upgrade the node pool to, such as "1.16.9".
     description: ''
   - name: --max-surge
-    summary: Extra nodes used to speed upgrade. When specified, it represents the number or percent used, eg. 5 or 33%.
+    summary: Extra nodes used to speed upgrade. When specified, it represents the number or percent used, eg. 5 or 33% (mutually exclusive with "--node-image-only". See "az aks nodepool update --max-surge" to update max surge before upgrading with "--node-image-only").
     description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -428,6 +504,8 @@ commands:
 - az_aks_nodepool_list
 - az_aks_nodepool_scale
 - az_aks_nodepool_show
+- az_aks_nodepool_start
+- az_aks_nodepool_stop
 - az_aks_nodepool_update
 - az_aks_nodepool_upgrade
 globalParameters:
@@ -447,5 +525,5 @@ globalParameters:
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-  ms.date: 07/01/2021
+  ms.date: 11/09/2021
   description: Commands to manage node pools in Kubernetes kubernetes cluster.

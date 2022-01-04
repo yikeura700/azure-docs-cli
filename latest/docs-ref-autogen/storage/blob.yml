@@ -530,7 +530,7 @@ directCommands:
     summary: Specifies the IP address or range of IP addresses from which to accept requests. Supports only IPv4 style addresses.
     description: ''
   - name: --permissions
-    summary: 'The permissions the SAS grants. Allowed values: (a)dd (c)reate (d)elete (r)ead (w)rite. Do not use if a stored access policy is referenced with --id that specifies this value. Can be combined.'
+    summary: 'The permissions the SAS grants. Allowed values: (a)dd (c)reate (d)elete (r)ead (w)rite (a)dd (c)reate (d)elete (r)ead (w)rite. Do not use if a stored access policy is referenced with --id that specifies this value. Can be combined.'
     description: ''
   - name: --policy-name
     summary: The name of a stored access policy within the container's ACL.
@@ -588,7 +588,7 @@ directCommands:
     summary: When the request includes this parameter, the operation returns a BlobPrefix element in the result list that acts as a placeholder for all blobs whose names begin with the same substring up to the appearance of the delimiter character. The delimiter may be a single character or a string.
     description: ''
   - name: --include
-    summary: 'Specify one or more additional datasets to include in the response. Options include: (c)opy, (d)eleted, (m)etadata, (s)napshots, (v)ersions, (t)ags. Can be combined.'
+    summary: 'Specify one or more additional datasets to include in the response. Options include: (c)opy, (d)eleted, (m)etadata, (s)napshots, (v)ersions, (t)ags, (i)mmutabilitypolicy, (l)egalhold, (d)eletedwithversions. Can be combined.'
     description: ''
   - name: --marker
     summary: A string value that identifies the portion of the list of containers to be returned with the next listing operation. The operation returns the NextMarker value within the response body if the listing operation did not return all containers remaining to be listed with the current page. If specified, this generator will begin returning results from the point where the previous generator stopped.
@@ -822,6 +822,64 @@ directCommands:
   - name: --tier
     parameterValueGroup: Archive, Cool, Hot, P10, P15, P20, P30, P4, P40, P50, P6, P60, P70, P80
     summary: A standard blob tier value to set the blob to. For this version of the library, this is only applicable to block blobs on standard storage accounts.
+    description: ''
+  - name: --timeout
+    summary: Request timeout in seconds. Applies to each call to the service.
+    description: ''
+  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
+- uid: az_storage_blob_set-legal-hold
+  name: az storage blob set-legal-hold
+  summary: Set blob legal hold.
+  description: ''
+  syntax: >-
+    az storage blob set-legal-hold --container-name
+                                   --legal-hold {false, true}
+                                   --name
+                                   [--account-key]
+                                   [--account-name]
+                                   [--auth-mode {key, login}]
+                                   [--connection-string]
+                                   [--sas-token]
+                                   [--subscription]
+                                   [--timeout]
+  examples:
+  - summary: Configure blob legal hold.
+    syntax: az storage blob set-legal-hold --legal-hold -c mycontainer -n myblob --account-name mystorageaccount --account-key 0000-0000
+  - summary: Clear blob legal hold.
+    syntax: az storage blob set-legal-hold --legal-hold false -c mycontainer -n myblob --account-name mystorageaccount --account-key 0000-0000
+  requiredParameters:
+  - isRequired: true
+    name: --container-name -c
+    summary: The container name.
+    description: ''
+  - isRequired: true
+    name: --legal-hold
+    parameterValueGroup: false, true
+    summary: Specified if a legal hold should be set on the blob.
+    description: ''
+  - isRequired: true
+    name: --name -n
+    summary: The blob name.
+    description: ''
+  optionalParameters:
+  - name: --account-key
+    summary: 'Storage account key. Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_KEY.'
+    description: ''
+  - name: --account-name
+    summary: 'Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.'
+    description: ''
+  - name: --auth-mode
+    parameterValueGroup: key, login
+    summary: 'The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.'
+    description: ''
+  - name: --connection-string
+    summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
+    description: ''
+  - name: --sas-token
+    summary: 'A Shared Access Signature (SAS). Must be used in conjunction with storage account name. Environment variable: AZURE_STORAGE_SAS_TOKEN.'
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --timeout
     summary: Request timeout in seconds. Applies to each call to the service.
@@ -1262,7 +1320,6 @@ directCommands:
   syntax: >-
     az storage blob upload --container-name
                            --file
-                           --name
                            [--account-key]
                            [--account-name]
                            [--auth-mode {key, login}]
@@ -1282,6 +1339,7 @@ directCommands:
                            [--max-connections]
                            [--maxsize-condition]
                            [--metadata]
+                           [--name]
                            [--no-progress]
                            [--sas-token]
                            [--socket-timeout]
@@ -1303,10 +1361,6 @@ directCommands:
   - isRequired: true
     name: --file -f
     summary: Path of the file to upload as the blob content.
-    description: ''
-  - isRequired: true
-    name: --name -n
-    summary: The blob name.
     description: ''
   optionalParameters:
   - name: --account-key
@@ -1367,6 +1421,9 @@ directCommands:
     description: ''
   - name: --metadata
     summary: Metadata in space-separated key=value pairs. This overwrites any existing metadata.
+    description: ''
+  - name: --name -n
+    summary: The blob name.
     description: ''
   - name: --no-progress
     summary: Include this flag to disable progress reporting for the command.
@@ -1627,6 +1684,9 @@ commands:
 - az_storage_blob_exists
 - az_storage_blob_filter
 - az_storage_blob_generate-sas
+- az_storage_blob_immutability-policy
+- az_storage_blob_immutability-policy_delete
+- az_storage_blob_immutability-policy_set
 - az_storage_blob_incremental-copy
 - az_storage_blob_incremental-copy_cancel
 - az_storage_blob_incremental-copy_start
@@ -1649,6 +1709,7 @@ commands:
 - az_storage_blob_service-properties_delete-policy_update
 - az_storage_blob_service-properties_show
 - az_storage_blob_service-properties_update
+- az_storage_blob_set-legal-hold
 - az_storage_blob_set-tier
 - az_storage_blob_show
 - az_storage_blob_snapshot
@@ -1678,5 +1739,5 @@ globalParameters:
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-  ms.date: 07/01/2021
+  ms.date: 11/08/2021
   description: 'Please specify one of the following authentication parameters for your commands: --auth-mode, --account-key, --connection-string, --sas-token. You also can use corresponding environment variables to store your authentication credentials, e.g. AZURE_STORAGE_KEY, AZURE_STORAGE_CONNECTION_STRING and AZURE_STORAGE_SAS_TOKEN.'

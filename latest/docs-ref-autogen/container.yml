@@ -40,6 +40,7 @@ directCommands:
   description: ''
   syntax: >-
     az container create --resource-group
+                        [--acr-identity]
                         [--assign-identity]
                         [--azure-file-volume-account-key]
                         [--azure-file-volume-account-name]
@@ -61,7 +62,6 @@ directCommands:
                         [--log-analytics-workspace-key]
                         [--memory]
                         [--name]
-                        [--network-profile]
                         [--no-wait]
                         [--os-type {Linux, Windows}]
                         [--ports]
@@ -81,6 +81,7 @@ directCommands:
                         [--vnet]
                         [--vnet-address-prefix]
                         [--vnet-name]
+                        [--zone]
   examples:
   - summary: Create a container in a container group with 1 core and 1Gb of memory.
     syntax: az container create -g MyResourceGroup --name myapp --image myimage:latest --cpu 1 --memory 1
@@ -118,6 +119,9 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   optionalParameters:
+  - name: --acr-identity
+    summary: The identity with access to the container registry.
+    description: ''
   - name: --assign-identity
     summary: Space-separated list of assigned identities. Assigned identities are either user assigned identities (resource IDs) and / or the system assigned identity ('[system]'). See examples for more info.
     description: ''
@@ -185,9 +189,6 @@ directCommands:
   - name: --name -n
     summary: The name of the container group.
     description: ''
-  - name: --network-profile
-    summary: The network profile name or id.
-    description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -254,6 +255,9 @@ directCommands:
   - name: --vnet-name
     summary: The name of the VNET when creating a new one or referencing an existing one.
     description: ''
+  - name: --zone
+    summary: The zone to place the container group.
+    description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
 - uid: az_container_delete
   name: az container delete
@@ -296,8 +300,6 @@ directCommands:
                       [--name]
                       [--resource-group]
                       [--subscription]
-                      [--terminal-col-size]
-                      [--terminal-row-size]
   examples:
   - summary: Stream a shell from within an nginx container.
     syntax: az container exec -g MyResourceGroup --name mynginx --container-name nginx --exec-command "/bin/bash"
@@ -321,14 +323,6 @@ directCommands:
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --terminal-col-size
-    defaultValue: "80"
-    summary: The col size for the command output.
-    description: ''
-  - name: --terminal-row-size
-    defaultValue: "20"
-    summary: The row size for the command output.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
 - uid: az_container_export
@@ -475,7 +469,7 @@ directCommands:
 - uid: az_container_start
   name: az container start
   summary: Starts all containers in a container group.
-  description: Starts all containers in a container group.
+  description: Starts all containers in a container group. Compute resources will be allocated and billing will start.
   syntax: >-
     az container start --name
                        --resource-group

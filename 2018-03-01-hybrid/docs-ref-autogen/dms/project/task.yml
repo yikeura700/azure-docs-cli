@@ -4,7 +4,7 @@ name: az dms project task
 extensionInformation: >-
   > [!Note]
 
-  > This reference is part of the **dms-preview** extension for Azure CLI and requires version 2.0.43 or higher.  The extension will automatically install the first time you run an **az dms project task** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
+  > This reference is part of the **dms-preview** extension for Azure CLI and requires version 2.27.0 or higher.  The extension will automatically install the first time you run an **az dms project task** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Manage tasks for a Data Migration Service instance's project.
 description: ''
 directCommands:
@@ -43,14 +43,13 @@ directCommands:
     description: ''
 - uid: az_dms_project_task_create
   name: az dms project task create
-  summary: Create and start a migration Task.
+  summary: Create and start a migration task.
   description: >-
     The following task configurations are supported:
         -) source -> target :: task type
         1) SQL -> SQLDB :: OfflineMigration
-        2) MySQL -> AzureDbForMySql :: OnlineMigration
-        3) PostgreSQL -> AzureDbForPostgreSQL :: OnlineMigration
-        4) MongoDB -> MongoDB (for migrating to Cosmos DB via their MongoDB API) :: OfflineMigration.
+        2) PostgreSQL -> AzureDbForPostgreSQL :: OnlineMigration
+        3) MongoDB -> MongoDB (for migrating to Cosmos DB via their MongoDB API) :: OfflineMigration.
   syntax: >-
     az dms project task create --database-options-json
                                --name
@@ -59,10 +58,10 @@ directCommands:
                                --service-name
                                --source-connection-json
                                --target-connection-json
-                               --task-type
                                [--enable-data-integrity-validation]
                                [--enable-query-analysis-validation]
                                [--enable-schema-validation]
+                               [--task-type]
                                [--validate-only]
                                [--validated-task-name]
   examples:
@@ -90,7 +89,7 @@ directCommands:
             ...n
         ]
 
-      For MySQL and PostgreSQL, the format of the database options JSON object.
+      For PostgreSQL, the format of the database options JSON object.
         [
             {
                 "name": "source database",
@@ -113,8 +112,7 @@ directCommands:
                     "setting1": "value1",
                     ...n
                 },
-                // Applies only for PostgreSQL
-                // List tables that you want included in the migration.
+                // Optional parameter to list tables that you want included in the migration.
                 "selectedTables": [
                     "schemaName1.tableName1",
                     ...n
@@ -207,14 +205,6 @@ directCommands:
             "trustServerCertificate": false  // highly recommended to leave as false
         }
 
-      The format of the connection JSON object for MySql connections.
-        {
-            "userName": "user name",    // if this is missing or null, you will be prompted
-            "password": null,           // if this is missing or null (highly recommended) you will be prompted
-            "serverName": "server name",
-            "port": 3306                // if this is missing, it will default to 3306
-        }
-
       The format of the connection JSON object for PostgreSQL connections.
         {
             "userName": "user name",    // if this is missing or null, you will be prompted
@@ -222,8 +212,8 @@ directCommands:
             "serverName": "server name",
             "databaseName": "database name", // if this is missing, it will default to the 'postgres' database
             "port": 5432,                // if this is missing, it will default to 5432
-            "encryptConnection": true,      // highly recommended to leave as true (For PostgreSQL to Azure PostgreSQL migration only)
-            "trustServerCertificate": false  // highly recommended to leave as false (For PostgreSQL to Azure PostgreSQL migration only)
+            "encryptConnection": true,      // highly recommended to leave as true
+            "trustServerCertificate": false  // highly recommended to leave as false
         }
 
       The format of the connection JSON object for MongoDB connections.
@@ -236,66 +226,28 @@ directCommands:
     name: --target-connection-json
     summary: The connection information to the target server. This can be either a JSON-formatted string or the location to a file containing the JSON object. See 'source-connection-json' for examples of connection formats.
     description: ''
-  - isRequired: true
-    name: --task-type
-    summary: 'The type of data movement the task will support. The supported types are: OnlineMigration, OfflineMigration.'
-    description: ''
   optionalParameters:
   - name: --enable-data-integrity-validation
-    summary: (For SQL only) Whether to perform a checksum based data integrity validation between source and target for the selected database and tables.
+    summary: For SQL only. Whether to perform a checksum based data integrity validation between source and target for the selected database and tables.
     description: ''
   - name: --enable-query-analysis-validation
-    summary: (For SQL only) Whether to perform a quick and intelligent query analysis by retrieving queries from the source database and executing them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries.
+    summary: For SQL only. Whether to perform a quick and intelligent query analysis by retrieving queries from the source database and executing them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries.
     description: ''
   - name: --enable-schema-validation
-    summary: (For SQL only) Whether to compare the schema information between source and target.
+    summary: For SQL only. Whether to compare the schema information between source and target.
+    description: ''
+  - name: --task-type
+    summary: 'The type of data movement the task will support. The supported types are: OnlineMigration, OfflineMigration. If not provided, will default to OfflineMigration for SQL, MongoDB and OnlineMigration for PostgreSQL.'
     description: ''
   - name: --validate-only
-    summary: (For MongoDB to Cosmos DB only) Whether to run validation only and NOT run migration. It is mandatory to run a 'validate only' task before attempting an actual migration. Once the validation is complete, pass the name of this 'validate only' task to a new task's 'validated task name' argument.
+    summary: For MongoDB to Cosmos DB only. Whether to run validation only and NOT run migration. It is mandatory to run a 'validate only' task before attempting an actual migration. Once the validation is complete, pass the name of this 'validate only' task to a new task's 'validated task name' argument.
     description: ''
   - name: --validated-task-name
     summary: (For MongoDB to Cosmos DB only) When running a migration it is neceaary to pass in the name of a previously run 'validate only' task.
     description: ''
-- uid: az_dms_project_task_cutover
-  name: az dms project task cutover
-  summary: For an online migration task, complete the migration by performing a cutover.
-  description: >-
-    To see the result of the request, please use the 'task show' command:
-        az dms project task show ... --expand command.
-  syntax: >-
-    az dms project task cutover --name
-                                --project-name
-                                --resource-group
-                                --service-name
-                                [--immediate]
-                                [--object-name]
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
-    summary: The name of the Task. A DMS Project Task is the activity that performs migration related work. There could be multiple Tasks associated with a Project.
-    description: ''
-  - isRequired: true
-    name: --project-name
-    summary: The name of the Project. DMS Project is a logical grouping that encompasses source database connection, target database connection and a list of databases to migrate.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - isRequired: true
-    name: --service-name
-    summary: The name of the Service. DMS Service is an Azure instance that performs database migrations.
-    description: ''
-  optionalParameters:
-  - name: --immediate
-    summary: For MongoDB migrations, whether to cutover immediately or to let the currently loaded events get migrated. For all other migration types, this has no effect.
-    description: ''
-  - name: --object-name
-    summary: For MongoDB migrations, the qualified name of the database or collection you wish to cutover. Leave blank to cutover the entire migration. For all other migration types, the name of the database on the source you wish to cutover.
-    description: ''
 - uid: az_dms_project_task_restart
   name: az dms project task restart
-  summary: ''
+  summary: Restart either the entire migration or just a specified object. Currently only supported by MongoDB migrations.
   description: >-
     To see the result of the request, please use the 'task show' command:
         az dms project task show ... --expand command.
@@ -362,7 +314,6 @@ directCommands:
 commands:
 - az_dms_project_task_cancel
 - az_dms_project_task_create
-- az_dms_project_task_cutover
 - az_dms_project_task_restart
 - az_dms_project_task_stop
 globalParameters:

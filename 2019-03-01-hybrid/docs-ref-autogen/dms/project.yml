@@ -4,20 +4,19 @@ name: az dms project
 extensionInformation: >-
   > [!Note]
 
-  > This reference is part of the **dms-preview** extension for Azure CLI and requires version 2.0.43 or higher.  The extension will automatically install the first time you run an **az dms project** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
+  > This reference is part of the **dms-preview** extension for Azure CLI and requires version 2.27.0 or higher.  The extension will automatically install the first time you run an **az dms project** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Manage projects for an instance of the Data Migration Service.
 description: ''
 directCommands:
 - uid: az_dms_project_create
   name: az dms project create
-  summary: Create a migration Project which can contain multiple Tasks.
+  summary: Create a migration project which can contain multiple tasks.
   description: >-
     The following project configurations are supported:
         -) source -> target
         1) SQL -> SQLDB
-        2) MySQL -> AzureDbForMySql
-        3) PostgreSQL -> AzureDbForPostgreSQL
-        4) MongoDB -> MongoDB (for migrating to Cosmos DB via their MongoDB API).
+        2) PostgreSQL -> AzureDbForPostgreSQL
+        3) MongoDB -> MongoDB (for migrating to Cosmos DB via their MongoDB API).
   syntax: >-
     az dms project create --location
                           --name
@@ -27,8 +26,10 @@ directCommands:
                           --target-platform
                           [--tags]
   examples:
-  - summary: Create a SQL Project for a DMS instance.
-    syntax: az dms project create -l westus -n myproject -g myresourcegroup --service-name mydms --source-platform SQL --target-platform SQLDB --tags tagName1=tagValue1 tagWithNoValue
+  - summary: Create a SQL to SQLDB project for a DMS instance.
+    syntax: az dms project create -l westus -n sqlproject -g myresourcegroup --service-name mydms --source-platform SQL --target-platform SQLDB --tags tagName1=tagValue1 tagWithNoValue
+  - summary: Create a PostgreSql to AzureDbForPostgreSql project for a DMS instance.
+    syntax: az dms project create -l westus -n pgproject -g myresourcegroup --service-name mydms --source-platform PostgreSQL --target-platform AzureDbForPostgreSQL --tags tagName1=tagValue1 tagWithNoValue
   requiredParameters:
   - isRequired: true
     name: --location -l
@@ -48,11 +49,11 @@ directCommands:
     description: ''
   - isRequired: true
     name: --source-platform
-    summary: 'The type of server for the source database. The supported types are: SQL, MySQL, PostgreSQL, MongoDB.'
+    summary: 'The type of server for the source database. The supported types are: SQL, PostgreSQL, MongoDB.'
     description: ''
   - isRequired: true
     name: --target-platform
-    summary: 'The type of service for the target database. The supported types are: SQLDB, AzureDbForMySql, AzureDbForPostgreSQL, MongoDB.'
+    summary: 'The type of service for the target database. The supported types are: SQLDB, AzureDbForPostgreSQL, MongoDB.'
     description: ''
   optionalParameters:
   - name: --tags
@@ -63,7 +64,6 @@ commands:
 - az_dms_project_task
 - az_dms_project_task_cancel
 - az_dms_project_task_create
-- az_dms_project_task_cutover
 - az_dms_project_task_restart
 - az_dms_project_task_stop
 globalParameters:

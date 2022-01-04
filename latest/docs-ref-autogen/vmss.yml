@@ -24,6 +24,7 @@ directCommands:
                    [--automatic-repairs-grace-period]
                    [--backend-pool-name]
                    [--backend-port]
+                   [--capacity-reservation-group]
                    [--computer-name-prefix]
                    [--custom-data]
                    [--data-disk-caching]
@@ -34,9 +35,13 @@ directCommands:
                    [--disable-overprovision]
                    [--dns-servers]
                    [--edge-zone]
+                   [--enable-agent {false, true}]
+                   [--enable-auto-update {false, true}]
                    [--enable-cross-zone-upgrade {false, true}]
+                   [--enable-spot-restore {false, true}]
                    [--encryption-at-host {false, true}]
                    [--ephemeral-os-disk {false, true}]
+                   [--ephemeral-os-disk-placement {CacheDisk, ResourceDisk}]
                    [--eviction-policy {Deallocate, Delete}]
                    [--generate-ssh-keys]
                    [--health-probe]
@@ -61,6 +66,7 @@ directCommands:
                    [--os-disk-name]
                    [--os-disk-size-gb]
                    [--os-type {linux, windows}]
+                   [--patch-mode {AutomaticByOS, AutomaticByPlatform, ImageDefault, Manual}]
                    [--pause-time-between-batches]
                    [--plan-name]
                    [--plan-product]
@@ -80,6 +86,7 @@ directCommands:
                    [--secrets]
                    [--single-placement-group {false, true}]
                    [--specialized {false, true}]
+                   [--spot-restore-timeout]
                    [--ssh-dest-key-path]
                    [--ssh-key-values]
                    [--storage-container-name]
@@ -115,8 +122,12 @@ directCommands:
           --public-ip-per-vm --vm-domain-name myvmss --dns-servers 10.0.0.6 10.0.0.5
   - summary: 'Create a Linux VM scale set using a cloud-init script for configuration. See: https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init'
     syntax: az vmss create -g MyResourceGroup -n MyVmss --image debian --custom-data MyCloudInitScript.yml
-  - summary: Create a Linux VM scale set from a specialized image version.
-    syntax: az vmss create -n MyVmss -g MyResourceGroup --image $id --specialized
+  - summary: Create a VMSS from a generalized gallery image version.
+    syntax: az vmss create -g MyResourceGroup -n MyVmss --image /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/galleries/myGallery/images/myImage/versions/1.0.0
+  - summary: Create a VMSS from a specialized gallery image version.
+    syntax: az vmss create -g MyResourceGroup -n MyVmss --image /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/galleries/myGallery/images/myImage/versions/1.0.0 --specialized
+  - summary: Create a VMSS from the latest version of a gallery image
+    syntax: az vmss create -g MyResourceGroup -n MyVmss --image /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Compute/galleries/myGallery/images/myImage
   - summary: Create a Debian VM scaleset using Key Vault secrets.
     syntax: >-
       az keyvault certificate create --vault-name vaultname -n cert1 \
@@ -138,6 +149,12 @@ directCommands:
     syntax: az vmss create -n MyVmss -g rg1 --image debian --assign-identity  [system] /subscriptions/99999999-1bf0-4dda-aec3-cb9272f09590/resourcegroups/myRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myID
   - summary: Create a single zone VM scaleset in the current resource group's region
     syntax: az vmss create -n MyVmss -g MyResourceGroup --image Centos --zones 1
+  - summary: Create a VMSS that supports SpotRestore.
+    syntax: az vmss create -n MyVmss -g MyResourceGroup  --location NorthEurope --instance-count 2 --image Centos --priority Spot --eviction-policy Deallocate --single-placement-group --enable-spot-restore True --spot-restore-timeout PT1H
+  - summary: Create a VMSS from shared gallery image. (private preview feature, please contact shared image gallery team by email sigpmdev@microsoft.com to register for preview if you're interested in using this feature).
+    syntax: az vmss create -n MyVmss -g MyResourceGroup --image /SharedGalleries/{gallery_unique_name}/Images/{image}/Versions/{version}
+  - summary: Create a Windows VMSS with patch mode 'Manual' (Currently patch mode 'AutomaticByPlatform' is not supported during VMSS creation as health extension which is required for 'AutomaticByPlatform' mode cannot be set during VMSS creation).
+    syntax: az vmss create -n MyVmss -g MyResourceGroup --image Win2019Datacenter --enable-agent --enable-auto-update false --patch-mode Manual --orchestration-mode Flexible
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -156,7 +173,7 @@ directCommands:
     summary: Password for the VM if authentication type is 'Password'.
     description: ''
   - name: --admin-username
-    summary: Username for the VM. Default value is current username of OS. If the default value is system reserved, then default value will be set to azureuser. Please refer to https://docs.microsoft.com/en-us/rest/api/compute/virtualmachines/createorupdate#osprofile to get a full list of reserved values.
+    summary: Username for the VM. Default value is current username of OS. If the default value is system reserved, then default value will be set to azureuser. Please refer to https://docs.microsoft.com/rest/api/compute/virtualmachines/createorupdate#osprofile to get a full list of reserved values.
     description: ''
   - name: --app-gateway
     summary: Name to use when creating a new application gateway (default) or referencing an existing one. Can also reference an existing application gateway by ID or specify "" for none.
@@ -191,6 +208,9 @@ directCommands:
   - name: --backend-port
     summary: When creating a new load balancer, backend port to open with NAT rules (Defaults to 22 on Linux and 3389 on Windows). When creating an application gateway, the backend port to use for the backend HTTP settings.
     description: ''
+  - name: --capacity-reservation-group --crg
+    summary: The ID or name of the capacity reservation group that is used to allocate. Pass in "None" to disassociate the capacity reservation group. Please note that if you want to delete a VM/VMSS that has been associated with capacity reservation group, you need to disassociate the capacity reservation group first.
+    description: ''
   - name: --computer-name-prefix
     summary: Computer name prefix for all of the virtual machines in the scale set. Computer name prefixes must be 1 to 15 characters long.
     description: ''
@@ -221,9 +241,21 @@ directCommands:
   - name: --edge-zone
     summary: The name of edge zone.
     description: ''
+  - name: --enable-agent
+    parameterValueGroup: false, true
+    summary: Indicate whether virtual machine agent should be provisioned on the virtual machine. When this property is not specified, default behavior is to set it to true. This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+    description: ''
+  - name: --enable-auto-update
+    parameterValueGroup: false, true
+    summary: Indicate whether Automatic Updates is enabled for the Windows virtual machine.
+    description: ''
   - name: --enable-cross-zone-upgrade
     parameterValueGroup: false, true
     summary: Set this Boolean property will allow VMSS to ignore AZ boundaries when constructing upgrade batches, and only consider Update Domain and maxBatchInstancePercent to determine the batch size.
+    description: ''
+  - name: --enable-spot-restore
+    parameterValueGroup: false, true
+    summary: Enable the Spot-Try-Restore feature where evicted VMSS SPOT instances will be tried to be restored opportunistically based on capacity availability and pricing constraints.
     description: ''
   - name: --encryption-at-host
     parameterValueGroup: false, true
@@ -232,6 +264,10 @@ directCommands:
   - name: --ephemeral-os-disk
     parameterValueGroup: false, true
     summary: Allows you to create an OS disk directly on the host node, providing local disk performance and faster VM/VMSS reimage time.
+    description: ''
+  - name: --ephemeral-os-disk-placement --ephemeral-placement
+    parameterValueGroup: CacheDisk, ResourceDisk
+    summary: Only applicable when used with `--ephemeral-os-disk`. Allows you to choose the Ephemeral OS disk provisioning location.
     description: ''
   - name: --eviction-policy
     parameterValueGroup: Deallocate, Delete
@@ -247,9 +283,9 @@ directCommands:
     summary: Name or ID of dedicated host group that the virtual machine scale set resides in.
     description: ''
   - name: --image
-    summary: 'The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. Valid URN format: "Publisher:Offer:Sku:Version".'
+    summary: 'The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. In addition, it also supports shared gallery image. Valid URN format: "Publisher:Offer:Sku:Version".'
     description: ''
-    valueFrom: az vm image list, az vm image show
+    valueFrom: az vm image list, az vm image show, az sig image-version show-shared
   - name: --instance-count
     defaultValue: "2"
     summary: Number of VMs in the scale set.
@@ -284,7 +320,7 @@ directCommands:
     summary: 'The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. Default: 20%.'
     description: ''
   - name: --network-api-version
-    summary: Specify the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode 'Flexible'. Possible value is 2020-11-01.
+    summary: Specify the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode 'Flexible'. Default value is 2020-11-01.
     description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
@@ -313,6 +349,10 @@ directCommands:
   - name: --os-type
     parameterValueGroup: linux, windows
     summary: Type of OS installed on a custom VHD. Do not use when specifying an URN or URN alias.
+    description: ''
+  - name: --patch-mode
+    parameterValueGroup: AutomaticByOS, AutomaticByPlatform, ImageDefault, Manual
+    summary: "Mode of in-guest patching to IaaS virtual machine. Allowed values for Windows VM: AutomaticByOS, AutomaticByPlatform, Manual. Allowed values for Linux VM: AutomaticByPlatform, ImageDefault. Manual - You control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the paramater --enable-auto-update must be false. AutomaticByOS - The virtual machine will automatically be updated by the OS. The parameter --enable-auto-update must be true. AutomaticByPlatform - the virtual machine will automatically updated by the OS. ImageDefault - The virtual machine's default patching configuration is used. The parameter --enable-agent and --enable-auto-update must be true."
     description: ''
   - name: --pause-time-between-batches
     summary: 'The wait time between completing the update for all virtual machines in one batch and starting the next batch. Default: 0 seconds.'
@@ -377,6 +417,9 @@ directCommands:
   - name: --specialized
     parameterValueGroup: false, true
     summary: Indicate whether the source image is specialized.
+    description: ''
+  - name: --spot-restore-timeout
+    summary: Timeout value expressed as an ISO 8601 time duration after which the platform will not try to restore the VMSS SPOT instances.
     description: ''
   - name: --ssh-dest-key-path
     summary: Destination file path on the VM for the SSH key. If the file already exists, the specified key(s) are appended to the file. Destination path for SSH public keys is currently limited to its default value "/home/username/.ssh/authorized_keys" due to a known issue in Linux provisioning agent.
@@ -669,8 +712,8 @@ directCommands:
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vmss_list-instances
   name: az vmss list-instances
-  summary: Gets a list of all virtual machines in a VM scale sets.
-  description: ''
+  summary: Get a list of all virtual machines in a VM scale sets.
+  description: Return a list of virtual machines managed by VMSS. For VMSS in Flexible Orchestration mode, please use "az vm list" to get full details.
   syntax: >-
     az vmss list-instances [--expand]
                            [--filter]
@@ -1044,9 +1087,12 @@ directCommands:
   syntax: >-
     az vmss update [--add]
                    [--automatic-repairs-grace-period]
+                   [--capacity-reservation-group]
                    [--enable-automatic-repairs {false, true}]
                    [--enable-cross-zone-upgrade {false, true}]
+                   [--enable-spot-restore {false, true}]
                    [--enable-terminate-notification {false, true}]
+                   [--ephemeral-os-disk-placement {CacheDisk, ResourceDisk}]
                    [--force-string]
                    [--ids]
                    [--instance-id]
@@ -1067,10 +1113,12 @@ directCommands:
                    [--resource-group]
                    [--scale-in-policy {Default, NewestVM, OldestVM}]
                    [--set]
+                   [--spot-restore-timeout]
                    [--subscription]
                    [--terminate-notification-time]
                    [--ultra-ssd-enabled {false, true}]
                    [--user-data]
+                   [--vm-sku]
   examples:
   - summary: Update a VMSS' license type for Azure Hybrid Benefit.
     syntax: az vmss update --name MyScaleSet --resource-group MyResourceGroup --license-type windows_server
@@ -1084,12 +1132,17 @@ directCommands:
     syntax: az vmss update --name MyScaleSet --resource-group MyResourceGroup --set virtualMachineProfile.storageProfile.dataDisks[0].diskMBpsReadWrite=66
   - summary: Update a VM to use a custom image.
     syntax: az vmss update --name MyScaleSet --resource-group MyResourceGroup --set virtualMachineProfile.storageProfile.imageReference.id=imageID
+  - summary: Update a Linux VMSS to patch mode 'AutomaticByPlatform'.
+    syntax: az vmss update -n MyVmss -g MyResourceGroup --set virtualMachineProfile.osProfile.linuxConfiguration.patchSettings.patchMode=AutomaticByPlatform
   optionalParameters:
   - name: --add
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --automatic-repairs-grace-period
     summary: The amount of time (in minutes, between 30 and 90) for which automatic repairs are suspended due to a state change on VM.
+    description: ''
+  - name: --capacity-reservation-group --crg
+    summary: The ID or name of the capacity reservation group that is used to allocate. Pass in "None" to disassociate the capacity reservation group. Please note that if you want to delete a VM/VMSS that has been associated with capacity reservation group, you need to disassociate the capacity reservation group first.
     description: ''
   - name: --enable-automatic-repairs
     parameterValueGroup: false, true
@@ -1099,9 +1152,17 @@ directCommands:
     parameterValueGroup: false, true
     summary: Set this Boolean property will allow VMSS to ignore AZ boundaries when constructing upgrade batches, and only consider Update Domain and maxBatchInstancePercent to determine the batch size.
     description: ''
+  - name: --enable-spot-restore
+    parameterValueGroup: false, true
+    summary: Enable the Spot-Try-Restore feature where evicted VMSS SPOT instances will be tried to be restored opportunistically based on capacity availability and pricing constraints.
+    description: ''
   - name: --enable-terminate-notification
     parameterValueGroup: false, true
     summary: Enable terminate notification.
+    description: ''
+  - name: --ephemeral-os-disk-placement --ephemeral-placement
+    parameterValueGroup: CacheDisk, ResourceDisk
+    summary: Only applicable when used with `--vm-sku`. Allows you to choose the Ephemeral OS disk provisioning location.
     description: ''
   - name: --force-string
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
@@ -1169,6 +1230,9 @@ directCommands:
   - name: --set
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
+  - name: --spot-restore-timeout
+    summary: Timeout value expressed as an ISO 8601 time duration after which the platform will not try to restore the VMSS SPOT instances.
+    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
@@ -1181,6 +1245,9 @@ directCommands:
     description: ''
   - name: --user-data
     summary: UserData for the virtual machines in the scale set. It can be passed in as file or string. If empty string is passed in, the existing value will be deleted.
+    description: ''
+  - name: --vm-sku
+    summary: The new size of the virtual machine instances in the scale set. Default to "Standard_DS1_v2". See https://azure.microsoft.com/pricing/details/virtual-machines/ for size info.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vmss_update-instances
@@ -1282,6 +1349,9 @@ directCommands:
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 commands:
+- az_vmss_application
+- az_vmss_application_list
+- az_vmss_application_set
 - az_vmss_create
 - az_vmss_deallocate
 - az_vmss_delete
@@ -1330,9 +1400,12 @@ commands:
 - az_vmss_rolling-upgrade_get-latest
 - az_vmss_rolling-upgrade_start
 - az_vmss_run-command
+- az_vmss_run-command_create
+- az_vmss_run-command_delete
 - az_vmss_run-command_invoke
 - az_vmss_run-command_list
 - az_vmss_run-command_show
+- az_vmss_run-command_update
 - az_vmss_scale
 - az_vmss_set-orchestration-service-state
 - az_vmss_show
@@ -1359,5 +1432,5 @@ globalParameters:
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-  ms.date: 06/23/2021
+  ms.date: 11/18/2021
   description: Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).

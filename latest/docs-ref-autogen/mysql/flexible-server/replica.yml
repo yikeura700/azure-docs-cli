@@ -14,9 +14,10 @@ directCommands:
                                             --source-server
                                             [--no-wait]
                                             [--subscription]
+                                            [--zone]
   examples:
-  - summary: Create a read replica 'testReplicaServer' for 'testServer'.
-    syntax: az mysql flexible-server replica create --replica-name testReplicaServer -g testGroup --source-server testServer
+  - summary: Create a read replica 'testReplicaServer' for 'testserver' in the specified zone if available.
+    syntax: az mysql flexible-server replica create --replica-name testReplicaServer -g testGroup --source-server testserver --zone 3
   requiredParameters:
   - isRequired: true
     name: --replica-name
@@ -37,6 +38,9 @@ directCommands:
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
+  - name: --zone -z
+    summary: Availability zone into which to provision the resource.
+    description: ''
 - uid: az_mysql_flexible-server_replica_list
   name: az mysql flexible-server replica list
   summary: List all read replicas for a given server.
@@ -47,7 +51,7 @@ directCommands:
                                           [--query-examples]
                                           [--subscription]
   examples:
-  - summary: List all read replicas for master server 'testServer'.
+  - summary: List all read replicas for master server 'testserver'.
     syntax: az mysql flexible-server replica list -g testGroup -n primaryservername
   requiredParameters:
   - isRequired: true
@@ -83,7 +87,7 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    summary: Name of the replica server.
+    summary: Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.

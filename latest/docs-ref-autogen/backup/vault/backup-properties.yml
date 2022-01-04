@@ -9,7 +9,7 @@ directCommands:
   summary: Sets backup related properties of the Recovery Services vault.
   description: ''
   syntax: >-
-    az backup vault backup-properties set [--backup-storage-redundancy {GeoRedundant, LocallyRedundant}]
+    az backup vault backup-properties set [--backup-storage-redundancy {GeoRedundant, LocallyRedundant, ZoneRedundant}]
                                           [--cross-region-restore-flag {False, True}]
                                           [--ids]
                                           [--name]
@@ -21,8 +21,8 @@ directCommands:
     syntax: az backup vault backup-properties set --backup-storage-redundancy GeoRedundant --name MyRecoveryServicesVault --resource-group MyResourceGroup --subscription MySubscription
   optionalParameters:
   - name: --backup-storage-redundancy
-    parameterValueGroup: GeoRedundant, LocallyRedundant
-    summary: Sets backup storage properties for a Recovery Services vault.
+    parameterValueGroup: GeoRedundant, LocallyRedundant, ZoneRedundant
+    summary: Set backup storage properties for a Recovery Services vault.
     description: ''
   - name: --cross-region-restore-flag
     parameterValueGroup: False, True
@@ -95,5 +95,5 @@ globalParameters:
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-  ms.date: 06/30/2021
+  ms.date: 10/26/2021
   description: Properties of the Recovery Services vault.

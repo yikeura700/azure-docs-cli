@@ -87,6 +87,7 @@ directCommands:
                   [--aad-tenant-id]
                   [--aci-subnet-name]
                   [--admin-username]
+                  [--aks-custom-headers]
                   [--api-server-authorized-ip-ranges]
                   [--appgw-id]
                   [--appgw-name]
@@ -96,12 +97,16 @@ directCommands:
                   [--assign-identity]
                   [--assign-kubelet-identity]
                   [--attach-acr]
+                  [--auto-upgrade-channel {node-image, none, patch, rapid, stable}]
                   [--ca-profile]
                   [--client-secret]
+                  [--disable-local-accounts]
+                  [--disable-public-fqdn]
                   [--disable-rbac]
                   [--dns-name-prefix]
                   [--dns-service-ip]
                   [--docker-bridge-address]
+                  [--edge-zone]
                   [--enable-aad]
                   [--enable-addons]
                   [--enable-ahub]
@@ -112,6 +117,7 @@ directCommands:
                   [--enable-node-public-ip]
                   [--enable-private-cluster]
                   [--enable-rbac]
+                  [--enable-secret-rotation]
                   [--enable-sgxquotehelper]
                   [--enable-ultra-ssd]
                   [--fqdn-subdomain]
@@ -140,10 +146,12 @@ directCommands:
                   [--nodepool-labels]
                   [--nodepool-name]
                   [--nodepool-tags]
+                  [--os-sku]
                   [--outbound-type {loadBalancer, userDefinedRouting}]
                   [--pod-cidr]
                   [--ppg]
                   [--private-dns-zone]
+                  [--rotation-poll-interval]
                   [--service-cidr]
                   [--service-principal]
                   [--skip-subnet-role-assignment]
@@ -203,6 +211,14 @@ directCommands:
     syntax: az aks create -g MyResourceGroup -n MyManagedCluster --enable-aad --enable-azure-rbac
   - summary: Create a kubernetes cluster with custom control plane identity and kubelet identity.
     syntax: az aks create -g MyResourceGroup -n MyManagedCluster --assign-identity <control-plane-identity-resource-id> --assign-kubelet-identity <kubelet-identity-resource-id>
+  - summary: Create a kubernetes cluster in the Edge Zone.
+    syntax: az aks create -g MyResourceGroup -n MyManagedCluster --location <location> --kubernetes-version 1.20.7 --edge-zone <edge-zone-name>
+  - summary: Create a kubernetes cluster with a specific OS SKU
+    syntax: az aks create -g MyResourceGroup -n MyManagedCluster --os-sku Ubuntu
+  - summary: Create a kubernetes cluster with custom tags
+    syntax: az aks create -g MyResourceGroup -n MyManagedCluster --tags "foo=bar" "baz=qux"
+  - summary: Create a kubernetes cluster with custom headers
+    syntax: az aks create -g MyResourceGroup -n MyManagedCluster --aks-custom-headers WindowsContainerRuntime=containerd,AKSHTTPCustomFeatures=Microsoft.ContainerService/CustomNodeConfigPreview
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -235,6 +251,9 @@ directCommands:
     defaultValue: azureuser
     summary: User account to create on node VMs for SSH access.
     description: ''
+  - name: --aks-custom-headers
+    summary: Comma-separated key-value pairs to specify custom headers.
+    description: ''
   - name: --api-server-authorized-ip-ranges
     summary: Comma seperated list of authorized apiserver IP ranges. Set to 0.0.0.0/32 to restrict apiserver traffic to node pools.
     description: ''
@@ -262,11 +281,21 @@ directCommands:
   - name: --attach-acr
     summary: Grant the 'acrpull' role assignment to the ACR specified by name or resource ID.
     description: ''
+  - name: --auto-upgrade-channel
+    parameterValueGroup: node-image, none, patch, rapid, stable
+    summary: Specify the upgrade channel for autoupgrade.
+    description: ''
   - name: --ca-profile --cluster-autoscaler-profile
     summary: Space-separated list of key=value pairs for configuring cluster autoscaler. Pass an empty string to clear the profile.
     description: ''
   - name: --client-secret
     summary: Secret associated with the service principal. This argument is required if `--service-principal` is specified.
+    description: ''
+  - name: --disable-local-accounts
+    summary: If set to true, getting static credential will be disabled for this cluster.
+    description: ''
+  - name: --disable-public-fqdn
+    summary: Disable public fqdn feature for private cluster.
     description: ''
   - name: --disable-rbac
     summary: Disable Kubernetes Role-Based Access Control.
@@ -280,6 +309,9 @@ directCommands:
   - name: --docker-bridge-address
     summary: A specific IP address and netmask for the Docker bridge, using standard CIDR notation.
     description: This address must not be in any Subnet IP ranges, or the Kubernetes service address range. For example, 172.17.0.1/16.
+  - name: --edge-zone
+    summary: The name of the Edge Zone.
+    description: ''
   - name: --enable-aad
     summary: Enable managed AAD feature for cluster.
     description: ''
@@ -287,16 +319,18 @@ directCommands:
     summary: Enable the Kubernetes addons in a comma-separated list.
     description: >-
       These addons are available:
-          http_application_routing - configure ingress with automatic public DNS name creation.
-          monitoring - turn on Log Analytics monitoring. Uses the Log Analytics Default Workspace if it exists, else creates one.
-                       Specify "--workspace-resource-id" to use an existing workspace.
-                       If monitoring addon is enabled --no-wait argument will have no effect
-          azure-policy - enable Azure policy. The Azure Policy add-on for AKS enables at-scale enforcements and safeguards on your clusters in a centralized, consistent manner.
-                       Learn more at aka.ms/aks/policy.
-          virtual-node - enable AKS Virtual Node.
-                       Requires --aci-subnet-name to provide the name of an existing subnet for the Virtual Node to use.
-                       aci-subnet-name must be in the same vnet which is specified by --vnet-subnet-id (required as well).
-          confcom      - enable confcom addon, this will enable SGX device plugin by default.
+          - http_application_routing : configure ingress with automatic public DNS name creation.
+          - monitoring               : turn on Log Analytics monitoring. Uses the Log Analytics Default Workspace if it exists, else creates one.
+                                       Specify "--workspace-resource-id" to use an existing workspace.
+                                       If monitoring addon is enabled --no-wait argument will have no effect
+          - azure-policy             : enable Azure policy. The Azure Policy add-on for AKS enables at-scale enforcements and safeguards on your clusters in a centralized, consistent manner.
+                                       Learn more at aka.ms/aks/policy.
+          - virtual-node             : enable AKS Virtual Node.
+                                       Requires --aci-subnet-name to provide the name of an existing subnet for the Virtual Node to use.
+                                       aci-subnet-name must be in the same vnet which is specified by --vnet-subnet-id (required as well).
+          - confcom                  : enable confcom addon, this will enable SGX device plugin by default.
+          - open-service-mesh        : enable Open Service Mesh addon.
+          - azure-keyvault-secrets-provider : enable Azure Keyvault Secrets Provider addon.
   - name: --enable-ahub
     summary: Enable Azure Hybrid User Benefits (AHUB) for Windows VMs.
     description: ''
@@ -321,6 +355,9 @@ directCommands:
     description: ''
   - name: --enable-rbac -r
     summary: 'Enable Kubernetes Role-Based Access Control. Default: enabled.'
+    description: ''
+  - name: --enable-secret-rotation
+    summary: Enable secret rotation. Use with azure-keyvault-secrets-provider addon.
     description: ''
   - name: --enable-sgxquotehelper
     summary: Enable SGX quote helper for confcom addon.
@@ -407,7 +444,7 @@ directCommands:
     summary: Size of Virtual Machines to create as Kubernetes nodes.
     description: ''
   - name: --nodepool-labels
-    summary: 'Space-separated labels: key[=value] [key[=value] ...]. You can not change the node labels through CLI after creation. See https://aka.ms/node-labels for syntax of labels.'
+    summary: 'Space-separated labels: key[=value] [key[=value] ...]. See https://aka.ms/node-labels for syntax of labels.'
     description: ''
   - name: --nodepool-name
     defaultValue: nodepool1
@@ -415,6 +452,9 @@ directCommands:
     description: ''
   - name: --nodepool-tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    description: ''
+  - name: --os-sku
+    summary: The OS SKU of the agent node pool. Ubuntu or CBLMariner.
     description: ''
   - name: --outbound-type
     parameterValueGroup: loadBalancer, userDefinedRouting
@@ -428,7 +468,10 @@ directCommands:
     description: ''
   - name: --private-dns-zone
     summary: Private dns zone mode for private cluster.
-    description: Allowed values are "system" or custom private dns zone resource id. If not set, defaults to type system. Requires --enable-private-cluster to be used.
+    description: Allowed values are "system", "none" or custom private dns zone resource id. If not set, defaults to type system. Requires --enable-private-cluster to be used.
+  - name: --rotation-poll-interval
+    summary: Set interval of rotation poll. Use with azure-keyvault-secrets-provider addon.
+    description: ''
   - name: --service-cidr
     summary: A CIDR notation IP range from which to assign service cluster IPs.
     description: This range must not overlap with any Subnet IP ranges. For example, 10.0.0.0/16.
@@ -446,7 +489,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --tags
-    summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
+    summary: The tags of the managed cluster. The managed cluster instance and all resources managed by the cloud provider will be tagged.
     description: ''
   - name: --uptime-sla
     summary: Enable a paid managed cluster service with a financially backed SLA.
@@ -469,7 +512,7 @@ directCommands:
             * Has a digit
             * Has a special character (Regex match [W_])
           - Disallowed values:  "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
-      Reference: https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.management.compute.models.virtualmachinescalesetosprofile.adminpassword?view=azure-dotnet.
+      Reference: https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.virtualmachinescalesetosprofile.adminpassword?view=azure-dotnet.
   - name: --windows-admin-username
     summary: User account to create on windows node VMs.
     description: >-
@@ -478,7 +521,7 @@ directCommands:
           - Disallowed values: "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5".
           - Minimum-length: 1 character
           - Max-length: 20 characters
-      Reference: https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.management.compute.models.virtualmachinescalesetosprofile.adminusername?view=azure-dotnet.
+      Reference: https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.virtualmachinescalesetosprofile.adminusername?view=azure-dotnet.
   - name: --workspace-resource-id
     summary: The resource ID of an existing Log Analytics Workspace to use for storing monitoring data. If not specified, uses the default Log Analytics Workspace if it exists, otherwise creates one.
     description: ''
@@ -562,13 +605,15 @@ directCommands:
   summary: Enable Kubernetes addons.
   description: >-
     These addons are available:
-        http_application_routing - configure ingress with automatic public DNS name creation.
-        monitoring - turn on Log Analytics monitoring. Requires "--workspace-resource-id".
-                     If monitoring addon is enabled --no-wait argument will have no effect
-        virtual-node - enable AKS Virtual Node. Requires --subnet-name to provide the name of an existing subnet for the Virtual Node to use.
-        azure-policy - enable Azure policy. The Azure Policy add-on for AKS enables at-scale enforcements and safeguards on your clusters in a centralized, consistent manner.
-                     Learn more at aka.ms/aks/policy.
-        ingress-appgw - enable Application Gateway Ingress Controller addon.
+        - http_application_routing : configure ingress with automatic public DNS name creation.
+        - monitoring               : turn on Log Analytics monitoring. Requires "--workspace-resource-id".
+                                     If monitoring addon is enabled --no-wait argument will have no effect
+        - virtual-node             : enable AKS Virtual Node. Requires --subnet-name to provide the name of an existing subnet for the Virtual Node to use.
+        - azure-policy             : enable Azure policy. The Azure Policy add-on for AKS enables at-scale enforcements and safeguards on your clusters in a centralized, consistent manner.
+                                     Learn more at aka.ms/aks/policy.
+        - ingress-appgw            : enable Application Gateway Ingress Controller addon.
+        - open-service-mesh        : enable Open Service Mesh addon.
+        - azure-keyvault-secrets-provider : enable Azure Keyvault Secrets Provider addon.
   syntax: >-
     az aks enable-addons --addons
                          --name
@@ -578,8 +623,10 @@ directCommands:
                          [--appgw-subnet-cidr]
                          [--appgw-subnet-id]
                          [--appgw-watch-namespace]
+                         [--enable-secret-rotation]
                          [--enable-sgxquotehelper]
                          [--no-wait]
+                         [--rotation-poll-interval]
                          [--subnet-name]
                          [--subscription]
                          [--workspace-resource-id]
@@ -588,6 +635,8 @@ directCommands:
     syntax: az aks enable-addons --addons virtual-node --name MyManagedCluster --resource-group MyResourceGroup --subnet MySubnetName
   - summary: Enable ingress-appgw addon with subnet prefix.
     syntax: az aks enable-addons --name MyManagedCluster --resource-group MyResourceGroup --addons ingress-appgw --appgw-subnet-cidr 10.2.0.0/16 --appgw-name gateway
+  - summary: Enable open-service-mesh addon.
+    syntax: az aks enable-addons --name MyManagedCluster --resource-group MyResourceGroup --addons open-service-mesh
   requiredParameters:
   - isRequired: true
     name: --addons -a
@@ -617,11 +666,17 @@ directCommands:
   - name: --appgw-watch-namespace
     summary: Specify the namespace, which AGIC should watch. This could be a single string value, or a comma-separated list of namespaces.
     description: ''
+  - name: --enable-secret-rotation
+    summary: Enable secret rotation. Use with azure-keyvault-secrets-provider addon.
+    description: ''
   - name: --enable-sgxquotehelper
     summary: Enable SGX quote helper for confcom addon.
     description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
+    description: ''
+  - name: --rotation-poll-interval
+    summary: Set interval of rotation poll. Use with azure-keyvault-secrets-provider addon.
     description: ''
   - name: --subnet-name -s
     summary: Name of an existing subnet to use with the virtual-node add-on.
@@ -644,6 +699,7 @@ directCommands:
                            [--context]
                            [--file]
                            [--overwrite-existing]
+                           [--public-fqdn]
                            [--subscription]
   examples:
   - summary: Get access credentials for a managed Kubernetes cluster. (autogenerated)
@@ -670,6 +726,9 @@ directCommands:
     description: ''
   - name: --overwrite-existing
     summary: Overwrite any existing cluster entry with the same name.
+    description: ''
+  - name: --public-fqdn
+    summary: Get private cluster credential with server address to be public fqdn.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
@@ -1062,19 +1121,27 @@ directCommands:
                   --resource-group
                   [--aad-admin-group-object-ids]
                   [--aad-tenant-id]
+                  [--aks-custom-headers]
                   [--api-server-authorized-ip-ranges]
                   [--assign-identity]
                   [--attach-acr]
+                  [--auto-upgrade-channel {node-image, none, patch, rapid, stable}]
                   [--ca-profile]
                   [--detach-acr]
                   [--disable-ahub]
                   [--disable-azure-rbac]
                   [--disable-cluster-autoscaler]
+                  [--disable-local-accounts]
+                  [--disable-public-fqdn]
+                  [--disable-secret-rotation]
                   [--enable-aad]
                   [--enable-ahub]
                   [--enable-azure-rbac]
                   [--enable-cluster-autoscaler]
+                  [--enable-local-accounts]
                   [--enable-managed-identity]
+                  [--enable-public-fqdn]
+                  [--enable-secret-rotation]
                   [--load-balancer-idle-timeout]
                   [--load-balancer-managed-outbound-ip-count]
                   [--load-balancer-outbound-ip-prefixes]
@@ -1084,7 +1151,10 @@ directCommands:
                   [--min-count]
                   [--no-uptime-sla]
                   [--no-wait]
+                  [--nodepool-labels]
+                  [--rotation-poll-interval]
                   [--subscription]
+                  [--tags]
                   [--update-cluster-autoscaler]
                   [--uptime-sla]
                   [--windows-admin-password]
@@ -1126,6 +1196,10 @@ directCommands:
     syntax: az aks update -g MyResourceGroup -n MyManagedCluster --enable-azure-rbac
   - summary: Disable Azure RBAC in a managed AAD AKS cluster
     syntax: az aks update -g MyResourceGroup -n MyManagedCluster --disable-azure-rbac
+  - summary: Update the tags of a kubernetes cluster
+    syntax: az aks update -g MyResourceGroup -n MyManagedCLuster --tags "foo=bar" "baz=qux"
+  - summary: Update a kubernetes cluster with custom headers
+    syntax: az aks update -g MyResourceGroup -n MyManagedCluster --aks-custom-headers WindowsContainerRuntime=containerd,AKSHTTPCustomFeatures=Microsoft.ContainerService/CustomNodeConfigPreview
   requiredParameters:
   - isRequired: true
     name: --name -n
@@ -1142,6 +1216,9 @@ directCommands:
   - name: --aad-tenant-id
     summary: The ID of an Azure Active Directory tenant.
     description: ''
+  - name: --aks-custom-headers
+    summary: Comma-separated key-value pairs to specify custom headers.
+    description: ''
   - name: --api-server-authorized-ip-ranges
     summary: Comma seperated list of authorized apiserver IP ranges. Set to "" to allow all traffic on a previously restricted cluster. Set to 0.0.0.0/32 to restrict apiserver traffic to node pools.
     description: ''
@@ -1150,6 +1227,10 @@ directCommands:
     description: ''
   - name: --attach-acr
     summary: Grant the 'acrpull' role assignment to the ACR specified by name or resource ID.
+    description: ''
+  - name: --auto-upgrade-channel
+    parameterValueGroup: node-image, none, patch, rapid, stable
+    summary: Specify the upgrade channel for autoupgrade.
     description: ''
   - name: --ca-profile --cluster-autoscaler-profile
     summary: Space-separated list of key=value pairs for configuring cluster autoscaler. Pass an empty string to clear the profile.
@@ -1166,6 +1247,15 @@ directCommands:
   - name: --disable-cluster-autoscaler -d
     summary: Disable cluster autoscaler.
     description: ''
+  - name: --disable-local-accounts
+    summary: If set to true, getting static credential will be disabled for this cluster.
+    description: ''
+  - name: --disable-public-fqdn
+    summary: Disable public fqdn feature for private cluster.
+    description: ''
+  - name: --disable-secret-rotation
+    summary: Disable secret rotation. Use with azure-keyvault-secrets-provider addon.
+    description: ''
   - name: --enable-aad
     summary: Enable managed AAD feature for cluster.
     description: ''
@@ -1178,8 +1268,17 @@ directCommands:
   - name: --enable-cluster-autoscaler -e
     summary: Enable cluster autoscaler.
     description: ''
+  - name: --enable-local-accounts
+    summary: If set to true, will enable getting static credential for this cluster.
+    description: ''
   - name: --enable-managed-identity
     summary: Update current cluster to use managed identity to manage cluster resource group.
+    description: ''
+  - name: --enable-public-fqdn
+    summary: Enable public fqdn feature for private cluster.
+    description: ''
+  - name: --enable-secret-rotation
+    summary: Enable secret rotation. Use with azure-keyvault-secrets-provider addon.
     description: ''
   - name: --load-balancer-idle-timeout
     summary: Load balancer idle timeout in minutes.
@@ -1208,8 +1307,17 @@ directCommands:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
+  - name: --nodepool-labels
+    summary: 'Space-separated labels: key[=value] [key[=value] ...]. See https://aka.ms/node-labels for syntax of labels.'
+    description: ''
+  - name: --rotation-poll-interval
+    summary: Set interval of rotation poll. Use with azure-keyvault-secrets-provider addon.
+    description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --tags
+    summary: The tags of the managed cluster. The managed cluster instance and all resources managed by the cloud provider will be tagged.
     description: ''
   - name: --update-cluster-autoscaler -u
     summary: Update min-count or max-count for cluster autoscaler.
@@ -1229,7 +1337,7 @@ directCommands:
             * Has a digit
             * Has a special character (Regex match [W_])
           - Disallowed values:  "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
-      Reference: https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.management.compute.models.virtualmachinescalesetosprofile.adminpassword?view=azure-dotnet.
+      Reference: https://docs.microsoft.com/dotnet/api/microsoft.azure.management.compute.models.virtualmachinescalesetosprofile.adminpassword?view=azure-dotnet.
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -1450,6 +1558,13 @@ directCommands:
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
 commands:
+- az_aks_addon
+- az_aks_addon_disable
+- az_aks_addon_enable
+- az_aks_addon_list
+- az_aks_addon_list-available
+- az_aks_addon_show
+- az_aks_addon_update
 - az_aks_app
 - az_aks_app_up
 - az_aks_browse
@@ -1484,6 +1599,8 @@ commands:
 - az_aks_nodepool_list
 - az_aks_nodepool_scale
 - az_aks_nodepool_show
+- az_aks_nodepool_start
+- az_aks_nodepool_stop
 - az_aks_nodepool_update
 - az_aks_nodepool_upgrade
 - az_aks_pod-identity
@@ -1499,6 +1616,11 @@ commands:
 - az_aks_rotate-certs
 - az_aks_scale
 - az_aks_show
+- az_aks_snapshot
+- az_aks_snapshot_create
+- az_aks_snapshot_delete
+- az_aks_snapshot_list
+- az_aks_snapshot_show
 - az_aks_start
 - az_aks_stop
 - az_aks_update
@@ -1523,5 +1645,5 @@ globalParameters:
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
   doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
-  ms.date: 07/01/2021
+  ms.date: 11/09/2021
   description: Manage Azure Kubernetes Services.
