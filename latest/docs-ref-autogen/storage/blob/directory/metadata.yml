@@ -1,14 +1,16 @@
 ### YamlMime:AzureCLIGroup
 uid: az_storage_blob_directory_metadata
+referenceType: Core & Extension
+referenceStatus: Preview
+referenceStatusInformation: "*[Preview] This command group is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus*"
 name: az storage blob directory metadata
-extensionInformation: >-
-  > [!Note]
-
-  > This reference is part of the **storage-preview** extension for the Azure CLI  (version 2.25.0 or higher).  The extension will automatically install the first time you run an **az storage blob directory metadata** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Manage directory metadata.
 description: ''
 directCommands:
 - uid: az_storage_blob_directory_metadata_show
+  referenceType: Core
+  referenceStatus: Preview
+  referenceStatusInformation: "*[Preview] This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus*"
   name: az storage blob directory metadata show
   summary: Show all user-defined metadata for the specified blob directory.
   description: ''
@@ -82,6 +84,9 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
 - uid: az_storage_blob_directory_metadata_update
+  referenceType: Extension
+  referenceStatus: Preview
+  referenceStatusInformation: "*[Preview] This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus*"
   name: az storage blob directory metadata update
   summary: Set user-defined metadata for the specified blob directory as one or more name-value pairs.
   description: ''
