@@ -32,7 +32,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iotdps-data-auth-type=<auth-type-value>`.
     description: ''
@@ -102,7 +102,7 @@ directCommands:
     summary: 'The API version of the provisioning service types sent in the custom allocation request. Minimum supported version: 2018-09-01-preview.'
     description: ''
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iotdps-data-auth-type=<auth-type-value>`.
     description: ''
@@ -116,7 +116,7 @@ directCommands:
     summary: Name of the Azure IoT Hub Device Provisioning Service. Required if --login is not provided.
     description: ''
   - name: --edge-enabled --ee
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Flag indicating edge enablement.
     description: ''
@@ -179,7 +179,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iotdps-data-auth-type=<auth-type-value>`.
     description: ''
@@ -207,7 +207,7 @@ directCommands:
                                      [--top]
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iotdps-data-auth-type=<auth-type-value>`.
     description: ''
@@ -246,7 +246,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iotdps-data-auth-type=<auth-type-value>`.
     description: ''
@@ -315,7 +315,7 @@ directCommands:
     summary: 'The API version of the provisioning service types sent in the custom allocation request. Minimum supported version: 2018-09-01-preview.'
     description: ''
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iotdps-data-auth-type=<auth-type-value>`.
     description: ''
@@ -403,7 +403,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

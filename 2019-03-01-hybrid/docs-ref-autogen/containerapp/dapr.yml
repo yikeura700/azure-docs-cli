@@ -54,7 +54,7 @@ directCommands:
     syntax: az containerapp dapr enable -n MyContainerapp -g MyResourceGroup --dapr-app-id my-app-id --dapr-app-port 8080
   optionalParameters:
   - name: --dal --dapr-enable-api-logging
-    defaultValue: False
+    defaultValue: "False"
     summary: Enable API logging for the Dapr sidecar.
     description: ''
   - name: --dapr-app-id
@@ -100,7 +100,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

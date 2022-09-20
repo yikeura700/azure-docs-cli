@@ -31,7 +31,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --disable-browser
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not open browser after opening a proxy to the cluster web user interface.
     description: ''
   - name: --ssh-key-file
@@ -114,15 +114,15 @@ directCommands:
     summary: The adminstration password for Windows nodes. Only available if --windows=true.
     description: ''
   - name: --admin-username -u
-    defaultValue: azureuser
+    defaultValue: "azureuser"
     summary: User name for the Linux Virtual Machines.
     description: ''
   - name: --agent-count
-    defaultValue: 3
+    defaultValue: "3"
     summary: Set the default number of agents for the agent pools.
     description: Note that DC/OS clusters will have 1 or 2 additional public agents.
   - name: --agent-osdisk-size
-    defaultValue: 0
+    defaultValue: "0"
     summary: 'Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Set the default disk size for agent pools vms. Unit in GB. Default: corresponding vmsize disk size.'
     description: ''
   - name: --agent-ports
@@ -136,7 +136,7 @@ directCommands:
     summary: 'Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Set default storage profile for agent pools. Default: varies based on Orchestrator.'
     description: ''
   - name: --agent-vm-size
-    defaultValue: Standard_D2_v2
+    defaultValue: "Standard_D2_v2"
     summary: Set the default size for agent pools vms.
     description: ''
   - name: --agent-vnet-subnet-id
@@ -152,22 +152,22 @@ directCommands:
     summary: Sets the Domain name prefix for the cluster. The concatenation of the domain name and the regionalized DNS zone make up the fully qualified domain name associated with the public IP address.
     description: ''
   - name: --generate-ssh-keys
-    defaultValue: False
+    defaultValue: "False"
     summary: Generate SSH public and private key files if missing.
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --master-count
-    defaultValue: 1
+    defaultValue: "1"
     summary: The number of masters for the cluster.
     description: ''
   - name: --master-first-consecutive-static-ip
-    defaultValue: 10.240.255.5
+    defaultValue: "10.240.255.5"
     summary: Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The first consecutive ip used to specify static ip block.
     description: ''
   - name: --master-osdisk-size
-    defaultValue: 0
+    defaultValue: "0"
     summary: 'Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The disk size for master pool vms. Unit in GB. Default: corresponding vmsize disk size.'
     description: ''
   - name: --master-profile -m
@@ -178,18 +178,18 @@ directCommands:
     summary: 'Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Default: varies based on Orchestrator.'
     description: ''
   - name: --master-vm-size
-    defaultValue: Standard_D2_v2
+    defaultValue: "Standard_D2_v2"
     summary: Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2.
     description: ''
   - name: --master-vnet-subnet-id
     summary: 'Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The custom vnet subnet id. Note agent need to used the same vnet if master set. Default: "".'
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --orchestrator-type -t
-    defaultValue: DCOS
+    defaultValue: "DCOS"
     parameterValueGroup: Custom, DCOS, DockerCE, Kubernetes, Swarm
     summary: The type of orchestrator used to manage the applications on the cluster.
     description: ''
@@ -200,18 +200,18 @@ directCommands:
     summary: Service principal used for authentication to Azure APIs.
     description: If not specified, a new service principal with the contributor role is created and cached at $HOME/.azure/acsServicePrincipal.json to be used by subsequent `az acs` commands.
   - name: --ssh-key-value
-    defaultValue: ~\.ssh\id_rsa.pub
+    defaultValue: "~\\.ssh\\id_rsa.pub"
     summary: Configure all linux machines with the SSH RSA public key string.  Your key should include three parts, for example 'ssh-rsa AAAAB...snip...UcyupgH azureuser@linuxvm.
     description: ''
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
   - name: --validate
-    defaultValue: False
+    defaultValue: "False"
     summary: Generate and validate the ARM template without creating any resources.
     description: ''
   - name: --windows
-    defaultValue: False
+    defaultValue: "False"
     summary: If true, set the default osType of agent pools to be Windows.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
@@ -237,7 +237,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
@@ -327,30 +327,30 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --created
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
     summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
     description: ''
   - name: --deleted
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until deleted.
     description: ''
   - name: --exists
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until the resource exists.
     description: ''
   - name: --interval
-    defaultValue: 30
+    defaultValue: "30"
     summary: Polling interval in seconds.
     description: ''
   - name: --timeout
-    defaultValue: 3600
+    defaultValue: "3600"
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
@@ -378,7 +378,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

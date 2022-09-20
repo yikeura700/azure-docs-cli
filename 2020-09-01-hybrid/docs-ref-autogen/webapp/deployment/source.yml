@@ -48,7 +48,7 @@ directCommands:
     summary: Name of the web app. If left unspecified, a name will be randomly generated. You can configure the default using `az configure --defaults web=<name>`.
     description: ''
   - name: --repository-type
-    defaultValue: git
+    defaultValue: "git"
     parameterValueGroup: externalgit, git, github, localgit, mercurial
     summary: Repository type.
     description: ''
@@ -249,7 +249,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

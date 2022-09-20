@@ -72,7 +72,7 @@ directCommands:
     summary: Time between reconciliations of the kustomization on the cluster.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --path
@@ -136,11 +136,11 @@ directCommands:
     summary: Cluster Resource Provider name for this clusterType (Required for provisionedClusters).
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_k8s-configuration_flux_kustomization_list
@@ -290,7 +290,7 @@ directCommands:
     summary: Time between reconciliations of the kustomization on the cluster.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --path
@@ -320,7 +320,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

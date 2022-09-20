@@ -72,15 +72,15 @@ directCommands:
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --number-of-workers
-    defaultValue: 1
+    defaultValue: "1"
     summary: Number of workers to be allocated.
     description: ''
   - name: --per-site-scaling
-    defaultValue: False
+    defaultValue: "False"
     summary: Enable per-app scaling at the App Service plan level to allow for scaling an app independently from the App Service plan that hosts it.
     description: ''
   - name: --sku
@@ -155,11 +155,11 @@ directCommands:
     summary: The name of the app service plan.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --number-of-workers
-    defaultValue: 1
+    defaultValue: "1"
     summary: Number of workers to be allocated.
     description: ''
   - name: --resource-group -g
@@ -185,7 +185,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

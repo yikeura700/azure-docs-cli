@@ -35,7 +35,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --import-type --it
-    defaultValue: All
+    defaultValue: "All"
     parameterValueGroup: All, Devices, Modules
     summary: The types of devices to import from IoT Hub.
     description: ''
@@ -140,7 +140,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

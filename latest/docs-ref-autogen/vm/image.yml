@@ -51,7 +51,7 @@ directCommands:
     syntax: az vm image list -f CentOS --all
   optionalParameters:
   - name: --all
-    defaultValue: False
+    defaultValue: "False"
     summary: Retrieve image list from live Azure service rather using an offline image list.
     description: ''
   - name: --architecture
@@ -215,7 +215,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

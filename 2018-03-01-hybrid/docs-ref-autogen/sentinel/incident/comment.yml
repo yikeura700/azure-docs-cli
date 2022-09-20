@@ -22,31 +22,31 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --incident-comment-id --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Incident comment ID.
     description: ''
   - isRequired: true
     name: --incident-id
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Incident ID.
     description: ''
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
   optionalParameters:
   - name: --etag
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Etag of the azure resource.
     description: ''
   - name: --message
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The comment message.
     description: ''
 - uid: az_sentinel_incident_comment_delete
@@ -66,26 +66,26 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --incident-comment-id --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Incident comment ID.
     description: ''
   - name: --incident-id
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Incident ID.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_sentinel_incident_comment_list
@@ -103,34 +103,34 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --incident-id
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Incident ID.
     description: ''
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
   optionalParameters:
   - name: --filter
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Filters the results, based on a Boolean condition. Optional.
     description: ''
   - name: --orderby
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Sorts the results. Optional.
     description: ''
   - name: --skip-token
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Skiptoken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls. Optional.
     description: ''
   - name: --top
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Returns only the first n results. Optional.
     description: ''
 - uid: az_sentinel_incident_comment_show
@@ -149,22 +149,22 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --incident-comment-id --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Incident comment ID.
     description: ''
   - name: --incident-id
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Incident ID.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
 - uid: az_sentinel_incident_comment_update
@@ -186,15 +186,15 @@ directCommands:
                                         [--workspace-name]
   optionalParameters:
   - name: --add
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --etag
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Etag of the azure resource.
     description: ''
   - name: --force-string
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
@@ -202,34 +202,34 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --incident-comment-id --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Incident comment ID.
     description: ''
   - name: --incident-id
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Incident ID.
     description: ''
   - name: --message
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The comment message.
     description: ''
   - name: --remove
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
 commands:
@@ -246,7 +246,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

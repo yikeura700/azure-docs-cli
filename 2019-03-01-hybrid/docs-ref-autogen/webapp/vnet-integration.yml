@@ -41,7 +41,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --skip-delegation-check
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Skip check if you do not have permission or the VNet is in another subscription.
     description: ''
@@ -108,7 +108,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

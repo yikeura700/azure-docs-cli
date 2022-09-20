@@ -179,7 +179,7 @@ directCommands:
     summary: The file share where the source data is copied to.
     description: ''
   - name: --dryrun
-    defaultValue: False
+    defaultValue: "False"
     summary: List the files and blobs to be copied. No actual data transfer will occur.
     description: ''
   - name: --metadata
@@ -225,7 +225,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

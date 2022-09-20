@@ -38,7 +38,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     summary: Delete Appliance environment with the same name/id (if it exists) before continuing to the run command.
     description: ''
   - name: --out-dir
@@ -80,7 +80,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     summary: Delete Appliance environment with the same name/id (if it exists) before continuing to the run command.
     description: ''
   - name: --out-dir
@@ -122,7 +122,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     summary: Delete Appliance environment with the same name/id (if it exists) before continuing to the run command.
     description: ''
   - name: --out-dir
@@ -164,7 +164,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     summary: Delete Appliance environment with the same name/id (if it exists) before continuing to the run command.
     description: ''
   - name: --out-dir
@@ -189,7 +189,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

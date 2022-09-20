@@ -140,7 +140,7 @@ directCommands:
     summary: The command line to run when the container is started, e.g. '/bin/bash -c myscript.sh'.
     description: ''
   - name: --cpu
-    defaultValue: 1
+    defaultValue: "1"
     summary: The required number of CPU cores of the containers, accurate to one decimal place.
     description: ''
   - name: --dns-name-label
@@ -153,7 +153,7 @@ directCommands:
     summary: The path to the input file.
     description: ''
   - name: --gitrepo-dir
-    defaultValue: .
+    defaultValue: "."
     summary: The target directory path in the git repository. Must not contain '..'.
     description: ''
   - name: --gitrepo-mount-path
@@ -182,23 +182,23 @@ directCommands:
     summary: The Log Analytics workspace key.
     description: ''
   - name: --memory
-    defaultValue: 1.5
+    defaultValue: "1.5"
     summary: The required memory of the containers in GB, accurate to one decimal place.
     description: ''
   - name: --name -n
     summary: The name of the container group.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --os-type
-    defaultValue: Linux
+    defaultValue: "Linux"
     parameterValueGroup: Linux, Windows
     summary: The OS type of the containers.
     description: ''
   - name: --ports
-    defaultValue: '[80]'
+    defaultValue: "[80]"
     summary: A list of ports to open. Space-separated list of ports.
     description: ''
   - name: --protocol
@@ -215,12 +215,12 @@ directCommands:
     summary: The username to log in container image registry server.
     description: ''
   - name: --restart-policy
-    defaultValue: Always
+    defaultValue: "Always"
     parameterValueGroup: Always, Never, OnFailure
     summary: Restart policy for all containers within the container group.
     description: ''
   - name: --role
-    defaultValue: Contributor
+    defaultValue: "Contributor"
     summary: Role name or id the system assigned identity will have.
     description: ''
   - name: --scope
@@ -239,14 +239,14 @@ directCommands:
     summary: The name of the subnet when creating a new VNET or referencing an existing one. Can also reference an existing subnet by ID.
     description: ''
   - name: --subnet-address-prefix
-    defaultValue: 10.0.0.0/24
+    defaultValue: "10.0.0.0/24"
     summary: The subnet IP address prefix to use when creating a new VNET in CIDR format.
     description: ''
   - name: --vnet
     summary: The name of the VNET when creating a new one or referencing an existing one. Can also reference an existing vnet by ID. This allows using vnets from other resource groups.
     description: ''
   - name: --vnet-address-prefix
-    defaultValue: 10.0.0.0/16
+    defaultValue: "10.0.0.0/16"
     summary: The IP address prefix to use when creating a new VNET in CIDR format.
     description: ''
   - name: --vnet-name
@@ -283,7 +283,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
@@ -384,7 +384,7 @@ directCommands:
     summary: The container name to tail the logs. If omitted, the first container in the container group will be chosen.
     description: ''
   - name: --follow
-    defaultValue: False
+    defaultValue: "False"
     summary: Indicate to stream the tailing logs.
     description: ''
   - name: --ids
@@ -419,7 +419,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
@@ -468,7 +468,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
@@ -511,7 +511,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

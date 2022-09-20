@@ -67,7 +67,7 @@ directCommands:
     summary: Specify the min replica set size for the stateful service.
     description: ''
   - name: --partition-scheme
-    defaultValue: singleton
+    defaultValue: "singleton"
     parameterValueGroup: named, singleton, uniformInt64
     summary: Specify what partition scheme to use. Singleton partitions are typically used when the service does not require any additional routing. UniformInt64 means that each partition owns a range of int64 keys. Named is usually for services with data that can be bucketed, within a bounded set. Some common examples of data fields used as named partition keys would be regions, postal codes, customer groups, or other business boundaries.
     description: ''
@@ -169,7 +169,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

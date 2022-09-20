@@ -22,35 +22,35 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Route name.
     description: ''
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --route-table-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Route table name.
     description: ''
   optionalParameters:
   - name: --address-prefix
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The destination CIDR to which the route applies.
     description: ''
   - name: --next-hop-ip-address
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The IP address packets should be forwarded to when using the VirtualAppliance hop type.
     description: ''
   - name: --next-hop-type
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: Internet, None, VirtualAppliance, VirtualNetworkGateway, VnetLocal
     summary: The type of Azure hop the packet should be sent to.
     description: ''
   - name: --no-wait
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -74,20 +74,20 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Route name.
     description: ''
   - name: --no-wait
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --route-table-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Route table name.
     description: ''
   - name: --subscription
@@ -107,12 +107,12 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --route-table-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Route table name.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
@@ -134,15 +134,15 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Route name.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --route-table-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Route table name.
     description: ''
   - name: --subscription
@@ -174,15 +174,15 @@ directCommands:
     syntax: az network route-table route update --address-prefix 10.0.0.0/16 --name MyRoute --next-hop-ip-address 10.0.100.5 --next-hop-type VirtualNetworkGateway --resource-group MyResourceGroup --route-table-name MyRouteTable
   optionalParameters:
   - name: --add
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --address-prefix
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The destination CIDR to which the route applies.
     description: ''
   - name: --force-string
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
@@ -190,37 +190,37 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Route name.
     description: ''
   - name: --next-hop-ip-address
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The IP address packets should be forwarded to when using the VirtualAppliance hop type.
     description: ''
   - name: --next-hop-type
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: Internet, None, VirtualAppliance, VirtualNetworkGateway, VnetLocal
     summary: The type of Azure hop the packet should be sent to.
     description: ''
   - name: --no-wait
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --remove
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --route-table-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Route table name.
     description: ''
   - name: --set
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --subscription
@@ -246,48 +246,48 @@ directCommands:
                                       [--updated]
   optionalParameters:
   - name: --created
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
     summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
     description: ''
   - name: --deleted
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until deleted.
     description: ''
   - name: --exists
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until the resource exists.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --interval
-    defaultValue: 30
+    defaultValue: "30"
     summary: Polling interval in seconds.
     description: ''
   - name: --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Route name.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --route-table-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Route table name.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --timeout
-    defaultValue: 3600
+    defaultValue: "3600"
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
@@ -306,7 +306,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -56,7 +56,7 @@ directCommands:
     summary: Default the container to use specified encryption scope for all writes.
     description: ''
   - name: --fail-on-exist
-    defaultValue: False
+    defaultValue: "False"
     summary: Throw an exception if the container already exists.
     description: ''
   - name: --metadata
@@ -121,14 +121,14 @@ directCommands:
     summary: 'Storage data service endpoint. Must be used in conjunction with either storage account key or a SAS token. You can find each service primary endpoint with `az storage account show`. Environment variable: AZURE_STORAGE_SERVICE_ENDPOINT.'
     description: ''
   - name: --bypass-immutability-policy
-    defaultValue: False
+    defaultValue: "False"
     summary: Bypasses upcoming service behavior that will block a container from being deleted if it has a immutability-policy. Specifying this will ignore arguments aside from those used to identify the container ("--name", "--account-name").
     description: ''
   - name: --connection-string
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --fail-not-exist
-    defaultValue: False
+    defaultValue: "False"
     summary: Throw an exception if the container does not exist.
     description: ''
   - name: --if-modified-since
@@ -241,7 +241,7 @@ directCommands:
     summary: 'Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.'
     description: ''
   - name: --as-user
-    defaultValue: False
+    defaultValue: "False"
     summary: Indicates that this command return the SAS signed with the user delegation key. The expiry parameter and '--auth-mode login' are required if this argument is specified.
     description: ''
   - name: --auth-mode
@@ -332,12 +332,12 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --include-deleted
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Specify that deleted containers to be returned in the response. This is for container restore enabled account. The default value is `False`.
     description: ''
   - name: --include-metadata
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Specify that container metadata to be returned in the response.
     description: ''
@@ -345,7 +345,7 @@ directCommands:
     summary: A string value that identifies the portion of the list of containers to be returned with the next listing operation. The operation returns the NextMarker value within the response body if the listing operation did not return all containers remaining to be listed with the current page. If specified, this generator will begin returning results from the point where the previous generator stopped.
     description: ''
   - name: --num-results
-    defaultValue: 5000
+    defaultValue: "5000"
     summary: Specify the maximum number to return. If the request does not specify num_results, or specifies a value greater than 5000, the server will return up to 5000 items. Note that if the listing operation crosses a partition boundary, then the service will return a continuation token for retrieving the remaining of the results. Provide "*" to return all.
     description: ''
   - name: --prefix
@@ -608,7 +608,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

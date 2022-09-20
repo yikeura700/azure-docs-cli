@@ -79,16 +79,16 @@ directCommands:
     summary: Path to monitor. Use ""('""' in PowerShell) for none.
     description: ''
   - name: --port
-    defaultValue: 80
+    defaultValue: "80"
     summary: Port to monitor.
     description: ''
   - name: --protocol
-    defaultValue: HTTP
+    defaultValue: "HTTP"
     parameterValueGroup: HTTP, HTTPS, TCP
     summary: Monitor protocol.
     description: ''
   - name: --status
-    defaultValue: Enabled
+    defaultValue: "Enabled"
     parameterValueGroup: Disabled, Enabled
     summary: Status of the Traffic Manager profile.
     description: ''
@@ -102,7 +102,7 @@ directCommands:
     summary: The time in seconds allowed for endpoints to respond to a health check.
     description: ''
   - name: --ttl
-    defaultValue: 30
+    defaultValue: "30"
     summary: DNS config time-to-live in seconds.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
@@ -206,14 +206,14 @@ directCommands:
     syntax: az network traffic-manager profile update --name MyTmProfile --resource-group MyResourceGroup --status Enabled
   optionalParameters:
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --custom-headers
     summary: Space-separated list of NAME=VALUE pairs.
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
@@ -242,7 +242,7 @@ directCommands:
     summary: Monitor protocol.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
@@ -253,7 +253,7 @@ directCommands:
     summary: Routing method.
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --status
@@ -291,7 +291,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

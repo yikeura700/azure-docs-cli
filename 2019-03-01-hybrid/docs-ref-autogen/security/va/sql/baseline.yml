@@ -147,7 +147,7 @@ directCommands:
     summary: 'Baseline records to be set. The following example will set a baseline for two rules: --baseline rule=VA1111 line1_w1 line1_w2 --baseline rule=VA2222 line1_w1 line1_w2 line1_w3 --baseline rule=VA1111 line2_w1 line2_w2.'
     description: ''
   - name: --latest
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Use this argument without parameters to set baseline upon latest scan results.
     description: ''
@@ -261,7 +261,7 @@ directCommands:
     summary: 'Baseline records to be set. The following example will set a baseline with two records: --baseline line1_w1 line1_w2 line1_w3 --baseline line2_w1 line2_w2 line2_w3.'
     description: ''
   - name: --latest
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Use this argument without parameters to set baseline upon latest scan results.
     description: ''
@@ -286,7 +286,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

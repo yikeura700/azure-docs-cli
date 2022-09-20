@@ -38,14 +38,14 @@ directCommands:
     summary: 'End time of the query. Defaults to the current time. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).'
     description: ''
   - name: --max-events
-    defaultValue: 50
+    defaultValue: "50"
     summary: Maximum number of records to return.
     description: ''
   - name: --namespace
     summary: Resource provider namespace.
     description: ''
   - name: --offset
-    defaultValue: 6h
+    defaultValue: "6h"
     summary: 'Time offset of the query range, in ##d##h format.'
     description: Can be used with either --start-time or --end-time. If used with --start-time, then the end time will be calculated by adding the offset. If used with --end-time (default), then the start time will be calculated by subtracting the offset. If --start-time and --end-time are provided, then --offset will be ignored.
   - name: --resource-group -g
@@ -94,7 +94,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -145,7 +145,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   - name: --user-principle-names
-    defaultValue: False
+    defaultValue: "False"
     summary: Valid only when Hierarchical Namespace is enabled for the account. If "true", the user identity values returned for owner, group, and acl will be transformed from Azure Active Directory Object IDs to User Principal Names. If "false", the values will be returned as Azure Active Directory Object IDs. The default value is false. Note that group and application Object IDs are not translated because they do not have unique friendly names.
     description: ''
 - uid: az_storage_blob_access_update
@@ -245,7 +245,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

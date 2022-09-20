@@ -33,15 +33,15 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --count -c
-    defaultValue: 1
+    defaultValue: "1"
     summary: Instance Count.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --size
-    defaultValue: Cosmos.D4s
+    defaultValue: "Cosmos.D4s"
     summary: 'Instance Size. Possible values are: Cosmos.D4s, Cosmos.D8s, Cosmos.D16s etc.'
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
@@ -73,11 +73,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
@@ -159,7 +159,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --size
@@ -180,7 +180,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

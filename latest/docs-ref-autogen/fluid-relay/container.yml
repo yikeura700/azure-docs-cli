@@ -24,25 +24,25 @@ directCommands:
     syntax: az fluid-relay container delete -g MyResourceGroup --server-name MyServerName -n MyContainerName
   optionalParameters:
   - name: --container-name --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The Fluid Relay container resource name.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --server-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The Fluid Relay server resource name.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_fluid-relay_container_list
@@ -58,12 +58,12 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The resource group containing the resource.
     description: ''
   - isRequired: true
     name: --server-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The Fluid Relay server resource name.
     description: ''
 - uid: az_fluid-relay_container_show
@@ -81,18 +81,18 @@ directCommands:
     syntax: az fluid-relay container show -g MyResourceGroup --server-name MyServerName -n MyContainerName
   optionalParameters:
   - name: --container-name --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The Fluid Relay container resource name.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --server-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The Fluid Relay server resource name.
     description: ''
   - name: --subscription
@@ -110,7 +110,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

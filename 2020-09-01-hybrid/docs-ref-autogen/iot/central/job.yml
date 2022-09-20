@@ -53,7 +53,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --api-version --av
-    defaultValue: 1.1-preview
+    defaultValue: "1.1-preview"
     parameterValueGroup: 1.1-preview, preview
     summary: The API version for the requested operation.
     description: ''
@@ -61,23 +61,23 @@ directCommands:
     summary: The number or percentage of devices on which batching is done.
     description: ''
   - name: --batch-type --bt
-    defaultValue: False
+    defaultValue: "False"
     summary: Specify if batching is done on a number of devices or a percentage of the total.
     description: ''
   - name: --cancellation-threshold --cth
     summary: The number or percentage of devices on which the cancellation threshold is applied.
     description: ''
   - name: --cancellation-threshold-batch --ctb
-    defaultValue: number
+    defaultValue: "number"
     summary: Whether the cancellation threshold applies per-batch or to the overall job.
     description: ''
   - name: --cancellation-threshold-type --ctt
-    defaultValue: number
+    defaultValue: "number"
     parameterValueGroup: number, percentage
     summary: Specify if cancellation threshold applies for a number of devices or a percentage of the total.
     description: ''
   - name: --central-api-uri --central-dns-suffix
-    defaultValue: azureiotcentral.com
+    defaultValue: "azureiotcentral.com"
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --desc --description
@@ -113,12 +113,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --api-version --av
-    defaultValue: 1.1-preview
+    defaultValue: "1.1-preview"
     parameterValueGroup: 1.1-preview, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
-    defaultValue: azureiotcentral.com
+    defaultValue: "azureiotcentral.com"
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --token
@@ -143,12 +143,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --api-version --av
-    defaultValue: 1.1-preview
+    defaultValue: "1.1-preview"
     parameterValueGroup: 1.1-preview, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
-    defaultValue: azureiotcentral.com
+    defaultValue: "azureiotcentral.com"
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --token
@@ -183,12 +183,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --api-version --av
-    defaultValue: 1.1-preview
+    defaultValue: "1.1-preview"
     parameterValueGroup: 1.1-preview, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
-    defaultValue: azureiotcentral.com
+    defaultValue: "azureiotcentral.com"
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --token
@@ -218,12 +218,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --api-version --av
-    defaultValue: 1.1-preview
+    defaultValue: "1.1-preview"
     parameterValueGroup: 1.1-preview, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
-    defaultValue: azureiotcentral.com
+    defaultValue: "azureiotcentral.com"
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --token
@@ -253,12 +253,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --api-version --av
-    defaultValue: 1.1-preview
+    defaultValue: "1.1-preview"
     parameterValueGroup: 1.1-preview, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
-    defaultValue: azureiotcentral.com
+    defaultValue: "azureiotcentral.com"
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --token
@@ -288,12 +288,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --api-version --av
-    defaultValue: 1.1-preview
+    defaultValue: "1.1-preview"
     parameterValueGroup: 1.1-preview, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
-    defaultValue: azureiotcentral.com
+    defaultValue: "azureiotcentral.com"
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --token
@@ -315,7 +315,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

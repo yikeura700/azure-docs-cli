@@ -49,7 +49,7 @@ directCommands:
     summary: The username used to log into a container registry.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
@@ -193,7 +193,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --detail
-    defaultValue: False
+    defaultValue: "False"
     summary: Show detailed information.
     description: ''
   - name: --orderby
@@ -248,7 +248,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --detail
-    defaultValue: False
+    defaultValue: "False"
     summary: Show detailed information.
     description: ''
   - name: --orderby
@@ -389,7 +389,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

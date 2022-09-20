@@ -41,7 +41,7 @@ directCommands:
     summary: 'The Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT.'
     description: ''
   - name: --overwrite
-    defaultValue: False
+    defaultValue: "False"
     summary: If set, an existing file in the local path will be overwritten.
     description: ''
   - name: --remote-path
@@ -102,7 +102,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -26,7 +26,7 @@ directCommands:
     syntax: az vm encryption disable --name MyVirtualMachine --resource-group MyResourceGroup --volume-type DATA
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     summary: Continue by ignoring client side validation errors.
     description: ''
   - name: --ids
@@ -91,18 +91,18 @@ directCommands:
     summary: Client secret of the AAD app with permissions to write secrets to the key vault.
     description: ''
   - name: --encrypt-format-all
-    defaultValue: False
+    defaultValue: "False"
     summary: Encrypts-formats data disks instead of encrypting them. Encrypt-formatting is a lot faster than in-place encryption but wipes out the partition getting encrypt-formatted. (Only supported for Linux virtual machines.).
     description: ''
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     summary: Continue by ignoring client side validation errors.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --key-encryption-algorithm
-    defaultValue: RSA-OAEP
+    defaultValue: "RSA-OAEP"
     summary: ''
     description: ''
   - name: --key-encryption-key
@@ -163,7 +163,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

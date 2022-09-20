@@ -230,7 +230,7 @@ directCommands:
     summary: The destination path that will be prepended to the blob name.
     description: ''
   - name: --dryrun
-    defaultValue: False
+    defaultValue: "False"
     summary: List the files or blobs to be uploaded. No actual data transfer will occur.
     description: ''
   - name: --pattern
@@ -270,7 +270,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

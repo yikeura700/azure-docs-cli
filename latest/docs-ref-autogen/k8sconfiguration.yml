@@ -84,7 +84,7 @@ directCommands:
     summary: Chart values for the Helm Operator (if enabled).
     description: ''
   - name: --helm-operator-version
-    defaultValue: 1.2.0
+    defaultValue: "1.2.0"
     summary: Chart version of the Helm Operator (if enabled).
     description: ''
   - name: --https-key
@@ -97,14 +97,14 @@ directCommands:
     summary: Instance name of the Operator.
     description: ''
   - name: --operator-namespace
-    defaultValue: default
+    defaultValue: "default"
     summary: Namespace in which to install the Operator.
     description: ''
   - name: --operator-params
     summary: Parameters for the Operator.
     description: ''
   - name: --operator-type
-    defaultValue: flux
+    defaultValue: "flux"
     summary: Type of the operator. Valid value is 'flux'.
     description: ''
   - name: --ssh-known-hosts
@@ -155,7 +155,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_k8sconfiguration_list
@@ -300,7 +300,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

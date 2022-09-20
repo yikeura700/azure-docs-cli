@@ -30,7 +30,7 @@ directCommands:
     summary: Space separated 'name=value' pairs for common arguments defaults, e.g. '--defaults project=my-project-name organization=https://dev.azure.com/organizationName arg=value'. Use '' to clear the defaults, e.g. --defaults project=''.
     description: ''
   - name: --list -l
-    defaultValue: False
+    defaultValue: "False"
     summary: Lists the contents of the config file.
     description: ''
   - name: --use-git-aliases
@@ -83,11 +83,11 @@ directCommands:
       --encoding 'utf-8' --query-parameters path=sample738 --http-method PUT --api-version 5.1-preview -o json
   optionalParameters:
   - name: --accept-media-type
-    defaultValue: application/json
+    defaultValue: "application/json"
     summary: Specifies the content type of the response.
     description: ''
   - name: --api-version
-    defaultValue: 5.0
+    defaultValue: "5.0"
     summary: The version of the API to target.
     description: ''
   - name: --area
@@ -98,12 +98,12 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --encoding
-    defaultValue: utf-8
+    defaultValue: "utf-8"
     parameterValueGroup: ascii, utf-16be, utf-16le, utf-8
     summary: Encoding of the input file. Used in conjunction with --in-file.
     description: ''
   - name: --http-method
-    defaultValue: GET
+    defaultValue: "GET"
     parameterValueGroup: DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT
     summary: Specifies the method used for the request.
     description: ''
@@ -111,7 +111,7 @@ directCommands:
     summary: Path and file name to the file that contains the contents of the request.
     description: ''
   - name: --media-type
-    defaultValue: application/json
+    defaultValue: "application/json"
     summary: Specifies the content type of the request.
     description: ''
   - name: --org --organization
@@ -234,7 +234,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

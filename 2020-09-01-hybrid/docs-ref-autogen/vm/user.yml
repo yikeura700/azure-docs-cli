@@ -33,7 +33,7 @@ directCommands:
     summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -66,7 +66,7 @@ directCommands:
     summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -109,7 +109,7 @@ directCommands:
     summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --password -p
@@ -137,7 +137,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

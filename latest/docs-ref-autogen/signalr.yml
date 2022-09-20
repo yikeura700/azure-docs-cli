@@ -42,12 +42,12 @@ directCommands:
     summary: 'Space separated origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). To allow all, use "*".'
     description: ''
   - name: --default-action
-    defaultValue: Allow
+    defaultValue: "Allow"
     parameterValueGroup: Allow, Deny
     summary: Default action to apply when no rule matches.
     description: ''
   - name: --enable-message-logs
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: The switch for messaging logs which signalr service will generate or not.
     description: ''
@@ -55,7 +55,7 @@ directCommands:
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --service-mode
-    defaultValue: Default
+    defaultValue: "Default"
     parameterValueGroup: Classic, Default, Serverless
     summary: The service mode which signalr service will be working on.
     description: ''
@@ -63,7 +63,7 @@ directCommands:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
   - name: --unit-count
-    defaultValue: 1
+    defaultValue: "1"
     summary: The number of signalr service unit count.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
@@ -189,7 +189,7 @@ directCommands:
     syntax: az signalr update -n MySignalR -g MyResourceGroup --enable-message-logs True
   optionalParameters:
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --allowed-origins -a
@@ -204,7 +204,7 @@ directCommands:
     summary: The switch for messaging logs which signalr service will generate or not.
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
@@ -214,7 +214,7 @@ directCommands:
     summary: Name of signalr service.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
@@ -225,7 +225,7 @@ directCommands:
     summary: The service mode which signalr service will be working on.
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --sku
@@ -238,7 +238,7 @@ directCommands:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
   - name: --unit-count
-    defaultValue: 1
+    defaultValue: "1"
     summary: The number of signalr service unit count.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
@@ -288,7 +288,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

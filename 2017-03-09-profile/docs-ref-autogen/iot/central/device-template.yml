@@ -39,12 +39,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --api-version --av
-    defaultValue: 2022-05-31
+    defaultValue: "2022-05-31"
     parameterValueGroup: 1.0, 1.1-preview, 2022-05-31, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
-    defaultValue: azureiotcentral.com
+    defaultValue: "azureiotcentral.com"
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --token
@@ -74,12 +74,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --api-version --av
-    defaultValue: 2022-05-31
+    defaultValue: "2022-05-31"
     parameterValueGroup: 1.0, 1.1-preview, 2022-05-31, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
-    defaultValue: azureiotcentral.com
+    defaultValue: "azureiotcentral.com"
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --token
@@ -105,16 +105,16 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --api-version --av
-    defaultValue: 2022-05-31
+    defaultValue: "2022-05-31"
     parameterValueGroup: 1.0, 1.1-preview, 2022-05-31, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
-    defaultValue: azureiotcentral.com
+    defaultValue: "azureiotcentral.com"
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --compact -c
-    defaultValue: False
+    defaultValue: "False"
     summary: Show templates in compact mode. For each template will only display id, name and model types.
     description: ''
   - name: --token
@@ -144,12 +144,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --api-version --av
-    defaultValue: 2022-05-31
+    defaultValue: "2022-05-31"
     parameterValueGroup: 1.0, 1.1-preview, 2022-05-31, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
-    defaultValue: azureiotcentral.com
+    defaultValue: "azureiotcentral.com"
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --token
@@ -186,12 +186,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --api-version --av
-    defaultValue: 2022-05-31
+    defaultValue: "2022-05-31"
     parameterValueGroup: 1.0, 1.1-preview, 2022-05-31, preview
     summary: The API version for the requested operation.
     description: ''
   - name: --central-api-uri --central-dns-suffix
-    defaultValue: azureiotcentral.com
+    defaultValue: "azureiotcentral.com"
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --token
@@ -211,7 +211,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

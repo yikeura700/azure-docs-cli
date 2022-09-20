@@ -34,16 +34,16 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --controller
-    defaultValue: 1000
+    defaultValue: "1000"
     summary: Id of the controller. Input 1000 for SCSI controller 0, and 15000 for SATA controller 0.
     description: ''
   - name: --mode
-    defaultValue: persistent
+    defaultValue: "persistent"
     parameterValueGroup: independent_nonpersistent, independent_persistent, persistent
     summary: The disk independence mode.
     description: ''
   - name: --size
-    defaultValue: 16777216
+    defaultValue: "16777216"
     summary: The amount of disk size in KB.
     description: ''
 - uid: az_csvmware_vm_disk_delete
@@ -126,7 +126,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

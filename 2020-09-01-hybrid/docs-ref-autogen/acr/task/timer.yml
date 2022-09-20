@@ -37,7 +37,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --enabled
-    defaultValue: 1
+    defaultValue: "1"
     parameterValueGroup: false, true
     summary: Indicates whether the timer trigger is enabled.
     description: ''
@@ -154,7 +154,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

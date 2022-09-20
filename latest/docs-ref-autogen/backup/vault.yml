@@ -33,12 +33,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --classic-alerts
-    defaultValue: Enable
+    defaultValue: "Enable"
     parameterValueGroup: Disable, Enable
     summary: Use this property to specify whether backup alerts from the classic solution should be received.
     description: ''
   - name: --job-failure-alerts
-    defaultValue: Enable
+    defaultValue: "Enable"
     parameterValueGroup: Disable, Enable
     summary: Use this property to specify whether built-in Azure Monitor alerts should be received for every job failure.
     description: ''
@@ -62,7 +62,7 @@ directCommands:
     syntax: az backup vault delete --name MyRecoveryServicesVault --resource-group MyResourceGroup --yes
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     summary: Force completion of the requested action.
     description: ''
   - name: --ids
@@ -78,7 +78,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
@@ -145,7 +145,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

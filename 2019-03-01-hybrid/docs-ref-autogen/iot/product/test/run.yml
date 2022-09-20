@@ -33,14 +33,14 @@ directCommands:
     summary: Override certification service URL to allow testing in non-production environements.
     description: ''
   - name: --interval --poll-interval
-    defaultValue: 3
+    defaultValue: "3"
     summary: Used in conjunction with --wait. Specifies how frequently (in seconds) polling occurs.
     description: ''
   - name: --run-id -r
     summary: The generated Id of a test run.
     description: ''
   - name: --wait -w
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Wait until test run status is "started" or "running".
     description: ''
@@ -79,7 +79,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

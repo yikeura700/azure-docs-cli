@@ -128,7 +128,7 @@ directCommands:
     summary: Name of the workspace containing the compute target to show.
     description: ''
   - name: -v
-    defaultValue: False
+    defaultValue: "False"
     summary: Verbosity flag.
     description: ''
 - uid: az_ml(v1)_computetarget_show
@@ -161,7 +161,7 @@ directCommands:
     summary: Name of the workspace containing the compute target to show.
     description: ''
   - name: -v
-    defaultValue: False
+    defaultValue: "False"
     summary: Verbosity flag.
     description: ''
 commands:
@@ -199,7 +199,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

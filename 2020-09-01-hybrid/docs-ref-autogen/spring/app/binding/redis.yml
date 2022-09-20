@@ -42,7 +42,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --disable-ssl
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: If true, disable SSL. If false, enable SSL.
     description: ''
@@ -75,7 +75,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --disable-ssl
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: If true, disable SSL. If false, enable SSL.
     description: ''
@@ -90,7 +90,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -52,7 +52,7 @@ directCommands:
     summary: Resource ID of the user assigned identity for the batch services account.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --public-network-access
@@ -86,11 +86,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
@@ -124,11 +124,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --shared-key-auth
-    defaultValue: False
+    defaultValue: "False"
     summary: Using Shared Key authentication, if not specified, it will use Azure Active Directory authentication.
     description: ''
   - name: --show
-    defaultValue: False
+    defaultValue: "False"
     summary: Display the credential information for the Batch account.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
@@ -241,7 +241,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

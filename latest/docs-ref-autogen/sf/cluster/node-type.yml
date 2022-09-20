@@ -48,16 +48,16 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --durability-level
-    defaultValue: Bronze
+    defaultValue: "Bronze"
     parameterValueGroup: Bronze, Gold, Silver
     summary: Durability level.
     description: ''
   - name: --vm-sku
-    defaultValue: Standard_D2_V2
+    defaultValue: "Standard_D2_V2"
     summary: VM Sku.
     description: ''
   - name: --vm-tier
-    defaultValue: Standard
+    defaultValue: "Standard"
     summary: VM tier.
     description: ''
 commands:
@@ -70,7 +70,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

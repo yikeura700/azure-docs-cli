@@ -48,7 +48,7 @@ directCommands:
     summary: Name of the function app.
     description: ''
   - name: --repository-type
-    defaultValue: git
+    defaultValue: "git"
     parameterValueGroup: externalgit, git, github, localgit, mercurial
     summary: Repository type.
     description: ''
@@ -123,7 +123,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --build-remote
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Enable remote build during deployment.
     description: ''
@@ -262,7 +262,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

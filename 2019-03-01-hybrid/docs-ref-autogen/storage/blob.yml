@@ -137,7 +137,7 @@ directCommands:
     summary: Required if the blob has associated snapshots.
     description: ''
   - name: --dryrun
-    defaultValue: False
+    defaultValue: "False"
     summary: Show the summary of the operations to be taken instead of actually deleting the file(s).
     description: If this is specified, it will ignore all the Precondition Arguments that include --if-modified-since and --if-unmodified-since. So the file(s) will be deleted with the command without --dryrun may be different from the result list with --dryrun flag on.
   - name: --if-match
@@ -243,15 +243,15 @@ directCommands:
     summary: Required if the blob has an active lease.
     description: ''
   - name: --max-connections
-    defaultValue: 2
+    defaultValue: "2"
     summary: If set to 2 or greater, an initial get will be done for the first self.MAX_SINGLE_GET_SIZE bytes of the blob. If this is the entire blob, the method returns at this point. If it is not, it will download the remaining data parallel using the number of threads equal to max_connections. Each chunk will be of size self.MAX_CHUNK_GET_SIZE. If set to 1, a single large get request will be done. This is not generally recommended but available if very few threads should be used, network requests are very expensive, or a non-seekable stream prevents parallel download. This may also be useful if many blobs are expected to be empty as an extra request is required for empty blobs if max_connections is greater than 1.
     description: ''
   - name: --no-progress
-    defaultValue: False
+    defaultValue: "False"
     summary: Include this flag to disable progress reporting for the command.
     description: ''
   - name: --open-mode
-    defaultValue: wb
+    defaultValue: "wb"
     summary: Mode to use when opening the file. Note that specifying append only open_mode prevents parallel download. So, max_connections must be set to 1 if this open_mode is used.
     description: ''
   - name: --sas-token
@@ -270,7 +270,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   - name: --validate-content
-    defaultValue: False
+    defaultValue: "False"
     summary: If set to true, validates an MD5 hash for each retrieved portion of the blob. This is primarily valuable for detecting bitflips on the wire if using http instead of https as https (the default) will already validate. Note that the service will only return transactional MD5s for chunks 4MB or less so the first get request will be of size self.MAX_CHUNK_GET_SIZE instead of self.MAX_SINGLE_GET_SIZE. If self.MAX_CHUNK_GET_SIZE was set to greater than 4MB an error will be thrown. As computing the MD5 takes processing time and more requests will need to be done due to the reduced chunk size there may be some increase in latency.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
@@ -324,15 +324,15 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --dryrun
-    defaultValue: False
+    defaultValue: "False"
     summary: Show the summary of the operations to be taken instead of actually downloading the file(s).
     description: ''
   - name: --max-connections
-    defaultValue: 2
+    defaultValue: "2"
     summary: Maximum number of parallel connections to use when the blob size exceeds 64MB.
     description: ''
   - name: --no-progress
-    defaultValue: False
+    defaultValue: "False"
     summary: Include this flag to disable progress reporting for the command.
     description: ''
   - name: --pattern
@@ -507,7 +507,7 @@ directCommands:
     summary: Specifies the UTC datetime (Y-m-d'T'H:M'Z') at which the SAS becomes invalid. Do not use if a stored access policy is referenced with --policy-name that specifies this value.
     description: ''
   - name: --full-uri
-    defaultValue: False
+    defaultValue: "False"
     summary: Indicates that this command return the full blob URI and the shared access signature token.
     description: ''
   - name: --https-only
@@ -578,7 +578,7 @@ directCommands:
     summary: An opaque continuation token. This value can be retrieved from the next_marker field of a previous generator object if num_results was specified and that generator has finished enumerating results. If specified, this generator will begin returning results from the point where the previous generator stopped.
     description: ''
   - name: --num-results
-    defaultValue: 5000
+    defaultValue: "5000"
     summary: Specifies the maximum number of results to return. Provide "*" to return all.
     description: ''
   - name: --prefix
@@ -746,28 +746,26 @@ directCommands:
     summary: Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').
     description: ''
   - name: --in-column-separator
-    defaultValue: ','
+    defaultValue: ","
     summary: The string used to separate columns.
     description: ''
   - name: --in-escape-char
     summary: The string used as an escape character. Default to empty.
     description: ''
   - name: --in-has-header
-    defaultValue: False
+    defaultValue: "False"
     summary: Whether the blob data includes headers in the first line. The default value is False, meaning that the data will be returned inclusive of the first line. If set to True, the data will be returned exclusive of the first line.
     description: ''
   - name: --in-line-separator
-    defaultValue: >2
-
+    defaultValue: "\n"
     summary: The string used to separate records.
     description: ''
   - name: --in-quote-char
-    defaultValue: '"'
+    defaultValue: "\""
     summary: The string used to quote a specific field.
     description: ''
   - name: --in-record-separator
-    defaultValue: >2
-
+    defaultValue: "\n"
     summary: The string used to separate records.
     description: ''
   - name: --input-format
@@ -781,28 +779,26 @@ directCommands:
     summary: The blob name.
     description: ''
   - name: --out-column-separator
-    defaultValue: ','
+    defaultValue: ","
     summary: The string used to separate columns.
     description: ''
   - name: --out-escape-char
     summary: The string used as an escape character. Default to empty.
     description: ''
   - name: --out-has-header
-    defaultValue: False
+    defaultValue: "False"
     summary: Whether the blob data includes headers in the first line. The default value is False, meaning that the data will be returned inclusive of the first line. If set to True, the data will be returned exclusive of the first line.
     description: ''
   - name: --out-line-separator
-    defaultValue: >2
-
+    defaultValue: "\n"
     summary: The string used to separate records.
     description: ''
   - name: --out-quote-char
-    defaultValue: '"'
+    defaultValue: "\""
     summary: The string used to quote a specific field.
     description: ''
   - name: --out-record-separator
-    defaultValue: >2
-
+    defaultValue: "\n"
     summary: The string used to separate records.
     description: ''
   - name: --output-format
@@ -928,7 +924,7 @@ directCommands:
     summary: The timeout parameter is expressed in seconds. This method may make multiple calls to the Azure service and the timeout will apply to each call individually.
     description: ''
   - name: --type -t
-    defaultValue: block
+    defaultValue: "block"
     parameterValueGroup: block, page
     summary: The blob type.
     description: ''
@@ -1118,7 +1114,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --delete-destination
-    defaultValue: true
+    defaultValue: "true"
     summary: ''
     description: ''
   - name: --destination -d
@@ -1386,7 +1382,7 @@ directCommands:
     summary: Required if the blob has an active lease.
     description: ''
   - name: --max-connections
-    defaultValue: 2
+    defaultValue: "2"
     summary: Maximum number of parallel connections to use when the blob size exceeds 64MB.
     description: ''
   - name: --maxsize-condition
@@ -1396,7 +1392,7 @@ directCommands:
     summary: Metadata in space-separated key=value pairs. This overwrites any existing metadata.
     description: ''
   - name: --no-progress
-    defaultValue: False
+    defaultValue: "False"
     summary: Include this flag to disable progress reporting for the command.
     description: ''
   - name: --sas-token
@@ -1417,7 +1413,7 @@ directCommands:
     summary: Default to 'page' for *.vhd files, or 'block' otherwise.
     description: ''
   - name: --validate-content
-    defaultValue: False
+    defaultValue: "False"
     summary: Specify that an MD5 hash shall be calculated for each chunk of the blob and verified by the service when the chunk has arrived.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
@@ -1509,7 +1505,7 @@ directCommands:
     summary: The destination path that will be prepended to the blob name.
     description: ''
   - name: --dryrun
-    defaultValue: False
+    defaultValue: "False"
     summary: Show the summary of the operations to be taken instead of actually uploading the file(s).
     description: ''
   - name: --if-match
@@ -1528,7 +1524,7 @@ directCommands:
     summary: The active lease id for the blob.
     description: ''
   - name: --max-connections
-    defaultValue: 2
+    defaultValue: "2"
     summary: Maximum number of parallel connections to use when the blob size exceeds 64MB.
     description: ''
   - name: --maxsize-condition
@@ -1538,7 +1534,7 @@ directCommands:
     summary: Metadata in space-separated key=value pairs. This overwrites any existing metadata.
     description: ''
   - name: --no-progress
-    defaultValue: False
+    defaultValue: "False"
     summary: Include this flag to disable progress reporting for the command.
     description: ''
   - name: --pattern
@@ -1558,7 +1554,7 @@ directCommands:
     summary: Defaults to 'page' for *.vhd files, or 'block' otherwise. The setting will override blob types for every file.
     description: ''
   - name: --validate-content
-    defaultValue: False
+    defaultValue: "False"
     summary: Specifies that an MD5 hash shall be calculated for each chunk of the blob and verified by the service when the chunk has arrived.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
@@ -1605,7 +1601,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --protocol
-    defaultValue: https
+    defaultValue: "https"
     parameterValueGroup: http, https
     summary: Protocol to use.
     description: ''
@@ -1693,7 +1689,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

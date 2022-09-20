@@ -17,27 +17,27 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --certificate-name --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of of the certificate to upload.
     description: ''
   - isRequired: true
     name: --instance-name --managed-instance --managed-instance-name --mi
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of the managed instance.
     description: ''
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --public-blob
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The certificate public blob.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
@@ -55,30 +55,30 @@ directCommands:
                                   [--yes]
   optionalParameters:
   - name: --certificate-name --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of of the certificate to delete.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --instance-name --managed-instance --managed-instance-name --mi
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of the managed instance.
     description: ''
   - name: --no-wait
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
@@ -92,12 +92,12 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --instance-name --managed-instance --managed-instance-name --mi
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of the managed instance.
     description: ''
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
@@ -113,18 +113,18 @@ directCommands:
                                 [--subscription]
   optionalParameters:
   - name: --certificate-name --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of of the certificate to get.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --instance-name --managed-instance --managed-instance-name --mi
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of the managed instance.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
@@ -144,7 +144,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -34,7 +34,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --system-assigned
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Set the system managed identity on the media services account.
     description: ''
@@ -72,7 +72,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --system-assigned
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Set the system managed identity on the media services account.
     description: ''
@@ -118,7 +118,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

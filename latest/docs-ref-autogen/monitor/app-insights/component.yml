@@ -117,7 +117,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --application-type
-    defaultValue: web
+    defaultValue: "web"
     summary: Type of application being monitored. Possible values include 'web', 'other'. Default value is'web' .
     description: ''
   - name: --ingestion-access
@@ -125,7 +125,7 @@ directCommands:
     summary: The public network access type for accessing Application Insights ingestion.
     description: ''
   - name: --kind -k
-    defaultValue: web
+    defaultValue: "web"
     summary: The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of web, ios, other, store, java, phone.
     description: ''
   - name: --query-access
@@ -303,7 +303,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

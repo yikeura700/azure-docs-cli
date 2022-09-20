@@ -20,7 +20,7 @@ directCommands:
     syntax: az iot product requirement list
   optionalParameters:
   - name: --badge-type --bt
-    defaultValue: IotDevice
+    defaultValue: "IotDevice"
     parameterValueGroup: IotDevice, IotEdgeCompatible, Pnp
     summary: The type of certification badge.
     description: ''
@@ -37,7 +37,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

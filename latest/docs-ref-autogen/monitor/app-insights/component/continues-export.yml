@@ -66,12 +66,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --dest-type
-    defaultValue: Blob
+    defaultValue: "Blob"
     parameterValueGroup: Blob
     summary: The Continuous Export destination type. This has to be 'Blob'.
     description: ''
   - name: --is-enabled
-    defaultValue: true
+    defaultValue: "true"
     parameterValueGroup: false, true
     summary: Set to 'true' to create a Continuous Export configuration as enabled, otherwise set it to 'false'.
     description: ''
@@ -113,7 +113,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_monitor_app-insights_component_continues-export_list
@@ -268,7 +268,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

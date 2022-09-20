@@ -59,7 +59,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --backup-management-type
-    defaultValue: AzureWorkload
+    defaultValue: "AzureWorkload"
     parameterValueGroup: AzureIaasVM, AzureStorage, AzureWorkload
     summary: 'Specify the backup management type. Define how Azure Backup manages the backup of entities within the ARM resource. For eg: AzureWorkloads refers to workloads installed within Azure VMs, AzureStorage refers to entities within Storage account. Required only if friendly name is used as Container name.'
     description: ''
@@ -79,7 +79,7 @@ directCommands:
     summary: Name of the Recovery services vault.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
@@ -116,7 +116,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --backup-management-type
-    defaultValue: AzureWorkload
+    defaultValue: "AzureWorkload"
     parameterValueGroup: AzureIaasVM, AzureStorage, AzureWorkload
     summary: 'Specify the backup management type. Define how Azure Backup manages the backup of entities within the ARM resource. For eg: AzureWorkloads refers to workloads installed within Azure VMs, AzureStorage refers to entities within Storage account. Required only if friendly name is used as Container name.'
     description: ''
@@ -196,7 +196,7 @@ directCommands:
     summary: Name of the Recovery services vault.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
@@ -214,7 +214,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

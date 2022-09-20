@@ -86,7 +86,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes
-    defaultValue: False
+    defaultValue: "False"
     summary: Delete without confirmation.
     description: ''
 - uid: az_vmware_placement-policy_vm_update
@@ -143,7 +143,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

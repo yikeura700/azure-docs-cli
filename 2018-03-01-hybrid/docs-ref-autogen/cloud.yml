@@ -19,11 +19,11 @@ directCommands:
                            [--show-all]
   optionalParameters:
   - name: --name -n
-    defaultValue: AzureCloud
+    defaultValue: "AzureCloud"
     summary: Name of a registered cloud.
     description: ''
   - name: --show-all
-    defaultValue: False
+    defaultValue: "False"
     summary: Show all available profiles supported in the CLI.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cloud/_help.py
@@ -159,7 +159,7 @@ directCommands:
   syntax: az cloud show [--name]
   optionalParameters:
   - name: --name -n
-    defaultValue: AzureCloud
+    defaultValue: "AzureCloud"
     summary: Name of a registered cloud.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cloud/_help.py
@@ -235,7 +235,7 @@ directCommands:
     summary: The uri of the document which caches commonly used virtual machine images.
     description: ''
   - name: --name -n
-    defaultValue: AzureCloud
+    defaultValue: "AzureCloud"
     summary: Name of a registered cloud.
     description: ''
   - name: --profile
@@ -277,7 +277,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -67,7 +67,7 @@ directCommands:
     summary: Name of the definition. Ignored if --id is supplied.
     description: ''
   - name: --open
-    defaultValue: False
+    defaultValue: "False"
     summary: Open the definition summary page in your web browser.
     description: ''
   - name: --org --organization
@@ -87,7 +87,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

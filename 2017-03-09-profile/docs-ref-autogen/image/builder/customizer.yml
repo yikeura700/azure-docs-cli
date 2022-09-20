@@ -95,7 +95,7 @@ directCommands:
     summary: Command to execute the restart operation.
     description: ''
   - name: --restart-timeout
-    defaultValue: 5m
+    defaultValue: "5m"
     summary: Restart timeout specified as a string consisting of a magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours).
     description: ''
   - name: --script-url
@@ -180,7 +180,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

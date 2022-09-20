@@ -36,7 +36,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Using this flag will force the operation even if service fabric is unable to disable the nodes. Use with caution as this might cause data loss if stateful workloads are running on the node.
     description: ''
@@ -72,7 +72,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Using this flag will force the operation even if service fabric is unable to disable the nodes. Use with caution as this might cause data loss if stateful workloads are running on the node.
     description: ''
@@ -108,7 +108,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Using this flag will force the operation even if service fabric is unable to disable the nodes. Use with caution as this might cause data loss if stateful workloads are running on the node.
     description: ''
@@ -124,7 +124,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

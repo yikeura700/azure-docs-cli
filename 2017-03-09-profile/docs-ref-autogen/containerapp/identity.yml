@@ -37,7 +37,7 @@ directCommands:
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -47,7 +47,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --system-assigned
-    defaultValue: False
+    defaultValue: "False"
     summary: Boolean indicating whether to assign system-assigned identity.
     description: ''
   - name: --user-assigned
@@ -84,7 +84,7 @@ directCommands:
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -94,7 +94,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --system-assigned
-    defaultValue: False
+    defaultValue: "False"
     summary: Boolean indicating whether to assign system-assigned identity.
     description: ''
   - name: --user-assigned
@@ -137,7 +137,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

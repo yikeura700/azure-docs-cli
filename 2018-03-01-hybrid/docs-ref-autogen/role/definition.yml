@@ -62,7 +62,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --custom-role-only
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Custom roles only(vs. build-in ones).
     description: ''
@@ -84,7 +84,7 @@ directCommands:
                             [--scope]
   optionalParameters:
   - name: --custom-role-only
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Custom roles only(vs. build-in ones).
     description: ''
@@ -150,7 +150,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -55,7 +55,7 @@ directCommands:
     summary: Path to certificate file.
     description: ''
   - name: --da --data
-    defaultValue: Ping from Az CLI IoT Extension
+    defaultValue: "Ping from Az CLI IoT Extension"
     summary: Message body.
     description: ''
   - name: --dtmi --model-id
@@ -74,7 +74,7 @@ directCommands:
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --hub-name is not provided.
     description: ''
   - name: --mc --msg-count
-    defaultValue: 1
+    defaultValue: "1"
     summary: Number of device messages to send to IoT Hub.
     description: ''
   - name: --pass --passphrase
@@ -165,7 +165,7 @@ directCommands:
     summary: Path to certificate file.
     description: ''
   - name: --da --data
-    defaultValue: Ping from Az CLI IoT Extension
+    defaultValue: "Ping from Az CLI IoT Extension"
     summary: Message body.
     description: ''
   - name: --dtmi --model-id
@@ -187,7 +187,7 @@ directCommands:
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --hub-name is not provided.
     description: ''
   - name: --mc --msg-count
-    defaultValue: 100
+    defaultValue: "100"
     summary: Number of device messages to send to IoT Hub.
     description: ''
   - name: --method-response-code --mrc
@@ -197,7 +197,7 @@ directCommands:
     summary: Payload to be returned when direct method is executed on device. Provide file path or raw json. Optional param, only supported for mqtt.
     description: ''
   - name: --mi --msg-interval
-    defaultValue: 3
+    defaultValue: "3"
     summary: Delay in seconds between device-to-cloud messages.
     description: ''
   - name: --pass --passphrase
@@ -207,12 +207,12 @@ directCommands:
     summary: 'Message property bag in key-value pairs with the following format: a=b;c=d. For mqtt messaging - you are able to send system properties using $.<name>=value. For instance $.cid=12345 sets the system correlation Id property. Other system property identifier examples include $.ct for content type, $.mid for message Id and $.ce for content encoding.  For http messaging - application properties are sent using iothub-app-<name>=value, for instance iothub-app-myprop=myvalue. System properties are generally prefixed with iothub-<name> like iothub-correlationid but there are exceptions such as content-type and content-encoding.'
     description: ''
   - name: --proto --protocol
-    defaultValue: mqtt
+    defaultValue: "mqtt"
     parameterValueGroup: http, mqtt
     summary: Indicates device-to-cloud message protocol.
     description: ''
   - name: --receive-settle --rs
-    defaultValue: complete
+    defaultValue: "complete"
     parameterValueGroup: abandon, complete, reject
     summary: Indicates how to settle received cloud-to-device messages. Supported with HTTP only.
     description: ''
@@ -274,7 +274,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

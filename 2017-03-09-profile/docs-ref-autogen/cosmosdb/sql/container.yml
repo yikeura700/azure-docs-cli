@@ -73,16 +73,16 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --evenly-distribute
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Switch to distribute throughput equally among all physical partitions.
     description: ''
   - name: --source-partition-info
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Space separated source physical partition ids eg: 1 2.'
     description: ''
   - name: --target-partition-info
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Information about desired target physical partition throughput eg: 0=1200 1=1200.'
     description: ''
 - uid: az_cosmosdb_sql_container_retrieve-partition-throughput
@@ -120,12 +120,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --all-partitions
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Switch to retrieve throughput for all physical partitions.
     description: ''
   - name: --physical-partition-ids -p
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: Space separated list of physical partition ids.
     description: ''
 commands:
@@ -140,7 +140,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

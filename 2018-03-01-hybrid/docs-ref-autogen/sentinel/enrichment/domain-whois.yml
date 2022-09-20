@@ -18,12 +18,12 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --domain
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Domain name to be enriched.
     description: ''
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 commands:
@@ -36,7 +36,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

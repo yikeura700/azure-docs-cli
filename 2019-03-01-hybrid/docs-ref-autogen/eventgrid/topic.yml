@@ -61,7 +61,7 @@ directCommands:
     summary: When input-schema is specified as customeventschema, this parameter is used to specify input mappings based on field names. Specify space separated mappings in 'key=value' format. Allowed key names are 'id', 'topic', 'eventtime', 'subject', 'eventtype', 'dataversion'. The corresponding value names should specify the names of the fields in the custom input schema. If a mapping for either 'id' or 'eventtime' is not provided, Event Grid will auto-generate a default value for these two fields.
     description: ''
   - name: --input-schema
-    defaultValue: eventgridschema
+    defaultValue: "eventgridschema"
     parameterValueGroup: cloudeventschemav1_0, customeventschema, eventgridschema
     summary: Schema in which incoming events will be published to this topic/domain. If you specify customeventschema as the value for this parameter, you must also provide values for at least one of --input_mapping_default_values / --input_mapping_fields.
     description: ''
@@ -70,7 +70,7 @@ directCommands:
     summary: This determines if traffic is allowed over public network. By default it is enabled. You can further restrict to specific IPs by configuring.
     description: ''
   - name: --sku
-    defaultValue: Basic
+    defaultValue: "Basic"
     parameterValueGroup: basic, premium
     summary: The Sku name of the resource.
     description: ''
@@ -226,7 +226,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

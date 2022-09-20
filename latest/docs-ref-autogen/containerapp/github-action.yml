@@ -55,7 +55,7 @@ directCommands:
     summary: Container image name that the Github Action should use. Defaults to the Container App name.
     description: ''
   - name: --login-with-github
-    defaultValue: False
+    defaultValue: "False"
     summary: Interactively log in with Github to retrieve the Personal Access Token.
     description: ''
   - name: --name -n
@@ -109,7 +109,7 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --login-with-github
-    defaultValue: False
+    defaultValue: "False"
     summary: Interactively log in with Github to retrieve the Personal Access Token.
     description: ''
   - name: --name -n
@@ -161,7 +161,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -131,18 +131,18 @@ directCommands:
     summary: Password for the VM admin.
     description: ''
   - name: --admin-username
-    defaultValue: your_system_user_login_name
+    defaultValue: "your_system_user_login_name"
     summary: Username for the VM admin.
     description: ''
   - name: --allow-claim
-    defaultValue: False
+    defaultValue: "False"
     summary: Flag indicating if the VM should be created as claimable.
     description: ''
   - name: --artifacts
     summary: JSON encoded array of artifacts to be applied. Use '@{file}' to load from a file.
     description: ''
   - name: --authentication-type
-    defaultValue: password
+    defaultValue: "password"
     summary: 'Type of authentication allowed for the VM. Allowed values are: password, ssh.'
     description: ''
   - name: --disk-type
@@ -351,7 +351,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

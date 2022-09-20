@@ -31,7 +31,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
@@ -110,21 +110,21 @@ directCommands:
     summary: 'Name of extension instance, which can be customized. Default: name of the extension.'
     description: ''
   - name: --force-update
-    defaultValue: False
+    defaultValue: "False"
     summary: Force to update even if the extension configuration has not changed.
     description: ''
   - name: --no-auto-upgrade
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: If set, the extension service will not automatically pick or upgrade to the latest minor version, even if the extension is redeployed.
     description: ''
   - name: --no-auto-upgrade-minor-version
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: If set, the extension service will not automatically pick or upgrade to the latest minor version, even if the extension is redeployed.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --protected-settings
@@ -183,7 +183,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

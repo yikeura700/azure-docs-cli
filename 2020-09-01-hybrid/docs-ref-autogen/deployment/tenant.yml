@@ -69,12 +69,12 @@ directCommands:
     summary: The deployment name.
     description: ''
   - name: --no-prompt
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: The option to disable the prompt of missing parameters for ARM template. When the value is true, the prompt requiring users to provide missing parameter will be ignored. The default value is false.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --parameters -p
@@ -103,7 +103,7 @@ directCommands:
     summary: Space-separated list of resource change types to be excluded from What-If results. Applicable when --confirm-with-what-if is set.
     description: ''
   - name: --what-if-result-format -r
-    defaultValue: FullResourcePayloads
+    defaultValue: "FullResourcePayloads"
     parameterValueGroup: FullResourcePayloads, ResourceIdOnly
     summary: The format of What-If results. Applicable when `--confirm-with-what-if` is set.
     description: ''
@@ -125,7 +125,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
@@ -202,7 +202,7 @@ directCommands:
     summary: The deployment name.
     description: ''
   - name: --no-prompt
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: The option to disable the prompt of missing parameters for ARM template. When the value is true, the prompt requiring users to provide missing parameter will be ignored. The default value is false.
     description: ''
@@ -245,30 +245,30 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --created
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
     summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
     description: ''
   - name: --deleted
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until deleted.
     description: ''
   - name: --exists
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until the resource exists.
     description: ''
   - name: --interval
-    defaultValue: 30
+    defaultValue: "30"
     summary: Polling interval in seconds.
     description: ''
   - name: --timeout
-    defaultValue: 3600
+    defaultValue: "3600"
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
@@ -312,7 +312,7 @@ directCommands:
     summary: Disable pretty-print for What-If results. When set, the output format type will be used.
     description: ''
   - name: --no-prompt
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: The option to disable the prompt of missing parameters for ARM template. When the value is true, the prompt requiring users to provide missing parameter will be ignored. The default value is false.
     description: ''
@@ -323,7 +323,7 @@ directCommands:
     summary: The query string (a SAS token) to be used with the template-uri in the case of linked templates.
     description: ''
   - name: --result-format -r
-    defaultValue: FullResourcePayloads
+    defaultValue: "FullResourcePayloads"
     parameterValueGroup: FullResourcePayloads, ResourceIdOnly
     summary: The format of What-If results.
     description: ''
@@ -355,7 +355,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

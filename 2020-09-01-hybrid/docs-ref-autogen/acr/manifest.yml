@@ -40,7 +40,7 @@ directCommands:
     summary: The username used to log into a container registry.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   - name: <MANIFEST_ID>
@@ -244,7 +244,7 @@ directCommands:
     summary: The password used to log into a container registry.
     description: ''
   - name: --recursive
-    defaultValue: False
+    defaultValue: "False"
     summary: Recursively include referrer artifacts.
     description: ''
   - name: --registry -r
@@ -288,7 +288,7 @@ directCommands:
     summary: The digest of the manifest such as 'sha256@abc123'.
     description: ''
   - name: --force -f
-    defaultValue: False
+    defaultValue: "False"
     summary: Overwrite the existing tag.
     description: ''
   - name: --name -n
@@ -307,7 +307,7 @@ directCommands:
     summary: The username used to log into a container registry.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   - name: <MANIFEST_ID>
@@ -477,7 +477,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

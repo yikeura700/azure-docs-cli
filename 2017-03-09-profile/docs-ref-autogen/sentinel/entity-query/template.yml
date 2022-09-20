@@ -19,17 +19,17 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
   optionalParameters:
   - name: --kind
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: Activity
     summary: The entity template query kind we want to fetch.
     description: ''
@@ -45,21 +45,21 @@ directCommands:
                                            [--workspace-name]
   optionalParameters:
   - name: --entity-query-template-id --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Entity query template ID.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
 commands:
@@ -73,7 +73,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

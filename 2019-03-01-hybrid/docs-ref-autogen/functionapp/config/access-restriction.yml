@@ -50,7 +50,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --action
-    defaultValue: Allow
+    defaultValue: "Allow"
     parameterValueGroup: Allow, Deny
     summary: Allow or deny access.
     description: ''
@@ -64,7 +64,7 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --ignore-missing-endpoint -i
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Create access restriction rule with checking if the subnet has Microsoft.Web service endpoint enabled.
     description: ''
@@ -81,7 +81,7 @@ directCommands:
     summary: Name of the access restriction rule to add.
     description: ''
   - name: --scm-site
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: True if access restrictions is added for scm site.
     description: ''
@@ -130,7 +130,7 @@ directCommands:
     syntax: az functionapp config access-restriction remove -g ResourceGroup -n AppName --service-tag AzureFrontDoor.Backend
   optionalParameters:
   - name: --action
-    defaultValue: Allow
+    defaultValue: "Allow"
     parameterValueGroup: Allow, Deny
     summary: Allow or deny access.
     description: ''
@@ -150,7 +150,7 @@ directCommands:
     summary: Name of the access restriction to remove.
     description: ''
   - name: --scm-site
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: True if access restriction should be removed from scm site.
     description: ''
@@ -250,7 +250,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

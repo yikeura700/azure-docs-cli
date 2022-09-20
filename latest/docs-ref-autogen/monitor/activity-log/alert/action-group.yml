@@ -49,14 +49,14 @@ directCommands:
     summary: Name of the activity log alerts.
     description: ''
   - name: --reset
-    defaultValue: False
+    defaultValue: "False"
     summary: Remove all the existing action groups before add new conditions.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --strict
-    defaultValue: False
+    defaultValue: "False"
     summary: Fails the command if an action group to be added will change existing webhook properties.
     description: ''
   - name: --subscription
@@ -106,7 +106,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

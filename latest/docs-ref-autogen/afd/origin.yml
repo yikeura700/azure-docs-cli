@@ -63,23 +63,23 @@ directCommands:
     summary: Indicates whether private link is enanbled on that origin.
     description: ''
   - name: --enforce-certificate-name-check
-    defaultValue: 1
+    defaultValue: "1"
     parameterValueGroup: false, true
     summary: '"Whether to enable certificate name check at origin level.'
     description: ''
   - name: --http-port
-    defaultValue: 80
+    defaultValue: "80"
     summary: The port used for http requests to the origin.
     description: ''
   - name: --https-port
-    defaultValue: 443
+    defaultValue: "443"
     summary: The port used for https requests to the origin.
     description: ''
   - name: --origin-host-header
     summary: The Host header to send for requests to this origin. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
     description: ''
   - name: --priority
-    defaultValue: 1
+    defaultValue: "1"
     summary: Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy. Must be between 1 and 5.
     description: ''
   - name: --private-link-location
@@ -95,7 +95,7 @@ directCommands:
     summary: The sub-resource type of the origin that will be connected to using the private link.You can use "az network private-link-resource list" to obtain the supported sub-resource types.
     description: ''
   - name: --weight
-    defaultValue: 1000
+    defaultValue: "1000"
     summary: Weight of the origin in given origin group for load balancing. Must be between 1 and 1000.
     description: ''
 - uid: az_afd_origin_delete
@@ -130,7 +130,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_afd_origin_list
@@ -288,7 +288,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

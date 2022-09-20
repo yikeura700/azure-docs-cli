@@ -154,7 +154,7 @@ directCommands:
     summary: The URI of the key vault.
     description: ''
   - name: --kind
-    defaultValue: GlobalDocumentDB
+    defaultValue: "GlobalDocumentDB"
     parameterValueGroup: GlobalDocumentDB, MongoDB, Parse
     summary: The type of Cosmos DB database account to create.
     description: ''
@@ -173,11 +173,11 @@ directCommands:
 
       Multiple locations can be specified by using more than one `--locations` argument.
   - name: --max-interval
-    defaultValue: 5
+    defaultValue: "5"
     summary: When used with Bounded Staleness consistency, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400.
     description: ''
   - name: --max-staleness-prefix
-    defaultValue: 100
+    defaultValue: "100"
     summary: When used with Bounded Staleness consistency, this value represents the number of stale requests tolerated. Accepted range for this value is 10 - 2,147,483,647.
     description: ''
   - name: --network-acl-bypass
@@ -231,7 +231,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
@@ -858,7 +858,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

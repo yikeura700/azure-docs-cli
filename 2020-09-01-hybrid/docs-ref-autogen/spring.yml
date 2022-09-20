@@ -99,15 +99,15 @@ directCommands:
     summary: Disable Application Insights, if not disabled and no existing Application Insights specified with --app-insights-key or --app-insights, will create a new Application Insights instance in the same resource group.
     description: ''
   - name: --enable-acs --enable-application-configuration-service
-    defaultValue: False
+    defaultValue: "False"
     summary: (Enterprise Tier Only) Enable Application Configuration Service.
     description: ''
   - name: --enable-api-portal
-    defaultValue: False
+    defaultValue: "False"
     summary: (Enterprise Tier Only) Enable API portal.
     description: ''
   - name: --enable-gateway
-    defaultValue: False
+    defaultValue: "False"
     summary: (Enterprise Tier Only) Enable Spring Cloud Gateway.
     description: ''
   - name: --enable-java-agent
@@ -119,7 +119,7 @@ directCommands:
     summary: If true, assign public endpoint for log streaming in vnet injection instance which could be accessed out of virtual network.
     description: ''
   - name: --enable-service-registry --enable-sr
-    defaultValue: False
+    defaultValue: "False"
     summary: (Enterprise Tier Only) Enable Service Registry.
     description: ''
   - name: --gateway-instance-count
@@ -132,11 +132,11 @@ directCommands:
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --outbound-type
-    defaultValue: loadBalancer
+    defaultValue: "loadBalancer"
     summary: The outbound type of Azure Spring Apps VNet instance.
     description: ''
   - name: --reserved-cidr-range
@@ -152,7 +152,7 @@ directCommands:
     summary: The name or ID of an existing subnet in "vnet" into which to deploy the Spring Apps service runtime. Required when deploying into a Virtual Network.
     description: ''
   - name: --sku
-    defaultValue: Standard
+    defaultValue: "Standard"
     parameterValueGroup: Basic, Enterprise, Standard
     summary: Name of SKU. Enterprise is still in Preview.
     description: ''
@@ -163,7 +163,7 @@ directCommands:
     summary: The name or ID of an existing Virtual Network into which to deploy the Spring Apps instance.
     description: ''
   - name: --zone-redundant
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Create your Azure Spring Apps service in an Azure availability zone or not, this could only be supported in several regions at the moment.
     description: ''
@@ -186,7 +186,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring_list
@@ -233,7 +233,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring_stop
@@ -255,7 +255,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring_update
@@ -311,7 +311,7 @@ directCommands:
     summary: Ingress read timeout value in seconds. Minimum is 1, maximum is 1800.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --sku
@@ -474,7 +474,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

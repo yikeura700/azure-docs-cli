@@ -33,11 +33,11 @@ directCommands:
     summary: Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account.
     description: ''
   - name: --disable-encryption
-    defaultValue: False
+    defaultValue: "False"
     summary: Indicates that the account will not have any form of encryption applied to it.
     description: ''
   - name: --encryption-type
-    defaultValue: ServiceManaged
+    defaultValue: "ServiceManaged"
     parameterValueGroup: ServiceManaged, UserManaged
     summary: Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag.
     description: ''
@@ -246,7 +246,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -80,7 +80,7 @@ directCommands:
     summary: Space-separated role assignment ids.
     description: ''
   - name: --include-inherited
-    defaultValue: False
+    defaultValue: "False"
     summary: Include assignments applied on parent scopes.
     description: ''
   - name: --resource-group -g
@@ -111,23 +111,23 @@ directCommands:
                             [--scope]
   optionalParameters:
   - name: --all
-    defaultValue: False
+    defaultValue: "False"
     summary: Show all assignments under the current subscription.
     description: ''
   - name: --assignee
     summary: 'Represent a user, group, or service principal. supported format: object id, user sign-in name, or service principal name.'
     description: ''
   - name: --include-classic-administrators
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: List default role assignments for subscription classic administrators, aka co-admins.
     description: ''
   - name: --include-groups
-    defaultValue: False
+    defaultValue: "False"
     summary: Include extra assignments to the groups of which the user is a member(transitively).
     description: ''
   - name: --include-inherited
-    defaultValue: False
+    defaultValue: "False"
     summary: Include assignments applied on parent scopes.
     description: ''
   - name: --resource-group -g
@@ -199,7 +199,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

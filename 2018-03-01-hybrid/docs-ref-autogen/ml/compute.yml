@@ -56,7 +56,7 @@ directCommands:
     summary: Namespace of a KubernetesCompute.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-id
@@ -146,7 +146,7 @@ directCommands:
     summary: Name of the compute target. Required if --file/-f is not provided.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running-operation to finish. Default is False.
     description: ''
   - name: --set
@@ -210,11 +210,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running-operation to finish. Default is False.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_ml_compute_detach
@@ -242,11 +242,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_ml_compute_list
@@ -371,7 +371,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running-operation to finish. Default is False.
     description: ''
 - uid: az_ml_compute_show
@@ -422,7 +422,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running-operation to finish. Default is False.
     description: ''
 - uid: az_ml_compute_stop
@@ -449,7 +449,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running-operation to finish. Default is False.
     description: ''
 - uid: az_ml_compute_update
@@ -490,11 +490,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --identity-type
@@ -510,15 +510,15 @@ directCommands:
     summary: 'Minimum number of nodes to use. Default: 0.'
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running-operation to finish. Default is False.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --user-assigned-identities -i
@@ -546,7 +546,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

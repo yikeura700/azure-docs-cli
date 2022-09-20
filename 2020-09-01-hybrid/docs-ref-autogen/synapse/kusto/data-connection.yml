@@ -35,7 +35,7 @@ directCommands:
     summary: The name of the Kusto pool.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -48,7 +48,7 @@ directCommands:
     summary: The name of the workspace.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
@@ -146,7 +146,7 @@ directCommands:
     syntax: az synapse kusto data-connection wait --data-connection-name "DataConnections8" --database-name "KustoDatabase8" --kusto-pool-name "kustoclusterrptest4" --resource-group "kustorptest" --workspace-name "synapseWorkspaceName" --deleted
   optionalParameters:
   - name: --created
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
@@ -159,18 +159,18 @@ directCommands:
     summary: The name of the database in the Kusto pool.
     description: ''
   - name: --deleted
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until deleted.
     description: ''
   - name: --exists
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until the resource exists.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --interval
-    defaultValue: 30
+    defaultValue: "30"
     summary: Polling interval in seconds.
     description: ''
   - name: --kusto-pool-name
@@ -183,11 +183,11 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --timeout
-    defaultValue: 3600
+    defaultValue: "3600"
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
   - name: --workspace-name
@@ -216,7 +216,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

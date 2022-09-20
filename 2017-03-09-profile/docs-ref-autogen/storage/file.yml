@@ -76,7 +76,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --dryrun
-    defaultValue: False
+    defaultValue: "False"
     summary: List the files and blobs to be deleted. No actual data deletion will occur.
     description: ''
   - name: --pattern
@@ -136,26 +136,26 @@ directCommands:
     summary: 'End of byte range to use for downloading a section of the file. If end_range is given, start_range must be provided. The start_range and end_range params are inclusive. Ex: start_range=0, end_range=511 will download first 512 bytes of file.'
     description: ''
   - name: --max-connections
-    defaultValue: 1
+    defaultValue: "1"
     summary: Set to 1 to download the file sequentially. Set to 2 or greater if you want to download a file larger than 64MB in chunks. If the file size does not exceed 64MB it will be downloaded in one chunk.
     description: ''
   - name: --max-retries
-    defaultValue: 5
+    defaultValue: "5"
     summary: Number of times to retry download of file chunk if an error occurs.
     description: ''
   - name: --no-progress
-    defaultValue: False
+    defaultValue: "False"
     summary: Include this flag to disable progress reporting for the command.
     description: ''
   - name: --open-mode
-    defaultValue: wb
+    defaultValue: "wb"
     summary: Mode to use when opening the file.
     description: ''
   - name: --range-get-content-md5
     summary: When this header is set to True and specified together with the Range header, the service returns the MD5 hash for the range, as long as the range is less than or equal to 4 MB in size.
     description: ''
   - name: --retry-interval
-    defaultValue: 1.0
+    defaultValue: "1.0"
     summary: Sleep time in secs between retries.
     description: ''
   - name: --sas-token
@@ -207,15 +207,15 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --dryrun
-    defaultValue: False
+    defaultValue: "False"
     summary: List the files and blobs to be downloaded. No actual data transfer will occur.
     description: ''
   - name: --max-connections
-    defaultValue: 1
+    defaultValue: "1"
     summary: The maximum number of parallel connections to use. Default value is 1.
     description: ''
   - name: --no-progress
-    defaultValue: False
+    defaultValue: "False"
     summary: Include this flag to disable progress reporting for the command.
     description: ''
   - name: --pattern
@@ -394,14 +394,14 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --exclude-dir
-    defaultValue: False
+    defaultValue: "False"
     summary: List only files in the given share.
     description: ''
   - name: --marker
     summary: An opaque continuation token. This value can be retrieved from the next_marker field of a previous generator object if num_results was specified and that generator has finished enumerating results. If specified, this generator will begin returning results from the point where the previous generator stopped.
     description: ''
   - name: --num-results
-    defaultValue: 5000
+    defaultValue: "5000"
     summary: Specifies the maximum number of results to return. Provide "*" to return all.
     description: ''
   - name: --path -p
@@ -638,25 +638,25 @@ directCommands:
     summary: The content MIME type.
     description: ''
   - name: --max-connections
-    defaultValue: 1
+    defaultValue: "1"
     summary: Maximum number of parallel connections to use when the file size exceeds 64MB. Set to 1 to upload the file chunks sequentially. Set to 2 or more to upload the file chunks in parallel. This uses more system resources but will upload faster.
     description: ''
   - name: --max-retries
-    defaultValue: 5
+    defaultValue: "5"
     summary: Number of times to retry upload of file chunk if an error occurs.
     description: ''
   - name: --metadata
     summary: Metadata in space-separated key=value pairs. This overwrites any existing metadata.
     description: ''
   - name: --no-progress
-    defaultValue: False
+    defaultValue: "False"
     summary: Include this flag to disable progress reporting for the command.
     description: ''
   - name: --path -p
     summary: The path to the file within the file share. If the file name is omitted, the source file name will be used.
     description: ''
   - name: --retry-interval
-    defaultValue: 1.0
+    defaultValue: "1.0"
     summary: Sleep time in secs between retries.
     description: ''
   - name: --sas-token
@@ -735,18 +735,18 @@ directCommands:
     summary: The directory where the source data is copied to. If omitted, data is copied to the root directory.
     description: ''
   - name: --dryrun
-    defaultValue: False
+    defaultValue: "False"
     summary: List the files and blobs to be uploaded. No actual data transfer will occur.
     description: ''
   - name: --max-connections
-    defaultValue: 1
+    defaultValue: "1"
     summary: The maximum number of parallel connections to use. Default value is 1.
     description: ''
   - name: --metadata
     summary: Metadata in space-separated key=value pairs. This overwrites any existing metadata.
     description: ''
   - name: --no-progress
-    defaultValue: False
+    defaultValue: "False"
     summary: Include this flag to disable progress reporting for the command.
     description: ''
   - name: --pattern
@@ -791,7 +791,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --protocol
-    defaultValue: https
+    defaultValue: "https"
     parameterValueGroup: http, https
     summary: Protocol to use.
     description: ''
@@ -828,7 +828,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

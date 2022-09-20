@@ -50,7 +50,7 @@ directCommands:
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --hub-name is not provided.
     description: ''
   - name: --payload
-    defaultValue: '{}'
+    defaultValue: "{}"
     summary: JSON payload input for command. Provide file path or inline JSON.
     description: ''
   - name: --resource-group -g
@@ -142,7 +142,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

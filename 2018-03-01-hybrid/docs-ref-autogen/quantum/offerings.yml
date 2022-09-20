@@ -43,7 +43,7 @@ directCommands:
     syntax: az quantum offerings list -l MyLocation --autoadd-only -o table
   optionalParameters:
   - name: --autoadd-only
-    defaultValue: False
+    defaultValue: "False"
     summary: If specified, only the plans flagged "autoAdd" are displayed.
     description: ''
   - name: --location -l
@@ -82,7 +82,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

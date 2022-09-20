@@ -37,7 +37,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --fail-on-exist
-    defaultValue: False
+    defaultValue: "False"
     summary: Specify whether to throw an exception when the share exists. False by default.
     description: ''
   - name: --metadata
@@ -81,7 +81,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --fail-not-exist
-    defaultValue: False
+    defaultValue: "False"
     summary: Specify whether to throw an exception when the share doesn't exist. False by default.
     description: ''
   - name: --sas-token
@@ -239,14 +239,14 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --include-metadata
-    defaultValue: False
+    defaultValue: "False"
     summary: Specifies that share metadata be returned in the response.
     description: ''
   - name: --marker
     summary: An opaque continuation token. This value can be retrieved from the next_marker field of a previous generator object if num_results was specified and that generator has finished enumerating results. If specified, this generator will begin returning results from the point where the previous generator stopped.
     description: ''
   - name: --num-results
-    defaultValue: 5000
+    defaultValue: "5000"
     summary: Specifies the maximum number of results to return. Provide "*" to return all.
     description: ''
   - name: --prefix
@@ -394,7 +394,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --protocol
-    defaultValue: https
+    defaultValue: "https"
     parameterValueGroup: http, https
     summary: Protocol to use.
     description: ''
@@ -432,7 +432,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

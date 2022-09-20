@@ -47,7 +47,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --if-match
-    defaultValue: '*'
+    defaultValue: "*"
     summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
     description: ''
   - name: --sas-token
@@ -98,7 +98,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --if-exists
-    defaultValue: fail
+    defaultValue: "fail"
     parameterValueGroup: fail, merge, replace
     summary: Behavior when an entity already exists for the specified PartitionKey and RowKey.
     description: ''
@@ -147,7 +147,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --if-match
-    defaultValue: '*'
+    defaultValue: "*"
     summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
     description: ''
   - name: --sas-token
@@ -252,7 +252,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --if-match
-    defaultValue: '*'
+    defaultValue: "*"
     summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
     description: ''
   - name: --sas-token
@@ -329,7 +329,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

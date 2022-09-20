@@ -55,7 +55,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auto-upgrade --auto-upgrade-minor-version
-    defaultValue: 1
+    defaultValue: "1"
     parameterValueGroup: false, true
     summary: Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
     description: ''
@@ -111,7 +111,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

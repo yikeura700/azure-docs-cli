@@ -52,16 +52,16 @@ directCommands:
     syntax: az webpubsub network-rule update --public-network --connection-name MyPrivateEndpointConnection1 MyPrivateEndpointConnection2 -n MyWebPubSub -g MyResourceGroup --deny ClientConnection
   optionalParameters:
   - name: --allow
-    defaultValue: '[]'
+    defaultValue: "[]"
     parameterValueGroup: ClientConnection, RESTAPI, ServerConnection, Trace
     summary: The allowed virtual network rule. Space-separeted list of scope to assign.
     description: ''
   - name: --connection-name
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: Space-separeted list of private endpoint connection name.
     description: ''
   - name: --deny
-    defaultValue: '[]'
+    defaultValue: "[]"
     parameterValueGroup: ClientConnection, RESTAPI, ServerConnection, Trace
     summary: The denied virtual network rule. Space-separeted list of scope to assign.
     description: ''
@@ -92,7 +92,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

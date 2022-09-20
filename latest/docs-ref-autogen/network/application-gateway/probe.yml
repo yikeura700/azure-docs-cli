@@ -61,7 +61,7 @@ directCommands:
     summary: Use host header from settings. Pick hostname from settings is currently not supported, now only support false.
     description: ''
   - name: --interval
-    defaultValue: 30
+    defaultValue: "30"
     summary: The time interval in seconds between consecutive probes.
     description: ''
   - name: --match-body
@@ -74,7 +74,7 @@ directCommands:
     summary: Minimum number of servers that are always marked healthy.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --path
@@ -84,11 +84,11 @@ directCommands:
     summary: Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
     description: ''
   - name: --threshold
-    defaultValue: 8
+    defaultValue: "8"
     summary: The number of failed probes after which the back end server is marked down.
     description: ''
   - name: --timeout
-    defaultValue: 120
+    defaultValue: "120"
     summary: The probe timeout in seconds.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
@@ -119,7 +119,7 @@ directCommands:
     summary: The name of the probe.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -215,11 +215,11 @@ directCommands:
     syntax: az network application-gateway probe update --gateway-name MyAppGateway --host 127.0.0.1 --name MyProbe --resource-group MyResourceGroup --subscription MySubscription
   optionalParameters:
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --gateway-name
@@ -255,7 +255,7 @@ directCommands:
     summary: The name of the probe.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --path
@@ -269,14 +269,14 @@ directCommands:
     summary: The settings protocol.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --subscription
@@ -303,7 +303,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

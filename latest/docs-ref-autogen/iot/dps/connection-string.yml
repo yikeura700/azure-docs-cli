@@ -31,19 +31,19 @@ directCommands:
     syntax: az iot dps connection-string show -n MyDPS --policy-name service --key-type secondary
   optionalParameters:
   - name: --all --show-all
-    defaultValue: False
+    defaultValue: "False"
     summary: Show all shared access policies for the respective DPS.
     description: ''
   - name: --dps-name -n
     summary: Name of the Azure IoT Hub Device Provisioning Service. Required if --login is not provided.
     description: ''
   - name: --key-type --kt
-    defaultValue: primary
+    defaultValue: "primary"
     parameterValueGroup: primary, secondary
     summary: Shared access policy key type for authentication.
     description: ''
   - name: --pn --policy-name
-    defaultValue: provisioningserviceowner
+    defaultValue: "provisioningserviceowner"
     summary: Shared access policy to use for authentication.
     description: ''
   - name: --resource-group -g
@@ -59,7 +59,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

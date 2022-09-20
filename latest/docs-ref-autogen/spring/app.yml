@@ -28,7 +28,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --load-trust-store
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: If true, the certificate would be loaded into trust store for Java applications.
     description: ''
@@ -95,7 +95,7 @@ directCommands:
     summary: '[optional] The mount options for the persistent storage volume.'
     description: ''
   - name: --read-only
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: '[optional] If true, the persistent storage volume will be read only.'
     description: ''
@@ -154,7 +154,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --assign-endpoint
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: If true, assign endpoint URL for direct access.
     description: ''
@@ -171,7 +171,7 @@ directCommands:
     summary: Ingress backend protocol of app.
     description: ''
   - name: --cpu
-    defaultValue: 1
+    defaultValue: "1"
     summary: CPU resource quantity. Should be 500m or number of CPU cores.
     description: ''
   - name: --disable-probe
@@ -207,7 +207,7 @@ directCommands:
     summary: Ingress send timeout value in seconds. Default 60, minimum is 1, maximum is 1800.
     description: ''
   - name: --instance-count
-    defaultValue: 1
+    defaultValue: "1"
     summary: Number of instance.
     description: ''
   - name: --jvm-options
@@ -220,7 +220,7 @@ directCommands:
     summary: A json file path indicates the certificates which would be loaded to app.
     description: ''
   - name: --memory
-    defaultValue: 1Gi
+    defaultValue: "1Gi"
     summary: 'Memory resource quantity. Should be 512Mi or #Gi, e.g., 1Gi, 3Gi.'
     description: ''
   - name: --persistent-storage
@@ -340,18 +340,18 @@ directCommands:
     summary: Deploy the specified pre-built artifact (jar or netcore zip).
     description: ''
   - name: --build-cpu
-    defaultValue: 1
+    defaultValue: "1"
     summary: CPU resource quantity. Should be 500m or number of CPU cores.
     description: ''
   - name: --build-env
     summary: Space-separated environment variables in 'key[=value]' format.
     description: ''
   - name: --build-memory
-    defaultValue: 2Gi
+    defaultValue: "2Gi"
     summary: 'Memory resource quantity. Should be 512Mi or #Gi, e.g., 1Gi, 3Gi.'
     description: ''
   - name: --builder
-    defaultValue: default
+    defaultValue: "default"
     summary: (Enterprise Tier Only) Build service builder used to build the executable.
     description: ''
   - name: --config-file-patterns
@@ -367,7 +367,7 @@ directCommands:
     summary: The container image tag.
     description: ''
   - name: --container-registry
-    defaultValue: docker.io
+    defaultValue: "docker.io"
     summary: The registry of the container image.
     description: ''
   - name: --deployment -d
@@ -409,7 +409,7 @@ directCommands:
     summary: A string containing the path to the .NET executable relative to zip root.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --readiness-probe-config
@@ -489,7 +489,7 @@ directCommands:
     summary: Name of an existing deployment of the app. Default to the production deployment if not specified.
     description: ''
   - name: --follow  -f
-    defaultValue: False
+    defaultValue: "False"
     summary: Specify if the logs should be streamed.
     description: ''
   - name: --format-json
@@ -499,11 +499,11 @@ directCommands:
     summary: Name of an existing instance of the deployment.
     description: ''
   - name: --limit
-    defaultValue: 2048
+    defaultValue: "2048"
     summary: Maximum kilobytes of logs to return. Ceiling number is 2048.
     description: ''
   - name: --lines
-    defaultValue: 50
+    defaultValue: "50"
     summary: Number of lines to show. Maximum is 10000.
     description: ''
   - name: --since
@@ -537,7 +537,7 @@ directCommands:
     summary: Name of an existing deployment of the app. Default to the production deployment if not specified.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring_app_scale
@@ -585,7 +585,7 @@ directCommands:
     summary: 'Memory resource quantity. Should be 512Mi or #Gi, e.g., 1Gi, 3Gi.'
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring_app_set-deployment
@@ -620,7 +620,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring_app_show
@@ -698,7 +698,7 @@ directCommands:
     summary: Name of an existing deployment of the app. Default to the production deployment if not specified.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring_app_stop
@@ -729,7 +729,7 @@ directCommands:
     summary: Name of an existing deployment of the app. Default to the production deployment if not specified.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring_app_unset-deployment
@@ -759,7 +759,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring_app_update
@@ -863,7 +863,7 @@ directCommands:
     summary: Optional duration in seconds the app instance needs to terminate gracefully.
     description: ''
   - name: --https-only
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: If true, access app via https.
     description: ''
@@ -886,7 +886,7 @@ directCommands:
     summary: The path to the .NET executable relative to zip root.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --persistent-storage
@@ -968,7 +968,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -24,11 +24,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --disable-browser
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not open browser after opening a proxy to the cluster web user interface.
     description: ''
   - name: --ssh-key-file
-    defaultValue: ~\.ssh\id_rsa
+    defaultValue: "~\\.ssh\\id_rsa"
     summary: Path to an SSH key file to use.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
@@ -56,11 +56,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --file -f
-    defaultValue: ~\.kube\config
+    defaultValue: "~\\.kube\\config"
     summary: Where to install the kubectl config file.
     description: ''
   - name: --overwrite-existing
-    defaultValue: False
+    defaultValue: "False"
     summary: If specified, overwrite any existing credentials.
     description: ''
   - name: --ssh-key-file
@@ -83,22 +83,22 @@ directCommands:
     summary: Base download source URL for kubectl releases.
     description: ''
   - name: --client-version
-    defaultValue: latest
+    defaultValue: "latest"
     summary: Version of kubectl to install.
     description: ''
   - name: --install-location
-    defaultValue: ~\.azure-kubectl\kubectl.exe
+    defaultValue: "~\\.azure-kubectl\\kubectl.exe"
     summary: Path at which to install kubectl.
     description: ''
   - name: --kubelogin-base-src-url -l
     summary: Base download source URL for kubelogin releases.
     description: ''
   - name: --kubelogin-install-location
-    defaultValue: ~\.azure-kubelogin\kubelogin.exe
+    defaultValue: "~\\.azure-kubelogin\\kubelogin.exe"
     summary: Path at which to install kubelogin.
     description: ''
   - name: --kubelogin-version
-    defaultValue: latest
+    defaultValue: "latest"
     summary: Version of kubelogin to install.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
@@ -114,7 +114,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

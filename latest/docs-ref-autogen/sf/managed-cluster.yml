@@ -46,7 +46,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --admin-user-name
-    defaultValue: vmadmin
+    defaultValue: "vmadmin"
     summary: Admin user used for the virtual machines.
     description: ''
   - name: --cert-common-name --client-cert-common-name
@@ -63,7 +63,7 @@ directCommands:
     summary: Client certificate thumbprint.
     description: ''
   - name: --client-connection-port --client-port
-    defaultValue: 19000
+    defaultValue: "19000"
     summary: Port used for client connections to the cluster.
     description: ''
   - name: --cluster-code-version --code-version
@@ -81,14 +81,14 @@ directCommands:
     summary: Cluster's dns name.
     description: ''
   - name: --gateway-connection-port --gateway-port
-    defaultValue: 19080
+    defaultValue: "19080"
     summary: Port used for http connections to the cluster.
     description: ''
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --sku
-    defaultValue: Basic
+    defaultValue: "Basic"
     summary: "Cluster's Sku, the options are Basic: it will have a minimum of 3 seed nodes and only allows 1 node type and Standard: it will have a minimum of 5 seed nodes and allows multiple node types."
     description: ''
   - name: --tags
@@ -199,7 +199,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

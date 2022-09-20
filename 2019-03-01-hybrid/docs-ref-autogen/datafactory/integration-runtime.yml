@@ -39,7 +39,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_datafactory_integration-runtime_get-connection-info
@@ -299,7 +299,7 @@ directCommands:
     summary: The integration runtime name.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -333,7 +333,7 @@ directCommands:
     summary: The integration runtime name.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -461,18 +461,18 @@ directCommands:
     syntax: az datafactory integration-runtime wait --factory-name "exampleFactoryName" --name "exampleIntegrationRuntime" --resource-group "exampleResourceGroup" --created
   optionalParameters:
   - name: --created
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
     summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
     description: ''
   - name: --deleted
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until deleted.
     description: ''
   - name: --exists
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until the resource exists.
     description: ''
   - name: --factory-name
@@ -488,7 +488,7 @@ directCommands:
     summary: The integration runtime name.
     description: ''
   - name: --interval
-    defaultValue: 30
+    defaultValue: "30"
     summary: Polling interval in seconds.
     description: ''
   - name: --resource-group -g
@@ -498,11 +498,11 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --timeout
-    defaultValue: 3600
+    defaultValue: "3600"
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
@@ -535,7 +535,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -63,7 +63,7 @@ directCommands:
     summary: The name of the scope map with pre-configured repository permissions. Use "--repository" and/or "--gateway" if you would like CLI to configure one for you.
     description: ''
   - name: --status
-    defaultValue: enabled
+    defaultValue: "enabled"
     parameterValueGroup: disabled, enabled
     summary: The status of the token.
     description: ''
@@ -172,7 +172,7 @@ directCommands:
     summary: The name of the scope map associated with the token. If not specified, running this command will disassociate the current scope map related to the token.
     description: ''
   - name: --status
-    defaultValue: enabled
+    defaultValue: "enabled"
     parameterValueGroup: disabled, enabled
     summary: The status of the token.
     description: ''
@@ -194,7 +194,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

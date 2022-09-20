@@ -23,15 +23,15 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --location -l
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --name --operation-id -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The ID of an ongoing async operation.
     description: ''
   - name: --no-wait
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -48,7 +48,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

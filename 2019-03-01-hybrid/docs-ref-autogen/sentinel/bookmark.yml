@@ -36,86 +36,86 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --bookmark-id --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: ID of bookmark.
     description: ''
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
   optionalParameters:
   - name: --created
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The time the bookmark was created.
     description: ''
   - name: --created-by
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Describes a user that created the bookmark  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --display-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The display name of the bookmark.
     description: ''
   - name: --entity-mappings
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Describes the entity mappings of the bookmark  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --etag
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Etag of the azure resource.
     description: ''
   - name: --event-time
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The bookmark event time.
     description: ''
   - name: --incident-info
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Describes an incident that relates to bookmark  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --labels
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: List of labels relevant to this bookmark  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --notes
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The notes of the bookmark.
     description: ''
   - name: --query-content
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The query of the bookmark.
     description: ''
   - name: --query-end-time
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The end time for the query.
     description: ''
   - name: --query-result
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The query result of the bookmark.
     description: ''
   - name: --query-start-time
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The start time for the query.
     description: ''
   - name: --tactics
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: A list of relevant mitre attacks  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --techniques
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: A list of relevant mitre techniques  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --updated
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The last time the bookmark was updated.
     description: ''
   - name: --updated-by
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Describes a user that updated the bookmark  Shorthand syntax supported. Try `??` to show more.
     description: ''
 - uid: az_sentinel_bookmark_delete
@@ -131,25 +131,25 @@ directCommands:
                                 [--yes]
   optionalParameters:
   - name: --bookmark-id --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: ID of bookmark.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_sentinel_bookmark_expand
@@ -166,30 +166,30 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --bookmark-id --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: ID of bookmark.
     description: ''
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
   optionalParameters:
   - name: --end-time
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The end date filter, so the only expansion results returned are before this date.
     description: ''
   - name: --expansion-id
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The Id of the expansion to perform.
     description: ''
   - name: --start-time
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The start date filter, so the only expansion results returned are after this date.
     description: ''
 - uid: az_sentinel_bookmark_list
@@ -202,12 +202,12 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
 - uid: az_sentinel_bookmark_show
@@ -222,21 +222,21 @@ directCommands:
                               [--workspace-name]
   optionalParameters:
   - name: --bookmark-id --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: ID of bookmark.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
 - uid: az_sentinel_bookmark_update
@@ -272,39 +272,39 @@ directCommands:
                                 [--workspace-name]
   optionalParameters:
   - name: --add
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --bookmark-id --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: ID of bookmark.
     description: ''
   - name: --created
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The time the bookmark was created.
     description: ''
   - name: --created-by
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Describes a user that created the bookmark  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --display-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The display name of the bookmark.
     description: ''
   - name: --entity-mappings
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Describes the entity mappings of the bookmark  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --etag
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Etag of the azure resource.
     description: ''
   - name: --event-time
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The bookmark event time.
     description: ''
   - name: --force-string
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
@@ -312,66 +312,66 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --incident-info
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Describes an incident that relates to bookmark  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --labels
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: List of labels relevant to this bookmark  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --notes
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The notes of the bookmark.
     description: ''
   - name: --query-content
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The query of the bookmark.
     description: ''
   - name: --query-end-time
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The end time for the query.
     description: ''
   - name: --query-result
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The query result of the bookmark.
     description: ''
   - name: --query-start-time
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The start time for the query.
     description: ''
   - name: --remove
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --tactics
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: A list of relevant mitre attacks  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --techniques
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: A list of relevant mitre techniques  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --updated
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The last time the bookmark was updated.
     description: ''
   - name: --updated-by
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Describes a user that updated the bookmark  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
 commands:
@@ -395,7 +395,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

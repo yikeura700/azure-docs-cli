@@ -35,7 +35,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --open
-    defaultValue: False
+    defaultValue: "False"
     summary: Open the team project in the default web browser.
     description: ''
   - name: --org --organization
@@ -45,12 +45,12 @@ directCommands:
     summary: Process to use. Default if not specified.
     description: ''
   - name: --source-control -s
-    defaultValue: git
+    defaultValue: "git"
     parameterValueGroup: git, tfvc
     summary: Source control type of the initial code repository created.
     description: ''
   - name: --visibility
-    defaultValue: private
+    defaultValue: "private"
     parameterValueGroup: private, public
     summary: Project visibility.
     description: ''
@@ -77,7 +77,7 @@ directCommands:
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: https://dev.azure.com/MyOrganizationName/.'
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_devops_project_list
@@ -111,7 +111,7 @@ directCommands:
     summary: Number of results to skip.
     description: ''
   - name: --state-filter
-    defaultValue: all
+    defaultValue: "all"
     parameterValueGroup: all, createPending, deleted, deleting, new, unchanged, wellFormed
     summary: State filter.
     description: ''
@@ -138,7 +138,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --open
-    defaultValue: False
+    defaultValue: "False"
     summary: Open the team project in the default web browser.
     description: ''
   - name: --org --organization
@@ -157,7 +157,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

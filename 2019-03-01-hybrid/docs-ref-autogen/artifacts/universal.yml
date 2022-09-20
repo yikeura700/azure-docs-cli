@@ -54,7 +54,7 @@ directCommands:
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
   - name: --scope
-    defaultValue: organization
+    defaultValue: "organization"
     parameterValueGroup: organization, project
     summary: "Scope of the feed: 'project' if the feed was created in a project, and 'organization' otherwise."
     description: ''
@@ -104,7 +104,7 @@ directCommands:
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
   - name: --scope
-    defaultValue: organization
+    defaultValue: "organization"
     parameterValueGroup: organization, project
     summary: "Scope of the feed: 'project' if the feed was created in a project, and 'organization' otherwise."
     description: ''
@@ -119,7 +119,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

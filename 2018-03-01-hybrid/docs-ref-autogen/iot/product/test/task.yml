@@ -35,16 +35,16 @@ directCommands:
     summary: Override certification service URL to allow testing in non-production environements.
     description: ''
   - name: --interval --poll-interval
-    defaultValue: 3
+    defaultValue: "3"
     summary: Used in conjunction with --wait. Sepcifies how frequently (in seconds) polling occurs.
     description: ''
   - name: --type
-    defaultValue: QueueTestRun
+    defaultValue: "QueueTestRun"
     parameterValueGroup: GenerateTestCases, QueueTestRun
     summary: The type of task for the device test.
     description: ''
   - name: --wait -w
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Wait for task completion and return test case data when available.
     description: ''
@@ -96,7 +96,7 @@ directCommands:
     summary: Override certification service URL to allow testing in non-production environements.
     description: ''
   - name: --running
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Get the running tasks of a device test.
     description: ''
@@ -115,7 +115,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

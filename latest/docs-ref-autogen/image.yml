@@ -50,19 +50,19 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --cleanup
-    defaultValue: False
+    defaultValue: "False"
     summary: Include this switch to delete temporary resources upon completion.
     description: ''
   - name: --export-as-snapshot
-    defaultValue: False
+    defaultValue: "False"
     summary: Include this switch to export the copies as snapshots instead of images.
     description: ''
   - name: --parallel-degree
-    defaultValue: -1
+    defaultValue: "-1"
     summary: Number of parallel copy operations.
     description: ''
   - name: --source-type
-    defaultValue: image
+    defaultValue: "image"
     parameterValueGroup: image, vm
     summary: Image or vm.
     description: ''
@@ -76,11 +76,11 @@ directCommands:
     summary: Name or ID of the subscription where the final image should be created.
     description: ''
   - name: --temporary-resource-group-name --temporary_resource_group_name
-    defaultValue: image-copy-rg
+    defaultValue: "image-copy-rg"
     summary: Resource Group name where temporary storage account will be created. --temporary_resource_group_name will be deprecated in 0.2.7.
     description: ''
   - name: --timeout
-    defaultValue: 3600
+    defaultValue: "3600"
     summary: Time in seconds for the copy operation to finish. Increase this time if you are going to copy large images (disks) like 512GB or more.
     description: ''
 - uid: az_image_create
@@ -133,7 +133,7 @@ directCommands:
     summary: The name of edge zone.
     description: ''
   - name: --hyper-v-generation
-    defaultValue: V1
+    defaultValue: "V1"
     parameterValueGroup: V1, V2
     summary: The hypervisor generation of the Virtual Machine created from the image.
     description: ''
@@ -237,11 +237,11 @@ directCommands:
     syntax: az image update -n ImageName -g resourceGroup --tags
   optionalParameters:
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
@@ -251,14 +251,14 @@ directCommands:
     summary: The name of the image.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --subscription
@@ -304,7 +304,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

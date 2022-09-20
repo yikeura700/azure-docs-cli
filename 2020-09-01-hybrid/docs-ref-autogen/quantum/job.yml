@@ -161,7 +161,7 @@ directCommands:
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --no-build
-    defaultValue: False
+    defaultValue: "False"
     summary: If specified, the Q# program is not built before submitting.
     description: ''
   - name: --project
@@ -213,7 +213,7 @@ directCommands:
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --max-poll-wait-secs
-    defaultValue: 5
+    defaultValue: "5"
     summary: Poll time in seconds to query Azure Quantum for results of the corresponding job.
     description: ''
   - name: --resource-group -g
@@ -237,7 +237,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -64,11 +64,11 @@ directCommands:
     summary: OID of 'custom-locations' app.
     description: ''
   - name: --disable-auto-upgrade
-    defaultValue: False
+    defaultValue: "False"
     summary: Flag to disable auto upgrade of arc agents.
     description: ''
   - name: --distribution
-    defaultValue: auto
+    defaultValue: "auto"
     parameterValueGroup: aks, aks_engine, aks_management, aks_workload, auto, capz, eks, generic, gke, k3s, kind, minikube, openshift, rancher_rke, tkg
     summary: The Kubernetes distribution which will be running on this connected cluster.
     description: ''
@@ -77,7 +77,7 @@ directCommands:
     summary: 'Flag to enable/disable private link support on a connected cluster resource. Allowed values: false, true.'
     description: ''
   - name: --infrastructure
-    defaultValue: auto
+    defaultValue: "auto"
     parameterValueGroup: auto, aws, azure, azure_stack_edge, azure_stack_hci, azure_stack_hub, gcp, generic, vsphere, windows_server
     summary: The infrastructure on which the Kubernetes cluster represented by this connected cluster will be running on.
     description: ''
@@ -91,11 +91,11 @@ directCommands:
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --onboarding-timeout
-    defaultValue: 600
+    defaultValue: "600"
     summary: Time required (in seconds) for the arc-agent pods to be installed on the kubernetes cluster. Override this value if the hardware/network constraints on your cluster requires more time for installing the arc-agent pods.
     description: ''
   - name: --pls-arm-id --private-link-scope-resource-id
@@ -137,7 +137,7 @@ directCommands:
     syntax: az connectedk8s delete -g resourceGroupName -n connectedClusterName --kube-config /path/to/kubeconfig --kube-context kubeContextName
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     summary: Force delete to remove all azure-arc resources from the cluster.
     description: ''
   - name: --ids
@@ -153,7 +153,7 @@ directCommands:
     summary: The name of the connected cluster.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -163,7 +163,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_connectedk8s_disable-features
@@ -210,7 +210,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_connectedk8s_enable-features
@@ -313,7 +313,7 @@ directCommands:
     syntax: az connectedk8s proxy -n clusterName -g resourceGroupName --kube-context contextName
   optionalParameters:
   - name: --file -f
-    defaultValue: ~\.kube\config
+    defaultValue: "~\\.kube\\config"
     summary: Kubernetes configuration file to update. If not provided, updates the file '~/.kube/config'. Use '-' to print YAML to stdout instead.
     description: ''
   - name: --ids
@@ -326,7 +326,7 @@ directCommands:
     summary: The name of the connected cluster.
     description: ''
   - name: --port
-    defaultValue: 47011
+    defaultValue: "47011"
     summary: Port used for accessing connected cluster.
     description: ''
   - name: --resource-group -g
@@ -426,7 +426,7 @@ directCommands:
     summary: Flag to enable/disable auto upgrade of arc agents. By default, auto upgrade of agents is enabled.
     description: ''
   - name: --disable-proxy
-    defaultValue: False
+    defaultValue: "False"
     summary: Disables proxy settings for agents.
     description: ''
   - name: --ids
@@ -505,7 +505,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --upgrade-timeout
-    defaultValue: 600
+    defaultValue: "600"
     summary: Time required (in seconds) for the arc-agent pods to be upgraded on the kubernetes cluster. Override this value if the hardware/network constraints on your cluster requires more time for upgrading the arc-agent pods.
     description: ''
 commands:
@@ -527,7 +527,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

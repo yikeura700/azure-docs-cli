@@ -168,7 +168,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --rehydration-duration
-    defaultValue: 15
+    defaultValue: "15"
     summary: Set the maximum time, in days (between 10-30, both inclusive) for which the recovery point stays in hydrated state.
     description: ''
   - name: --rehydration-priority
@@ -242,7 +242,7 @@ directCommands:
     summary: ARM ID of the user-assigned managed identity to use for the restore operation. Specify a value for this parameter if you do not want to use a system-assigned MI for restoring the backup item.
     description: ''
   - name: --rehydration-duration
-    defaultValue: 15
+    defaultValue: "15"
     summary: Set the maximum time, in days (between 10-30, both inclusive) for which the recovery point stays in hydrated state.
     description: ''
   - name: --rehydration-priority
@@ -257,7 +257,7 @@ directCommands:
     summary: Use this flag to specify to restore as unmanaged disks.
     description: ''
   - name: --restore-mode
-    defaultValue: AlternateLocation
+    defaultValue: "AlternateLocation"
     parameterValueGroup: AlternateLocation, OriginalLocation
     summary: Specify the restore mode.
     description: ''
@@ -323,7 +323,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

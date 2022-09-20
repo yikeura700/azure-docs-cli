@@ -45,11 +45,11 @@ directCommands:
     summary: The origins load balanced by this origin group, as a comma-separated list of origin names or origin resource IDs.
     description: ''
   - name: --probe-interval
-    defaultValue: 240
+    defaultValue: "240"
     summary: The frequency to perform health probes in seconds.
     description: ''
   - name: --probe-method
-    defaultValue: HEAD
+    defaultValue: "HEAD"
     parameterValueGroup: GET, HEAD
     summary: The request method to use for health probes.
     description: ''
@@ -57,7 +57,7 @@ directCommands:
     summary: The path relative to the origin that is used to determine the health of the origin.
     description: ''
   - name: --probe-protocol
-    defaultValue: HTTP
+    defaultValue: "HTTP"
     parameterValueGroup: HTTP, HTTPS
     summary: The protocol to use for health probes.
     description: ''
@@ -94,7 +94,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
@@ -223,7 +223,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -27,7 +27,7 @@ directCommands:
     summary: Name of the Data Lake Store account.
     description: ''
   - name: --default-acl
-    defaultValue: False
+    defaultValue: "False"
     summary: A switch that, if specified, indicates that the remove ACL operation should remove the default ACL of the folder. Otherwise the regular ACL is removed.
     description: ''
   - name: --ids
@@ -246,7 +246,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

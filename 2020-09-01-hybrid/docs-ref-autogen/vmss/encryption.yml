@@ -20,7 +20,7 @@ directCommands:
     syntax: az vmss encryption disable -g MyResourceGroup -n MyVm
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     summary: Continue by ignoring client side validation errors.
     description: ''
   - name: --ids
@@ -67,14 +67,14 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     summary: Continue by ignoring client side validation errors.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --key-encryption-algorithm
-    defaultValue: RSA-OAEP
+    defaultValue: "RSA-OAEP"
     summary: ''
     description: ''
   - name: --key-encryption-key
@@ -135,7 +135,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

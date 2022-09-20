@@ -28,7 +28,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
@@ -91,26 +91,26 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
   - name: --duration --poll-duration
-    defaultValue: 600
+    defaultValue: "600"
     summary: Total duration in seconds where job status will be checked if --wait flag is passed in.
     description: ''
   - name: --hub-name -n
     summary: IoT Hub name. Required if --login is not provided.
     description: ''
   - name: --interval --poll-interval
-    defaultValue: 10
+    defaultValue: "10"
     summary: Interval in seconds that job status will be checked if --wait flag is passed in.
     description: ''
   - name: --login -l
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --hub-name is not provided.
     description: ''
   - name: --mct --method-connect-timeout
-    defaultValue: 30
+    defaultValue: "30"
     summary: Maximum number of seconds to wait on device connection.
     description: ''
   - name: --method-name --mn
@@ -120,7 +120,7 @@ directCommands:
     summary: Json payload to be passed to method. Must be file path or raw json.
     description: ''
   - name: --method-response-timeout --mrt
-    defaultValue: 30
+    defaultValue: "30"
     summary: Maximum number of seconds to wait for device method result.
     description: ''
   - name: --patch --twin-patch
@@ -136,11 +136,11 @@ directCommands:
     summary: The scheduled start of the job in ISO 8601 date time format. If no start time is provided, the job is queued for asap execution. Using a custom start time that's in the past may cause the operation to fail.
     description: ''
   - name: --ttl
-    defaultValue: 3600
+    defaultValue: "3600"
     summary: Max execution time in seconds, before job is terminated.
     description: ''
   - name: --wait -w
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Block until the created job is in a completed, failed or cancelled state. Will regularly poll on interval specified by --poll-interval.
     description: ''
@@ -169,7 +169,7 @@ directCommands:
     syntax: az iot hub job list --hub-name {iothub_name} --job-type export --job-status completed
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
@@ -213,7 +213,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
@@ -239,7 +239,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

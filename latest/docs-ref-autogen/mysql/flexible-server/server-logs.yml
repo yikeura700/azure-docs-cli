@@ -56,7 +56,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --file-last-written
-    defaultValue: 72
+    defaultValue: "72"
     summary: Integer in hours to indicate file last modify time.
     description: ''
   - name: --filename-contains
@@ -76,7 +76,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

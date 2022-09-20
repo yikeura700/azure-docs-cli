@@ -29,7 +29,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --encoding
-    defaultValue: utf-8
+    defaultValue: "utf-8"
     parameterValueGroup: ascii, utf-16be, utf-16le, utf-8
     summary: Encoding of the input file.
     description: ''
@@ -57,7 +57,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --deep
-    defaultValue: False
+    defaultValue: "False"
     summary: Specific to AzureRM endpoint created in Automatic flow. When it is specified, this will also delete corresponding AAD application in Azure.
     description: ''
   - name: --detect
@@ -71,7 +71,7 @@ directCommands:
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_devops_service-endpoint_list
@@ -166,7 +166,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

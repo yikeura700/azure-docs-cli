@@ -127,7 +127,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --encoding -e
-    defaultValue: PEM
+    defaultValue: "PEM"
     parameterValueGroup: DER, PEM
     summary: Encoding of the certificate. DER will create a binary DER formatted x509 certificate, and PEM will create a base64 PEM x509 certificate.
     description: ''
@@ -162,7 +162,7 @@ directCommands:
         -p "$(az keyvault certificate get-default-policy)"
   optionalParameters:
   - name: --scaffold
-    defaultValue: False
+    defaultValue: "False"
     summary: Create a fully formed policy structure with default values.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
@@ -477,7 +477,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

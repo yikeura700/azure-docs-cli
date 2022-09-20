@@ -61,11 +61,11 @@ directCommands:
     summary: 'Elliptic curve name. For valid values, see: https://docs.microsoft.com/rest/api/keyvault/keys/create-key/create-key#jsonwebkeycurvename.'
     description: ''
   - name: --default-cvm-policy
-    defaultValue: False
+    defaultValue: "False"
     summary: Use default policy under which the key can be exported for CVM disk encryption.
     description: ''
   - name: --disabled
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Create key in disabled state.
     description: ''
@@ -156,7 +156,7 @@ directCommands:
     summary: Optional data that is authenticated but not encrypted. For use with AES-GCM decryption.
     description: ''
   - name: --data-type
-    defaultValue: base64
+    defaultValue: "base64"
     parameterValueGroup: base64, plaintext
     summary: The type of the original data.
     description: ''
@@ -229,7 +229,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --encoding -e
-    defaultValue: PEM
+    defaultValue: "PEM"
     parameterValueGroup: DER, PEM
     summary: 'Encoding of the key, default: PEM.'
     description: ''
@@ -284,7 +284,7 @@ directCommands:
     summary: Optional data that is authenticated but not encrypted. For use with AES-GCM encryption.
     description: ''
   - name: --data-type
-    defaultValue: base64
+    defaultValue: "base64"
     parameterValueGroup: base64, plaintext
     summary: The type of the original data.
     description: ''
@@ -351,11 +351,11 @@ directCommands:
     summary: The curve name of the key to import (only for BYOK).
     description: ''
   - name: --default-cvm-policy
-    defaultValue: False
+    defaultValue: "False"
     summary: Use default policy under which the key can be exported for CVM disk encryption.
     description: ''
   - name: --disabled
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Create key in disabled state.
     description: ''
@@ -377,7 +377,7 @@ directCommands:
     summary: Mark a release policy as immutable. An immutable release policy cannot be changed or updated after being marked immutable. Release policies are mutable by default.
     description: ''
   - name: --kty
-    defaultValue: RSA
+    defaultValue: "RSA"
     parameterValueGroup: EC, RSA, oct
     summary: The type of key to import (only for BYOK).
     description: ''
@@ -432,7 +432,7 @@ directCommands:
     summary: Full URI of the Vault or HSM. If specified all other 'Id' arguments should be omitted.
     description: ''
   - name: --include-managed
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: 'Include managed keys. Default: false.'
     description: ''
@@ -596,7 +596,7 @@ directCommands:
     summary: Name of the key. (Only for restoring from storage account).
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --storage-account-name
@@ -774,7 +774,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

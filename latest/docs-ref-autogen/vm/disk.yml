@@ -55,7 +55,7 @@ directCommands:
     summary: One or more names or IDs of the managed disk (space-delimited).
     description: ''
   - name: --enable-write-accelerator
-    defaultValue: False
+    defaultValue: "False"
     summary: Enable write accelerator.
     description: ''
   - name: --ids
@@ -68,14 +68,14 @@ directCommands:
     summary: The name or ID of the managed disk.
     description: ''
   - name: --new
-    defaultValue: False
+    defaultValue: "False"
     summary: Create a new disk.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --size-gb -z
-    defaultValue: 1023
+    defaultValue: "1023"
     summary: 'Size in GB. Max size: 4095 GB (certain preview disks can be larger).'
     description: ''
   - name: --sku
@@ -129,7 +129,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

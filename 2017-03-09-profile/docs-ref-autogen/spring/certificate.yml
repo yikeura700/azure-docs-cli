@@ -38,7 +38,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --only-public-cert
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: If true, only import public certificate part from key vault.
     description: ''
@@ -156,7 +156,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

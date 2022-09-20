@@ -120,7 +120,7 @@ directCommands:
     summary: The endpoint type.
     description: ''
   - name: --frequency
-    defaultValue: 60
+    defaultValue: "60"
     summary: The frequency of test evaluation, in seconds.
     description: ''
   - name: --http-method
@@ -148,7 +148,7 @@ directCommands:
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --monitoring-interval
-    defaultValue: 60
+    defaultValue: "60"
     summary: Monitoring interval in seconds.
     description: ''
   - name: --notes
@@ -197,7 +197,7 @@ directCommands:
     summary: Value indicating whether test group is disabled. false is default.
     description: ''
   - name: --test-group-name
-    defaultValue: DefaultTestGroup
+    defaultValue: "DefaultTestGroup"
     summary: The name of the connection monitor test group.
     description: ''
   - name: --threshold-failed-percent
@@ -361,7 +361,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

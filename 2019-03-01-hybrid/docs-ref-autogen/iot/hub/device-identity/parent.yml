@@ -36,12 +36,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
   - name: --force -f
-    defaultValue: False
+    defaultValue: "False"
     summary: Overwrites the device's parent device.
     description: ''
   - name: --hub-name -n
@@ -73,7 +73,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
@@ -97,7 +97,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

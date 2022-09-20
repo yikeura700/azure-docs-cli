@@ -73,7 +73,7 @@ directCommands:
     summary: Enable local git.
     description: ''
   - name: --deployment-source-branch -b
-    defaultValue: master
+    defaultValue: "master"
     summary: The branch to deploy.
     description: ''
   - name: --deployment-source-url -u
@@ -102,7 +102,7 @@ directCommands:
     summary: Name or resource id of the app service plan. Use 'appservice plan create' to get one.
     description: ''
   - name: --role
-    defaultValue: Contributor
+    defaultValue: "Contributor"
     summary: Role name or id the system assigned identity will have.
     description: ''
   - name: --runtime -r
@@ -163,7 +163,7 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --instance-count
-    defaultValue: 1
+    defaultValue: "1"
     summary: Number of instances.
     description: ''
   optionalParameters:
@@ -236,7 +236,7 @@ directCommands:
     syntax: az webapp update --https-only true --name MyAppName --resource-group MyResourceGroup
   optionalParameters:
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --client-affinity-enabled
@@ -244,7 +244,7 @@ directCommands:
     summary: Enables sending session affinity cookies.
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --https-only
@@ -264,14 +264,14 @@ directCommands:
     summary: Number of preWarmed instances. App must be in an elastic scale App Service Plan.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --slot -s
@@ -397,7 +397,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -26,7 +26,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auto-swap-slot
-    defaultValue: production
+    defaultValue: "production"
     summary: Target slot to auto swap.
     description: ''
   - name: --disable
@@ -166,7 +166,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --action
-    defaultValue: swap
+    defaultValue: "swap"
     parameterValueGroup: preview, reset, swap
     summary: Swap types. use 'preview' to apply target slot's settings on the source slot first; use 'swap' to complete it; use 'reset' to reset the swap.
     description: ''
@@ -203,7 +203,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

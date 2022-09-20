@@ -35,7 +35,7 @@ directCommands:
     summary: "Space-separated identities to assign. Use '[system]' to refer to the system assigned identity. Default: '[system]'."
     description: ''
   - name: --role
-    defaultValue: Contributor
+    defaultValue: "Contributor"
     summary: Role name or id the managed identity will be assigned.
     description: ''
   - name: --scope
@@ -69,7 +69,7 @@ directCommands:
     summary: "Space-separated identities to assign. Use '[system]' to refer to the system assigned identity. Default: '[system]'."
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_staticwebapp_identity_show
@@ -103,7 +103,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

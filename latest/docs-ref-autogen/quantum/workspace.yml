@@ -42,7 +42,7 @@ directCommands:
           az quantum offerings list -l MyLocation -o table
   optionalParameters:
   - name: --auto-accept
-    defaultValue: False
+    defaultValue: "False"
     summary: If specified, provider terms are accepted without an interactive Y/N prompt.
     description: ''
   - name: --location -l
@@ -55,7 +55,7 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --skip-role-assignment
-    defaultValue: False
+    defaultValue: "False"
     summary: Skip the role assignment step for the quantum workspace in the storage account.
     description: ''
   - name: --storage-account -a
@@ -185,7 +185,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

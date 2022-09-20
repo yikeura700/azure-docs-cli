@@ -69,11 +69,11 @@ directCommands:
     summary: Authentication type for the endpoint. The default is keyBased.
     description: ''
   - name: --batch-frequency -b
-    defaultValue: 300
+    defaultValue: "300"
     summary: Request batch frequency in seconds. The maximum amount of time that can elapse before data is written to a blob, between 60 and 720 seconds.
     description: ''
   - name: --chunk-size -w
-    defaultValue: 300
+    defaultValue: "300"
     summary: Request chunk size in megabytes(MB). The maximum size of blobs, between 10 and 500 MB.
     description: ''
   - name: --connection-string -c
@@ -93,7 +93,7 @@ directCommands:
     summary: The entity path of the endpoint resource.
     description: ''
   - name: --ff --file-name-format
-    defaultValue: '{iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}'
+    defaultValue: "{iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}"
     summary: File name format for the blob. The file name format must contain {iothub}, {partition}, {YYYY}, {MM}, {DD}, {HH} and {mm} fields. All parameters are mandatory but can be reordered with or without delimiters.
     description: ''
   - name: --identity
@@ -223,7 +223,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

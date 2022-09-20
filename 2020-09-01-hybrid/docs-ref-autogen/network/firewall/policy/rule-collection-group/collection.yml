@@ -85,7 +85,7 @@ directCommands:
     summary: Space-separated list of destination ports. This argument is supported for Nat and Network Rule.
     description: "Notice: When the parameter --rule-name is 'network_rule', --destination-ports is required."
   - name: --enable-tls-insp --enable-tls-inspection
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Enable flag to terminate TLS connection for this rule.
     description: ''
@@ -267,7 +267,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

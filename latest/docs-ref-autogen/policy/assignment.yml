@@ -61,7 +61,7 @@ directCommands:
     summary: Display name of the policy assignment.
     description: ''
   - name: --enforcement-mode -e
-    defaultValue: Default
+    defaultValue: "Default"
     parameterValueGroup: Default, DoNotEnforce
     summary: Enforcement mode of the policy assignment, e.g. Default, DoNotEnforce. Please visit https://aka.ms/azure-policyAssignment-enforcement-mode for more information.
     description: ''
@@ -96,7 +96,7 @@ directCommands:
     summary: The resource group where the policy will be applied.
     description: ''
   - name: --role
-    defaultValue: Contributor
+    defaultValue: "Contributor"
     summary: Role name or id that will be assigned to the managed identity.
     description: ''
   - name: --scope
@@ -244,7 +244,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

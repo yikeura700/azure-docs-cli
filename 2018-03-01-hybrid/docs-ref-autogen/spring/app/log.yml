@@ -41,7 +41,7 @@ directCommands:
     summary: Name of an existing deployment of the app. Default to the production deployment if not specified.
     description: ''
   - name: --follow  -f
-    defaultValue: False
+    defaultValue: "False"
     summary: Specify if the logs should be streamed.
     description: ''
   - name: --format-json
@@ -51,11 +51,11 @@ directCommands:
     summary: Name of an existing instance of the deployment.
     description: ''
   - name: --limit
-    defaultValue: 2048
+    defaultValue: "2048"
     summary: Maximum kilobytes of logs to return. Ceiling number is 2048.
     description: ''
   - name: --lines
-    defaultValue: 50
+    defaultValue: "50"
     summary: Number of lines to show. Maximum is 10000.
     description: ''
   - name: --since
@@ -71,7 +71,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

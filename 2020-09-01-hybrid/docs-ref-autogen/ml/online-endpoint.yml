@@ -46,7 +46,7 @@ directCommands:
     summary: 'Local path to the YAML file containing the Azure ML online-endpoint specification. The YAML reference docs for online-endpoint can be found at: https://aka.ms/ml-cli-v2-endpoint-online-yaml-reference.'
     description: ''
   - name: --local
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: "Create endpoint locally. Note: traffic and auth is not supported locally. You can use 'az ml online-deployment create --local' directly. It will create an endpoint if one doesn't exist."
     description: ''
@@ -54,14 +54,14 @@ directCommands:
     summary: Name of the online endpoint.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running-operation to finish. Default is False.
     description: ''
   - name: --set
     summary: 'Update an object by specifying a property path and value to set. Example: --set property1.property2=<value>.'
     description: ''
   - name: --web -e
-    defaultValue: False
+    defaultValue: "False"
     summary: Show the endpoint's details in Azure ML studio in a web browser.
     description: ''
 - uid: az_ml_online-endpoint_delete
@@ -93,16 +93,16 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --local
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Delete local endpoint.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running-operation to finish. Default is False.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_ml_online-endpoint_get-credentials
@@ -163,7 +163,7 @@ directCommands:
     summary: Name of the deployment to target.
     description: ''
   - name: --local
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Invoke local endpoint. This will only work if a local deployment has been created for this endpoint.
     description: ''
@@ -196,7 +196,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --local
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: List all local endpoints.
     description: ''
@@ -228,11 +228,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --key-type
-    defaultValue: primary
+    defaultValue: "primary"
     summary: 'The type of key to regenerate. Allowed values: primary, secondary.'
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running-operation to finish. Default is False.
     description: ''
 - uid: az_ml_online-endpoint_show
@@ -265,12 +265,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --local
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Show local endpoint.
     description: ''
   - name: --web -e
-    defaultValue: False
+    defaultValue: "False"
     summary: Show the endpoint's details in Azure ML studio in a web browser.
     description: ''
 - uid: az_ml_online-endpoint_update
@@ -307,18 +307,18 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --file -f
     summary: 'Local path to the YAML file containing the Azure ML online-endpoint specification. The YAML reference docs for online-endpoint can be found at: https://aka.ms/ml-cli-v2-endpoint-online-yaml-reference.'
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --local
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Update local endpoint.
     description: ''
@@ -329,22 +329,22 @@ directCommands:
     summary: Name of the online endpoint.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running-operation to finish. Default is False.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --traffic -r
     summary: Space-separated key-value pairs, in quotes, for the traffic settings for the endpoint.
     description: ''
   - name: --web -e
-    defaultValue: False
+    defaultValue: "False"
     summary: Show the endpoint's details in Azure ML studio in a web browser.
     description: ''
 commands:
@@ -364,7 +364,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

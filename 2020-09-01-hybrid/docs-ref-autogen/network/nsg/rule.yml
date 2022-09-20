@@ -61,7 +61,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --access
-    defaultValue: Allow
+    defaultValue: "Allow"
     parameterValueGroup: Allow, Deny
     summary: ''
     description: ''
@@ -69,35 +69,35 @@ directCommands:
     summary: Rule description.
     description: ''
   - name: --destination-address-prefixes
-    defaultValue: '*'
+    defaultValue: "*"
     summary: Space-separated list of CIDR prefixes or IP ranges. Alternatively, specify ONE of 'VirtualNetwork', 'AzureLoadBalancer', 'Internet' or '*' to match all IPs. Besides, it also supports all available Service Tags like 'ApiManagement', 'SqlManagement', 'AzureMonitor', etc.
     description: ''
   - name: --destination-asgs
     summary: Space-separated list of application security group names or IDs. Limited by backend server, temporarily this argument only supports one application security group name or ID.
     description: ''
   - name: --destination-port-ranges
-    defaultValue: 80
+    defaultValue: "80"
     summary: Space-separated list of ports or port ranges between 0-65535. Use '*' to match all ports.
     description: ''
   - name: --direction
-    defaultValue: Inbound
+    defaultValue: "Inbound"
     parameterValueGroup: Inbound, Outbound
     summary: ''
     description: ''
   - name: --protocol
-    defaultValue: '*'
+    defaultValue: "*"
     parameterValueGroup: '*, Tcp, Udp'
     summary: Network protocol this rule applies to.
     description: ''
   - name: --source-address-prefixes
-    defaultValue: '*'
+    defaultValue: "*"
     summary: Space-separated list of CIDR prefixes or IP ranges. Alternatively, specify ONE of 'VirtualNetwork', 'AzureLoadBalancer', 'Internet' or '*' to match all IPs. Besides, it also supports all available Service Tags like 'ApiManagement', 'SqlManagement', 'AzureMonitor', etc.
     description: ''
   - name: --source-asgs
     summary: Space-separated list of application security group names or IDs. Limited by backend server, temporarily this argument only supports one application security group name or ID.
     description: ''
   - name: --source-port-ranges
-    defaultValue: '*'
+    defaultValue: "*"
     summary: Space-separated list of ports or port ranges between 0-65535. Use '*' to match all ports.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
@@ -120,20 +120,20 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of the network security group rule.
     description: ''
   - name: --no-wait
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --nsg-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of the network security group.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
@@ -162,7 +162,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --include-default
-    defaultValue: False
+    defaultValue: "False"
     summary: Include default security rules in the output.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
@@ -232,7 +232,7 @@ directCommands:
     summary: ''
     description: ''
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --description
@@ -252,7 +252,7 @@ directCommands:
     summary: ''
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
@@ -272,14 +272,14 @@ directCommands:
     summary: Network protocol this rule applies to.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --source-address-prefixes
@@ -309,7 +309,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

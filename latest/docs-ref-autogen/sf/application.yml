@@ -184,7 +184,7 @@ directCommands:
     summary: Specify the application type version.
     description: ''
   - name: --consider-warning-as-error --warning-as-error
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Indicates whether to treat a warning health event as an error event during health evaluation.
     description: ''
@@ -193,7 +193,7 @@ directCommands:
     summary: Specify the action to take if the monitored upgrade fails. The acceptable values for this parameter are Rollback or Manual.
     description: ''
   - name: --force-restart
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Indicates that the service host restarts even if the upgrade is a configuration-only change.
     description: ''
@@ -252,7 +252,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

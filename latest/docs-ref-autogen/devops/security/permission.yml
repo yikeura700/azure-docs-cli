@@ -37,7 +37,7 @@ directCommands:
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: https://dev.azure.com/MyOrganizationName/.'
     description: ''
   - name: --recurse
-    defaultValue: False
+    defaultValue: "False"
     summary: If true and this is a hierarchical namespace, return child ACLs of the specified token.
     description: ''
   - name: --token
@@ -112,7 +112,7 @@ directCommands:
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: https://dev.azure.com/MyOrganizationName/.'
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_devops_security_permission_show
@@ -183,11 +183,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --allow-bit
-    defaultValue: 0
+    defaultValue: "0"
     summary: Allow bit or addition of bits. Required if --deny-bit is missing.
     description: ''
   - name: --deny-bit
-    defaultValue: 0
+    defaultValue: "0"
     summary: Deny bit or addition of bits. Required if --allow-bit is missing.
     description: ''
   - name: --detect
@@ -195,7 +195,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --merge
-    defaultValue: 1
+    defaultValue: "1"
     parameterValueGroup: false, true
     summary: If set, the existing ACE has its allow and deny merged with                          the incoming ACE's allow and deny. If unset, the existing ACE is displaced.
     description: ''
@@ -219,7 +219,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -82,7 +82,7 @@ directCommands:
     summary: The storage account type.
     description: ''
   - name: --action
-    defaultValue: Allow
+    defaultValue: "Allow"
     summary: ''
     description: ''
   - name: --allow-blob-public-access
@@ -153,7 +153,7 @@ directCommands:
     summary: ''
     description: ''
   - name: --kind
-    defaultValue: Storage
+    defaultValue: "Storage"
     parameterValueGroup: BlobStorage, Storage
     summary: Indicate the type of storage account.
     description: ''
@@ -176,7 +176,7 @@ directCommands:
     summary: ''
     description: ''
   - name: --sku
-    defaultValue: Standard_RAGRS
+    defaultValue: "Standard_RAGRS"
     parameterValueGroup: Premium_LRS, Standard_GRS, Standard_LRS, Standard_RAGRS, Standard_ZRS
     summary: The storage account SKU.
     description: ''
@@ -222,7 +222,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
@@ -374,7 +374,7 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --key
-    defaultValue: primary
+    defaultValue: "primary"
     parameterValueGroup: primary, secondary
     summary: The key to use.
     description: ''
@@ -382,7 +382,7 @@ directCommands:
     summary: The storage account name.
     description: ''
   - name: --protocol
-    defaultValue: https
+    defaultValue: "https"
     parameterValueGroup: http, https
     summary: The default endpoint protocol.
     description: ''
@@ -480,7 +480,7 @@ directCommands:
     summary: Specify the Active Directory account type for Azure Storage.
     description: ''
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --allow-append --allow-protected-append-writes -w
@@ -504,7 +504,7 @@ directCommands:
     summary: Restrict copy to and from Storage Accounts within an AAD tenant or with Private Links to the same VNet.
     description: ''
   - name: --assign-identity
-    defaultValue: False
+    defaultValue: "False"
     summary: Generate and assign a new Storage Account Identity for this storage account for use with key management services like Azure KeyVault.
     description: ''
   - name: --azure-storage-sid
@@ -571,7 +571,7 @@ directCommands:
     summary: Specifies which service(s) to encrypt.
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --forest-name
@@ -627,7 +627,7 @@ directCommands:
     summary: A boolean flag which indicates whether microsoft routing storage endpoints are to be published.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
@@ -644,7 +644,7 @@ directCommands:
     summary: Expiration period of the SAS Policy assigned to the storage account, DD.HH:MM:SS.
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --sku
@@ -697,7 +697,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

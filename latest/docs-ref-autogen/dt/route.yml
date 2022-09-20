@@ -38,7 +38,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --filter
-    defaultValue: true
+    defaultValue: "true"
     summary: Event route filter.
     description: ''
   - name: --resource-group -g
@@ -124,7 +124,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

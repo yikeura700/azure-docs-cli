@@ -64,7 +64,7 @@ directCommands:
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_boards_area_project_list
@@ -79,7 +79,7 @@ directCommands:
                                 [--project]
   optionalParameters:
   - name: --depth
-    defaultValue: 1
+    defaultValue: "1"
     summary: 'Depth of child nodes to be fetched. Example: --depth 3.'
     description: ''
   - name: --detect
@@ -167,7 +167,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -53,7 +53,7 @@ directCommands:
     summary: Specify the recovery point ID which will be used for restoring the data.
     description: ''
   - name: --rehydration-duration
-    defaultValue: 15
+    defaultValue: "15"
     summary: Specify the rehydration duration for rehydrate restore.
     description: ''
   - name: --rehydration-priority
@@ -115,7 +115,7 @@ directCommands:
     summary: Specify the recovery point ID which will be used for restoring the data.
     description: ''
   - name: --rehydration-duration
-    defaultValue: 15
+    defaultValue: "15"
     summary: Specify the rehydration duration for rehydrate restore.
     description: ''
   - name: --rehydration-priority
@@ -202,7 +202,7 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -227,7 +227,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

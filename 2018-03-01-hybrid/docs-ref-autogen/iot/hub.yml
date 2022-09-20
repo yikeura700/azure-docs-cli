@@ -40,7 +40,7 @@ directCommands:
     syntax: az iot hub generate-sas-token --connection-string 'HostName=myhub.azure-devices.net;DeviceId=mydevice;ModuleId=mymodule;SharedAccessKeyName=iothubowner;SharedAccessKey=12345'
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
@@ -51,14 +51,14 @@ directCommands:
     summary: Target Device Id.
     description: ''
   - name: --du --duration
-    defaultValue: 3600
+    defaultValue: "3600"
     summary: Valid token duration in seconds.
     description: ''
   - name: --hub-name -n
     summary: IoT Hub name. Required if --login is not provided.
     description: ''
   - name: --key-type --kt
-    defaultValue: primary
+    defaultValue: "primary"
     parameterValueGroup: primary, secondary
     summary: Shared access policy key type for authentication.
     description: ''
@@ -69,7 +69,7 @@ directCommands:
     summary: Target Module Id.
     description: ''
   - name: --pn --policy-name
-    defaultValue: iothubowner
+    defaultValue: "iothubowner"
     summary: Shared access policy with operation permissions for target IoT Hub entity.
     description: ''
   - name: --resource-group -g
@@ -102,7 +102,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
@@ -113,14 +113,14 @@ directCommands:
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --hub-name is not provided.
     description: ''
   - name: --method-payload --mp
-    defaultValue: '{}'
+    defaultValue: "{}"
     summary: Json payload to be passed to method. Must be file path or raw json.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --timeout --to
-    defaultValue: 30
+    defaultValue: "30"
     summary: Maximum number of seconds to wait for the device method result.
     description: ''
 - uid: az_iot_hub_invoke-module-method
@@ -155,7 +155,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
@@ -166,14 +166,14 @@ directCommands:
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --hub-name is not provided.
     description: ''
   - name: --method-payload --mp
-    defaultValue: '{}'
+    defaultValue: "{}"
     summary: Json payload to be passed to method. Must be file path or raw json.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --timeout --to
-    defaultValue: 30
+    defaultValue: "30"
     summary: Maximum number of seconds to wait for the module method result.
     description: ''
 - uid: az_iot_hub_monitor-events
@@ -224,7 +224,7 @@ directCommands:
     syntax: az iot hub monitor-events -n {iothub_name} --message-count {message_count}
   optionalParameters:
   - name: --cg --consumer-group -c
-    defaultValue: $Default
+    defaultValue: "$Default"
     summary: Specify the consumer group to use when connecting to event hub endpoint.
     description: ''
   - name: --content-type --ct
@@ -259,7 +259,7 @@ directCommands:
     summary: Indicate key message properties to output. sys = system properties, app = application properties, anno = annotations.
     description: ''
   - name: --repair -r
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: 'Reinstall uamqp dependency compatible with extension version. Default: false.'
     description: ''
@@ -267,11 +267,11 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --timeout --to -t
-    defaultValue: 300
+    defaultValue: "300"
     summary: Maximum seconds to maintain connection without receiving message. Use 0 for infinity.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: 'Skip user prompts. Indicates acceptance of action. Used primarily for automation scenarios. Default: false.'
     description: ''
@@ -302,7 +302,7 @@ directCommands:
     syntax: az iot hub monitor-feedback -n {iothub_name} -d {device_id} -w {message_id}
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
@@ -316,7 +316,7 @@ directCommands:
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --hub-name is not provided.
     description: ''
   - name: --repair -r
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: 'Reinstall uamqp dependency compatible with extension version. Default: false.'
     description: ''
@@ -327,7 +327,7 @@ directCommands:
     summary: Feedback monitor will block until a message with specific id (uuid) is received.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: 'Skip user prompts. Indicates acceptance of action. Used primarily for automation scenarios. Default: false.'
     description: ''
@@ -354,7 +354,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
@@ -441,7 +441,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

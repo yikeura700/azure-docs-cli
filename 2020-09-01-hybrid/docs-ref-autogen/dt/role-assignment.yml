@@ -99,7 +99,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --include-inherited
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Include assignments applied on parent scopes.
     description: ''
@@ -121,7 +121,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

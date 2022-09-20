@@ -31,7 +31,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --force
-    defaultValue: False
+    defaultValue: "False"
     summary: Force the function link even if the function is already linked to a static webapp. May be needed if the function was previously linked to a static webapp.
     description: ''
 - uid: az_staticwebapp_functions_show
@@ -84,7 +84,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

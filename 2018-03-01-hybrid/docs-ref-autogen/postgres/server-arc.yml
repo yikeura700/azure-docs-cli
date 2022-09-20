@@ -67,7 +67,7 @@ directCommands:
     summary: If specified, no external service will be created. Otherwise, an external service will be created using either the type given with the --service-type argument or the same service type as the data controller.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: If given, the command will not wait for the instance to be in a ready state before returning.
     description: ''
   - name: --path
@@ -119,7 +119,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --force -f
-    defaultValue: False
+    defaultValue: "False"
     summary: Force delete the Azure Arc enabled PostgreSQL server without confirmation.
     description: ''
   - name: --k8s-namespace -k
@@ -223,7 +223,7 @@ directCommands:
     summary: If specified, no external service will be created. Otherwise, an external service will be created using either the type given with the --service-type argument or the same service type as the data controller.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: If given, the command will not wait for the instance to be in a ready state before returning.
     description: ''
   - name: --path
@@ -260,7 +260,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

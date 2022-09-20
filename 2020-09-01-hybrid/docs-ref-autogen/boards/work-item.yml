@@ -59,7 +59,7 @@ directCommands:
     summary: Iteration path of the work item (e.g. Demos\Iteration 1).
     description: ''
   - name: --open
-    defaultValue: False
+    defaultValue: "False"
     summary: Open the work item in the default web browser.
     description: ''
   - name: --org --organization
@@ -89,7 +89,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --destroy
-    defaultValue: False
+    defaultValue: "False"
     summary: Permanently delete this work item.
     description: ''
   - name: --detect
@@ -103,7 +103,7 @@ directCommands:
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_boards_work-item_show
@@ -132,7 +132,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --expand
-    defaultValue: all
+    defaultValue: "all"
     parameterValueGroup: all, fields, links, none, relations
     summary: The expand parameters for work item attributes.
     description: ''
@@ -140,7 +140,7 @@ directCommands:
     summary: Comma-separated list of requested fields. Example:System.Id,System.AreaPath. Refer https://aka.ms/azure-devops-cli-field-api for more details on fields.
     description: ''
   - name: --open
-    defaultValue: False
+    defaultValue: "False"
     summary: Open the work item in the default web browser.
     description: ''
   - name: --org --organization
@@ -193,7 +193,7 @@ directCommands:
     summary: Iteration path of the work item (e.g. Demos\Iteration 1).
     description: ''
   - name: --open
-    defaultValue: False
+    defaultValue: "False"
     summary: Open the work item in the default web browser.
     description: ''
   - name: --org --organization
@@ -226,7 +226,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

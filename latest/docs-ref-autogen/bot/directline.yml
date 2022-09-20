@@ -44,16 +44,16 @@ directCommands:
     summary: If true, v3 protocol will be disabled on the channel.
     description: ''
   - name: --enable-enhanced-auth
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: If true, enables enhanced authentication features. Must be true for --trusted-origins parameters to work.
     description: ''
   - name: --location -l
-    defaultValue: global
+    defaultValue: "global"
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --site-name -s
-    defaultValue: Default Site
+    defaultValue: "Default Site"
     summary: Name of the Directline channel site.
     description: ''
   - name: --trusted-origins
@@ -139,12 +139,12 @@ directCommands:
     summary: If true, v3 protocol will be disabled on the channel.
     description: ''
   - name: --enable-enhanced-auth
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: If true, enables enhanced authentication features. Must be true for --trusted-origins parameters to work.
     description: ''
   - name: --site-name -s
-    defaultValue: Default Site
+    defaultValue: "Default Site"
     summary: Name of the Directline channel site.
     description: ''
   - name: --trusted-origins
@@ -164,7 +164,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

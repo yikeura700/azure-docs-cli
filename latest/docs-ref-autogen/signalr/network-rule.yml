@@ -43,15 +43,15 @@ directCommands:
     syntax: az signalr network-rule update --public-network --connection-name MyPrivateEndpointConnection1 MyPrivateEndpointConnection2 -n MySignalR -g MyResourceGroup --deny ClientConnection
   optionalParameters:
   - name: --allow
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'The allowed virtual network rule. Space-separeted list of scope to assign. Allowed values: ClientConnection, ServerConnection, RESTAPI.'
     description: ''
   - name: --connection-name
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: Space-separeted list of private endpoint connection name.
     description: ''
   - name: --deny
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'The denied virtual network rule. Space-separeted list of scope to assign. Allowed values: ClientConnection, ServerConnection, RESTAPI.'
     description: ''
   - name: --ids
@@ -82,7 +82,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

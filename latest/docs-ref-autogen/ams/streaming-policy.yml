@@ -64,7 +64,7 @@ directCommands:
     summary: Policy used by Default Content Key.
     description: ''
   - name: --cbcs-fair-play-allow-persistent-license
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Allows the license to be persistent or not.
     description: ''
@@ -240,7 +240,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

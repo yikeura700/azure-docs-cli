@@ -79,22 +79,22 @@ directCommands:
     summary: Custom domains referenced by this endpoint.
     description: ''
   - name: --enable-caching
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Indicates whether caching is enanbled on that route.
     description: ''
   - name: --enable-compression
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
     description: ''
   - name: --enabled-state
-    defaultValue: Enabled
+    defaultValue: "Enabled"
     parameterValueGroup: Disabled, Enabled
     summary: Whether to enable this route.
     description: ''
   - name: --link-to-default-domain
-    defaultValue: Disabled
+    defaultValue: "Disabled"
     parameterValueGroup: Disabled, Enabled
     summary: Whether this route will be linked to the default endpoint domain.
     description: ''
@@ -149,7 +149,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_afd_route_list
@@ -328,7 +328,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

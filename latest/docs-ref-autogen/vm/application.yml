@@ -58,7 +58,7 @@ directCommands:
     summary: The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=<name>`.
     description: ''
   - name: --order-applications
-    defaultValue: False
+    defaultValue: "False"
     summary: Whether to set order index at each gallery application. If specified, the first app version id gets specified an order = 1, then the next one 2, and so on. This parameter is meant to be used when the VMApplications specified by app version ids must be installed in a particular order; the lowest order is installed first.
     description: ''
   - name: --resource-group -g
@@ -82,7 +82,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

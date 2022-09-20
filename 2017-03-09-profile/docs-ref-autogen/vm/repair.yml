@@ -42,18 +42,18 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --associate-public-ip
-    defaultValue: False
+    defaultValue: "False"
     summary: Option to create repair vm with public ip.
     description: ''
   - name: --copy-disk-name
     summary: Name of OS disk copy.
     description: ''
   - name: --distro
-    defaultValue: ubuntu
+    defaultValue: "ubuntu"
     summary: Option to create repair vm from a specific linux distro (rhel7|rhel8|suse12|ubuntu20|centos7|oracle7).
     description: ''
   - name: --enable-nested
-    defaultValue: False
+    defaultValue: "False"
     summary: Enable nested hyperv.
     description: ''
   - name: --repair-group-name
@@ -69,7 +69,7 @@ directCommands:
     summary: Name of repair VM.
     description: ''
   - name: --unlock-encrypted-vm
-    defaultValue: False
+    defaultValue: "False"
     summary: Option to auto-unlock encrypted VMs using current subscription auth.
     description: ''
 - uid: az_vm_repair_list-scripts
@@ -121,7 +121,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation to start VM if it is not running.
     description: ''
 - uid: az_vm_repair_restore
@@ -161,7 +161,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes
-    defaultValue: False
+    defaultValue: "False"
     summary: Deletes the repair resources without confirmation.
     description: ''
 - uid: az_vm_repair_run
@@ -216,7 +216,7 @@ directCommands:
     summary: Unique run id for run scripts.
     description: ''
   - name: --run-on-repair
-    defaultValue: False
+    defaultValue: "False"
     summary: Script will be run on the linked repair VM.
     description: ''
   - name: --subscription
@@ -236,7 +236,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

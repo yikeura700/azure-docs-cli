@@ -64,7 +64,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --allow-insecure
-    defaultValue: False
+    defaultValue: "False"
     summary: Allow insecure connections for ingress traffic.
     description: ''
   - name: --exposed-port
@@ -83,7 +83,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --transport
-    defaultValue: auto
+    defaultValue: "auto"
     parameterValueGroup: auto, http, http2, tcp
     summary: The transport protocol used for ingress traffic.
     description: ''
@@ -127,7 +127,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

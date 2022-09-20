@@ -52,7 +52,7 @@ directCommands:
     summary: Default the container to use specified encryption scope for all writes.
     description: ''
   - name: --fail-on-exist
-    defaultValue: False
+    defaultValue: "False"
     summary: Throw an exception if the container already exists.
     description: ''
   - name: --metadata
@@ -113,14 +113,14 @@ directCommands:
     summary: 'The mode in which to run the command. "login" mode will directly use your login credentials for the authentication. The legacy "key" mode will attempt to query for an account key if no authentication parameters for the account are provided. Environment variable: AZURE_STORAGE_AUTH_MODE.'
     description: ''
   - name: --bypass-immutability-policy
-    defaultValue: False
+    defaultValue: "False"
     summary: Bypasses upcoming service behavior that will block a container from being deleted if it has a immutability-policy. Specifying this will ignore arguments aside from those used to identify the container ("--name", "--account-name").
     description: ''
   - name: --connection-string
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --fail-not-exist
-    defaultValue: False
+    defaultValue: "False"
     summary: Throw an exception if the container does not exist.
     description: ''
   - name: --if-modified-since
@@ -305,14 +305,14 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --include-metadata
-    defaultValue: False
+    defaultValue: "False"
     summary: Specifies that container metadata be returned in the response.
     description: ''
   - name: --marker
     summary: An opaque continuation token. This value can be retrieved from the next_marker field of a previous generator object if num_results was specified and that generator has finished enumerating results. If specified, this generator will begin returning results from the point where the previous generator stopped.
     description: ''
   - name: --num-results
-    defaultValue: 5000
+    defaultValue: "5000"
     summary: Specifies the maximum number of results to return. Provide "*" to return all.
     description: ''
   - name: --prefix
@@ -545,7 +545,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

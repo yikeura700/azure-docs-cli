@@ -85,7 +85,7 @@ directCommands:
     summary: The number of hours between backup attempts.
     description: ''
   - name: --identity-type
-    defaultValue: None
+    defaultValue: "None"
     parameterValueGroup: None, SystemAssigned
     summary: Type of identity used for Customer Managed Disk Key.
     description: ''
@@ -93,7 +93,7 @@ directCommands:
     summary: The intial password to be configured when a cluster is created for authentication_method Cassandra.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --repair-enabled
@@ -128,11 +128,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_managed-cassandra_cluster_list
@@ -224,7 +224,7 @@ directCommands:
     summary: Type of identity used for Customer Managed Disk Key.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --repair-enabled
@@ -250,7 +250,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

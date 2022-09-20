@@ -25,48 +25,48 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --body
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Content of the query.
     description: ''
   - isRequired: true
     name: --display-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Unique display name for your query within the query pack.
     description: ''
   - isRequired: true
     name: --name --query-id -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The id name of a specific query defined in the log analytics query pack. It must be of type GUID.
     description: ''
   - isRequired: true
     name: --query-pack-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the log analytics query pack.
     description: ''
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   optionalParameters:
   - name: --categories
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The related categories for the function.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --description
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Description of the query.
     description: ''
   - name: --resource-types
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The related resource types for the function.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --solutions
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The related Log Analytics solutions for the function.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --tags
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Tags associated with the query.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
@@ -89,22 +89,22 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name --query-id -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The id name of a specific query defined in the log analytics query pack. It must be of type GUID.
     description: ''
   - name: --query-pack-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the log analytics query pack.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
@@ -124,17 +124,17 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --query-pack-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the log analytics query pack.
     description: ''
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   optionalParameters:
   - name: --include-body
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: 'Whether or not to return the body of each applicable query. If false, only return the query information.  Default: true.'
     description: ''
@@ -160,38 +160,38 @@ directCommands:
     syntax: az monitor log-analytics query-pack query search -g resourceGroupName --query-pack-name queryPackName --categories network --resource-types microsoft.insights/autoscalesettings --solutions networkmonitoring --tags version="[v2021-12-01]" --include-body false
   optionalParameters:
   - name: --categories
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The related categories for the function.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --include-body
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: 'Whether or not to return the body of each applicable query. If false, only return the query information.  Default: true.'
     description: ''
   - name: --query-pack-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the log analytics query pack.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --resource-types
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The related resource types for the function.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --solutions
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The related Log Analytics solutions for the function.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --tags
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Tags associated with the query.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
@@ -213,15 +213,15 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name --query-id -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The id name of a specific query defined in the log analytics query pack. It must be of type GUID.
     description: ''
   - name: --query-pack-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the log analytics query pack.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
@@ -254,27 +254,27 @@ directCommands:
     syntax: az monitor log-analytics query-pack query update --query-id 112c6b1f-5a86-4f01-a2d7-efb8e31f930f -g resourceGroup  --query-pack-name queryPackName --body "heartbeat | take 20" --categories [2]=databases --tags version[0]=null
   optionalParameters:
   - name: --add
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --body
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Content of the query.
     description: ''
   - name: --categories
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The related categories for the function.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --description
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Description of the query.
     description: ''
   - name: --display-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Unique display name for your query within the query pack.
     description: ''
   - name: --force-string
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
@@ -282,38 +282,38 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name --query-id -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The id name of a specific query defined in the log analytics query pack. It must be of type GUID.
     description: ''
   - name: --query-pack-name
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the log analytics query pack.
     description: ''
   - name: --remove
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --resource-types
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The related resource types for the function.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --set
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --solutions
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The related Log Analytics solutions for the function.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --tags
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Tags associated with the query.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
@@ -332,7 +332,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

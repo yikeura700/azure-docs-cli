@@ -41,17 +41,17 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --disable-copy-paste
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Disable copy and paste for all sessions on this Azure Bastion resource.
     description: ''
   - name: --enable-ip-connect
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Enable IP-based Connections on this Azure Bastion resource.
     description: ''
   - name: --enable-tunneling
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Enable Native Client Support on this Azure Bastion resource.
     description: ''
@@ -59,7 +59,7 @@ directCommands:
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --tags
@@ -98,7 +98,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --disable-gateway
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Flag to disable access through RD gateway.
     description: ''
@@ -231,7 +231,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

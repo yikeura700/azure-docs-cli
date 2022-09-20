@@ -33,7 +33,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --origin-response-timeout-seconds
-    defaultValue: 30
+    defaultValue: "30"
     summary: Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
     description: ''
   - name: --tags
@@ -174,7 +174,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

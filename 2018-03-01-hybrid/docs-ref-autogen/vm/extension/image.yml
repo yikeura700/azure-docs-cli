@@ -26,7 +26,7 @@ directCommands:
           -o tsv | sort -u | xargs -I{} az vm extension image list-names --publisher {} -l westus
   optionalParameters:
   - name: --latest
-    defaultValue: False
+    defaultValue: "False"
     summary: Show the latest version only.
     description: ''
   - name: --location -l
@@ -168,7 +168,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

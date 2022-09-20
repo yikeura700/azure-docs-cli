@@ -46,14 +46,14 @@ directCommands:
                   [--subscription]
   optionalParameters:
   - name: --debug-extension
-    defaultValue: False
+    defaultValue: "False"
     summary: Enable debug mode on the VM Extension for SAP.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --install-new-extension -i
-    defaultValue: False
+    defaultValue: "False"
     summary: Install the new VM Extension for SAP.
     description: ''
   - name: --name -n
@@ -66,11 +66,11 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set-access-to-individual-resources -s
-    defaultValue: False
+    defaultValue: "False"
     summary: Set the access of the VM identity to the individual resources, e.g. data disks instead of the complete resource group.
     description: ''
   - name: --skip-storage-analytics
-    defaultValue: False
+    defaultValue: "False"
     summary: Skip enabling analytics on storage accounts.
     description: ''
   - name: --subscription
@@ -98,14 +98,14 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --skip-storage-check
-    defaultValue: False
+    defaultValue: "False"
     summary: Disables the test for table content.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --wait-time-in-minutes
-    defaultValue: 15
+    defaultValue: "15"
     summary: Maximum minutes to wait for the storage metrics to be available.
     description: ''
 commands:
@@ -120,7 +120,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

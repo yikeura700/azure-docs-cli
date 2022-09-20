@@ -51,7 +51,7 @@ directCommands:
     summary: The authorization key for the VPN connection.
     description: ''
   - name: --enable-bgp
-    defaultValue: False
+    defaultValue: "False"
     summary: Enable BGP for this VPN connection.
     description: ''
   - name: --express-route-circuit2
@@ -64,7 +64,7 @@ directCommands:
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --routing-weight
-    defaultValue: 10
+    defaultValue: "10"
     summary: Connection routing weight.
     description: ''
   - name: --shared-key
@@ -74,12 +74,12 @@ directCommands:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
   - name: --use-policy-based-traffic-selectors
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Enable policy-based traffic selectors.
     description: ''
   - name: --validate
-    defaultValue: False
+    defaultValue: "False"
     summary: Display and validate the ARM template but do not create any resources.
     description: ''
   - name: --vnet-gateway2
@@ -228,11 +228,11 @@ directCommands:
     syntax: az network vpn-connection update --name MyConnection --resource-group MyResourceGroup --use-policy-based-traffic-selectors true
   optionalParameters:
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --content-type
-    defaultValue: application/json
+    defaultValue: "application/json"
     summary: ''
     description: ''
   - name: --enable-bgp
@@ -240,7 +240,7 @@ directCommands:
     summary: Enable BGP (Border Gateway Protocol).
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
@@ -250,7 +250,7 @@ directCommands:
     summary: Connection name.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
@@ -260,7 +260,7 @@ directCommands:
     summary: Connection routing weight.
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --shared-key
@@ -300,7 +300,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

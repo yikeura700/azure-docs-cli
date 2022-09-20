@@ -40,7 +40,7 @@ directCommands:
     summary: HTTP status to return for blocked requests.
     description: ''
   - name: --disabled
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Create in a disabled state.
     description: ''
@@ -139,7 +139,7 @@ directCommands:
                                             [--tags]
   optionalParameters:
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --custom-block-response-body
@@ -149,12 +149,12 @@ directCommands:
     summary: HTTP status to return for blocked requests.
     description: ''
   - name: --disabled
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Create in a disabled state.
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
@@ -171,7 +171,7 @@ directCommands:
     summary: URL used for redirect rule action.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --request-body-check
@@ -182,7 +182,7 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --sku
@@ -233,7 +233,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

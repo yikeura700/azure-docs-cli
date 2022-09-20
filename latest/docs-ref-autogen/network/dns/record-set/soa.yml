@@ -71,7 +71,7 @@ directCommands:
     summary: Create the record set only if it does not already exist.
     description: ''
   - name: --minimum-ttl -m
-    defaultValue: 3600
+    defaultValue: "3600"
     summary: Minimum TTL (time-to-live, seconds).
     description: ''
   - name: --refresh-time -f
@@ -95,7 +95,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -27,7 +27,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --system-assigned
-    defaultValue: False
+    defaultValue: "False"
     summary: Enable a system assigned identity.
     description: ''
 - uid: az_vmware_private-cloud_identity_remove
@@ -49,7 +49,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --system-assigned
-    defaultValue: False
+    defaultValue: "False"
     summary: Disable a system assigned identity.
     description: ''
 - uid: az_vmware_private-cloud_identity_show
@@ -80,7 +80,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

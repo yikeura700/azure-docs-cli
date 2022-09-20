@@ -131,11 +131,11 @@ directCommands:
     summary: "Start time in iso 8601, e.g. '2022-01-02T16:15:00'. Default: 1 hour early."
     description: ''
   - name: --internal-ms
-    defaultValue: 1000
+    defaultValue: "1000"
     summary: 'The time interval in milliseconds of time series. Default: 1000.'
     description: ''
   - name: --max-data-points
-    defaultValue: 100
+    defaultValue: "100"
     summary: 'Maximum amount of data points that dashboard panel can render. Default: 1000.'
     description: ''
   - name: --query-format
@@ -217,7 +217,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

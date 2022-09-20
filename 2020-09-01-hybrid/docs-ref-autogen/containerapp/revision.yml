@@ -107,7 +107,7 @@ directCommands:
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
   - name: --remove-all-env-vars
-    defaultValue: False
+    defaultValue: "False"
     summary: Remove all environment variable(s) from container..
     description: ''
   - name: --remove-env-vars
@@ -202,7 +202,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --all
-    defaultValue: False
+    defaultValue: "False"
     summary: Show inactive revisions.
     description: ''
 - uid: az_containerapp_revision_restart
@@ -321,7 +321,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

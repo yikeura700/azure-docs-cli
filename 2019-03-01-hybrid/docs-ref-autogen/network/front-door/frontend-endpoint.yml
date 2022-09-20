@@ -118,12 +118,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --certificate-source
-    defaultValue: FrontDoor
+    defaultValue: "FrontDoor"
     parameterValueGroup: AzureKeyVault, FrontDoor
     summary: Certificate source to enable HTTPS.
     description: ''
   - name: --minimum-tls-version
-    defaultValue: 1.2
+    defaultValue: "1.2"
     parameterValueGroup: 1.0, 1.2
     summary: The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
     description: ''
@@ -206,30 +206,30 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --created
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
     summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
     description: ''
   - name: --deleted
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until deleted.
     description: ''
   - name: --exists
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until the resource exists.
     description: ''
   - name: --interval
-    defaultValue: 30
+    defaultValue: "30"
     summary: Polling interval in seconds.
     description: ''
   - name: --timeout
-    defaultValue: 3600
+    defaultValue: "3600"
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
@@ -248,7 +248,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

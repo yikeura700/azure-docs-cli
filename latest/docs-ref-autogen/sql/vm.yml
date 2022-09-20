@@ -123,7 +123,7 @@ directCommands:
     summary: Backup schedule type.
     description: ''
   - name: --backup-system-dbs
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Include system databases on backup.
     description: ''
@@ -147,7 +147,7 @@ directCommands:
     summary: Enable or disable autopatching on SQL virtual machine. If any autopatching settings provided, parameter automatically sets to true.
     description: ''
   - name: --enable-encryption
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Enable encryption for backup on SQL virtual machine.
     description: ''
@@ -217,7 +217,7 @@ directCommands:
     summary: SQL Server sysadmin login to create.
     description: ''
   - name: --sql-mgmt-type
-    defaultValue: LightWeight
+    defaultValue: "LightWeight"
     parameterValueGroup: Full, LightWeight, NoAgent
     summary: SQL Server management type. If NoAgent selected, please provide --image-sku and --offer-type.
     description: ''
@@ -256,7 +256,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
@@ -434,7 +434,7 @@ directCommands:
     syntax: az sql vm update -n sqlvm -g myresourcegroup --enable-assessment true
   optionalParameters:
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --am-day --assessment-day-of-week
@@ -464,7 +464,7 @@ directCommands:
     summary: Backup schedule type.
     description: ''
   - name: --backup-system-dbs
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Include system databases on backup.
     description: ''
@@ -492,7 +492,7 @@ directCommands:
     summary: Enable or disable autopatching on SQL virtual machine. If any autopatching settings provided, parameter automatically sets to true.
     description: ''
   - name: --enable-encryption
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Enable encryption for backup on SQL virtual machine.
     description: ''
@@ -505,7 +505,7 @@ directCommands:
     summary: Enable or disable R services (SQL 2016 onwards).
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --full-backup-duration
@@ -548,7 +548,7 @@ directCommands:
     summary: SQL Server port.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
@@ -561,7 +561,7 @@ directCommands:
     summary: Storage account key where backup will be taken to.
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --sp-name
@@ -594,7 +594,7 @@ directCommands:
     summary: Resource group containing the Log Analytics workspace.
     description: ''
   - name: --yes -y
-    defaultValue: 1
+    defaultValue: "1"
     summary: Do not prompt for confirmation. Requires --sql-mgmt-type.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
@@ -627,7 +627,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

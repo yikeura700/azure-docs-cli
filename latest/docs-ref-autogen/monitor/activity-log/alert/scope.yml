@@ -31,7 +31,7 @@ directCommands:
     summary: Name of the activity log alerts.
     description: ''
   - name: --reset
-    defaultValue: False
+    defaultValue: "False"
     summary: Remove all the existing scopes before add new scopes.
     description: ''
   - name: --resource-group -g
@@ -81,7 +81,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

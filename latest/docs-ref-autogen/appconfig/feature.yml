@@ -28,7 +28,7 @@ directCommands:
     syntax: az appconfig feature delete -n MyAppConfiguration --key .appconfig.featureflag/MyApp1:Beta --yes
   optionalParameters:
   - name: --auth-mode
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: This parameter can be used for indicating how a data operation is to be authorized. If the auth mode is "key", provide connection string or store name and your account access keys will be retrieved for authorization. If the auth mode is "login", provide the store endpoint or store name and your "az login" credentials will be used for authorization. You can configure the default auth mode using `az configure --defaults appconfig_auth_mode=<auth_mode>`. For more information, see https://docs.microsoft.com/azure/azure-app-configuration/concept-enable-rbac.
     description: ''
@@ -51,7 +51,7 @@ directCommands:
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
@@ -77,7 +77,7 @@ directCommands:
     syntax: az appconfig feature disable -n MyAppConfiguration --key .appconfig.featureflag/MyApp1:Beta
   optionalParameters:
   - name: --auth-mode
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: This parameter can be used for indicating how a data operation is to be authorized. If the auth mode is "key", provide connection string or store name and your account access keys will be retrieved for authorization. If the auth mode is "login", provide the store endpoint or store name and your "az login" credentials will be used for authorization. You can configure the default auth mode using `az configure --defaults appconfig_auth_mode=<auth_mode>`. For more information, see https://docs.microsoft.com/azure/azure-app-configuration/concept-enable-rbac.
     description: ''
@@ -100,7 +100,7 @@ directCommands:
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
@@ -126,7 +126,7 @@ directCommands:
     syntax: az appconfig feature enable -n MyAppConfiguration --key .appconfig.featureflag/MyApp1:Beta
   optionalParameters:
   - name: --auth-mode
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: This parameter can be used for indicating how a data operation is to be authorized. If the auth mode is "key", provide connection string or store name and your account access keys will be retrieved for authorization. If the auth mode is "login", provide the store endpoint or store name and your "az login" credentials will be used for authorization. You can configure the default auth mode using `az configure --defaults appconfig_auth_mode=<auth_mode>`. For more information, see https://docs.microsoft.com/azure/azure-app-configuration/concept-enable-rbac.
     description: ''
@@ -149,7 +149,7 @@ directCommands:
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
@@ -185,11 +185,11 @@ directCommands:
     syntax: az appconfig feature list -n MyAppConfiguration --key .appconfig.featureflag/MyApp1*
   optionalParameters:
   - name: --all
-    defaultValue: False
+    defaultValue: "False"
     summary: List all feature flags.
     description: ''
   - name: --auth-mode
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: This parameter can be used for indicating how a data operation is to be authorized. If the auth mode is "key", provide connection string or store name and your account access keys will be retrieved for authorization. If the auth mode is "login", provide the store endpoint or store name and your "az login" credentials will be used for authorization. You can configure the default auth mode using `az configure --defaults appconfig_auth_mode=<auth_mode>`. For more information, see https://docs.microsoft.com/azure/azure-app-configuration/concept-enable-rbac.
     description: ''
@@ -241,7 +241,7 @@ directCommands:
     syntax: az appconfig feature lock -n MyAppConfiguration --key .appconfig.featureflag/MyApp1:Beta
   optionalParameters:
   - name: --auth-mode
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: This parameter can be used for indicating how a data operation is to be authorized. If the auth mode is "key", provide connection string or store name and your account access keys will be retrieved for authorization. If the auth mode is "login", provide the store endpoint or store name and your "az login" credentials will be used for authorization. You can configure the default auth mode using `az configure --defaults appconfig_auth_mode=<auth_mode>`. For more information, see https://docs.microsoft.com/azure/azure-app-configuration/concept-enable-rbac.
     description: ''
@@ -264,7 +264,7 @@ directCommands:
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
@@ -293,7 +293,7 @@ directCommands:
     syntax: az appconfig feature set -n MyAppConfiguration --feature Beta --key .appconfig.featureflag/MyApp1:Beta
   optionalParameters:
   - name: --auth-mode
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: This parameter can be used for indicating how a data operation is to be authorized. If the auth mode is "key", provide connection string or store name and your account access keys will be retrieved for authorization. If the auth mode is "login", provide the store endpoint or store name and your "az login" credentials will be used for authorization. You can configure the default auth mode using `az configure --defaults appconfig_auth_mode=<auth_mode>`. For more information, see https://docs.microsoft.com/azure/azure-app-configuration/concept-enable-rbac.
     description: ''
@@ -319,7 +319,7 @@ directCommands:
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
@@ -347,7 +347,7 @@ directCommands:
     syntax: az appconfig feature show -n MyAppConfiguration --key .appconfig.featureflag/MyApp1:Beta
   optionalParameters:
   - name: --auth-mode
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: This parameter can be used for indicating how a data operation is to be authorized. If the auth mode is "key", provide connection string or store name and your account access keys will be retrieved for authorization. If the auth mode is "login", provide the store endpoint or store name and your "az login" credentials will be used for authorization. You can configure the default auth mode using `az configure --defaults appconfig_auth_mode=<auth_mode>`. For more information, see https://docs.microsoft.com/azure/azure-app-configuration/concept-enable-rbac.
     description: ''
@@ -396,7 +396,7 @@ directCommands:
     syntax: az appconfig feature unlock -n MyAppConfiguration --key .appconfig.featureflag/MyApp1:Beta
   optionalParameters:
   - name: --auth-mode
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: This parameter can be used for indicating how a data operation is to be authorized. If the auth mode is "key", provide connection string or store name and your account access keys will be retrieved for authorization. If the auth mode is "login", provide the store endpoint or store name and your "az login" credentials will be used for authorization. You can configure the default auth mode using `az configure --defaults appconfig_auth_mode=<auth_mode>`. For more information, see https://docs.microsoft.com/azure/azure-app-configuration/concept-enable-rbac.
     description: ''
@@ -419,7 +419,7 @@ directCommands:
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
@@ -445,7 +445,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

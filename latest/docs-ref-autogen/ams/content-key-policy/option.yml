@@ -61,7 +61,7 @@ directCommands:
     summary: The audience for the token.
     description: ''
   - name: --clear-key-configuration
-    defaultValue: False
+    defaultValue: "False"
     summary: Use Clear Key configuration, a.k.a AES encryption. It's intended for non-DRM keys.
     description: ''
   - name: --fair-play-pfx
@@ -89,7 +89,7 @@ directCommands:
     summary: The OpenID connect discovery document.
     description: ''
   - name: --open-restriction
-    defaultValue: False
+    defaultValue: "False"
     summary: Use open restriction. License or key will be delivered on every request. Not recommended for production environments.
     description: ''
   - name: --play-ready-template
@@ -280,7 +280,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

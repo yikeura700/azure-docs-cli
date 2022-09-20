@@ -52,21 +52,7 @@ directCommands:
     summary: 'Conflict Resolution Policy, you can enter it as a string or as a file, e.g., --conflict-resolution-policy @policy-file.json or --conflict-resolution-policy "{\"mode\": \"lastWriterWins\", \"conflictResolutionPath\": \"/path\"}".'
     description: ''
   - name: --idx
-    defaultValue: >-
-      {
-        "indexingMode": "consistent",
-        "automatic": true,
-        "includedPaths": [
-          {
-            "path": "/*"
-          }
-        ],
-        "excludedPaths": [
-          {
-            "path": "/\"_etag\"/?"
-          }
-        ]
-      }
+    defaultValue: "{\n  \"indexingMode\": \"consistent\",\n  \"automatic\": true,\n  \"includedPaths\": [\n    {\n      \"path\": \"/*\"\n    }\n  ],\n  \"excludedPaths\": [\n    {\n      \"path\": \"/\\\"_etag\\\"/?\"\n    }\n  ]\n}"
     summary: 'Indexing Policy, you can enter it as a string or as a file, e.g., --idx @policy-file.json or --idx "{\"indexingMode\": \"consistent\", \"automatic\": true, \"includedPaths\": [{\"path\": \"/*\"}], \"excludedPaths\": [{ \"path\": \"/headquarters/employees/?\"}, { \"path\": \"/\\"_etag\\"/?\"}]}".'
     description: ''
   - name: --max-throughput
@@ -108,7 +94,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
@@ -247,7 +233,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

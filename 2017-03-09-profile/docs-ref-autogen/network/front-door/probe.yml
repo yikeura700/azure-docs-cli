@@ -44,12 +44,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --enabled
-    defaultValue: Enabled
+    defaultValue: "Enabled"
     parameterValueGroup: Disabled, Enabled
     summary: Enabled status.
     description: ''
   - name: --probeMethod
-    defaultValue: HEAD
+    defaultValue: "HEAD"
     parameterValueGroup: GET, HEAD
     summary: Configures which HTTP method to use to probe the backends defined under backendPools.
     description: ''
@@ -174,7 +174,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

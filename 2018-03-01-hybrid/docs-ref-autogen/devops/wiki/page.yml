@@ -38,7 +38,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --comment
-    defaultValue: Added a new page using Azure DevOps CLI
+    defaultValue: "Added a new page using Azure DevOps CLI"
     summary: Comment in the commit message of file add operation.
     description: ''
   - name: --content
@@ -49,7 +49,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --encoding
-    defaultValue: utf-8
+    defaultValue: "utf-8"
     parameterValueGroup: ascii, utf-16be, utf-16le, utf-8
     summary: Encoding of the file. Used in conjunction with --file-path parameter.
     description: ''
@@ -85,7 +85,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --comment
-    defaultValue: Deleted the page using Azure DevOps CLI
+    defaultValue: "Deleted the page using Azure DevOps CLI"
     summary: Comment in the commit message of delete operation.
     description: ''
   - name: --detect
@@ -99,7 +99,7 @@ directCommands:
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_devops_wiki_page_show
@@ -130,11 +130,11 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --include-content
-    defaultValue: False
+    defaultValue: "False"
     summary: Include content of the page.
     description: ''
   - name: --open
-    defaultValue: False
+    defaultValue: "False"
     summary: Open the wiki page in your web browser.
     description: ''
   - name: --org --organization
@@ -181,7 +181,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --comment
-    defaultValue: Updated the page using Azure DevOps CLI
+    defaultValue: "Updated the page using Azure DevOps CLI"
     summary: Comment in the commit message of file edit operation.
     description: ''
   - name: --content
@@ -192,7 +192,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --encoding
-    defaultValue: utf-8
+    defaultValue: "utf-8"
     parameterValueGroup: ascii, utf-16be, utf-16le, utf-8
     summary: Encoding of the file. Used in conjunction with --file-path parameter.
     description: ''
@@ -218,7 +218,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

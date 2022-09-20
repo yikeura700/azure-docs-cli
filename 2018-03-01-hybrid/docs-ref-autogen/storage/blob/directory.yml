@@ -69,7 +69,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   - name: --umask
-    defaultValue: 0027
+    defaultValue: "0027"
     summary: Optional and only valid if Hierarchical Namespace is enabled for the account. The umask restricts permission settings for file and directory, and will only be applied when default Acl does not exist in parent directory. If the umask bit has set, it means that the corresponding permission will be disabled. In this way, the resulting permission is given by p & ^u, where p is the permission and u is the umask. Only 4-digit octal notation (e.g. 0022) is supported here.
     description: ''
 - uid: az_storage_blob_directory_delete
@@ -120,7 +120,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --fail-not-exist
-    defaultValue: False
+    defaultValue: "False"
     summary: Specify whether to throw an exception when the directory doesn't exist.
     description: ''
   - name: --if-match
@@ -142,7 +142,7 @@ directCommands:
     summary: Optional. When deleting a directory without the Hierarchical Namespace, the number of paths that are deleted with each invocation is limited. If the number of paths to be deleted exceeds this limit, a continuation token is returned. When a continuation token is returned, it must be specified in a subsequent invocation of the delete operation to continue deleting the directory.
     description: ''
   - name: --recursive
-    defaultValue: False
+    defaultValue: "False"
     summary: If "true", all paths beneath the directory will be deleted. If "false" and the directory is non-empty, an error occurs.
     description: ''
   - name: --sas-token
@@ -302,14 +302,14 @@ directCommands:
     summary: When the request includes this parameter, the operation returns a :class:`~azure.storage.blob.models.BlobPrefix` element in the result list that acts as a placeholder for all blobs whose names begin with the same substring up to the appearance of the delimiter character. The delimiter may be a single character or a string.
     description: ''
   - name: --include
-    defaultValue: mc
+    defaultValue: "mc"
     summary: Specifies one or more additional datasets to include in the response.
     description: ''
   - name: --marker
     summary: An opaque continuation token. This value can be retrieved from the next_marker field of a previous generator object if num_results was specified and that generator has finished enumerating results. If specified, this generator will begin returning results from the point where the previous generator stopped.
     description: ''
   - name: --num-results
-    defaultValue: 5000
+    defaultValue: "5000"
     summary: Specifies the maximum number of results to return. Provide "*" to return all.
     description: ''
   - name: --prefix
@@ -378,7 +378,7 @@ directCommands:
     summary: A lease ID for destination directory_path. The destination directory_path must have an active lease and the lease ID must match.
     description: ''
   - name: --move-mode
-    defaultValue: posix
+    defaultValue: "posix"
     parameterValueGroup: legacy, posix
     summary: Valid only when namespace is enabled. This parameter determines the behavior of the move operation. If the destination directory is empty, for both two mode, the destination directory will be overwritten. But if the destination directory is not empty, in legacy mode the move operation will fail and in posix mode, the source directory will be moved into the destination directory.
     description: ''
@@ -546,7 +546,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

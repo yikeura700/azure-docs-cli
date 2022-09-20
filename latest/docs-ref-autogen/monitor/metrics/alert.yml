@@ -116,19 +116,19 @@ directCommands:
     summary: Free-text description of the rule.
     description: ''
   - name: --disabled
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Create the rule in a disabled state.
     description: ''
   - name: --evaluation-frequency
-    defaultValue: 1m
+    defaultValue: "1m"
     summary: Frequency with which to evaluate the rule in "##h##m##s" format.
     description: ''
   - name: --region --target-resource-region
     summary: The region of the target resource(s) in scopes. This must be provided when scopes is resource group or subscription.
     description: ''
   - name: --severity
-    defaultValue: 2
+    defaultValue: "2"
     summary: Severity of the alert from 0 (critical) to 4 (verbose).
     description: ''
   - name: --tags
@@ -138,7 +138,7 @@ directCommands:
     summary: The resource type of the target resource(s) in scopes. This must be provided when scopes is resource group or subscription.
     description: ''
   - name: --window-size
-    defaultValue: 5m
+    defaultValue: "5m"
     summary: Time over which to aggregate metrics in "##h##m##s" format.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
@@ -237,7 +237,7 @@ directCommands:
     syntax: az monitor metrics alert update --enabled false --name MyAlertRule --resource-group MyResourceGroup
   optionalParameters:
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --add-action
@@ -293,7 +293,7 @@ directCommands:
     summary: Frequency with which to evaluate the rule in "##h##m##s" format.
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
@@ -303,7 +303,7 @@ directCommands:
     summary: Name of the alert rule.
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --remove-actions
@@ -319,7 +319,7 @@ directCommands:
     summary: Space-separated list of scopes the rule applies to. The resources specified in this parameter must be of the same type and exist in the same location.
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --severity
@@ -353,7 +353,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

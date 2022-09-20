@@ -58,21 +58,7 @@ directCommands:
     summary: 'Conflict Resolution Policy, you can enter it as a string or as a file, e.g., --conflict-resolution-policy @policy-file.json or --conflict-resolution-policy "{\"mode\": \"lastWriterWins\", \"conflictResolutionPath\": \"/path\"}".'
     description: ''
   - name: --idx
-    defaultValue: >-
-      {
-        "indexingMode": "consistent",
-        "automatic": true,
-        "includedPaths": [
-          {
-            "path": "/*"
-          }
-        ],
-        "excludedPaths": [
-          {
-            "path": "/\"_etag\"/?"
-          }
-        ]
-      }
+    defaultValue: "{\n  \"indexingMode\": \"consistent\",\n  \"automatic\": true,\n  \"includedPaths\": [\n    {\n      \"path\": \"/*\"\n    }\n  ],\n  \"excludedPaths\": [\n    {\n      \"path\": \"/\\\"_etag\\\"/?\"\n    }\n  ]\n}"
     summary: 'Indexing Policy, you can enter it as a string or as a file, e.g., --idx @policy-file.json or --idx "{\"indexingMode\": \"consistent\", \"automatic\": true, \"includedPaths\": [{\"path\": \"/*\"}], \"excludedPaths\": [{ \"path\": \"/headquarters/employees/?\"}, { \"path\": \"/\\"_etag\\"/?\"}]}".'
     description: ''
   - name: --max-throughput
@@ -120,7 +106,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
@@ -238,16 +224,16 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --evenly-distribute
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Switch to distribute throughput equally among all physical partitions.
     description: ''
   - name: --source-partition-info
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Space separated source physical partition ids eg: 1 2.'
     description: ''
   - name: --target-partition-info
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Information about desired target physical partition throughput eg: 0=1200 1=1200.'
     description: ''
 - uid: az_cosmosdb_sql_container_retrieve-partition-throughput
@@ -285,12 +271,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --all-partitions
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Switch to retrieve throughput for all physical partitions.
     description: ''
   - name: --physical-partition-ids -p
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: Space separated list of physical partition ids.
     description: ''
 - uid: az_cosmosdb_sql_container_show
@@ -382,7 +368,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

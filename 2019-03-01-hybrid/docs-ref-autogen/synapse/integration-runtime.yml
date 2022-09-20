@@ -45,12 +45,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --compute-type
-    defaultValue: General
+    defaultValue: "General"
     parameterValueGroup: ComputeOptimized, General, MemoryOptimized
     summary: Compute type of the data flow cluster which will execute data flow job.
     description: ''
   - name: --core-count
-    defaultValue: 8
+    defaultValue: "8"
     summary: Core count of the data flow cluster which will execute data flow job.
     description: ''
   - name: --description
@@ -60,15 +60,15 @@ directCommands:
     summary: ETag of the integration runtime entity. Should only be specified for update, for which it should match existing entity or can be * for unconditional update.
     description: ''
   - name: --location -l
-    defaultValue: AutoResolve
+    defaultValue: "AutoResolve"
     summary: The integration runtime location.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --time-to-live
-    defaultValue: 0
+    defaultValue: "0"
     summary: Time to live (in minutes) setting of the data flow cluster which will execute data flow job.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
@@ -97,7 +97,7 @@ directCommands:
     summary: The integration runtime name.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -110,7 +110,7 @@ directCommands:
     summary: The workspace name.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
@@ -278,7 +278,7 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --key-name
-    defaultValue: default
+    defaultValue: "default"
     parameterValueGroup: authKey1, authKey2
     summary: The name of the authentication key to regenerate.
     description: ''
@@ -355,7 +355,7 @@ directCommands:
     summary: The integration runtime name.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -393,7 +393,7 @@ directCommands:
     summary: The integration runtime name.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -406,7 +406,7 @@ directCommands:
     summary: The workspace name.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
@@ -549,33 +549,33 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --created
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
     summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
     description: ''
   - name: --deleted
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until deleted.
     description: ''
   - name: --exists
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until the resource exists.
     description: ''
   - name: --if-none-match
     summary: ETag of the integration runtime entity. Should only be specified for get. If the ETag matches the existing entity tag, or if * was provided, then no content will be returned.
     description: ''
   - name: --interval
-    defaultValue: 30
+    defaultValue: "30"
     summary: Polling interval in seconds.
     description: ''
   - name: --timeout
-    defaultValue: 3600
+    defaultValue: "3600"
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
@@ -607,7 +607,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

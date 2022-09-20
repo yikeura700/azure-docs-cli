@@ -46,7 +46,7 @@ directCommands:
     summary: How the device will authenticate to testing service Device Provisioning Service.
     description: ''
   - name: --badge-type --bt
-    defaultValue: IotDevice
+    defaultValue: "IotDevice"
     parameterValueGroup: IotDevice, IotEdgeCompatible, Pnp
     summary: The type of certification badge.
     description: ''
@@ -76,11 +76,11 @@ directCommands:
     summary: The submitted product id. Required when validation-type is 'Certification'.
     description: ''
   - name: --skip-provisioning --sp
-    defaultValue: False
+    defaultValue: "False"
     summary: Determines whether the service skips generating provisioning configuration. Only applies to SymmetricKey and ConnectionString provisioning types.
     description: ''
   - name: --validation-type --vt
-    defaultValue: Test
+    defaultValue: "Test"
     parameterValueGroup: Certification, Test
     summary: The type of validations testing to be performed.
     description: ''
@@ -206,7 +206,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

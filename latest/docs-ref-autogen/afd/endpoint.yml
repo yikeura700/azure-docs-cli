@@ -33,12 +33,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --enabled-state
-    defaultValue: Enabled
+    defaultValue: "Enabled"
     parameterValueGroup: Disabled, Enabled
     summary: Whether to enable this endpoint.
     description: ''
   - name: --name-reuse-scope
-    defaultValue: TenantReuse
+    defaultValue: "TenantReuse"
     parameterValueGroup: NoReuse, ResourceGroupReuse, SubscriptionReuse, TenantReuse
     summary: Indicates the endpoint name reuse scope. The default value is TenantReuse.
     description: ''
@@ -76,7 +76,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_afd_endpoint_list
@@ -130,7 +130,7 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --profile-name
@@ -224,7 +224,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

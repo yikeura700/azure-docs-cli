@@ -109,12 +109,12 @@ directCommands:
     summary: Query parameters to include or exclude (comma separated) when using query-parameter-strip-directive type StripAllExcept or StripOnly respectively.
     description: ''
   - name: --redirect-protocol
-    defaultValue: MatchRequest
+    defaultValue: "MatchRequest"
     parameterValueGroup: HttpOnly, HttpsOnly, MatchRequest
     summary: The protocol of the destination to where the traffic is redirected.
     description: ''
   - name: --redirect-type
-    defaultValue: Moved
+    defaultValue: "Moved"
     parameterValueGroup: Found, Moved, PermanentRedirect, TemporaryRedirect
     summary: The redirect type the rule will use when redirecting traffic.
     description: ''
@@ -193,7 +193,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

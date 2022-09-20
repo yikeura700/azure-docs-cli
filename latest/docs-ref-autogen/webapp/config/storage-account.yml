@@ -70,7 +70,7 @@ directCommands:
     summary: The name of the slot. Default to the productions slot if not specified.
     description: ''
   - name: --slot-setting
-    defaultValue: False
+    defaultValue: "False"
     summary: Slot setting.
     description: ''
   - name: --subscription
@@ -191,7 +191,7 @@ directCommands:
     summary: The name of the slot. Default to the productions slot if not specified.
     description: ''
   - name: --slot-setting
-    defaultValue: False
+    defaultValue: "False"
     summary: Slot setting.
     description: ''
   - name: --storage-type -t
@@ -214,7 +214,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

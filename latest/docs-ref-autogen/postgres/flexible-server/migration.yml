@@ -116,7 +116,7 @@ directCommands:
     syntax: az postgres flexible-server migration list --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --resource-group testGroup --name testserver --filter All
   optionalParameters:
   - name: --filter
-    defaultValue: Active
+    defaultValue: "Active"
     summary: 'Indicate whether all the migrations or just the Active migrations are returned. Active is the default. Valid values are: Active, All.'
     description: ''
   - name: --ids
@@ -155,7 +155,7 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --level
-    defaultValue: Default
+    defaultValue: "Default"
     summary: Specify the level of migration details requested. Valid values are Active and All. Active is the default.
     description: ''
   - name: --name -n
@@ -235,7 +235,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

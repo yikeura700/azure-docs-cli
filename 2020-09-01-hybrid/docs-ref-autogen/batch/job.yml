@@ -96,7 +96,7 @@ directCommands:
     summary: A Batch job JSON template file. If this parameter is specified, all other parameters are ignored.
     description: ''
   - name: --uses-task-dependencies
-    defaultValue: False
+    defaultValue: "False"
     summary: The flag that determines if this job will use tasks with dependencies. True if flag present.
     description: ''
 commands:
@@ -109,7 +109,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

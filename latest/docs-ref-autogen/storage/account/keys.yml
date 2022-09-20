@@ -24,7 +24,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --expand-key-type
-    defaultValue: kerb
+    defaultValue: "kerb"
     summary: Specify the expanded key types to be listed.
     description: ''
   - name: --resource-group -g
@@ -75,7 +75,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

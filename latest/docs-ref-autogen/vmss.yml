@@ -195,11 +195,11 @@ directCommands:
     summary: Name to use when creating a new application gateway (default) or referencing an existing one. Can also reference an existing application gateway by ID or specify "" for none.
     description: ''
   - name: --app-gateway-capacity
-    defaultValue: 10
+    defaultValue: "10"
     summary: The number of instances to use when creating a new application gateway.
     description: ''
   - name: --app-gateway-sku
-    defaultValue: Standard_Large
+    defaultValue: "Standard_Large"
     summary: SKU when creating a new application gateway.
     description: ''
   - name: --app-gateway-subnet-address-prefix
@@ -257,7 +257,7 @@ directCommands:
     summary: Space-separated empty managed data disk sizes in GB to create.
     description: ''
   - name: --disable-integrity-monitoring
-    defaultValue: False
+    defaultValue: "False"
     summary: Disable the default behavior of installing guest attestation extension and enabling System Assigned Identity for Trusted Launch enabled VMs and VMSS.
     description: ''
   - name: --disable-overprovision
@@ -310,7 +310,7 @@ directCommands:
     summary: The eviction policy for virtual machines in a Spot priority scale set. Default eviction policy is Deallocate for a Spot priority scale set.
     description: ''
   - name: --generate-ssh-keys
-    defaultValue: False
+    defaultValue: "False"
     summary: Generate SSH public and private key files if missing. The keys will be stored in the ~/.ssh directory.
     description: ''
   - name: --health-probe
@@ -323,7 +323,7 @@ directCommands:
     summary: 'The name of the operating system image as a URN alias, URN, custom image name or ID, or VHD blob URI. In addition, it also supports shared gallery image. Valid URN format: "Publisher:Offer:Sku:Version".'
     description: ''
   - name: --instance-count
-    defaultValue: 2
+    defaultValue: "2"
     summary: Number of VMs in the scale set.
     description: ''
   - name: --lb --load-balancer
@@ -359,14 +359,14 @@ directCommands:
     summary: Specify the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode 'Flexible'. Default value is 2020-11-01.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --nsg
     summary: Name or ID of an existing Network Security Group.
     description: ''
   - name: --orchestration-mode
-    defaultValue: Uniform
+    defaultValue: "Uniform"
     parameterValueGroup: Flexible, Uniform
     summary: Choose how virtual machines are managed by the scale set. In Uniform mode, you define a virtual machine model and Azure will generate identical instances based on that model. In Flexible mode, you manually create and add a virtual machine of any configuration to the scale set or generate identical instances based on virtual machine model defined for the scale set.
     description: ''
@@ -442,7 +442,7 @@ directCommands:
     summary: Globally unique DNS name for a newly created public IP.
     description: ''
   - name: --public-ip-per-vm
-    defaultValue: False
+    defaultValue: "False"
     summary: Each VM instance will have a public ip. For security, you can use '--nsg' to apply appropriate rules.
     description: ''
   - name: --role
@@ -480,7 +480,7 @@ directCommands:
     summary: Space-separated list of SSH public keys or public key file paths.
     description: ''
   - name: --storage-container-name
-    defaultValue: vhds
+    defaultValue: "vhds"
     summary: 'Only applicable when used with `--use-unmanaged-disk`. Name of the storage container for the VM OS disk. Default: vhds.'
     description: ''
   - name: --storage-sku
@@ -503,12 +503,12 @@ directCommands:
     summary: Enables or disables the capability to have 1 or more managed data disks with UltraSSD_LRS storage account.
     description: ''
   - name: --upgrade-policy-mode
-    defaultValue: manual
+    defaultValue: "manual"
     parameterValueGroup: Automatic, Manual, Rolling
     summary: ''
     description: ''
   - name: --use-unmanaged-disk
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not use managed disk to persist VM.
     description: ''
   - name: --user-data
@@ -521,7 +521,7 @@ directCommands:
     summary: Specify the ratio of vCPU to physical core. Setting this property to 1 also means that hyper-threading is disabled.
     description: ''
   - name: --validate
-    defaultValue: False
+    defaultValue: "False"
     summary: Generate and validate the ARM template without creating any resources.
     description: ''
   - name: --vm-domain-name
@@ -531,7 +531,7 @@ directCommands:
     summary: Size of VMs in the scale set. Default to "Standard_DS1_v2". See https://azure.microsoft.com/pricing/details/virtual-machines/ for size info.
     description: ''
   - name: --vnet-address-prefix
-    defaultValue: 10.0.0.0/16
+    defaultValue: "10.0.0.0/16"
     summary: The IP address prefix to use when creating a new VNet in CIDR format.
     description: ''
   - name: --vnet-name
@@ -568,7 +568,7 @@ directCommands:
     summary: 'Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.'
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
@@ -594,7 +594,7 @@ directCommands:
     summary: Scale set name. You can configure the default using `az configure --defaults vmss=<name>`.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -631,7 +631,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
@@ -863,7 +863,7 @@ directCommands:
     summary: Scale set name. You can configure the default using `az configure --defaults vmss=<name>`.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -899,7 +899,7 @@ directCommands:
     summary: 'Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.'
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
@@ -930,7 +930,7 @@ directCommands:
     summary: Scale set name. You can configure the default using `az configure --defaults vmss=<name>`.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -974,7 +974,7 @@ directCommands:
     summary: Scale set name. You can configure the default using `az configure --defaults vmss=<name>`.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -1007,7 +1007,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --include-user-data -u
-    defaultValue: False
+    defaultValue: "False"
     summary: Include the user data properties in the query result.
     description: ''
   - name: --instance-id
@@ -1065,7 +1065,7 @@ directCommands:
     summary: 'Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.'
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
@@ -1098,11 +1098,11 @@ directCommands:
     summary: 'Space-separated list of IDs (ex: 1 2 3 ...) or * for all instances. If not provided, the action will be applied on the scaleset itself.'
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --skip-shutdown
-    defaultValue: False
+    defaultValue: "False"
     summary: Skip shutdown and power-off immediately.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
@@ -1168,7 +1168,7 @@ directCommands:
     syntax: az vmss update -n MyVmss -g MyResourceGroup --set virtualMachineProfile.osProfile.linuxConfiguration.patchSettings.patchMode=AutomaticByPlatform
   optionalParameters:
   - name: --add
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --automatic-repairs-action
@@ -1213,7 +1213,7 @@ directCommands:
     summary: This property allow you to specify if virtual machines chosen for removal have to be force deleted when a virtual machine scale set is being scaled-in.
     description: ''
   - name: --force-string
-    defaultValue: False
+    defaultValue: "False"
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
@@ -1242,7 +1242,7 @@ directCommands:
     summary: Scale set name. You can configure the default using `az configure --defaults vmss=<name>`.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --pause-time-between-batches
@@ -1268,7 +1268,7 @@ directCommands:
     summary: Protect the VM instance from scale set actions (including scale-in).
     description: ''
   - name: --remove
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
@@ -1279,7 +1279,7 @@ directCommands:
     summary: Specify the scale-in policy (space delimited) that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled-in.
     description: ''
   - name: --set
-    defaultValue: '[]'
+    defaultValue: "[]"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --spot-restore-timeout
@@ -1335,7 +1335,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
@@ -1365,18 +1365,18 @@ directCommands:
     syntax: az vmss wait --created --name MyScaleSet --resource-group MyResourceGroup
   optionalParameters:
   - name: --created
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
     summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
     description: ''
   - name: --deleted
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until deleted.
     description: ''
   - name: --exists
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until the resource exists.
     description: ''
   - name: --ids
@@ -1386,7 +1386,7 @@ directCommands:
     summary: Wait on the VM instance with this ID. If missing, Wait on the VMSS.
     description: ''
   - name: --interval
-    defaultValue: 30
+    defaultValue: "30"
     summary: Polling interval in seconds.
     description: ''
   - name: --name -n
@@ -1399,11 +1399,11 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --timeout
-    defaultValue: 3600
+    defaultValue: "3600"
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
-    defaultValue: False
+    defaultValue: "False"
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
@@ -1482,7 +1482,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

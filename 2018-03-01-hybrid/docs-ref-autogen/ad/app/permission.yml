@@ -107,7 +107,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --consent-type
-    defaultValue: AllPrincipals
+    defaultValue: "AllPrincipals"
     parameterValueGroup: AllPrincipals, Principal
     summary: Indicates whether authorization is granted for the client application to impersonate all users or only a specific user. 'AllPrincipals' indicates authorization to impersonate all users. 'Principal' indicates authorization to impersonate a specific user. Consent on behalf of all users can be granted by an administrator. Non-admin users may be authorized to consent on behalf of themselves in some cases, for some delegated permissions.
     description: ''
@@ -167,7 +167,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

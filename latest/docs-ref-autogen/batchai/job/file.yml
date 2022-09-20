@@ -48,15 +48,15 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --expiry
-    defaultValue: 60
+    defaultValue: "60"
     summary: Time in minutes for how long generated download URL should remain valid.
     description: ''
   - name: --output-directory-id -d
-    defaultValue: stdouterr
+    defaultValue: "stdouterr"
     summary: The Id of the job's output directory (as specified by "id" element in outputDirectories collection in the job create parameters).
     description: ''
   - name: --path -p
-    defaultValue: .
+    defaultValue: "."
     summary: Relative path in the given output directory.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
@@ -104,11 +104,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --output-directory-id -d
-    defaultValue: stdouterr
+    defaultValue: "stdouterr"
     summary: The Id of the job's output directory (as specified by "id" element in outputDirectories collection in the job create parameters).
     description: ''
   - name: --path -p
-    defaultValue: .
+    defaultValue: "."
     summary: Relative path in the given output directory.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
@@ -123,7 +123,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -51,7 +51,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --days
-    defaultValue: 7
+    defaultValue: "7"
     summary: 'The number of days to retain an untagged manifest after which it gets purged (Range: 0 to 365). Value "0" will delete untagged manifests immediately.'
     description: ''
   - name: --resource-group -g
@@ -73,7 +73,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

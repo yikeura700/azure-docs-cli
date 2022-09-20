@@ -47,7 +47,7 @@ directCommands:
     summary: Path to certificate file.
     description: ''
   - name: --delete-private-key --force-delete-credentials
-    defaultValue: False
+    defaultValue: "False"
     summary: This is an internal argument. This argument is used by Azure Portal to provide a one click SSH login experience in Cloud shell.
     description: ''
   - name: --local-user
@@ -66,7 +66,7 @@ directCommands:
     summary: The RSA public key file path.
     description: ''
   - name: --rdp --winrdp
-    defaultValue: False
+    defaultValue: "False"
     summary: Start RDP connection over SSH.
     description: ''
   - name: --resource-group -g
@@ -186,14 +186,14 @@ directCommands:
     summary: The name of the VM.
     description: ''
   - name: --overwrite
-    defaultValue: False
+    defaultValue: "False"
     summary: Overwrites the config file if this flag is set.
     description: ''
   - name: --port
     summary: SSH Port.
     description: ''
   - name: --prefer-private-ip
-    defaultValue: False
+    defaultValue: "False"
     summary: Will use a private IP if available. By default only public IPs are used.
     description: ''
   - name: --private-key-file -i
@@ -263,7 +263,7 @@ directCommands:
     summary: Path to a certificate file used for authentication when using local user credentials.
     description: ''
   - name: --delete-private-key --force-delete-credentials
-    defaultValue: False
+    defaultValue: "False"
     summary: This is an internal argument. This argument is used by Azure Portal to provide a one click SSH login experience in Cloud shell.
     description: ''
   - name: --hostname --ip
@@ -279,7 +279,7 @@ directCommands:
     summary: SSH port.
     description: ''
   - name: --prefer-private-ip
-    defaultValue: False
+    defaultValue: "False"
     summary: Will prefer private IP.  Requires connectivity to the private IP.
     description: ''
   - name: --private-key-file -i
@@ -289,7 +289,7 @@ directCommands:
     summary: The RSA public key file path.
     description: ''
   - name: --rdp --winrdp
-    defaultValue: False
+    defaultValue: "False"
     summary: Start RDP connection over SSH.
     description: ''
   - name: --resource-group -g
@@ -320,7 +320,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

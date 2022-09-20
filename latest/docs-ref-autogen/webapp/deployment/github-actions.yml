@@ -32,18 +32,18 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --branch -b
-    defaultValue: master
+    defaultValue: "master"
     summary: The branch to which the workflow file will be added. Defaults to "master" if not specified.
     description: ''
   - name: --force -f
-    defaultValue: False
+    defaultValue: "False"
     summary: When true, the command will overwrite any workflow file with a conflicting name.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --login-with-github
-    defaultValue: False
+    defaultValue: "False"
     summary: Interactively log in with GitHub to retrieve the Personal Access Token.
     description: ''
   - name: --name -n
@@ -90,14 +90,14 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --branch -b
-    defaultValue: master
+    defaultValue: "master"
     summary: The branch to which the workflow file will be added. Defaults to "master" if not specified.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --login-with-github
-    defaultValue: False
+    defaultValue: "False"
     summary: Interactively log in with GitHub to retrieve the Personal Access Token.
     description: ''
   - name: --name -n
@@ -126,7 +126,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

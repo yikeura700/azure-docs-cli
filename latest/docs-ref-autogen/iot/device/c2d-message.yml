@@ -117,12 +117,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --abandon
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Abandon the cloud-to-device message after receipt.
     description: ''
   - name: --complete
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Complete the cloud-to-device message after receipt.
     description: ''
@@ -130,14 +130,14 @@ directCommands:
     summary: IoT Hub name. Required if --login is not provided.
     description: ''
   - name: --lock-timeout --lt
-    defaultValue: 60
+    defaultValue: "60"
     summary: Specifies the amount of time a message will be invisible to other receive calls.
     description: ''
   - name: --login -l
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --hub-name is not provided.
     description: ''
   - name: --reject
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Reject the cloud-to-device message after receipt.
     description: ''
@@ -215,12 +215,12 @@ directCommands:
     summary: 'Request the delivery of per-message feedback regarding the final state of that message. The description of ack values is as follows. Positive: If the c2d message reaches the Completed state, IoT Hub generates a feedback message. Negative: If the c2d message reaches the Dead lettered state, IoT Hub generates a feedback message. Full: IoT Hub generates a feedback message in either case. By default, no ack is requested.'
     description: ''
   - name: --auth-type
-    defaultValue: key
+    defaultValue: "key"
     parameterValueGroup: key, login
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
   - name: --ce --content-encoding
-    defaultValue: utf-8
+    defaultValue: "utf-8"
     summary: The encoding for the C2D message body.
     description: ''
   - name: --cid --correlation-id
@@ -230,7 +230,7 @@ directCommands:
     summary: The content type for the C2D message body.
     description: ''
   - name: --da --data
-    defaultValue: Ping from Az CLI IoT Extension
+    defaultValue: "Ping from Az CLI IoT Extension"
     summary: Message body.
     description: ''
   - name: --expiry --expiry-time-utc
@@ -249,7 +249,7 @@ directCommands:
     summary: 'Message property bag in key-value pairs with the following format: a=b;c=d.'
     description: ''
   - name: --repair -r
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: 'Reinstall uamqp dependency compatible with extension version. Default: false.'
     description: ''
@@ -260,12 +260,12 @@ directCommands:
     summary: The C2D message, user Id property.
     description: ''
   - name: --wait -w
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: If set the c2d send operation will block until device feedback has been received.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: 'Skip user prompts. Indicates acceptance of action. Used primarily for automation scenarios. Default: false.'
     description: ''
@@ -284,7 +284,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

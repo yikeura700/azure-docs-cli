@@ -51,23 +51,23 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --disabled
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Don't use the origin for load balancing.
     description: ''
   - name: --http-port
-    defaultValue: 80
+    defaultValue: "80"
     summary: The port used for http requests to the origin.
     description: ''
   - name: --https-port
-    defaultValue: 443
+    defaultValue: "443"
     summary: The port used for https requests to the origin.
     description: ''
   - name: --origin-host-header
     summary: The Host header to send for requests to this origin.
     description: ''
   - name: --priority
-    defaultValue: 1
+    defaultValue: "1"
     summary: The load balancing priority. Higher priorities will not be used for load balancing if any lower priority origin is healthy. Must be between 1 and 5.
     description: ''
   - name: --private-link-approval-message -m
@@ -80,7 +80,7 @@ directCommands:
     summary: The resource id of the private link that the origin will be connected to.
     description: ''
   - name: --weight
-    defaultValue: 1000
+    defaultValue: "1000"
     summary: The weight of the origin in given origin group for load balancing. Must be between 1 and 1000.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
@@ -116,7 +116,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
@@ -266,7 +266,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

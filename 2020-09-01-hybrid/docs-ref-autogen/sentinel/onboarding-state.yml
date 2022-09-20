@@ -21,27 +21,27 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --name --sentinel-onboarding-state-name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The Sentinel onboarding state name. Supports - default.
     description: ''
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
   optionalParameters:
   - name: --customer-managed-key
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: Flag that indicates the status of the CMK setting.
     description: ''
   - name: --etag
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Etag of the azure resource.
     description: ''
 - uid: az_sentinel_onboarding-state_delete
@@ -60,22 +60,22 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name --sentinel-onboarding-state-name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The Sentinel onboarding state name. Supports - default.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_sentinel_onboarding-state_list
@@ -88,12 +88,12 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
 - uid: az_sentinel_onboarding-state_show
@@ -111,18 +111,18 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name --sentinel-onboarding-state-name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The Sentinel onboarding state name. Supports - default.
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
 - uid: az_sentinel_onboarding-state_update
@@ -143,20 +143,20 @@ directCommands:
                                         [--workspace-name]
   optionalParameters:
   - name: --add
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --customer-managed-key
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: Flag that indicates the status of the CMK setting.
     description: ''
   - name: --etag
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Etag of the azure resource.
     description: ''
   - name: --force-string
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
@@ -164,26 +164,26 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --name --sentinel-onboarding-state-name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The Sentinel onboarding state name. Supports - default.
     description: ''
   - name: --remove
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --subscription
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --workspace-name -w
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: The name of the workspace.
     description: ''
 commands:
@@ -200,7 +200,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

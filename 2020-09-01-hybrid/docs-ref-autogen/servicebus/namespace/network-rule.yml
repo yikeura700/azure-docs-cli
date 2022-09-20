@@ -32,12 +32,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --action
-    defaultValue: Allow
+    defaultValue: "Allow"
     parameterValueGroup: Allow
     summary: Action of the IP rule.
     description: ''
   - name: --ignore-missing-endpoint
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: A boolean value that indicates whether to ignore missing vnet Service Endpoint.
     description: ''
@@ -155,7 +155,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

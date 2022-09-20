@@ -51,7 +51,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --mount-option
-    defaultValue: MOUNT
+    defaultValue: "MOUNT"
     parameterValueGroup: ATTACH, MOUNT
     summary: Mode that describes whether the LUN has to be mounted as a datastore or attached as a LUN.
     description: ''
@@ -68,7 +68,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

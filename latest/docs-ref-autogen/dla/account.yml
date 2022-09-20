@@ -32,15 +32,15 @@ directCommands:
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   - name: --max-degree-of-parallelism
-    defaultValue: 30
+    defaultValue: "30"
     summary: The maximum degree of parallelism for this account.
     description: ''
   - name: --max-job-count
-    defaultValue: 3
+    defaultValue: "3"
     summary: The maximum number of concurrent jobs for this account.
     description: ''
   - name: --query-store-retention
-    defaultValue: 30
+    defaultValue: "30"
     summary: The number of days to retain job metadata.
     description: ''
   - name: --resource-group -g
@@ -201,7 +201,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

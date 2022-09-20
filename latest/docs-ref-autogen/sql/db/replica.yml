@@ -85,7 +85,7 @@ directCommands:
     summary: Minimal capacity that database will always have allocated, if not paused.
     description: ''
   - name: --no-wait
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --partner-database
@@ -150,7 +150,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
@@ -200,7 +200,7 @@ directCommands:
     syntax: az sql db replica set-primary --allow-data-loss --name MyDatabase --resource-group MyResourceGroup --server myserver --subscription MySubscription
   optionalParameters:
   - name: --allow-data-loss
-    defaultValue: False
+    defaultValue: "False"
     summary: If specified, the failover operation will allow data loss.
     description: ''
   - name: --ids
@@ -232,7 +232,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

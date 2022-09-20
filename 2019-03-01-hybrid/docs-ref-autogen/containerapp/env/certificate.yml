@@ -51,7 +51,7 @@ directCommands:
     summary: Thumbprint of the certificate.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_containerapp_env_certificate_list
@@ -136,7 +136,7 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --show-prompt
-    defaultValue: False
+    defaultValue: "False"
     summary: Show prompt to upload an existing certificate.
     description: ''
   - name: --subscription
@@ -154,7 +154,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

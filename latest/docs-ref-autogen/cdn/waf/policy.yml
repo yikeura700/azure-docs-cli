@@ -31,7 +31,7 @@ directCommands:
     summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --yes -y
-    defaultValue: False
+    defaultValue: "False"
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
@@ -85,7 +85,7 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --mode
-    defaultValue: Detection
+    defaultValue: "Detection"
     summary: The operation mode of the policy. Valid options are 'Detection' and 'Prevention'.
     description: ''
   - name: --name -n
@@ -98,7 +98,7 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --sku
-    defaultValue: Standard_Microsoft
+    defaultValue: "Standard_Microsoft"
     summary: The pricing tier (defines a CDN provider, feature list and rate) of the CDN WAF policy.
     description: ''
   - name: --subscription
@@ -169,7 +169,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

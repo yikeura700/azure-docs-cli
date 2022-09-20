@@ -62,7 +62,7 @@ directCommands:
     summary: 'Capacity tags applied to the nodes in the node type as key/value pairs, the cluster resource manager uses these tags to understand how much resource a node has. Updating this will override the current values.for example: --capacity ClientConnections=65536 param2=value2.'
     description: ''
   - name: --data-disk-size --disk-size
-    defaultValue: 100
+    defaultValue: "100"
     summary: Disk size for each vm in the node type in GBs.
     description: ''
   - name: --data-disk-type --disk-type
@@ -76,12 +76,12 @@ directCommands:
     summary: Ephemeral start port of a range of ports.
     description: ''
   - name: --is-stateless
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Indicates if the node type can only host Stateless workloads.
     description: ''
   - name: --multi-place-groups --multiple-placement-groups
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Indicates if scale set associated with the node type can be composed of multiple placement groups.
     description: ''
@@ -89,28 +89,28 @@ directCommands:
     summary: 'Placement tags applied to nodes in the node type as key/value pairs, which can be used to indicate where certain services (workload) should run. Updating this will override the current values.for example: --placement-property NodeColor=Green SomeProperty=5.'
     description: ''
   - name: --primary
-    defaultValue: False
+    defaultValue: "False"
     parameterValueGroup: false, true
     summary: Specify if the node type is primary. On this node type will run system services. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
     description: ''
   - name: --vm-image-offer
-    defaultValue: WindowsServer
+    defaultValue: "WindowsServer"
     summary: The offer type of the Azure Virtual Machines Marketplace image.
     description: ''
   - name: --vm-image-publisher
-    defaultValue: MicrosoftWindowsServer
+    defaultValue: "MicrosoftWindowsServer"
     summary: The publisher of the Azure Virtual Machines Marketplace image.
     description: ''
   - name: --vm-image-sku
-    defaultValue: 2019-Datacenter
+    defaultValue: "2019-Datacenter"
     summary: The SKU of the Azure Virtual Machines Marketplace image.
     description: ''
   - name: --vm-image-version
-    defaultValue: latest
+    defaultValue: "latest"
     summary: The version of the Azure Virtual Machines Marketplace image.
     description: ''
   - name: --vm-size
-    defaultValue: Standard_D2
+    defaultValue: "Standard_D2"
     summary: The size of virtual machines in the pool. All virtual machines in a pool are the same size.
     description: ''
 - uid: az_sf_managed-node-type_delete
@@ -258,7 +258,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

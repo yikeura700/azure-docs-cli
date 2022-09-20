@@ -18,7 +18,7 @@ directCommands:
     syntax: az orbital available-ground-station list --capability "EarthObservation"
   optionalParameters:
   - name: --capability
-    defaultValue: EarthObservation
+    defaultValue: "EarthObservation"
     parameterValueGroup: Communication, EarthObservation
     summary: Ground Station Capability.
     description: ''
@@ -32,7 +32,7 @@ directCommands:
                                              [--subscription]
   optionalParameters:
   - name: --ground-station-name --name -n
-    defaultValue: Undefined
+    defaultValue: "Undefined"
     summary: Ground Station name.
     description: ''
   - name: --ids
@@ -52,7 +52,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

@@ -57,7 +57,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --frequency
-    defaultValue: 60
+    defaultValue: "60"
     summary: The frequency of test evaluation, in seconds.
     description: ''
   - name: --http-method
@@ -196,7 +196,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query

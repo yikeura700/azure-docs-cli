@@ -77,7 +77,7 @@ directCommands:
     summary: Enable local git.
     description: ''
   - name: --deployment-source-branch -b
-    defaultValue: master
+    defaultValue: "master"
     summary: The branch to deploy.
     description: ''
   - name: --deployment-source-url -u
@@ -111,7 +111,7 @@ directCommands:
     summary: Name or resource id of the function app service plan. Use 'appservice plan create' to get one.
     description: ''
   - name: --role
-    defaultValue: Contributor
+    defaultValue: "Contributor"
     summary: Role name or id the system assigned identity will have.
     description: ''
   - name: --runtime
@@ -209,7 +209,7 @@ globalParameters:
 - name: --only-show-errors
   summary: Only show errors, suppressing warnings.
 - name: --output -o
-  defaultValue: json
+  defaultValue: "json"
   parameterValueGroup: json, jsonc, table, tsv
   summary: Output format.
 - name: --query
