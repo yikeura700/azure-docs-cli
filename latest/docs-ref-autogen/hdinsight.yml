@@ -314,6 +314,7 @@ directCommands:
     summary: Base key vault URI where the customers key is located eg. https://myvault.vault.azure.net.
     description: ''
   - name: --esp
+    defaultValue: False
     summary: Specify to create cluster with Enterprise Security Package. If omitted, creating cluster with Enterprise Security Package will not not allowed.
     description: ''
   - name: --headnode-size
@@ -329,6 +330,7 @@ directCommands:
     summary: 'HTTP username for the cluster.  Default: admin.'
     description: ''
   - name: --idbroker
+    defaultValue: False
     summary: Specify to create ESP cluster with HDInsight ID Broker. If omitted, creating ESP cluster with HDInsight ID Broker will not not allowed.
     description: ''
   - name: --kafka-client-group-id
@@ -338,7 +340,7 @@ directCommands:
     summary: The client AAD security group name for Kafka Rest Proxy.
     description: ''
   - name: --kafka-management-node-count
-    defaultValue: "2"
+    defaultValue: 2
     summary: The number of kafka management node in the cluster.
     description: ''
   - name: --kafka-management-node-size
@@ -355,9 +357,11 @@ directCommands:
     summary: The minimal supported TLS version.
     description: ''
   - name: --no-validation-timeout
+    defaultValue: False
     summary: Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-link-config --private-link-configurations
@@ -412,7 +416,7 @@ directCommands:
     summary: The name of a virtual network.
     description: ''
   - name: --workernode-count -c
-    defaultValue: "3"
+    defaultValue: 3
     summary: The number of worker nodes in the cluster.
     description: ''
   - name: --workernode-data-disk-size
@@ -455,9 +459,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
@@ -509,6 +515,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
@@ -546,6 +553,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
@@ -589,6 +597,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --tags
@@ -620,26 +629,30 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --created
+    defaultValue: False
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
     summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
     description: ''
   - name: --deleted
+    defaultValue: False
     summary: Wait until deleted.
     description: ''
   - name: --exists
+    defaultValue: False
     summary: Wait until the resource exists.
     description: ''
   - name: --interval
-    defaultValue: "30"
+    defaultValue: 30
     summary: Polling interval in seconds.
     description: ''
   - name: --timeout
-    defaultValue: "3600"
+    defaultValue: 3600
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
+    defaultValue: False
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py

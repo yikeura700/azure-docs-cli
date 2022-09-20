@@ -212,7 +212,7 @@ directCommands:
     summary: The schema in which events should be delivered for this event subscription. By default, events will be delivered in the same schema in which they are published (based on the corresponding topic's input schema).
     description: ''
   - name: --event-ttl
-    defaultValue: "1440"
+    defaultValue: 1440
     summary: Event time to live (in minutes). Must be a number between 1 and 1440.
     description: ''
   - name: --expiration-date
@@ -225,7 +225,7 @@ directCommands:
     summary: A space-separated list of labels to associate with this event subscription.
     description: ''
   - name: --max-delivery-attempts
-    defaultValue: "30"
+    defaultValue: 30
     summary: Maximum number of delivery attempts. Must be a number between 1 and 30.
     description: ''
   - name: --max-events-per-batch
@@ -254,6 +254,7 @@ directCommands:
     summary: An optional string to filter events for an event subscription based on a prefix. Wildcard characters are not supported.
     description: ''
   - name: --subject-case-sensitive
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Specify to indicate whether the subject fields should be compared in a case sensitive manner. True if flag present.
     description: ''
@@ -431,6 +432,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --include-full-endpoint-url
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Specify to indicate whether the full endpoint URL should be returned. True if flag present.
     description: ''
@@ -515,6 +517,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --add
+    defaultValue: '[]'
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --advanced-filter
@@ -577,6 +580,7 @@ directCommands:
     summary: The type of the destination endpoint.
     description: ''
   - name: --force-string
+    defaultValue: False
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --included-event-types
@@ -586,9 +590,11 @@ directCommands:
     summary: A space-separated list of labels to associate with this event subscription.
     description: ''
   - name: --remove
+    defaultValue: '[]'
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --set
+    defaultValue: '[]'
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --source-resource-id
@@ -637,4 +643,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 07/20/2022
   description: Manage event subscriptions for an Event Grid topic, domain, domain topic, Azure subscription, resource group or for any other Azure resource that supports event notifications.

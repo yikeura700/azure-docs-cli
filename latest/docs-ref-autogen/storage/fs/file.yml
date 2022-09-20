@@ -196,6 +196,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
@@ -252,7 +253,7 @@ directCommands:
     summary: The local file where the file or folder will be downloaded to. The source filename will be used if not specified.
     description: ''
   - name: --overwrite
-    defaultValue: "1"
+    defaultValue: 1
     parameterValueGroup: false, true
     summary: Overwrite an existing file when specified. Default value is false.
     description: ''
@@ -370,14 +371,14 @@ directCommands:
     summary: An opaque continuation token. This value can be retrieved from the next_marker field of a previous generator object. If specified, this generator will begin returning results from this point.
     description: ''
   - name: --num-results
-    defaultValue: "5000"
+    defaultValue: 5000
     summary: Specify the maximum number of results to return. If the request does not specify num_results or specifies a value greater than 5,000, the server will return up to 5,000 items.
     description: ''
   - name: --path
     summary: Filter the results to return only paths under the specified path.
     description: ''
   - name: --recursive
-    defaultValue: "1"
+    defaultValue: 1
     parameterValueGroup: false, true
     summary: Look into sub-directories recursively when set to true.
     description: ''
@@ -486,7 +487,7 @@ directCommands:
   - isRequired: true
     name: --expiry-options
     parameterValueGroup: Absolute, NeverExpire, RelativeToCreation, RelativeToNow
-    summary: Required. Indicates mode of the expiry time.
+    summary: "Required. Indicates mode of the expiry time. Possible values include: 'NeverExpire', 'RelativeToCreation', 'RelativeToNow', 'Absolute'."
     description: ''
   - isRequired: true
     name: --file-system -f
@@ -514,7 +515,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --expires-on
-    summary: The time to set the file to expiry. When expiry_options is RelativeTo\*, expires_on should be an int in milliseconds. If the type of expires_on is datetime, it should be in UTC time.
+    summary: The time to set the file to expiry. When expiry_options is RelativeTo*, expires_on should be an int in milliseconds. If the type of expires_on is datetime, it should be in UTC time.
     description: ''
   - name: --sas-token
     summary: 'A Shared Access Signature (SAS). Must be used in conjunction with storage account name or service endpoint. Environment variable: AZURE_STORAGE_SAS_TOKEN.'
@@ -656,13 +657,13 @@ directCommands:
     summary: The content MIME type.
     description: ''
   - name: --if-match
-    summary: An ETag value, or the wildcard character (\*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
+    summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
     description: ''
   - name: --if-modified-since
     summary: A Commence only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').
     description: ''
   - name: --if-none-match
-    summary: An ETag value, or the wildcard character (\*). Specify this header to perform the operation only if the resource's ETag does not match the value specified.
+    summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified.
     description: ''
   - name: --if-unmodified-since
     summary: A Commence only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').

@@ -40,80 +40,104 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --name --watchlist-alias -n
+    defaultValue: Undefined
     summary: Watchlist Alias.
     description: ''
   - isRequired: true
     name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
+    defaultValue: Undefined
     summary: The name of the workspace.
     description: ''
   optionalParameters:
   - name: --content-type
+    defaultValue: Undefined
     summary: 'The content type of the raw content. Example : text/csv or text/tsv.'
     description: ''
   - name: --created
+    defaultValue: Undefined
     summary: The time the watchlist was created.
     description: ''
   - name: --created-by
+    defaultValue: Undefined
     summary: Describes a user that created the watchlist  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --default-duration
+    defaultValue: Undefined
     summary: The default duration of a watchlist (in ISO 8601 duration format).
     description: ''
   - name: --description
+    defaultValue: Undefined
     summary: A description of the watchlist.
     description: ''
   - name: --display-name
+    defaultValue: Undefined
     summary: The display name of the watchlist.
     description: ''
   - name: --etag
+    defaultValue: Undefined
     summary: Etag of the azure resource.
     description: ''
   - name: --is-deleted
+    defaultValue: Undefined
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: A flag that indicates if the watchlist is deleted or not.
     description: ''
   - name: --items-search-key
+    defaultValue: Undefined
     summary: The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.
     description: ''
   - name: --labels
+    defaultValue: Undefined
     summary: List of labels relevant to this watchlist  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --provider
+    defaultValue: Undefined
     summary: The provider of the watchlist.
     description: ''
   - name: --raw-content
+    defaultValue: Undefined
     summary: The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint.
     description: ''
   - name: --skip-num
+    defaultValue: Undefined
     summary: The number of lines in a csv/tsv content to skip before the header.
     description: ''
   - name: --source
+    defaultValue: Undefined
     summary: The filename of the watchlist, called 'source'.
     description: ''
   - name: --source-type
+    defaultValue: Undefined
     parameterValueGroup: Local file, Remote storage
     summary: The sourceType of the watchlist.
     description: ''
   - name: --tenant-id
+    defaultValue: Undefined
     summary: The tenantId where the watchlist belongs to.
     description: ''
   - name: --updated
+    defaultValue: Undefined
     summary: The last time the watchlist was updated.
     description: ''
   - name: --updated-by
+    defaultValue: Undefined
     summary: Describes a user that updated the watchlist  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --upload-status
+    defaultValue: Undefined
     summary: 'The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted.'
     description: ''
   - name: --watchlist-id
+    defaultValue: Undefined
     summary: The id (a Guid) of the watchlist.
     description: ''
   - name: --watchlist-type
+    defaultValue: Undefined
     summary: The type of the watchlist.
     description: ''
 - uid: az_sentinel_watchlist_delete
@@ -121,25 +145,33 @@ directCommands:
   summary: Delete a watchlist.
   description: ''
   syntax: >-
-    az sentinel watchlist delete --name
-                                 --resource-group
-                                 --workspace-name
+    az sentinel watchlist delete [--ids]
+                                 [--name]
+                                 [--resource-group]
+                                 [--subscription]
+                                 [--workspace-name]
                                  [--yes]
-  requiredParameters:
-  - isRequired: true
-    name: --name --watchlist-alias -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name --watchlist-alias -n
+    defaultValue: Undefined
     summary: Watchlist Alias.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - isRequired: true
-    name: --workspace-name -w
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --workspace-name -w
+    defaultValue: Undefined
     summary: The name of the workspace.
     description: ''
-  optionalParameters:
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_sentinel_watchlist_list
@@ -153,14 +185,17 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
+    defaultValue: Undefined
     summary: The name of the workspace.
     description: ''
   optionalParameters:
   - name: --skip-token
+    defaultValue: Undefined
     summary: Skiptoken is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls. Optional.
     description: ''
 - uid: az_sentinel_watchlist_show
@@ -168,20 +203,28 @@ directCommands:
   summary: Get a watchlist, without its watchlist items.
   description: ''
   syntax: >-
-    az sentinel watchlist show --name
-                               --resource-group
-                               --workspace-name
-  requiredParameters:
-  - isRequired: true
-    name: --name --watchlist-alias -n
+    az sentinel watchlist show [--ids]
+                               [--name]
+                               [--resource-group]
+                               [--subscription]
+                               [--workspace-name]
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name --watchlist-alias -n
+    defaultValue: Undefined
     summary: Watchlist Alias.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - isRequired: true
-    name: --workspace-name -w
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --workspace-name -w
+    defaultValue: Undefined
     summary: The name of the workspace.
     description: ''
 - uid: az_sentinel_watchlist_update
@@ -189,10 +232,7 @@ directCommands:
   summary: Update a Watchlist and its Watchlist Items (bulk creation, e.g. through text/csv content type). To create a Watchlist and its Items, we should call this endpoint with either rawContent or a valid SAR URI and contentType properties. The rawContent is mainly used for small watchlist (content size below 3.8 MB). The SAS URI enables the creation of large watchlist, where the content size can go up to 500 MB. The status of processing such large file can be polled through the URL returned in Azure-AsyncOperation header.
   description: ''
   syntax: >-
-    az sentinel watchlist update --name
-                                 --resource-group
-                                 --workspace-name
-                                 [--add]
+    az sentinel watchlist update [--add]
                                  [--content-type]
                                  [--created]
                                  [--created-by]
@@ -201,113 +241,148 @@ directCommands:
                                  [--display-name]
                                  [--etag]
                                  [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
+                                 [--ids]
                                  [--is-deleted {0, 1, f, false, n, no, t, true, y, yes}]
                                  [--items-search-key]
                                  [--labels]
+                                 [--name]
                                  [--provider]
                                  [--raw-content]
                                  [--remove]
+                                 [--resource-group]
                                  [--set]
                                  [--skip-num]
                                  [--source]
                                  [--source-type {Local file, Remote storage}]
+                                 [--subscription]
                                  [--tenant-id]
                                  [--updated]
                                  [--updated-by]
                                  [--upload-status]
                                  [--watchlist-id]
                                  [--watchlist-type]
-  requiredParameters:
-  - isRequired: true
-    name: --name --watchlist-alias -n
-    summary: Watchlist Alias.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - isRequired: true
-    name: --workspace-name -w
-    summary: The name of the workspace.
-    description: ''
+                                 [--workspace-name]
   optionalParameters:
   - name: --add
+    defaultValue: Undefined
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --content-type
+    defaultValue: Undefined
     summary: 'The content type of the raw content. Example : text/csv or text/tsv.'
     description: ''
   - name: --created
+    defaultValue: Undefined
     summary: The time the watchlist was created.
     description: ''
   - name: --created-by
+    defaultValue: Undefined
     summary: Describes a user that created the watchlist  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --default-duration
+    defaultValue: Undefined
     summary: The default duration of a watchlist (in ISO 8601 duration format).
     description: ''
   - name: --description
+    defaultValue: Undefined
     summary: A description of the watchlist.
     description: ''
   - name: --display-name
+    defaultValue: Undefined
     summary: The display name of the watchlist.
     description: ''
   - name: --etag
+    defaultValue: Undefined
     summary: Etag of the azure resource.
     description: ''
   - name: --force-string
+    defaultValue: Undefined
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --is-deleted
+    defaultValue: Undefined
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: A flag that indicates if the watchlist is deleted or not.
     description: ''
   - name: --items-search-key
+    defaultValue: Undefined
     summary: The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.
     description: ''
   - name: --labels
+    defaultValue: Undefined
     summary: List of labels relevant to this watchlist  Shorthand syntax supported. Try `??` to show more.
     description: ''
+  - name: --name --watchlist-alias -n
+    defaultValue: Undefined
+    summary: Watchlist Alias.
+    description: ''
   - name: --provider
+    defaultValue: Undefined
     summary: The provider of the watchlist.
     description: ''
   - name: --raw-content
+    defaultValue: Undefined
     summary: The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint.
     description: ''
   - name: --remove
+    defaultValue: Undefined
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
+  - name: --resource-group -g
+    defaultValue: Undefined
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
   - name: --set
+    defaultValue: Undefined
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --skip-num
+    defaultValue: Undefined
     summary: The number of lines in a csv/tsv content to skip before the header.
     description: ''
   - name: --source
+    defaultValue: Undefined
     summary: The filename of the watchlist, called 'source'.
     description: ''
   - name: --source-type
+    defaultValue: Undefined
     parameterValueGroup: Local file, Remote storage
     summary: The sourceType of the watchlist.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --tenant-id
+    defaultValue: Undefined
     summary: The tenantId where the watchlist belongs to.
     description: ''
   - name: --updated
+    defaultValue: Undefined
     summary: The last time the watchlist was updated.
     description: ''
   - name: --updated-by
+    defaultValue: Undefined
     summary: Describes a user that updated the watchlist  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --upload-status
+    defaultValue: Undefined
     summary: 'The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted.'
     description: ''
   - name: --watchlist-id
+    defaultValue: Undefined
     summary: The id (a Guid) of the watchlist.
     description: ''
   - name: --watchlist-type
+    defaultValue: Undefined
     summary: The type of the watchlist.
+    description: ''
+  - name: --workspace-name -w
+    defaultValue: Undefined
+    summary: The name of the workspace.
     description: ''
 commands:
 - az_sentinel_watchlist_create
@@ -333,4 +408,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage watchlist with sentinel.

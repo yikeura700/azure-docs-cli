@@ -119,7 +119,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --etag -e
-    summary: Etag or entity tag corresponding to the last state of the resource. If no etag is provided the value '\*' is used.
+    summary: Etag or entity tag corresponding to the last state of the resource. If no etag is provided the value '*' is used.
     description: ''
   - name: --hub-name -n
     summary: IoT Hub name. Required if --login is not provided.
@@ -152,4 +152,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Manipulate and interact with the digital twin of an IoT Hub device.

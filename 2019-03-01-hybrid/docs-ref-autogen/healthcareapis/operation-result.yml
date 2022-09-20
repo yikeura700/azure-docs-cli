@@ -13,19 +13,25 @@ directCommands:
   summary: Get the operation result for a long running operation.
   description: ''
   syntax: >-
-    az healthcareapis operation-result show --location-name
-                                            --operation-result-id
+    az healthcareapis operation-result show [--ids]
+                                            [--location-name]
+                                            [--operation-result-id]
+                                            [--subscription]
   examples:
   - summary: Get operation result
     syntax: az healthcareapis operation-result show --location-name "westus" --operation-result-id "exampleid"
-  requiredParameters:
-  - isRequired: true
-    name: --location-name
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --location-name
     summary: The location of the operation.
     description: ''
-  - isRequired: true
-    name: --operation-result-id
+  - name: --operation-result-id
     summary: The ID of the operation result to get.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
 - az_healthcareapis_operation-result_show
@@ -47,4 +53,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Healthcareapis operation-result.

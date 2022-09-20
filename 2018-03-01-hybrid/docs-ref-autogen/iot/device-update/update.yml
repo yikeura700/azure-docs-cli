@@ -47,6 +47,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -64,6 +65,7 @@ directCommands:
     az iot device-update update import --account
                                        --instance
                                        --url
+                                       [--defer]
                                        [--file]
                                        [--friendly-name]
                                        [--hashes]
@@ -98,6 +100,9 @@ directCommands:
     summary: Routable location from which the import manifest can be downloaded by Device Update for IoT Hub. This is typically a read-only SAS-protected blob URL with an expiration set to at least 4 hours.
     description: ''
   optionalParameters:
+  - name: --defer
+    summary: Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.
+    description: ''
   - name: --file
     summary: Space-separated key=value pairs corresponding to import manifest metadata file properties. Required keys include filename and url. --file can be used 1 or more times.
     description: ''
@@ -108,6 +113,7 @@ directCommands:
     summary: Space-separated key=value pairs where the key is the hash algorithm used and the value is the base64 encoded import manifest file hash. At least a sha256 entry is required. If not provided it will by calculated from the provided url.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -238,4 +244,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Device Update update management.

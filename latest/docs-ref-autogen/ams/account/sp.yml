@@ -45,6 +45,7 @@ directCommands:
     summary: The role of the service principal.
     description: ''
   - name: --xml
+    defaultValue: False
     summary: Enables xml output format.
     description: ''
   - name: --years
@@ -62,6 +63,7 @@ directCommands:
                                         [--password]
                                         [--resource-group]
                                         [--role]
+                                        [--subscription]
                                         [--xml]
                                         [--years]
   optionalParameters:
@@ -84,11 +86,15 @@ directCommands:
     defaultValue: Contributor
     summary: The role of the service principal.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --xml
+    defaultValue: False
     summary: Enables xml output format.
     description: ''
   - name: --years
-    defaultValue: "1"
+    defaultValue: 1
     summary: 'Number of years for which the secret will be valid. Default: 1 year.'
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py

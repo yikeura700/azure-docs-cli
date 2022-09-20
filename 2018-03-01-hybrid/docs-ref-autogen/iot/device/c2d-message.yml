@@ -25,7 +25,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --etag -e
-    summary: Etag or entity tag corresponding to the last state of the resource. If no etag is provided the value '\*' is used.
+    summary: Etag or entity tag corresponding to the last state of the resource. If no etag is provided the value '*' is used.
     description: ''
   - name: --hub-name -n
     summary: IoT Hub name. Required if --login is not provided.
@@ -53,7 +53,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --etag -e
-    summary: Etag or entity tag corresponding to the last state of the resource. If no etag is provided the value '\*' is used.
+    summary: Etag or entity tag corresponding to the last state of the resource. If no etag is provided the value '*' is used.
     description: ''
   - name: --hub-name -n
     summary: IoT Hub name. Required if --login is not provided.
@@ -117,10 +117,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --abandon
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Abandon the cloud-to-device message after receipt.
     description: ''
   - name: --complete
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Complete the cloud-to-device message after receipt.
     description: ''
@@ -128,13 +130,14 @@ directCommands:
     summary: IoT Hub name. Required if --login is not provided.
     description: ''
   - name: --lock-timeout --lt
-    defaultValue: "60"
+    defaultValue: 60
     summary: Specifies the amount of time a message will be invisible to other receive calls.
     description: ''
   - name: --login -l
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --hub-name is not provided.
     description: ''
   - name: --reject
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Reject the cloud-to-device message after receipt.
     description: ''
@@ -158,7 +161,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --etag -e
-    summary: Etag or entity tag corresponding to the last state of the resource. If no etag is provided the value '\*' is used.
+    summary: Etag or entity tag corresponding to the last state of the resource. If no etag is provided the value '*' is used.
     description: ''
   - name: --hub-name -n
     summary: IoT Hub name. Required if --login is not provided.
@@ -246,6 +249,7 @@ directCommands:
     summary: 'Message property bag in key-value pairs with the following format: a=b;c=d.'
     description: ''
   - name: --repair -r
+    defaultValue: False
     parameterValueGroup: false, true
     summary: 'Reinstall uamqp dependency compatible with extension version. Default: false.'
     description: ''
@@ -256,10 +260,12 @@ directCommands:
     summary: The C2D message, user Id property.
     description: ''
   - name: --wait -w
+    defaultValue: False
     parameterValueGroup: false, true
     summary: If set the c2d send operation will block until device feedback has been received.
     description: ''
   - name: --yes -y
+    defaultValue: False
     parameterValueGroup: false, true
     summary: 'Skip user prompts. Indicates acceptance of action. Used primarily for automation scenarios. Default: false.'
     description: ''
@@ -288,4 +294,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Cloud-to-device messaging commands.

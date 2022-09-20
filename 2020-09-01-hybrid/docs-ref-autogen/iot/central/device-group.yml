@@ -40,7 +40,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --filter
-    summary: 'Query defining which devices should be in this group.[Query filter Example: SELECT \* FROM devices WHERE $template = "dtmi:modelDefinition:dtdlv2"].'
+    summary: 'Query defining which devices should be in this group.[Query filter Example: SELECT * FROM devices WHERE $template = "dtmi:modelDefinition:dtdlv2"].'
     description: ''
   optionalParameters:
   - name: --api-version --av
@@ -204,7 +204,7 @@ directCommands:
     summary: Display name of the device group.
     description: ''
   - name: --filter
-    summary: 'Query defining which devices should be in this group.[Query filter Example: SELECT \* FROM devices WHERE $template = "dtmi:modelDefinition:dtdlv2"].'
+    summary: 'Query defining which devices should be in this group.[Query filter Example: SELECT * FROM devices WHERE $template = "dtmi:modelDefinition:dtdlv2"].'
     description: ''
   - name: --organizations
     summary: List of organization IDs of the device group.
@@ -236,4 +236,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Manage and configure IoT Central device groups.

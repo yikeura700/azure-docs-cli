@@ -46,6 +46,7 @@ directCommands:
     summary: A filter string to pass to fzf.
     description: ''
   - name: --no-default -d
+    defaultValue: False
     summary: Don't change the active or default, just return selected item.
     description: ''
 - uid: az_fzf_install
@@ -75,6 +76,7 @@ directCommands:
     summary: A filter string to pass to fzf.
     description: ''
   - name: --no-default -d
+    defaultValue: False
     summary: Don't change the active or default, just return selected item.
     description: ''
 - uid: az_fzf_subscription
@@ -89,6 +91,7 @@ directCommands:
     summary: A filter string to pass to fzf.
     description: ''
   - name: --no-default -d
+    defaultValue: False
     summary: Don't change the active or default, just return selected item.
     description: ''
 commands:
@@ -114,6 +117,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: >-
     Select your active subscription or set defaults with an easy selection interface (fzf).
 

@@ -50,6 +50,7 @@ directCommands:
     syntax: az vm image list -f CentOS --all
   optionalParameters:
   - name: --all
+    defaultValue: False
     summary: Retrieve image list from live Azure service rather using an offline image list.
     description: ''
   - name: --architecture
@@ -90,7 +91,6 @@ directCommands:
     name: --publisher -p
     summary: Image publisher.
     description: ''
-    valueFrom: az vm image list-publishers
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vm_image_list-publishers
   name: az vm image list-publishers
@@ -132,7 +132,6 @@ directCommands:
     name: --publisher -p
     summary: Image publisher.
     description: ''
-    valueFrom: az vm image list-publishers
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
 - uid: az_vm_image_show
   name: az vm image show

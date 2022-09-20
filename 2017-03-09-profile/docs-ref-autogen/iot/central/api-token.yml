@@ -34,7 +34,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --tkid --token-id
-    summary: The IoT Central ID associated with this token, [0-9a-zA-Z-] allowed, max length limit to 40. Specify an ID that you'll then use when modifying or deleting this token later via the CLI or API.
+    summary: The IoT Central ID associated with this token, [0-9a-zA-Z\-] allowed, max length limit to 40. Specify an ID that you'll then use when modifying or deleting this token later via the CLI or API.
     description: ''
   optionalParameters:
   - name: --api-version --av
@@ -72,7 +72,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --tkid --token-id
-    summary: The IoT Central ID associated with this token, [0-9a-zA-Z-] allowed, max length limit to 40. Specify an ID that you'll then use when modifying or deleting this token later via the CLI or API.
+    summary: The IoT Central ID associated with this token, [0-9a-zA-Z\-] allowed, max length limit to 40. Specify an ID that you'll then use when modifying or deleting this token later via the CLI or API.
     description: ''
   optionalParameters:
   - name: --api-version --av
@@ -137,7 +137,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --tkid --token-id
-    summary: The IoT Central ID associated with this token, [0-9a-zA-Z-] allowed, max length limit to 40. Specify an ID that you'll then use when modifying or deleting this token later via the CLI or API.
+    summary: The IoT Central ID associated with this token, [0-9a-zA-Z\-] allowed, max length limit to 40. Specify an ID that you'll then use when modifying or deleting this token later via the CLI or API.
     description: ''
   optionalParameters:
   - name: --api-version --av
@@ -175,4 +175,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: IoT Central allows you to generate and manage API tokens to be used to access the IoT Central API. More information about APIs can be found at https://aka.ms/iotcentraldocsapi.

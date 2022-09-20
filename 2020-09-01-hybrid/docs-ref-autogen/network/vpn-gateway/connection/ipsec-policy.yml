@@ -78,6 +78,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_network_vpn-gateway_connection_ipsec-policy_list
@@ -130,6 +131,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 commands:
@@ -154,4 +156,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 09/02/2022
   description: Manage site-to-site VPN gateway connection IPSec policies.

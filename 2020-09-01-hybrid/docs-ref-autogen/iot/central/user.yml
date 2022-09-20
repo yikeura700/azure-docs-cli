@@ -214,7 +214,7 @@ directCommands:
     summary: Object ID for service principal to be added to the app. Tenant ID must also be specified. If email is specified this gets ignored and the user will not be a service principal user but a standard "email" user.
     description: ''
   - name: --roles
-    summary: Comma-separated list of roles that will be associated with this user. You can specify one of the built-in roles, or specify the role ID of a custom role. See more at https://aka.ms/iotcentral-customrolesdocs. Organizations can be specified alongside roles when running with API version == 1.1-preview. E.g. "organization_idrole".
+    summary: Comma-separated list of roles that will be associated with this user. You can specify one of the built-in roles, or specify the role ID of a custom role. See more at https://aka.ms/iotcentral-customrolesdocs. Organizations can be specified alongside roles when running with API version == 1.1-preview. E.g. "organization_id\role".
     description: ''
   - name: --tenant-id --tnid
     summary: Tenant ID for service principal to be added to the app. Object ID must also be specified. If email is specified this gets ignored and the user will not be a service principal user but a standard "email" user.
@@ -246,4 +246,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Manage and configure IoT Central users.

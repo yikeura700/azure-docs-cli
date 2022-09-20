@@ -56,7 +56,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --file-last-written
-    defaultValue: "72"
+    defaultValue: 72
     summary: Integer in hours to indicate file last modify time.
     description: ''
   - name: --filename-contains
@@ -86,4 +86,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage server logs.

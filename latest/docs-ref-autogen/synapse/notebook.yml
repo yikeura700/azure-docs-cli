@@ -37,7 +37,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --executor-count
-    defaultValue: "2"
+    defaultValue: 2
     summary: Number of executors to be allocated in the specified Spark pool for the job.
     description: ''
   - name: --executor-size
@@ -49,6 +49,7 @@ directCommands:
     summary: 'The folder that this notebook is in. If not specified, this notebook will appear at the root level. Eg: folder/subfolder1.'
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --spark-pool-name
@@ -80,9 +81,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
@@ -150,7 +153,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --executor-count
-    defaultValue: "2"
+    defaultValue: 2
     summary: Number of executors to be allocated in the specified Spark pool for the job.
     description: ''
   - name: --executor-size
@@ -162,6 +165,7 @@ directCommands:
     summary: 'The folder that this notebook is in. If not specified, this notebook will appear at the root level. Eg: folder/subfolder1.'
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --spark-pool-name
@@ -215,7 +219,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --executor-count
-    defaultValue: "2"
+    defaultValue: 2
     summary: Number of executors to be allocated in the specified Spark pool for the job.
     description: ''
   - name: --executor-size
@@ -227,6 +231,7 @@ directCommands:
     summary: 'The folder that this notebook is in. If not specified, this notebook will appear at the root level. Eg: folder/subfolder1.'
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --spark-pool-name

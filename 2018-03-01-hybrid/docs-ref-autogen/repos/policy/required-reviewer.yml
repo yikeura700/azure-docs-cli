@@ -1,6 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_repos_policy_required-reviewer
 name: az repos policy required-reviewer
+extensionInformation: >-
+  > [!Note]
+
+  > This reference is part of the **azure-devops** extension for the Azure CLI  (version 2.30.0 or higher).  The extension will automatically install the first time you run an **az repos policy required-reviewer** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Manage required reviewer policy.
 description: ''
 directCommands:
@@ -61,7 +65,7 @@ directCommands:
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: https://dev.azure.com/MyOrganizationName/.'
     description: ''
   - name: --path-filter
-    summary: "Filter path(s) on which the policy is applied. Supports absolute paths, wildcards and multiple paths separated by ';'. Example: /WebApp/Models/Data.cs, /WebApp/\\* or \\*.cs,/WebApp/Models/Data.cs;ClientApp/Models/Data.cs."
+    summary: "Filter path(s) on which the policy is applied. Supports absolute paths, wildcards and multiple paths separated by ';'. Example: /WebApp/Models/Data.cs, /WebApp/* or *.cs,/WebApp/Models/Data.cs;ClientApp/Models/Data.cs."
     description: ''
   - name: --project -p
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
@@ -115,7 +119,7 @@ directCommands:
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: https://dev.azure.com/MyOrganizationName/.'
     description: ''
   - name: --path-filter
-    summary: "Filter path(s) on which the policy is applied. Supports absolute paths, wildcards and multiple paths separated by ';'. Example: /WebApp/Models/Data.cs, /WebApp/\\* or \\*.cs,/WebApp/Models/Data.cs;ClientApp/Models/Data.cs."
+    summary: "Filter path(s) on which the policy is applied. Supports absolute paths, wildcards and multiple paths separated by ';'. Example: /WebApp/Models/Data.cs, /WebApp/* or *.cs,/WebApp/Models/Data.cs;ClientApp/Models/Data.cs."
     description: ''
   - name: --project -p
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
@@ -147,4 +151,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage required reviewer policy.

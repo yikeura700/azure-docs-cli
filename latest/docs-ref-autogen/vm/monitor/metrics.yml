@@ -69,16 +69,14 @@ directCommands:
     parameterValueGroup: Average, Count, Maximum, Minimum, None, Total
     summary: The list of aggregation types (space-separated) to retrieve.
     description: ''
-    valueFrom: az vm monitor metrics list-definitions -n MyVM -g MyRG --query "@[*].supportedAggregationTypes"
   - name: --dimension
     summary: The list of dimensions (space-separated) the metrics are queried into.
     description: ''
-    valueFrom: az vm monitor metrics list-definitions -n MyVM -g MyRG --query "@[*].dimensions"
   - name: --end-time
     summary: 'End time of the query. Defaults to the current time. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).'
     description: ''
   - name: --filter
-    summary: A string used to reduce the set of metric data returned. eg. "LUN eq '\*'".
+    summary: A string used to reduce the set of metric data returned. eg. "LUN eq '*'".
     description: For a full list of filters, see the filter string reference at https://docs.microsoft.com/rest/api/monitor/metrics/list.
   - name: --interval
     defaultValue: 1m
@@ -90,7 +88,6 @@ directCommands:
   - name: --metrics
     summary: Space-separated list of metric names to retrieve.
     description: ''
-    valueFrom: az vm monitor metrics list-definitions -n MyVM -g MyRG --query "@[*].name.value"
   - name: --namespace
     summary: Namespace to query metric definitions for.
     description: ''
@@ -105,7 +102,7 @@ directCommands:
     summary: 'Start time of the query. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).'
     description: ''
   - name: --top
-    defaultValue: "10"
+    defaultValue: 10
     summary: Max number of records to retrieve. Valid only if --filter used.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py

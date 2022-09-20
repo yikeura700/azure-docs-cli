@@ -53,7 +53,7 @@ directCommands:
     description: ''
   - name: --log-level
     parameterValueGroup: DEBUG, ERROR, FATAL, INFO, WARNING
-    summary: DNS service log level.
+    summary: 'DNS service log level. Possible values include: "DEBUG", "INFO", "WARNING", "ERROR", "FATAL".'
     description: ''
   - name: --revision
     summary: NSX revision number.
@@ -85,6 +85,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes
+    defaultValue: False
     summary: Delete without confirmation.
     description: ''
 - uid: az_vmware_workload-network_dns-service_list
@@ -175,7 +176,7 @@ directCommands:
     description: ''
   - name: --log-level
     parameterValueGroup: DEBUG, ERROR, FATAL, INFO, WARNING
-    summary: DNS service log level.
+    summary: 'DNS service log level. Possible values include: "DEBUG", "INFO", "WARNING", "ERROR", "FATAL".'
     description: ''
   - name: --revision
     summary: NSX revision number.
@@ -204,4 +205,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Commands to manage a DNS Service workload network.

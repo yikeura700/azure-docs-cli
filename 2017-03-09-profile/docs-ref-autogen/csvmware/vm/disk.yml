@@ -34,7 +34,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --controller
-    defaultValue: "1000"
+    defaultValue: 1000
     summary: Id of the controller. Input 1000 for SCSI controller 0, and 15000 for SATA controller 0.
     description: ''
   - name: --mode
@@ -43,7 +43,7 @@ directCommands:
     summary: The disk independence mode.
     description: ''
   - name: --size
-    defaultValue: "16777216"
+    defaultValue: 16777216
     summary: The amount of disk size in KB.
     description: ''
 - uid: az_csvmware_vm_disk_delete
@@ -136,4 +136,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage VMware virtual machine's disks.

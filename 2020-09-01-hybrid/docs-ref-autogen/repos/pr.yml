@@ -1,6 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_repos_pr
 name: az repos pr
+extensionInformation: >-
+  > [!Note]
+
+  > This reference is part of the **azure-devops** extension for the Azure CLI  (version 2.30.0 or higher).  The extension will automatically install the first time you run an **az repos pr** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Manage pull requests.
 description: ''
 directCommands:
@@ -47,10 +51,12 @@ directCommands:
                        [--work-items]
   optionalParameters:
   - name: --auto-complete
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Set the pull request to complete automatically when all policies have passed and the source branch can be merged into the target branch.
     description: ''
   - name: --bypass-policy
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Bypass required policies (if any) and completes the pull request once it can be merged.
     description: ''
@@ -58,6 +64,7 @@ directCommands:
     summary: Reason for bypassing the required policies.
     description: ''
   - name: --delete-source-branch
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Delete the source branch after the pull request has been completed and merged into the target branch.
     description: ''
@@ -76,6 +83,7 @@ directCommands:
     summary: Message displayed when commits are merged.
     description: ''
   - name: --open
+    defaultValue: False
     summary: Open the pull request in your web browser.
     description: ''
   - name: --org --organization
@@ -94,6 +102,7 @@ directCommands:
     summary: 'Name of the source branch. Example: "dev".'
     description: ''
   - name: --squash
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Squash the commits in the source branch when merging into the target branch.
     description: ''
@@ -104,6 +113,7 @@ directCommands:
     summary: Title for the new pull request.
     description: ''
   - name: --transition-work-items
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Transition any work items linked to the pull request into the next logical state. (e.g. Active -> Resolved).
     description: ''
@@ -136,6 +146,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --include-links
+    defaultValue: False
     summary: Include _links for each pull request.
     description: ''
   - name: --org --organization
@@ -213,6 +224,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --open
+    defaultValue: False
     summary: Open the pull request in your web browser.
     description: ''
   - name: --org --organization
@@ -326,4 +338,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage pull requests.

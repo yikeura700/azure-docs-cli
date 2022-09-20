@@ -42,6 +42,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --fail-on-exist
+    defaultValue: False
     summary: Specify whether to throw an exception if the queue already exists.
     description: ''
   - name: --metadata
@@ -94,6 +95,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --fail-not-exist
+    defaultValue: False
     summary: Specify whether to throw an exception if the queue doesn't exist.
     description: ''
   - name: --queue-endpoint
@@ -250,14 +252,15 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --include-metadata
+    defaultValue: False
     summary: Specify that queue metadata be returned in the response.
     description: ''
   - name: --marker
     summary: A string value that identifies the portion of the list of containers to be returned with the next listing operation. The operation returns the NextMarker value within the response body if the listing operation did not return all containers remaining to be listed with the current page. If specified, this generator will begin returning results from the point where the previous generator stopped.
     description: ''
   - name: --num-results
-    defaultValue: "5000"
-    summary: Specify the maximum number to return. If the request does not specify num_results, or specifies a value greater than 5000, the server will return up to 5000 items. Note that if the listing operation crosses a partition boundary, then the service will return a continuation token for retrieving the remaining of the results. Provide "\*" to return all.
+    defaultValue: 5000
+    summary: Specify the maximum number to return. If the request does not specify num_results, or specifies a value greater than 5000, the server will return up to 5000 items. Note that if the listing operation crosses a partition boundary, then the service will return a continuation token for retrieving the remaining of the results. Provide "*" to return all.
     description: ''
   - name: --prefix
     summary: Filter the results to return only queues whose names begin with the specified prefix.

@@ -13,6 +13,7 @@ directCommands:
                                                                   [--ids]
                                                                   [--name]
                                                                   [--resource-group]
+                                                                  [--subscription]
   examples:
   - summary: Check if the migration-name provided is available for your migration workflow.
     syntax: az postgres flexible-server migration check-name-availability --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --resource-group testGroup --name testserver --migration-name xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
@@ -30,6 +31,9 @@ directCommands:
     description: ''
   - name: --resource-group -g
     summary: Resource Group Name of the migration target server.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 - uid: az_postgres_flexible-server_migration_create
   name: az postgres flexible-server migration create
@@ -69,6 +73,7 @@ directCommands:
                                                  [--ids]
                                                  [--name]
                                                  [--resource-group]
+                                                 [--subscription]
                                                  [--yes]
   examples:
   - summary: Cancel/delete the migration workflow. The migration workflows can be canceled/deleted at any point.
@@ -88,6 +93,9 @@ directCommands:
   - name: --resource-group -g
     summary: Resource Group Name of the migration target server.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
     description: ''
@@ -100,6 +108,7 @@ directCommands:
                                                [--ids]
                                                [--name]
                                                [--resource-group]
+                                               [--subscription]
   examples:
   - summary: List the currently active migrations of a target flexible server.
     syntax: az postgres flexible-server migration list --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --resource-group testGroup --name testserver --filter Active
@@ -119,6 +128,9 @@ directCommands:
   - name: --resource-group -g
     summary: Resource Group Name of the migration target server.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
 - uid: az_postgres_flexible-server_migration_show
   name: az postgres flexible-server migration show
   summary: Get the details of a specific migration.
@@ -129,6 +141,7 @@ directCommands:
                                                [--level]
                                                [--name]
                                                [--resource-group]
+                                               [--subscription]
   examples:
   - summary: Get the details of a specific migration of a target flexible server.
     syntax: az postgres flexible-server migration show --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --resource-group testGroup --name testserver --migration-name xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
@@ -151,6 +164,9 @@ directCommands:
   - name: --resource-group -g
     summary: Resource Group Name of the migration target server.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
 - uid: az_postgres_flexible-server_migration_update
   name: az postgres flexible-server migration update
   summary: Update a specific migration.
@@ -164,6 +180,7 @@ directCommands:
                                                  [--resource-group]
                                                  [--setup-replication]
                                                  [--start-data-migration]
+                                                 [--subscription]
   examples:
   - summary: Allow the migration workflow to setup logical replication on the source. Note that this command will restart the source server.
     syntax: az postgres flexible-server migration update --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --resource-group testGroup --name testserver --migration-name xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx --setup-replication
@@ -200,6 +217,9 @@ directCommands:
   - name: --start-data-migration
     summary: Reschedule the data migration to start right now.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
 commands:
 - az_postgres_flexible-server_migration_check-name-availability
 - az_postgres_flexible-server_migration_create
@@ -225,4 +245,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage migration workflows for PostgreSQL Flexible Servers.

@@ -99,6 +99,7 @@ directCommands:
     summary: Access Key ID used to authenticate with the bucket.
     description: ''
   - name: --bucket-insecure
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Communicate with a bucket without TLS.
     description: ''
@@ -151,6 +152,7 @@ directCommands:
     summary: Namespace to deploy the configuration.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --scope -s
@@ -168,6 +170,7 @@ directCommands:
     summary: File path to private ssh key for private repository sync.
     description: ''
   - name: --suspend
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Suspend the reconciliation of the source and kustomizations associated with this configuration.
     description: ''
@@ -219,13 +222,16 @@ directCommands:
     summary: Cluster Resource Provider name for this clusterType (Required for provisionedClusters).
     description: ''
   - name: --force
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Force delete the flux configuration from the cluster.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_k8s-configuration_flux_list
@@ -424,6 +430,7 @@ directCommands:
     summary: Local reference to a kubernetes secret in the configuration namespace to use for communication to the source.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --semver
@@ -449,6 +456,7 @@ directCommands:
     summary: URL of the source to reconcile.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 commands:
@@ -484,4 +492,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Commands to manage Flux v2 Kubernetes configurations.

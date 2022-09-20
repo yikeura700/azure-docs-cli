@@ -27,31 +27,39 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --contact-name --name -n
+    defaultValue: Undefined
     summary: Contact name.
     description: ''
   - isRequired: true
     name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --spacecraft-name
+    defaultValue: Undefined
     summary: Spacecraft ID.
     description: ''
   optionalParameters:
   - name: --contact-profile
+    defaultValue: Undefined
     summary: The reference to the contact profile resource.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --ground-station-name
+    defaultValue: Undefined
     summary: Azure Ground Station name.
     description: ''
   - name: --no-wait
+    defaultValue: Undefined
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --reservation-end-time
+    defaultValue: Undefined
     summary: Reservation end time of a contact (ISO 8601 UTC standard).
     description: ''
   - name: --reservation-start-time
+    defaultValue: Undefined
     summary: Reservation start time of a contact (ISO 8601 UTC standard).
     description: ''
 - uid: az_orbital_spacecraft_contact_delete
@@ -59,33 +67,42 @@ directCommands:
   summary: Delete a specified contact.
   description: ''
   syntax: >-
-    az orbital spacecraft contact delete --contact-name
-                                         --resource-group
-                                         --spacecraft-name
+    az orbital spacecraft contact delete [--contact-name]
+                                         [--ids]
                                          [--no-wait {0, 1, f, false, n, no, t, true, y, yes}]
+                                         [--resource-group]
+                                         [--spacecraft-name]
+                                         [--subscription]
                                          [--yes]
   examples:
   - summary: Delete Contact
     syntax: az orbital spacecraft contact delete -g <resource-group> --spacecraft-name <spacecraft-name> --name <contact-name>
-  requiredParameters:
-  - isRequired: true
-    name: --contact-name --name -n
+  optionalParameters:
+  - name: --contact-name --name -n
+    defaultValue: Undefined
     summary: Contact name.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
-  - isRequired: true
-    name: --spacecraft-name
-    summary: Spacecraft ID.
-    description: ''
-  optionalParameters:
   - name: --no-wait
+    defaultValue: Undefined
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: Do not wait for the long-running operation to finish.
     description: ''
+  - name: --resource-group -g
+    defaultValue: Undefined
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --spacecraft-name
+    defaultValue: Undefined
+    summary: Spacecraft ID.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_orbital_spacecraft_contact_list
@@ -102,14 +119,17 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --spacecraft-name
+    defaultValue: Undefined
     summary: Spacecraft ID.
     description: ''
   optionalParameters:
   - name: --skiptoken
+    defaultValue: Undefined
     summary: An opaque string that the resource provider uses to skip over previously-returned results. This is used when a previous list operation call returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls.
     description: ''
 - uid: az_orbital_spacecraft_contact_show
@@ -117,75 +137,94 @@ directCommands:
   summary: Get the specified contact in a specified resource group.
   description: ''
   syntax: >-
-    az orbital spacecraft contact show --contact-name
-                                       --resource-group
-                                       --spacecraft-name
+    az orbital spacecraft contact show [--contact-name]
+                                       [--ids]
+                                       [--resource-group]
+                                       [--spacecraft-name]
+                                       [--subscription]
   examples:
   - summary: Get Contact
     syntax: az orbital spacecraft contact show -g <resource-group> --spacecraft-name <spacecraft-name> --name <contact-name>
-  requiredParameters:
-  - isRequired: true
-    name: --contact-name --name -n
+  optionalParameters:
+  - name: --contact-name --name -n
+    defaultValue: Undefined
     summary: Contact name.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - isRequired: true
-    name: --spacecraft-name
+  - name: --spacecraft-name
+    defaultValue: Undefined
     summary: Spacecraft ID.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 - uid: az_orbital_spacecraft_contact_wait
   name: az orbital spacecraft contact wait
   summary: Place the CLI in a waiting state until a condition is met.
   description: ''
   syntax: >-
-    az orbital spacecraft contact wait --contact-name
-                                       --resource-group
-                                       --spacecraft-name
+    az orbital spacecraft contact wait [--contact-name]
                                        [--created]
                                        [--custom]
                                        [--deleted]
                                        [--exists]
+                                       [--ids]
                                        [--interval]
+                                       [--resource-group]
+                                       [--spacecraft-name]
+                                       [--subscription]
                                        [--timeout]
                                        [--updated]
-  requiredParameters:
-  - isRequired: true
-    name: --contact-name --name -n
+  optionalParameters:
+  - name: --contact-name --name -n
+    defaultValue: Undefined
     summary: Contact name.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - isRequired: true
-    name: --spacecraft-name
-    summary: Spacecraft ID.
-    description: ''
-  optionalParameters:
   - name: --created
+    defaultValue: False
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
     summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
     description: ''
   - name: --deleted
+    defaultValue: False
     summary: Wait until deleted.
     description: ''
   - name: --exists
+    defaultValue: False
     summary: Wait until the resource exists.
     description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --interval
-    defaultValue: "30"
+    defaultValue: 30
     summary: Polling interval in seconds.
     description: ''
+  - name: --resource-group -g
+    defaultValue: Undefined
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --spacecraft-name
+    defaultValue: Undefined
+    summary: Spacecraft ID.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --timeout
-    defaultValue: "3600"
+    defaultValue: 3600
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
+    defaultValue: False
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
@@ -212,4 +251,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: At the scheduled time, the selected ground station will contact the spacecraft and start data retrieval/delivery using the contact profile.

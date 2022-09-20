@@ -104,6 +104,7 @@ directCommands:
                           [--name]
                           [--no-wait]
                           [--resource-group]
+                          [--subscription]
                           [--workspace]
                           [--yes]
   examples:
@@ -124,15 +125,20 @@ directCommands:
     summary: Name of job.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --workspace -w
     summary: Name of workspace.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
@@ -170,6 +176,7 @@ directCommands:
                         [--ids]
                         [--name]
                         [--resource-group]
+                        [--subscription]
                         [--workspace]
   examples:
   - summary: Show full information about a job.
@@ -189,6 +196,9 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --workspace -w
     summary: Name of workspace.
     description: ''
@@ -203,6 +213,7 @@ directCommands:
                              [--name]
                              [--no-wait]
                              [--resource-group]
+                             [--subscription]
                              [--workspace]
                              [--yes]
   examples:
@@ -225,15 +236,20 @@ directCommands:
     summary: Name of job.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --workspace -w
     summary: Name of workspace.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batchai/_help.py
@@ -247,6 +263,7 @@ directCommands:
                         [--interval]
                         [--name]
                         [--resource-group]
+                        [--subscription]
                         [--workspace]
   examples:
   - summary: Wait for the job completion.
@@ -259,7 +276,7 @@ directCommands:
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --interval
-    defaultValue: "15"
+    defaultValue: 15
     summary: Polling interval in sec.
     description: ''
   - name: --name -n
@@ -267,6 +284,9 @@ directCommands:
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --workspace -w
     summary: Name of workspace.

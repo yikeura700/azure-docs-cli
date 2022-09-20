@@ -83,7 +83,7 @@ directCommands:
     summary: 'Required. Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. 6 - OS Family 6, equivalent to Windows Server 2019. For more information, see Azure Guest OS Releases (https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases).'
     description: ''
   - name: --os-version
-    summary: The default value is \* which specifies the latest operating system version for the specified OS family.
+    summary: The default value is * which specifies the latest operating system version for the specified OS family.
     description: ''
   - name: --policy
     parameterValueGroup: regional, zonal
@@ -159,6 +159,7 @@ directCommands:
     summary: A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
@@ -275,6 +276,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --abort
+    defaultValue: False
     summary: Stop the pool resize operation.
     description: ''
   - name: --account-endpoint

@@ -34,9 +34,11 @@ directCommands:
     syntax: az iot hub connection-string show -n MyIotHub --default-eventhub
   optionalParameters:
   - name: --all --show-all
+    defaultValue: False
     summary: Show all shared access policies for the respective IoT Hub.
     description: ''
   - name: --default-eventhub --eh
+    defaultValue: False
     parameterValueGroup: false, true
     summary: 'Flag indicating the connection string returned is for the default EventHub endpoint. Default: false.'
     description: ''
@@ -75,4 +77,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Manage IoT Hub connection strings.

@@ -11,6 +11,7 @@ directCommands:
   syntax: az vmss diagnostics get-default-config [--is-windows-os]
   optionalParameters:
   - name: --is-windows-os
+    defaultValue: False
     summary: For Windows VMs.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
@@ -44,10 +45,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-auto-upgrade
+    defaultValue: False
     parameterValueGroup: false, true
     summary: If set, the extension service will not automatically pick or upgrade to the latest minor version, even if the extension is redeployed.
     description: ''
   - name: --no-auto-upgrade-minor-version
+    defaultValue: False
     parameterValueGroup: false, true
     summary: If set, the extension service will not automatically pick or upgrade to the latest minor version, even if the extension is redeployed.
     description: ''

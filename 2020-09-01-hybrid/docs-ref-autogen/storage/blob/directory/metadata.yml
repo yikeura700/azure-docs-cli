@@ -58,13 +58,13 @@ directCommands:
     summary: Decrypts the data on the service-side with the given key. Use of customer-provided keys must be done over HTTPS. As the encryption key itself is provided in the request, a secure connection must be established to transfer the key.
     description: ''
   - name: --if-match
-    summary: An ETag value, or the wildcard character (\*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
+    summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
     description: ''
   - name: --if-modified-since
     summary: Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').
     description: ''
   - name: --if-none-match
-    summary: An ETag value, or the wildcard character (\*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (\*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.
+    summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.
     description: ''
   - name: --if-unmodified-since
     summary: Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').
@@ -131,13 +131,13 @@ directCommands:
     summary: Encrypts the data on the service-side with the given key. Use of customer-provided keys must be done over HTTPS. As the encryption key itself is provided in the request, a secure connection must be established to transfer the key.
     description: ''
   - name: --if-match
-    summary: An ETag value, or the wildcard character (\*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
+    summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
     description: ''
   - name: --if-modified-since
     summary: Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').
     description: ''
   - name: --if-none-match
-    summary: An ETag value, or the wildcard character (\*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (\*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.
+    summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified. Specify the wildcard character (*) to perform the operation only if the resource does not exist, and fail the operation if it does exist.
     description: ''
   - name: --if-unmodified-since
     summary: Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').
@@ -175,4 +175,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/24/2022
   description: Manage directory metadata.

@@ -70,6 +70,7 @@ directCommands:
                                [--resource-group]
                                [--snapshot]
                                [--storage-account]
+                               [--subscription]
                                [--yes]
   examples:
   - summary: Delete an Azure file share 'myfileshare' under the storage account 'mystorageaccount' (account name) in resource group 'MyResourceGroup'.
@@ -104,7 +105,11 @@ directCommands:
   - name: --storage-account
     summary: The name or ID of the storage account.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
@@ -117,6 +122,7 @@ directCommands:
                                [--name]
                                [--resource-group]
                                [--storage-account]
+                               [--subscription]
   examples:
   - summary: Check for the existence of an Azure file share 'myfileshare' under the storage account 'mystorageaccount' (account name) in resource group 'MyResourceGroup'.
     syntax: az storage share-rm exists -g MyResourceGroup --storage-account mystorageaccount --name myfileshare
@@ -136,6 +142,9 @@ directCommands:
     description: ''
   - name: --storage-account
     summary: The name or ID of the storage account.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_share-rm_list
@@ -185,6 +194,7 @@ directCommands:
                                 [--resource-group]
                                 [--restored-name]
                                 [--storage-account]
+                                [--subscription]
   examples:
   - summary: Restore a file share within a valid retention days if share soft delete is enabled.
     syntax: az storage share-rm restore -n deletedshare --deleted-version 01D64EB9886F00C4 -g MyResourceGroup --storage-account mystorageaccount
@@ -211,6 +221,9 @@ directCommands:
   - name: --storage-account
     summary: The name or ID of the storage account.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_share-rm_show
   name: az storage share-rm show
@@ -223,6 +236,7 @@ directCommands:
                              [--resource-group]
                              [--snapshot]
                              [--storage-account]
+                             [--subscription]
   examples:
   - summary: Show the properties for an Azure file share 'myfileshare' under the storage account 'mystorageaccount' (account name) in resource group 'MyResourceGroup'.
     syntax: az storage share-rm show -g MyResourceGroup --storage-account mystorageaccount --name myfileshare
@@ -251,6 +265,9 @@ directCommands:
   - name: --storage-account
     summary: The name or ID of the storage account.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_share-rm_snapshot
   name: az storage share-rm snapshot
@@ -266,6 +283,7 @@ directCommands:
                                  [--resource-group]
                                  [--root-squash {AllSquash, NoRootSquash, RootSquash}]
                                  [--storage-account]
+                                 [--subscription]
   examples:
   - summary: Create a snapshot of an existing share under the specified account.
     syntax: az storage share-rm snapshot -g MyResourceGroup --storage-account mystorageaccount --name myfileshare
@@ -300,6 +318,9 @@ directCommands:
   - name: --storage-account
     summary: The name or ID of the storage account.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_share-rm_stats
   name: az storage share-rm stats
@@ -310,6 +331,7 @@ directCommands:
                               [--name]
                               [--resource-group]
                               [--storage-account]
+                              [--subscription]
   examples:
   - summary: Get the usage bytes of the data stored on the share.
     syntax: az storage share-rm stats -g MyResourceGroup --storage-account mystorageaccount --name myfileshare
@@ -325,6 +347,9 @@ directCommands:
     description: ''
   - name: --storage-account
     summary: The name or ID of the storage account.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 - uid: az_storage_share-rm_update
@@ -344,6 +369,7 @@ directCommands:
                                [--root-squash {AllSquash, NoRootSquash, RootSquash}]
                                [--set]
                                [--storage-account]
+                               [--subscription]
   examples:
   - summary: Update the properties for an Azure file share 'myfileshare' under the storage account 'mystorageaccount' (account name) in resource group 'MyResourceGroup'.
     syntax: az storage share-rm update -g MyResourceGroup --storage-account mystorageaccount --name myfileshare --quota 3 --metadata key1=value1 key2=value2
@@ -357,9 +383,11 @@ directCommands:
     summary: Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
     description: ''
   - name: --add
+    defaultValue: '[]'
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --force-string
+    defaultValue: False
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --ids
@@ -375,6 +403,7 @@ directCommands:
     summary: The maximum size of the share in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
     description: ''
   - name: --remove
+    defaultValue: '[]'
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
@@ -385,10 +414,14 @@ directCommands:
     summary: Reduction of the access rights for the remote superuser.
     description: ''
   - name: --set
+    defaultValue: '[]'
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --storage-account
     summary: The name or ID of the storage account.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
 commands:

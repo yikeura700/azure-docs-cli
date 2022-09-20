@@ -59,7 +59,7 @@ directCommands:
     summary: The DNS domain name (e.g. contoso.com).
     description: ''
   - name: --dns-replicas
-    defaultValue: "1"
+    defaultValue: 1
     summary: The number of copies for DNS proxy service.
     description: ''
   - name: --domain-service-account-secret
@@ -75,7 +75,7 @@ directCommands:
     summary: The distinguished name of the pre-created Organizational Unit (OU) in the Active Directory domain. (e.g. OU=arcou,DC=contoso,DC=com).
     description: ''
   - name: --prefer-k8s-dns
-    defaultValue: "true"
+    defaultValue: true
     summary: Use Kubernetes DNS Server responses over the Active Directory DNS server responses for IP address lookup. Allowed values are 'true' or 'false'.
     description: ''
   - name: --primary-ad-dc-hostname
@@ -236,4 +236,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage Active Directory authentication for Azure Arc data services.

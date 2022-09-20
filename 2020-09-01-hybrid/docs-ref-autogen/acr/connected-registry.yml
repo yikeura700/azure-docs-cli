@@ -48,6 +48,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --audit-logs-enabled
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Indicate whether audit log synchronization is enabled. It is enabled by default.
     description: ''
@@ -80,7 +81,7 @@ directCommands:
     summary: Determine how long the sync messages will be kept in the cloud. Uses ISO 8601 duration format.
     description: ''
   - name: --sync-schedule -s
-    defaultValue: ''
+    defaultValue: '* * * * *'
     summary: Optional parameter to define the sync schedule. Uses cron expression to determine the schedule. If not specified, the instance is considered always online and attempts to sync every minute.
     description: ''
   - name: --sync-token
@@ -116,6 +117,7 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
@@ -145,12 +147,14 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --cleanup
+    defaultValue: False
     summary: It will aslo delete the sync token and the scope map resources.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
@@ -193,6 +197,7 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
@@ -219,6 +224,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-children
+    defaultValue: False
     summary: Used to remove all children from the list.
     description: ''
   - name: --parent -p
@@ -281,10 +287,10 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --add
-    summary: Repository permissions to be added to the targeted connected registry and it's ancestors sync scope maps. Use the format "--add [REPO1 REPO2 ...]" per flag. Valid actions are {'content/delete', 'content/read', 'content/write', 'metadata/read', 'metadata/write'}.
+    summary: Repository permissions to be added to the targeted connected registry and it's ancestors sync scope maps. Use the format "--add [REPO1 REPO2 ...]" per flag. Valid actions are {'content/write', 'content/delete', 'content/read', 'metadata/write', 'metadata/read'}.
     description: ''
   - name: --remove
-    summary: Repository permissions to be removed from the targeted connected registry and it's succesors sync scope maps. Use the format "--remove [REPO1 REPO2 ...]" per flag. Valid actions are {'content/delete', 'content/read', 'content/write', 'metadata/read', 'metadata/write'}.
+    summary: Repository permissions to be removed from the targeted connected registry and it's succesors sync scope maps. Use the format "--remove [REPO1 REPO2 ...]" per flag. Valid actions are {'content/write', 'content/delete', 'content/read', 'metadata/write', 'metadata/read'}.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.

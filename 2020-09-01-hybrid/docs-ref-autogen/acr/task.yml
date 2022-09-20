@@ -126,7 +126,7 @@ directCommands:
     summary: Auth mode of the source registry.
     description: ''
   - name: --base-image-trigger-enabled
-    defaultValue: "1"
+    defaultValue: 1
     parameterValueGroup: false, true
     summary: Indicates whether the base image trigger is enabled.
     description: ''
@@ -142,7 +142,7 @@ directCommands:
     summary: Commands to execute. This also supports additional docker run parameters (https://docs.docker.com/engine/reference/commandline/run/) or even other docker commands (https://docs.docker.com/engine/reference/commandline/docker/).
     description: ''
   - name: --commit-trigger-enabled
-    defaultValue: "1"
+    defaultValue: 1
     parameterValueGroup: false, true
     summary: Indicates whether the source control commit trigger is enabled.
     description: ''
@@ -150,7 +150,7 @@ directCommands:
     summary: The full URL to the source code repository (Requires '.git' suffix for a github repo) or a remote tarball (e.g., 'http://server/context.tar.gz'), or the repository of an OCI artifact in an Azure container registry (e.g., 'oci://myregistry.azurecr.io/myartifact:mytag'). If '/dev/null' is specified, the value will be set to None and ignored. This is a required argument if the task is not a system task.
     description: ''
   - name: --cpu
-    defaultValue: "2"
+    defaultValue: 2
     summary: The CPU configuration in terms of number of cores required for the run.
     description: ''
   - name: --file -f
@@ -163,16 +163,19 @@ directCommands:
     summary: "The name and tag of the image using the format: '-t repo/image:tag'. Multiple tags are supported by passing -t multiple times."
     description: ''
   - name: --is-system-task
+    defaultValue: False
     summary: Indicates whether the task resource is a system task. The name of the task must be 'quicktask'. Only applicable to CMK enabled registry.
     description: ''
   - name: --log-template
     summary: "The repository and tag template for run log artifact using the format: 'log/repo:tag' (e.g., 'acr/logs:{{.Run.ID}}'). Only applicable to CMK enabled registry."
     description: ''
   - name: --no-cache
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Indicates whether the image cache is enabled.
     description: ''
   - name: --no-push
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Indicates whether the image built should be pushed to the registry.
     description: ''
@@ -180,6 +183,7 @@ directCommands:
     summary: The platform where build/task is run, Eg, 'windows' and 'linux'. When it's used in build commands, it also can be specified in 'os/arch/variant' format for the resulting image. Eg, linux/arm/v7. The 'arch' and 'variant' parts are optional.
     description: ''
   - name: --pull-request-trigger-enabled
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Indicates whether the source control pull request trigger is enabled. The trigger is disabled by default.
     description: ''
@@ -210,7 +214,7 @@ directCommands:
     summary: The name of the target build stage.
     description: ''
   - name: --timeout
-    defaultValue: "3600"
+    defaultValue: 3600
     summary: The timeout in seconds.
     description: ''
   - name: --update-trigger-endpoint
@@ -250,6 +254,7 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
@@ -312,7 +317,7 @@ directCommands:
     summary: The current status of run.
     description: ''
   - name: --top
-    defaultValue: "15"
+    defaultValue: 15
     summary: Limit the number of latest runs in the results.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
@@ -349,6 +354,7 @@ directCommands:
     summary: The name of the task.
     description: ''
   - name: --no-format
+    defaultValue: False
     summary: Indicates whether the logs should be displayed in raw format.
     description: ''
   - name: --resource-group -g
@@ -414,12 +420,15 @@ directCommands:
     summary: "The repository and tag template for run log artifact using the format: 'log/repo:tag' (e.g., 'acr/logs:{{.Run.ID}}'). Only applicable to CMK enabled registry."
     description: ''
   - name: --no-format
+    defaultValue: False
     summary: Indicates whether the logs should be displayed in raw format.
     description: ''
   - name: --no-logs
+    defaultValue: False
     summary: Do not show logs after successfully queuing the build.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the run to complete and return immediately after queuing the run.
     description: ''
   - name: --resource-group -g
@@ -469,6 +478,7 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --with-secure-properties
+    defaultValue: False
     summary: Indicates whether the secure properties of a task should be returned.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py

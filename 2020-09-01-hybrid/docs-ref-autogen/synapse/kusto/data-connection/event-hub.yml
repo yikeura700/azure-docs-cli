@@ -76,6 +76,7 @@ directCommands:
     summary: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --table-name
@@ -101,6 +102,7 @@ directCommands:
                                                       [--mapping-rule-name]
                                                       [--no-wait]
                                                       [--resource-group]
+                                                      [--subscription]
                                                       [--table-name]
                                                       [--workspace-name]
   examples:
@@ -146,10 +148,14 @@ directCommands:
     summary: The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --table-name
     summary: The table where the data should be ingested. Optionally the table information can be added to each message.

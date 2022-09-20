@@ -137,6 +137,7 @@ directCommands:
         -p "$(az keyvault certificate get-default-policy)"
   optionalParameters:
   - name: --scaffold
+    defaultValue: False
     summary: Create a fully formed policy structure with default values.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py

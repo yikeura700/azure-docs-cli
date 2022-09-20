@@ -1,6 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_pipelines_build_definition
 name: az pipelines build definition
+extensionInformation: >-
+  > [!Note]
+
+  > This reference is part of the **azure-devops** extension for the Azure CLI  (version 2.30.0 or higher).  The extension will automatically install the first time you run an **az pipelines build definition** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Manage build definitions.
 description: ''
 directCommands:
@@ -22,7 +26,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --name
-    summary: 'Limit results to definitions with this name or starting with this name. Examples: "FabCI" or "Fab\*".'
+    summary: 'Limit results to definitions with this name or starting with this name. Examples: "FabCI" or "Fab*".'
     description: ''
   - name: --org --organization
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: https://dev.azure.com/MyOrganizationName/.'
@@ -63,6 +67,7 @@ directCommands:
     summary: Name of the definition. Ignored if --id is supplied.
     description: ''
   - name: --open
+    defaultValue: False
     summary: Open the definition summary page in your web browser.
     description: ''
   - name: --org --organization
@@ -92,4 +97,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage build definitions.

@@ -73,7 +73,7 @@ directCommands:
     summary: The data export enrichment.
     description: ''
   - name: --enabled -e
-    defaultValue: "1"
+    defaultValue: 1
     parameterValueGroup: false, true
     summary: The enabled status for data export, True or False.
     description: ''
@@ -255,4 +255,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Manage and configure IoT Central data exports.

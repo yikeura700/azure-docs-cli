@@ -74,7 +74,7 @@ directCommands:
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --hub-name is not provided.
     description: ''
   - name: --mc --msg-count
-    defaultValue: "1"
+    defaultValue: 1
     summary: Number of device messages to send to IoT Hub.
     description: ''
   - name: --pass --passphrase
@@ -187,7 +187,7 @@ directCommands:
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --hub-name is not provided.
     description: ''
   - name: --mc --msg-count
-    defaultValue: "100"
+    defaultValue: 100
     summary: Number of device messages to send to IoT Hub.
     description: ''
   - name: --method-response-code --mrc
@@ -197,7 +197,7 @@ directCommands:
     summary: Payload to be returned when direct method is executed on device. Provide file path or raw json. Optional param, only supported for mqtt.
     description: ''
   - name: --mi --msg-interval
-    defaultValue: "3"
+    defaultValue: 3
     summary: Delay in seconds between device-to-cloud messages.
     description: ''
   - name: --pass --passphrase
@@ -284,4 +284,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Leverage device simulation and other device-centric operations such as device-to-cloud or cloud-to-device messaging capabilities.

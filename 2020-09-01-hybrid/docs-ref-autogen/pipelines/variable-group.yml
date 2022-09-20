@@ -1,6 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_pipelines_variable-group
 name: az pipelines variable-group
+extensionInformation: >-
+  > [!Note]
+
+  > This reference is part of the **azure-devops** extension for the Azure CLI  (version 2.30.0 or higher).  The extension will automatically install the first time you run an **az pipelines variable-group** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Manage variable groups.
 description: ''
 directCommands:
@@ -70,6 +74,7 @@ directCommands:
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_pipelines_variable-group_list
@@ -98,7 +103,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --group-name
-    summary: Name of the variable group. Wildcards are accepted. e.g. var_group\*.
+    summary: Name of the variable group. Wildcards are accepted. e.g. var_group*.
     description: ''
   - name: --org --organization
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: https://dev.azure.com/MyOrganizationName/.'
@@ -206,4 +211,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage variable groups.

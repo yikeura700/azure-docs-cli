@@ -1,6 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_repos_policy
 name: az repos policy
+extensionInformation: >-
+  > [!Note]
+
+  > This reference is part of the **azure-devops** extension for the Azure CLI  (version 2.30.0 or higher).  The extension will automatically install the first time you run an **az repos policy** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Manage branch policy.
 description: ''
 directCommands:
@@ -56,6 +60,7 @@ directCommands:
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_repos_policy_list
@@ -188,4 +193,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage branch policy.

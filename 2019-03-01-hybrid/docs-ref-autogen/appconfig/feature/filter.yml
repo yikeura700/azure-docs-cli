@@ -67,6 +67,7 @@ directCommands:
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
@@ -95,6 +96,7 @@ directCommands:
     syntax: az appconfig feature filter delete -n MyAppConfiguration --feature color --label MyLabel --all --yes
   optionalParameters:
   - name: --all
+    defaultValue: False
     summary: Delete all filters associated with a feature flag.
     description: ''
   - name: --auth-mode
@@ -127,6 +129,7 @@ directCommands:
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
@@ -153,6 +156,7 @@ directCommands:
     syntax: az appconfig feature filter list --endpoint https://myappconfiguration.azconfig.io --feature color --all --auth-mode login
   optionalParameters:
   - name: --all
+    defaultValue: False
     summary: List all filters associated with a feature flag.
     description: ''
   - name: --auth-mode

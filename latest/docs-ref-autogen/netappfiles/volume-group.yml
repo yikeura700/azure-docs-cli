@@ -81,10 +81,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --add-snapshot-capacity
-    defaultValue: "50"
+    defaultValue: 50
     summary: Additional memory to store snapshots, must be specified as % of RAM (range 0-200). This is used to auto compute storage size.
     description: ''
   - name: --backup-nfsv3
+    defaultValue: False
     summary: Indicates if NFS Protocol version 3 is preferred for data backup and log backup volumes. Default is false.
     description: ''
   - name: --data-backup-repl-skd
@@ -139,14 +140,15 @@ directCommands:
     summary: Throughput in MiB/s for log volumes. If not provided size will automatically be calculated.
     description: ''
   - name: --memory
-    defaultValue: "100"
+    defaultValue: 100
     summary: SAP HANA memory in GiB (max 12000 GiB), used to auto compute storage size and throughput.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --number-of-hots
-    defaultValue: "1"
+    defaultValue: 1
     summary: Total Number of SAP HANA host in this deployment (currently max 3 nodes can be configured).
     description: ''
   - name: --prefix
@@ -165,7 +167,7 @@ directCommands:
     summary: Throughput in MiB/s for shared volume. If not provided size will automatically be calculated.
     description: ''
   - name: --start-host-id
-    defaultValue: "1"
+    defaultValue: 1
     summary: Starting SAP HANA Host ID. Host ID 1 indicates Master Host. Shared, Data Backup and Log Backup volumes are only provisioned for Master Host i.e. `HostID == 1`.
     description: ''
   - name: --subnet
@@ -206,9 +208,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
@@ -287,26 +291,30 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --created
+    defaultValue: False
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
     summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
     description: ''
   - name: --deleted
+    defaultValue: False
     summary: Wait until deleted.
     description: ''
   - name: --exists
+    defaultValue: False
     summary: Wait until the resource exists.
     description: ''
   - name: --interval
-    defaultValue: "30"
+    defaultValue: 30
     summary: Polling interval in seconds.
     description: ''
   - name: --timeout
-    defaultValue: "3600"
+    defaultValue: 3600
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
+    defaultValue: False
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py

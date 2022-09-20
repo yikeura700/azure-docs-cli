@@ -97,12 +97,15 @@ directCommands:
     summary: 'Update an object by specifying a property path and value to set. Example: --set property1.property2=<value>.'
     description: ''
   - name: --skip-validation
+    defaultValue: False
     summary: Skip validation in creating the resource. Note that dependent resources will not skip their validation in creating.
     description: ''
   - name: --stream -s
+    defaultValue: False
     summary: Indicates whether to stream the job's logs to the console.
     description: ''
   - name: --web -e
+    defaultValue: False
     summary: Show the job's run details in Azure ML studio in a web browser.
     description: ''
 - uid: az_ml_job_download
@@ -134,6 +137,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --all
+    defaultValue: False
     summary: Download all the outputs of the job.
     description: ''
   - name: --download-path -p
@@ -168,17 +172,20 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --all-results
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Returns all results.
     description: ''
   - name: --archived-only
+    defaultValue: False
     summary: List archived jobs only.
     description: ''
   - name: --include-archived
+    defaultValue: False
     summary: List archived jobs and active jobs.
     description: ''
   - name: --max-results -r
-    defaultValue: "50"
+    defaultValue: 50
     summary: Max number of results to return. Default is 50.
     description: ''
   - name: --parent-job-name -p
@@ -232,6 +239,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --web -e
+    defaultValue: False
     summary: Show the job's run details in Azure ML studio in a web browser.
     description: ''
 - uid: az_ml_job_stream
@@ -283,18 +291,23 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --add
+    defaultValue: '[]'
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --force-string
+    defaultValue: False
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --remove
+    defaultValue: '[]'
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --set
+    defaultValue: '[]'
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --web -e
+    defaultValue: False
     summary: Show the job's run details in Azure ML studio in a web browser.
     description: ''
 commands:
@@ -325,6 +338,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: >-
     An Azure ML job executes a task against a specified compute target. You can configure jobs to scale out model training on Azure. Azure ML supports different job types with different capabilities. For example, the most basic job, a command job, executes a command in a Docker container and can be leveraged for single-node and distributed training. A sweep job executes a hyperparameter sweep over a specified search space for tuning a model's hyperparameters.
 

@@ -10,7 +10,7 @@ description: ''
 directCommands:
 - uid: az_quota_request_status_list
   name: az quota request status list
-  summary: For the specified scope, get the current quota requests for a one year period ending at the time is made. Use the oData filter to select quota requests.
+  summary: For the specified scope, get the current quota requests for a one year period ending at the time is made. Use the **oData** filter to select quota requests.
   description: ''
   syntax: >-
     az quota request status list --scope
@@ -37,7 +37,7 @@ directCommands:
     description: ''
 - uid: az_quota_request_status_show
   name: az quota request status show
-  summary: Get the quota request details and status by quota request ID for the resources of the resource provider at a specific location. The quota request ID id is returned in the response of the PUT operation.
+  summary: Get the quota request details and status by quota request ID for the resources of the resource provider at a specific location. The quota request ID **id** is returned in the response of the PUT operation.
   description: ''
   syntax: >-
     az quota request status show --name
@@ -75,4 +75,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage quota request status with quota.

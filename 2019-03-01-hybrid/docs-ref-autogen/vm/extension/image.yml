@@ -26,6 +26,7 @@ directCommands:
           -o tsv | sort -u | xargs -I{} az vm extension image list-names --publisher {} -l westus
   optionalParameters:
   - name: --latest
+    defaultValue: False
     summary: Show the latest version only.
     description: ''
   - name: --location -l

@@ -34,9 +34,11 @@ directCommands:
     summary: Copy the logs for the containers with similar name, Optional, by default copies logs for all containers. Cannot be specified multiple times. If specified multiple times, last one will be used.
     description: ''
   - name: --exclude-dumps
+    defaultValue: False
     summary: Whether or not to exclude dumps from result folder. The default value is False which includes dumps.
     description: ''
-  - name: --exclude-system-logs
+  - name: '--exclude-system-logs '
+    defaultValue: False
     summary: Whether or not to exclude system logs from collection. The default value is False which includes system logs.
     description: ''
   - name: --pod
@@ -49,12 +51,14 @@ directCommands:
     summary: Copy the logs for the resource of the specified name. Cannot be specified multiple times. If specified multiple times, last one will be used. If specified, --resource-kind should also be specified to identify the resource.
     description: ''
   - name: --skip-compress
+    defaultValue: False
     summary: Whether or not to skip compressing the result folder. The default value is False which compresses the result folder.
     description: ''
   - name: --target-folder -d
     summary: Target folder path to copy logs to. Optional, by default creates the result in the local folder.  Cannot be specified multiple times. If specified multiple times, last one will be used.
     description: ''
   - name: --timeout -t
+    defaultValue: 0
     summary: The number of seconds to wait for the command to complete. The default value is 0 which is unlimited.
     description: ''
   - name: --use-k8s
@@ -108,4 +112,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Debug data controller.

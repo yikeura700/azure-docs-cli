@@ -59,6 +59,7 @@ directCommands:
     summary: Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --use-remote-gateways
@@ -92,6 +93,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_databricks_workspace_vnet-peering_list
@@ -183,6 +185,7 @@ directCommands:
     summary: Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --use-remote-gateways
@@ -222,26 +225,30 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --created
+    defaultValue: False
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
     summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
     description: ''
   - name: --deleted
+    defaultValue: False
     summary: Wait until deleted.
     description: ''
   - name: --exists
+    defaultValue: False
     summary: Wait until the resource exists.
     description: ''
   - name: --interval
-    defaultValue: "30"
+    defaultValue: 30
     summary: Polling interval in seconds.
     description: ''
   - name: --timeout
-    defaultValue: "3600"
+    defaultValue: 3600
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
+    defaultValue: False
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
@@ -269,4 +276,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Commands to manage databricks workspace vnet peering.

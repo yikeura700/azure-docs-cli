@@ -50,7 +50,6 @@ directCommands:
     name: --kind
     summary: The API name of cognitive services account.
     description: ''
-    valueFrom: az cognitiveservices account list-kinds
   - isRequired: true
     name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
@@ -67,12 +66,12 @@ directCommands:
     name: --sku
     summary: Name of the Sku of cognitive services account.
     description: ''
-    valueFrom: az cognitiveservices account list-skus
   optionalParameters:
   - name: --api-properties
     summary: Api properties in JSON format or a=b c=d format. Some cognitive services (i.e. QnA Maker) require extra api properties to create the account.
     description: ''
   - name: --assign-identity
+    defaultValue: False
     summary: Generate and assign an Azure Active Directory Identity for this account.
     description: ''
   - name: --custom-domain
@@ -175,7 +174,6 @@ directCommands:
   - name: --kind
     summary: The API name of cognitive services account.
     description: ''
-    valueFrom: az cognitiveservices account list-kinds
   - name: --location -l
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
@@ -339,7 +337,6 @@ directCommands:
   - name: --sku
     summary: Name of the Sku of cognitive services account.
     description: ''
-    valueFrom: az cognitiveservices account list-skus
   - name: --storage
     summary: The storage accounts for this resource, in JSON array format.
     description: ''

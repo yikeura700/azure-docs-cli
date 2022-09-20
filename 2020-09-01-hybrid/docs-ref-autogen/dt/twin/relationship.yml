@@ -51,6 +51,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --if-none-match
+    defaultValue: False
     summary: Indicates the create operation should fail if an existing twin with the same id exists.
     description: ''
   - name: --properties -p
@@ -121,6 +122,7 @@ directCommands:
     summary: The source twin Id for a relationship.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_dt_twin_relationship_list
@@ -153,6 +155,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --incoming
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Retrieves all incoming relationships for a digital twin.
     description: ''
@@ -264,4 +267,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage and configure the digital twin relationships of a Digital Twins instance.

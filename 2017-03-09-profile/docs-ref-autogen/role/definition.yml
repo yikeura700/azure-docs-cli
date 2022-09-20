@@ -17,15 +17,15 @@ directCommands:
           "Description": "Perform VM actions and read storage and network information.",
           "Actions": [
               "Microsoft.Compute/*/read",
-                  "Microsoft.Compute/virtualMachines/start/action",
-                  "Microsoft.Compute/virtualMachines/restart/action",
-                  "Microsoft.Network/*/read",
+              "Microsoft.Compute/virtualMachines/start/action",
+              "Microsoft.Compute/virtualMachines/restart/action",
+              "Microsoft.Network/*/read",
               "Microsoft.Storage/*/read",
-                  "Microsoft.Authorization/*/read",
+              "Microsoft.Authorization/*/read",
               "Microsoft.Resources/subscriptions/resourceGroups/read",
               "Microsoft.Resources/subscriptions/resourceGroups/resources/read",
               "Microsoft.Insights/alertRules/*",
-                  "Microsoft.Support/*"
+              "Microsoft.Support/*"
           ],
           "DataActions": [
               "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/*"
@@ -62,6 +62,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --custom-role-only
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Custom roles only(vs. build-in ones).
     description: ''
@@ -83,6 +84,7 @@ directCommands:
                             [--scope]
   optionalParameters:
   - name: --custom-role-only
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Custom roles only(vs. build-in ones).
     description: ''
@@ -112,17 +114,17 @@ directCommands:
           "type": "Microsoft.Authorization/roleDefinitions",
           "Actions": [
               "Microsoft.Compute/*/read",
-                  "Microsoft.Compute/virtualMachines/start/action",
-                  "Microsoft.Compute/virtualMachines/restart/action",
-                  "Microsoft.Network/*/read",
+              "Microsoft.Compute/virtualMachines/start/action",
+              "Microsoft.Compute/virtualMachines/restart/action",
+              "Microsoft.Network/*/read",
               "Microsoft.Storage/*/read",
-                  "Microsoft.Authorization/*/read",
+              "Microsoft.Authorization/*/read",
               "Microsoft.Resources/subscriptions/resourceGroups/read",
               "Microsoft.Resources/subscriptions/resourceGroups/resources/read",
               "Microsoft.Support/*"
-              ],
-              "DataActions": [
-                  "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/*"
+          ],
+          "DataActions": [
+              "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/*"
           ],
           "NotDataActions": [
               "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write"

@@ -41,6 +41,7 @@ directCommands:
     summary: Name of an existing deployment of the app. Default to the production deployment if not specified.
     description: ''
   - name: --follow  -f
+    defaultValue: False
     summary: Specify if the logs should be streamed.
     description: ''
   - name: --format-json
@@ -50,11 +51,11 @@ directCommands:
     summary: Name of an existing instance of the deployment.
     description: ''
   - name: --limit
-    defaultValue: "2048"
+    defaultValue: 2048
     summary: Maximum kilobytes of logs to return. Ceiling number is 2048.
     description: ''
   - name: --lines
-    defaultValue: "50"
+    defaultValue: 50
     summary: Number of lines to show. Maximum is 10000.
     description: ''
   - name: --since
@@ -80,4 +81,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Commands to tail app instances logs with multiple options. If the app has only one instance, the instance name is optional.

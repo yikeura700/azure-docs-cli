@@ -50,7 +50,7 @@ directCommands:
   - isRequired: true
     name: --sas-type
     parameterValueGroup: account, service
-    summary: The type of SAS token the SAS definition will create.
+    summary: "The type of SAS token the SAS definition will create. Possible values include: 'account', 'service'."
     description: ''
   - isRequired: true
     name: --template-uri
@@ -237,7 +237,7 @@ directCommands:
     description: ''
   - name: --sas-type
     parameterValueGroup: account, service
-    summary: The type of SAS token the SAS definition will create.
+    summary: "The type of SAS token the SAS definition will create. Possible values include: 'account', 'service'."
     description: ''
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'

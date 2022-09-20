@@ -41,6 +41,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --skip-delegation-check
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Skip check if you do not have permission or the VNet is in another subscription.
     description: ''
@@ -117,4 +118,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Methods that list, add, and remove virtual network integrations from a webapp.

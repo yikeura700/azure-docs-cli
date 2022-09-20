@@ -319,6 +319,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --add
+    defaultValue: '[]'
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --app-roles
@@ -339,6 +340,7 @@ directCommands:
     summary: Date or datetime after which credentials expire (e.g. '2017-12-31T11:59:59+00:00' or '2017-12-31'). Default value is one year after current time.
     description: ''
   - name: --force-string
+    defaultValue: False
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --identifier-uris
@@ -371,12 +373,14 @@ directCommands:
     summary: Space-separated values. Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
     description: ''
   - name: --remove
+    defaultValue: '[]'
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --required-resource-accesses
     summary: Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. Should be JSON file path or in-line JSON string. See examples below for details.
     description: ''
   - name: --set
+    defaultValue: '[]'
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --sign-in-audience

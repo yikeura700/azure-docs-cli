@@ -27,7 +27,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --origins
-    summary: Space-separated list of origin domains that will be allowed via CORS, or '\*' to allow all domains.
+    summary: Space-separated list of origin domains that will be allowed via CORS, or '*' to allow all domains.
     description: ''
   - isRequired: true
     name: --services
@@ -50,6 +50,7 @@ directCommands:
     summary: Space-separated list of response headers to expose to CORS clients.
     description: ''
   - name: --max-age
+    defaultValue: 0
     summary: The maximum number of seconds the client/browser should cache a preflight response.
     description: ''
   - name: --sas-token

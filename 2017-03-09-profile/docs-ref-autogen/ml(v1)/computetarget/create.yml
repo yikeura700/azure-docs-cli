@@ -110,6 +110,7 @@ directCommands:
     summary: Name of the workspace to create this compute target under.
     description: ''
   - name: -v
+    defaultValue: False
     summary: Verbosity flag.
     description: ''
 - uid: az_ml(v1)_computetarget_create_amlcompute
@@ -171,11 +172,11 @@ directCommands:
     summary: Description of the compute target.
     description: ''
   - name: --enable-node-public-ip
-    defaultValue: "1"
+    defaultValue: 1
     summary: Enable Node Public IP.
     description: ''
   - name: --idle-seconds-before-scaledown
-    defaultValue: "1800"
+    defaultValue: 1800
     summary: Node idle time in seconds before scaling down the cluster.
     description: ''
   - name: --location -l
@@ -203,6 +204,7 @@ directCommands:
     summary: Specifies the subscription Id.
     description: ''
   - name: --tag
+    defaultValue: '[]'
     summary: Key/value tag to add (e.g. key=value ). Multiple tags can be specified with multiple --tag options.
     description: ''
   - name: --vm-priority -p
@@ -218,6 +220,7 @@ directCommands:
     summary: Name of the workspace to create this compute target under.
     description: ''
   - name: -v
+    defaultValue: False
     summary: Verbosity flag.
     description: ''
 - uid: az_ml(v1)_computetarget_create_computeinstance
@@ -277,6 +280,7 @@ directCommands:
     summary: Specifies the subscription Id.
     description: ''
   - name: --tag
+    defaultValue: '[]'
     summary: Key/value tag to add (e.g. key=value ). Multiple tags can be specified with multiple --tag options.
     description: ''
   - name: --user-object-id
@@ -295,6 +299,7 @@ directCommands:
     summary: Name of the workspace to create this compute target under.
     description: ''
   - name: -v
+    defaultValue: False
     summary: Verbosity flag.
     description: ''
 - uid: az_ml(v1)_computetarget_create_datafactory
@@ -335,6 +340,7 @@ directCommands:
     summary: Name of the workspace to create this compute target under.
     description: ''
   - name: -v
+    defaultValue: False
     summary: Verbosity flag.
     description: ''
 commands:
@@ -360,4 +366,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Create a compute target (aks or amlcompute or computeinstance).

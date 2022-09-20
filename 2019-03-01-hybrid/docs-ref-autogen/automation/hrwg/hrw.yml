@@ -21,22 +21,27 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --automation-account-name
+    defaultValue: Undefined
     summary: The name of the automation account.
     description: ''
   - isRequired: true
     name: --hybrid-runbook-worker-group-name
+    defaultValue: Undefined
     summary: The hybrid runbook worker group name.
     description: ''
   - isRequired: true
     name: --hybrid-runbook-worker-id --name -n
+    defaultValue: Undefined
     summary: The hybrid runbook worker id.
     description: ''
   - isRequired: true
     name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   optionalParameters:
   - name: --vm-resource-id
+    defaultValue: Undefined
     summary: Azure Resource Manager Id for a virtual machine.
     description: ''
 - uid: az_automation_hrwg_hrw_delete
@@ -44,30 +49,38 @@ directCommands:
   summary: Delete a hybrid runbook worker.
   description: ''
   syntax: >-
-    az automation hrwg hrw delete --automation-account-name
-                                  --hybrid-runbook-worker-group-name
-                                  --hybrid-runbook-worker-id
-                                  --resource-group
+    az automation hrwg hrw delete [--automation-account-name]
+                                  [--hybrid-runbook-worker-group-name]
+                                  [--hybrid-runbook-worker-id]
+                                  [--ids]
+                                  [--resource-group]
+                                  [--subscription]
                                   [--yes]
-  requiredParameters:
-  - isRequired: true
-    name: --automation-account-name
+  optionalParameters:
+  - name: --automation-account-name
+    defaultValue: Undefined
     summary: The name of the automation account.
     description: ''
-  - isRequired: true
-    name: --hybrid-runbook-worker-group-name
+  - name: --hybrid-runbook-worker-group-name
+    defaultValue: Undefined
     summary: The hybrid runbook worker group name.
     description: ''
-  - isRequired: true
-    name: --hybrid-runbook-worker-id --name -n
+  - name: --hybrid-runbook-worker-id --name -n
+    defaultValue: Undefined
     summary: The hybrid runbook worker id.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  optionalParameters:
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_automation_hrwg_hrw_list
@@ -82,18 +95,22 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --automation-account-name
+    defaultValue: Undefined
     summary: The name of the automation account.
     description: ''
   - isRequired: true
     name: --hybrid-runbook-worker-group-name
+    defaultValue: Undefined
     summary: The hybrid runbook worker group name.
     description: ''
   - isRequired: true
     name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   optionalParameters:
   - name: --filter
+    defaultValue: Undefined
     summary: The filter to apply on the operation.
     description: ''
 - uid: az_automation_hrwg_hrw_move
@@ -109,22 +126,27 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --automation-account-name
+    defaultValue: Undefined
     summary: The name of the automation account.
     description: ''
   - isRequired: true
     name: --hybrid-runbook-worker-group-name
+    defaultValue: Undefined
     summary: The hybrid runbook worker group name.
     description: ''
   - isRequired: true
     name: --hybrid-runbook-worker-id --name -n
+    defaultValue: Undefined
     summary: The hybrid runbook worker id.
     description: ''
   - isRequired: true
     name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --target-hybrid-runbook-worker-group-name
+    defaultValue: Undefined
     summary: The target hybrid worker group name.
     description: ''
 - uid: az_automation_hrwg_hrw_show
@@ -132,73 +154,93 @@ directCommands:
   summary: Retrieve a hybrid runbook worker.
   description: ''
   syntax: >-
-    az automation hrwg hrw show --automation-account-name
-                                --hybrid-runbook-worker-group-name
-                                --hybrid-runbook-worker-id
-                                --resource-group
-  requiredParameters:
-  - isRequired: true
-    name: --automation-account-name
+    az automation hrwg hrw show [--automation-account-name]
+                                [--hybrid-runbook-worker-group-name]
+                                [--hybrid-runbook-worker-id]
+                                [--ids]
+                                [--resource-group]
+                                [--subscription]
+  optionalParameters:
+  - name: --automation-account-name
+    defaultValue: Undefined
     summary: The name of the automation account.
     description: ''
-  - isRequired: true
-    name: --hybrid-runbook-worker-group-name
+  - name: --hybrid-runbook-worker-group-name
+    defaultValue: Undefined
     summary: The hybrid runbook worker group name.
     description: ''
-  - isRequired: true
-    name: --hybrid-runbook-worker-id --name -n
+  - name: --hybrid-runbook-worker-id --name -n
+    defaultValue: Undefined
     summary: The hybrid runbook worker id.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 - uid: az_automation_hrwg_hrw_update
   name: az automation hrwg hrw update
   summary: Create a hybrid runbook worker.
   description: ''
   syntax: >-
-    az automation hrwg hrw update --automation-account-name
-                                  --hybrid-runbook-worker-group-name
-                                  --hybrid-runbook-worker-id
-                                  --resource-group
-                                  [--add]
+    az automation hrwg hrw update [--add]
+                                  [--automation-account-name]
                                   [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
+                                  [--hybrid-runbook-worker-group-name]
+                                  [--hybrid-runbook-worker-id]
+                                  [--ids]
                                   [--remove]
+                                  [--resource-group]
                                   [--set]
+                                  [--subscription]
                                   [--vm-resource-id]
-  requiredParameters:
-  - isRequired: true
-    name: --automation-account-name
-    summary: The name of the automation account.
-    description: ''
-  - isRequired: true
-    name: --hybrid-runbook-worker-group-name
-    summary: The hybrid runbook worker group name.
-    description: ''
-  - isRequired: true
-    name: --hybrid-runbook-worker-id --name -n
-    summary: The hybrid runbook worker id.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
   optionalParameters:
   - name: --add
+    defaultValue: Undefined
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
+  - name: --automation-account-name
+    defaultValue: Undefined
+    summary: The name of the automation account.
+    description: ''
   - name: --force-string
+    defaultValue: Undefined
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
+  - name: --hybrid-runbook-worker-group-name
+    defaultValue: Undefined
+    summary: The hybrid runbook worker group name.
+    description: ''
+  - name: --hybrid-runbook-worker-id --name -n
+    defaultValue: Undefined
+    summary: The hybrid runbook worker id.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --remove
+    defaultValue: Undefined
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
+  - name: --resource-group -g
+    defaultValue: Undefined
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
   - name: --set
+    defaultValue: Undefined
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --vm-resource-id
+    defaultValue: Undefined
     summary: Azure Resource Manager Id for a virtual machine.
     description: ''
 commands:
@@ -226,4 +268,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Automation Hybrid Runbook Worker.

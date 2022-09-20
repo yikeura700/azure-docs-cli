@@ -69,7 +69,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   - name: --umask
-    defaultValue: "0027"
+    defaultValue: 0027
     summary: Optional and only valid if Hierarchical Namespace is enabled for the account. The umask restricts permission settings for file and directory, and will only be applied when default Acl does not exist in parent directory. If the umask bit has set, it means that the corresponding permission will be disabled. In this way, the resulting permission is given by p & ^u, where p is the permission and u is the umask. Only 4-digit octal notation (e.g. 0022) is supported here.
     description: ''
 - uid: az_storage_blob_directory_delete
@@ -120,16 +120,17 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --fail-not-exist
+    defaultValue: False
     summary: Specify whether to throw an exception when the directory doesn't exist.
     description: ''
   - name: --if-match
-    summary: An ETag value, or the wildcard character (\*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
+    summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
     description: ''
   - name: --if-modified-since
     summary: Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').
     description: ''
   - name: --if-none-match
-    summary: An ETag value, or the wildcard character (\*). Specify this header to perform the operation only if the resource's ETag does not match the value specified.
+    summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag does not match the value specified.
     description: ''
   - name: --if-unmodified-since
     summary: Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').
@@ -141,6 +142,7 @@ directCommands:
     summary: Optional. When deleting a directory without the Hierarchical Namespace, the number of paths that are deleted with each invocation is limited. If the number of paths to be deleted exceeds this limit, a continuation token is returned. When a continuation token is returned, it must be specified in a subsequent invocation of the delete operation to continue deleting the directory.
     description: ''
   - name: --recursive
+    defaultValue: False
     summary: If "true", all paths beneath the directory will be deleted. If "false" and the directory is non-empty, an error occurs.
     description: ''
   - name: --sas-token
@@ -297,7 +299,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --delimiter
-    summary: When the request includes this parameter, the operation returns a BlobPrefix element in the result list that acts as a placeholder for all blobs whose names begin with the same substring up to the appearance of the delimiter character. The delimiter may be a single character or a string.
+    summary: When the request includes this parameter, the operation returns a :class:`~azure.storage.blob.models.BlobPrefix` element in the result list that acts as a placeholder for all blobs whose names begin with the same substring up to the appearance of the delimiter character. The delimiter may be a single character or a string.
     description: ''
   - name: --include
     defaultValue: mc
@@ -307,8 +309,8 @@ directCommands:
     summary: An opaque continuation token. This value can be retrieved from the next_marker field of a previous generator object if num_results was specified and that generator has finished enumerating results. If specified, this generator will begin returning results from the point where the previous generator stopped.
     description: ''
   - name: --num-results
-    defaultValue: "5000"
-    summary: Specifies the maximum number of results to return. Provide "\*" to return all.
+    defaultValue: 5000
+    summary: Specifies the maximum number of results to return. Provide "*" to return all.
     description: ''
   - name: --prefix
     summary: Filters the results to return only blobs whose names begin with the specified prefix.
@@ -390,7 +392,7 @@ directCommands:
     summary: Optional. A date and time value. Specify this header to perform the move operation only if the source has been modified since the specified date and time.
     description: ''
   - name: --source-if-none-match
-    summary: Optional. An ETag value or the special wildcard ("\*") value. Specify this header to perform the move operation only if the source's ETag does not match the value specified.
+    summary: Optional. An ETag value or the special wildcard ("*") value. Specify this header to perform the move operation only if the source's ETag does not match the value specified.
     description: ''
   - name: --source-if-unmodified-since
     summary: Optional. A date and time value. Specify this header to perform the move operation only if the source has not been modified since the specified date and time.
@@ -446,13 +448,13 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --if-match
-    summary: An ETag value, or the wildcard character (\*). Specify this header to perform theoperation only if the resource's ETag matches the value specified.
+    summary: An ETag value, or the wildcard character (*). Specify this header to perform theoperation only if the resource's ETag matches the value specified.
     description: ''
   - name: --if-modified-since
     summary: Alter only if modified since supplied UTC datetime (Y-m-d'T'H:M'Z').
     description: ''
   - name: --if-none-match
-    summary: An ETag value, or the wildcard character (\*). Specify this header to performthe operation only if the resource's ETag does not match the value specified. Specify the wildcardcharacter (\*) to perform the operation only if the resource does not exist, and fail the operationif it does exist.
+    summary: An ETag value, or the wildcard character (*). Specify this header to performthe operation only if the resource's ETag does not match the value specified. Specify the wildcardcharacter (*) to perform the operation only if the resource does not exist, and fail the operationif it does exist.
     description: ''
   - name: --if-unmodified-since
     summary: Alter only if unmodified since supplied UTC datetime (Y-m-d'T'H:M'Z').
@@ -494,7 +496,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --destination-path -d
-    summary: The upload destination directory path. It should be an absolute path to container. If the specified destination path does not exist, a new directory path will be created.
+    summary: The destination path that will be prepended to the blob name.
     description: ''
   - isRequired: true
     name: --source -s
@@ -554,4 +556,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/24/2022
   description: To use the directory commands, please make sure your storage account type is StorageV2.

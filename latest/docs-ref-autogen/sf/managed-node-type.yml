@@ -62,7 +62,7 @@ directCommands:
     summary: 'Capacity tags applied to the nodes in the node type as key/value pairs, the cluster resource manager uses these tags to understand how much resource a node has. Updating this will override the current values.for example: --capacity ClientConnections=65536 param2=value2.'
     description: ''
   - name: --data-disk-size --disk-size
-    defaultValue: "100"
+    defaultValue: 100
     summary: Disk size for each vm in the node type in GBs.
     description: ''
   - name: --data-disk-type --disk-type
@@ -76,10 +76,12 @@ directCommands:
     summary: Ephemeral start port of a range of ports.
     description: ''
   - name: --is-stateless
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Indicates if the node type can only host Stateless workloads.
     description: ''
   - name: --multi-place-groups --multiple-placement-groups
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Indicates if scale set associated with the node type can be composed of multiple placement groups.
     description: ''
@@ -87,6 +89,7 @@ directCommands:
     summary: 'Placement tags applied to nodes in the node type as key/value pairs, which can be used to indicate where certain services (workload) should run. Updating this will override the current values.for example: --placement-property NodeColor=Green SomeProperty=5.'
     description: ''
   - name: --primary
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Specify if the node type is primary. On this node type will run system services. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters.
     description: ''
@@ -265,4 +268,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage a node type of an Azure Service Fabric managed cluster.

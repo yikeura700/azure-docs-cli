@@ -47,8 +47,8 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --if-match
-    defaultValue: ''
-    summary: An ETag value, or the wildcard character (\*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
+    defaultValue: '*'
+    summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
     description: ''
   - name: --sas-token
     summary: 'A Shared Access Signature (SAS). Must be used in conjunction with storage account name or service endpoint. Environment variable: AZURE_STORAGE_SAS_TOKEN.'
@@ -147,8 +147,8 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --if-match
-    defaultValue: ''
-    summary: An ETag value, or the wildcard character (\*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
+    defaultValue: '*'
+    summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
     description: ''
   - name: --sas-token
     summary: 'A Shared Access Signature (SAS). Must be used in conjunction with storage account name or service endpoint. Environment variable: AZURE_STORAGE_SAS_TOKEN.'
@@ -252,8 +252,8 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --if-match
-    defaultValue: ''
-    summary: An ETag value, or the wildcard character (\*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
+    defaultValue: '*'
+    summary: An ETag value, or the wildcard character (*). Specify this header to perform the operation only if the resource's ETag matches the value specified.
     description: ''
   - name: --sas-token
     summary: 'A Shared Access Signature (SAS). Must be used in conjunction with storage account name or service endpoint. Environment variable: AZURE_STORAGE_SAS_TOKEN.'

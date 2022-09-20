@@ -66,6 +66,7 @@ directCommands:
     summary: Path to certificate PEM file. Required for x509 registrations.
     description: ''
   - name: --ck --compute-key
+    defaultValue: False
     summary: Flag to indicate that the symmetric key for the device registration should be computed from the given key with --symmetric-key.
     description: ''
   - name: --dps-name -n
@@ -119,4 +120,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Use `az iot dps enrollment registration` or `az iot dps enrollment-group registration` to view and delete registrations.

@@ -30,6 +30,7 @@ directCommands:
     syntax: az appconfig revision list --connection-string Endpoint=https://contoso.azconfig.io;Id=xxx;Secret=xxx --fields key value last_modified
   optionalParameters:
   - name: --all
+    defaultValue: False
     summary: List all items.
     description: ''
   - name: --auth-mode
@@ -51,10 +52,10 @@ directCommands:
     summary: Space-separated customized output fields.
     description: ''
   - name: --key
-    summary: If no key specified, return all keys by default. Support star sign as filters, for instance abc\* means keys with abc as prefix.
+    summary: If no key specified, return all keys by default. Support star sign as filters, for instance abc* means keys with abc as prefix.
     description: ''
   - name: --label
-    summary: If no label specified, list all labels. Support star sign as filters, for instance abc\* means labels with abc as prefix. Use '0' for null label.
+    summary: If no label specified, list all labels. Support star sign as filters, for instance abc* means labels with abc as prefix. Use '\0' for null label.
     description: ''
   - name: --name -n
     summary: Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=<name>`.

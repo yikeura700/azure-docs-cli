@@ -41,6 +41,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -129,6 +130,7 @@ directCommands:
     summary: Name of the webapp. Required if '--source-id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -187,6 +189,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -267,6 +270,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -347,6 +351,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -427,6 +432,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -507,6 +513,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -587,6 +594,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -666,6 +674,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -732,6 +741,7 @@ directCommands:
     summary: The client type used on the webapp.
     description: ''
   - name: --config-connstr
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Store configuration into connection strings, only could be used together with dotnet client_type.
     description: ''
@@ -745,6 +755,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -799,6 +810,7 @@ directCommands:
     summary: The client type used on the webapp.
     description: ''
   - name: --config-connstr
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Store configuration into connection strings, only could be used together with dotnet client_type.
     description: ''
@@ -812,6 +824,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -860,6 +873,7 @@ directCommands:
     summary: The client type used on the webapp.
     description: ''
   - name: --config-connstr
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Store configuration into connection strings, only could be used together with dotnet client_type.
     description: ''
@@ -873,6 +887,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -927,6 +942,7 @@ directCommands:
     summary: The client type used on the webapp.
     description: ''
   - name: --config-connstr
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Store configuration into connection strings, only could be used together with dotnet client_type.
     description: ''
@@ -940,6 +956,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -995,6 +1012,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -1043,6 +1061,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -1092,6 +1111,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -1171,6 +1191,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -1236,6 +1257,7 @@ directCommands:
     summary: The client type used on the webapp.
     description: ''
   - name: --config-connstr
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Store configuration into connection strings, only could be used together with dotnet client_type.
     description: ''
@@ -1249,6 +1271,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -1316,6 +1339,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -1393,6 +1417,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -1450,6 +1475,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -1527,6 +1553,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -1583,6 +1610,7 @@ directCommands:
     summary: Name of the webapp. Required if '--id' is not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-endpoint
@@ -1663,4 +1691,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Update a webapp connection.

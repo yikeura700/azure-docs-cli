@@ -76,6 +76,7 @@ directCommands:
     summary: JSON file path for configuration-protected-settings.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --release-namespace
@@ -133,12 +134,15 @@ directCommands:
     summary: Cluster Resource Provider name for this clusterType (Required for provisionedClusters).
     description: ''
   - name: --force
+    defaultValue: False
     summary: Specify whether to force delete the extension from the cluster.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Ignore confirmation prompts.
     description: ''
 - uid: az_k8s-extension_list
@@ -267,6 +271,7 @@ directCommands:
     summary: JSON file path for configuration-protected-settings.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --release-train
@@ -276,6 +281,7 @@ directCommands:
     summary: Specify the version to install for the extension instance if --auto-upgrade-minor-version is not enabled.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Ignore confirmation prompts.
     description: ''
 commands:
@@ -307,4 +313,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Commands to manage Kubernetes Extensions.

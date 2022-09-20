@@ -60,10 +60,11 @@ directCommands:
     summary: The data disk name.
     description: ''
   - name: --new
+    defaultValue: False
     summary: Create a new disk.
     description: ''
   - name: --size-gb -z
-    defaultValue: "1023"
+    defaultValue: 1023
     summary: 'Size in GB. Max size: 4095 GB (certain preview disks can be larger).'
     description: ''
   - name: --vhd-uri

@@ -44,23 +44,25 @@ directCommands:
     summary: Compute type of the data flow cluster which will execute data flow job.
     description: ''
   - name: --core-count
-    defaultValue: "8"
+    defaultValue: 8
     summary: Core count of the data flow cluster which will execute data flow job.
     description: ''
   - name: --description
     summary: The integration runtime description.
     description: ''
   - name: --if-match
-    summary: ETag of the integration runtime entity. Should only be specified for update, for which it should match existing entity or can be \* for unconditional update.
+    summary: ETag of the integration runtime entity. Should only be specified for update, for which it should match existing entity or can be * for unconditional update.
     description: ''
   - name: --location -l
     defaultValue: AutoResolve
     summary: The integration runtime location.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --time-to-live
+    defaultValue: 0
     summary: Time to live (in minutes) setting of the data flow cluster which will execute data flow job.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py

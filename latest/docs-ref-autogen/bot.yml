@@ -25,7 +25,7 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --app-type
-    summary: Microsoft App Type for the bot.
+    summary: 'Microsoft App Type for the bot. Possible values include: "UserAssignedMSI", "SingleTenant", "MultiTenant".'
     description: ''
   - isRequired: true
     name: --appid
@@ -113,7 +113,7 @@ directCommands:
 - uid: az_bot_prepare-deploy
   name: az bot prepare-deploy
   summary: Add scripts/config files for publishing with `az webapp deployment`.
-  description: Add scripts or configuration files to the root of your local source code directory to be able to publish using `az webapp deployment`. When your code is deployed to your App Service, the generated scripts or configuration files should be appear in D:homesitewwwroot on App Service's Kudu web page.
+  description: Add scripts or configuration files to the root of your local source code directory to be able to publish using `az webapp deployment`. When your code is deployed to your App Service, the generated scripts or configuration files should be appear in D:\home\site\wwwroot on App Service's Kudu web page.
   syntax: >-
     az bot prepare-deploy --lang {Csharp, Javascript, Typescript}
                           [--code-dir]

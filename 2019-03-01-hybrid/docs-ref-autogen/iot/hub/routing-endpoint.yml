@@ -69,11 +69,11 @@ directCommands:
     summary: Authentication type for the endpoint. The default is keyBased.
     description: ''
   - name: --batch-frequency -b
-    defaultValue: "300"
+    defaultValue: 300
     summary: Request batch frequency in seconds. The maximum amount of time that can elapse before data is written to a blob, between 60 and 720 seconds.
     description: ''
   - name: --chunk-size -w
-    defaultValue: "300"
+    defaultValue: 300
     summary: Request chunk size in megabytes(MB). The maximum size of blobs, between 10 and 500 MB.
     description: ''
   - name: --connection-string -c
@@ -113,6 +113,7 @@ directCommands:
                                        [--hub-name]
                                        [--ids]
                                        [--resource-group]
+                                       [--subscription]
   examples:
   - summary: Delete endpoint "E2" from "MyIotHub" IoT Hub.
     syntax: az iot hub routing-endpoint delete --resource-group MyResourceGroup --hub-name MyIotHub --endpoint-name E2
@@ -137,6 +138,9 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
 - uid: az_iot_hub_routing-endpoint_list
   name: az iot hub routing-endpoint list
@@ -147,6 +151,7 @@ directCommands:
                                      [--hub-name]
                                      [--ids]
                                      [--resource-group]
+                                     [--subscription]
   examples:
   - summary: Get all the endpoints from "MyIotHub" IoT Hub.
     syntax: az iot hub routing-endpoint list -g MyResourceGroup --hub-name MyIotHub
@@ -166,6 +171,9 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
 - uid: az_iot_hub_routing-endpoint_show
   name: az iot hub routing-endpoint show
@@ -176,6 +184,7 @@ directCommands:
                                      [--hub-name]
                                      [--ids]
                                      [--resource-group]
+                                     [--subscription]
   examples:
   - summary: Get an endpoint information from "MyIotHub" IoT Hub.
     syntax: >-
@@ -196,6 +205,9 @@ directCommands:
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
 commands:

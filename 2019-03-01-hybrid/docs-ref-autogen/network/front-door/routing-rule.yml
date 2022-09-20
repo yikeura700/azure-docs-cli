@@ -107,7 +107,7 @@ directCommands:
     summary: Protocol to use for forwarding traffic.
     description: ''
   - name: --patterns
-    summary: "Space-separated list of patterns to match. Default: '/\\*'."
+    summary: "Space-separated list of patterns to match. Default: '/*'."
     description: ''
   - name: --query-parameter-strip-directive
     parameterValueGroup: StripAll, StripAllExcept, StripNone, StripOnly
@@ -236,6 +236,7 @@ directCommands:
     summary: 'Space-separated list of protocols to accept. Default: Http.'
     description: ''
   - name: --add
+    defaultValue: '[]'
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --backend-pool
@@ -272,6 +273,7 @@ directCommands:
     summary: Enabled status.
     description: ''
   - name: --force-string
+    defaultValue: False
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --forwarding-protocol
@@ -282,7 +284,7 @@ directCommands:
     summary: Space-separated list of frontend endpoint names or IDs.
     description: ''
   - name: --patterns
-    summary: "Space-separated list of patterns to match. Default: '/\\*'."
+    summary: "Space-separated list of patterns to match. Default: '/*'."
     description: ''
   - name: --query-parameter-strip-directive
     parameterValueGroup: StripAll, StripAllExcept, StripNone, StripOnly
@@ -300,12 +302,14 @@ directCommands:
     summary: The redirect type the rule will use when redirecting traffic.
     description: ''
   - name: --remove
+    defaultValue: '[]'
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --rules-engine
     summary: Name or ID of a Rules Engine configuration. To unlink property, "--remove rulesEngine".
     description: ''
   - name: --set
+    defaultValue: '[]'
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
 commands:
@@ -332,4 +336,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 09/02/2022
   description: Manage Front Door routing rules.

@@ -27,7 +27,6 @@ directCommands:
   - name: --name -n
     summary: Name of the private endpoint connection.
     description: ''
-    valueFrom: az monitor private-link-scope show
   - name: --resource-group -g
     summary: The resource group name of specified private link scope.
     description: ''
@@ -59,6 +58,7 @@ directCommands:
     summary: Name of the Azure Monitor Private Link Scope.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
@@ -102,7 +102,6 @@ directCommands:
   - name: --name -n
     summary: Name of the private endpoint connection.
     description: ''
-    valueFrom: az monitor private-link-scope show
   - name: --resource-group -g
     summary: The resource group name of specified private link scope.
     description: ''
@@ -126,7 +125,6 @@ directCommands:
   - name: --name -n
     summary: Name of the private endpoint connection.
     description: ''
-    valueFrom: az monitor private-link-scope show
   - name: --resource-group -g
     summary: The resource group name of specified private link scope.
     description: ''

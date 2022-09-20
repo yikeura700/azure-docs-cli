@@ -49,7 +49,7 @@ directCommands:
     summary: ID of an Azure resource from which the DNS resource value is taken.
     description: ''
   - name: --ttl
-    defaultValue: "3600"
+    defaultValue: 3600
     summary: Record set TTL (time-to-live).
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
@@ -84,6 +84,7 @@ directCommands:
     summary: The etag of the record set. Omit this value to always delete the current record set. Specify the last-seen etag value to prevent accidentally deleting any concurrent changes.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
@@ -141,6 +142,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --keep-empty-record-set
+    defaultValue: False
     summary: Keep the empty record set if the last record is removed.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
@@ -182,7 +184,7 @@ directCommands:
     summary: Create the record set only if it does not already exist.
     description: ''
   - name: --ttl
-    defaultValue: "3600"
+    defaultValue: 3600
     summary: Record set TTL (time-to-live).
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py

@@ -93,6 +93,7 @@ directCommands:
     summary: The intial password to be configured when a cluster is created for authentication_method Cassandra.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --repair-enabled
@@ -127,9 +128,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_managed-cassandra_cluster_list
@@ -221,6 +224,7 @@ directCommands:
     summary: Type of identity used for Customer Managed Disk Key.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --repair-enabled
@@ -256,4 +260,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: See https://docs.microsoft.com/en-us/azure/managed-instance-apache-cassandra/manage-resources-cli for Cassandra API samples.

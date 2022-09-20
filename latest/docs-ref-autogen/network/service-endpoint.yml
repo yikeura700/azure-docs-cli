@@ -15,6 +15,7 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --location -l
+    defaultValue: Undefined
     summary: 'Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=<location>`.'
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py

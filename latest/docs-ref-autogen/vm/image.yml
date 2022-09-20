@@ -51,6 +51,7 @@ directCommands:
     syntax: az vm image list -f CentOS --all
   optionalParameters:
   - name: --all
+    defaultValue: False
     summary: Retrieve image list from live Azure service rather using an offline image list.
     description: ''
   - name: --architecture
@@ -95,7 +96,6 @@ directCommands:
     name: --publisher -p
     summary: Image publisher.
     description: ''
-    valueFrom: az vm image list-publishers
   optionalParameters:
   - name: --edge-zone
     summary: The name of edge zone.
@@ -148,7 +148,6 @@ directCommands:
     name: --publisher -p
     summary: Image publisher.
     description: ''
-    valueFrom: az vm image list-publishers
   optionalParameters:
   - name: --edge-zone
     summary: The name of edge zone.

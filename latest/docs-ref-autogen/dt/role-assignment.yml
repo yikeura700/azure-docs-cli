@@ -99,6 +99,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --include-inherited
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Include assignments applied on parent scopes.
     description: ''
@@ -130,6 +131,7 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: >-
     Note that in order to perform role assignments, the logged in principal needs permissions
 

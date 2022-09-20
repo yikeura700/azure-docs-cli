@@ -74,27 +74,33 @@ directCommands:
                                        [--yes]
                                        [--zone]
   examples:
-  - summary: Create a PostgreSQL flexible server with custom parameters
+  - summary: >
+      Create a PostgreSQL flexible server with custom parameters
     syntax: >-
       az postgres flexible-server create --location northeurope --resource-group testGroup \
         --name testserver --admin-user username --admin-password password \
         --sku-name Standard_B1ms --tier Burstable --public-access 153.24.26.117 --storage-size 128 \
         --tags "key=value" --version 13 --high-availability Enabled --zone 1 \
         --standby-zone 3
-  - summary: Create a PostgreSQL flexible server with default parameters and public access enabled by default.       Resource group, server name, username, password, and default database will be created by CLI
+  - summary: >
+      Create a PostgreSQL flexible server with default parameters and public access enabled by default.       Resource group, server name, username, password, and default database will be created by CLI
     syntax: az postgres flexible-server create
-  - summary: Create a PostgreSQL flexible server with public access and add the range of IP address to have access to this server. The --public-access parameter can be 'All', 'None', <startIpAddress>, or <startIpAddress>-<endIpAddress>
+  - summary: >
+      Create a PostgreSQL flexible server with public access and add the range of IP address to have access to this server. The --public-access parameter can be 'All', 'None', <startIpAddress>, or <startIpAddress>-<endIpAddress>
     syntax: az postgres flexible-server create --resource-group testGroup --name testserver --public-access 125.23.54.31-125.23.54.35
-  - summary: Create a PostgreSQL flexible server with private access. If provided virtual network and subnet do not exists, virtual network and subnet with the specified address prefixes will be created.
+  - summary: >
+      Create a PostgreSQL flexible server with private access. If provided virtual network and subnet do not exists, virtual network and subnet with the specified address prefixes will be created.
     syntax: az postgres flexible-server create --resource-group testGroup --name testserver --vnet myVnet --subnet mySubnet --address-prefixes 10.0.0.0/16 --subnet-prefixes 10.0.0.0/24
-  - summary: Create a PostgreSQL flexible server using a new subnet resource ID and new private DNS zone resource ID. The subnet and DNS zone can be created in different subscription or resource group.
+  - summary: >
+      Create a PostgreSQL flexible server using a new subnet resource ID and new private DNS zone resource ID. The subnet and DNS zone can be created in different subscription or resource group.
     syntax: >-
       az postgres flexible-server create \
         --resource-group testGroup --name testserver \
         --subnet /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Network/virtualNetworks/{VNetName}/subnets/{SubnetName} \
         --private-dns-zone /subscriptions/{SubID}/resourceGroups/{resourceGroup}/providers/Microsoft.Network/privateDnsZones/testPostgreSQLFlexibleDnsZone.private.postgres.database.azure.com \
         --address-prefixes 172.0.0.0/16 --subnet-prefixes 172.0.0.0/24
-  - summary: Create a PostgreSQL flexible server using existing network resources in the same resource group. The provided subnet should not have any other resource deployed in it and this subnet will be delegated to Microsoft.DBforPostgreSQL/flexibleServers, if not already delegated. The private DNS zone will be linked to the virtual network if not already linked.
+  - summary: >
+      Create a PostgreSQL flexible server using existing network resources in the same resource group. The provided subnet should not have any other resource deployed in it and this subnet will be delegated to Microsoft.DBforPostgreSQL/flexibleServers, if not already delegated. The private DNS zone will be linked to the virtual network if not already linked.
     syntax: >-
       # create vnet
 
@@ -120,7 +126,8 @@ directCommands:
       az postgres flexible-server create --resource-group testGroup --name testserver \
         --vnet testVnet --subnet testSubnet --location testLocation \
         --private-dns-zone /subscriptions/{SubId}/resourceGroups/{testGroup}/providers/Microsoft.Network/privateDnsZones/testDNS.postgres.database.azure.com
-  - summary: Create a PostgreSQL flexible server using existing network resources in the different resource group / subscription.
+  - summary: >
+      Create a PostgreSQL flexible server using existing network resources in the different resource group / subscription.
     syntax: >-
       az postgres flexible-server create --resource-group testGroup \
          --name testserver --location testLocation \
@@ -134,11 +141,11 @@ directCommands:
     summary: 'The password of the administrator. Minimum 8 characters and maximum 128 characters. Password must contain characters from three of the following categories: English uppercase letters, English lowercase letters, numbers, and non-alphanumeric characters.'
     description: ''
   - name: --admin-user -u
-    defaultValue: fixedpepper8
+    defaultValue: privategrouse8
     summary: Administrator username for the server. Once set, it cannot be changed.
     description: ''
   - name: --backup-retention
-    defaultValue: "7"
+    defaultValue: 7
     summary: The number of days a backup is retained. Range of 7 to 35 days. Default is 7 days.
     description: ''
   - name: --database-name -d
@@ -172,7 +179,7 @@ directCommands:
     summary: The availability zone information of the standby server when high availability is enabled.
     description: ''
   - name: --storage-size
-    defaultValue: "128"
+    defaultValue: 128
     summary: The storage capacity of the server. Minimum is 32 GiB and max is 16 TiB.
     description: ''
   - name: --subnet
@@ -189,13 +196,14 @@ directCommands:
     summary: 'Compute tier of the server. Accepted values: Burstable, GeneralPurpose, Memory Optimized.'
     description: ''
   - name: --version
-    defaultValue: "13"
+    defaultValue: 13
     summary: Server major version.
     description: ''
   - name: --vnet
     summary: Name or ID of a new or existing virtual network. If you want to use a vnet from different resource group or subscription, please provide a resource ID. The name must be between 2 to 64 characters. The name must begin with a letter or number, end with a letter, number or underscore, and may contain only letters, numbers, underscores, periods, or hyphens.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   - name: --zone -z
@@ -209,6 +217,7 @@ directCommands:
     az postgres flexible-server delete [--ids]
                                        [--name]
                                        [--resource-group]
+                                       [--subscription]
                                        [--yes]
   examples:
   - summary: Delete a flexible server.
@@ -225,7 +234,11 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_postgres_flexible-server_execute
@@ -297,6 +310,7 @@ directCommands:
                                         [--ids]
                                         [--name]
                                         [--resource-group]
+                                        [--subscription]
   examples:
   - summary: Restart a flexible server.
     syntax: az postgres flexible-server restart --resource-group testGroup --name testserver
@@ -317,6 +331,9 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
 - uid: az_postgres_flexible-server_restore
   name: az postgres flexible-server restore
   summary: Restore a flexible server from backup.
@@ -332,6 +349,7 @@ directCommands:
                                         [--restore-time]
                                         [--subnet]
                                         [--subnet-prefixes]
+                                        [--subscription]
                                         [--vnet]
                                         [--yes]
                                         [--zone]
@@ -356,6 +374,7 @@ directCommands:
     summary: Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --private-dns-zone
@@ -365,7 +384,7 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --restore-time
-    defaultValue: 2022-09-20T06:07:35+00:00
+    defaultValue: 2022-09-20T06:21:12+00:00
     summary: The point in time in UTC to restore from (ISO8601 format), e.g., 2017-04-26T02:10:00+00:00The default value is set to current time.
     description: ''
   - name: --subnet
@@ -374,10 +393,14 @@ directCommands:
   - name: --subnet-prefixes
     summary: The subnet IP address prefix to use when creating a new subnet in CIDR format. Default value is 10.0.0.0/24.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --vnet
     summary: Name or ID of a new or existing virtual network. If you want to use a vnet from different resource group or subscription, please provide a resource ID. The name must be between 2 to 64 characters. The name must begin with a letter or number, end with a letter, number or underscore, and may contain only letters, numbers, underscores, periods, or hyphens.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   - name: --zone -z
@@ -391,6 +414,7 @@ directCommands:
     az postgres flexible-server show [--ids]
                                      [--name]
                                      [--resource-group]
+                                     [--subscription]
   examples:
   - summary: Get the details of a flexible server
     syntax: az postgres flexible-server show --resource-group testGroup --name testserver
@@ -404,6 +428,9 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
 - uid: az_postgres_flexible-server_show-connection-string
   name: az postgres flexible-server show-connection-string
   summary: Show the connection strings for a PostgreSQL flexible-server database.
@@ -414,6 +441,7 @@ directCommands:
                                                        [--database-name]
                                                        [--ids]
                                                        [--server-name]
+                                                       [--subscription]
   examples:
   - summary: Show connection strings for cmd and programming languages.
     syntax: az postgres flexible-server show-connection-string -s testserver -u username -p password -d databasename
@@ -437,6 +465,9 @@ directCommands:
     defaultValue: '{server}'
     summary: Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
 - uid: az_postgres_flexible-server_start
   name: az postgres flexible-server start
   summary: Start a flexible server.
@@ -445,6 +476,7 @@ directCommands:
     az postgres flexible-server start [--ids]
                                       [--name]
                                       [--resource-group]
+                                      [--subscription]
   examples:
   - summary: Start a flexible server.
     syntax: az postgres flexible-server start --resource-group testGroup --name testserver
@@ -458,6 +490,9 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
 - uid: az_postgres_flexible-server_stop
   name: az postgres flexible-server stop
   summary: Stop a flexible server.
@@ -466,6 +501,7 @@ directCommands:
     az postgres flexible-server stop [--ids]
                                      [--name]
                                      [--resource-group]
+                                     [--subscription]
   examples:
   - summary: Stop a flexible server.
     syntax: az postgres flexible-server stop --resource-group testGroup --name testserver
@@ -478,6 +514,9 @@ directCommands:
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 - uid: az_postgres_flexible-server_update
   name: az postgres flexible-server update
@@ -498,6 +537,7 @@ directCommands:
                                        [--sku-name]
                                        [--standby-zone]
                                        [--storage-size]
+                                       [--subscription]
                                        [--tags]
                                        [--tier]
   examples:
@@ -509,6 +549,7 @@ directCommands:
     syntax: az postgres flexible-server update --resource-group testGroup --name testserver -p password123
   optionalParameters:
   - name: --add
+    defaultValue: '[]'
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --admin-password -p
@@ -518,6 +559,7 @@ directCommands:
     summary: The number of days a backup is retained. Range of 7 to 35 days. Default is 7 days.
     description: ''
   - name: --force-string
+    defaultValue: False
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --high-availability
@@ -534,12 +576,14 @@ directCommands:
     summary: Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
     description: ''
   - name: --remove
+    defaultValue: '[]'
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --set
+    defaultValue: '[]'
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --sku-name
@@ -550,6 +594,9 @@ directCommands:
     description: ''
   - name: --storage-size
     summary: The storage capacity of the server. Minimum is 32 GiB and max is 16 TiB.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
@@ -570,26 +617,30 @@ directCommands:
                                      [--interval]
                                      [--name]
                                      [--resource-group]
+                                     [--subscription]
                                      [--timeout]
                                      [--updated]
   optionalParameters:
   - name: --created
+    defaultValue: False
     summary: Wait until created with 'provisioningState' at 'Succeeded'.
     description: ''
   - name: --custom
     summary: Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
     description: ''
   - name: --deleted
+    defaultValue: False
     summary: Wait until deleted.
     description: ''
   - name: --exists
+    defaultValue: False
     summary: Wait until the resource exists.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --interval
-    defaultValue: "30"
+    defaultValue: 30
     summary: Polling interval in seconds.
     description: ''
   - name: --name -n
@@ -598,11 +649,15 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --timeout
-    defaultValue: "3600"
+    defaultValue: 3600
     summary: Maximum wait in seconds.
     description: ''
   - name: --updated
+    defaultValue: False
     summary: Wait until updated with provisioningState at 'Succeeded'.
     description: ''
 commands:
@@ -666,4 +721,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage Azure Database for PostgreSQL Flexible Servers.

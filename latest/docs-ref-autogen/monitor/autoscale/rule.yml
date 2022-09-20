@@ -25,7 +25,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --index
-    summary: Space-separated list of rule indices to copy, or '\*' to copy all rules.
+    summary: Space-separated list of rule indices to copy, or '*' to copy all rules.
     description: ''
   - isRequired: true
     name: --resource-group -g
@@ -96,7 +96,7 @@ directCommands:
       Out by Percent: --scale out 10%.
   optionalParameters:
   - name: --cooldown
-    defaultValue: "5"
+    defaultValue: 5
     summary: The number of minutes that must elapse before another scaling event can occur.
     description: ''
   - name: --profile-name
@@ -139,7 +139,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --index
-    summary: Space-separated list of rule indices to remove, or '\*' to clear all rules.
+    summary: Space-separated list of rule indices to remove, or '*' to clear all rules.
     description: ''
   - isRequired: true
     name: --resource-group -g

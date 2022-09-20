@@ -185,7 +185,7 @@ directCommands:
     summary: The schema in which events should be delivered for this event subscription. By default, events will be delivered in the same schema in which they are published (based on the corresponding topic's input schema).
     description: ''
   - name: --event-ttl
-    defaultValue: "1440"
+    defaultValue: 1440
     summary: Event time to live (in minutes). Must be a number between 1 and 1440.
     description: ''
   - name: --expiration-date
@@ -198,7 +198,7 @@ directCommands:
     summary: A space-separated list of labels to associate with this event subscription.
     description: ''
   - name: --max-delivery-attempts
-    defaultValue: "30"
+    defaultValue: 30
     summary: Maximum number of delivery attempts. Must be a number between 1 and 30.
     description: ''
   - name: --max-events-per-batch
@@ -214,6 +214,7 @@ directCommands:
     summary: An optional string to filter events for an event subscription based on a prefix. Wildcard characters are not supported.
     description: ''
   - name: --subject-case-sensitive
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Specify to indicate whether the subject fields should be compared in a case sensitive manner. True if flag present.
     description: ''
@@ -255,6 +256,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
@@ -327,10 +329,12 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --full-ed-url --include-full-endpoint-url
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Specify to indicate whether the full endpoint URL should be returned. True if flag present.
     description: ''
   - name: --include-attrib-secret --include-static-delivery-attribute-secret
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Indicate whether any static delivery attribute secrets should be returned. True if flag present.
     description: ''

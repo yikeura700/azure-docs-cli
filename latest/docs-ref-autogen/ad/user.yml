@@ -33,6 +33,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --force-change-password-next-sign-in
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Marks this user as needing to update their password the next time they authenticate. If omitted, false will be used.
     description: ''
@@ -74,6 +75,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --security-enabled-only
+    defaultValue: False
     parameterValueGroup: false, true
     summary: True to specify that only security groups that the entity is a member of should be returned; false to specify that all groups and directory roles that the entity is a member of should be returned.
     description: ''

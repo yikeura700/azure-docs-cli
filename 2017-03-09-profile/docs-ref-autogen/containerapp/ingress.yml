@@ -13,31 +13,39 @@ directCommands:
   summary: Disable ingress for a container app.
   description: ''
   syntax: >-
-    az containerapp ingress disable --name
-                                    --resource-group
+    az containerapp ingress disable [--ids]
+                                    [--name]
+                                    [--resource-group]
+                                    [--subscription]
   examples:
   - summary: Disable ingress for a container app.
     syntax: az containerapp ingress disable -n MyContainerapp -g MyResourceGroup
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 - uid: az_containerapp_ingress_enable
   name: az containerapp ingress enable
   summary: Enable or update ingress for a container app.
   description: ''
   syntax: >-
-    az containerapp ingress enable --name
-                                   --resource-group
-                                   --target-port
+    az containerapp ingress enable --target-port
                                    --type {external, internal}
                                    [--allow-insecure]
                                    [--exposed-port]
+                                   [--ids]
+                                   [--name]
+                                   [--resource-group]
+                                   [--subscription]
                                    [--transport {auto, http, http2, tcp}]
   examples:
   - summary: Enable or update ingress for a container app.
@@ -45,14 +53,6 @@ directCommands:
       az containerapp ingress enable -n MyContainerapp -g MyResourceGroup \
           --type external --allow-insecure --target-port 80 --transport auto
   requiredParameters:
-  - isRequired: true
-    name: --name -n
-    summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
   - isRequired: true
     name: --target-port
     summary: The application port used for ingress traffic.
@@ -64,10 +64,23 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --allow-insecure
+    defaultValue: False
     summary: Allow insecure connections for ingress traffic.
     description: ''
   - name: --exposed-port
     summary: Additional exposed port. Only supported by tcp transport protocol. Must be unique per environment if the app ingress is external.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --transport
     defaultValue: auto
@@ -79,19 +92,25 @@ directCommands:
   summary: Show details of a container app's ingress.
   description: ''
   syntax: >-
-    az containerapp ingress show --name
-                                 --resource-group
+    az containerapp ingress show [--ids]
+                                 [--name]
+                                 [--resource-group]
+                                 [--subscription]
   examples:
   - summary: Show the details of a container app's ingress.
     syntax: az containerapp ingress show -n MyContainerapp -g MyResourceGroup
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
 - az_containerapp_ingress_disable
@@ -118,4 +137,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Commands to manage ingress and traffic-splitting.

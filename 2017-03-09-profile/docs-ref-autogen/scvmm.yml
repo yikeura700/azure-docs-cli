@@ -53,6 +53,13 @@ commands:
 - az_scvmm_vm_stop
 - az_scvmm_vm_update
 - az_scvmm_vm_wait
+- az_scvmm_vm-template
+- az_scvmm_vm-template_create
+- az_scvmm_vm-template_delete
+- az_scvmm_vm-template_list
+- az_scvmm_vm-template_show
+- az_scvmm_vm-template_update
+- az_scvmm_vm-template_wait
 - az_scvmm_vmmserver
 - az_scvmm_vmmserver_connect
 - az_scvmm_vmmserver_delete
@@ -63,13 +70,6 @@ commands:
 - az_scvmm_vmmserver_show
 - az_scvmm_vmmserver_update
 - az_scvmm_vmmserver_wait
-- az_scvmm_vm-template
-- az_scvmm_vm-template_create
-- az_scvmm_vm-template_delete
-- az_scvmm_vm-template_list
-- az_scvmm_vm-template_show
-- az_scvmm_vm-template_update
-- az_scvmm_vm-template_wait
 globalParameters:
 - name: --debug
   summary: Increase logging verbosity to show all debug logs.
@@ -88,4 +88,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Commands for managing Arc for SCVMM resources.

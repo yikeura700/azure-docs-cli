@@ -28,6 +28,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --load-trust-store
+    defaultValue: False
     parameterValueGroup: false, true
     summary: If true, the certificate would be loaded into trust store for Java applications.
     description: ''
@@ -94,6 +95,7 @@ directCommands:
     summary: '[optional] The mount options for the persistent storage volume.'
     description: ''
   - name: --read-only
+    defaultValue: False
     parameterValueGroup: false, true
     summary: '[optional] If true, the persistent storage volume will be read only.'
     description: ''
@@ -139,6 +141,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --assign-endpoint
+    defaultValue: False
     parameterValueGroup: false, true
     summary: If true, assign endpoint URL for direct access.
     description: ''
@@ -147,7 +150,7 @@ directCommands:
     summary: Enable system-assigned managed identity.
     description: ''
   - name: --cpu
-    defaultValue: "1"
+    defaultValue: 1
     summary: CPU resource quantity. Should be 500m or number of CPU cores.
     description: ''
   - name: --disable-probe
@@ -162,7 +165,7 @@ directCommands:
     summary: Space-separated environment variables in 'key[=value]' format.
     description: ''
   - name: --instance-count
-    defaultValue: "1"
+    defaultValue: 1
     summary: Number of instance.
     description: ''
   - name: --jvm-options
@@ -313,6 +316,7 @@ directCommands:
     summary: A string containing the path to the .NET executable relative to zip root.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --registry-password
@@ -386,6 +390,7 @@ directCommands:
     summary: Name of an existing deployment of the app. Default to the production deployment if not specified.
     description: ''
   - name: --follow  -f
+    defaultValue: False
     summary: Specify if the logs should be streamed.
     description: ''
   - name: --format-json
@@ -395,11 +400,11 @@ directCommands:
     summary: Name of an existing instance of the deployment.
     description: ''
   - name: --limit
-    defaultValue: "2048"
+    defaultValue: 2048
     summary: Maximum kilobytes of logs to return. Ceiling number is 2048.
     description: ''
   - name: --lines
-    defaultValue: "50"
+    defaultValue: 50
     summary: Number of lines to show. Maximum is 10000.
     description: ''
   - name: --since
@@ -433,6 +438,7 @@ directCommands:
     summary: Name of an existing deployment of the app. Default to the production deployment if not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring-cloud_app_scale
@@ -480,6 +486,7 @@ directCommands:
     summary: 'Memory resource quantity. Should be 512Mi or #Gi, e.g., 1Gi, 3Gi.'
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring-cloud_app_set-deployment
@@ -514,6 +521,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring-cloud_app_show
@@ -591,6 +599,7 @@ directCommands:
     summary: Name of an existing deployment of the app. Default to the production deployment if not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring-cloud_app_stop
@@ -621,6 +630,7 @@ directCommands:
     summary: Name of an existing deployment of the app. Default to the production deployment if not specified.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring-cloud_app_unset-deployment
@@ -650,6 +660,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_spring-cloud_app_update
@@ -717,6 +728,7 @@ directCommands:
     summary: Space-separated environment variables in 'key[=value]' format.
     description: ''
   - name: --https-only
+    defaultValue: False
     parameterValueGroup: false, true
     summary: If true, access app via https.
     description: ''
@@ -730,6 +742,7 @@ directCommands:
     summary: The path to the .NET executable relative to zip root.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --persistent-storage
@@ -808,4 +821,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Commands to manage apps in Azure Spring Cloud.

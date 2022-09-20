@@ -78,17 +78,19 @@ directCommands:
     summary: Indicate key message properties to output. sys = system properties, app = application properties, anno = annotations.
     description: ''
   - name: --repair -r
+    defaultValue: False
     parameterValueGroup: false, true
     summary: 'Reinstall uamqp dependency compatible with extension version. Default: false.'
     description: ''
   - name: --timeout --to -t
-    defaultValue: "300"
+    defaultValue: 300
     summary: Maximum seconds to maintain connection without receiving message. Use 0 for infinity.
     description: ''
   - name: --token
     summary: If you'd prefer to submit your request without authenticating against the Azure CLI, you can specify a valid user token to authenticate your request. You must specify the type of key as part of the request. Learn more at https://aka.ms/iotcentraldocsapi.
     description: ''
   - name: --yes -y
+    defaultValue: False
     parameterValueGroup: false, true
     summary: 'Skip user prompts. Indicates acceptance of action. Used primarily for automation scenarios. Default: false.'
     description: ''
@@ -212,14 +214,14 @@ directCommands:
     summary: The device ID of the target device.You can find the device ID by, clicking on the Connect button on the Device Details page.
     description: ''
   - name: --dr --duration
-    defaultValue: "300"
+    defaultValue: 300
     summary: Maximum duration to receive messages from target device before terminating connection.Use 0 for infinity.
     description: ''
   - name: --enqueued-time --et -e
     summary: Indicates the time that should be used as a starting point to read messages from the partitions. Units are milliseconds since unix epoch. If no time is indicated "now" is used.
     description: ''
   - name: --max-messages --mm
-    defaultValue: "10"
+    defaultValue: 10
     summary: Maximum number of messages to recieve from target device before terminating connection.Use 0 for infinity.
     description: ''
   - name: --minimum-severity
@@ -235,6 +237,7 @@ directCommands:
     summary: Indicate key message properties to output. sys = system properties, app = application properties, anno = annotations.
     description: ''
   - name: --repair -r
+    defaultValue: False
     parameterValueGroup: false, true
     summary: 'Reinstall uamqp dependency compatible with extension version. Default: false.'
     description: ''
@@ -244,13 +247,14 @@ directCommands:
     summary: Indicate output stylescroll = deliver errors as they arrive, json = summarize results as json, csv = summarize results as csv.
     description: ''
   - name: --timeout --to -t
-    defaultValue: "300"
+    defaultValue: 300
     summary: Maximum seconds to maintain connection without receiving message. Use 0 for infinity.
     description: ''
   - name: --token
     summary: If you'd prefer to submit your request without authenticating against the Azure CLI, you can specify a valid user token to authenticate your request. You must specify the type of key as part of the request. Learn more at https://aka.ms/iotcentraldocsapi.
     description: ''
   - name: --yes -y
+    defaultValue: False
     parameterValueGroup: false, true
     summary: 'Skip user prompts. Indicates acceptance of action. Used primarily for automation scenarios. Default: false.'
     description: ''
@@ -320,4 +324,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Perform application and device level diagnostics.

@@ -90,9 +90,11 @@ directCommands:
                     [--refresh]
   optionalParameters:
   - name: --all
+    defaultValue: False
     summary: List all subscriptions from all clouds, rather than just 'Enabled' ones.
     description: ''
   - name: --refresh
+    defaultValue: False
     summary: Retrieve up-to-date subscriptions from server.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py

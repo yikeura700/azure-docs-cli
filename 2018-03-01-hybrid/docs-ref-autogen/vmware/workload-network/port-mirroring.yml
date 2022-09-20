@@ -42,7 +42,7 @@ directCommands:
     summary: Destination VM Group.
     description: ''
   - name: --direction
-    summary: Direction of port mirroring profile.
+    summary: 'Direction of port mirroring profile. Possible values include: "INGRESS, EGRESS, BIDIRECTIONAL".'
     description: ''
   - name: --display-name
     summary: Display name of the port mirroring profile.
@@ -80,6 +80,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes
+    defaultValue: False
     summary: Delete without confirmation.
     description: ''
 - uid: az_vmware_workload-network_port-mirroring_list
@@ -159,7 +160,7 @@ directCommands:
     summary: Destination VM Group.
     description: ''
   - name: --direction
-    summary: Direction of port mirroring profile.
+    summary: 'Direction of port mirroring profile. Possible values include: "INGRESS, EGRESS, BIDIRECTIONAL".'
     description: ''
   - name: --display-name
     summary: Display name of the port mirroring profile.
@@ -194,4 +195,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Commands to manage a Port Mirroring workload network.

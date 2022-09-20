@@ -38,7 +38,7 @@ directCommands:
     syntax: az ssh arc --local-user username --resource-group myResourceGroup --name myMachine --private-key-file key
   - summary: Give a local user name to SSH with local user credentials using password based authentication.
     syntax: az ssh arc --local-user username --resource-group myResourceGroup --name myMachine
-  - summary: Give a SSH Client Folder to use the ssh executables in that folder, like ssh-keygen.exe and ssh.exe. If not provided, the extension attempts to use pre-installed OpenSSH client (on Windows, extension looks for pre-installed executables under C:WindowsSystem32OpenSSH).
+  - summary: Give a SSH Client Folder to use the ssh executables in that folder, like ssh-keygen.exe and ssh.exe. If not provided, the extension attempts to use pre-installed OpenSSH client (on Windows, extension looks for pre-installed executables under C:\Windows\System32\OpenSSH).
     syntax: az ssh arc --resource-group myResourceGroup --name myMachine --ssh-client-folder "C:\Program Files\OpenSSH"
   - summary: Open RDP connection over SSH. Useful for connecting via RDP to Arc Servers with no public IP address. Currently only supported for Windows clients.
     syntax: az ssh arc --resource-group myResourceGroup --name myVM --local-user username --rdp
@@ -47,6 +47,7 @@ directCommands:
     summary: Path to certificate file.
     description: ''
   - name: --delete-private-key --force-delete-credentials
+    defaultValue: False
     summary: This is an internal argument. This argument is used by Azure Portal to provide a one click SSH login experience in Cloud shell.
     description: ''
   - name: --local-user
@@ -65,6 +66,7 @@ directCommands:
     summary: The RSA public key file path.
     description: ''
   - name: --rdp --winrdp
+    defaultValue: False
     summary: Start RDP connection over SSH.
     description: ''
   - name: --resource-group -g
@@ -90,7 +92,7 @@ directCommands:
   examples:
   - summary: Create a short lived ssh certificate signed by AAD
     syntax: az ssh cert --public-key-file ./id_rsa.pub --file ./id_rsa-aadcert.pub
-  - summary: Give a SSH Client Folder to use the ssh executables in that folder, like ssh-keygen.exe. If not provided, the extension attempts to use pre-installed OpenSSH client (on Windows, extension looks for pre-installed executables under C:WindowsSystem32OpenSSH).
+  - summary: Give a SSH Client Folder to use the ssh executables in that folder, like ssh-keygen.exe. If not provided, the extension attempts to use pre-installed OpenSSH client (on Windows, extension looks for pre-installed executables under C:\Windows\System32\OpenSSH).
     syntax: az ssh cert --file ./id_rsa-aadcert.pub --ssh-client-folder "C:\Program Files\OpenSSH"
   optionalParameters:
   - name: --file -f
@@ -158,7 +160,7 @@ directCommands:
       rsync -e 'ssh -F ./sshconfig' -avP directory/ myvm:~/directory
 
       GIT_SSH_COMMAND="ssh -F ./sshconfig" git clone myvm:~/gitrepo
-  - summary: Give a SSH Client Folder to use the ssh executables in that folder, like ssh-keygen.exe. If not provided, the extension attempts to use pre-installed OpenSSH client (on Windows, extension looks for pre-installed executables under C:WindowsSystem32OpenSSH).
+  - summary: Give a SSH Client Folder to use the ssh executables in that folder, like ssh-keygen.exe. If not provided, the extension attempts to use pre-installed OpenSSH client (on Windows, extension looks for pre-installed executables under C:\Windows\System32\OpenSSH).
     syntax: az ssh config --file ./myconfig --resource-group myResourceGroup --name myVM --ssh-client-folder "C:\Program Files\OpenSSH"
   - summary: Give the Resource Type of the target. Useful when there is an Azure VM and an Arc Server with the same name in the same resource group. Resource type can be either "Microsoft.HybridCompute" for Arc Servers or "Microsoft.Compute" for Azure Virtual Machines.
     syntax: az ssh config --resource-type [Microsoft.Compute|Microsoft.HybridCompute] --resource-group myResourceGroup --name myVM --file ./myconfig
@@ -184,12 +186,14 @@ directCommands:
     summary: The name of the VM.
     description: ''
   - name: --overwrite
+    defaultValue: False
     summary: Overwrites the config file if this flag is set.
     description: ''
   - name: --port
     summary: SSH Port.
     description: ''
   - name: --prefer-private-ip
+    defaultValue: False
     summary: Will use a private IP if available. By default only public IPs are used.
     description: ''
   - name: --private-key-file -i
@@ -250,7 +254,7 @@ directCommands:
     syntax: az ssh vm --local-user username --resource-group myResourceGroup --name myVM --private-key-file key
   - summary: Give a local user name to SSH with local user credentials using password based authentication.
     syntax: az ssh vm --local-user username --resource-group myResourceGroup --name myArcServer
-  - summary: Give a SSH Client Folder to use the ssh executables in that folder, like ssh-keygen.exe and ssh.exe. If not provided, the extension attempts to use pre-installed OpenSSH client (on Windows, extension looks for pre-installed executables under C:WindowsSystem32OpenSSH).
+  - summary: Give a SSH Client Folder to use the ssh executables in that folder, like ssh-keygen.exe and ssh.exe. If not provided, the extension attempts to use pre-installed OpenSSH client (on Windows, extension looks for pre-installed executables under C:\Windows\System32\OpenSSH).
     syntax: az ssh vm --resource-group myResourceGroup --name myVM --ssh-client-folder "C:\Program Files\OpenSSH"
   - summary: Open RDP connection over SSH. Useful for connecting via RDP to Arc Servers with no public IP address. Currently only supported for Windows clients.
     syntax: az ssh vm --resource-group myResourceGroup --name myVM --local-user username --rdp
@@ -259,6 +263,7 @@ directCommands:
     summary: Path to a certificate file used for authentication when using local user credentials.
     description: ''
   - name: --delete-private-key --force-delete-credentials
+    defaultValue: False
     summary: This is an internal argument. This argument is used by Azure Portal to provide a one click SSH login experience in Cloud shell.
     description: ''
   - name: --hostname --ip
@@ -274,6 +279,7 @@ directCommands:
     summary: SSH port.
     description: ''
   - name: --prefer-private-ip
+    defaultValue: False
     summary: Will prefer private IP.  Requires connectivity to the private IP.
     description: ''
   - name: --private-key-file -i
@@ -283,6 +289,7 @@ directCommands:
     summary: The RSA public key file path.
     description: ''
   - name: --rdp --winrdp
+    defaultValue: False
     summary: Start RDP connection over SSH.
     description: ''
   - name: --resource-group -g
@@ -323,4 +330,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: SSH into resources (Azure VMs, Arc servers, etc) using AAD issued openssh certificates.

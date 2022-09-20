@@ -105,10 +105,10 @@ directCommands:
     summary: Specify content type of the file.
     description: ''
   - name: --exclude-path
-    summary: 'Exclude these paths. This option does not support wildcard characters (\*). Checks relative path prefix. For example: myFolder;myFolder/subDirName/file.pdf.'
+    summary: 'Exclude these paths. This option does not support wildcard characters (*). Checks relative path prefix. For example: myFolder;myFolder/subDirName/file.pdf.'
     description: ''
   - name: --exclude-pattern
-    summary: 'Exclude these files where the name matches the pattern list. For example: \*.jpg;\*.pdf;exactName. This option supports wildcard characters (\*).'
+    summary: 'Exclude these files where the name matches the pattern list. For example: *.jpg;*.pdf;exactName. This option supports wildcard characters (*).'
     description: ''
   - name: --extra-options
     summary: ''
@@ -117,10 +117,10 @@ directCommands:
     summary: Follow symbolic links when uploading from local file system.
     description: ''
   - name: --include-path
-    summary: Include only these paths. This option does not support wildcard characters (\*). Checks relative path prefix. For example:myFolder;myFolder/subDirName/file.pdf.
+    summary: Include only these paths. This option does not support wildcard characters (*). Checks relative path prefix. For example:myFolder;myFolder/subDirName/file.pdf.
     description: ''
   - name: --include-pattern
-    summary: 'Include only these files where the name matches the pattern list. For example: \*.jpg;\*.pdf;exactName. This option supports wildcard characters (\*).'
+    summary: 'Include only these files where the name matches the pattern list. For example: *.jpg;*.pdf;exactName. This option supports wildcard characters (*).'
     description: ''
   - name: --preserve-s2s-access-tier
     parameterValueGroup: false, true
@@ -184,16 +184,16 @@ directCommands:
     summary: The container name.
     description: ''
   - name: --exclude-path
-    summary: 'Exclude these paths. This option does not support wildcard characters (\*). Checks relative path prefix. For example: myFolder;myFolder/subDirName/file.pdf.'
+    summary: 'Exclude these paths. This option does not support wildcard characters (*). Checks relative path prefix. For example: myFolder;myFolder/subDirName/file.pdf.'
     description: ''
   - name: --exclude-pattern
-    summary: 'Exclude these files where the name matches the pattern list. For example: \*.jpg;\*.pdf;exactName. This option supports wildcard characters (\*).'
+    summary: 'Exclude these files where the name matches the pattern list. For example: *.jpg;*.pdf;exactName. This option supports wildcard characters (*).'
     description: ''
   - name: --include-path
-    summary: Include only these paths. This option does not support wildcard characters (\*). Checks relative path prefix. For example:myFolder;myFolder/subDirName/file.pdf.
+    summary: Include only these paths. This option does not support wildcard characters (*). Checks relative path prefix. For example:myFolder;myFolder/subDirName/file.pdf.
     description: ''
   - name: --include-pattern
-    summary: 'Include only these files where the name matches the pattern list. For example: \*.jpg;\*.pdf;exactName. This option supports wildcard characters (\*).'
+    summary: 'Include only these files where the name matches the pattern list. For example: *.jpg;*.pdf;exactName. This option supports wildcard characters (*).'
     description: ''
   - name: --name -n
     summary: The blob name.
@@ -318,6 +318,7 @@ commands:
 - az_storage_blob_metadata_show
 - az_storage_blob_metadata_update
 - az_storage_blob_move
+- az_storage_blob_query
 - az_storage_blob_restore
 - az_storage_blob_service-properties
 - az_storage_blob_service-properties_delete-policy

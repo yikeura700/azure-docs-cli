@@ -1,6 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_devops_security_permission
 name: az devops security permission
+extensionInformation: >-
+  > [!Note]
+
+  > This reference is part of the **azure-devops** extension for the Azure CLI  (version 2.30.0 or higher).  The extension will automatically install the first time you run an **az devops security permission** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Manage security permissions.
 description: ''
 directCommands:
@@ -33,6 +37,7 @@ directCommands:
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: https://dev.azure.com/MyOrganizationName/.'
     description: ''
   - name: --recurse
+    defaultValue: False
     summary: If true and this is a hierarchical namespace, return child ACLs of the specified token.
     description: ''
   - name: --token
@@ -107,6 +112,7 @@ directCommands:
     summary: 'Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: https://dev.azure.com/MyOrganizationName/.'
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_devops_security_permission_show
@@ -177,9 +183,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --allow-bit
+    defaultValue: 0
     summary: Allow bit or addition of bits. Required if --deny-bit is missing.
     description: ''
   - name: --deny-bit
+    defaultValue: 0
     summary: Deny bit or addition of bits. Required if --allow-bit is missing.
     description: ''
   - name: --detect
@@ -187,7 +195,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --merge
-    defaultValue: "1"
+    defaultValue: 1
     parameterValueGroup: false, true
     summary: If set, the existing ACE has its allow and deny merged with                          the incoming ACE's allow and deny. If unset, the existing ACE is displaced.
     description: ''
@@ -221,4 +229,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage security permissions.

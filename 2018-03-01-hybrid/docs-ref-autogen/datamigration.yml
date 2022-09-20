@@ -35,6 +35,7 @@ directCommands:
     summary: Output folder to store assessment report.
     description: ''
   - name: --overwrite
+    defaultValue: False
     summary: Enable this parameter to overwrite the existing assessment report.
     description: ''
 - uid: az_datamigration_get-sku-recommendation
@@ -71,9 +72,11 @@ directCommands:
     summary: 'Space separated list of names of databases to not be considered for SKU recommendation. Only set one of the following or neither: databaseAllowList, databaseDenyList. Default: null.'
     description: ''
   - name: --display-result
+    defaultValue: False
     summary: Whether or not to print the SKU recommendation results to the console. Enable this parameter to display result.
     description: ''
   - name: --elastic-strategy
+    defaultValue: False
     summary: Whether or not to use the elastic strategy for SKU recommendations based on resource usage profiling. Enable this parameter to use elastic strategy.
     description: ''
   - name: --end-time
@@ -83,17 +86,18 @@ directCommands:
     summary: Output folder where performance data of the SQL Server is stored. The value here must be the same as the one used in PerfDataCollection.
     description: ''
   - name: --overwrite
+    defaultValue: False
     summary: Whether or not to overwrite any existing SKU recommendation reports. Enable this paramater to overwrite.
     description: ''
   - name: --scaling-factor
-    defaultValue: "100"
+    defaultValue: 100
     summary: Scaling (comfort) factor used during SKU recommendation. For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores.
     description: ''
   - name: --start-time
     summary: 'UTC start time of performance data points to consider during aggregation, in YYYY-MM-DD HH:MM format. Only used for baseline (non-elastic) strategy. Default: all data points collected will be considered.'
     description: ''
   - name: --target-percentile
-    defaultValue: "95"
+    defaultValue: 95
     summary: Percentile of data points to be used during aggregation of the performance data. Only used for baseline (non-elastic) strategy.
     description: ''
   - name: --target-platform
@@ -132,18 +136,18 @@ directCommands:
     summary: SQL Server Connection Strings.
     description: ''
   - name: --number-of-iteration
-    defaultValue: "20"
-    summary: 'Number of iterations of performance data collection to perform before persisting to file. For example, with default values, performance data will be persisted every 30 seconds \* 20 iterations = 10 minutes. Minimum: 2.'
+    defaultValue: 20
+    summary: 'Number of iterations of performance data collection to perform before persisting to file. For example, with default values, performance data will be persisted every 30 seconds * 20 iterations = 10 minutes. Minimum: 2.'
     description: ''
   - name: --output-folder
     summary: Output folder to store performance data.
     description: ''
   - name: --perf-query-interval
-    defaultValue: "30"
+    defaultValue: 30
     summary: Interval at which to query performance data, in seconds.
     description: ''
   - name: --static-query-interval
-    defaultValue: "3600"
+    defaultValue: 3600
     summary: Interval at which to query and persist static configuration data, in seconds.
     description: ''
   - name: --time
@@ -171,7 +175,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --installed-ir-path
-    summary: 'Version folder path in the Integration Runtime installed location. This can be provided when IR is installed but the command is failing to read it. Format: "<Parent-folder-path>Microsoft Integration Runtime<Version>".'
+    summary: 'Version folder path in the Integration Runtime installed location. This can be provided when IR is installed but the command is failing to read it. Format: "<Parent-folder-path>\Microsoft Integration Runtime\<Version>".'
     description: ''
   - name: --ir-path
     summary: Path of Integration Runtime MSI.
@@ -229,4 +233,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage Data Migration.

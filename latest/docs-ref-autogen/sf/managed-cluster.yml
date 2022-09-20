@@ -63,7 +63,7 @@ directCommands:
     summary: Client certificate thumbprint.
     description: ''
   - name: --client-connection-port --client-port
-    defaultValue: "19000"
+    defaultValue: 19000
     summary: Port used for client connections to the cluster.
     description: ''
   - name: --cluster-code-version --code-version
@@ -81,7 +81,7 @@ directCommands:
     summary: Cluster's dns name.
     description: ''
   - name: --gateway-connection-port --gateway-port
-    defaultValue: "19080"
+    defaultValue: 19080
     summary: Port used for http connections to the cluster.
     description: ''
   - name: --location -l
@@ -209,4 +209,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage an Azure Service Fabric managed cluster.

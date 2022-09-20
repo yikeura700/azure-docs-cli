@@ -93,21 +93,27 @@ directCommands:
     summary: The crg-id used to associate the new nodepool with the existed Capacity Reservation Group resource.
     description: ''
   - name: --enable-cluster-autoscaler -e
+    defaultValue: False
     summary: Enable cluster autoscaler.
     description: ''
   - name: --enable-custom-ca-trust
+    defaultValue: False
     summary: Enable Custom CA Trust on agent node pool.
     description: ''
   - name: --enable-encryption-at-host
+    defaultValue: False
     summary: Enable EncryptionAtHost on agent node pool.
     description: ''
   - name: --enable-fips-image
+    defaultValue: False
     summary: Use FIPS-enabled OS on agent nodes.
     description: ''
   - name: --enable-node-public-ip
+    defaultValue: False
     summary: Enable VMSS node public IP.
     description: ''
   - name: --enable-ultra-ssd
+    defaultValue: False
     summary: Enable UltraSSD on agent node pool.
     description: ''
   - name: --eviction-policy
@@ -128,7 +134,6 @@ directCommands:
   - name: --kubernetes-version -k
     summary: Version of Kubernetes to use for creating the cluster, such as "1.7.12" or "1.8.7".
     description: ''
-    valueFrom: '`az aks get-versions`'
   - name: --labels
     summary: The node labels for the node pool. See https://aka.ms/node-labels for syntax of labels.
     description: ''
@@ -139,6 +144,7 @@ directCommands:
     summary: Maximum nodes count used for autoscaler, when "--enable-cluster-autoscaler" specified. Please specify the value in the range of [0, 1000] for user nodepool, and [1,1000] for system nodepool.
     description: ''
   - name: --max-pods -m
+    defaultValue: 0
     summary: The maximum number of pods deployable to a node.
     description: If not specified, defaults based on network-plugin. 30 for "azure", 110 for "kubenet", or 250 for "none".
   - name: --max-surge
@@ -156,13 +162,15 @@ directCommands:
     summary: The mode for a node pool which defines a node pool's primary function. If set as "System", AKS prefers system pods scheduling to node pools with mode `System`. Learn more at https://aka.ms/aks/nodepool/mode.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --node-count -c
-    defaultValue: "3"
+    defaultValue: 3
     summary: Number of nodes in the Kubernetes agent pool. After creating a cluster, you can change the size of its node pool with `az aks scale`.
     description: ''
   - name: --node-osdisk-size
+    defaultValue: 0
     summary: Size in GB of the OS disk for each node in the agent pool. Minimum 30 GB.
     description: ''
   - name: --node-osdisk-type
@@ -258,6 +266,7 @@ directCommands:
     summary: (PREVIEW) ignore-pod-disruption-budget deletes an existing nodepool without considering Pod Disruption Budget.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_aks_nodepool_get-upgrades
@@ -331,6 +340,7 @@ directCommands:
     summary: Send custom headers. When specified, format should be Key1=Value1,Key2=Value2.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_aks_nodepool_scale
@@ -358,10 +368,11 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --node-count -c
-    defaultValue: "3"
+    defaultValue: 3
     summary: Number of nodes in the Kubernetes node pool.
     description: ''
 - uid: az_aks_nodepool_show
@@ -416,6 +427,7 @@ directCommands:
     summary: Send custom headers. When specified, format should be Key1=Value1,Key2=Value2.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_aks_nodepool_stop
@@ -449,6 +461,7 @@ directCommands:
     summary: Send custom headers. When specified, format should be Key1=Value1,Key2=Value2.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
 - uid: az_aks_nodepool_update
@@ -503,15 +516,19 @@ directCommands:
     summary: Send custom headers. When specified, format should be Key1=Value1,Key2=Value2.
     description: ''
   - name: --dcat --disable-custom-ca-trust
+    defaultValue: False
     summary: Disable Custom CA Trust on agent node pool.
     description: ''
   - name: --disable-cluster-autoscaler -d
+    defaultValue: False
     summary: Disable cluster autoscaler.
     description: ''
   - name: --enable-cluster-autoscaler -e
+    defaultValue: False
     summary: Enable cluster autoscaler.
     description: ''
   - name: --enable-custom-ca-trust
+    defaultValue: False
     summary: Enable Custom CA Trust on agent node pool.
     description: ''
   - name: --labels
@@ -531,6 +548,7 @@ directCommands:
     summary: The mode for a node pool which defines a node pool's primary function. If set as "System", AKS prefers system pods scheduling to node pools with mode `System`. Learn more at https://aka.ms/aks/nodepool/mode.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --node-taints
@@ -544,6 +562,7 @@ directCommands:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
   - name: --update-cluster-autoscaler -u
+    defaultValue: False
     summary: Update min-count or max-count for cluster autoscaler.
     description: ''
 - uid: az_aks_nodepool_upgrade
@@ -584,9 +603,11 @@ directCommands:
     summary: Extra nodes used to speed upgrade. When specified, it represents the number or percent used, eg. 5 or 33%.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --node-image-only
+    defaultValue: False
     summary: Only upgrade agent pool's node image.
     description: ''
   - name: --snapshot-id
@@ -627,4 +648,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Commands to manage node pools in managed Kubernetes cluster.

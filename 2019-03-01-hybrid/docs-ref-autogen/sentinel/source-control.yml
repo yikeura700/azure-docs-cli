@@ -29,46 +29,59 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --name --source-control-id -n
+    defaultValue: Undefined
     summary: Source control Id.
     description: ''
   - isRequired: true
     name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
+    defaultValue: Undefined
     summary: The name of the workspace.
     description: ''
   optionalParameters:
   - name: --content-types
+    defaultValue: Undefined
     summary: Array of source control content types.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --description
+    defaultValue: Undefined
     summary: A description of the source control.
     description: ''
   - name: --display-name
+    defaultValue: Undefined
     summary: The display name of the source control.
     description: ''
   - name: --etag
+    defaultValue: Undefined
     summary: Etag of the azure resource.
     description: ''
   - name: --id
+    defaultValue: Undefined
     summary: The id (a Guid) of the source control.
     description: ''
   - name: --last-deployment-info
+    defaultValue: Undefined
     summary: Information regarding the latest deployment for the source control.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --repo-type
+    defaultValue: Undefined
     parameterValueGroup: DevOps, Github
     summary: The repository type of the source control.
     description: ''
   - name: --repository
+    defaultValue: Undefined
     summary: Repository metadata.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --repository-info
+    defaultValue: Undefined
     summary: Information regarding the resources created in user's repository.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --version
+    defaultValue: Undefined
     parameterValueGroup: V1, V2
     summary: The version number associated with the source control.
     description: ''
@@ -77,25 +90,33 @@ directCommands:
   summary: Delete a source control.
   description: ''
   syntax: >-
-    az sentinel source-control delete --name
-                                      --resource-group
-                                      --workspace-name
+    az sentinel source-control delete [--ids]
+                                      [--name]
+                                      [--resource-group]
+                                      [--subscription]
+                                      [--workspace-name]
                                       [--yes]
-  requiredParameters:
-  - isRequired: true
-    name: --name --source-control-id -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name --source-control-id -n
+    defaultValue: Undefined
     summary: Source control Id.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - isRequired: true
-    name: --workspace-name -w
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --workspace-name -w
+    defaultValue: Undefined
     summary: The name of the workspace.
     description: ''
-  optionalParameters:
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_sentinel_source-control_list
@@ -108,10 +129,12 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
+    defaultValue: Undefined
     summary: The name of the workspace.
     description: ''
 - uid: az_sentinel_source-control_list-repository
@@ -125,15 +148,18 @@ directCommands:
   requiredParameters:
   - isRequired: true
     name: --repo-type
+    defaultValue: Undefined
     parameterValueGroup: DevOps, Github
     summary: The type of repository.
     description: ''
   - isRequired: true
     name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - isRequired: true
     name: --workspace-name -w
+    defaultValue: Undefined
     summary: The name of the workspace.
     description: ''
 - uid: az_sentinel_source-control_show
@@ -141,20 +167,28 @@ directCommands:
   summary: Get a source control by its identifier.
   description: ''
   syntax: >-
-    az sentinel source-control show --name
-                                    --resource-group
-                                    --workspace-name
-  requiredParameters:
-  - isRequired: true
-    name: --name --source-control-id -n
+    az sentinel source-control show [--ids]
+                                    [--name]
+                                    [--resource-group]
+                                    [--subscription]
+                                    [--workspace-name]
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name --source-control-id -n
+    defaultValue: Undefined
     summary: Source control Id.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --resource-group -g
+    defaultValue: Undefined
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  - isRequired: true
-    name: --workspace-name -w
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
+  - name: --workspace-name -w
+    defaultValue: Undefined
     summary: The name of the workspace.
     description: ''
 - uid: az_sentinel_source-control_update
@@ -162,81 +196,102 @@ directCommands:
   summary: Create a source control.
   description: ''
   syntax: >-
-    az sentinel source-control update --name
-                                      --resource-group
-                                      --workspace-name
-                                      [--add]
+    az sentinel source-control update [--add]
                                       [--content-types]
                                       [--description]
                                       [--display-name]
                                       [--etag]
                                       [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
                                       [--id]
+                                      [--ids]
                                       [--last-deployment-info]
+                                      [--name]
                                       [--remove]
                                       [--repo-type {DevOps, Github}]
                                       [--repository]
                                       [--repository-info]
+                                      [--resource-group]
                                       [--set]
+                                      [--subscription]
                                       [--version {V1, V2}]
-  requiredParameters:
-  - isRequired: true
-    name: --name --source-control-id -n
-    summary: Source control Id.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - isRequired: true
-    name: --workspace-name -w
-    summary: The name of the workspace.
-    description: ''
+                                      [--workspace-name]
   optionalParameters:
   - name: --add
+    defaultValue: Undefined
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --content-types
+    defaultValue: Undefined
     summary: Array of source control content types.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --description
+    defaultValue: Undefined
     summary: A description of the source control.
     description: ''
   - name: --display-name
+    defaultValue: Undefined
     summary: The display name of the source control.
     description: ''
   - name: --etag
+    defaultValue: Undefined
     summary: Etag of the azure resource.
     description: ''
   - name: --force-string
+    defaultValue: Undefined
     parameterValueGroup: 0, 1, f, false, n, no, t, true, y, yes
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --id
+    defaultValue: Undefined
     summary: The id (a Guid) of the source control.
     description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --last-deployment-info
+    defaultValue: Undefined
     summary: Information regarding the latest deployment for the source control.  Shorthand syntax supported. Try `??` to show more.
     description: ''
+  - name: --name --source-control-id -n
+    defaultValue: Undefined
+    summary: Source control Id.
+    description: ''
   - name: --remove
+    defaultValue: Undefined
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --repo-type
+    defaultValue: Undefined
     parameterValueGroup: DevOps, Github
     summary: The repository type of the source control.
     description: ''
   - name: --repository
+    defaultValue: Undefined
     summary: Repository metadata.  Shorthand syntax supported. Try `??` to show more.
     description: ''
   - name: --repository-info
+    defaultValue: Undefined
     summary: Information regarding the resources created in user's repository.  Shorthand syntax supported. Try `??` to show more.
     description: ''
+  - name: --resource-group -g
+    defaultValue: Undefined
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
   - name: --set
+    defaultValue: Undefined
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --version
+    defaultValue: Undefined
     parameterValueGroup: V1, V2
     summary: The version number associated with the source control.
+    description: ''
+  - name: --workspace-name -w
+    defaultValue: Undefined
+    summary: The name of the workspace.
     description: ''
 commands:
 - az_sentinel_source-control_create
@@ -263,4 +318,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage source control with sentinel.

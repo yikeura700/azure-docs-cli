@@ -34,7 +34,7 @@ directCommands:
     summary: Name of the Azure IoT Hub Device Provisioning Service. Required if --login is not provided.
     description: ''
   - name: --etag -e
-    summary: Etag or entity tag corresponding to the last state of the resource. If no etag is provided the value '\*' is used.
+    summary: Etag or entity tag corresponding to the last state of the resource. If no etag is provided the value '*' is used.
     description: ''
   - name: --login -l
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --dps-name is not provided.
@@ -124,4 +124,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Manage device registrations for an enrollment group in an Azure IoT Hub Device Provisioning Service.

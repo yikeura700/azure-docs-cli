@@ -61,9 +61,11 @@ directCommands:
     summary: 'Elliptic curve name. For valid values, see: https://docs.microsoft.com/rest/api/keyvault/keys/create-key/create-key#jsonwebkeycurvename.'
     description: ''
   - name: --default-cvm-policy
+    defaultValue: False
     summary: Use default policy under which the key can be exported for CVM disk encryption.
     description: ''
   - name: --disabled
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Create key in disabled state.
     description: ''
@@ -349,9 +351,11 @@ directCommands:
     summary: The curve name of the key to import (only for BYOK).
     description: ''
   - name: --default-cvm-policy
+    defaultValue: False
     summary: Use default policy under which the key can be exported for CVM disk encryption.
     description: ''
   - name: --disabled
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Create key in disabled state.
     description: ''
@@ -428,6 +432,7 @@ directCommands:
     summary: Full URI of the Vault or HSM. If specified all other 'Id' arguments should be omitted.
     description: ''
   - name: --include-managed
+    defaultValue: False
     parameterValueGroup: false, true
     summary: 'Include managed keys. Default: false.'
     description: ''
@@ -570,6 +575,7 @@ directCommands:
     summary: Name of the key. (Only for restoring from storage account).
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --storage-account-name

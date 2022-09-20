@@ -53,7 +53,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --device-id -d
-    summary: "Unique identifier for the device. A case-sensitive string (up to 128 characters long) of ASCII 7-bit alphanumeric characters plus certain special characters: - . + % _ # \\* ? ! ( ) , : = @ $ '."
+    summary: "Unique identifier for the device. A case-sensitive string (up to 128 characters long) of ASCII 7-bit alphanumeric characters plus certain special characters: - . + % _ # * ? ! ( ) , : = @ $ '."
     description: ''
   optionalParameters:
   - name: --api-version --av
@@ -72,6 +72,7 @@ directCommands:
     summary: 'Assign the device to the specified organizations. Comma separated list of organization ids. Minimum supported version: 1.1-preview.'
     description: ''
   - name: --simulated
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Add this flag if you would like IoT Central to set this up as a simulated device. --template is required if this is true.
     description: ''
@@ -145,6 +146,7 @@ directCommands:
     summary: The IoT Central DNS suffix associated with your application.
     description: ''
   - name: --edge-only -e
+    defaultValue: False
     summary: Only list IoT Edge devices.
     description: ''
   - name: --token
@@ -531,4 +533,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Manage and configure IoT Central devices.

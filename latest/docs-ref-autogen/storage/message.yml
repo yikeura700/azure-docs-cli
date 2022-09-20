@@ -74,7 +74,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --pop-receipt
-    summary: A valid pop receipt value returned from an earlier call to the get_messages() or update_message() operation.
+    summary: A valid pop receipt value returned from an earlier call to the :func:`~get_messages` or :func:`~update_message` operation.
     description: ''
   - isRequired: true
     name: --queue-name -q
@@ -142,7 +142,7 @@ directCommands:
     summary: 'Storage account connection string. Environment variable: AZURE_STORAGE_CONNECTION_STRING.'
     description: ''
   - name: --num-messages
-    defaultValue: "1"
+    defaultValue: 1
     summary: A nonzero integer value that specifies the number of messages to retrieve from the queue, up to a maximum of 32. If fewer are visible, the visible messages are returned. By default, a single message is retrieved from the queue with this operation.
     description: ''
   - name: --queue-endpoint
@@ -295,7 +295,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --pop-receipt
-    summary: A valid pop receipt value returned from an earlier call to the get_messages() or update_message() operation.
+    summary: A valid pop receipt value returned from an earlier call to the :func:`~get_messages` or :func:`~update_message` operation.
     description: ''
   - isRequired: true
     name: --queue-name -q

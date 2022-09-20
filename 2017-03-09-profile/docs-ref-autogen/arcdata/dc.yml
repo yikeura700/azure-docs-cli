@@ -101,6 +101,7 @@ directCommands:
     summary: Path to the file containing a PEM formatted certificate to be used for the Metrics UI dashboard endpoint.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --path -p
@@ -157,6 +158,7 @@ directCommands:
     summary: The Kubernetes namespace in which the data controller exists.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -275,6 +277,7 @@ directCommands:
     summary: Data controller name.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: Do not wait for the long-running operation to finish.
     description: ''
   - name: --resource-group -g
@@ -313,6 +316,7 @@ directCommands:
     summary: The name of the data controller.
     description: ''
   - name: --no-wait
+    defaultValue: False
     summary: If given, the command will start the upgrade, but will not wait for the entire upgrade to complete. Upgrade will continue in the background.
     description: ''
   - name: --resource-group -g
@@ -375,4 +379,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Create, delete, and manage data controllers.

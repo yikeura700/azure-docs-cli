@@ -48,6 +48,7 @@ directCommands:
     summary: Use subscription for the scope of the blueprint. If --management-group is not specified, --subscription value or the default subscription will be used as the scope.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_blueprint_version_list
@@ -142,4 +143,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Commands to manage published blueprint versions.

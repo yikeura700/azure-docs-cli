@@ -41,6 +41,7 @@ directCommands:
     summary: Indicates whether the operation should auto-derive a policy key or use the current Azure AD session. You can configure the default using `az configure --defaults iothub-data-auth-type=<auth-type-value>`.
     description: ''
   - name: --force -f
+    defaultValue: False
     summary: Overwrites the child device's parent device.
     description: ''
   - name: --hub-name -n
@@ -125,6 +126,7 @@ directCommands:
     summary: This command supports an entity connection string with rights to perform action. Use to avoid session login via "az login". If both an entity connection string and name are provided the connection string takes priority. Required if --hub-name is not provided.
     description: ''
   - name: --remove-all -a
+    defaultValue: False
     summary: To remove all children.
     description: ''
   - name: --resource-group -g
@@ -152,4 +154,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/30/2022
   description: Manage children device relationships for IoT edge devices.

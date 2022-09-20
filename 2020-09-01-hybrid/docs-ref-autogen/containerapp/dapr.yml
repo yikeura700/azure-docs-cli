@@ -13,48 +13,48 @@ directCommands:
   summary: Disable Dapr for a container app. Removes existing values.
   description: ''
   syntax: >-
-    az containerapp dapr disable --name
-                                 --resource-group
+    az containerapp dapr disable [--ids]
+                                 [--name]
+                                 [--resource-group]
+                                 [--subscription]
   examples:
   - summary: Disable Dapr for a container app.
     syntax: az containerapp dapr disable -n MyContainerapp -g MyResourceGroup
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 - uid: az_containerapp_dapr_enable
   name: az containerapp dapr enable
   summary: Enable Dapr for a container app. Updates existing values.
   description: ''
   syntax: >-
-    az containerapp dapr enable --name
-                                --resource-group
-                                [--dal]
+    az containerapp dapr enable [--dal]
                                 [--dapr-app-id]
                                 [--dapr-app-port]
                                 [--dapr-app-protocol {grpc, http}]
                                 [--dapr-http-max-request-size]
                                 [--dapr-http-read-buffer-size]
                                 [--dapr-log-level {debug, error, info, warn}]
+                                [--ids]
+                                [--name]
+                                [--resource-group]
+                                [--subscription]
   examples:
   - summary: Enable Dapr for a container app.
     syntax: az containerapp dapr enable -n MyContainerapp -g MyResourceGroup --dapr-app-id my-app-id --dapr-app-port 8080
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
-    summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
   optionalParameters:
   - name: --dal --dapr-enable-api-logging
+    defaultValue: False
     summary: Enable API logging for the Dapr sidecar.
     description: ''
   - name: --dapr-app-id
@@ -77,6 +77,18 @@ directCommands:
     parameterValueGroup: debug, error, info, warn
     summary: Set the log level for the Dapr sidecar.
     description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
 commands:
 - az_containerapp_dapr_disable
 - az_containerapp_dapr_enable
@@ -98,4 +110,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Commands to manage Dapr. To manage Dapr components, see `az containerapp env dapr-component`.

@@ -297,23 +297,29 @@ directCommands:
   summary: Deletes a resource type.
   description: ''
   syntax: >-
-    az providerhub resource-type-registration delete --provider-namespace
-                                                     --resource-type
+    az providerhub resource-type-registration delete [--ids]
+                                                     [--provider-namespace]
+                                                     [--resource-type]
+                                                     [--subscription]
                                                      [--yes]
   examples:
   - summary: ResourceTypeRegistrations_Delete
     syntax: az providerhub resource-type-registration delete --provider-namespace "Microsoft.Contoso" --resource-type "testResourceType"
-  requiredParameters:
-  - isRequired: true
-    name: --provider-namespace
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --provider-namespace
     summary: The name of the resource provider hosted within ProviderHub.
     description: ''
-  - isRequired: true
-    name: --resource-type
+  - name: --resource-type
     summary: The resource type.
     description: ''
-  optionalParameters:
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_providerhub_resource-type-registration_list
@@ -334,19 +340,25 @@ directCommands:
   summary: Gets a resource type details in the given subscription and provider.
   description: ''
   syntax: >-
-    az providerhub resource-type-registration show --provider-namespace
-                                                   --resource-type
+    az providerhub resource-type-registration show [--ids]
+                                                   [--provider-namespace]
+                                                   [--resource-type]
+                                                   [--subscription]
   examples:
   - summary: ResourceTypeRegistrations_Get
     syntax: az providerhub resource-type-registration show --provider-namespace "Microsoft.Contoso" --resource-type "employees"
-  requiredParameters:
-  - isRequired: true
-    name: --provider-namespace
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --provider-namespace
     summary: The name of the resource provider hosted within ProviderHub.
     description: ''
-  - isRequired: true
-    name: --resource-type
+  - name: --resource-type
     summary: The resource type.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
 - az_providerhub_resource-type-registration_create
@@ -371,4 +383,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Manage resource type registration with providerhub.

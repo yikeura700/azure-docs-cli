@@ -18,6 +18,7 @@ directCommands:
                                          [--rp-name]
                                          [--source-file-path]
                                          [--source-file-type {Directory, File}]
+                                         [--subscription]
                                          [--target-file-share]
                                          [--target-folder]
                                          [--target-storage-account]
@@ -59,6 +60,9 @@ directCommands:
     parameterValueGroup: Directory, File
     summary: Specify the source file type to be selected.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --target-file-share
     summary: Destination file share to which content will be restored.
     description: ''
@@ -84,6 +88,7 @@ directCommands:
                                              [--item-name]
                                              [--resource-group]
                                              [--rp-name]
+                                             [--subscription]
                                              [--target-file-share]
                                              [--target-folder]
                                              [--target-storage-account]
@@ -117,6 +122,9 @@ directCommands:
     description: ''
   - name: --rp-name -r
     summary: Name of the recovery point.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --target-file-share
     summary: Destination file share to which content will be restored.
@@ -160,7 +168,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --rehydration-duration
-    defaultValue: "15"
+    defaultValue: 15
     summary: Set the maximum time, in days (between 10-30, both inclusive) for which the recovery point stays in hydrated state.
     description: ''
   - name: --rehydration-priority
@@ -193,6 +201,7 @@ directCommands:
                                     [--restore-to-staging-storage-account {false, true}]
                                     [--rp-name]
                                     [--storage-account-resource-group]
+                                    [--subscription]
                                     [--target-resource-group]
                                     [--target-subnet-name]
                                     [--target-subscription-id]
@@ -233,7 +242,7 @@ directCommands:
     summary: ARM ID of the user-assigned managed identity to use for the restore operation. Specify a value for this parameter if you do not want to use a system-assigned MI for restoring the backup item.
     description: ''
   - name: --rehydration-duration
-    defaultValue: "15"
+    defaultValue: 15
     summary: Set the maximum time, in days (between 10-30, both inclusive) for which the recovery point stays in hydrated state.
     description: ''
   - name: --rehydration-priority
@@ -265,6 +274,9 @@ directCommands:
     description: ''
   - name: --storage-account-resource-group
     summary: Name of the resource group which contains the storage account. Default value will be same as --resource-group if not specified.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   - name: --target-resource-group -t
     summary: Use this to specify the target resource group in which the restored disks will be saved.

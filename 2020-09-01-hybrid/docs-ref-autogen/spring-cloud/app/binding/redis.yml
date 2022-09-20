@@ -42,6 +42,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --disable-ssl
+    defaultValue: False
     parameterValueGroup: false, true
     summary: If true, disable SSL. If false, enable SSL.
     description: ''
@@ -74,6 +75,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --disable-ssl
+    defaultValue: False
     parameterValueGroup: false, true
     summary: If true, disable SSL. If false, enable SSL.
     description: ''
@@ -98,4 +100,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Commands to manage Azure Cache for Redis bindings.

@@ -33,6 +33,7 @@ directCommands:
                          [--ids]
                          [--name]
                          [--resource-group]
+                         [--subscription]
   examples:
   - summary: Renew the secondary key for a SignalR Service.
     syntax: az signalr key renew -n MySignalR -g MyResourceGroup --key-type secondary
@@ -51,6 +52,9 @@ directCommands:
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
 commands:

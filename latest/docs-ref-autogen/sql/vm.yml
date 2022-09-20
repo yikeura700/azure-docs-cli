@@ -16,6 +16,7 @@ directCommands:
                            [--operator-acc-pwd]
                            [--resource-group]
                            [--service-acc-pwd]
+                           [--subscription]
   examples:
   - summary: Add SQL virtual machine to a group.
     syntax: az sql vm add-to-group -n sqlvm -g myresourcegroup --sqlvm-group sqlvmgroup --bootstrap-acc-pwd {bootstrappassword} --operator-acc-pwd {operatorpassword} --service-acc-pwd {servicepassword}
@@ -42,6 +43,9 @@ directCommands:
     description: ''
   - name: --service-acc-pwd -s
     summary: Password for the SQL service account provided in the SQL virtual machine group.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_vm_create
@@ -119,6 +123,7 @@ directCommands:
     summary: Backup schedule type.
     description: ''
   - name: --backup-system-dbs
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Include system databases on backup.
     description: ''
@@ -142,6 +147,7 @@ directCommands:
     summary: Enable or disable autopatching on SQL virtual machine. If any autopatching settings provided, parameter automatically sets to true.
     description: ''
   - name: --enable-encryption
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Enable encryption for backup on SQL virtual machine.
     description: ''
@@ -234,6 +240,7 @@ directCommands:
     az sql vm delete [--ids]
                      [--name]
                      [--resource-group]
+                     [--subscription]
                      [--yes]
   optionalParameters:
   - name: --ids
@@ -245,7 +252,11 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
@@ -267,6 +278,7 @@ directCommands:
     az sql vm remove-from-group [--ids]
                                 [--name]
                                 [--resource-group]
+                                [--subscription]
   examples:
   - summary: Remove SQL virtual machine from a group.
     syntax: az sql vm remove-from-group -n sqlvm -g myresourcegroup
@@ -280,6 +292,9 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_vm_show
   name: az sql vm show
@@ -290,10 +305,11 @@ directCommands:
                    [--ids]
                    [--name]
                    [--resource-group]
+                   [--subscription]
   optionalParameters:
   - name: --expand
     parameterValueGroup: '*, AssessmentSettings, AutoBackupSettings, AutoPatchingSettings, KeyVaultCredentialSettings, ServerConfigurationsManagementSettings'
-    summary: Get the SQLIaaSExtension configuration settings. To view all settings, use \*. To select only a few, the settings must be space-separated.
+    summary: Get the SQLIaaSExtension configuration settings. To view all settings, use *. To select only a few, the settings must be space-separated.
     description: ''
   - name: --ids
     summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
@@ -304,6 +320,9 @@ directCommands:
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_vm_start-assessment
   name: az sql vm start-assessment
@@ -313,6 +332,7 @@ directCommands:
     az sql vm start-assessment [--ids]
                                [--name]
                                [--resource-group]
+                               [--subscription]
   examples:
   - summary: Starts SQL best practice assessment.
     syntax: az sql vm start-assessment -n sqlvm -g myresourcegroup
@@ -325,6 +345,9 @@ directCommands:
     description: ''
   - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
 - uid: az_sql_vm_update
@@ -373,6 +396,7 @@ directCommands:
                      [--sql-mgmt-type {Full}]
                      [--sql-workload-type {DW, GENERAL, OLTP}]
                      [--storage-account]
+                     [--subscription]
                      [--tags]
                      [--workspace-name]
                      [--workspace-rg]
@@ -410,6 +434,7 @@ directCommands:
     syntax: az sql vm update -n sqlvm -g myresourcegroup --enable-assessment true
   optionalParameters:
   - name: --add
+    defaultValue: '[]'
     summary: 'Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty <key=value, string or JSON string>.'
     description: ''
   - name: --am-day --assessment-day-of-week
@@ -439,6 +464,7 @@ directCommands:
     summary: Backup schedule type.
     description: ''
   - name: --backup-system-dbs
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Include system databases on backup.
     description: ''
@@ -466,6 +492,7 @@ directCommands:
     summary: Enable or disable autopatching on SQL virtual machine. If any autopatching settings provided, parameter automatically sets to true.
     description: ''
   - name: --enable-encryption
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Enable encryption for backup on SQL virtual machine.
     description: ''
@@ -478,6 +505,7 @@ directCommands:
     summary: Enable or disable R services (SQL 2016 onwards).
     description: ''
   - name: --force-string
+    defaultValue: False
     summary: When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
     description: ''
   - name: --full-backup-duration
@@ -520,6 +548,7 @@ directCommands:
     summary: SQL Server port.
     description: ''
   - name: --remove
+    defaultValue: '[]'
     summary: 'Remove a property or an element from a list.  Example: --remove property.list <indexToRemove> OR --remove propertyToRemove.'
     description: ''
   - name: --resource-group -g
@@ -532,6 +561,7 @@ directCommands:
     summary: Storage account key where backup will be taken to.
     description: ''
   - name: --set
+    defaultValue: '[]'
     summary: 'Update an object by specifying a property path and value to set.  Example: --set property1.property2=<value>.'
     description: ''
   - name: --sp-name
@@ -551,6 +581,9 @@ directCommands:
   - name: --storage-account
     summary: Storage account url where backup will be taken to.
     description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+    description: ''
   - name: --tags
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
@@ -561,7 +594,7 @@ directCommands:
     summary: Resource group containing the Log Analytics workspace.
     description: ''
   - name: --yes -y
-    defaultValue: "1"
+    defaultValue: 1
     summary: Do not prompt for confirmation. Requires --sql-mgmt-type.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py

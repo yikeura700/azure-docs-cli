@@ -117,6 +117,7 @@ directCommands:
     summary: Request timeout in seconds. Applies to each call to the service.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
@@ -209,6 +210,7 @@ directCommands:
     summary: 'Storage account name. Related environment variable: AZURE_STORAGE_ACCOUNT. Must be used in conjunction with either storage account key or a SAS token. If neither are present, the command will try to query the storage account key using the authenticated Azure account. If a large number of storage commands are executed the API quota may be hit.'
     description: ''
   - name: --as-user
+    defaultValue: False
     summary: Indicates that this command return the SAS signed with the user delegation key. The expiry parameter and '--auth-mode login' are required if this argument is specified.
     description: ''
   - name: --auth-mode
@@ -243,6 +245,7 @@ directCommands:
     summary: Specifies the UTC datetime (Y-m-d'T'H:M'Z') at which the SAS becomes invalid. Do not use if a stored access policy is referenced with --policy-name that specifies this value.
     description: ''
   - name: --full-uri
+    defaultValue: False
     summary: Indicate that this command return the full blob URI and the shared access signature token.
     description: ''
   - name: --https-only

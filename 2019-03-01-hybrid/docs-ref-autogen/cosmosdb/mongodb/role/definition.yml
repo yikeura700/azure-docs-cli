@@ -53,17 +53,17 @@ directCommands:
     summary: >-
       Role Definition body with Id (Optional for create), Type (Default is CustomRole), DatabaseName, Privileges, Roles.  You can enter it as a string or as a file, e.g., --body @mongo-role_definition-body-file.json or --body "{
 
-      "Id": "be79875a-2cc4-40d5-8958-566017875b39",
+      \"Id\": \"be79875a-2cc4-40d5-8958-566017875b39\",
 
-      "RoleName": "MyRWRole",
+      \"RoleName\": \"MyRWRole\",
 
-      "Type": "CustomRole"
+      \"Type\": \"CustomRole\"
 
-      "DatabaseName": "MyDb",
+      \"DatabaseName\": \"MyDb\",
 
-      "Privileges": [ {"Resource": {"Db": "MyDB","Collection": "MyCol"},"Actions": ["insert","find"]}],
+      \"Privileges\": [ {\"Resource\": {\"Db\": \"MyDB\",\"Collection\": \"MyCol\"},\"Actions\": [\"insert\",\"find\"]}],
 
-      "Roles": [ {"Role": "myInheritedRole","Db": "MyTestDb"}]
+      \"Roles\": [ {\"Role\": \"myInheritedRole\",\"Db\": \"MyTestDb\"}]
 
       }".
     description: ''
@@ -98,6 +98,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_cosmosdb_mongodb_role_definition_exists
@@ -188,17 +189,17 @@ directCommands:
     summary: >-
       Role Definition body with Id (Optional for create), Type (Default is CustomRole), DatabaseName, Privileges, Roles.  You can enter it as a string or as a file, e.g., --body @mongo-role_definition-body-file.json or --body "{
 
-      "Id": "be79875a-2cc4-40d5-8958-566017875b39",
+      \"Id\": \"be79875a-2cc4-40d5-8958-566017875b39\",
 
-      "RoleName": "MyRWRole",
+      \"RoleName\": \"MyRWRole\",
 
-      "Type": "CustomRole"
+      \"Type\": \"CustomRole\"
 
-      "DatabaseName": "MyDb",
+      \"DatabaseName\": \"MyDb\",
 
-      "Privileges": [ {"Resource": {"Db": "MyDB","Collection": "MyCol"},"Actions": ["insert","find"]}],
+      \"Privileges\": [ {\"Resource\": {\"Db\": \"MyDB\",\"Collection\": \"MyCol\"},\"Actions\": [\"insert\",\"find\"]}],
 
-      "Roles": [ {"Role": "myInheritedRole","Db": "MyTestDb"}]
+      \"Roles\": [ {\"Role\": \"myInheritedRole\",\"Db\": \"MyTestDb\"}]
 
       }".
     description: ''
@@ -231,4 +232,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 08/29/2022
   description: Manage Azure Cosmos DB Mongo role definitions.

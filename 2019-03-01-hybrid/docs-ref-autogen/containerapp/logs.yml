@@ -42,6 +42,7 @@ directCommands:
     summary: The name of the container.
     description: ''
   - name: --follow
+    defaultValue: False
     parameterValueGroup: false, true
     summary: Print logs in real time if present.
     description: ''
@@ -57,7 +58,7 @@ directCommands:
     summary: The name of the container app revision. Defaults to the latest revision.
     description: ''
   - name: --tail
-    defaultValue: "20"
+    defaultValue: 20
     summary: The number of past logs to print (0-300).
     description: ''
 commands:
@@ -80,4 +81,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Show container app logs.

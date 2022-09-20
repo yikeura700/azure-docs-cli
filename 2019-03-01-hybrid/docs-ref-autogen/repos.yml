@@ -1,6 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_repos
 name: az repos
+extensionInformation: >-
+  > [!Note]
+
+  > This reference is part of the **azure-devops** extension for the Azure CLI  (version 2.30.0 or higher).  The extension will automatically install the first time you run an **az repos** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Manage Azure Repos.
 description: This command group is a part of the azure-devops extension.
 directCommands:
@@ -25,6 +29,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --open
+    defaultValue: False
     summary: Open the repository page in your web browser.
     description: ''
   - name: --org --organization
@@ -60,6 +65,7 @@ directCommands:
     summary: Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config.
     description: ''
   - name: --yes -y
+    defaultValue: False
     summary: Do not prompt for confirmation.
     description: ''
 - uid: az_repos_list
@@ -102,6 +108,7 @@ directCommands:
     summary: Automatically detect organization.
     description: ''
   - name: --open
+    defaultValue: False
     summary: Open the repository page in your web browser.
     description: ''
   - name: --org --organization
@@ -223,4 +230,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: This command group is a part of the azure-devops extension.

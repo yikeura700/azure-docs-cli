@@ -87,7 +87,7 @@ directCommands:
     description: ''
   optionalParameters:
   - name: --destination
-    summary: Traffic destination. Accepted values are '\*', IP address/CIDR, or service tag.
+    summary: Traffic destination. Accepted values are '*', IP address/CIDR, or service tag.
     description: ''
   - name: --direction
     parameterValueGroup: Inbound, Outbound
@@ -97,7 +97,7 @@ directCommands:
     summary: 'The parent path. (ex: virtualMachineScaleSets/vmss1).'
     description: ''
   - name: --port
-    summary: Traffic destination port. Accepted values are '\*', port number (3389) or port range (80-100).
+    summary: Traffic destination port. Accepted values are '*', port number (3389) or port range (80-100).
     description: ''
   - name: --protocol
     parameterValueGroup: Http, Https, Icmp, Tcp
@@ -114,7 +114,7 @@ directCommands:
     summary: The resource type.
     description: ''
   - name: --source
-    summary: Traffic source. Accepted values are '\*', IP address/CIDR, or service tag.
+    summary: Traffic source. Accepted values are '*', IP address/CIDR, or service tag.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
 - uid: az_network_watcher_show-next-hop
@@ -279,7 +279,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --local
-    summary: The private IPv4 address for the VMs NIC and the port of the packet in X.X.X.X:PORT format. `\*` can be used for port when direction is outbound.
+    summary: The private IPv4 address for the VMs NIC and the port of the packet in X.X.X.X:PORT format. `*` can be used for port when direction is outbound.
     description: ''
   - isRequired: true
     name: --protocol
@@ -288,7 +288,7 @@ directCommands:
     description: ''
   - isRequired: true
     name: --remote
-    summary: The IPv4 address and port for the remote side of the packet X.X.X.X:PORT format. `\*` can be used for port when the direction is inbound.
+    summary: The IPv4 address and port for the remote side of the packet X.X.X.X:PORT format. `*` can be used for port when the direction is inbound.
     description: ''
   - isRequired: true
     name: --vm

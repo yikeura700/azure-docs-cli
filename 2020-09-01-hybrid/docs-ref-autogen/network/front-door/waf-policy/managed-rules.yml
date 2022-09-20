@@ -13,19 +13,13 @@ directCommands:
   summary: Add a managed rule set to a WAF policy.
   description: Use 'az network front-door waf-policy managed-rule-definition list' to see the available managed rulesets.
   syntax: >-
-    az network front-door waf-policy managed-rules add --policy-name
-                                                       --resource-group
-                                                       --type
+    az network front-door waf-policy managed-rules add --type
                                                        --version
+                                                       [--ids]
+                                                       [--policy-name]
+                                                       [--resource-group]
+                                                       [--subscription]
   requiredParameters:
-  - isRequired: true
-    name: --policy-name
-    summary: Name of the WAF policy.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
   - isRequired: true
     name: --type
     summary: ID of the ruleset to apply.
@@ -33,6 +27,19 @@ directCommands:
   - isRequired: true
     name: --version
     summary: Rule set version.
+    description: ''
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --policy-name
+    summary: Name of the WAF policy.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 - uid: az_network_front-door_waf-policy_managed-rules_list
   name: az network front-door waf-policy managed-rules list
@@ -55,21 +62,28 @@ directCommands:
   summary: Remove a managed rule set from a WAF policy.
   description: ''
   syntax: >-
-    az network front-door waf-policy managed-rules remove --policy-name
-                                                          --resource-group
-                                                          --type
+    az network front-door waf-policy managed-rules remove --type
+                                                          [--ids]
+                                                          [--policy-name]
+                                                          [--resource-group]
+                                                          [--subscription]
   requiredParameters:
-  - isRequired: true
-    name: --policy-name
-    summary: Name of the WAF policy.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
   - isRequired: true
     name: --type
     summary: ID of the ruleset to remove.
+    description: ''
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --policy-name
+    summary: Name of the WAF policy.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
+    description: ''
+  - name: --subscription
+    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
     description: ''
 commands:
 - az_network_front-door_waf-policy_managed-rules_add
@@ -101,4 +115,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 09/02/2022
   description: Change and view managed rule sets associated with your WAF policy.
