@@ -1,10 +1,6 @@
 ### YamlMime:AzureCLIGroup
 uid: az_containerapp_revision
 name: az containerapp revision
-extensionInformation: >-
-  > [!Note]
-
-  > This reference is part of the **containerapp** extension for the Azure CLI  (version 2.37.0 or higher).  The extension will automatically install the first time you run an **az containerapp revision** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Commands to manage revisions.
 description: ''
 directCommands:
@@ -13,36 +9,39 @@ directCommands:
   summary: Activate a revision.
   description: ''
   syntax: >-
-    az containerapp revision activate --resource-group
-                                      --revision
+    az containerapp revision activate --revision
+                                      [--ids]
                                       [--name]
+                                      [--resource-group]
   examples:
   - summary: Activate a revision.
     syntax: az containerapp revision activate -g MyResourceGroup --revision MyContainerappRevision
   requiredParameters:
   - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - isRequired: true
     name: --revision
     summary: Name of the revision.
     description: ''
   optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: az_containerapp_revision_copy
   name: az containerapp revision copy
   summary: Create a revision based on a previous revision.
   description: ''
   syntax: >-
-    az containerapp revision copy --resource-group
-                                  [--args]
+    az containerapp revision copy [--args]
                                   [--command]
                                   [--container-name]
                                   [--cpu]
                                   [--from-revision]
+                                  [--ids]
                                   [--image]
                                   [--max-replicas]
                                   [--memory]
@@ -51,6 +50,7 @@ directCommands:
                                   [--remove-all-env-vars]
                                   [--remove-env-vars]
                                   [--replace-env-vars]
+                                  [--resource-group]
                                   [--revision-suffix]
                                   [--scale-rule-auth]
                                   [--scale-rule-http-concurrency]
@@ -63,11 +63,6 @@ directCommands:
   examples:
   - summary: Create a revision based on a previous revision.
     syntax: az containerapp revision copy -n MyContainerapp -g MyResourceGroup --cpu 0.75 --memory 1.5Gi
-  requiredParameters:
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
   optionalParameters:
   - name: --args
     summary: A list of container startup command argument(s). Space-separated values e.g. "-c" "mycommand". Empty string to clear existing values.
@@ -83,6 +78,9 @@ directCommands:
     description: ''
   - name: --from-revision
     summary: 'Revision to copy from. Default: latest revision.'
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
     description: ''
   - name: --image -i
     summary: Container image, e.g. publisher/image-name:tag.
@@ -107,6 +105,9 @@ directCommands:
     description: ''
   - name: --replace-env-vars
     summary: Replace environment variable(s) in container. Other existing environment variables are removed. Space-separated values in 'key=value' format. If stored as a secret, value must start with 'secretref:' followed by the secret name.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --revision-suffix
     summary: User friendly suffix that is appended to the revision name.
@@ -140,24 +141,27 @@ directCommands:
   summary: Deactivate a revision.
   description: ''
   syntax: >-
-    az containerapp revision deactivate --resource-group
-                                        --revision
+    az containerapp revision deactivate --revision
+                                        [--ids]
                                         [--name]
+                                        [--resource-group]
   examples:
   - summary: Deactivate a revision.
     syntax: az containerapp revision deactivate -g MyResourceGroup --revision MyContainerappRevision
   requiredParameters:
   - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - isRequired: true
     name: --revision
     summary: Name of the revision.
     description: ''
   optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: az_containerapp_revision_list
   name: az containerapp revision list
@@ -188,24 +192,27 @@ directCommands:
   summary: Restart a revision.
   description: ''
   syntax: >-
-    az containerapp revision restart --resource-group
-                                     --revision
+    az containerapp revision restart --revision
+                                     [--ids]
                                      [--name]
+                                     [--resource-group]
   examples:
   - summary: Restart a revision.
     syntax: az containerapp revision restart -n MyContainerapp -g MyResourceGroup --revision MyContainerappRevision
   requiredParameters:
   - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - isRequired: true
     name: --revision
     summary: Name of the revision.
     description: ''
   optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: az_containerapp_revision_set-mode
   name: az containerapp revision set-mode
@@ -213,8 +220,9 @@ directCommands:
   description: ''
   syntax: >-
     az containerapp revision set-mode --mode {multiple, single}
-                                      --name
-                                      --resource-group
+                                      [--ids]
+                                      [--name]
+                                      [--resource-group]
   examples:
   - summary: Set a container app to single revision mode.
     syntax: az containerapp revision set-mode -n MyContainerapp -g MyResourceGroup --mode Single
@@ -224,12 +232,14 @@ directCommands:
     parameterValueGroup: multiple, single
     summary: The active revisions mode for the container app.
     description: ''
-  - isRequired: true
-    name: --name -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: az_containerapp_revision_show
@@ -237,9 +247,10 @@ directCommands:
   summary: Show details of a revision.
   description: ''
   syntax: >-
-    az containerapp revision show --resource-group
-                                  --revision
+    az containerapp revision show --revision
+                                  [--ids]
                                   [--name]
+                                  [--resource-group]
   examples:
   - summary: Show details of a revision.
     syntax: >-
@@ -247,16 +258,18 @@ directCommands:
           --revision MyContainerappRevision
   requiredParameters:
   - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - isRequired: true
     name: --revision
     summary: Name of the revision.
     description: ''
   optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 commands:
 - az_containerapp_revision_activate

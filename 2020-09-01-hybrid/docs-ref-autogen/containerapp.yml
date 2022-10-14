@@ -1,10 +1,6 @@
 ### YamlMime:AzureCLIGroup
 uid: az_containerapp
 name: az containerapp
-extensionInformation: >-
-  > [!Note]
-
-  > This reference is part of the **containerapp** extension for the Azure CLI  (version 2.37.0 or higher).  The extension will automatically install the first time you run an **az containerapp** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Manage Azure Container Apps.
 description: ''
 directCommands:
@@ -13,18 +9,20 @@ directCommands:
   summary: Open a containerapp in the browser, if possible.
   description: ''
   syntax: >-
-    az containerapp browse --name
-                           --resource-group
+    az containerapp browse [--ids]
+                           [--name]
+                           [--resource-group]
   examples:
   - summary: open a containerapp in the browser
     syntax: az containerapp browse -n MyContainerapp -g MyResourceGroup
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: az_containerapp_create
@@ -254,25 +252,26 @@ directCommands:
   summary: Delete a container app.
   description: ''
   syntax: >-
-    az containerapp delete --name
-                           --resource-group
+    az containerapp delete [--ids]
+                           [--name]
                            [--no-wait]
+                           [--resource-group]
                            [--yes]
   examples:
   - summary: Delete a container app.
     syntax: az containerapp delete -g MyResourceGroup -n MyContainerapp
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --yes -y
     summary: Do not prompt for confirmation.
@@ -342,22 +341,23 @@ directCommands:
   summary: Show details of a container app.
   description: ''
   syntax: >-
-    az containerapp show --name
-                         --resource-group
+    az containerapp show [--ids]
+                         [--name]
+                         [--resource-group]
                          [--show-secrets]
   examples:
   - summary: Show the details of a container app.
     syntax: az containerapp show -n MyContainerapp -g MyResourceGroup
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
-  optionalParameters:
   - name: --show-secrets
     summary: Show Containerapp secrets.
     description: ''
@@ -472,20 +472,21 @@ directCommands:
   summary: Update a container app. In multiple revisions mode, create a new revision based on the latest revision.
   description: ''
   syntax: >-
-    az containerapp update --name
-                           --resource-group
-                           [--args]
+    az containerapp update [--args]
                            [--command]
                            [--container-name]
                            [--cpu]
+                           [--ids]
                            [--image]
                            [--max-replicas]
                            [--memory]
                            [--min-replicas]
+                           [--name]
                            [--no-wait]
                            [--remove-all-env-vars]
                            [--remove-env-vars]
                            [--replace-env-vars]
+                           [--resource-group]
                            [--revision-suffix]
                            [--scale-rule-auth]
                            [--scale-rule-http-concurrency]
@@ -517,15 +518,6 @@ directCommands:
           --scale-rule-type my-custom-type \
           --scale-rule-metadata key=value key2=value2 \
           --scale-rule-auth triggerparam=secretref triggerparam=secretref
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
-    summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
   optionalParameters:
   - name: --args
     summary: A list of container startup command argument(s). Space-separated values e.g. "-c" "mycommand". Empty string to clear existing values.
@@ -539,6 +531,9 @@ directCommands:
   - name: --cpu
     summary: Required CPU in cores from 0.25 - 2.0, e.g. 0.5.
     description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --image -i
     summary: Container image, e.g. publisher/image-name:tag.
     description: ''
@@ -551,6 +546,9 @@ directCommands:
   - name: --min-replicas
     summary: The minimum number of replicas.
     description: ''
+  - name: --name -n
+    summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
+    description: ''
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
     description: ''
@@ -562,6 +560,9 @@ directCommands:
     description: ''
   - name: --replace-env-vars
     summary: Replace environment variable(s) in container. Other existing environment variables are removed. Space-separated values in 'key=value' format. If stored as a secret, value must start with 'secretref:' followed by the secret name.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --revision-suffix
     summary: User friendly suffix that is appended to the revision name.
@@ -620,6 +621,62 @@ commands:
 - az_containerapp_browse
 - az_containerapp_compose
 - az_containerapp_compose_create
+- az_containerapp_connection
+- az_containerapp_connection_create
+- az_containerapp_connection_create_appconfig
+- az_containerapp_connection_create_confluent-cloud
+- az_containerapp_connection_create_cosmos-cassandra
+- az_containerapp_connection_create_cosmos-gremlin
+- az_containerapp_connection_create_cosmos-mongo
+- az_containerapp_connection_create_cosmos-sql
+- az_containerapp_connection_create_cosmos-table
+- az_containerapp_connection_create_eventhub
+- az_containerapp_connection_create_keyvault
+- az_containerapp_connection_create_mysql
+- az_containerapp_connection_create_mysql-flexible
+- az_containerapp_connection_create_postgres
+- az_containerapp_connection_create_postgres-flexible
+- az_containerapp_connection_create_redis
+- az_containerapp_connection_create_redis-enterprise
+- az_containerapp_connection_create_servicebus
+- az_containerapp_connection_create_signalr
+- az_containerapp_connection_create_sql
+- az_containerapp_connection_create_storage-blob
+- az_containerapp_connection_create_storage-file
+- az_containerapp_connection_create_storage-queue
+- az_containerapp_connection_create_storage-table
+- az_containerapp_connection_create_webpubsub
+- az_containerapp_connection_delete
+- az_containerapp_connection_list
+- az_containerapp_connection_list-configuration
+- az_containerapp_connection_list-support-types
+- az_containerapp_connection_show
+- az_containerapp_connection_update
+- az_containerapp_connection_update_appconfig
+- az_containerapp_connection_update_confluent-cloud
+- az_containerapp_connection_update_cosmos-cassandra
+- az_containerapp_connection_update_cosmos-gremlin
+- az_containerapp_connection_update_cosmos-mongo
+- az_containerapp_connection_update_cosmos-sql
+- az_containerapp_connection_update_cosmos-table
+- az_containerapp_connection_update_eventhub
+- az_containerapp_connection_update_keyvault
+- az_containerapp_connection_update_mysql
+- az_containerapp_connection_update_mysql-flexible
+- az_containerapp_connection_update_postgres
+- az_containerapp_connection_update_postgres-flexible
+- az_containerapp_connection_update_redis
+- az_containerapp_connection_update_redis-enterprise
+- az_containerapp_connection_update_servicebus
+- az_containerapp_connection_update_signalr
+- az_containerapp_connection_update_sql
+- az_containerapp_connection_update_storage-blob
+- az_containerapp_connection_update_storage-file
+- az_containerapp_connection_update_storage-queue
+- az_containerapp_connection_update_storage-table
+- az_containerapp_connection_update_webpubsub
+- az_containerapp_connection_validate
+- az_containerapp_connection_wait
 - az_containerapp_create
 - az_containerapp_dapr
 - az_containerapp_dapr_disable

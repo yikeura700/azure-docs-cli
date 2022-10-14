@@ -1,10 +1,6 @@
 ### YamlMime:AzureCLIGroup
 uid: az_containerapp_auth_apple
 name: az containerapp auth apple
-extensionInformation: >-
-  > [!Note]
-
-  > This reference is part of the **containerapp** extension for the Azure CLI  (version 2.37.0 or higher).  The extension will automatically install the first time you run an **az containerapp auth apple** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Manage containerapp authentication and authorization of the Apple identity provider.
 description: ''
 directCommands:
@@ -13,18 +9,20 @@ directCommands:
   summary: Show the authentication settings for the Apple identity provider.
   description: ''
   syntax: >-
-    az containerapp auth apple show --name
-                                    --resource-group
+    az containerapp auth apple show [--ids]
+                                    [--name]
+                                    [--resource-group]
   examples:
   - summary: Show the authentication settings for the Apple identity provider.
     syntax: az containerapp auth apple show --name MyContainerapp --resource-group MyResourceGroup
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 - uid: az_containerapp_auth_apple_update
@@ -32,11 +30,12 @@ directCommands:
   summary: Update the client id and client secret for the Apple identity provider.
   description: ''
   syntax: >-
-    az containerapp auth apple update --name
-                                      --resource-group
-                                      [--client-id]
+    az containerapp auth apple update [--client-id]
                                       [--client-secret]
                                       [--client-secret-name]
+                                      [--ids]
+                                      [--name]
+                                      [--resource-group]
                                       [--scopes]
                                       [--yes]
   examples:
@@ -44,15 +43,6 @@ directCommands:
     syntax: >-
       az containerapp auth apple update  -g myResourceGroup --name MyContainerapp \
         --client-id my-client-id --client-secret very_secret_password
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
-    summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
   optionalParameters:
   - name: --client-id
     summary: The Client ID of the app used for login.
@@ -62,6 +52,15 @@ directCommands:
     description: ''
   - name: --client-secret-name
     summary: The app secret name that contains the client secret of the relying party application.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --scopes
     summary: A list of the scopes that should be requested while authenticating.

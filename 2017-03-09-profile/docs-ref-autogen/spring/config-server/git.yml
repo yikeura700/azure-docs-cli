@@ -1,10 +1,6 @@
 ### YamlMime:AzureCLIGroup
 uid: az_spring_config-server_git
 name: az spring config-server git
-extensionInformation: >-
-  > [!Note]
-
-  > This reference is part of the **spring** extension for the Azure CLI  (version 2.38.0 or higher).  The extension will automatically install the first time you run an **az spring config-server git** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Commands to manage Config Server git property in Azure Spring Apps.
 description: ''
 directCommands:
@@ -16,6 +12,7 @@ directCommands:
     az spring config-server git set --name
                                     --resource-group
                                     --uri
+                                    [--defer]
                                     [--host-key]
                                     [--host-key-algorithm]
                                     [--host-key-check]
@@ -38,6 +35,9 @@ directCommands:
     summary: Uri of the added config.
     description: ''
   optionalParameters:
+  - name: --defer
+    summary: Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.
+    description: ''
   - name: --host-key
     summary: Host key of the added config.
     description: ''

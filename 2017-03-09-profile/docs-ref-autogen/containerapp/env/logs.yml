@@ -1,10 +1,6 @@
 ### YamlMime:AzureCLIGroup
 uid: az_containerapp_env_logs
 name: az containerapp env logs
-extensionInformation: >-
-  > [!Note]
-
-  > This reference is part of the **containerapp** extension for the Azure CLI  (version 2.37.0 or higher).  The extension will automatically install the first time you run an **az containerapp env logs** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Show container app environment logs.
 description: ''
 directCommands:
@@ -13,28 +9,29 @@ directCommands:
   summary: Show past environment logs and/or print logs in real time (with the --follow parameter).
   description: ''
   syntax: >-
-    az containerapp env logs show --name
-                                  --resource-group
-                                  [--follow {false, true}]
+    az containerapp env logs show [--follow {false, true}]
+                                  [--ids]
+                                  [--name]
+                                  [--resource-group]
                                   [--tail]
   examples:
   - summary: Fetch the past 20 lines of logs from an app and return
     syntax: az containerapp env logs show -n MyEnvironment -g MyResourceGroup
   - summary: Fetch 30 lines of past logs logs from an environment and print logs as they come in
     syntax: az containerapp env logs show -n MyEnvironment -g MyResourceGroup --follow --tail 30
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
-    summary: Name of the Container Apps environment.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
   optionalParameters:
   - name: --follow
     parameterValueGroup: false, true
     summary: Print logs in real time if present.
+    description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
+    summary: Name of the Container Apps environment.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --tail
     defaultValue: "20"

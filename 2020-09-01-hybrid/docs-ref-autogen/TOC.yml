@@ -1078,6 +1078,19 @@
         uid: az_containerapp_compose
         displayName: az containerapp compose
         items: []
+      - name: connection
+        items:
+        - name: Summary
+          uid: az_containerapp_connection
+          displayName: az containerapp connection
+        - name: create
+          uid: az_containerapp_connection_create
+          displayName: az containerapp connection create
+          items: []
+        - name: update
+          uid: az_containerapp_connection_update
+          displayName: az containerapp connection update
+          items: []
       - name: dapr
         uid: az_containerapp_dapr
         displayName: az containerapp dapr
@@ -4891,9 +4904,31 @@
         displayName: az repos ref
         items: []
   - name: Azure Reservations
-    uid: sp-Azure_Reservations
-    displayName: Azure Reservations
-    items: []
+    items:
+    - name: Summary
+      uid: sp-Azure_Reservations
+      displayName: Azure Reservations
+    - name: reservations
+      items:
+      - name: Summary
+        uid: az_reservations
+        displayName: az reservations
+      - name: catalog
+        uid: az_reservations_catalog
+        displayName: az reservations catalog
+        items: []
+      - name: reservation
+        uid: az_reservations_reservation
+        displayName: az reservations reservation
+        items: []
+      - name: reservation-order
+        uid: az_reservations_reservation-order
+        displayName: az reservations reservation-order
+        items: []
+      - name: reservation-order-id
+        uid: az_reservations_reservation-order-id
+        displayName: az reservations reservation-order-id
+        items: []
   - name: Azure Resource Graph
     items:
     - name: Summary
@@ -5377,6 +5412,19 @@
             uid: az_spring_config-server_git_repo
             displayName: az spring config-server git repo
             items: []
+      - name: connection
+        items:
+        - name: Summary
+          uid: az_spring_connection
+          displayName: az spring connection
+        - name: create
+          uid: az_spring_connection_create
+          displayName: az spring connection create
+          items: []
+        - name: update
+          uid: az_spring_connection_update
+          displayName: az spring connection update
+          items: []
       - name: gateway
         items:
         - name: Summary
@@ -5509,6 +5557,19 @@
             uid: az_spring-cloud_config-server_git_repo
             displayName: az spring-cloud config-server git repo
             items: []
+      - name: connection
+        items:
+        - name: Summary
+          uid: az_spring-cloud_connection
+          displayName: az spring-cloud connection
+        - name: create
+          uid: az_spring-cloud_connection_create
+          displayName: az spring-cloud connection create
+          items: []
+        - name: update
+          uid: az_spring-cloud_connection_update
+          displayName: az spring-cloud connection update
+          items: []
       - name: gateway
         items:
         - name: Summary

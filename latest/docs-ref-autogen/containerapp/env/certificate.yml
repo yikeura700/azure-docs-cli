@@ -1,10 +1,6 @@
 ### YamlMime:AzureCLIGroup
 uid: az_containerapp_env_certificate
 name: az containerapp env certificate
-extensionInformation: >-
-  > [!Note]
-
-  > This reference is part of the **containerapp** extension for the Azure CLI  (version 2.37.0 or higher).  The extension will automatically install the first time you run an **az containerapp env certificate** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Commands to manage certificates for the Container Apps environment.
 description: ''
 directCommands:
@@ -13,10 +9,11 @@ directCommands:
   summary: Delete a certificate from the Container Apps environment.
   description: ''
   syntax: >-
-    az containerapp env certificate delete --name
-                                           --resource-group
-                                           [--certificate]
+    az containerapp env certificate delete [--certificate]
+                                           [--ids]
                                            [--location]
+                                           [--name]
+                                           [--resource-group]
                                            [--thumbprint]
                                            [--yes]
   examples:
@@ -26,21 +23,21 @@ directCommands:
     syntax: az containerapp env certificate delete -g MyResourceGroup --name MyEnvironment --certificate MyCertificateId
   - summary: Delete a certificate from the Container Apps environment by certificate thumbprint
     syntax: az containerapp env certificate delete -g MyResourceGroup --name MyEnvironment --thumbprint MyCertificateThumbprint
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
-    summary: Name of the Container Apps environment.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
   optionalParameters:
   - name: --certificate -c
     summary: Name or resource id of the certificate.
     description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --location -l
     summary: 'Location of resource. Examples: eastus2, northeurope.'
+    description: ''
+  - name: --name -n
+    summary: Name of the Container Apps environment.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --thumbprint -t
     summary: Thumbprint of the certificate.
@@ -92,11 +89,12 @@ directCommands:
   description: ''
   syntax: >-
     az containerapp env certificate upload --certificate-file
-                                           --name
-                                           --resource-group
                                            [--certificate-name]
+                                           [--ids]
                                            [--location]
+                                           [--name]
                                            [--password]
+                                           [--resource-group]
                                            [--show-prompt]
   examples:
   - summary: Add or update a certificate.
@@ -108,23 +106,24 @@ directCommands:
     name: --certificate-file -f
     summary: The filepath of the .pfx or .pem file.
     description: ''
-  - isRequired: true
-    name: --name -n
-    summary: Name of the Container Apps environment.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
   optionalParameters:
   - name: --certificate-name -c
     summary: Name of the certificate which should be unique within the Container Apps environment.
     description: ''
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
   - name: --location -l
     summary: 'Location of resource. Examples: eastus2, northeurope.'
     description: ''
+  - name: --name -n
+    summary: Name of the Container Apps environment.
+    description: ''
   - name: --password -p
     summary: The certificate file password.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --show-prompt
     summary: Show prompt to upload an existing certificate.

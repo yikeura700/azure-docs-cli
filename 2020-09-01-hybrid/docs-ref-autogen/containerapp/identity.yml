@@ -1,10 +1,6 @@
 ### YamlMime:AzureCLIGroup
 uid: az_containerapp_identity
 name: az containerapp identity
-extensionInformation: >-
-  > [!Note]
-
-  > This reference is part of the **containerapp** extension for the Azure CLI  (version 2.37.0 or higher).  The extension will automatically install the first time you run an **az containerapp identity** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Commands to manage managed identities.
 description: ''
 directCommands:
@@ -13,9 +9,10 @@ directCommands:
   summary: Assign managed identity to a container app.
   description: Managed identities can be user-assigned or system-assigned.
   syntax: >-
-    az containerapp identity assign --name
-                                    --resource-group
+    az containerapp identity assign [--ids]
+                                    [--name]
                                     [--no-wait]
+                                    [--resource-group]
                                     [--system-assigned]
                                     [--user-assigned]
   examples:
@@ -27,18 +24,18 @@ directCommands:
     syntax: az containerapp identity assign -n myContainerapp -g MyResourceGroup --user-assigned myUserIdentityResourceId
   - summary: Assign system and user identity.
     syntax: az containerapp identity assign -n myContainerapp -g MyResourceGroup --system-assigned --user-assigned myUserIdentityResourceId
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --system-assigned
     summary: Boolean indicating whether to assign system-assigned identity.
@@ -51,9 +48,10 @@ directCommands:
   summary: Remove a managed identity from a container app.
   description: ''
   syntax: >-
-    az containerapp identity remove --name
-                                    --resource-group
+    az containerapp identity remove [--ids]
+                                    [--name]
                                     [--no-wait]
+                                    [--resource-group]
                                     [--system-assigned]
                                     [--user-assigned]
   examples:
@@ -67,18 +65,18 @@ directCommands:
     syntax: az containerapp identity remove -n myContainerapp -g MyResourceGroup --user-assigned
   - summary: Remove system identity and all user identities.
     syntax: az containerapp identity remove -n myContainerapp -g MyResourceGroup --system-assigned --user-assigned
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  optionalParameters:
   - name: --no-wait
     summary: Do not wait for the long-running operation to finish.
+    description: ''
+  - name: --resource-group -g
+    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   - name: --system-assigned
     summary: Boolean indicating whether to assign system-assigned identity.
@@ -91,18 +89,20 @@ directCommands:
   summary: Show managed identities of a container app.
   description: ''
   syntax: >-
-    az containerapp identity show --name
-                                  --resource-group
+    az containerapp identity show [--ids]
+                                  [--name]
+                                  [--resource-group]
   examples:
   - summary: Show managed identities.
     syntax: az containerapp identity show -n myContainerapp -g MyResourceGroup
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
+  optionalParameters:
+  - name: --ids
+    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
+    description: ''
+  - name: --name -n
     summary: The name of the Containerapp. A name must consist of lower case alphanumeric characters or '-', start with a letter, end with an alphanumeric character, cannot have '--', and must be less than 32 characters.
     description: ''
-  - isRequired: true
-    name: --resource-group -g
+  - name: --resource-group -g
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
 commands:

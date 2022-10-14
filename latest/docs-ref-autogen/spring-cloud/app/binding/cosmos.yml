@@ -1,10 +1,6 @@
 ### YamlMime:AzureCLIGroup
 uid: az_spring-cloud_app_binding_cosmos
 name: az spring-cloud app binding cosmos
-extensionInformation: >-
-  > [!Note]
-
-  > This reference is part of the **spring-cloud** extension for the Azure CLI  (version 2.30.0 or higher).  The extension will automatically install the first time you run an **az spring-cloud app binding cosmos** command.  [Learn more](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: Commands to manage Azure Cosmos DB bindings.
 description: ''
 directCommands:
@@ -24,7 +20,7 @@ directCommands:
                                            [--key-space]
   examples:
   - summary: Bind an Azure Cosmos DB.
-    syntax: az spring-cloud app binding cosmos add -n cosmosProduction --app MyApp --resource-id ${COSMOSDB_ID} --api-type mongo --database mymongo -g MyResourceGroup -s MyService
+    syntax: az spring-cloud app binding cosmos add -n cosmosProduction --app MyApp --resource-id COSMOSDB_ID --api-type mongo --database mymongo -g MyResourceGroup -s MyService
   requiredParameters:
   - isRequired: true
     name: --api-type
