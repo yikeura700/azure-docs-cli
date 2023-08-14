@@ -4,47 +4,6 @@ name: az kusto cluster
 summary: Manage Azure Kusto clusters.
 description: This module will not be supported starting January 1, 2021. Please execute "az extension add -n kusto" to install the supported Kusto extension.
 directCommands:
-- uid: az_kusto_cluster_add-language-extension
-  name: az kusto cluster add-language-extension
-  summary: Add a list of language extensions that can run within KQL queries.
-  description: ''
-  syntax: >-
-    az kusto cluster add-language-extension [--cluster-name]
-                                            [--ids]
-                                            [--no-wait]
-                                            [--resource-group]
-                                            [--subscription]
-                                            [--value]
-  examples:
-  - summary: KustoClusterAddLanguageExtensions
-    syntax: az kusto cluster add-language-extension --name "kustoclusterrptest4" --value language-extension-name="PYTHON" --value language-extension-name="R" --resource-group "kustorptest"
-  optionalParameters:
-  - name: --cluster-name --name -n
-    summary: The name of the Kusto cluster.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --no-wait
-    defaultValue: "False"
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --value
-    summary: The list of language extensions.
-    description: >-
-      Usage: --value language-extension-name=XX
-
-
-      language-extension-name: The language extension name.
-
-
-      Multiple actions can be specified by using more than one --value argument.
 - uid: az_kusto_cluster_create
   name: az kusto cluster create
   summary: Create a Kusto cluster.
@@ -113,77 +72,6 @@ directCommands:
     summary: Do not prompt for confirmation.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/kusto/_help.py
-- uid: az_kusto_cluster_detach-follower-database
-  name: az kusto cluster detach-follower-database
-  summary: Detaches all followers of a database owned by this cluster.
-  description: ''
-  syntax: >-
-    az kusto cluster detach-follower-database --attached-database-configuration-name
-                                              --cluster-resource-id
-                                              [--cluster-name]
-                                              [--ids]
-                                              [--no-wait]
-                                              [--resource-group]
-                                              [--subscription]
-  examples:
-  - summary: KustoClusterDetachFollowerDatabases
-    syntax: az kusto cluster detach-follower-database --name "kustoclusterrptest4" --attached-database-configuration-name "myAttachedDatabaseConfiguration" --cluster-resource-id "/subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/clusters/leader4" --resource-group "kustorptest"
-  requiredParameters:
-  - isRequired: true
-    name: --attached-database-configuration-name
-    summary: Resource name of the attached database configuration in the follower cluster.
-    description: ''
-  - isRequired: true
-    name: --cluster-resource-id
-    summary: Resource id of the cluster that follows a database owned by this cluster.
-    description: ''
-  optionalParameters:
-  - name: --cluster-name --name -n
-    summary: The name of the Kusto cluster.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --no-wait
-    defaultValue: "False"
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-- uid: az_kusto_cluster_diagnose-virtual-network
-  name: az kusto cluster diagnose-virtual-network
-  summary: Diagnoses network connectivity status for external resources on which the service is dependent on.
-  description: ''
-  syntax: >-
-    az kusto cluster diagnose-virtual-network [--cluster-name]
-                                              [--ids]
-                                              [--no-wait]
-                                              [--resource-group]
-                                              [--subscription]
-  examples:
-  - summary: KustoClusterDiagnoseVirtualNetwork
-    syntax: az kusto cluster diagnose-virtual-network --name "kustoclusterrptest4" --resource-group "kustorptest"
-  optionalParameters:
-  - name: --cluster-name --name -n
-    summary: The name of the Kusto cluster.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --no-wait
-    defaultValue: "False"
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
 - uid: az_kusto_cluster_list
   name: az kusto cluster list
   summary: List a Kusto cluster.
@@ -198,123 +86,6 @@ directCommands:
     summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/kusto/_help.py
-- uid: az_kusto_cluster_list-follower-database
-  name: az kusto cluster list-follower-database
-  summary: Returns a list of databases that are owned by this cluster and were followed by another cluster.
-  description: ''
-  syntax: >-
-    az kusto cluster list-follower-database --cluster-name
-                                            --resource-group
-  examples:
-  - summary: KustoClusterListFollowerDatabases
-    syntax: az kusto cluster list-follower-database --name "kustoclusterrptest4" --resource-group "kustorptest"
-  requiredParameters:
-  - isRequired: true
-    name: --cluster-name --name -n
-    summary: The name of the Kusto cluster.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-- uid: az_kusto_cluster_list-language-extension
-  name: az kusto cluster list-language-extension
-  summary: Returns a list of language extensions that can run within KQL queries.
-  description: ''
-  syntax: >-
-    az kusto cluster list-language-extension --cluster-name
-                                             --resource-group
-  examples:
-  - summary: KustoClusterListLanguageExtensions
-    syntax: az kusto cluster list-language-extension --name "kustoclusterrptest4" --resource-group "kustorptest"
-  requiredParameters:
-  - isRequired: true
-    name: --cluster-name --name -n
-    summary: The name of the Kusto cluster.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-- uid: az_kusto_cluster_list-outbound-network-dependency-endpoint
-  name: az kusto cluster list-outbound-network-dependency-endpoint
-  summary: Gets the network endpoints of all outbound dependencies of a Kusto cluster.
-  description: ''
-  syntax: >-
-    az kusto cluster list-outbound-network-dependency-endpoint --cluster-name
-                                                               --resource-group
-  examples:
-  - summary: Get Kusto cluster outbound network dependencies
-    syntax: az kusto cluster list-outbound-network-dependency-endpoint --name "kustoCluster" --resource-group "kustorptest"
-  requiredParameters:
-  - isRequired: true
-    name: --cluster-name --name -n
-    summary: The name of the Kusto cluster.
-    description: ''
-  - isRequired: true
-    name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-- uid: az_kusto_cluster_list-sku
-  name: az kusto cluster list-sku
-  summary: Returns the SKUs available for the provided resource. And Lists eligible SKUs for Kusto resource provider.
-  description: ''
-  syntax: >-
-    az kusto cluster list-sku [--cluster-name]
-                              [--resource-group]
-  examples:
-  - summary: KustoClustersListResourceSkus
-    syntax: az kusto cluster list-sku --name "kustoclusterrptest4" --resource-group "kustorptest"
-  - summary: KustoClustersListSkus
-    syntax: az kusto cluster list-sku
-  optionalParameters:
-  - name: --cluster-name --name -n
-    summary: The name of the Kusto cluster.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-- uid: az_kusto_cluster_remove-language-extension
-  name: az kusto cluster remove-language-extension
-  summary: Remove a list of language extensions that can run within KQL queries.
-  description: ''
-  syntax: >-
-    az kusto cluster remove-language-extension [--cluster-name]
-                                               [--ids]
-                                               [--no-wait]
-                                               [--resource-group]
-                                               [--subscription]
-                                               [--value]
-  examples:
-  - summary: KustoClusterRemoveLanguageExtensions
-    syntax: az kusto cluster remove-language-extension --name "kustoclusterrptest4" --value language-extension-name="PYTHON" --value language-extension-name="R" --resource-group "kustorptest"
-  optionalParameters:
-  - name: --cluster-name --name -n
-    summary: The name of the Kusto cluster.
-    description: ''
-  - name: --ids
-    summary: One or more resource IDs (space-delimited). It should be a complete resource ID containing all information of 'Resource Id' arguments. You should provide either --ids or other 'Resource Id' arguments.
-    description: ''
-  - name: --no-wait
-    defaultValue: "False"
-    summary: Do not wait for the long-running operation to finish.
-    description: ''
-  - name: --resource-group -g
-    summary: Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-    description: ''
-  - name: --subscription
-    summary: Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-    description: ''
-  - name: --value
-    summary: The list of language extensions.
-    description: >-
-      Usage: --value language-extension-name=XX
-
-
-      language-extension-name: The language extension name.
-
-
-      Multiple actions can be specified by using more than one --value argument.
 - uid: az_kusto_cluster_show
   name: az kusto cluster show
   summary: Get a Kusto cluster.
@@ -510,17 +281,9 @@ directCommands:
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/kusto/_help.py
 commands:
-- az_kusto_cluster_add-language-extension
 - az_kusto_cluster_create
 - az_kusto_cluster_delete
-- az_kusto_cluster_detach-follower-database
-- az_kusto_cluster_diagnose-virtual-network
 - az_kusto_cluster_list
-- az_kusto_cluster_list-follower-database
-- az_kusto_cluster_list-language-extension
-- az_kusto_cluster_list-outbound-network-dependency-endpoint
-- az_kusto_cluster_list-sku
-- az_kusto_cluster_remove-language-extension
 - az_kusto_cluster_show
 - az_kusto_cluster_start
 - az_kusto_cluster_stop
@@ -544,4 +307,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 05/18/2021
   description: This module will not be supported starting January 1, 2021. Please execute "az extension add -n kusto" to install the supported Kusto extension.

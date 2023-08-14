@@ -221,51 +221,19 @@ commands:
 - az_storage_account_keys_list
 - az_storage_account_keys_renew
 - az_storage_account_list
-- az_storage_account_migration
-- az_storage_account_migration_show
-- az_storage_account_migration_start
 - az_storage_account_show
 - az_storage_account_show-connection-string
 - az_storage_account_show-usage
-- az_storage_account_update
-- az_storage_azcopy
-- az_storage_azcopy_blob
-- az_storage_azcopy_blob_delete
-- az_storage_azcopy_blob_download
-- az_storage_azcopy_blob_sync
-- az_storage_azcopy_blob_upload
-- az_storage_azcopy_run-command
 - az_storage_blob
-- az_storage_blob_access
-- az_storage_blob_access_set
-- az_storage_blob_access_show
-- az_storage_blob_access_update
 - az_storage_blob_copy
 - az_storage_blob_copy_cancel
 - az_storage_blob_copy_start
 - az_storage_blob_copy_start-batch
 - az_storage_blob_delete
 - az_storage_blob_delete-batch
-- az_storage_blob_directory
-- az_storage_blob_directory_access
-- az_storage_blob_directory_access_set
-- az_storage_blob_directory_access_show
-- az_storage_blob_directory_access_update
-- az_storage_blob_directory_create
-- az_storage_blob_directory_delete
-- az_storage_blob_directory_download
-- az_storage_blob_directory_exists
-- az_storage_blob_directory_list
-- az_storage_blob_directory_metadata
-- az_storage_blob_directory_metadata_show
-- az_storage_blob_directory_metadata_update
-- az_storage_blob_directory_move
-- az_storage_blob_directory_show
-- az_storage_blob_directory_upload
 - az_storage_blob_download
 - az_storage_blob_download-batch
 - az_storage_blob_exists
-- az_storage_blob_filter
 - az_storage_blob_generate-sas
 - az_storage_blob_incremental-copy
 - az_storage_blob_incremental-copy_cancel
@@ -280,7 +248,6 @@ commands:
 - az_storage_blob_metadata
 - az_storage_blob_metadata_show
 - az_storage_blob_metadata_update
-- az_storage_blob_move
 - az_storage_blob_service-properties
 - az_storage_blob_service-properties_show
 - az_storage_blob_service-properties_update
@@ -288,9 +255,6 @@ commands:
 - az_storage_blob_show
 - az_storage_blob_snapshot
 - az_storage_blob_sync
-- az_storage_blob_tag
-- az_storage_blob_tag_list
-- az_storage_blob_tag_set
 - az_storage_blob_update
 - az_storage_blob_upload
 - az_storage_blob_upload-batch
@@ -393,13 +357,11 @@ commands:
 - az_storage_queue_stats
 - az_storage_remove
 - az_storage_share
-- az_storage_share_close-handle
 - az_storage_share_create
 - az_storage_share_delete
 - az_storage_share_exists
 - az_storage_share_generate-sas
 - az_storage_share_list
-- az_storage_share_list-handle
 - az_storage_share_metadata
 - az_storage_share_metadata_show
 - az_storage_share_metadata_update
@@ -445,4 +407,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 06/07/2023
   description: Manage Azure Cloud Storage resources.

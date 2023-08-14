@@ -532,8 +532,6 @@ directCommands:
     description: ''
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
 commands:
-- az_container_app
-- az_container_app_up
 - az_container_attach
 - az_container_create
 - az_container_delete
@@ -563,4 +561,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 10/08/2022
   description: Manage Azure Container Instances.

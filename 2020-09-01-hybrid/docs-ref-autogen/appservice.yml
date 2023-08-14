@@ -42,13 +42,6 @@ commands:
 - az_appservice_domain_show-terms
 - az_appservice_hybrid-connection
 - az_appservice_hybrid-connection_set-key
-- az_appservice_kube
-- az_appservice_kube_create
-- az_appservice_kube_delete
-- az_appservice_kube_list
-- az_appservice_kube_show
-- az_appservice_kube_update
-- az_appservice_kube_wait
 - az_appservice_list-locations
 - az_appservice_plan
 - az_appservice_plan_create
@@ -76,4 +69,6 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
+  ms.date: 04/14/2023
   description: Manage App Service plans.

@@ -350,9 +350,6 @@ directCommands:
     summary: 'Space-separated tags: key[=value] [key[=value] ...]. Use "" to clear existing tags.'
     description: ''
 commands:
-- az_managed-cassandra_cluster_backup
-- az_managed-cassandra_cluster_backup_list
-- az_managed-cassandra_cluster_backup_show
 - az_managed-cassandra_cluster_create
 - az_managed-cassandra_cluster_deallocate
 - az_managed-cassandra_cluster_delete
@@ -380,4 +377,5 @@ globalParameters:
 - name: --verbose
   summary: Increase logging verbosity. Use --debug for full debug logs.
 metadata:
+  doc_source_url_repo: https://github.com/Azure/azure-cli/blob/dev/
   description: Azure Managed Cassandra Cluster.
