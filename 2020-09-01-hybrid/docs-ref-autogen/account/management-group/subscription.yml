@@ -10,6 +10,8 @@ directCommands:
   name: az account management-group subscription add
   summary: |-
     Add a subscription to a management group.
+  description: |-
+    Add a subscription to a management group.
   status: GA
   sourceType: Core
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
@@ -32,6 +34,8 @@ directCommands:
 - uid: az_account_management-group_subscription_remove
   name: az account management-group subscription remove
   summary: |-
+    Remove an existing subscription from a management group.
+  description: |-
     Remove an existing subscription from a management group.
   status: GA
   sourceType: Core
@@ -56,6 +60,8 @@ directCommands:
   name: az account management-group subscription show
   summary: |-
     Show the details of a subscription under a known management group.
+  description: |-
+    Show the details of a subscription under a known management group.
   status: GA
   sourceType: Core
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
@@ -78,6 +84,8 @@ directCommands:
 - uid: az_account_management-group_subscription_show-sub-under-mg
   name: az account management-group subscription show-sub-under-mg
   summary: |-
+    Get the subscription under a management group.
+  description: |-
     Get the subscription under a management group.
   status: GA
   sourceType: Core

@@ -10,6 +10,8 @@ directCommands:
   name: az account management-group tenant-backfill get
   summary: |-
     Get the backfill status for a tenant.
+  description: |-
+    Get the backfill status for a tenant.
   status: GA
   sourceType: Core
   editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
@@ -21,6 +23,8 @@ directCommands:
 - uid: az_account_management-group_tenant-backfill_start
   name: az account management-group tenant-backfill start
   summary: |-
+    Start backfilling subscriptions for a tenant.
+  description: |-
     Start backfilling subscriptions for a tenant.
   status: GA
   sourceType: Core
