@@ -7,10 +7,8 @@ extensionInformation: >-
   > This reference is part of the **k8sconfiguration** extension for the Azure CLI (version 2.15.0 or higher). The extension will automatically install the first time you run an **az k8sconfiguration** command. [Learn more](https://learn.microsoft.com/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: |-
   Commands to manage Kubernetes configuration.
-status: Preview and Deprecated
-isDeprecated: true
+status: Preview
 isPreview: true
-deprecateInfo: This command group has been deprecated and will be removed in a future release. Use 'k8s-configuration' instead.
 previewOrExperimentalInfo: 'This command group is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
 sourceType: Extension
 directCommands:
@@ -18,10 +16,8 @@ directCommands:
   name: az k8sconfiguration create
   summary: |-
     Create a Kubernetes configuration.
-  status: Preview and Deprecated
-  isDeprecated: true
+  status: Preview
   isPreview: true
-  deprecateInfo: This command is implicitly deprecated because command group 'k8sconfiguration' is deprecated and will be removed in a future release. Use 'k8s-configuration' instead.
   previewOrExperimentalInfo: "Command group 'k8sconfiguration' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Extension
   syntax: >-
@@ -34,33 +30,23 @@ directCommands:
                                [--enable-helm-operator {false, true}]
                                [--helm-operator-params]
                                [--helm-operator-version]
-                               [--https-key]
-                               [--https-user]
                                [--operator-instance-name]
                                [--operator-namespace]
                                [--operator-params]
                                [--operator-type]
-                               [--ssh-known-hosts]
-                               [--ssh-known-hosts-file]
-                               [--ssh-private-key]
-                               [--ssh-private-key-file]
   examples:
   - summary: |-
       Create a Kubernetes configuration
     syntax: >-
       az k8sconfiguration create --resource-group MyResourceGroup --cluster-name MyClusterName \
 
-      --cluster-type connectedClusters --name MyGitConfig --operator-instance-name OperatorInst01 \
+      --cluster-type connectedClusters --name MyConfigurationName --operator-instance-name OperatorInst01 \
 
-      --operator-namespace OperatorNamespace01 --operator-type flux --operator-params "'--git-readonly'" \
+      --operator-namespace OperatorNamespace01 --repository-url git://github.com/fluxHowTo/flux-get-started \
 
-      --repository-url git://github.com/fluxHowTo/flux-get-started --enable-helm-operator  \
+      --operator-params "'--git-readonly'" --enable-helm-operator --helm-operator-version 0.6.0 \
 
-      --helm-operator-version 1.2.0 --scope namespace --helm-operator-params '--set helm.versions=v3' \
-
-      --ssh-private-key '' --ssh-private-key-file '' --https-user '' --https-key '' \
-
-      --ssh-known-hosts '' --ssh-known-hosts-file ''
+      --scope namespace --helm-operator-params '--set helm.versions=v3'
   requiredParameters:
   - isRequired: true
     name: --cluster-name -c
@@ -97,15 +83,9 @@ directCommands:
     summary: |-
       Chart values for the Helm Operator (if enabled).
   - name: --helm-operator-version
-    defaultValue: "1.2.0"
+    defaultValue: "0.3.0"
     summary: |-
       Chart version of the Helm Operator (if enabled).
-  - name: --https-key
-    summary: |-
-      Specify HTTPS token/password for private repository sync.
-  - name: --https-user
-    summary: |-
-      Specify HTTPS username for private repository sync.
   - name: --operator-instance-name
     summary: |-
       Instance name of the Operator.
@@ -120,26 +100,12 @@ directCommands:
     defaultValue: "flux"
     summary: |-
       Type of the operator. Valid value is 'flux'.
-  - name: --ssh-known-hosts
-    summary: |-
-      Specify Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances.
-  - name: --ssh-known-hosts-file
-    summary: |-
-      Specify filepath to known_hosts contents containing public SSH keys required to access private Git instances.
-  - name: --ssh-private-key
-    summary: |-
-      Specify Base64-encoded private ssh key for private repository sync.
-  - name: --ssh-private-key-file
-    summary: |-
-      Specify filepath to private ssh key for private repository sync.
 - uid: az_k8sconfiguration_delete
   name: az k8sconfiguration delete
   summary: |-
     Delete a Kubernetes configuration.
-  status: Preview and Deprecated
-  isDeprecated: true
+  status: Preview
   isPreview: true
-  deprecateInfo: This command is implicitly deprecated because command group 'k8sconfiguration' is deprecated and will be removed in a future release. Use 'k8s-configuration' instead.
   previewOrExperimentalInfo: "Command group 'k8sconfiguration' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Extension
   syntax: >-
@@ -182,10 +148,8 @@ directCommands:
   name: az k8sconfiguration list
   summary: |-
     List Kubernetes configurations.
-  status: Preview and Deprecated
-  isDeprecated: true
+  status: Preview
   isPreview: true
-  deprecateInfo: This command is implicitly deprecated because command group 'k8sconfiguration' is deprecated and will be removed in a future release. Use 'k8s-configuration' instead.
   previewOrExperimentalInfo: "Command group 'k8sconfiguration' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Extension
   syntax: >-
@@ -217,10 +181,8 @@ directCommands:
   name: az k8sconfiguration show
   summary: |-
     Show details of a Kubernetes configuration.
-  status: Preview and Deprecated
-  isDeprecated: true
+  status: Preview
   isPreview: true
-  deprecateInfo: This command is implicitly deprecated because command group 'k8sconfiguration' is deprecated and will be removed in a future release. Use 'k8s-configuration' instead.
   previewOrExperimentalInfo: "Command group 'k8sconfiguration' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Extension
   syntax: >-
@@ -257,10 +219,8 @@ directCommands:
   name: az k8sconfiguration update
   summary: |-
     Update a Kubernetes configuration.
-  status: Preview and Deprecated
-  isDeprecated: true
+  status: Preview
   isPreview: true
-  deprecateInfo: This command is implicitly deprecated because command group 'k8sconfiguration' is deprecated and will be removed in a future release. Use 'k8s-configuration' instead.
   previewOrExperimentalInfo: "Command group 'k8sconfiguration' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Extension
   syntax: >-
@@ -273,8 +233,6 @@ directCommands:
                                [--helm-operator-version]
                                [--operator-params]
                                [--repository-url]
-                               [--ssh-known-hosts]
-                               [--ssh-known-hosts-file]
   examples:
   - summary: |-
       Update an existing Kubernetes configuration
@@ -285,7 +243,7 @@ directCommands:
 
       --repository-url git://github.com/fluxHowTo/flux-get-started --operator-params "'--git-readonly'" \
 
-      --helm-operator-version 1.2.0 --helm-operator-params '--set helm.versions=v3'
+      --helm-operator-version 0.6.0 --helm-operator-params '--set helm.versions=v3'
   requiredParameters:
   - isRequired: true
     name: --cluster-name -c
@@ -321,12 +279,6 @@ directCommands:
   - name: --repository-url -u
     summary: |-
       Url of the source control repository.
-  - name: --ssh-known-hosts
-    summary: |-
-      Specify Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances.
-  - name: --ssh-known-hosts-file
-    summary: |-
-      Specify filepath to known_hosts contents containing public SSH keys required to access private Git instances.
 commands:
 - az_k8sconfiguration_create
 - az_k8sconfiguration_delete

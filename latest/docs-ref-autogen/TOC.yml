@@ -1033,31 +1033,9 @@
           displayName: az acat report webhook
           items: []
   - name: Azure Arc Kubernetes Runtime
-    items:
-    - name: Commands
-      uid: sp-Azure_Arc_Kubernetes_Runtime
-      displayName: Azure Arc Kubernetes Runtime
-    - name: k8s-runtime
-      items:
-      - name: Commands
-        uid: az_k8s-runtime
-        displayName: az k8s-runtime
-      - name: bgp-peer
-        uid: az_k8s-runtime_bgp-peer
-        displayName: az k8s-runtime bgp-peer
-        items: []
-      - name: load-balancer
-        uid: az_k8s-runtime_load-balancer
-        displayName: az k8s-runtime load-balancer
-        items: []
-      - name: service
-        uid: az_k8s-runtime_service
-        displayName: az k8s-runtime service
-        items: []
-      - name: storage-class
-        uid: az_k8s-runtime_storage-class
-        displayName: az k8s-runtime storage-class
-        items: []
+    uid: sp-Azure_Arc_Kubernetes_Runtime
+    displayName: Azure Arc Kubernetes Runtime
+    items: []
   - name: Azure CLI
     items:
     - name: Commands
@@ -1711,10 +1689,6 @@
       - name: certificate
         uid: az_batch_certificate
         displayName: az batch certificate
-        items: []
-      - name: file
-        uid: az_batch_file
-        displayName: az batch file
         items: []
       - name: job
         items:
@@ -4856,102 +4830,9 @@
         displayName: az lab vnet
         items: []
   - name: Digital Twins
-    items:
-    - name: Commands
-      uid: sp-Digital_Twins
-      displayName: Digital Twins
-    - name: dt
-      items:
-      - name: Commands
-        uid: az_dt
-        displayName: az dt
-      - name: data-history
-        items:
-        - name: Commands
-          uid: az_dt_data-history
-          displayName: az dt data-history
-        - name: connection
-          items:
-          - name: Commands
-            uid: az_dt_data-history_connection
-            displayName: az dt data-history connection
-          - name: create
-            uid: az_dt_data-history_connection_create
-            displayName: az dt data-history connection create
-            items: []
-      - name: endpoint
-        items:
-        - name: Commands
-          uid: az_dt_endpoint
-          displayName: az dt endpoint
-        - name: create
-          uid: az_dt_endpoint_create
-          displayName: az dt endpoint create
-          items: []
-      - name: identity
-        uid: az_dt_identity
-        displayName: az dt identity
-        items: []
-      - name: job
-        items:
-        - name: Commands
-          uid: az_dt_job
-          displayName: az dt job
-        - name: deletion
-          uid: az_dt_job_deletion
-          displayName: az dt job deletion
-          items: []
-        - name: import
-          uid: az_dt_job_import
-          displayName: az dt job import
-          items: []
-      - name: model
-        uid: az_dt_model
-        displayName: az dt model
-        items: []
-      - name: network
-        items:
-        - name: Commands
-          uid: az_dt_network
-          displayName: az dt network
-        - name: private-endpoint
-          items:
-          - name: Commands
-            uid: az_dt_network_private-endpoint
-            displayName: az dt network private-endpoint
-          - name: connection
-            uid: az_dt_network_private-endpoint_connection
-            displayName: az dt network private-endpoint connection
-            items: []
-        - name: private-link
-          uid: az_dt_network_private-link
-          displayName: az dt network private-link
-          items: []
-      - name: role-assignment
-        uid: az_dt_role-assignment
-        displayName: az dt role-assignment
-        items: []
-      - name: route
-        uid: az_dt_route
-        displayName: az dt route
-        items: []
-      - name: twin
-        items:
-        - name: Commands
-          uid: az_dt_twin
-          displayName: az dt twin
-        - name: component
-          uid: az_dt_twin_component
-          displayName: az dt twin component
-          items: []
-        - name: relationship
-          uid: az_dt_twin_relationship
-          displayName: az dt twin relationship
-          items: []
-        - name: telemetry
-          uid: az_dt_twin_telemetry
-          displayName: az dt twin telemetry
-          items: []
+    uid: sp-Digital_Twins
+    displayName: Digital Twins
+    items: []
   - name: Disk Pool
     items:
     - name: Commands
@@ -5776,10 +5657,6 @@
         - name: Commands
           uid: az_iot_central
           displayName: az iot central
-        - name: api-token
-          uid: az_iot_central_api-token
-          displayName: az iot central api-token
-          items: []
         - name: app
           items:
           - name: Commands
@@ -5797,110 +5674,6 @@
             uid: az_iot_central_app_private-link-resource
             displayName: az iot central app private-link-resource
             items: []
-        - name: device
-          items:
-          - name: Commands
-            uid: az_iot_central_device
-            displayName: az iot central device
-          - name: attestation
-            uid: az_iot_central_device_attestation
-            displayName: az iot central device attestation
-            items: []
-          - name: c2d-message
-            uid: az_iot_central_device_c2d-message
-            displayName: az iot central device c2d-message
-            items: []
-          - name: command
-            uid: az_iot_central_device_command
-            displayName: az iot central device command
-            items: []
-          - name: edge
-            items:
-            - name: Commands
-              uid: az_iot_central_device_edge
-              displayName: az iot central device edge
-            - name: children
-              uid: az_iot_central_device_edge_children
-              displayName: az iot central device edge children
-              items: []
-            - name: manifest
-              uid: az_iot_central_device_edge_manifest
-              displayName: az iot central device edge manifest
-              items: []
-            - name: module
-              uid: az_iot_central_device_edge_module
-              displayName: az iot central device edge module
-              items: []
-          - name: telemetry
-            uid: az_iot_central_device_telemetry
-            displayName: az iot central device telemetry
-            items: []
-          - name: twin
-            uid: az_iot_central_device_twin
-            displayName: az iot central device twin
-            items: []
-        - name: device-group
-          uid: az_iot_central_device-group
-          displayName: az iot central device-group
-          items: []
-        - name: device-template
-          uid: az_iot_central_device-template
-          displayName: az iot central device-template
-          items: []
-        - name: diagnostics
-          uid: az_iot_central_diagnostics
-          displayName: az iot central diagnostics
-          items: []
-        - name: enrollment-group
-          uid: az_iot_central_enrollment-group
-          displayName: az iot central enrollment-group
-          items: []
-        - name: export
-          items:
-          - name: Commands
-            uid: az_iot_central_export
-            displayName: az iot central export
-          - name: destination
-            uid: az_iot_central_export_destination
-            displayName: az iot central export destination
-            items: []
-        - name: file-upload-config
-          uid: az_iot_central_file-upload-config
-          displayName: az iot central file-upload-config
-          items: []
-        - name: job
-          uid: az_iot_central_job
-          displayName: az iot central job
-          items: []
-        - name: organization
-          uid: az_iot_central_organization
-          displayName: az iot central organization
-          items: []
-        - name: role
-          uid: az_iot_central_role
-          displayName: az iot central role
-          items: []
-        - name: scheduled-job
-          uid: az_iot_central_scheduled-job
-          displayName: az iot central scheduled-job
-          items: []
-        - name: user
-          uid: az_iot_central_user
-          displayName: az iot central user
-          items: []
-      - name: device
-        items:
-        - name: Commands
-          uid: az_iot_device
-          displayName: az iot device
-        - name: c2d-message
-          uid: az_iot_device_c2d-message
-          displayName: az iot device c2d-message
-          items: []
-        - name: registration
-          uid: az_iot_device_registration
-          displayName: az iot device registration
-          items: []
       - name: dps
         items:
         - name: Commands
@@ -5910,28 +5683,6 @@
           uid: az_iot_dps_certificate
           displayName: az iot dps certificate
           items: []
-        - name: connection-string
-          uid: az_iot_dps_connection-string
-          displayName: az iot dps connection-string
-          items: []
-        - name: enrollment
-          items:
-          - name: Commands
-            uid: az_iot_dps_enrollment
-            displayName: az iot dps enrollment
-          - name: registration
-            uid: az_iot_dps_enrollment_registration
-            displayName: az iot dps enrollment registration
-            items: []
-        - name: enrollment-group
-          items:
-          - name: Commands
-            uid: az_iot_dps_enrollment-group
-            displayName: az iot dps enrollment-group
-          - name: registration
-            uid: az_iot_dps_enrollment-group_registration
-            displayName: az iot dps enrollment-group registration
-            items: []
         - name: linked-hub
           uid: az_iot_dps_linked-hub
           displayName: az iot dps linked-hub
@@ -5940,196 +5691,30 @@
           uid: az_iot_dps_policy
           displayName: az iot dps policy
           items: []
-        - name: registration
-          uid: az_iot_dps_registration
-          displayName: az iot dps registration
-          items: []
-      - name: du
-        items:
-        - name: Commands
-          uid: az_iot_du
-          displayName: az iot du
-        - name: account
-          items:
-          - name: Commands
-            uid: az_iot_du_account
-            displayName: az iot du account
-          - name: private-endpoint-connection
-            uid: az_iot_du_account_private-endpoint-connection
-            displayName: az iot du account private-endpoint-connection
-            items: []
-          - name: private-link-resource
-            uid: az_iot_du_account_private-link-resource
-            displayName: az iot du account private-link-resource
-            items: []
-        - name: device
-          items:
-          - name: Commands
-            uid: az_iot_du_device
-            displayName: az iot du device
-          - name: class
-            uid: az_iot_du_device_class
-            displayName: az iot du device class
-            items: []
-          - name: compliance
-            uid: az_iot_du_device_compliance
-            displayName: az iot du device compliance
-            items: []
-          - name: deployment
-            uid: az_iot_du_device_deployment
-            displayName: az iot du device deployment
-            items: []
-          - name: group
-            uid: az_iot_du_device_group
-            displayName: az iot du device group
-            items: []
-          - name: health
-            uid: az_iot_du_device_health
-            displayName: az iot du device health
-            items: []
-          - name: log
-            uid: az_iot_du_device_log
-            displayName: az iot du device log
-            items: []
-          - name: module
-            uid: az_iot_du_device_module
-            displayName: az iot du device module
-            items: []
-        - name: instance
-          uid: az_iot_du_instance
-          displayName: az iot du instance
-          items: []
-        - name: update
-          items:
-          - name: Commands
-            uid: az_iot_du_update
-            displayName: az iot du update
-          - name: file
-            uid: az_iot_du_update_file
-            displayName: az iot du update file
-            items: []
-          - name: init
-            uid: az_iot_du_update_init
-            displayName: az iot du update init
-            items: []
-      - name: edge
-        items:
-        - name: Commands
-          uid: az_iot_edge
-          displayName: az iot edge
-        - name: deployment
-          uid: az_iot_edge_deployment
-          displayName: az iot edge deployment
-          items: []
-        - name: devices
-          uid: az_iot_edge_devices
-          displayName: az iot edge devices
-          items: []
       - name: hub
         items:
         - name: Commands
           uid: az_iot_hub
           displayName: az iot hub
         - name: certificate
-          items:
-          - name: Commands
-            uid: az_iot_hub_certificate
-            displayName: az iot hub certificate
-          - name: root-authority
-            uid: az_iot_hub_certificate_root-authority
-            displayName: az iot hub certificate root-authority
-            items: []
-        - name: configuration
-          uid: az_iot_hub_configuration
-          displayName: az iot hub configuration
-          items: []
-        - name: connection-string
-          uid: az_iot_hub_connection-string
-          displayName: az iot hub connection-string
+          uid: az_iot_hub_certificate
+          displayName: az iot hub certificate
           items: []
         - name: consumer-group
           uid: az_iot_hub_consumer-group
           displayName: az iot hub consumer-group
           items: []
-        - name: device-identity
-          items:
-          - name: Commands
-            uid: az_iot_hub_device-identity
-            displayName: az iot hub device-identity
-          - name: children
-            uid: az_iot_hub_device-identity_children
-            displayName: az iot hub device-identity children
-            items: []
-          - name: connection-string
-            uid: az_iot_hub_device-identity_connection-string
-            displayName: az iot hub device-identity connection-string
-            items: []
-          - name: parent
-            uid: az_iot_hub_device-identity_parent
-            displayName: az iot hub device-identity parent
-            items: []
-        - name: device-twin
-          uid: az_iot_hub_device-twin
-          displayName: az iot hub device-twin
-          items: []
         - name: devicestream
           uid: az_iot_hub_devicestream
           displayName: az iot hub devicestream
-          items: []
-        - name: digital-twin
-          uid: az_iot_hub_digital-twin
-          displayName: az iot hub digital-twin
-          items: []
-        - name: distributed-tracing
-          uid: az_iot_hub_distributed-tracing
-          displayName: az iot hub distributed-tracing
           items: []
         - name: identity
           uid: az_iot_hub_identity
           displayName: az iot hub identity
           items: []
-        - name: job
-          uid: az_iot_hub_job
-          displayName: az iot hub job
-          items: []
-        - name: message-endpoint
-          items:
-          - name: Commands
-            uid: az_iot_hub_message-endpoint
-            displayName: az iot hub message-endpoint
-          - name: create
-            uid: az_iot_hub_message-endpoint_create
-            displayName: az iot hub message-endpoint create
-            items: []
-          - name: update
-            uid: az_iot_hub_message-endpoint_update
-            displayName: az iot hub message-endpoint update
-            items: []
         - name: message-enrichment
           uid: az_iot_hub_message-enrichment
           displayName: az iot hub message-enrichment
-          items: []
-        - name: message-route
-          items:
-          - name: Commands
-            uid: az_iot_hub_message-route
-            displayName: az iot hub message-route
-          - name: fallback
-            uid: az_iot_hub_message-route_fallback
-            displayName: az iot hub message-route fallback
-            items: []
-        - name: module-identity
-          items:
-          - name: Commands
-            uid: az_iot_hub_module-identity
-            displayName: az iot hub module-identity
-          - name: connection-string
-            uid: az_iot_hub_module-identity_connection-string
-            displayName: az iot hub module-identity connection-string
-            items: []
-        - name: module-twin
-          uid: az_iot_hub_module-twin
-          displayName: az iot hub module-twin
           items: []
         - name: policy
           uid: az_iot_hub_policy
@@ -6142,10 +5727,6 @@
         - name: routing-endpoint
           uid: az_iot_hub_routing-endpoint
           displayName: az iot hub routing-endpoint
-          items: []
-        - name: state
-          uid: az_iot_hub_state
-          displayName: az iot hub state
           items: []
       - name: ops
         items:
@@ -10082,14 +9663,9 @@
         displayName: az quantum target
         items: []
       - name: workspace
-        items:
-        - name: Commands
-          uid: az_quantum_workspace
-          displayName: az quantum workspace
-        - name: keys
-          uid: az_quantum_workspace_keys
-          displayName: az quantum workspace keys
-          items: []
+        uid: az_quantum_workspace
+        displayName: az quantum workspace
+        items: []
   - name: Qumulo
     items:
     - name: Commands
