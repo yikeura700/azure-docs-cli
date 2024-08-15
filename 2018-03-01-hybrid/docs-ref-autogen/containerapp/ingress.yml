@@ -12,7 +12,6 @@ directCommands:
     Disable ingress for a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp ingress disable [--ids]
                                     [--name]
@@ -41,7 +40,6 @@ directCommands:
     Enable or update ingress for a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp ingress enable --target-port
                                    --type {external, internal}
@@ -100,7 +98,6 @@ directCommands:
     Show details of a container app's ingress.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp ingress show [--ids]
                                  [--name]
@@ -129,7 +126,6 @@ directCommands:
     Update ingress for a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp ingress update [--allow-insecure {false, true}]
                                    [--exposed-port]
@@ -223,5 +219,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/14/2024
   description: Commands to manage ingress and traffic-splitting.

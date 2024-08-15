@@ -12,7 +12,6 @@ directCommands:
     Set the key that all apps in an appservice plan use to connect to the hybrid-connections in that appservice plan.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice hybrid-connection set-key --hybrid-connection
                                             --key-type
@@ -71,5 +70,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: A method that sets the key a hybrid-connection uses.

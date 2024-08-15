@@ -1,16 +1,12 @@
 ### YamlMime:AzureCLIGroup
 uid: az_network_vnet
 name: az network vnet
-importantNote: >-
-  > [!NOTE]
-
-  > This command group has commands that are defined in both Azure CLI and at least one extension. Install each extension to benefit from its extended capabilities. [Learn more](https://learn.microsoft.com/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: |-
   Check if a private IP address is available for use within a virtual network.
 description: |-
   To learn more about Virtual Networks visit https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-network.
 status: GA
-sourceType: Core and Extension
+sourceType: Core
 directCommands:
 - uid: az_network_vnet_create
   name: az network vnet create
@@ -20,7 +16,6 @@ directCommands:
     You may also create a subnet at the same time by specifying a subnet name and (optionally) an address prefix. To learn about how to create a virtual network visit https://docs.microsoft.com/azure/virtual-network/manage-virtual-network#create-a-virtual-network.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet create --name
                            --resource-group
@@ -85,7 +80,6 @@ directCommands:
     Delete a virtual network.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet delete [--ids]
                            [--name]
@@ -119,7 +113,6 @@ directCommands:
     List virtual networks.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network vnet list [--resource-group]
   examples:
   - summary: |-
@@ -141,7 +134,6 @@ directCommands:
     Get the details of a virtual network.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet show [--expand]
                          [--ids]
@@ -174,7 +166,6 @@ directCommands:
     Update a virtual network.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet update [--add]
                            [--address-prefixes]
@@ -239,7 +230,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet wait [--created]
                          [--custom]
@@ -308,12 +298,6 @@ commands:
 - az_network_vnet_subnet_show
 - az_network_vnet_subnet_update
 - az_network_vnet_subnet_wait
-- az_network_vnet_tap
-- az_network_vnet_tap_create
-- az_network_vnet_tap_delete
-- az_network_vnet_tap_list
-- az_network_vnet_tap_show
-- az_network_vnet_tap_update
 - az_network_vnet_update
 - az_network_vnet_wait
 globalParameters:

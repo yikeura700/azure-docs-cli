@@ -14,7 +14,6 @@ directCommands:
     Locks can exist at three different scopes: subscription, resource group and resource.                 For how to add locks at different levels, please refer to the following examples.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az lock create --lock-type {CanNotDelete, ReadOnly}
                    --name
@@ -78,7 +77,6 @@ directCommands:
     Locks can exist at three different scopes: subscription, resource group and resource.                 For how to delete locks at different levels, please refer to the following examples.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az lock delete [--ids]
                    [--name]
@@ -125,7 +123,6 @@ directCommands:
     List lock information.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az lock list [--filter-string]
                  [--namespace]
@@ -165,7 +162,6 @@ directCommands:
     Show the properties of a lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az lock show [--ids]
                  [--name]
@@ -209,7 +205,6 @@ directCommands:
     Update a lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az lock update [--ids]
                    [--lock-type {CanNotDelete, ReadOnly}]
@@ -284,5 +279,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage Azure locks.

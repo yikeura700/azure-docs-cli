@@ -12,7 +12,6 @@ directCommands:
     Revalidates a database's encryption protector key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db tde key revalidate [--database]
                                  [--ids]
@@ -45,7 +44,6 @@ directCommands:
     Reverts a database's encryption protector key to server level.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db tde key revert [--database]
                              [--ids]
@@ -100,5 +98,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage a database's encryption protector.

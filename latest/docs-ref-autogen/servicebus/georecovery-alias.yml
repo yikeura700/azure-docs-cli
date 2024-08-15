@@ -12,7 +12,6 @@ directCommands:
     This operation disables the Disaster Recovery and stops replicating changes from primary to secondary namespaces.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus georecovery-alias break-pair [--alias]
                                                [--ids]
@@ -41,7 +40,6 @@ directCommands:
     Create a new Alias(Disaster Recovery configuration).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus georecovery-alias create --alias
                                            --namespace-name
@@ -75,7 +73,6 @@ directCommands:
     Delete an Alias(Disaster Recovery configuration).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus georecovery-alias delete [--alias]
                                            [--ids]
@@ -104,7 +101,6 @@ directCommands:
     Check the give namespace name availability.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus georecovery-alias exists --alias
                                            [--ids]
@@ -135,7 +131,6 @@ directCommands:
     Invokes GEO DR failover and reconfigure the alias to point to the secondary namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus georecovery-alias fail-over [--alias]
                                               [--ids]
@@ -169,7 +164,6 @@ directCommands:
     List all Alias(Disaster Recovery configurations).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus georecovery-alias list --namespace-name
                                          --resource-group
@@ -188,7 +182,6 @@ directCommands:
     Sets Service Bus Geo-Disaster Recovery Configuration Alias for the give Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus georecovery-alias set --alias
                                         --partner-namespace
@@ -240,7 +233,6 @@ directCommands:
     Get Alias(Disaster Recovery configuration) for primary or secondary namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus georecovery-alias show [--alias]
                                          [--ids]
@@ -302,5 +294,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Manage Azure Service Bus Geo-Disaster Recovery Configuration Alias.

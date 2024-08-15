@@ -12,7 +12,6 @@ directCommands:
     Create a route server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver create --hosted-subnet
                                   --name
@@ -59,7 +58,6 @@ directCommands:
     Delete a route server under a resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver delete [--ids]
                                   [--name]
@@ -94,7 +92,6 @@ directCommands:
     List all route servers under a subscription or a resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network routeserver list [--resource-group]
   examples:
   - summary: |-
@@ -110,7 +107,6 @@ directCommands:
     Show a route server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver show [--ids]
                                 [--name]
@@ -139,7 +135,6 @@ directCommands:
     Update a route server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver update [--add]
                                   [--allow-b2b-traffic {0, 1, f, false, n, no, t, true, y, yes}]
@@ -204,7 +199,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver wait [--created]
                                 [--custom]
@@ -298,5 +292,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage the route server.

@@ -12,7 +12,6 @@ directCommands:
     Create a track for an Azure Media Services asset.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset-track create --account-name
                               --asset-name
@@ -70,7 +69,6 @@ directCommands:
     Deletes a Track in the asset.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset-track delete --asset-name
                               --track-name
@@ -108,7 +106,6 @@ directCommands:
     Lists the Tracks in the asset.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset-track list --account-name
                             --asset-name
@@ -132,7 +129,6 @@ directCommands:
     Show the details of a track.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset-track show --asset-name
                             --track-name
@@ -168,7 +164,6 @@ directCommands:
     Update the parameters of a track.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset-track update --asset-name
                               --track-name
@@ -221,7 +216,6 @@ directCommands:
     Update a track if the file in the storage container was recently modified.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset-track update-data --asset-name
                                    --track-name
@@ -288,5 +282,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage asset tracks for an Azure Media Services account.

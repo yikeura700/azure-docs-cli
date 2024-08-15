@@ -14,7 +14,6 @@ directCommands:
     A full list of performance level options can be seen by executing `az sql db list-editions -a -o table -l LOCATION`. The secondary database must have the same edition as the primary database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db replica create --name
                              --partner-server
@@ -162,7 +161,6 @@ directCommands:
     Permanently stop data replication between two database replicas.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db replica delete-link --partner-server
                                   [--ids]
@@ -206,7 +204,6 @@ directCommands:
     List the replicas of a database and their replication status.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db replica list-links [--ids]
                                  [--name]
@@ -239,7 +236,6 @@ directCommands:
     Set the primary replica database by failing over from the current primary replica database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db replica set-primary [--allow-data-loss]
                                   [--ids]
@@ -301,5 +297,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage replication between databases.

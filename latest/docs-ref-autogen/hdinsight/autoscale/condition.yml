@@ -12,7 +12,6 @@ directCommands:
     Add a new schedule condition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight autoscale condition create --cluster-name
                                             --days {Friday, Monday, Saturday, Sunday, Thursday, Tuesday, Wednesday}
@@ -60,7 +59,6 @@ directCommands:
     Delete schedule condition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight autoscale condition delete --cluster-name
                                             --index
@@ -102,7 +100,6 @@ directCommands:
     List all schedule conditions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight autoscale condition list --cluster-name
                                           --resource-group
@@ -125,7 +122,6 @@ directCommands:
     Update a schedule condition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight autoscale condition update --cluster-name
                                             --index
@@ -175,7 +171,6 @@ directCommands:
     Place the CLI in a waiting state until an operation is complete.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight autoscale condition wait --name
                                           --resource-group
@@ -254,5 +249,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/23/2021
   description: Manage schedule condition of the HDInsight cluster which enabled Schedule-based Autoscale.

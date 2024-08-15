@@ -12,7 +12,6 @@ directCommands:
     Create a log profile in Azure Monitoring REST API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-profiles create --categories
                                    --days
@@ -69,7 +68,6 @@ directCommands:
     Delete the log profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-profiles delete [--ids]
                                    [--name]
@@ -90,7 +88,6 @@ directCommands:
     List the log profiles.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: az monitor log-profiles list
 - uid: az_monitor_log-profiles_show
   name: az monitor log-profiles show
@@ -98,7 +95,6 @@ directCommands:
     Get the log profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-profiles show [--ids]
                                  [--name]
@@ -119,7 +115,6 @@ directCommands:
     Update a log profile in Azure Monitoring REST API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-profiles update [--add]
                                    [--categories]
@@ -211,5 +206,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: Manage log profiles.

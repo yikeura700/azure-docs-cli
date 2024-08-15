@@ -12,7 +12,6 @@ directCommands:
     Add an SSL profile of the application gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway ssl-profile add --gateway-name
                                                    --name
@@ -78,7 +77,6 @@ directCommands:
     List the existing SSL profiles of the application gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway ssl-profile list --gateway-name
                                                     --resource-group
@@ -101,7 +99,6 @@ directCommands:
     Remove an existing SSL profile of the application gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway ssl-profile remove --gateway-name
                                                       --name
@@ -135,7 +132,6 @@ directCommands:
     Show an existing SSL profile of the application gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway ssl-profile show --gateway-name
                                                     --name
@@ -163,7 +159,6 @@ directCommands:
     Update SSL profile of the application gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway ssl-profile update --gateway-name
                                                       --name
@@ -246,7 +241,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway ssl-profile wait [--created]
                                                     [--custom]
@@ -331,5 +325,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage SSL profiles of application gateway.

@@ -15,7 +15,6 @@ directCommands:
     Create a local VPN gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network local-gateway create --name
                                     --resource-group
@@ -74,7 +73,6 @@ directCommands:
     In order to delete a Local Network Gateway, you must first delete ALL Connection objects in Azure that are connected to the Gateway. After deleting the Gateway, proceed to delete other resources now not in use. For more information, follow the order of instructions on this page: https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-delete-vnet-gateway-portal.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network local-gateway delete [--ids]
                                     [--name]
@@ -108,7 +106,6 @@ directCommands:
     List all local VPN gateways in a resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network local-gateway list --resource-group
   examples:
   - summary: |-
@@ -125,7 +122,6 @@ directCommands:
     Get the details of a local VPN gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network local-gateway show [--ids]
                                   [--name]
@@ -154,7 +150,6 @@ directCommands:
     Update a local VPN gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network local-gateway update [--add]
                                     [--address-prefixes]
@@ -232,7 +227,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network local-gateway wait [--created]
                                   [--custom]
@@ -317,7 +311,6 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: >-
     For more information on local gateways, visit:
 

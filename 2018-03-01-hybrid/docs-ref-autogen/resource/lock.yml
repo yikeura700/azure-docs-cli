@@ -12,7 +12,6 @@ directCommands:
     Create a resource-level lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource lock create --lock-type {CanNotDelete, ReadOnly}
                             --name
@@ -64,7 +63,6 @@ directCommands:
     Delete a resource-level lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource lock delete [--ids]
                             [--name]
@@ -111,7 +109,6 @@ directCommands:
     List lock information in the resource-level.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource lock list [--filter-string]
                           [--namespace]
@@ -148,7 +145,6 @@ directCommands:
     Show the details of a resource-level lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource lock show [--ids]
                           [--name]
@@ -189,7 +185,6 @@ directCommands:
     Update a resource-level lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource lock update [--ids]
                             [--lock-type {CanNotDelete, ReadOnly}]
@@ -267,5 +262,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage Azure resource level locks.

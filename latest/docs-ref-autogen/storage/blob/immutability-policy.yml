@@ -12,7 +12,6 @@ directCommands:
     Delete blob's immutability policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob immutability-policy delete --container-name
                                                --name
@@ -65,7 +64,6 @@ directCommands:
     Set blob's immutability policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob immutability-policy set --container-name
                                             --name
@@ -152,5 +150,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage blob immutability policy.

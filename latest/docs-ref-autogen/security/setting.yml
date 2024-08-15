@@ -12,7 +12,6 @@ directCommands:
     Create settings about different configurations in Microsoft Defender for Cloud.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/security/_help.py
   syntax: >-
     az security setting create --name {MCAS, Sentinel, WDATP, WDATP_EXCLUDE_LINUX_PUBLIC_PREVIEW, WDATP_UNIFIED_SOLUTION}
                                [--alert-sync-settings]
@@ -43,7 +42,6 @@ directCommands:
     List security settings.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/security/_help.py
   syntax: >-
     az security setting list [--max-items]
                              [--next-token]
@@ -64,7 +62,6 @@ directCommands:
     Get of different configurations in Microsoft Defender for Cloud.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/security/_help.py
   syntax: >-
     az security setting show [--ids]
                              [--name {MCAS, Sentinel, WDATP, WDATP_EXCLUDE_LINUX_PUBLIC_PREVIEW, WDATP_UNIFIED_SOLUTION}]
@@ -90,7 +87,6 @@ directCommands:
     Update settings about different configurations in Microsoft Defender for Cloud.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/security/_help.py
   syntax: >-
     az security setting update [--add]
                                [--alert-sync-settings]
@@ -168,5 +164,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/13/2024
   description: View your security settings.

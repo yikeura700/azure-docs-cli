@@ -12,7 +12,6 @@ directCommands:
     List the hosts of the specified HDInsight cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight host list --cluster-name
                            --resource-group
@@ -35,7 +34,6 @@ directCommands:
     Restart the specific hosts of the specified HDInsight cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight host restart --cluster-name
                               --host-names
@@ -91,5 +89,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/23/2021
   description: Manage HDInsight cluster's virtual hosts.

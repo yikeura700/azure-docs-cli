@@ -14,7 +14,6 @@ directCommands:
     Managed identities can be user-assigned or system-assigned.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr identity assign --identities
                            --name
@@ -38,7 +37,6 @@ directCommands:
     Remove a managed identity from a container registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr identity remove --identities
                            --name
@@ -62,7 +60,6 @@ directCommands:
     Show the container registry's identity details.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr identity show --name
                          [--resource-group]
@@ -104,5 +101,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Manage service (managed) identities for a container registry.

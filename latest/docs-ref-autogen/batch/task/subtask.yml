@@ -14,7 +14,6 @@ directCommands:
     If the Task is not a multi-instance Task then this returns an empty collection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch task subtask list --job-id
                                --task-id
@@ -71,5 +70,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage subtask information of a Batch task.

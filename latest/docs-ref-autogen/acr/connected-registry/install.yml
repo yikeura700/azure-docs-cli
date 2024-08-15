@@ -20,7 +20,6 @@ directCommands:
   deprecateInfo: This command is implicitly deprecated because command group 'acr connected-registry install' is deprecated and will be removed in a future release. Use 'acr connected-registry get-settings' instead.
   previewOrExperimentalInfo: "Command group 'acr connected-registry' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr connected-registry install info --name
                                            --parent-protocol {http, https}
@@ -58,7 +57,6 @@ directCommands:
   deprecateInfo: This command is implicitly deprecated because command group 'acr connected-registry install' is deprecated and will be removed in a future release. Use 'acr connected-registry get-settings' instead.
   previewOrExperimentalInfo: "Command group 'acr connected-registry' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr connected-registry install renew-credentials --name
                                                         --parent-protocol {http, https}
@@ -119,5 +117,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Help to access the necessary information for installing a connected registry. Please see https://aka.ms/acr/connected-registry for more information.

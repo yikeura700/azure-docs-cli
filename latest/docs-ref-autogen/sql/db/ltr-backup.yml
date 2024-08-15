@@ -16,7 +16,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'sql db ltr-backup' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db ltr-backup delete --database
                                 --location
@@ -57,7 +56,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'sql db ltr-backup' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db ltr-backup list --location
                               [--database]
@@ -110,7 +108,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'sql db ltr-backup' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db ltr-backup restore --backup-id
                                  --dest-database
@@ -251,7 +248,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'sql db ltr-backup' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db ltr-backup show --database
                               --location
@@ -286,7 +282,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'sql db ltr-backup' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db ltr-backup wait [--created]
                               [--custom]
@@ -382,5 +377,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage SQL database long term retention backups.

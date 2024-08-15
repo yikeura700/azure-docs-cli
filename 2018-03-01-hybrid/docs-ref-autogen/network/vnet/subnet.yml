@@ -14,7 +14,6 @@ directCommands:
     Create a subnet and associate an existing NSG and route table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet subnet create --name
                                   --resource-group
@@ -71,7 +70,6 @@ directCommands:
     Delete a subnet.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet subnet delete [--ids]
                                   [--name]
@@ -109,7 +107,6 @@ directCommands:
     List the subnets in a virtual network.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet subnet list --resource-group
                                 --vnet-name
@@ -134,7 +131,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet subnet list-available-ips --subnet-name
                                               [--ids]
@@ -169,7 +165,6 @@ directCommands:
     Show details of a subnet.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet subnet show [--expand]
                                 [--ids]
@@ -206,7 +201,6 @@ directCommands:
     Update a subnet.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet subnet update [--add]
                                   [--address-prefix]
@@ -290,7 +284,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet subnet wait [--created]
                                 [--custom]
@@ -384,5 +377,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: To learn more about subnets visit https://docs.microsoft.com/azure/virtual-network/virtual-network-manage-subnet.

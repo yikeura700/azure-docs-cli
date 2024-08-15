@@ -12,7 +12,6 @@ directCommands:
     Add an MX record.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set mx add-record --exchange
                                                     --preference
@@ -52,7 +51,6 @@ directCommands:
     Create an empty MX record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set mx create --name
                                                 --resource-group
@@ -90,7 +88,6 @@ directCommands:
     Delete an MX record set and all associated records.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set mx delete [--ids]
                                                 [--if-match]
@@ -132,7 +129,6 @@ directCommands:
     List all MX record sets in a zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set mx list --resource-group
                                               --zone-name
@@ -166,7 +162,6 @@ directCommands:
     By default, if the last record in a set is removed, the record set is deleted. To retain the empty record set, include --keep-empty-record-set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set mx remove-record --exchange
                                                        --preference
@@ -212,7 +207,6 @@ directCommands:
     Get the details of an MX record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set mx show [--ids]
                                               [--name]
@@ -245,7 +239,6 @@ directCommands:
     Update an MX record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set mx update [--add]
                                                 [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -330,5 +323,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage Private DNS MX records.

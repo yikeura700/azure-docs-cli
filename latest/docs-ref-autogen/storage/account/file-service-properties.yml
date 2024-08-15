@@ -12,7 +12,6 @@ directCommands:
     Show the properties of file service in storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account file-service-properties show --account-name
                                                     [--resource-group]
@@ -35,7 +34,6 @@ directCommands:
     Update the properties of file service in storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account file-service-properties update --account-name
                                                       [--add]
@@ -142,5 +140,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage the properties of file service in storage account.

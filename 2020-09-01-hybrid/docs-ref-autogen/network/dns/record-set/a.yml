@@ -12,7 +12,6 @@ directCommands:
     Add an A record.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set a add-record --ipv4-address
                                            --record-set-name
@@ -57,7 +56,6 @@ directCommands:
     Create an empty A record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set a create --name
                                        --resource-group
@@ -110,7 +108,6 @@ directCommands:
     Delete an A record set and all associated records.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set a delete --name
                                        --resource-group
@@ -148,7 +145,6 @@ directCommands:
     List all A record sets in a zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set a list --resource-group
                                      --zone-name
@@ -173,7 +169,6 @@ directCommands:
     By default, if the last record in a set is removed, the record set is deleted. To retain the empty record set, include --keep-empty-record-set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set a remove-record --ipv4-address
                                               --record-set-name
@@ -214,7 +209,6 @@ directCommands:
     Get the details of an A record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set a show --name
                                      --resource-group
@@ -242,7 +236,6 @@ directCommands:
     Update an A record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set a update --name
                                        --resource-group
@@ -339,5 +332,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage DNS A records.

@@ -12,7 +12,6 @@ directCommands:
     List the metric values for a resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor metrics list --resource
                             [--aggregation {Average, Count, Maximum, Minimum, None, Total}]
@@ -139,7 +138,6 @@ directCommands:
     List the metric definitions for the resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor metrics list-definitions --resource
                                         [--namespace]
@@ -181,7 +179,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor metrics list-namespaces --resource-uri
                                        [--start-time]
@@ -204,7 +201,6 @@ directCommands:
     Lists the metric data for a subscription. Parameters can be specified on the body.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor metrics list-sub --region
                                 [--aggregation]
@@ -270,7 +266,6 @@ directCommands:
     List the metric definitions for the subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor metrics list-sub-definitions --region
                                             [--metricnamespace]
@@ -324,5 +319,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: View Azure resource metrics.

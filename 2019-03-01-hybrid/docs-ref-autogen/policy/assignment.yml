@@ -12,7 +12,6 @@ directCommands:
     Create a resource policy assignment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy assignment create [--description]
                                 [--display-name]
@@ -83,7 +82,6 @@ directCommands:
     Delete a resource policy assignment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy assignment delete --name
                                 [--resource-group]
@@ -110,7 +108,6 @@ directCommands:
     List resource policy assignments.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy assignment list [--disable-scope-strict-match]
                               [--resource-group]
@@ -131,7 +128,6 @@ directCommands:
     Show a resource policy assignment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy assignment show --name
                               [--resource-group]
@@ -158,7 +154,6 @@ directCommands:
     Update a resource policy assignment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy assignment update [--description]
                                 [--display-name]
@@ -224,5 +219,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage resource policy assignments.

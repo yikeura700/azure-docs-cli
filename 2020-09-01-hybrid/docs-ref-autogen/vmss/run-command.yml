@@ -14,7 +14,6 @@ directCommands:
     The operation to Create the VMSS VM run command.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss run-command create --instance-id
                                --name
@@ -110,7 +109,6 @@ directCommands:
     The operation to delete the run command.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss run-command delete --name
                                [--ids]
@@ -161,7 +159,6 @@ directCommands:
     `az vmss run-command show` returns helpful information on each run-command. Discover Run command-id's via `az vmss run-command list`.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss run-command invoke --command-id
                                [--ids]
@@ -244,7 +241,6 @@ directCommands:
     The operation to get all run commands of an instance in Virtual Machine Scaleset.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss run-command list --instance-id
                              --resource-group
@@ -277,7 +273,6 @@ directCommands:
     The operation to get the VMSS run command.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss run-command show --name
                              [--ids]
@@ -321,7 +316,6 @@ directCommands:
     The operation to update the VMSS run command.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss run-command update --name
                                [--async-execution {false, true}]
@@ -448,5 +442,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: For more information, see https://docs.microsoft.com/azure/virtual-machines/windows/run-command or https://docs.microsoft.com/azure/virtual-machines/linux/run-command.

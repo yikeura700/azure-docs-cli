@@ -12,7 +12,6 @@ directCommands:
     Create a new shared access policy in an IoT hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub policy create --hub-name
                              --name
@@ -45,7 +44,6 @@ directCommands:
     Delete a shared access policy from an IoT hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub policy delete [--hub-name]
                              [--ids]
@@ -78,7 +76,6 @@ directCommands:
     List shared access policies of an IoT hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub policy list [--hub-name]
                            [--ids]
@@ -107,7 +104,6 @@ directCommands:
     Regenerate keys of a shared access policy of an IoT hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub policy renew-key --renew-key {primary, secondary, swap}
                                 [--hub-name]
@@ -152,7 +148,6 @@ directCommands:
     Get the details of a shared access policy of an IoT hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub policy show [--hub-name]
                            [--ids]
@@ -210,5 +205,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/21/2024
   description: Manage shared access policies of an IoT hub.

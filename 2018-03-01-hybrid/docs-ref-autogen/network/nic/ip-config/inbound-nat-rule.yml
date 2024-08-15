@@ -12,7 +12,6 @@ directCommands:
     Add an inbound NAT rule to an IP configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nic ip-config inbound-nat-rule add --inbound-nat-rule
                                                   --ip-config-name
@@ -55,7 +54,6 @@ directCommands:
     Remove an inbound NAT rule of an IP configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nic ip-config inbound-nat-rule remove --inbound-nat-rule
                                                      --ip-config-name
@@ -98,7 +96,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nic ip-config inbound-nat-rule wait [--created]
                                                    [--custom]
@@ -180,5 +177,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage inbound NAT rules of an IP configuration.

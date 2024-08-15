@@ -12,7 +12,6 @@ directCommands:
     Appends an application group policy to the existing policy. This cmdlet can be used to append one or more throttling policies.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace application-group policy add --policy-config
                                                         [--ids]
@@ -51,7 +50,6 @@ directCommands:
     Removes an application group policy from the existing policies. This cmdlet can be used to remove one or more throttling policies.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace application-group policy remove --policy
                                                            [--ids]
@@ -112,5 +110,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Append or Remove application group policies.

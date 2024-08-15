@@ -12,7 +12,6 @@ directCommands:
     Create a dedicated host.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host create --host-group
                       --name
@@ -78,7 +77,6 @@ directCommands:
     Delete a dedicated host.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host delete [--host-group]
                       [--host-name]
@@ -117,7 +115,6 @@ directCommands:
     Get instance information about a dedicated host.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host get-instance-view [--host-group]
                                  [--ids]
@@ -153,7 +150,6 @@ directCommands:
     List dedicated hosts.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host list --host-group
                     --resource-group
@@ -185,7 +181,6 @@ directCommands:
     List all available dedicated host sizes to which the specified dedicated host can be resized. NOTE: The dedicated host sizes provided can be used to only scale up the existing dedicated host.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host list-resize-options [--host-group]
                                    [--host-name]
@@ -220,7 +215,6 @@ directCommands:
     The operation will complete successfully once the dedicated host has migrated to a new node and is running. To determine the health of VMs deployed on the dedicated host after the redeploy check the Resource Health Center in the Azure Portal. Please refer to https://docs.microsoft.com/azure/service-health/resource-health-overview for more details.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host redeploy [--host-group]
                         [--host-name]
@@ -254,7 +248,6 @@ directCommands:
     Resize a dedicated host.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host resize [--host-group]
                       [--host-name]
@@ -298,7 +291,6 @@ directCommands:
     The operation will complete successfully once the dedicated host has restarted and is running. To determine the health of VMs deployed on the dedicated host after the restart check the Resource Health Center in the Azure Portal. Please refer to https://docs.microsoft.com/azure/service-health/resource-health-overview for more details.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host restart [--host-group]
                        [--host-name]
@@ -332,7 +324,6 @@ directCommands:
     Get the details of a dedicated host.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host show [--expand {instanceView, userData}]
                     [--host-group]
@@ -370,7 +361,6 @@ directCommands:
     Update a dedicated host.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host update [--add]
                       [--force-string]
@@ -425,7 +415,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host wait [--created]
                     [--custom]
@@ -531,5 +520,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Manage Dedicated Hosts for Virtual Machines.

@@ -14,7 +14,6 @@ directCommands:
     Usage example - az redis patch-schedule create --name testCacheName --resource-group testResourceGroup --schedule-entries '[{"dayOfWeek":"Tuesday","startHourUtc":"00","maintenanceWindow":"PT5H"}]'.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis patch-schedule create --name
                                    --resource-group
@@ -40,7 +39,6 @@ directCommands:
     Usage example - az redis patch-schedule delete --name testCacheName --resource-group testResourceGroup.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis patch-schedule delete --name
                                    --resource-group
@@ -61,7 +59,6 @@ directCommands:
     Usage example - az redis patch-schedule show --name testCacheName --resource-group testResourceGroup [--query-examples].
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis patch-schedule show --name
                                  --resource-group
@@ -82,7 +79,6 @@ directCommands:
     Usage example - az redis patch-schedule update --name testCacheName --resource-group testResourceGroup --schedule-entries '[{"dayOfWeek":"Tuesday","startHourUtc":"00","maintenanceWindow":"PT5H"}]'.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis patch-schedule update --name
                                    --resource-group
@@ -130,5 +126,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/25/2024
   description: Manage Redis patch schedules.

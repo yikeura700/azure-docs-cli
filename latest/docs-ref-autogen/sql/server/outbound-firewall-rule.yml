@@ -12,7 +12,6 @@ directCommands:
     Create a new outbound firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server outbound-firewall-rule create --outbound-rule-fqdn
                                                 --resource-group
@@ -43,7 +42,6 @@ directCommands:
     Delete the outbound firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server outbound-firewall-rule delete --outbound-rule-fqdn
                                                 [--ids]
@@ -81,7 +79,6 @@ directCommands:
     List a server's outbound firewall rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server outbound-firewall-rule list [--ids]
                                               [--resource-group]
@@ -110,7 +107,6 @@ directCommands:
     Show the details for an outbound firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server outbound-firewall-rule show --outbound-rule-fqdn
                                               [--ids]
@@ -172,5 +168,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage a server's outbound firewall rules.

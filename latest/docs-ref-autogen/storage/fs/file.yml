@@ -12,7 +12,6 @@ directCommands:
     Append content to a file in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs file append --content
                               --file-system
@@ -70,7 +69,6 @@ directCommands:
     Create a new file in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs file create --file-system
                               --path
@@ -159,7 +157,6 @@ directCommands:
     Delete a file in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs file delete --file-system
                               --path
@@ -217,7 +214,6 @@ directCommands:
     Download a file from the specified path in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs file download --file-system
                                 --path
@@ -286,7 +282,6 @@ directCommands:
     Check for the existence of a file in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs file exists --file-system
                               --path
@@ -339,7 +334,6 @@ directCommands:
     List files and directories in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs file list --file-system
                             [--account-key]
@@ -424,7 +418,6 @@ directCommands:
     Move a file in ADLS Gen2 Account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs file move --file-system
                             --new-path
@@ -502,7 +495,6 @@ directCommands:
     Sets the time a file will expire and be deleted.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs file set-expiry --expiry-options {Absolute, NeverExpire, RelativeToCreation, RelativeToNow}
                                   --file-system
@@ -561,7 +553,6 @@ directCommands:
     Show properties of file in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs file show --file-system
                             --path
@@ -617,7 +608,6 @@ directCommands:
     Upload a file to a file path in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs file upload --file-system
                               --path
@@ -765,5 +755,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage files in Azure Data Lake Storage Gen2 account.

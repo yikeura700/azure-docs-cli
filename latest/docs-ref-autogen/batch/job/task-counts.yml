@@ -14,7 +14,6 @@ directCommands:
     Task counts provide a count of the Tasks by active, running or completed Task state, and a count of Tasks which succeeded or failed. Tasks in the preparing state are counted as running. Note that the numbers returned may not always be up to date. If you need exact task counts, use a list query.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch job task-counts show --job-id
                                   [--account-endpoint]
@@ -62,5 +61,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: View the number of tasks and slots in a Batch job and their states.

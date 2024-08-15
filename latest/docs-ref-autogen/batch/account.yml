@@ -12,7 +12,6 @@ directCommands:
     Create a Batch account with the specified parameters.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch account create --location
                             --name
@@ -76,7 +75,6 @@ directCommands:
     Deletes the specified Batch account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch account delete --name
                             --resource-group
@@ -106,7 +104,6 @@ directCommands:
     List the Batch accounts associated with a subscription or resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: az batch account list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -118,7 +115,6 @@ directCommands:
     Log in to a Batch account through Azure Active Directory or Shared Key authentication.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch account login --name
                            --resource-group
@@ -150,7 +146,6 @@ directCommands:
     List the endpoints that a Batch Compute Node under this Batch Account may call as part of Batch service administration. If you are deploying a Pool inside of a virtual network that you specify, you must make sure your network allows outbound access to these endpoints. Failure to allow access to these endpoints may cause Batch to mark the affected nodes as unusable. For more information about creating a pool inside of a virtual network, see https://docs.microsoft.com/azure/batch/batch-virtual-network.".
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch account outbound-endpoints --name
                                         --resource-group
@@ -169,7 +164,6 @@ directCommands:
     Update properties for a Batch account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch account set --name
                          --resource-group
@@ -214,7 +208,6 @@ directCommands:
     Get a specified Batch account or the currently set account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch account show [--name]
                           [--resource-group]
@@ -278,5 +271,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage Azure Batch accounts.

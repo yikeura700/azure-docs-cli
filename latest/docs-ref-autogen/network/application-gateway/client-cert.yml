@@ -12,7 +12,6 @@ directCommands:
     Add trusted client certificate of the application gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway client-cert add --data
                                                    --gateway-name
@@ -51,7 +50,6 @@ directCommands:
     List the existing trusted client certificates of the application gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway client-cert list --gateway-name
                                                     --resource-group
@@ -74,7 +72,6 @@ directCommands:
     Remove an existing trusted client certificate of the application gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway client-cert remove --gateway-name
                                                       --name
@@ -108,7 +105,6 @@ directCommands:
     Show an existing trusted client certificate of the application gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway client-cert show --gateway-name
                                                     --name
@@ -136,7 +132,6 @@ directCommands:
     Update trusted client certificate of the application gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway client-cert update --data
                                                       --gateway-name
@@ -192,7 +187,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway client-cert wait [--created]
                                                     [--custom]
@@ -277,5 +271,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage trusted client certificates of application gateway.

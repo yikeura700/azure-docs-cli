@@ -12,7 +12,6 @@ directCommands:
     Generate VPN client configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway vpn-client generate [--ids]
                                                 [--name]
@@ -75,5 +74,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Download a VPN client configuration required to connect to Azure via point-to-site.

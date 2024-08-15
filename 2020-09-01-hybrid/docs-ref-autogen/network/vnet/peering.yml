@@ -16,7 +16,6 @@ directCommands:
     To successfully peer two virtual networks this command must be called twice with the values for --vnet-name and --remote-vnet reversed.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet peering create --name
                                    --resource-group
@@ -78,7 +77,6 @@ directCommands:
     Delete a peering.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet peering delete [--ids]
                                    [--name]
@@ -116,7 +114,6 @@ directCommands:
     List peerings.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet peering list --resource-group
                                  --vnet-name
@@ -139,7 +136,6 @@ directCommands:
     Show details of a peering.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet peering show [--ids]
                                  [--name]
@@ -172,7 +168,6 @@ directCommands:
     Sync a virtual network peering connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet peering sync [--ids]
                                  [--name]
@@ -205,7 +200,6 @@ directCommands:
     Update a peering.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet peering update [--add]
                                    [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -269,7 +263,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet peering wait [--created]
                                  [--custom]
@@ -359,5 +352,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: To learn more about virtual network peering visit https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering.

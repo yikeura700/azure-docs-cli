@@ -12,7 +12,6 @@ directCommands:
     Disable uploading ledger digests.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db ledger-digest-uploads disable [--ids]
                                             [--name]
@@ -45,7 +44,6 @@ directCommands:
     Enable uploading ledger digests to an Azure Storage account or to Azure Confidential Ledger. If uploading ledger digests is already enabled, the cmdlet resets the digest storage endpoint to a new value.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db ledger-digest-uploads enable --endpoint
                                            [--ids]
@@ -84,7 +82,6 @@ directCommands:
     Show the current ledger digest settings.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db ledger-digest-uploads show [--ids]
                                          [--name]
@@ -140,5 +137,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage ledger digest upload settings.

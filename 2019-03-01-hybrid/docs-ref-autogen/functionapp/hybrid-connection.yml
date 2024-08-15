@@ -12,7 +12,6 @@ directCommands:
     Add an existing hybrid-connection to a functionapp.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp hybrid-connection add --hybrid-connection
                                          --name
@@ -50,7 +49,6 @@ directCommands:
     List the hybrid-connections on a functionapp.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp hybrid-connection list --name
                                           --resource-group
@@ -78,7 +76,6 @@ directCommands:
     Remove a hybrid-connection from a functionapp.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp hybrid-connection remove --hybrid-connection
                                             --name
@@ -139,5 +136,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Methods that list, add and remove hybrid-connections from functionapp.

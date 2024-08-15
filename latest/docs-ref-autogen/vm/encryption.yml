@@ -18,7 +18,6 @@ directCommands:
     For Windows VMs, disabling encryption is permitted on both OS and data volumes.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm encryption disable [--force]
                              [--ids]
@@ -61,7 +60,6 @@ directCommands:
     https://docs.microsoft.com/azure/security/fundamentals/azure-disk-encryption-vms-vmss.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm encryption enable --disk-encryption-keyvault
                             [--aad-client-cert-thumbprint]
@@ -137,7 +135,6 @@ directCommands:
     Show encryption status.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm encryption show [--ids]
                           [--name]
@@ -189,7 +186,6 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: >-
     For more information, see:
 

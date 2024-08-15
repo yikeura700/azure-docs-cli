@@ -12,7 +12,6 @@ directCommands:
     Add a Batch job schedule to an account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch job-schedule create [--account-endpoint]
                                  [--account-key]
@@ -112,7 +111,6 @@ directCommands:
     When you delete a Job Schedule, this also deletes all Jobs and Tasks under that schedule. When Tasks are deleted, all the files in their working directories on the Compute Nodes are also deleted (the retention period is ignored). The Job Schedule statistics are no longer accessible once the Job Schedule is deleted, though they are still counted towards Account lifetime statistics.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch job-schedule delete --job-schedule-id
                                  [--account-endpoint]
@@ -162,7 +160,6 @@ directCommands:
     No new Jobs will be created until the Job Schedule is enabled again.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch job-schedule disable --job-schedule-id
                                   [--account-endpoint]
@@ -205,7 +202,6 @@ directCommands:
     Enables a Job Schedule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch job-schedule enable --job-schedule-id
                                  [--account-endpoint]
@@ -248,7 +244,6 @@ directCommands:
     Lists all of the Job Schedules in the specified Account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch job-schedule list [--account-endpoint]
                                [--account-key]
@@ -281,7 +276,6 @@ directCommands:
     Reset the properties of a job schedule.  An updated job specification only applies to new jobs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch job-schedule reset --job-schedule-id
                                 [--account-endpoint]
@@ -403,7 +397,6 @@ directCommands:
     You can independently update the schedule and the job specification, but any change to either of these entities will reset all properties in that entity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch job-schedule set --job-schedule-id
                               [--account-endpoint]
@@ -523,7 +516,6 @@ directCommands:
     Gets information about the specified Job Schedule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch job-schedule show --job-schedule-id
                                [--account-endpoint]
@@ -574,7 +566,6 @@ directCommands:
     Terminates a Job Schedule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch job-schedule stop --job-schedule-id
                                [--account-endpoint]
@@ -646,5 +637,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage Batch job schedules.

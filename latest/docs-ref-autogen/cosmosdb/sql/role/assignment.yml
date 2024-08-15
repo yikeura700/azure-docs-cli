@@ -12,7 +12,6 @@ directCommands:
     Create a SQL role assignment under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role assignment create --account-name
                                            --principal-id
@@ -76,7 +75,6 @@ directCommands:
     Delete a SQL role assignment under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role assignment delete --account-name
                                            --resource-group
@@ -115,7 +113,6 @@ directCommands:
     Check if an Azure Cosmos DB role assignment exists.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role assignment exists --account-name
                                            --resource-group
@@ -143,7 +140,6 @@ directCommands:
     List all SQL role assignments under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role assignment list --account-name
                                          --resource-group
@@ -166,7 +162,6 @@ directCommands:
     Show the properties of a SQL role assignment under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role assignment show --account-name
                                          --resource-group
@@ -194,7 +189,6 @@ directCommands:
     Update a SQL role assignment under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role assignment update --account-name
                                            --resource-group
@@ -247,7 +241,6 @@ directCommands:
     Poll on a SQL role assignment until a specific condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role assignment wait --account-name
                                          --resource-group
@@ -337,5 +330,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB SQL role assignments.

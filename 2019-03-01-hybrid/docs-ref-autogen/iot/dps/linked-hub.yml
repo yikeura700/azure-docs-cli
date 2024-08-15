@@ -12,7 +12,6 @@ directCommands:
     Create a linked IoT hub in an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps linked-hub create --dps-name
                                  [--allocation-weight]
@@ -64,7 +63,6 @@ directCommands:
     Update a linked IoT hub in an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps linked-hub delete --dps-name
                                  --linked-hub
@@ -97,7 +95,6 @@ directCommands:
     List all linked IoT hubs in an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps linked-hub list --dps-name
                                [--resource-group]
@@ -120,7 +117,6 @@ directCommands:
     Show details of a linked IoT hub in an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps linked-hub show --dps-name
                                --linked-hub
@@ -148,7 +144,6 @@ directCommands:
     Update a linked IoT hub in an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps linked-hub update --dps-name
                                  --linked-hub
@@ -215,5 +210,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/21/2024
   description: Manage linked IoT Hubs in an Azure IoT Hub Device Provisioning Service instance.

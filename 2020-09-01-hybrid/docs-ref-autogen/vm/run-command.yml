@@ -14,7 +14,6 @@ directCommands:
     The operation to create the run command.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm run-command create --name
                              --resource-group
@@ -108,7 +107,6 @@ directCommands:
     The operation to delete the run command.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm run-command delete --name
                              [--ids]
@@ -155,7 +153,6 @@ directCommands:
     `az vm run-command show` returns helpful information on each run-command. Discover Run command-id's via `az vmss run-command list`.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm run-command invoke --command-id
                              [--ids]
@@ -234,7 +231,6 @@ directCommands:
     You can specify "--resource-group" and "--vm-name" to get all run commands of a virtual machine. Or you can specify "--location" to list all available run commands for a subscription in a location.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm run-command list [--expand]
                            [--location]
@@ -268,7 +264,6 @@ directCommands:
     You can specify "--resource-group", "--run-command-name" and "--vm-name" to get run command in a virtual machine. Or you can specify "--command-id" and "--location" to get run command for a subscription in a location.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm run-command show [--command-id]
                            [--ids]
@@ -317,7 +312,6 @@ directCommands:
     The operation to update the run command.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm run-command update --name
                              [--async-execution {false, true}]
@@ -417,7 +411,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the res virtual-machine-run-command is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm run-command wait [--command-id]
                            [--created]
@@ -520,5 +513,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: For more information, see https://docs.microsoft.com/azure/virtual-machines/windows/run-command or https://docs.microsoft.com/azure/virtual-machines/linux/run-command.

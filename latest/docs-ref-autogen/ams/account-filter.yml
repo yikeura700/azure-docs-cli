@@ -12,7 +12,6 @@ directCommands:
     Create an account filter.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account-filter create --account-name
                                  --name
@@ -75,7 +74,6 @@ directCommands:
     Delete an account filter.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account-filter delete [--account-name]
                                  [--ids]
@@ -104,7 +102,6 @@ directCommands:
     List all the account filters of an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account-filter list --account-name
                                --resource-group
@@ -123,7 +120,6 @@ directCommands:
     Show the details of an account filter.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account-filter show [--account-name]
                                [--ids]
@@ -152,7 +148,6 @@ directCommands:
     Update the details of an account filter.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account-filter update [--account-name]
                                  [--add]
@@ -259,5 +254,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage account filters for an Azure Media Services account.

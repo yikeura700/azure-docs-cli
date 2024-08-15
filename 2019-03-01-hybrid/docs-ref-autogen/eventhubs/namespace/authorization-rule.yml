@@ -12,7 +12,6 @@ directCommands:
     Create an AuthorizationRule for a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace authorization-rule create --authorization-rule-name
                                                      --namespace-name
@@ -45,7 +44,6 @@ directCommands:
     Delete an AuthorizationRule for a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace authorization-rule delete [--authorization-rule-name]
                                                      [--ids]
@@ -83,7 +81,6 @@ directCommands:
     List a list of authorization rules for a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace authorization-rule list --namespace-name
                                                    --resource-group
@@ -106,7 +103,6 @@ directCommands:
     Get an AuthorizationRule for a Namespace by rule name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace authorization-rule show [--authorization-rule-name]
                                                    [--ids]
@@ -139,7 +135,6 @@ directCommands:
     Update an AuthorizationRule for a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace authorization-rule update [--add]
                                                      [--authorization-rule-name]
@@ -221,5 +216,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manage Azure EventHubs Authorizationrule for Namespace.

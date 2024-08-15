@@ -12,7 +12,6 @@ directCommands:
     Create a replica of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr replica create --replica-name
                               --resource-group
@@ -59,7 +58,6 @@ directCommands:
     Delete a replica of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr replica delete [--ids]
                               [--replica-name]
@@ -92,7 +90,6 @@ directCommands:
     List replicas of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr replica list --resource-group
                             --signalr-name
@@ -115,7 +112,6 @@ directCommands:
     Show the details of a replica.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr replica show [--ids]
                             [--replica-name]
@@ -172,5 +168,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/10/2023
   description: Manage replica settings.

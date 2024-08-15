@@ -12,7 +12,6 @@ directCommands:
     Cancel a pipeline run by its run ID.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse pipeline-run cancel --run-id
                                    --workspace-name
@@ -48,7 +47,6 @@ directCommands:
     Query pipeline runs in the workspace based on input filter conditions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse pipeline-run query-by-workspace --last-updated-after
                                                --last-updated-before
@@ -92,7 +90,6 @@ directCommands:
     Get a pipeline run by its run ID.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse pipeline-run show --run-id
                                  --workspace-name
@@ -140,5 +137,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage Synapse's pipeline run.

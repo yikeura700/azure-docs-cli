@@ -12,7 +12,6 @@ directCommands:
     Creates a KQL script.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kql-script create --file
                                  --name
@@ -59,7 +58,6 @@ directCommands:
     Deletes a KQL script.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kql-script delete --name
                                  --workspace-name
@@ -93,7 +91,6 @@ directCommands:
     Export KQL scripts.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kql-script export --output-folder
                                  --workspace-name
@@ -121,7 +118,6 @@ directCommands:
     Creates a KQL script.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kql-script import --file
                                  --name
@@ -168,7 +164,6 @@ directCommands:
     List KQL scripts.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: az synapse kql-script list --workspace-name
   examples:
   - summary: |-
@@ -185,7 +180,6 @@ directCommands:
     Gets a KQL script.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kql-script show --name
                                --workspace-name
@@ -208,7 +202,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of a KQL script is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kql-script wait --name
                                --workspace-name
@@ -289,5 +282,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage script with kusto.

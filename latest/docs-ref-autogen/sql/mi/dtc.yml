@@ -16,7 +16,6 @@ directCommands:
     This command gets managed instance DTC settings.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi dtc show [--ids]
                        [--managed-instance-name]
@@ -50,7 +49,6 @@ directCommands:
     This command updates the managed instance DTC settings. All parameters are optional.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi dtc update [--add]
                          [--allow-inbound-enabled {0, 1, f, false, n, no, t, true, y, yes}]
@@ -148,7 +146,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi dtc wait [--created]
                        [--custom]
@@ -230,5 +227,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: The managed instance DTC object can be fetched and updated using these commands.

@@ -12,7 +12,6 @@ directCommands:
     Create an Active Directory administrator for MySQL server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server ad-admin create --resource-group
                                     --server-name
@@ -49,7 +48,6 @@ directCommands:
     Delete an Active Directory Administrator for MySQL server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server ad-admin delete [--ids]
                                     [--resource-group]
@@ -83,7 +81,6 @@ directCommands:
     List all Active Directory Administrators for MySQL server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server ad-admin list [--ids]
                                   [--resource-group]
@@ -112,7 +109,6 @@ directCommands:
     Get Active Directory Administrator information for a MySQL server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server ad-admin show [--ids]
                                   [--resource-group]
@@ -141,7 +137,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the MySQL server Active Directory Administrator is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server ad-admin wait [--created]
                                   [--custom]
@@ -229,5 +224,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage a MySQL server's Active Directory administrator.

@@ -12,7 +12,6 @@ directCommands:
     Create a topic in the specified namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic create --name
                                --namespace-name
@@ -87,7 +86,6 @@ directCommands:
     Delete a topic from the specified namespace and resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic delete [--ids]
                                [--name]
@@ -116,7 +114,6 @@ directCommands:
     List all the topics in a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic list --namespace-name
                              --resource-group
@@ -144,7 +141,6 @@ directCommands:
     Get a description for the specified topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic show [--ids]
                              [--name]
@@ -173,7 +169,6 @@ directCommands:
     Update a topic in the specified namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic update [--add]
                                [--auto-delete-on-idle]
@@ -315,5 +310,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Servicebus topic.

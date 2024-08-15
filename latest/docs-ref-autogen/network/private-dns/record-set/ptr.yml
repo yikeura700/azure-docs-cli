@@ -12,7 +12,6 @@ directCommands:
     Add a PTR record.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set ptr add-record --ptrdname
                                                      --record-set-name
@@ -47,7 +46,6 @@ directCommands:
     Create an empty PTR record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set ptr create --name
                                                  --resource-group
@@ -85,7 +83,6 @@ directCommands:
     Delete a PTR record set and all associated records.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set ptr delete [--ids]
                                                  [--if-match]
@@ -127,7 +124,6 @@ directCommands:
     List all PTR record sets in a zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set ptr list --resource-group
                                                --zone-name
@@ -161,7 +157,6 @@ directCommands:
     By default, if the last record in a set is removed, the record set is deleted. To retain the empty record set, include --keep-empty-record-set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set ptr remove-record --ptrdname
                                                         --record-set-name
@@ -202,7 +197,6 @@ directCommands:
     Get the details of a PTR record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set ptr show [--ids]
                                                [--name]
@@ -235,7 +229,6 @@ directCommands:
     Update a PTR record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set ptr update [--add]
                                                  [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -320,5 +313,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage Private DNS PTR records.

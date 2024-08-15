@@ -12,7 +12,6 @@ directCommands:
     Approve a private endpoint connection request for eventhubs namesapce.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace private-endpoint-connection approve [--description]
                                                                [--id]
@@ -60,7 +59,6 @@ directCommands:
     Delete a private endpoint connection request for eventhubs namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace private-endpoint-connection delete [--description]
                                                               [--id]
@@ -113,7 +111,6 @@ directCommands:
     Reject a private endpoint connection request for eventhubs namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace private-endpoint-connection reject [--description]
                                                               [--id]
@@ -184,5 +181,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manage eventhubs namespace private endpoint connection.

@@ -12,7 +12,6 @@ directCommands:
     Create a streaming policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-policy create --account-name
                                    --name
@@ -143,7 +142,6 @@ directCommands:
     Deletes a Streaming Policy in the Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-policy delete [--account-name]
                                    [--ids]
@@ -172,7 +170,6 @@ directCommands:
     List all the streaming policies within an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-policy list --account-name
                                  --resource-group
@@ -204,7 +201,6 @@ directCommands:
     Show the details of a streaming policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-policy show [--account-name]
                                  [--ids]
@@ -257,5 +253,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage streaming policies for an Azure Media Services account.

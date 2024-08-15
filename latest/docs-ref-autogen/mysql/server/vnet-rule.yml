@@ -12,7 +12,6 @@ directCommands:
     Create a virtual network rule to allows access to a MySQL server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server vnet-rule create --name
                                      --resource-group
@@ -58,7 +57,6 @@ directCommands:
     Deletes the virtual network rule with the given name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server vnet-rule delete [--ids]
                                      [--name]
@@ -87,7 +85,6 @@ directCommands:
     Gets a list of virtual network rules in a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server vnet-rule list [--ids]
                                    [--resource-group]
@@ -112,7 +109,6 @@ directCommands:
     Gets a virtual network rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server vnet-rule show [--ids]
                                    [--name]
@@ -141,7 +137,6 @@ directCommands:
     Update a virtual network rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server vnet-rule update --subnet
                                      [--add]
@@ -230,5 +225,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage a server's virtual network rules.

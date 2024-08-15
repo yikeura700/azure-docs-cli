@@ -14,7 +14,6 @@ directCommands:
     This is only supported for Azure Web-Direct subscriptions. Other subscription types which were not purchased directly through the Azure web portal are not supported through this preview API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/billing/_help.py
   syntax: >-
     az billing period list [--filter]
                            [--max-items]
@@ -45,7 +44,6 @@ directCommands:
     This is only supported for Azure Web-Direct subscriptions. Other subscription types which were not purchased directly through the Azure web portal are not supported through this preview API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/billing/_help.py
   syntax: az billing period show --name
   requiredParameters:
   - isRequired: true
@@ -80,5 +78,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/26/2020
   description: Manage billing periods for a subscription.

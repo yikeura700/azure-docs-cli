@@ -12,7 +12,6 @@ directCommands:
     Create a tag value.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az tag add-value --name
                      --value
@@ -37,7 +36,6 @@ directCommands:
     The az tag create command with an id creates or updates the entire set of tags on a resource, resource group or subscription. This operation allows adding or replacing the entire set of tags on the specified resource, resource group or subscription. The specified entity can have a maximum of 50 tags. Please note: 'tag create' acts like a 'tag init' hence tags created with this command are the only ones being present after execution.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az tag create [--name]
                   [--resource-id]
@@ -73,7 +71,6 @@ directCommands:
     The az tag delete command with an id deletes the entire set of tags on a resource, resource group or subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az tag delete [--name]
                   [--resource-id]
@@ -110,7 +107,6 @@ directCommands:
     The az tag list command with an id lists the entire set of tags on a resource, resource group or subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az tag list [--resource-id]
   examples:
   - summary: |-
@@ -134,7 +130,6 @@ directCommands:
     This operation allows deleting a value from the list of predefined values for an existing predefined tag name. The value being deleted must not be in use as a tag value for the given tag name for any resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az tag remove-value --name
                         --value
@@ -155,7 +150,6 @@ directCommands:
     The az tag update command with an id selectively updates the set of tags on a resource, resource group or subscription. This operation allows replacing, merging or selectively deleting tags on the specified resource, resource group or subscription. The specified entity can have a maximum of 50 tags at the end of the operation. The 'replace' option replaces the entire set of existing tags with a new set. The 'merge' option allows adding tags with new names and updating the values of tags with existing names. The 'delete' option allows selectively deleting tags based on given names or name/value pairs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az tag update --operation {Delete, Merge, Replace}
                   --resource-id
@@ -216,5 +210,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Tag Management on a resource.

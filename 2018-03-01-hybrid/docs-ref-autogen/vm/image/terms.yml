@@ -12,7 +12,6 @@ directCommands:
     Accept Azure Marketplace image terms so that the image can be used to create VMs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm image terms accept [--offer]
                              [--plan]
@@ -41,7 +40,6 @@ directCommands:
     Cancel Azure Marketplace image terms.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm image terms cancel [--offer]
                              [--plan]
@@ -73,7 +71,6 @@ directCommands:
     Get the details of Azure Marketplace image terms.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm image terms show [--offer]
                            [--plan]
@@ -125,5 +122,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Manage Azure Marketplace image terms.

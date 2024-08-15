@@ -14,7 +14,6 @@ directCommands:
     Usage example - az redis server-link create --name testCacheName --resource-group testResourceGroup --cache-to-link secondTestCacheName --replication-role Secondary.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis server-link create --name
                                 --replication-role {Primary, Secondary}
@@ -44,7 +43,6 @@ directCommands:
     Deletes the linked server from a redis cache (requires Premium SKU).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis server-link delete --linked-server-name
                                 --name
@@ -68,7 +66,6 @@ directCommands:
     Gets the list of linked servers associated with this redis cache (requires Premium SKU).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis server-link list --name
                               --resource-group
@@ -87,7 +84,6 @@ directCommands:
     Gets the detailed information about a linked server of a redis cache (requires Premium SKU).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis server-link show --linked-server-name
                               --name
@@ -135,5 +131,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/25/2024
   description: Manage Redis server links.

@@ -14,7 +14,6 @@ directCommands:
     Requests that a backup of the specified certificate be downloaded to the client. All versions of the certificate will be downloaded. This operation requires the certificates/backup permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate backup --file
                                    [--id]
@@ -43,7 +42,6 @@ directCommands:
     Certificates can be used as a secrets for provisioned virtual machines.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate create --name
                                    --policy
@@ -103,7 +101,6 @@ directCommands:
 
     https://docs.microsoft.com/azure/key-vault/general/soft-delete-overview
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate delete [--id]
                                    [--name]
@@ -126,7 +123,6 @@ directCommands:
     The certificate formatted as either PEM or DER. PEM is the default.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate download --file
                                      [--encoding {DER, PEM}]
@@ -181,7 +177,6 @@ directCommands:
     For more details, see: https://docs.microsoft.com/azure/key-vault/certificates/about-certificates#certificate-policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: az keyvault certificate get-default-policy [--scaffold]
   examples:
   - summary: |-
@@ -202,7 +197,6 @@ directCommands:
     Certificates can also be used as a secrets in provisioned virtual machines.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate import --file
                                    --name
@@ -270,7 +264,6 @@ directCommands:
     The GetCertificates operation returns the set of certificates resources in the specified key vault. This operation requires the certificates/list permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate list [--id]
                                  [--maxresults]
@@ -293,7 +286,6 @@ directCommands:
     Possible only if vault is soft-delete enabled.  Requires certificates/get/list permission. Retrieves the certificates in the current vault which are in a deleted state and ready for recovery or purging. This operation includes deletion-specific information.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate list-deleted [--id]
                                          [--maxresults]
@@ -316,7 +308,6 @@ directCommands:
     The GetCertificateVersions operation returns the versions of a certificate in the specified key vault. This operation requires the certificates/list permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate list-versions [--id]
                                           [--maxresults]
@@ -343,7 +334,6 @@ directCommands:
     The PurgeDeletedCertificate operation performs an irreversible deletion of the specified certificate, without possibility for recovery. The operation is not available if the recovery level does not specify 'Purgeable'. This operation requires the certificate/purge permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate purge [--id]
                                   [--name]
@@ -366,7 +356,6 @@ directCommands:
     Possible only in a vault with soft-delete enabled.  Requires certificates/recover permission. When this method returns Key Vault has begun recovering the certificate. Recovery may take several seconds. This method therefore returns a poller enabling you to wait for recovery to complete. Waiting is only necessary when you want to use the recovered certificate in another operation immediately.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate recover [--id]
                                     [--name]
@@ -389,7 +378,6 @@ directCommands:
     Restores a backed up certificate, and all its versions, to a vault. This operation requires the certificates/restore permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate restore --file
                                     [--vault-name]
@@ -410,7 +398,6 @@ directCommands:
     The UpdateCertificate operation applies the specified update on the given certificate; the only elements updated are the certificate's attributes. This operation requires the certificates/update permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate set-attributes [--enabled {false, true}]
                                            [--id]
@@ -450,7 +437,6 @@ directCommands:
     Gets information about a specific certificate. This operation requires the certificates/get permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate show [--id]
                                  [--name]
@@ -477,7 +463,6 @@ directCommands:
     Possible only in a vault with soft-delete enabled.  Requires certificates/get permission. Retrieves the deleted certificate information plus its attributes, such as retention interval, scheduled permanent deletion, and the current deletion recovery level.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate show-deleted [--id]
                                          [--name]
@@ -551,5 +536,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage certificates.

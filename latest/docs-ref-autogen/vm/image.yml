@@ -14,7 +14,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in version '3.0.0'. Use 'az vm image terms accept' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm image accept-terms [--offer]
                              [--plan]
@@ -43,7 +42,6 @@ directCommands:
     List the VM/VMSS images available in the Azure Marketplace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm image list [--all]
                      [--architecture {Arm64, x64}]
@@ -92,7 +90,6 @@ directCommands:
     List the VM image offers available in the Azure Marketplace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm image list-offers --location
                             --publisher
@@ -124,7 +121,6 @@ directCommands:
     List the VM image publishers available in the Azure Marketplace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm image list-publishers --location
                                 [--edge-zone]
@@ -150,7 +146,6 @@ directCommands:
     List the VM image SKUs available in the Azure Marketplace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm image list-skus --location
                           --offer
@@ -184,7 +179,6 @@ directCommands:
     Get the details for a VM image available in the Azure Marketplace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm image show [--edge-zone]
                      [--location]
@@ -261,5 +255,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Information on available virtual machine images.

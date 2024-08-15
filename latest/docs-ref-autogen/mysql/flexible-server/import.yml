@@ -22,7 +22,6 @@ directCommands:
     https://docs.microsoft.com/en-us/azure/mysql/flexible-server/how-to-manage-virtual-network-cli.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server import create --data-source
                                            --data-source-type {azure_blob, mysql_single}
@@ -233,7 +232,6 @@ directCommands:
     To stop replication between the source single server and target flexible server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server import stop-replication [--ids]
                                                      [--name]
@@ -289,5 +287,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage import workflows for MySQL Flexible Servers.

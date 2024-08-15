@@ -12,7 +12,6 @@ directCommands:
     List policy compliance states.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy state list [--all]
                          [--apply]
@@ -161,7 +160,6 @@ directCommands:
     Summarize policy compliance states.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy state summarize [--filter]
                               [--from]
@@ -262,7 +260,6 @@ directCommands:
     Trigger a policy compliance evaluation for a scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy state trigger-scan [--no-wait]
                                  [--resource-group]
@@ -313,5 +310,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage policy compliance states.

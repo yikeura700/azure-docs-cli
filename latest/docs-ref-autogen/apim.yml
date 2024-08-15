@@ -12,7 +12,6 @@ directCommands:
     Update the API Management resource running in the virtual network to pick the updated network settings.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim apply-network-updates --name
                                   --resource-group
@@ -45,7 +44,6 @@ directCommands:
     Creates a backup of the API Management service to the given Azure Storage Account. This is long running operation and could take several minutes to complete.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim backup --backup-name
                    --container-name
@@ -94,7 +92,6 @@ directCommands:
     Checks to see if a service name is available to use.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: az apim check-name --name
   requiredParameters:
   - isRequired: true
@@ -107,7 +104,6 @@ directCommands:
     Create an API Management service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim create --name
                    --publisher-email
@@ -200,7 +196,6 @@ directCommands:
     Deletes an API Management service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim delete --name
                    --resource-group
@@ -234,7 +229,6 @@ directCommands:
     List API Management service instances.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: az apim list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -246,7 +240,6 @@ directCommands:
     Restores a backup of an API Management service created using the ApiManagementService_Backup operation on the current service. This is a long running operation and could take several minutes to complete.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim restore --backup-name
                     --container-name
@@ -295,7 +288,6 @@ directCommands:
     Show details of an API Management service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim show --name
                  --resource-group
@@ -314,7 +306,6 @@ directCommands:
     Update an API Management service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim update --name
                    --resource-group
@@ -405,7 +396,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of an apim is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim wait --name
                  --resource-group
@@ -565,5 +555,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/19/2024
   description: Manage Azure API Management services.

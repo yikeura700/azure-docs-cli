@@ -14,7 +14,6 @@ directCommands:
     Create a flow log on a network security group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher flow-log create --name
                                        [--enabled {0, 1, f, false, n, no, t, true, y, yes}]
@@ -124,7 +123,6 @@ directCommands:
     Delete the specified flow log resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher flow-log delete --name
                                        [--location]
@@ -152,7 +150,6 @@ directCommands:
     List all flow log resources for the specified Network Watcher.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network watcher flow-log list [--location]
   examples:
   - summary: |-
@@ -168,7 +165,6 @@ directCommands:
     Get the flow log configuration of a network security group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher flow-log show [--location]
                                      [--name]
@@ -202,7 +198,6 @@ directCommands:
     Update the flow log configuration of a network security group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher flow-log update --name
                                        [--add]
@@ -324,7 +319,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher flow-log wait [--created]
                                      [--custom]
@@ -413,5 +407,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: For more information about configuring flow logs visit https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-cli.

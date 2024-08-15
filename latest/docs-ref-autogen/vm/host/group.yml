@@ -12,7 +12,6 @@ directCommands:
     Create a dedicated host group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host group create --name
                             --platform-fault-domain-count
@@ -63,7 +62,6 @@ directCommands:
     Delete a dedicated host group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host group delete [--host-group-name]
                             [--ids]
@@ -93,7 +91,6 @@ directCommands:
     Get instance view of a dedicated host group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host group get-instance-view [--ids]
                                        [--name]
@@ -124,7 +121,6 @@ directCommands:
     List dedicated host groups by subscription. If resource group is specified, lists dedicated host groups by resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host group list [--max-items]
                           [--next-token]
@@ -145,7 +141,6 @@ directCommands:
     Get the details of a dedicated host group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host group show [--host-group-name]
                           [--ids]
@@ -174,7 +169,6 @@ directCommands:
     Update a dedicated host group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host group update [--add]
                             [--force-string]
@@ -245,5 +239,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Manage Dedicated Host Groups.

@@ -12,7 +12,6 @@ directCommands:
     Create a user.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad user create --display-name
                       --password
@@ -55,7 +54,6 @@ directCommands:
     Delete a user.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az ad user delete --id
   examples:
   - summary: |-
@@ -72,7 +70,6 @@ directCommands:
     Get groups of which the user is a member.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad user get-member-groups --id
                                  [--security-enabled-only {false, true}]
@@ -97,7 +94,6 @@ directCommands:
     List users.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad user list [--display-name]
                     [--filter]
@@ -122,7 +118,6 @@ directCommands:
     Get the details of a user.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az ad user show --id
   examples:
   - summary: |-
@@ -139,7 +134,6 @@ directCommands:
     Update a user.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad user update --id
                       [--account-enabled {false, true}]
@@ -206,5 +200,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/25/2024
   description: Manage Microsoft Entra users.

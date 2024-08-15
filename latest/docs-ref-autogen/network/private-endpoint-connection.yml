@@ -12,7 +12,6 @@ directCommands:
     Approve a private endpoint connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint-connection approve [--description]
                                                    [--id]
@@ -56,7 +55,6 @@ directCommands:
     Delete a private endpoint connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint-connection delete [--id]
                                                   [--name]
@@ -101,7 +99,6 @@ directCommands:
     List all private endpoint connections.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint-connection list [--id]
                                                 [--name]
@@ -137,7 +134,6 @@ directCommands:
     Reject a private endpoint connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint-connection reject [--description]
                                                   [--id]
@@ -181,7 +177,6 @@ directCommands:
     Show a private endpoint connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint-connection show [--id]
                                                 [--name]
@@ -246,5 +241,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage private endpoint connections.

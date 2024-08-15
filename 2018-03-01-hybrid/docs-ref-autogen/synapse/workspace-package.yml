@@ -12,7 +12,6 @@ directCommands:
     Delete a workspace package.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace-package delete --name
                                         --workspace-name
@@ -48,7 +47,6 @@ directCommands:
     List workspace packages.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: az synapse workspace-package list --workspace-name
   examples:
   - summary: |-
@@ -65,7 +63,6 @@ directCommands:
     Get a workspace package.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace-package show --name
                                       --workspace-name
@@ -90,7 +87,6 @@ directCommands:
     Upload a local workspace package file to an Azure Synapse workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace-package upload --file
                                         --workspace-name
@@ -121,7 +117,6 @@ directCommands:
     Upload workspace package files from a local directory to an Azure Synapse workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace-package upload-batch --source
                                               --workspace-name
@@ -177,5 +172,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage Synapse's workspace packages.

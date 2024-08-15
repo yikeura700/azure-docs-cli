@@ -12,7 +12,6 @@ directCommands:
     Create a custom certificate of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr custom-certificate create --keyvault-base-uri
                                          --keyvault-secret-name
@@ -51,7 +50,6 @@ directCommands:
     Delete a custom certificate of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr custom-certificate delete --name
                                          --resource-group
@@ -75,7 +73,6 @@ directCommands:
     List custom certificate of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr custom-certificate list --resource-group
                                        --signalr-name
@@ -94,7 +91,6 @@ directCommands:
     Show the detail of a custom certificate of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr custom-certificate show --name
                                        --resource-group
@@ -118,7 +114,6 @@ directCommands:
     Update a custom certificate of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr custom-certificate update --name
                                          --resource-group
@@ -200,5 +195,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/10/2023
   description: Manage custom certificate settings.

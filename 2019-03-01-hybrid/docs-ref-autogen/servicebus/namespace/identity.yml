@@ -12,7 +12,6 @@ directCommands:
     Assign System or User or System, User assigned identities to a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace identity assign --namespace-name
                                             --resource-group
@@ -45,7 +44,6 @@ directCommands:
     Removes System or User or System, User assigned identities from a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace identity remove --namespace-name
                                             --resource-group
@@ -100,5 +98,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Manage servicebus namespace identity.

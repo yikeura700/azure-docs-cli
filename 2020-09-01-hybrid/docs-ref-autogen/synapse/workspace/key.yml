@@ -12,7 +12,6 @@ directCommands:
     Create a workspace's key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace key create --key-identifier
                                     --name
@@ -54,7 +53,6 @@ directCommands:
     Delete a workspace's key. The key at active status can't be deleted.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace key delete [--ids]
                                     [--name]
@@ -100,7 +98,6 @@ directCommands:
     List keys under specified workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace key list --resource-group
                                   --workspace-name
@@ -123,7 +120,6 @@ directCommands:
     Show a workspace's key by name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace key show [--ids]
                                   [--name]
@@ -159,7 +155,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of a workspace key is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace key wait --key-name
                                   [--created]
@@ -249,5 +244,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage workspace's keys.

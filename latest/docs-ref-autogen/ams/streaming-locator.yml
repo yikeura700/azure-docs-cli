@@ -12,7 +12,6 @@ directCommands:
     Create a streaming locator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-locator create --account-name
                                     --asset-name
@@ -77,7 +76,6 @@ directCommands:
     Deletes a Streaming Locator in the Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-locator delete [--account-name]
                                     [--ids]
@@ -106,7 +104,6 @@ directCommands:
     List paths supported by a streaming locator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-locator get-paths [--account-name]
                                        [--ids]
@@ -135,7 +132,6 @@ directCommands:
     List all the streaming locators within an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-locator list --account-name
                                   --resource-group
@@ -167,7 +163,6 @@ directCommands:
     List content keys used by a streaming locator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-locator list-content-keys [--account-name]
                                                [--ids]
@@ -196,7 +191,6 @@ directCommands:
     Show the details of a streaming locator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-locator show [--account-name]
                                   [--ids]
@@ -251,5 +245,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage streaming locators for an Azure Media Services account.

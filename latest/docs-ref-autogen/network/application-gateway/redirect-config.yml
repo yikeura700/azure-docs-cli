@@ -12,7 +12,6 @@ directCommands:
     Create a redirect configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway redirect-config create --gateway-name
                                                           --name
@@ -70,7 +69,6 @@ directCommands:
     Delete a redirect configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway redirect-config delete --gateway-name
                                                           --name
@@ -104,7 +102,6 @@ directCommands:
     List redirect configurations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway redirect-config list --gateway-name
                                                         --resource-group
@@ -127,7 +124,6 @@ directCommands:
     Get the details of a redirect configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway redirect-config show --gateway-name
                                                         --name
@@ -155,7 +151,6 @@ directCommands:
     Update a redirect configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway redirect-config update --gateway-name
                                                           --name
@@ -229,7 +224,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway redirect-config wait [--created]
                                                         [--custom]
@@ -314,5 +308,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage redirect configurations of an application gateway.

@@ -12,7 +12,6 @@ directCommands:
     Gets the primary and secondary connection strings for the Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace authorization-rule keys list --authorization-rule-name
                                                         --namespace-name
@@ -40,7 +39,6 @@ directCommands:
     Regenerates the primary or secondary connection strings for the specified Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace authorization-rule keys renew --key {PrimaryKey, SecondaryKey}
                                                          [--authorization-rule-name]
@@ -106,5 +104,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manage Azure EventHubs Authorizationrule connection strings for Namespace.

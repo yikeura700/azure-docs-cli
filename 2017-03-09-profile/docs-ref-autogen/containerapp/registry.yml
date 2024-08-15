@@ -12,7 +12,6 @@ directCommands:
     List container registries configured in a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp registry list --name
                                   --resource-group
@@ -35,7 +34,6 @@ directCommands:
     Remove a container registry's details.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp registry remove --server
                                     [--ids]
@@ -70,7 +68,6 @@ directCommands:
     Add or update a container registry's details.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp registry set --server
                                  [--identity]
@@ -119,7 +116,6 @@ directCommands:
     Show details of a container registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp registry show --server
                                   [--ids]
@@ -178,5 +174,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/14/2024
   description: Commands to manage container registry information.

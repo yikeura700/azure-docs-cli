@@ -12,7 +12,6 @@ directCommands:
     Delete feature flag.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature delete [--auth-mode {key, login}]
                                 [--connection-string]
@@ -69,7 +68,6 @@ directCommands:
     Disable a feature flag to turn it OFF for use.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature disable [--auth-mode {key, login}]
                                  [--connection-string]
@@ -123,7 +121,6 @@ directCommands:
     Enable a feature flag to turn it ON for use.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature enable [--auth-mode {key, login}]
                                 [--connection-string]
@@ -177,7 +174,6 @@ directCommands:
     List feature flags.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature list [--all]
                               [--auth-mode {key, login}]
@@ -252,7 +248,6 @@ directCommands:
     Lock a feature flag to prohibit write operations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature lock [--auth-mode {key, login}]
                               [--connection-string]
@@ -306,7 +301,6 @@ directCommands:
     Set a feature flag.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature set [--auth-mode {key, login}]
                              [--connection-string]
@@ -372,7 +366,6 @@ directCommands:
     Show all attributes of a feature flag.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature show [--auth-mode {key, login}]
                               [--connection-string]
@@ -429,7 +422,6 @@ directCommands:
     Unlock a feature to gain write operations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature unlock [--auth-mode {key, login}]
                                 [--connection-string]
@@ -517,5 +509,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/18/2024
   description: Manage feature flags stored in an App Configuration store.

@@ -12,7 +12,6 @@ directCommands:
     Show the storage blob delete-policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob service-properties delete-policy show [--account-key]
                                                           [--account-name]
@@ -53,7 +52,6 @@ directCommands:
     Update the storage blob delete-policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob service-properties delete-policy update [--account-key]
                                                             [--account-name]
@@ -118,5 +116,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage storage blob delete-policy service properties.

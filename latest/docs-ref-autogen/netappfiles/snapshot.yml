@@ -12,7 +12,6 @@ directCommands:
     Create the specified snapshot within the given volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles snapshot create --account-name
                                    --name
@@ -60,7 +59,6 @@ directCommands:
     Delete snapshot.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles snapshot delete [--account-name]
                                    [--ids]
@@ -111,7 +109,6 @@ directCommands:
     List all snapshots associated with the volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles snapshot list --account-name
                                  --pool-name
@@ -144,7 +141,6 @@ directCommands:
     Restore the specified files from the specified snapshot to the active filesystem.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles snapshot restore-files --file-paths
                                           [--account-name]
@@ -200,7 +196,6 @@ directCommands:
     Get details of the specified snapshot.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles snapshot show [--account-name]
                                  [--ids]
@@ -241,7 +236,6 @@ directCommands:
     Update the specified snapshot within the given volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles snapshot update [--account-name]
                                    [--add]
@@ -300,7 +294,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles snapshot wait [--account-name]
                                  [--created]
@@ -406,5 +399,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/07/2024
   description: Manage Azure NetApp Files (ANF) Snapshot Resources.

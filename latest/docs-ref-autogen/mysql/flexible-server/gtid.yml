@@ -12,7 +12,6 @@ directCommands:
     Resets GTID on a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server gtid reset --gtid-set
                                         --resource-group
@@ -72,5 +71,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage GTID on a server.

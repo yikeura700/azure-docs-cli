@@ -12,7 +12,6 @@ directCommands:
     Download the security domain file from the HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault security-domain download --sd-quorum
                                          --sd-wrapping-keys
@@ -54,7 +53,6 @@ directCommands:
     Retrieve the exchange key of the HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault security-domain init-recovery --sd-exchange-key
                                               [--hsm-name]
@@ -81,7 +79,6 @@ directCommands:
     Enable to decrypt and encrypt security domain file as blob. Can be run in offline environment, before file is uploaded to HSM using security-domain upload.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault security-domain restore-blob --sd-exchange-key
                                              --sd-file
@@ -119,7 +116,6 @@ directCommands:
     Start to restore the HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault security-domain upload --sd-file
                                        [--hsm-name]
@@ -171,7 +167,6 @@ directCommands:
     Place the CLI in a waiting state until HSM security domain operation is finished.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault security-domain wait [--hsm-name]
                                      [--id]
@@ -223,5 +218,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage security domain operations.

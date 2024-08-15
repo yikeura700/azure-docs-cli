@@ -12,7 +12,6 @@ directCommands:
     Create a frontend IP address.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network cross-region-lb frontend-ip create --lb-name
                                                   --name
@@ -58,7 +57,6 @@ directCommands:
     Delete a frontend IP address.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network cross-region-lb frontend-ip delete --lb-name
                                                   --name
@@ -92,7 +90,6 @@ directCommands:
     List frontend IP addresses.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network cross-region-lb frontend-ip list --lb-name
                                                 --resource-group
@@ -115,7 +112,6 @@ directCommands:
     Get the details of a frontend IP address.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network cross-region-lb frontend-ip show --lb-name
                                                 --name
@@ -143,7 +139,6 @@ directCommands:
     Update a frontend IP address.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network cross-region-lb frontend-ip update --lb-name
                                                   --name
@@ -231,5 +226,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage frontend IP addresses of a cross-region load balancer.

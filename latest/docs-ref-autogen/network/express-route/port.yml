@@ -12,7 +12,6 @@ directCommands:
     Create an ExpressRoute port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port create --name
                                          --resource-group
@@ -67,7 +66,6 @@ directCommands:
     Delete an ExpressRoute port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port delete [--ids]
                                          [--name]
@@ -106,7 +104,6 @@ directCommands:
     Generate and download a letter of authorization for the requested ExpressRoutePort.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port generate-loa --customer-name
                                                [--file]
@@ -142,7 +139,6 @@ directCommands:
     List ExpressRoute ports.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port list [--max-items]
                                        [--next-token]
@@ -167,7 +163,6 @@ directCommands:
     Get the details of an ExpressRoute port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port show [--ids]
                                        [--name]
@@ -196,7 +191,6 @@ directCommands:
     Update settings of an ExpressRoute port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port update [--add]
                                          [--billing-type {MeteredData, UnlimitedData}]
@@ -256,7 +250,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port wait [--created]
                                        [--custom]
@@ -362,5 +355,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage ExpressRoute ports.

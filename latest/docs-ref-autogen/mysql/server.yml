@@ -12,7 +12,6 @@ directCommands:
     Create a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server create [--admin-password]
                            [--admin-user]
@@ -49,7 +48,7 @@ directCommands:
     summary: |-
       The password of the administrator. Minimum 8 characters and maximum 128 characters. Password must contain characters from three of the following categories: English uppercase letters, English lowercase letters, numbers, and non-alphanumeric characters.
   - name: --admin-user -u
-    defaultValue: "earthycolt0"
+    defaultValue: "bossyostrich5"
     summary: |-
       Administrator username for the server. Once set, it cannot be changed.
   - name: --assign-identity
@@ -112,7 +111,6 @@ directCommands:
     Delete a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server delete [--ids]
                            [--name]
@@ -146,7 +144,6 @@ directCommands:
     Geo-restore a server from backup.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server georestore --location
                                --source-server
@@ -212,7 +209,6 @@ directCommands:
     List available servers.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: az mysql server list [--resource-group]
   examples:
   - summary: |-
@@ -231,7 +227,6 @@ directCommands:
     List available sku's in the given region.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: az mysql server list-skus --location
   examples:
   - summary: |-
@@ -248,7 +243,6 @@ directCommands:
     Restart a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server restart [--ids]
                             [--name]
@@ -280,7 +274,6 @@ directCommands:
     Restore a server from backup.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server restore --pitr-time
                             --source-server
@@ -331,7 +324,6 @@ directCommands:
     Get the details of a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server show [--ids]
                          [--name]
@@ -360,7 +352,6 @@ directCommands:
     Show the connection strings for a MySQL server database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server show-connection-string [--admin-password]
                                            [--admin-user]
@@ -401,7 +392,6 @@ directCommands:
     Start a stopped server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server start [--ids]
                           [--name]
@@ -430,7 +420,6 @@ directCommands:
     Stop a running server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server stop [--ids]
                          [--name]
@@ -459,7 +448,6 @@ directCommands:
     Update a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server update [--add]
                            [--admin-password]
@@ -558,7 +546,6 @@ directCommands:
     Upgrade mysql server to a higher version, like 5.6 to 5.7.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server upgrade --target-server-version
                             [--ids]
@@ -593,7 +580,6 @@ directCommands:
     Wait for server to satisfy certain conditions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server wait [--custom]
                          [--exists]
@@ -713,5 +699,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage MySQL servers.

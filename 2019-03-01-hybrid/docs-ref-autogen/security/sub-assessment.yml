@@ -12,7 +12,6 @@ directCommands:
     List all security sub assessment results.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/security/_help.py
   syntax: >-
     az security sub-assessment list [--assessed-resource-id]
                                     [--assessment-name]
@@ -33,7 +32,6 @@ directCommands:
     Shows a security sub assessment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/security/_help.py
   syntax: >-
     az security sub-assessment show --assessment-name
                                     --name
@@ -83,5 +81,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/13/2024
   description: View your security sub assessments.

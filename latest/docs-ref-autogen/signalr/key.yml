@@ -12,7 +12,6 @@ directCommands:
     List the access keys for a SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr key list --name
                         --resource-group
@@ -35,7 +34,6 @@ directCommands:
     Regenerate the access key for a SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr key renew --key-type {primary, secondary}
                          [--ids]
@@ -93,5 +91,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/10/2023
   description: Manage keys for Azure SignalR Service.

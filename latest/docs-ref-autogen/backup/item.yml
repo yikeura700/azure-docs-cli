@@ -12,7 +12,6 @@ directCommands:
     List all backed up items within a container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup item list --resource-group
                         --vault-name
@@ -54,7 +53,6 @@ directCommands:
     Update the policy associated with this item. Use this to change policies of the backup item.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup item set-policy --policy-name
                               [--backup-management-type {AzureIaasVM, AzureStorage, AzureWorkload}]
@@ -115,7 +113,6 @@ directCommands:
     Show details of a particular backed up item.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup item show [--backup-management-type {AzureIaasVM, AzureStorage, AzureWorkload, MAB}]
                         [--container-name]
@@ -189,5 +186,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: An item which is already protected or backed up to an Azure Recovery services vault with an associated policy.

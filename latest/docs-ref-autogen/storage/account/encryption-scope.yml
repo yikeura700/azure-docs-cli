@@ -12,7 +12,6 @@ directCommands:
     Create an encryption scope within storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account encryption-scope create --account-name
                                                --name
@@ -61,7 +60,6 @@ directCommands:
     List encryption scopes within storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account encryption-scope list --account-name
                                              [--filter]
@@ -104,7 +102,6 @@ directCommands:
     Show properties for specified encryption scope within storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account encryption-scope show --account-name
                                              --name
@@ -132,7 +129,6 @@ directCommands:
     Update properties for specified encryption scope within storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account encryption-scope update --account-name
                                                --name
@@ -207,5 +203,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage encryption scope for a storage account.

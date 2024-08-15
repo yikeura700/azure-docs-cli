@@ -16,7 +16,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'databoxedge' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/databoxedge/_help.py
   syntax: >-
     az databoxedge device storage-account create --data-policy {Cloud, Local}
                                                  --device-name
@@ -71,7 +70,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'databoxedge' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/databoxedge/_help.py
   syntax: >-
     az databoxedge device storage-account delete [--device-name]
                                                  [--ids]
@@ -116,7 +114,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'databoxedge' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/databoxedge/_help.py
   syntax: >-
     az databoxedge device storage-account list --device-name
                                                --resource-group
@@ -150,7 +147,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'databoxedge' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/databoxedge/_help.py
   syntax: >-
     az databoxedge device storage-account show [--device-name]
                                                [--ids]
@@ -185,7 +181,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'databoxedge' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/databoxedge/_help.py
   syntax: >-
     az databoxedge device storage-account update [--add]
                                                  [--data-policy {Cloud, Local}]
@@ -289,5 +284,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 12/23/2020
   description: Manage device storage account.

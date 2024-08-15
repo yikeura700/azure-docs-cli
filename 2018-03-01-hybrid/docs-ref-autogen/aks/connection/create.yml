@@ -1,16 +1,12 @@
 ### YamlMime:AzureCLIGroup
 uid: az_aks_connection_create
 name: az aks connection create
-importantNote: >-
-  > [!NOTE]
-
-  > This command group has commands that are defined in both Azure CLI and at least one extension. Install each extension to benefit from its extended capabilities. [Learn more](https://learn.microsoft.com/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: |-
   Create a connection between a aks and a target resource.
 status: Preview
 isPreview: true
 previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
-sourceType: Core and Extension
+sourceType: Core
 directCommands:
 - uid: az_aks_connection_create_app-insights
   name: az aks connection create app-insights
@@ -20,7 +16,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create app-insights [--app-insights]
                                           [--appconfig-id]
@@ -103,7 +98,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create appconfig [--app-config]
                                        [--appconfig-id]
@@ -210,7 +204,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create cognitiveservices [--account]
                                                [--appconfig-id]
@@ -312,7 +305,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create confluent-cloud --bootstrap-server
                                              --kafka-key
@@ -402,7 +394,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create cosmos-cassandra [--account]
                                               [--appconfig-id]
@@ -518,7 +509,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create cosmos-gremlin [--account]
                                             [--appconfig-id]
@@ -638,7 +628,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create cosmos-mongo [--account]
                                           [--appconfig-id]
@@ -754,7 +743,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create cosmos-sql [--account]
                                         [--appconfig-id]
@@ -870,7 +858,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create cosmos-table [--account]
                                           [--appconfig-id]
@@ -986,7 +973,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create eventhub [--appconfig-id]
                                       [--client-type {dotnet, dotnet-internal, go, java, kafka-springBoot, nodejs, none, python, springBoot}]
@@ -1098,7 +1084,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create keyvault [--appconfig-id]
                                       [--client-type {dotnet, dotnet-internal, java, nodejs, none, python, springBoot}]
@@ -1224,7 +1209,6 @@ directCommands:
   deprecateInfo: This command has been deprecated and will be removed in a future release.
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create mysql [--appconfig-id]
                                    [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1326,7 +1310,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create mysql-flexible [--appconfig-id]
                                             [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1410,101 +1393,6 @@ directCommands:
   - name: --target-resource-group --tg
     summary: |-
       The resource group which contains the mysql flexible server. Required if '--target-id' is not specified.
-- uid: az_aks_connection_create_mysql-flexible(serviceconnector-passwordless)
-  name: az aks connection create mysql-flexible
-  extensionSuffix: serviceconnector-passwordless
-  summary: |-
-    Create a aks connection to mysql-flexible.
-  status: GA
-  sourceType: Extension
-  syntax: >-
-    az aks connection create mysql-flexible [--appconfig-id]
-                                            [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
-                                            [--connection]
-                                            [--customized-keys]
-                                            [--database]
-                                            [--kube-namespace]
-                                            [--name]
-                                            [--no-wait]
-                                            [--opt-out {auth, configinfo, publicnetwork}]
-                                            [--resource-group]
-                                            [--secret]
-                                            [--server]
-                                            [--source-id]
-                                            [--target-id]
-                                            [--target-resource-group]
-                                            [--yes]
-  examples:
-  - summary: |-
-      Create a connection between aks and mysql-flexible interactively
-    syntax: az aks connection create mysql-flexible
-  - summary: |-
-      Create a connection between aks and mysql-flexible with resource name
-    syntax: az aks connection create mysql-flexible -g ClusterRG -n MyCluster --tg MysqlRG --server MyServer --database MyDB --secret name=XX secret=XX
-  - summary: |-
-      Create a connection between aks and mysql-flexible with resource id
-    syntax: az aks connection create mysql-flexible --source-id /subscriptions/{subscription}/resourceGroups/{source_resource_group}/providers/Microsoft.ContainerService/managedClusters/{cluster} --target-id /subscriptions/{subscription}/resourceGroups/{target_resource_group}/providers/Microsoft.DBforMySQL/flexibleServers/{server}/databases/{database} --secret name=XX secret=XX
-  optionalParameters:
-  - name: --appconfig-id
-    summary: |-
-      The app configuration id to store configuration.
-  - name: --client-type
-    parameterValueGroup: "django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot"
-    summary: |-
-      The client type used on the aks.
-  - name: --connection
-    summary: |-
-      Name of the aks connection.
-  - name: --customized-keys
-    summary: |-
-      The customized keys used to change default configuration names. Key is the original name, value is the customized name.
-  - name: --database
-    summary: |-
-      Name of the mysql flexible database. Required if '--target-id' is not specified.
-  - name: --kube-namespace
-    defaultValue: "default"
-    summary: |-
-      The kubernetes namespace where the connection information will be saved into (as kubernetes secret).
-  - name: --name -n
-    summary: |-
-      Name of the managed cluster. Required if '--source-id' is not specified.None.
-  - name: --no-wait
-    defaultValue: "False"
-    summary: |-
-      Do not wait for the long-running operation to finish.
-  - name: --opt-out
-    parameterValueGroup: "auth, configinfo, publicnetwork"
-    summary: |-
-      Whether to disable some configuration steps. Use configinfo to disbale configuration information changes on source. Use publicnetwork to disable public network access configuration.Use auth to skip auth configuration such as enabling managed identity and granting RBAC roles.
-  - name: --resource-group -g
-    summary: |-
-      The resource group which contains the managed cluster. Required if '--source-id' is not specified.None.
-  - name: --secret
-    summary: |-
-      The secret auth info.
-    description: |-
-      Usage: --secret name=XX secret=XX
-             --secret name=XX secret-name=XX
-
-      name    : Required. Username or account name for secret auth.
-      secret  : One of <secret, secret-uri, secret-name> is required. Password or account key for secret auth.
-      secret-name : One of <secret, secret-uri, secret-name> is required. Keyvault secret name which stores password. It's for AKS only.
-  - name: --server
-    summary: |-
-      Name of the mysql flexible server. Required if '--target-id' is not specified.
-  - name: --source-id
-    summary: |-
-      The resource id of a aks. Required if ['--resource-group', '--name'] are not specified.
-  - name: --target-id
-    summary: |-
-      The resource id of target service. Required if ['--target-resource-group', '--server', '--database'] are not specified.
-  - name: --target-resource-group --tg
-    summary: |-
-      The resource group which contains the mysql flexible server. Required if '--target-id' is not specified.
-  - name: --yes -y
-    defaultValue: "False"
-    summary: |-
-      Do not prompt for confirmation.
 - uid: az_aks_connection_create_postgres
   name: az aks connection create postgres
   summary: |-
@@ -1515,7 +1403,6 @@ directCommands:
   deprecateInfo: This command has been deprecated and will be removed in a future release.
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create postgres [--appconfig-id]
                                       [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1621,125 +1508,6 @@ directCommands:
   - name: --target-resource-group --tg
     summary: |-
       The resource group which contains the postgres service. Required if '--target-id' is not specified.
-- uid: az_aks_connection_create_postgres(serviceconnector-passwordless)
-  name: az aks connection create postgres
-  extensionSuffix: serviceconnector-passwordless
-  summary: |-
-    Create a aks connection to postgres.
-  status: Deprecated
-  isDeprecated: true
-  deprecateInfo: This command has been deprecated and will be removed in a future release.
-  sourceType: Extension
-  syntax: >-
-    az aks connection create postgres [--appconfig-id]
-                                      [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
-                                      [--connection]
-                                      [--customized-keys]
-                                      [--database]
-                                      [--kube-namespace]
-                                      [--name]
-                                      [--new {false, true}]
-                                      [--no-wait]
-                                      [--opt-out {auth, configinfo, publicnetwork}]
-                                      [--private-endpoint {false, true}]
-                                      [--resource-group]
-                                      [--secret]
-                                      [--server]
-                                      [--service-endpoint {false, true}]
-                                      [--source-id]
-                                      [--target-id]
-                                      [--target-resource-group]
-                                      [--yes]
-  examples:
-  - summary: |-
-      Create a connection between aks and postgres interactively
-    syntax: az aks connection create postgres
-  - summary: |-
-      Create a connection between aks and postgres with resource name
-    syntax: az aks connection create postgres -g ClusterRG -n MyCluster --tg PostgresRG --server MyServer --database MyDB --secret name=XX secret=XX
-  - summary: |-
-      Create a connection between aks and postgres with resource id
-    syntax: az aks connection create postgres --source-id /subscriptions/{subscription}/resourceGroups/{source_resource_group}/providers/Microsoft.ContainerService/managedClusters/{cluster} --target-id /subscriptions/{subscription}/resourceGroups/{target_resource_group}/providers/Microsoft.DBforPostgreSQL/servers/{server}/databases/{database} --secret name=XX secret=XX
-  - summary: |-
-      Create a new postgres and connect aks to it interactively
-    syntax: az aks connection create postgres --new
-  - summary: |-
-      Create a new postgres and connect aks to it
-    syntax: az aks connection create postgres --source-id /subscriptions/{subscription}/resourceGroups/{source_resource_group}/providers/Microsoft.ContainerService/managedClusters/{cluster} --new
-  optionalParameters:
-  - name: --appconfig-id
-    summary: |-
-      The app configuration id to store configuration.
-  - name: --client-type
-    parameterValueGroup: "django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot"
-    summary: |-
-      The client type used on the aks.
-  - name: --connection
-    summary: |-
-      Name of the aks connection.
-  - name: --customized-keys
-    summary: |-
-      The customized keys used to change default configuration names. Key is the original name, value is the customized name.
-  - name: --database
-    summary: |-
-      Name of postgres database. Required if '--target-id' is not specified.
-  - name: --kube-namespace
-    defaultValue: "default"
-    summary: |-
-      The kubernetes namespace where the connection information will be saved into (as kubernetes secret).
-  - name: --name -n
-    summary: |-
-      Name of the managed cluster. Required if '--source-id' is not specified.None.
-  - name: --new
-    defaultValue: "False"
-    parameterValueGroup: "false, true"
-    summary: |-
-      Indicates whether to create a new postgres when creating the aks connection.
-  - name: --no-wait
-    defaultValue: "False"
-    summary: |-
-      Do not wait for the long-running operation to finish.
-  - name: --opt-out
-    parameterValueGroup: "auth, configinfo, publicnetwork"
-    summary: |-
-      Whether to disable some configuration steps. Use configinfo to disbale configuration information changes on source. Use publicnetwork to disable public network access configuration.Use auth to skip auth configuration such as enabling managed identity and granting RBAC roles.
-  - name: --private-endpoint
-    parameterValueGroup: "false, true"
-    summary: |-
-      Connect target service by private endpoint. The private endpoint in source virtual network must be created ahead.
-  - name: --resource-group -g
-    summary: |-
-      The resource group which contains the managed cluster. Required if '--source-id' is not specified.None.
-  - name: --secret
-    summary: |-
-      The secret auth info.
-    description: |-
-      Usage: --secret name=XX secret=XX
-             --secret name=XX secret-name=XX
-
-      name    : Required. Username or account name for secret auth.
-      secret  : One of <secret, secret-uri, secret-name> is required. Password or account key for secret auth.
-      secret-name : One of <secret, secret-uri, secret-name> is required. Keyvault secret name which stores password. It's for AKS only.
-  - name: --server
-    summary: |-
-      Name of postgres server. Required if '--target-id' is not specified.
-  - name: --service-endpoint
-    parameterValueGroup: "false, true"
-    summary: |-
-      Connect target service by service endpoint. Source resource must be in the VNet and target SKU must support service endpoint feature.
-  - name: --source-id
-    summary: |-
-      The resource id of a aks. Required if ['--resource-group', '--name'] are not specified.
-  - name: --target-id
-    summary: |-
-      The resource id of target service. Required if ['--target-resource-group', '--server', '--database'] are not specified.
-  - name: --target-resource-group --tg
-    summary: |-
-      The resource group which contains the postgres service. Required if '--target-id' is not specified.
-  - name: --yes -y
-    defaultValue: "False"
-    summary: |-
-      Do not prompt for confirmation.
 - uid: az_aks_connection_create_postgres-flexible
   name: az aks connection create postgres-flexible
   summary: |-
@@ -1748,7 +1516,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create postgres-flexible [--appconfig-id]
                                                [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1832,101 +1599,6 @@ directCommands:
   - name: --target-resource-group --tg
     summary: |-
       The resource group which contains the flexible postgres service. Required if '--target-id' is not specified.
-- uid: az_aks_connection_create_postgres-flexible(serviceconnector-passwordless)
-  name: az aks connection create postgres-flexible
-  extensionSuffix: serviceconnector-passwordless
-  summary: |-
-    Create a aks connection to postgres-flexible.
-  status: GA
-  sourceType: Extension
-  syntax: >-
-    az aks connection create postgres-flexible [--appconfig-id]
-                                               [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
-                                               [--connection]
-                                               [--customized-keys]
-                                               [--database]
-                                               [--kube-namespace]
-                                               [--name]
-                                               [--no-wait]
-                                               [--opt-out {auth, configinfo, publicnetwork}]
-                                               [--resource-group]
-                                               [--secret]
-                                               [--server]
-                                               [--source-id]
-                                               [--target-id]
-                                               [--target-resource-group]
-                                               [--yes]
-  examples:
-  - summary: |-
-      Create a connection between aks and postgres-flexible interactively
-    syntax: az aks connection create postgres-flexible
-  - summary: |-
-      Create a connection between aks and postgres-flexible with resource name
-    syntax: az aks connection create postgres-flexible -g ClusterRG -n MyCluster --tg PostgresRG --server MyServer --database MyDB --secret name=XX secret=XX
-  - summary: |-
-      Create a connection between aks and postgres-flexible with resource id
-    syntax: az aks connection create postgres-flexible --source-id /subscriptions/{subscription}/resourceGroups/{source_resource_group}/providers/Microsoft.ContainerService/managedClusters/{cluster} --target-id /subscriptions/{subscription}/resourceGroups/{target_resource_group}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{server}/databases/{database} --secret name=XX secret=XX
-  optionalParameters:
-  - name: --appconfig-id
-    summary: |-
-      The app configuration id to store configuration.
-  - name: --client-type
-    parameterValueGroup: "django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot"
-    summary: |-
-      The client type used on the aks.
-  - name: --connection
-    summary: |-
-      Name of the aks connection.
-  - name: --customized-keys
-    summary: |-
-      The customized keys used to change default configuration names. Key is the original name, value is the customized name.
-  - name: --database
-    summary: |-
-      Name of postgres flexible database. Required if '--target-id' is not specified.
-  - name: --kube-namespace
-    defaultValue: "default"
-    summary: |-
-      The kubernetes namespace where the connection information will be saved into (as kubernetes secret).
-  - name: --name -n
-    summary: |-
-      Name of the managed cluster. Required if '--source-id' is not specified.None.
-  - name: --no-wait
-    defaultValue: "False"
-    summary: |-
-      Do not wait for the long-running operation to finish.
-  - name: --opt-out
-    parameterValueGroup: "auth, configinfo, publicnetwork"
-    summary: |-
-      Whether to disable some configuration steps. Use configinfo to disbale configuration information changes on source. Use publicnetwork to disable public network access configuration.Use auth to skip auth configuration such as enabling managed identity and granting RBAC roles.
-  - name: --resource-group -g
-    summary: |-
-      The resource group which contains the managed cluster. Required if '--source-id' is not specified.None.
-  - name: --secret
-    summary: |-
-      The secret auth info.
-    description: |-
-      Usage: --secret name=XX secret=XX
-             --secret name=XX secret-name=XX
-
-      name    : Required. Username or account name for secret auth.
-      secret  : One of <secret, secret-uri, secret-name> is required. Password or account key for secret auth.
-      secret-name : One of <secret, secret-uri, secret-name> is required. Keyvault secret name which stores password. It's for AKS only.
-  - name: --server
-    summary: |-
-      Name of postgres flexible server. Required if '--target-id' is not specified.
-  - name: --source-id
-    summary: |-
-      The resource id of a aks. Required if ['--resource-group', '--name'] are not specified.
-  - name: --target-id
-    summary: |-
-      The resource id of target service. Required if ['--target-resource-group', '--server', '--database'] are not specified.
-  - name: --target-resource-group --tg
-    summary: |-
-      The resource group which contains the flexible postgres service. Required if '--target-id' is not specified.
-  - name: --yes -y
-    defaultValue: "False"
-    summary: |-
-      Do not prompt for confirmation.
 - uid: az_aks_connection_create_redis
   name: az aks connection create redis
   summary: |-
@@ -1935,7 +1607,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create redis [--appconfig-id]
                                    [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -2027,7 +1698,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create redis-enterprise [--appconfig-id]
                                               [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -2114,7 +1784,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create servicebus [--appconfig-id]
                                         [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -2226,7 +1895,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create signalr [--appconfig-id]
                                      [--client-type {dotnet, dotnet-internal, none}]
@@ -2333,7 +2001,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create sql [--appconfig-id]
                                  [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -2427,111 +2094,6 @@ directCommands:
   - name: --target-resource-group --tg
     summary: |-
       The resource group which contains the sql server. Required if '--target-id' is not specified.
-- uid: az_aks_connection_create_sql(serviceconnector-passwordless)
-  name: az aks connection create sql
-  extensionSuffix: serviceconnector-passwordless
-  summary: |-
-    Create a aks connection to sql.
-  status: GA
-  sourceType: Extension
-  syntax: >-
-    az aks connection create sql [--appconfig-id]
-                                 [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
-                                 [--connection]
-                                 [--customized-keys]
-                                 [--database]
-                                 [--kube-namespace]
-                                 [--name]
-                                 [--no-wait]
-                                 [--opt-out {auth, configinfo, publicnetwork}]
-                                 [--private-endpoint {false, true}]
-                                 [--resource-group]
-                                 [--secret]
-                                 [--server]
-                                 [--service-endpoint {false, true}]
-                                 [--source-id]
-                                 [--target-id]
-                                 [--target-resource-group]
-                                 [--yes]
-  examples:
-  - summary: |-
-      Create a connection between aks and sql interactively
-    syntax: az aks connection create sql
-  - summary: |-
-      Create a connection between aks and sql with resource name
-    syntax: az aks connection create sql -g ClusterRG -n MyCluster --tg SqlRG --server MyServer --database MyDB --secret name=XX secret=XX
-  - summary: |-
-      Create a connection between aks and sql with resource id
-    syntax: az aks connection create sql --source-id /subscriptions/{subscription}/resourceGroups/{source_resource_group}/providers/Microsoft.ContainerService/managedClusters/{cluster} --target-id /subscriptions/{subscription}/resourceGroups/{target_resource_group}/providers/Microsoft.Sql/servers/{server}/databases/{database} --secret name=XX secret=XX
-  optionalParameters:
-  - name: --appconfig-id
-    summary: |-
-      The app configuration id to store configuration.
-  - name: --client-type
-    parameterValueGroup: "django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot"
-    summary: |-
-      The client type used on the aks.
-  - name: --connection
-    summary: |-
-      Name of the aks connection.
-  - name: --customized-keys
-    summary: |-
-      The customized keys used to change default configuration names. Key is the original name, value is the customized name.
-  - name: --database
-    summary: |-
-      Name of the sql database. Required if '--target-id' is not specified.
-  - name: --kube-namespace
-    defaultValue: "default"
-    summary: |-
-      The kubernetes namespace where the connection information will be saved into (as kubernetes secret).
-  - name: --name -n
-    summary: |-
-      Name of the managed cluster. Required if '--source-id' is not specified.None.
-  - name: --no-wait
-    defaultValue: "False"
-    summary: |-
-      Do not wait for the long-running operation to finish.
-  - name: --opt-out
-    parameterValueGroup: "auth, configinfo, publicnetwork"
-    summary: |-
-      Whether to disable some configuration steps. Use configinfo to disbale configuration information changes on source. Use publicnetwork to disable public network access configuration.Use auth to skip auth configuration such as enabling managed identity and granting RBAC roles.
-  - name: --private-endpoint
-    parameterValueGroup: "false, true"
-    summary: |-
-      Connect target service by private endpoint. The private endpoint in source virtual network must be created ahead.
-  - name: --resource-group -g
-    summary: |-
-      The resource group which contains the managed cluster. Required if '--source-id' is not specified.None.
-  - name: --secret
-    summary: |-
-      The secret auth info.
-    description: |-
-      Usage: --secret name=XX secret=XX
-             --secret name=XX secret-name=XX
-
-      name    : Required. Username or account name for secret auth.
-      secret  : One of <secret, secret-uri, secret-name> is required. Password or account key for secret auth.
-      secret-name : One of <secret, secret-uri, secret-name> is required. Keyvault secret name which stores password. It's for AKS only.
-  - name: --server
-    summary: |-
-      Name of the sql server. Required if '--target-id' is not specified.
-  - name: --service-endpoint
-    parameterValueGroup: "false, true"
-    summary: |-
-      Connect target service by service endpoint. Source resource must be in the VNet and target SKU must support service endpoint feature.
-  - name: --source-id
-    summary: |-
-      The resource id of a aks. Required if ['--resource-group', '--name'] are not specified.
-  - name: --target-id
-    summary: |-
-      The resource id of target service. Required if ['--target-resource-group', '--server', '--database'] are not specified.
-  - name: --target-resource-group --tg
-    summary: |-
-      The resource group which contains the sql server. Required if '--target-id' is not specified.
-  - name: --yes -y
-    defaultValue: "False"
-    summary: |-
-      Do not prompt for confirmation.
 - uid: az_aks_connection_create_storage-blob
   name: az aks connection create storage-blob
   summary: |-
@@ -2540,7 +2102,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create storage-blob [--account]
                                           [--appconfig-id]
@@ -2664,7 +2225,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create storage-file [--account]
                                           [--appconfig-id]
@@ -2757,7 +2317,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create storage-queue [--account]
                                            [--appconfig-id]
@@ -2869,7 +2428,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create storage-table [--account]
                                            [--appconfig-id]
@@ -2981,7 +2539,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'aks connection' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks connection create webpubsub [--appconfig-id]
                                        [--client-type {dotnet, dotnet-internal, java, nodejs, none, python}]
@@ -3094,17 +2651,13 @@ commands:
 - az_aks_connection_create_keyvault
 - az_aks_connection_create_mysql
 - az_aks_connection_create_mysql-flexible
-- az_aks_connection_create_mysql-flexible(serviceconnector-passwordless)
 - az_aks_connection_create_postgres
-- az_aks_connection_create_postgres(serviceconnector-passwordless)
 - az_aks_connection_create_postgres-flexible
-- az_aks_connection_create_postgres-flexible(serviceconnector-passwordless)
 - az_aks_connection_create_redis
 - az_aks_connection_create_redis-enterprise
 - az_aks_connection_create_servicebus
 - az_aks_connection_create_signalr
 - az_aks_connection_create_sql
-- az_aks_connection_create_sql(serviceconnector-passwordless)
 - az_aks_connection_create_storage-blob
 - az_aks_connection_create_storage-file
 - az_aks_connection_create_storage-queue

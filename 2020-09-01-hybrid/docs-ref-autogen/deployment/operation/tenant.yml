@@ -12,7 +12,6 @@ directCommands:
     List deployment operations at tenant scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az deployment operation tenant list --name
   requiredParameters:
   - isRequired: true
@@ -25,7 +24,6 @@ directCommands:
     Show a deployment operation at tenant scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment operation tenant show --name
                                         --operation-ids
@@ -66,5 +64,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage deployment operations at tenant scope.

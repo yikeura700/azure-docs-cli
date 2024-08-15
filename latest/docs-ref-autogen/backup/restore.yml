@@ -12,7 +12,6 @@ directCommands:
     Restore backed up Azure files within a file-share to the same file-share or another file-share in registered storage accounts.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup restore restore-azurefiles --resolve-conflict {Overwrite, Skip}
                                          --restore-mode {AlternateLocation, OriginalLocation}
@@ -91,7 +90,6 @@ directCommands:
     Restore backed up Azure file shares to the same file-share or another file-share in registered storage accounts.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup restore restore-azurefileshare --resolve-conflict {Overwrite, Skip}
                                              --restore-mode {AlternateLocation, OriginalLocation}
@@ -165,7 +163,6 @@ directCommands:
     Restore backed up Azure Workloads in a Recovery services vault to another registered container or to the same container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup restore restore-azurewl --recovery-config
                                       --resource-group
@@ -212,7 +209,6 @@ directCommands:
     Restore disks of the backed VM from the specified recovery point.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup restore restore-disks --storage-account
                                     [--container-name]
@@ -379,5 +375,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: Restore backed up items from recovery points in a Recovery Services vault.

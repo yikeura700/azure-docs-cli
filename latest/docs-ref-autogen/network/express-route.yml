@@ -14,7 +14,6 @@ directCommands:
     Create an express route circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route create --name
                                     --resource-group
@@ -89,7 +88,6 @@ directCommands:
     Delete an ExpressRoute circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route delete [--ids]
                                     [--name]
@@ -126,7 +124,6 @@ directCommands:
     Get the statistics of an ExpressRoute circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route get-stats [--ids]
                                        [--name]
@@ -155,7 +152,6 @@ directCommands:
     List all ExpressRoute circuits for the current subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route list [--max-items]
                                   [--next-token]
@@ -180,7 +176,6 @@ directCommands:
     Show the current Address Resolution Protocol (ARP) table of an ExpressRoute circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route list-arp-tables [--ids]
                                              [--name]
@@ -224,7 +219,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route list-route-tables [--ids]
                                                [--name]
@@ -268,7 +262,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route list-route-tables-summary [--ids]
                                                        [--name]
@@ -310,7 +303,6 @@ directCommands:
     List available ExpressRoute service providers.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route list-service-providers [--max-items]
                                                     [--next-token]
@@ -331,7 +323,6 @@ directCommands:
     Get the details of an ExpressRoute circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route show [--ids]
                                   [--name]
@@ -360,7 +351,6 @@ directCommands:
     Update settings of an ExpressRoute circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route update [--add]
                                     [--allow-classic-operations {0, 1, f, false, n, no, t, true, y, yes}]
@@ -451,7 +441,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route wait [--created]
                                   [--custom]
@@ -610,5 +599,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: To learn more about ExpressRoute circuits visit https://docs.microsoft.com/azure/expressroute/howto-circuit-cli.

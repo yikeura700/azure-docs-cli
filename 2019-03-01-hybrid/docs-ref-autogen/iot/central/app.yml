@@ -17,7 +17,6 @@ directCommands:
     For more information on deploying an IoT Central app via CLI or a list of available arguments, visit https://aka.ms/iotcentral-manage-cli.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot central app create --name
                               --resource-group
@@ -83,7 +82,6 @@ directCommands:
     -Warning- This operation is irreversible. Once you've deleted your app, you cannot restore it.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot central app delete --name
                               --resource-group
@@ -119,7 +117,6 @@ directCommands:
     All of the IoT Central apps that are part of your subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: az iot central app list [--resource-group]
   examples:
   - summary: |-
@@ -140,7 +137,6 @@ directCommands:
     Information about your app, like app name, subdomain, pricing plan, and location.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot central app show --name
                             [--resource-group]
@@ -168,7 +164,6 @@ directCommands:
     Update metadata, like app name, subdomain, pricing plan, and location.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot central app update --name
                               --resource-group
@@ -253,5 +248,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/21/2024
   description: Create, delete, view, and update your IoT Central apps.

@@ -16,7 +16,6 @@ directCommands:
     To create a private endpoint connection use "az network private-endpoint create". For more information see https://aka.ms/acr/private-link.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr private-endpoint-connection approve --name
                                                --registry-name
@@ -46,7 +45,6 @@ directCommands:
     To create a private endpoint connection use "az network private-endpoint create". For more information see https://aka.ms/acr/private-link.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr private-endpoint-connection delete --name
                                               --registry-name
@@ -72,7 +70,6 @@ directCommands:
     To create a private endpoint connection use "az network private-endpoint create". For more information see https://aka.ms/acr/private-link.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr private-endpoint-connection list --registry-name
                                             [--resource-group]
@@ -93,7 +90,6 @@ directCommands:
     To create a private endpoint connection use "az network private-endpoint create". For more information see https://aka.ms/acr/private-link.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr private-endpoint-connection reject --name
                                               --registry-name
@@ -123,7 +119,6 @@ directCommands:
     To create a private endpoint connection use "az network private-endpoint create". For more information see https://aka.ms/acr/private-link.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr private-endpoint-connection show --name
                                             --registry-name
@@ -172,5 +167,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: To create a private endpoint connection use "az network private-endpoint create". For more information see https://aka.ms/acr/private-link.

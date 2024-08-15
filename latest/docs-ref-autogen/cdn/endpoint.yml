@@ -12,7 +12,6 @@ directCommands:
     Create a new CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint create --endpoint-name
                            --origin
@@ -137,7 +136,6 @@ directCommands:
     Delete an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint delete [--endpoint-name]
                            [--ids]
@@ -175,7 +173,6 @@ directCommands:
     List existing CDN endpoints.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint list --profile-name
                          --resource-group
@@ -207,7 +204,6 @@ directCommands:
     Pre-loads a content to CDN. Available for Verizon Profiles.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint load --content-paths
                          [--endpoint-name]
@@ -251,7 +247,6 @@ directCommands:
     Check the availability of a resource name. This is needed for resources where name is globally unique, such as a CDN endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint name-exists --name
                                 [--type {Microsoft.Cdn/Profiles/AfdEndpoints, Microsoft.Cdn/Profiles/Endpoints}]
@@ -276,7 +271,6 @@ directCommands:
     Removes a content from CDN.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint purge --content-paths
                           [--endpoint-name]
@@ -320,7 +314,6 @@ directCommands:
     Get an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint show [--endpoint-name]
                          [--ids]
@@ -349,7 +342,6 @@ directCommands:
     Starts an existing CDN endpoint that is on a stopped state.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint start [--endpoint-nameendpoint-name]
                           [--ids]
@@ -387,7 +379,6 @@ directCommands:
     Stops an existing running CDN endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint stop [--endpoint-name]
                          [--ids]
@@ -425,7 +416,6 @@ directCommands:
     Update an existing CDN endpoint with the specified endpoint name under the specified subscription, resource group and profile. Only tags can be updated after creating an endpoint. To update origins, use the Update Origin operation. To update origin groups, use the Update Origin group operation. To update custom domains, use the Update Custom Domain operation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint update [--content-types-to-compress]
                            [--default-origin-group]
@@ -531,7 +521,6 @@ directCommands:
     Validates the custom domain mapping to ensure it maps to the correct CDN endpoint in DNS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint validate-custom-domain --host-name
                                            [--endpoint-name]
@@ -570,7 +559,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint wait [--created]
                          [--custom]
@@ -677,5 +665,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/28/2024
   description: Manage CDN endpoints.

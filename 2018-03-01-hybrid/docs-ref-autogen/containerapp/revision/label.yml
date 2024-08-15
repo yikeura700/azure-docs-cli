@@ -12,7 +12,6 @@ directCommands:
     Set a revision label to a revision with an associated traffic weight.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp revision label add --label
                                        --resource-group
@@ -53,7 +52,6 @@ directCommands:
     Remove a revision label from a revision with an associated traffic weight.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp revision label remove --label
                                           --name
@@ -81,7 +79,6 @@ directCommands:
     Swap a revision label between two revisions with associated traffic weights.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp revision label swap --name
                                         --resource-group
@@ -137,5 +134,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/14/2024
   description: Manage revision labels assigned to traffic weights.

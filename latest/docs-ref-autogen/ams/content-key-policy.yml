@@ -12,7 +12,6 @@ directCommands:
     Create a new content key policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams content-key-policy create --account-name
                                      --name
@@ -136,7 +135,6 @@ directCommands:
     Delete a content key policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams content-key-policy delete [--account-name]
                                      [--ids]
@@ -165,7 +163,6 @@ directCommands:
     List all the content key policies within an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams content-key-policy list --account-name
                                    --resource-group
@@ -201,7 +198,6 @@ directCommands:
     Show an existing content key policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams content-key-policy show [--account-name]
                                    [--ids]
@@ -235,7 +231,6 @@ directCommands:
     Update an existing content key policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams content-key-policy update [--account-name]
                                      [--add]
@@ -321,5 +316,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage content key policies for an Azure Media Services account.

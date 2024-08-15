@@ -14,7 +14,6 @@ directCommands:
     For more information on autoscaling, visit: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-understanding-autoscale-settings.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale create --count
                                 --resource
@@ -122,7 +121,6 @@ directCommands:
     Delete an autoscale setting.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale delete [--autoscale-name]
                                 [--ids]
@@ -147,7 +145,6 @@ directCommands:
     Lists the autoscale settings for a resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale list --resource-group
                               [--max-items]
@@ -170,7 +167,6 @@ directCommands:
     Get an autoscale setting.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale show [--autoscale-name]
                               [--ids]
@@ -199,7 +195,6 @@ directCommands:
     Show predictive autoscale metric future data.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale show-predictive-metric --aggregation
                                                 --interval
@@ -252,7 +247,6 @@ directCommands:
     For more information on autoscaling, visit: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-understanding-autoscale-settings.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale update [--add]
                                 [--add-action]
@@ -399,5 +393,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: Manage autoscale settings.

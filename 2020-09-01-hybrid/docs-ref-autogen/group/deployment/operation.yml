@@ -16,7 +16,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command is implicitly deprecated because command group 'group deployment operation' is deprecated and will be removed in a future release. Use 'deployment operation group' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az group deployment operation list --name
                                        --resource-group
@@ -42,7 +41,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command is implicitly deprecated because command group 'group deployment operation' is deprecated and will be removed in a future release. Use 'deployment operation group' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az group deployment operation show --name
                                        --operation-ids
@@ -88,5 +86,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage deployment operations.

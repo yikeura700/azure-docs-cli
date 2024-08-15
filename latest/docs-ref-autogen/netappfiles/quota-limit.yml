@@ -14,7 +14,6 @@ directCommands:
     List the default and current limits for quotas.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: az netappfiles quota-limit list --location
   examples:
   - summary: |-
@@ -31,7 +30,6 @@ directCommands:
     Get the default and current subscription quota limit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles quota-limit show [--ids]
                                     [--location]
@@ -82,5 +80,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/07/2024
   description: Get the default and current limits for Azure NetApp Files (ANF) quotas.

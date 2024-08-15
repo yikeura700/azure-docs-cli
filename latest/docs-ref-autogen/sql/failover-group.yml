@@ -12,7 +12,6 @@ directCommands:
     Creates a failover group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql failover-group create --name
                                  --partner-server
@@ -65,7 +64,6 @@ directCommands:
     Deletes a failover group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql failover-group delete --name
                                  [--ids]
@@ -96,7 +94,6 @@ directCommands:
     Lists the failover groups in a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql failover-group list [--ids]
                                [--resource-group]
@@ -121,7 +118,6 @@ directCommands:
     Set the primary of the failover group by failing over all databases from the current primary server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql failover-group set-primary --name
                                       [--allow-data-loss]
@@ -166,7 +162,6 @@ directCommands:
     Gets a failover group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql failover-group show --name
                                [--ids]
@@ -197,7 +192,6 @@ directCommands:
     Updates the failover group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql failover-group update --name
                                  [--add]
@@ -291,5 +285,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage SQL Failover Groups.

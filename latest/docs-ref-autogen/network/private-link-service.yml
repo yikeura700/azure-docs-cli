@@ -12,7 +12,6 @@ directCommands:
     Create a private link service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-link-service create --lb-frontend-ip-configs
                                            --name
@@ -103,7 +102,6 @@ directCommands:
     Delete a private link service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-link-service delete [--ids]
                                            [--name]
@@ -137,7 +135,6 @@ directCommands:
     List private link services.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-link-service list [--max-items]
                                          [--next-token]
@@ -162,7 +159,6 @@ directCommands:
     List all of the private link service ids that can be linked to a Private Endpoint with auto approved in this subscription in this region.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-link-service list-auto-approved [--location]
                                                        [--max-items]
@@ -191,7 +187,6 @@ directCommands:
     Get the details of a private link service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-link-service show [--expand]
                                          [--ids]
@@ -224,7 +219,6 @@ directCommands:
     Update a private link service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-link-service update [--add]
                                            [--auto-approval]
@@ -304,7 +298,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-link-service wait [--created]
                                          [--custom]
@@ -398,5 +391,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage private link services.

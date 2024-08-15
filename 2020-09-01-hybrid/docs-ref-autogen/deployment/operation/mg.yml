@@ -12,7 +12,6 @@ directCommands:
     List deployment operations at management group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment operation mg list --management-group-id
                                     --name
@@ -31,7 +30,6 @@ directCommands:
     Show a deployment operation at management group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment operation mg show --management-group-id
                                     --name
@@ -77,5 +75,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage deployment operations at management group.

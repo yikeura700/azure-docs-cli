@@ -12,7 +12,6 @@ directCommands:
     Create a new cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight create --name
                         --resource-group
@@ -464,7 +463,6 @@ directCommands:
     Deletes the specified HDInsight cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight delete --name
                         --resource-group
@@ -494,7 +492,6 @@ directCommands:
     List HDInsight clusters in a resource group or subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: az hdinsight list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -506,7 +503,6 @@ directCommands:
     Lists the usages for the specified location.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: az hdinsight list-usage --location
   requiredParameters:
   - isRequired: true
@@ -519,7 +515,6 @@ directCommands:
     Resize the specified HDInsight cluster to the specified size.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight resize --name
                         --resource-group
@@ -553,7 +548,6 @@ directCommands:
     Rotate the disk encryption key of the specified HDInsight cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight rotate-disk-encryption-key --encryption-key-name
                                             --encryption-key-version
@@ -593,7 +587,6 @@ directCommands:
     Gets the specified cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight show --name
                       --resource-group
@@ -612,7 +605,6 @@ directCommands:
     Update the tags of the specified HDInsight cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight update --name
                         --resource-group
@@ -645,7 +637,6 @@ directCommands:
     Place the CLI in a waiting state until an operation is complete.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight wait --name
                       --resource-group
@@ -765,5 +756,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/23/2021
   description: Manage HDInsight resources.

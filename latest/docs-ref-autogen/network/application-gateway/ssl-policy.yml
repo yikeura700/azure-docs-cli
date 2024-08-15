@@ -12,7 +12,6 @@ directCommands:
     List available SSL options for configuring SSL policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network application-gateway ssl-policy list-options
   examples:
   - summary: |-
@@ -24,7 +23,6 @@ directCommands:
     Update an SSL policy settings.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway ssl-policy set --gateway-name
                                                   --resource-group
@@ -79,7 +77,6 @@ directCommands:
     Get the details of an SSL policy settings.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway ssl-policy show --gateway-name
                                                    --resource-group
@@ -102,7 +99,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway ssl-policy wait [--created]
                                                    [--custom]
@@ -188,5 +184,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage the SSL policy of an application gateway.

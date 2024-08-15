@@ -18,7 +18,6 @@ directCommands:
     For an introduction to Azure IoT Hub, see https://docs.microsoft.com/azure/iot-hub/.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub create --name
                       --resource-group
@@ -197,7 +196,6 @@ directCommands:
     Delete an IoT hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub delete [--ids]
                       [--name]
@@ -418,7 +416,6 @@ directCommands:
     List IoT hubs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: az iot hub list [--resource-group]
   examples:
   - summary: |-
@@ -437,7 +434,6 @@ directCommands:
     List available pricing tiers.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub list-skus [--ids]
                          [--name]
@@ -466,7 +462,6 @@ directCommands:
     Initiate a manual failover for the IoT Hub to the geo-paired disaster recovery region.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub manual-failover [--ids]
                                [--name]
@@ -723,7 +718,6 @@ directCommands:
     Get the details of an IoT hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub show [--ids]
                     [--name]
@@ -754,7 +748,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'IoT Extension (azure-iot) connection-string command (az iot hub connection-string show)' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub show-connection-string [--all]
                                       [--hub-name]
@@ -811,7 +804,6 @@ directCommands:
     Get the quota metrics for an IoT hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub show-quota-metrics [--ids]
                                   [--name]
@@ -843,7 +835,6 @@ directCommands:
     Get the statistics for an IoT hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub show-stats [--ids]
                           [--name]
@@ -872,7 +863,6 @@ directCommands:
     Update metadata for an IoT hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub update [--add]
                       [--c2d-max-delivery-count]
@@ -1041,7 +1031,6 @@ directCommands:
     Wait until an operation on an IoT Hub instance is complete.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub wait [--created]
                     [--custom]

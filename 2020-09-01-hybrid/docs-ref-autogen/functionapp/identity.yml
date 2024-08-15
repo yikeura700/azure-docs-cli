@@ -12,7 +12,6 @@ directCommands:
     Assign managed identity to the web app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp identity assign [--identities]
                                    [--ids]
@@ -64,7 +63,6 @@ directCommands:
     Disable web app's managed identity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp identity remove [--identities]
                                    [--ids]
@@ -104,7 +102,6 @@ directCommands:
     Display web app's managed identity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp identity show [--ids]
                                  [--name]
@@ -160,5 +157,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage web app's managed identity.

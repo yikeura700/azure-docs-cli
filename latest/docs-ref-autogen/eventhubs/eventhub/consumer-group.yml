@@ -12,7 +12,6 @@ directCommands:
     Create an Event Hubs consumer group as a nested resource within a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub consumer-group create --consumer-group-name
                                                 --eventhub-name
@@ -46,7 +45,6 @@ directCommands:
     Delete a consumer group from the specified Event Hub and resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub consumer-group delete [--consumer-group-name]
                                                 [--eventhub-name]
@@ -79,7 +77,6 @@ directCommands:
     List all the consumer groups in a Namespace. An empty feed is returned if no consumer group exists in the Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub consumer-group list --eventhub-name
                                               --namespace-name
@@ -120,7 +117,6 @@ directCommands:
     Get a description for the specified consumer group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub consumer-group show [--consumer-group-name]
                                               [--eventhub-name]
@@ -153,7 +149,6 @@ directCommands:
     Update an Event Hubs consumer group as a nested resource within a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub consumer-group update [--add]
                                                 [--consumer-group-name]
@@ -232,5 +227,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manage Azure Event Hubs consumergroup.

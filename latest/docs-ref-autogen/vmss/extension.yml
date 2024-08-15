@@ -12,7 +12,6 @@ directCommands:
     Delete an extension from a VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss extension delete --name
                              --resource-group
@@ -46,7 +45,6 @@ directCommands:
     List extensions associated with a VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss extension list --resource-group
                            --vmss-name
@@ -71,7 +69,6 @@ directCommands:
     Get extension details from `az vmss extension image list`.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss extension set --name
                           --publisher
@@ -162,7 +159,6 @@ directCommands:
     Show details on a VMSS extension.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss extension show --name
                            --resource-group
@@ -190,7 +186,6 @@ directCommands:
     Upgrade all extensions for all VMSS instances to the latest version.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss extension upgrade [--ids]
                               [--name]
@@ -254,5 +249,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Manage extensions on a VM scale set.

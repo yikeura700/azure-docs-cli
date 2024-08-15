@@ -12,7 +12,6 @@ directCommands:
     Create a resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource create --properties
                        [--api-version]
@@ -99,7 +98,6 @@ directCommands:
     Delete a resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource delete [--api-version]
                        [--ids]
@@ -162,7 +160,6 @@ directCommands:
     A list of possible actions corresponding to a resource can be found at https://docs.microsoft.com/rest/api/. All POST requests are actions that can be invoked and are specified at the end of the URI path. For instance, to stop a VM, the request URI is https://management.azure.com/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroup}/providers/Microsoft.Compute/virtualMachines/{VM}/powerOff?api-version={APIVersion} and the corresponding action is `powerOff`. This can be found at https://docs.microsoft.com/rest/api/compute/virtualmachines/virtualmachines-stop.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource invoke-action --action
                               [--api-version]
@@ -237,7 +234,6 @@ directCommands:
     List resources.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource list [--location]
                      [--name]
@@ -286,7 +282,6 @@ directCommands:
     Move resources from one resource group to another (can be under different subscription).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource move --destination-group
                      --ids
@@ -316,7 +311,6 @@ directCommands:
     It supports updating resources with JSON-formatted string. If the patch operation fails, please try run 'az resource update' instead.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource patch --properties
                       [--api-version]
@@ -388,7 +382,6 @@ directCommands:
     Get the details of a resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource show [--api-version]
                      [--ids]
@@ -456,7 +449,6 @@ directCommands:
     Tag a resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource tag --tags
                     [--api-version]
@@ -524,7 +516,6 @@ directCommands:
     It supports the generic update (using property path) to update resources. If the update operation fails, please try run 'az resource patch' instead.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource update [--add]
                        [--api-version]
@@ -603,7 +594,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of a resources is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az resource wait [--api-version]
                      [--created]
@@ -732,5 +722,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage Azure resources.

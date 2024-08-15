@@ -12,7 +12,6 @@ directCommands:
     Upload a trusted root certificate.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway root-cert create --gateway-name
                                                     --name
@@ -54,7 +53,6 @@ directCommands:
     Delete a trusted root certificate.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway root-cert delete --gateway-name
                                                     --name
@@ -88,7 +86,6 @@ directCommands:
     List trusted root certificates.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway root-cert list --gateway-name
                                                   --resource-group
@@ -111,7 +108,6 @@ directCommands:
     Get the details of a trusted root certificate.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway root-cert show --gateway-name
                                                   --name
@@ -139,7 +135,6 @@ directCommands:
     Update a trusted root certificate.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway root-cert update --gateway-name
                                                     --name
@@ -198,7 +193,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway root-cert wait [--created]
                                                   [--custom]
@@ -283,5 +277,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage trusted root certificates of an application gateway.

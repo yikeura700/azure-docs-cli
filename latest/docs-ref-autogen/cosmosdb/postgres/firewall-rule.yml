@@ -12,7 +12,6 @@ directCommands:
     Create a new cluster firewall rule or updates an existing cluster firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb postgres firewall-rule create --cluster-name
                                               --end-ip-address
@@ -56,7 +55,6 @@ directCommands:
     Delete a cluster firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb postgres firewall-rule delete [--cluster-name]
                                               [--firewall-rule-name]
@@ -99,7 +97,6 @@ directCommands:
     List all the firewall rules on cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb postgres firewall-rule list --cluster-name
                                             --resource-group
@@ -122,7 +119,6 @@ directCommands:
     Get information about a cluster firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb postgres firewall-rule show [--cluster-name]
                                             [--firewall-rule-name]
@@ -155,7 +151,6 @@ directCommands:
     Update an existing cluster firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb postgres firewall-rule update [--add]
                                               [--cluster-name]
@@ -218,7 +213,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb postgres firewall-rule wait [--cluster-name]
                                             [--created]
@@ -307,5 +301,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB for PostgreSQL firewall rules.

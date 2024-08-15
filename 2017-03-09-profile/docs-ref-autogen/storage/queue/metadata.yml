@@ -12,7 +12,6 @@ directCommands:
     Return all user-defined metadata for the specified queue.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage queue metadata show --name
                                    [--account-key]
@@ -51,7 +50,6 @@ directCommands:
     Set user-defined metadata on the specified queue.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage queue metadata update --name
                                      [--account-key]
@@ -116,5 +114,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage the metadata for a storage queue.

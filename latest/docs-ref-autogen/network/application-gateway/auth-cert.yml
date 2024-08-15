@@ -12,7 +12,6 @@ directCommands:
     Create an authorization certificate.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway auth-cert create --cert-file
                                                     --gateway-name
@@ -51,7 +50,6 @@ directCommands:
     Delete an authorization certificate.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway auth-cert delete --gateway-name
                                                     --name
@@ -85,7 +83,6 @@ directCommands:
     List authorization certificates.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway auth-cert list --gateway-name
                                                   --resource-group
@@ -108,7 +105,6 @@ directCommands:
     Show an authorization certificate.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway auth-cert show --gateway-name
                                                   --name
@@ -139,7 +135,6 @@ directCommands:
     Update an authorization certificate.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway auth-cert update --cert-file
                                                     --gateway-name
@@ -195,7 +190,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway auth-cert wait [--created]
                                                   [--custom]
@@ -280,5 +274,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage authorization certificates of an application gateway.

@@ -14,7 +14,6 @@ directCommands:
     The Key Backup operation exports a key from Vault or HSM in a protected form. Note that this operation does NOT return key material in a form that can be used outside the Vault or HSM system, the returned key material is either protected to a HSM or to Vault itself. The intent of this operation is to allow a client to GENERATE a key in one Vault or HSM instance, BACKUP the key, and then RESTORE it into another Vault or HSM instance. The BACKUP operation may be used to export, in protected form, any key type from Vault or HSM. Individual versions of a key cannot be backed up. BACKUP / RESTORE can be performed within geographical boundaries only; meaning that a BACKUP from one geographical area cannot be restored to another geographical area. For example, a backup from the US geographical area cannot be restored in an EU geographical area. This operation requires the key/backup permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key backup --file
                            [--hsm-name]
@@ -47,7 +46,6 @@ directCommands:
     The create key operation can be used to create any key type in Vault or HSM. If the named key already exists, Vault or HSM creates a new version of the key. It requires the keys/create permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key create [--curve {P-256, P-256K, P-384, P-521}]
                            [--default-cvm-policy]
@@ -137,7 +135,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key decrypt --algorithm {A128CBC, A128CBCPAD, A128GCM, A192CBC, A192CBCPAD, A192GCM, A256CBC, A256CBCPAD, A256GCM, RSA-OAEP, RSA-OAEP-256, RSA1_5}
                             --value
@@ -208,7 +205,6 @@ directCommands:
     The delete key operation cannot be used to remove individual versions of a key. This operation removes the cryptographic material associated with the key, which means the key is not usable for Sign/Verify, Wrap/Unwrap or Encrypt/Decrypt operations. This operation requires the keys/delete permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key delete [--hsm-name]
                            [--id]
@@ -233,7 +229,6 @@ directCommands:
     Download the public part of a stored key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key download --file
                              [--encoding {DER, PEM}]
@@ -285,7 +280,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key encrypt --algorithm {A128CBC, A128CBCPAD, A128GCM, A192CBC, A192CBCPAD, A192GCM, A256CBC, A256CBCPAD, A256GCM, RSA-OAEP, RSA-OAEP-256, RSA1_5}
                             --value
@@ -349,7 +343,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: az keyvault key get-policy-template
 - uid: az_keyvault_key_import
   name: az keyvault key import
@@ -359,7 +352,6 @@ directCommands:
     Supports importing base64 encoded private keys from PEM files or strings. Supports importing BYOK keys into HSM for premium key vaults.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key import [--byok-file]
                            [--byok-string]
@@ -464,7 +456,6 @@ directCommands:
     Retrieve a list of the keys in the Vault or HSM as JSON Web Key structures that contain the public part of a stored key. The LIST operation is applicable to all key types, however only the base key identifier, attributes, and tags are provided in the response. Individual versions of a key are not listed in the response. This operation requires the keys/list permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key list [--hsm-name]
                          [--id]
@@ -497,7 +488,6 @@ directCommands:
     Retrieve a list of the keys in the Vault or HSM as JSON Web Key structures that contain the public part of a deleted key. This operation includes deletion-specific information. The Get Deleted Keys operation is applicable for vaults enabled for soft-delete. While the operation can be invoked on any Vault or HSM, it will return an error if invoked on a non soft-delete enabled Vault or HSM. This operation requires the keys/list permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key list-deleted [--hsm-name]
                                  [--id]
@@ -524,7 +514,6 @@ directCommands:
     Requires keys/list permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key list-versions [--hsm-name]
                                   [--id]
@@ -555,7 +544,6 @@ directCommands:
     The Purge Deleted Key operation is applicable for soft-delete enabled Vaults or HSMs. While the operation can be invoked on any Vault or HSM, it will return an error if invoked on a non soft-delete enabled Vault or HSM. This operation requires the keys/purge permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key purge [--hsm-name]
                           [--id]
@@ -580,7 +568,6 @@ directCommands:
     Get the requested number of random bytes from a managed HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key random --count
                            [--hsm-name]
@@ -605,7 +592,6 @@ directCommands:
     The Recover Deleted Key operation is applicable for deleted keys in soft-delete enabled Vaults or HSMs. It recovers the deleted key back to its latest version under /keys. An attempt to recover an non-deleted key will return an error. Consider this the inverse of the delete operation on soft-delete enabled Vaults or HSMs. This operation requires the keys/recover permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key recover [--hsm-name]
                             [--id]
@@ -632,7 +618,6 @@ directCommands:
     Import a previously backed up key into Vault or HSM, restoring the key, its key identifier, attributes and access control policies. The RESTORE operation may be used to import a previously backed up key. Individual versions of a key cannot be restored. The key is restored in its entirety with the same key name as it had when it was backed up. If the key name is not available in the target Key Vault, the RESTORE operation will be rejected. While the key name is retained during restore, the final key identifier will change if the key is restored to a different Vault or HSM. Restore will restore all versions and preserve version identifiers. The RESTORE operation is subject to security constraints. The target Vault or HSM must be owned by the same Microsoft Azure Subscription as the source Vault or HSM. The user must have RESTORE permission in the target Vault or HSM. This operation requires the keys/restore permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key restore [--backup-folder]
                             [--blob-container-name]
@@ -686,7 +671,6 @@ directCommands:
     Rotate the key based on the key policy by generating a new version of the key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key rotate [--hsm-name]
                            [--id]
@@ -713,7 +697,6 @@ directCommands:
     In order to perform this operation, the key must already exist in the Vault or HSM. The cryptographic material of a key itself cannot be changed. This operation requires the keys/update permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key set-attributes [--enabled {false, true}]
                                    [--expires]
@@ -775,7 +758,6 @@ directCommands:
     Requires keys/get permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key show [--hsm-name]
                          [--id]
@@ -806,7 +788,6 @@ directCommands:
     The Get Deleted Key operation is applicable for soft-delete enabled Vaults or HSMs. While the operation can be invoked on any Vault or HSM, it will return an error if invoked on a non soft-delete enabled Vault or HSM. This operation requires the keys/get permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key show-deleted [--hsm-name]
                                  [--id]
@@ -831,7 +812,6 @@ directCommands:
     Create a signature from a digest using a key that is stored in a Vault or HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key sign --algorithm {ES256, ES256K, ES384, ES512, PS256, PS384, PS512, RS256, RS384, RS512}
                          --digest
@@ -876,7 +856,6 @@ directCommands:
     Verify a signature using the key that is stored in a Vault or HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key verify --algorithm {ES256, ES256K, ES384, ES512, PS256, PS384, PS512, RS256, RS384, RS512}
                            --digest
@@ -970,5 +949,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage keys.

@@ -16,7 +16,6 @@ directCommands:
     The VPN Gateway and Local Network Gateway must be provisioned before creating the connection between them.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vpn-connection create --name
                                      --resource-group
@@ -97,7 +96,6 @@ directCommands:
     Delete a VPN connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vpn-connection delete [--ids]
                                      [--name]
@@ -131,7 +129,6 @@ directCommands:
     List all VPN connections.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network vpn-connection list --resource-group
   examples:
   - summary: |-
@@ -148,7 +145,6 @@ directCommands:
     Get the details of a VPN connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vpn-connection show [--ids]
                                    [--name]
@@ -177,7 +173,6 @@ directCommands:
     Update a VPN connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vpn-connection update [--add]
                                      [--enable-bgp {0, 1, f, false, n, no, t, true, y, yes}]
@@ -245,7 +240,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vpn-connection wait [--created]
                                    [--custom]
@@ -334,5 +328,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: For more information on site-to-site connections, visit https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-cli. For more information on Vnet-to-Vnet connections, visit https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-cli.

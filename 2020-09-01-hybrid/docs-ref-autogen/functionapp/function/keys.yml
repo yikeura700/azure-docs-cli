@@ -12,7 +12,6 @@ directCommands:
     Delete a function key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp function keys delete --key-name
                                         --name
@@ -49,7 +48,6 @@ directCommands:
     List all function keys.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp function keys list --function-name
                                       --name
@@ -84,7 +82,6 @@ directCommands:
     Note that key values are now redacted in the result. Please use the `az functionapp function keys list` command to view the key values.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp function keys set --function-name
                                      --key-name
@@ -149,5 +146,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage function keys.

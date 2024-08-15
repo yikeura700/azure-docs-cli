@@ -12,7 +12,6 @@ directCommands:
     Create a virtual network rule to allows access to an Azure SQL Server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server vnet-rule create --name
                                    --resource-group
@@ -63,7 +62,6 @@ directCommands:
     Deletes the virtual network rule with the given name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server vnet-rule delete --name
                                    [--ids]
@@ -94,7 +92,6 @@ directCommands:
     Gets a list of virtual network rules in a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server vnet-rule list [--ids]
                                  [--resource-group]
@@ -119,7 +116,6 @@ directCommands:
     Gets a virtual network rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server vnet-rule show --name
                                  [--ids]
@@ -150,7 +146,6 @@ directCommands:
     Update a virtual network rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server vnet-rule update --name
                                    --subnet
@@ -217,5 +212,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage a server's virtual network rules.

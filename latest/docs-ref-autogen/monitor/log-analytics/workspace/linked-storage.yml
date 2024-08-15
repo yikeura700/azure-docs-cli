@@ -12,7 +12,6 @@ directCommands:
     Add some linked storage accounts with specific data source type for log analytics workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace linked-storage add --resource-group
                                                           --storage-accounts
@@ -49,7 +48,6 @@ directCommands:
     Create some linked storage accounts for log analytics workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace linked-storage create --data-source-type {Alerts, AzureWatson, CustomLogs, Ingestion, Query}
                                                              --resource-group
@@ -86,7 +84,6 @@ directCommands:
     Delete all linked storage accounts with specific data source type for log analytics workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace linked-storage delete [--data-source-type {Alerts, AzureWatson, CustomLogs, Ingestion, Query}]
                                                              [--ids]
@@ -125,7 +122,6 @@ directCommands:
     List all linked storage accounts for a log analytics workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace linked-storage list --resource-group
                                                            --workspace-name
@@ -148,7 +144,6 @@ directCommands:
     Remove some linked storage accounts with specific data source type for log analytics workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace linked-storage remove --resource-group
                                                              --storage-accounts
@@ -185,7 +180,6 @@ directCommands:
     Show all linked storage accounts with specific data source type for a log analytics workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace linked-storage show [--data-source-type {Alerts, AzureWatson, CustomLogs, Ingestion, Query}]
                                                            [--ids]
@@ -245,5 +239,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: Manage linked storage account for log analytics workspace.

@@ -1,14 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_netappfiles_account
 name: az netappfiles account
-importantNote: >-
-  > [!NOTE]
-
-  > This command group has commands that are defined in both Azure CLI and at least one extension. Install each extension to benefit from its extended capabilities. [Learn more](https://learn.microsoft.com/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: |-
   Manage Azure NetApp Files (ANF) Account Resources.
 status: GA
-sourceType: Core and Extension
+sourceType: Core
 directCommands:
 - uid: az_netappfiles_account_create
   name: az netappfiles account create
@@ -16,7 +12,6 @@ directCommands:
     Create the specified NetApp account within the resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account create --account-name
                                   --resource-group
@@ -87,7 +82,6 @@ directCommands:
     Delete the specified NetApp account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account delete [--account-name]
                                   [--ids]
@@ -126,7 +120,6 @@ directCommands:
     List and describe all NetApp accounts in the subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account list [--max-items]
                                 [--next-token]
@@ -151,7 +144,6 @@ directCommands:
     Migrate the backups under a NetApp account to backup vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account migrate-backup --backup-vault-id
                                           [--account-name]
@@ -187,7 +179,6 @@ directCommands:
     Renew identity credentials that are used to authenticate to key vault, for customer-managed key encryption. If encryption.identity.principalId does not match identity.principalId, running this operation will fix it.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account renew-credentials [--account-name]
                                              [--ids]
@@ -221,7 +212,6 @@ directCommands:
     Get the NetApp account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account show [--account-name]
                                 [--ids]
@@ -250,7 +240,6 @@ directCommands:
     Update the specified NetApp account within the resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account update [--account-name]
                                   [--active-directories]
@@ -338,7 +327,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account wait [--account-name]
                                 [--created]
@@ -409,31 +397,18 @@ commands:
 - az_netappfiles_account_backup-vault
 - az_netappfiles_account_backup-vault_backup
 - az_netappfiles_account_backup-vault_backup_create
-- az_netappfiles_account_backup-vault_backup_create(netappfiles-preview)
 - az_netappfiles_account_backup-vault_backup_delete
-- az_netappfiles_account_backup-vault_backup_delete(netappfiles-preview)
 - az_netappfiles_account_backup-vault_backup_list
-- az_netappfiles_account_backup-vault_backup_list(netappfiles-preview)
 - az_netappfiles_account_backup-vault_backup_restore-file
-- az_netappfiles_account_backup-vault_backup_restore-file(netappfiles-preview)
 - az_netappfiles_account_backup-vault_backup_show
-- az_netappfiles_account_backup-vault_backup_show(netappfiles-preview)
 - az_netappfiles_account_backup-vault_backup_update
-- az_netappfiles_account_backup-vault_backup_update(netappfiles-preview)
 - az_netappfiles_account_backup-vault_backup_wait
-- az_netappfiles_account_backup-vault_backup_wait(netappfiles-preview)
 - az_netappfiles_account_backup-vault_create
-- az_netappfiles_account_backup-vault_create(netappfiles-preview)
 - az_netappfiles_account_backup-vault_delete
-- az_netappfiles_account_backup-vault_delete(netappfiles-preview)
 - az_netappfiles_account_backup-vault_list
-- az_netappfiles_account_backup-vault_list(netappfiles-preview)
 - az_netappfiles_account_backup-vault_show
-- az_netappfiles_account_backup-vault_show(netappfiles-preview)
 - az_netappfiles_account_backup-vault_update
-- az_netappfiles_account_backup-vault_update(netappfiles-preview)
 - az_netappfiles_account_backup-vault_wait
-- az_netappfiles_account_backup-vault_wait(netappfiles-preview)
 - az_netappfiles_account_create
 - az_netappfiles_account_delete
 - az_netappfiles_account_list

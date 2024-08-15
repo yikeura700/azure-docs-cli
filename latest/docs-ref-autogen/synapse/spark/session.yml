@@ -12,7 +12,6 @@ directCommands:
     Cancel a Spark session.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark session cancel --livy-id
                                     --spark-pool-name
@@ -46,7 +45,6 @@ directCommands:
     Create a Spark session.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark session create --executor-size {Large, Medium, Small}
                                     --executors
@@ -101,7 +99,6 @@ directCommands:
     List all Spark sessions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark session list --spark-pool-name
                                   --workspace-name
@@ -133,7 +130,6 @@ directCommands:
     Reset a Spark session timeout time.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark session reset-timeout --livy-id
                                            --spark-pool-name
@@ -161,7 +157,6 @@ directCommands:
     Get a Spark session.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark session show --livy-id
                                   --spark-pool-name
@@ -214,5 +209,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage Synapse Spark sessions.

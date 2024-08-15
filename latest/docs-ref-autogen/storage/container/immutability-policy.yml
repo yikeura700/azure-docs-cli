@@ -12,7 +12,6 @@ directCommands:
     Create or update an unlocked immutability policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container immutability-policy create --account-name
                                                     --container-name
@@ -56,7 +55,6 @@ directCommands:
     The response of delete has immutabilityPeriodSinceCreationInDays set to 0. ETag in If-Match is required for this operation. Deleting a locked immutability policy is not allowed, the only way is to delete the container after deleting all expired blobs inside the policy locked container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container immutability-policy delete --account-name
                                                     --container-name
@@ -85,7 +83,6 @@ directCommands:
     Extend the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container immutability-policy extend --account-name
                                                     --container-name
@@ -130,7 +127,6 @@ directCommands:
     The only action allowed on a Locked policy is ExtendImmutabilityPolicy action. ETag in If-Match is required for this operation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container immutability-policy lock --account-name
                                                   --container-name
@@ -159,7 +155,6 @@ directCommands:
     Gets the existing immutability policy along with the corresponding ETag in response headers and body.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container immutability-policy show --account-name
                                                   --container-name
@@ -212,5 +207,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage container immutability policies.

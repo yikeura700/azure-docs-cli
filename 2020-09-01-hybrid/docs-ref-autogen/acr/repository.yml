@@ -14,7 +14,6 @@ directCommands:
     This command deletes all associated layer data that are not referenced by any other manifest in the container registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr repository delete --name
                              [--image]
@@ -64,7 +63,6 @@ directCommands:
     List repositories in an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr repository list --name
                            [--password]
@@ -101,7 +99,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr repository list-deleted --name
                                    [--password]
@@ -132,7 +129,6 @@ directCommands:
     Get the attributes of a repository or image in an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr repository show --name
                            [--image]
@@ -179,7 +175,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'acr manifest list-metadata' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr repository show-manifests --name
                                      --repository
@@ -235,7 +230,6 @@ directCommands:
     Show tags for a repository in an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr repository show-tags --name
                                 --repository
@@ -293,7 +287,6 @@ directCommands:
     This command does not delete the manifest referenced by the tag or any associated layer data.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr repository untag --image
                             --name
@@ -329,7 +322,6 @@ directCommands:
     Update the attributes of a repository or image in an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr repository update --name
                              [--delete-enabled {false, true}]
@@ -422,5 +414,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Manage repositories (image names) for Azure Container Registries.

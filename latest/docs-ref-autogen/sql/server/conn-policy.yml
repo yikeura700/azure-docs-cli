@@ -12,7 +12,6 @@ directCommands:
     Gets a server's secure connection policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server conn-policy show [--ids]
                                    [--resource-group]
@@ -41,7 +40,6 @@ directCommands:
     Updates a server's secure connection policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server conn-policy update --connection-type {Default, Proxy, Redirect}
                                      [--ids]
@@ -99,5 +97,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage a server's connection policy.

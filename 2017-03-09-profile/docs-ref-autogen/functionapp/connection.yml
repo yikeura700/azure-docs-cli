@@ -1,14 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_functionapp_connection
 name: az functionapp connection
-importantNote: >-
-  > [!NOTE]
-
-  > This command group has commands that are defined in both Azure CLI and at least one extension. Install each extension to benefit from its extended capabilities. [Learn more](https://learn.microsoft.com/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: |-
   Commands to manage functionapp connections.
 status: GA
-sourceType: Core and Extension
+sourceType: Core
 directCommands:
 - uid: az_functionapp_connection_delete
   name: az functionapp connection delete
@@ -16,7 +12,6 @@ directCommands:
     Delete a functionapp connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection delete [--connection]
                                      [--id]
@@ -61,7 +56,6 @@ directCommands:
     List connections of a functionapp.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection list [--name]
                                    [--resource-group]
@@ -92,7 +86,6 @@ directCommands:
     List source configurations of a functionapp connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection list-configuration [--connection]
                                                  [--id]
@@ -127,7 +120,6 @@ directCommands:
     List client types and auth types supported by functionapp connections.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: az functionapp connection list-support-types [--target-type {app-insights, appconfig, cognitiveservices, confluent-cloud, cosmos-cassandra, cosmos-gremlin, cosmos-mongo, cosmos-sql, cosmos-table, eventhub, keyvault, mysql, mysql-flexible, postgres, postgres-flexible, redis, redis-enterprise, servicebus, signalr, sql, storage-blob, storage-file, storage-queue, storage-table, webpubsub}]
   examples:
   - summary: |-
@@ -147,7 +139,6 @@ directCommands:
     Get the details of a functionapp connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection show [--connection]
                                    [--id]
@@ -182,7 +173,6 @@ directCommands:
     Validate a functionapp connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection validate [--connection]
                                        [--id]
@@ -217,7 +207,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the connection is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection wait [--connection]
                                    [--created]
@@ -289,17 +278,13 @@ commands:
 - az_functionapp_connection_create_keyvault
 - az_functionapp_connection_create_mysql
 - az_functionapp_connection_create_mysql-flexible
-- az_functionapp_connection_create_mysql-flexible(serviceconnector-passwordless)
 - az_functionapp_connection_create_postgres
-- az_functionapp_connection_create_postgres(serviceconnector-passwordless)
 - az_functionapp_connection_create_postgres-flexible
-- az_functionapp_connection_create_postgres-flexible(serviceconnector-passwordless)
 - az_functionapp_connection_create_redis
 - az_functionapp_connection_create_redis-enterprise
 - az_functionapp_connection_create_servicebus
 - az_functionapp_connection_create_signalr
 - az_functionapp_connection_create_sql
-- az_functionapp_connection_create_sql(serviceconnector-passwordless)
 - az_functionapp_connection_create_storage-blob
 - az_functionapp_connection_create_storage-file
 - az_functionapp_connection_create_storage-queue

@@ -12,7 +12,6 @@ directCommands:
     Delete resource guard mapping of the Recovery Services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault resource-guard-mapping delete [--ids]
                                                   [--name]
@@ -50,7 +49,6 @@ directCommands:
     Get resource guard mapping of the Recovery Services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault resource-guard-mapping show [--ids]
                                                 [--name]
@@ -79,7 +77,6 @@ directCommands:
     Create/Update resource guard mapping of the Recovery Services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault resource-guard-mapping update --resource-guard-id
                                                   [--ids]
@@ -141,5 +138,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: Resource Guard Mapping details of the Recovery Services vault.

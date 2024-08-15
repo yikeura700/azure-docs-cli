@@ -12,7 +12,6 @@ directCommands:
     Create a new Recovery Services vault or update an existing one.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault create --location
                            --name
@@ -70,7 +69,6 @@ directCommands:
     Delete an existing Recovery services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault delete [--force]
                            [--ids]
@@ -109,7 +107,6 @@ directCommands:
     List Recovery service vaults within a subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: az backup vault list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -121,7 +118,6 @@ directCommands:
     List soft-deleted containers within a particular Recovery Services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault list-soft-deleted-containers --backup-management-type {AzureIaasVM, AzureStorage, AzureWorkload}
                                                  [--ids]
@@ -157,7 +153,6 @@ directCommands:
     Show details of a particular Recovery service vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault show [--ids]
                          [--name]
@@ -186,7 +181,6 @@ directCommands:
     Update an existing Recovery Services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault update [--backup-storage-redundancy {GeoRedundant, LocallyRedundant, ZoneRedundant}]
                            [--classic-alerts {Disable, Enable}]
@@ -298,5 +292,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: Online storage entity in Azure used to hold data such as backup copies, recovery points and backup policies.

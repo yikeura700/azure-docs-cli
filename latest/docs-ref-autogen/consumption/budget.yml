@@ -16,7 +16,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'consumption' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/consumption/_help.py
   syntax: >-
     az consumption budget create --amount
                                  --budget-name
@@ -76,7 +75,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'consumption' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/consumption/_help.py
   syntax: >-
     az consumption budget create-with-rg [--amount]
                                          [--budget-name]
@@ -133,7 +131,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'consumption' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/consumption/_help.py
   syntax: >-
     az consumption budget delete --budget-name
                                  [--resource-group]
@@ -158,7 +155,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'consumption' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/consumption/_help.py
   syntax: >-
     az consumption budget delete-with-rg [--budget-name]
                                          [--ids]
@@ -185,7 +181,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'consumption' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/consumption/_help.py
   syntax: >-
     az consumption budget list [--max-items]
                                [--next-token]
@@ -208,7 +203,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'consumption' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/consumption/_help.py
   syntax: >-
     az consumption budget show --budget-name
                                [--resource-group]
@@ -233,7 +227,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'consumption' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/consumption/_help.py
   syntax: >-
     az consumption budget show-with-rg [--budget-name]
                                        [--ids]
@@ -260,7 +253,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'consumption' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/consumption/_help.py
   syntax: >-
     az consumption budget update [--add]
                                  [--amount]
@@ -330,7 +322,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'consumption' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/consumption/_help.py
   syntax: >-
     az consumption budget update-with-rg [--amount]
                                          [--budget-name]
@@ -414,5 +405,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 09/16/2019
   description: Manage budgets for an Azure subscription.

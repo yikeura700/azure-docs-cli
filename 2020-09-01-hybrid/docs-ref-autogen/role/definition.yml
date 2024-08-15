@@ -12,7 +12,6 @@ directCommands:
     Create a custom role definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az role definition create --role-definition
   examples:
   - summary: |-
@@ -55,7 +54,6 @@ directCommands:
     Delete a role definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az role definition delete --name
                               [--custom-role-only {false, true}]
@@ -88,7 +86,6 @@ directCommands:
     List role definitions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az role definition list [--custom-role-only {false, true}]
                             [--name]
@@ -115,7 +112,6 @@ directCommands:
     Update a role definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az role definition update --role-definition
   examples:
   - summary: |-
@@ -181,5 +177,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/25/2024
   description: Manage role definitions.

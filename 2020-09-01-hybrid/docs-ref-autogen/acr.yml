@@ -1,14 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_acr
 name: az acr
-importantNote: >-
-  > [!NOTE]
-
-  > This command group has commands that are defined in both Azure CLI and at least one extension. Install each extension to benefit from its extended capabilities. [Learn more](https://learn.microsoft.com/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: |-
   Manage private registries with Azure Container Registries.
 status: GA
-sourceType: Core and Extension
+sourceType: Core
 directCommands:
 - uid: az_acr_build
   name: az acr build
@@ -16,7 +12,6 @@ directCommands:
     Queues a quick build, providing streaming logs for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr build --registry
                  [--agent-pool]
@@ -123,7 +118,6 @@ directCommands:
     Gets health information on the environment and optionally a target registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr check-health [--ignore-errors]
                         [--name]
@@ -157,7 +151,6 @@ directCommands:
     Checks if an Azure Container Registry name is valid and available for use.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: az acr check-name --name
   examples:
   - summary: |-
@@ -174,7 +167,6 @@ directCommands:
     Create an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr create --name
                   --resource-group
@@ -264,7 +256,6 @@ directCommands:
     Deletes an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr delete --name
                   [--resource-group]
@@ -292,7 +283,6 @@ directCommands:
     Imports an image to an Azure Container Registry from another Container Registry. Import removes the need to docker pull, docker tag, docker push. For larger images consider using `--no-wait`.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr import --name
                   --source
@@ -364,7 +354,6 @@ directCommands:
     Lists all the container registries under the current subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: az acr list [--resource-group]
   examples:
   - summary: |-
@@ -385,7 +374,6 @@ directCommands:
     Docker must be installed on your machine. Once done, use 'docker logout <registry url>' to log out. (If you only need an access token and do not want to install Docker, specify '--expose-token').
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr login --name
                  [--expose-token]
@@ -422,66 +410,12 @@ directCommands:
   - name: --username -u
     summary: |-
       The username used to log into a container registry.
-- uid: az_acr_query
-  name: az acr query
-  summary: |-
-    Query the content in an ACR using Kusto Query Language.
-  description: |-
-    Query for artifacts and images in an Azure Container Registry using the Kusto Query Language. OCI manifest properties such as digest, subject, annotations, etc. can be used to query, filter, and order search results.
-  status: GA
-  sourceType: Extension
-  syntax: >-
-    az acr query --kql-query
-                 --name
-                 [--password]
-                 [--repository]
-                 [--skip-token]
-                 [--username]
-  examples:
-  - summary: |-
-      Fetch a single manifest
-    syntax: az acr query -n $MyRegistry -q "Manifests | limit 1"
-  - summary: |-
-      Count all manifests in repository $RepositoryName
-    syntax: az acr query -n $MyRegistry -q "Manifests" -o table
-  - summary: |-
-      List all manifests in repository $RepositoryName in order of creation date
-    syntax: az acr query -n $MyRegistry --repository $RepositoryName -q "Manifests | order by createdAt desc"
-  - summary: |-
-      Query for all digests signed by $Signature in the repository $RepositoryName
-    syntax: az acr query -n $MyRegistry --repository $RepositoryName -q "Manifests | where annotations['org.cncf.notary.signature.subject'] == $Signature | project createdAt, digest, subject"
-  - summary: |-
-      Query for the digests in a registry using a skip token and sort by digest (for results with pagination)
-    syntax: az acr query -n $MyRegistry -q "Manifests | project digest | order by digest asc" --skip-token eyAibm8iOiAibHVjayIsICJidXQiOiAibmljZSIsICJ0cnkiOiAiISIgfQ==
-  requiredParameters:
-  - isRequired: true
-    name: --kql-query -q
-    summary: |-
-      The KQL query to execute.
-  - isRequired: true
-    name: --name -n
-    summary: |-
-      The name of the container registry that the query is run against.
-  optionalParameters:
-  - name: --password -p
-    summary: |-
-      Registry password.
-  - name: --repository
-    summary: |-
-      The repository that the query is run against. If no repository is provided, the query is run at the registry level.
-  - name: --skip-token
-    summary: |-
-      Skip token to get the next page of the query if applicable.
-  - name: --username -u
-    summary: |-
-      Registry username.
 - uid: az_acr_run
   name: az acr run
   summary: |-
     Queues a quick run providing streamed logs for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr run --registry
                [--agent-pool]
@@ -583,7 +517,6 @@ directCommands:
     Get the details of an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr show --name
                 [--resource-group]
@@ -609,7 +542,6 @@ directCommands:
     Display registry endpoints.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr show-endpoints --name
                           [--resource-group]
@@ -628,7 +560,6 @@ directCommands:
     Get the storage usage for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr show-usage --name
                       [--resource-group]
@@ -651,7 +582,6 @@ directCommands:
     Update an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr update --name
                   [--add]
@@ -809,11 +739,6 @@ commands:
 - az_acr_encryption
 - az_acr_encryption_rotate-key
 - az_acr_encryption_show
-- az_acr_export-pipeline
-- az_acr_export-pipeline_create
-- az_acr_export-pipeline_delete
-- az_acr_export-pipeline_list
-- az_acr_export-pipeline_show
 - az_acr_helm
 - az_acr_helm_delete
 - az_acr_helm_install-cli
@@ -827,11 +752,6 @@ commands:
 - az_acr_identity_remove
 - az_acr_identity_show
 - az_acr_import
-- az_acr_import-pipeline
-- az_acr_import-pipeline_create
-- az_acr_import-pipeline_delete
-- az_acr_import-pipeline_list
-- az_acr_import-pipeline_show
 - az_acr_list
 - az_acr_login
 - az_acr_manifest
@@ -855,12 +775,6 @@ commands:
 - az_acr_network-rule_remove
 - az_acr_pack
 - az_acr_pack_build
-- az_acr_pipeline-run
-- az_acr_pipeline-run_clean
-- az_acr_pipeline-run_create
-- az_acr_pipeline-run_delete
-- az_acr_pipeline-run_list
-- az_acr_pipeline-run_show
 - az_acr_private-endpoint-connection
 - az_acr_private-endpoint-connection_approve
 - az_acr_private-endpoint-connection_delete
@@ -869,7 +783,6 @@ commands:
 - az_acr_private-endpoint-connection_show
 - az_acr_private-link-resource
 - az_acr_private-link-resource_list
-- az_acr_query
 - az_acr_replication
 - az_acr_replication_create
 - az_acr_replication_delete

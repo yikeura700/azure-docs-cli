@@ -12,7 +12,6 @@ directCommands:
     Get all network interfaces in a virtual machine scale set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss nic list --resource-group
                      --virtual-machine-scale-set-name
@@ -31,7 +30,6 @@ directCommands:
     Get information about all network interfaces in a virtual machine in a virtual machine scale set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss nic list-vm-nics --instance-id
                              --resource-group
@@ -55,7 +53,6 @@ directCommands:
     Get the specified network interface in a virtual machine scale set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss nic show [--expand]
                      [--ids]
@@ -115,5 +112,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Manage network interfaces of a VMSS.

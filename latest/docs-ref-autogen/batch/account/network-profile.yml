@@ -12,7 +12,6 @@ directCommands:
     Set the Network profile for Batch account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch account network-profile set --resource-group
                                          [--default-action {Allow, Deny}]
@@ -45,7 +44,6 @@ directCommands:
     Get information about the Network profile for Batch account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch account network-profile show --resource-group
                                           [--name]
@@ -94,5 +92,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage Batch account Network profiles.

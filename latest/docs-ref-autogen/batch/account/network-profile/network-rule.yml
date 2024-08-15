@@ -12,7 +12,6 @@ directCommands:
     Add a Network rule from a Network Profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch account network-profile network-rule add --resource-group
                                                       [--ip-address]
@@ -44,7 +43,6 @@ directCommands:
     Delete a Network rule from a Network Profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch account network-profile network-rule delete --resource-group
                                                          [--ip-address]
@@ -81,7 +79,6 @@ directCommands:
     List the Network rules from a Network Profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch account network-profile network-rule list --resource-group
                                                        [--name]
@@ -127,5 +124,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage Batch account Network rules in Network Profile.

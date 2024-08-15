@@ -12,7 +12,6 @@ directCommands:
     Create an SQL user defined function under an Azure Cosmos DB SQL container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql user-defined-function create --account-name
                                                  --body
@@ -55,7 +54,6 @@ directCommands:
     Delete the SQL user defined function under an Azure Cosmos DB SQL container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql user-defined-function delete --account-name
                                                  --container-name
@@ -95,7 +93,6 @@ directCommands:
     List the SQL user defined functions under an Azure Cosmos DB SQL container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql user-defined-function list --account-name
                                                --container-name
@@ -124,7 +121,6 @@ directCommands:
     Show the details of a SQL user defined function under an Azure Cosmos DB SQL container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql user-defined-function show --account-name
                                                --container-name
@@ -158,7 +154,6 @@ directCommands:
     Creates or Updates an Azure Cosmos DB SQL user defined function.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql user-defined-function update --account-name
                                                  --body
@@ -222,5 +217,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB SQL user defined functions.

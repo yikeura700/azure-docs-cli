@@ -14,7 +14,6 @@ directCommands:
     Assign managed identities to an IoT Central application.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot central app identity assign --name
                                        [--resource-group]
@@ -42,7 +41,6 @@ directCommands:
     Remove managed identities from an IoT Central application.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot central app identity remove --name
                                        [--resource-group]
@@ -70,7 +68,6 @@ directCommands:
     Show the identity properties of an IoT Central application.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot central app identity show --name
                                      [--resource-group]
@@ -116,5 +113,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/21/2024
   description: Assign, remove, and show your IoT Central application identities.

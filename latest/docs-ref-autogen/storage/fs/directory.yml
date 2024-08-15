@@ -12,7 +12,6 @@ directCommands:
     Create a directory in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs directory create --file-system
                                    --name
@@ -80,7 +79,6 @@ directCommands:
     Delete a directory in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs directory delete --file-system
                                    --name
@@ -143,7 +141,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs directory download --destination-path
                                      --file-system
@@ -205,7 +202,6 @@ directCommands:
     Check for the existence of a directory in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs directory exists --file-system
                                    --name
@@ -261,7 +257,6 @@ directCommands:
     Generate a SAS token for directory in ADLS Gen2 account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs directory generate-sas --file-system
                                          --name
@@ -367,7 +362,6 @@ directCommands:
     List directories in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs directory list --file-system
                                  [--account-key]
@@ -432,7 +426,6 @@ directCommands:
     Move a directory in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs directory move --file-system
                                  --name
@@ -493,7 +486,6 @@ directCommands:
     Show properties of a directory in ADLS Gen2 file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs directory show --file-system
                                  --name
@@ -554,7 +546,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs directory upload --file-system
                                    --source
@@ -648,5 +639,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage directories in Azure Data Lake Storage Gen2 account.

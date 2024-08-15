@@ -12,7 +12,6 @@ directCommands:
     List all SSL predefined policies for configuring SSL policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network application-gateway ssl-policy predefined list
   examples:
   - summary: |-
@@ -24,7 +23,6 @@ directCommands:
     Get SSL predefined policy with the specified policy name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network application-gateway ssl-policy predefined show --name
   examples:
   - summary: |-
@@ -63,5 +61,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Get information on predefined SSL policies.

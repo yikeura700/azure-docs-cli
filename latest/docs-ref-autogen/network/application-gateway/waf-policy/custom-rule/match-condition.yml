@@ -12,7 +12,6 @@ directCommands:
     Add a match condition to an application gateway WAF policy custom rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy custom-rule match-condition add --match-variables
                                                                               --name
@@ -73,7 +72,6 @@ directCommands:
     List application gateway WAF policy custom rule match conditions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy custom-rule match-condition list --name
                                                                                --policy-name
@@ -101,7 +99,6 @@ directCommands:
     Remove a match condition from an application gateway WAF policy custom rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy custom-rule match-condition remove --index
                                                                                  --name
@@ -157,5 +154,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage match conditions in an application gateway web application firewall (WAF) policy custom rule.

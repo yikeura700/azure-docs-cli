@@ -14,7 +14,6 @@ directCommands:
     List the regional application gateway waf manifest.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-config list-dynamic-rule-sets --location
                                                                      [--max-items]
@@ -41,7 +40,6 @@ directCommands:
     Get information on available WAF rule sets, rule groups, and rule IDs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-config list-rule-sets [--group]
                                                              [--type]
@@ -77,7 +75,6 @@ directCommands:
     This command is only applicable to application gateways with an SKU type of WAF. To learn more, visit https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/tutorial-restrict-web-traffic-cli.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-config set --enabled {false, true}
                                                   [--disabled-rule-groups]
@@ -172,7 +169,6 @@ directCommands:
     Get the firewall configuration of a web application.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-config show [--gateway-name]
                                                    [--ids]
@@ -225,5 +221,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: These commands are only applicable to application gateways with an SKU type of WAF. To learn more, visit https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/tutorial-restrict-web-traffic-cli.

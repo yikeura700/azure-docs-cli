@@ -12,7 +12,6 @@ directCommands:
     Synchronizes access keys for the auto-storage account configured for the specified Batch account, only if storage key authentication is being used.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch account autostorage-keys sync --name
                                            --resource-group
@@ -52,5 +51,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage the access keys for the auto storage account configured for a Batch account.

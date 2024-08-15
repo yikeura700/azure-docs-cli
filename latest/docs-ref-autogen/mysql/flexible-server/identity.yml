@@ -12,7 +12,6 @@ directCommands:
     Add user asigned managed identities to the server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server identity assign --identity
                                              --resource-group
@@ -46,7 +45,6 @@ directCommands:
     List all user assigned managed identities from the server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server identity list --resource-group
                                            --server-name
@@ -69,7 +67,6 @@ directCommands:
     Remove user asigned managed identites from the server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server identity remove --identity
                                              --resource-group
@@ -108,7 +105,6 @@ directCommands:
     Get an user assigned managed identity from the server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server identity show --identity
                                            --resource-group
@@ -160,5 +156,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage server user assigned identities.

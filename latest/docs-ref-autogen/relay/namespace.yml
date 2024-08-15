@@ -12,7 +12,6 @@ directCommands:
     Create a Relay Service Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay namespace create --name
                               --resource-group
@@ -49,7 +48,6 @@ directCommands:
     Deletes the Relay Service Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay namespace delete [--ids]
                               [--name]
@@ -83,7 +81,6 @@ directCommands:
     Check for the availability of the given name for the Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: az relay namespace exists --name
   examples:
   - summary: |-
@@ -100,7 +97,6 @@ directCommands:
     List the Relay Service Namespaces.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay namespace list [--max-items]
                             [--next-token]
@@ -128,7 +124,6 @@ directCommands:
     Shows the Relay Service Namespace details.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay namespace show [--ids]
                             [--name]
@@ -157,7 +152,6 @@ directCommands:
     Updates a Relay Service Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay namespace update [--add]
                               [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -212,7 +206,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay namespace wait [--created]
                             [--custom]
@@ -307,5 +300,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/09/2021
   description: Manage Azure Relay Service Namespace.

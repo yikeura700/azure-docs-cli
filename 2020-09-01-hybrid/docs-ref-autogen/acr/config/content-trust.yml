@@ -12,7 +12,6 @@ directCommands:
     Show the configured content-trust policy for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr config content-trust show --registry
                                      [--resource-group]
@@ -35,7 +34,6 @@ directCommands:
     Update content-trust policy for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr config content-trust update --registry
                                        [--resource-group]
@@ -85,5 +83,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Manage content-trust policy for Azure Container Registries.

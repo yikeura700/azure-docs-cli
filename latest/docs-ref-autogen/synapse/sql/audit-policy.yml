@@ -12,7 +12,6 @@ directCommands:
     Get a SQL's auditing policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql audit-policy show --resource-group
                                      --workspace-name
@@ -37,7 +36,6 @@ directCommands:
     If the policy is being enabled, `--storage-account` or both `--storage-endpoint` and `--storage-key` must be specified.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql audit-policy update --resource-group
                                        --workspace-name
@@ -213,7 +211,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql audit-policy wait --blob-auditing-policy-name
                                      --resource-group
@@ -295,5 +292,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage SQL auditing policy.

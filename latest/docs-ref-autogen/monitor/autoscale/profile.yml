@@ -16,7 +16,6 @@ directCommands:
     For more information on autoscaling, visit: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-understanding-autoscale-settings.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale profile create --autoscale-name
                                         --count
@@ -122,7 +121,6 @@ directCommands:
     Delete an autoscale profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale profile delete --autoscale-name
                                         --name
@@ -150,7 +148,6 @@ directCommands:
     List autoscale profiles.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale profile list --autoscale-name
                                       --resource-group
@@ -173,7 +170,6 @@ directCommands:
     Look up time zone information.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale profile list-timezones [--offset]
                                                 [--search-query]
@@ -190,7 +186,6 @@ directCommands:
     Show details of an autoscale profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale profile show --autoscale-name
                                       --name
@@ -239,5 +234,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: 'For more information on autoscaling, visit: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-understanding-autoscale-settings.'

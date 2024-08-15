@@ -12,7 +12,6 @@ directCommands:
     List Azure Advisor configuration for the entire subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/advisor/_help.py
   syntax: az advisor configuration list
 - uid: az_advisor_configuration_show
   name: az advisor configuration show
@@ -20,7 +19,6 @@ directCommands:
     Show Azure Advisor configuration for the given subscription or resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/advisor/_help.py
   syntax: az advisor configuration show [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -32,7 +30,6 @@ directCommands:
     Update Azure Advisor configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/advisor/_help.py
   syntax: >-
     az advisor configuration update [--add]
                                     [--configuration-name]
@@ -115,5 +112,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/19/2019
   description: Manage Azure Advisor configuration.

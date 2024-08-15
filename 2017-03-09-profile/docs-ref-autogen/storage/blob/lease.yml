@@ -12,7 +12,6 @@ directCommands:
     Request a new lease.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob lease acquire --blob-name
                                   --container-name
@@ -83,7 +82,6 @@ directCommands:
     The lock duration can be 15 to 60 seconds, or can be infinite.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob lease break --blob-name
                                 --container-name
@@ -145,7 +143,6 @@ directCommands:
     The lock duration can be 15 to 60 seconds, or can be infinite.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob lease change --blob-name
                                  --container-name
@@ -213,7 +210,6 @@ directCommands:
     The lock duration can be 15 to 60 seconds, or can be infinite.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob lease release --blob-name
                                   --container-name
@@ -274,7 +270,6 @@ directCommands:
     Renew the lease.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob lease renew --blob-name
                                 --container-name
@@ -364,5 +359,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage storage blob leases.

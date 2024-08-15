@@ -1,14 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_container
 name: az container
-importantNote: >-
-  > [!NOTE]
-
-  > This command group has commands that are defined in both Azure CLI and at least one extension. Install each extension to benefit from its extended capabilities. [Learn more](https://learn.microsoft.com/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: |-
   Manage Azure Container Instances.
 status: GA
-sourceType: Core and Extension
+sourceType: Core
 directCommands:
 - uid: az_container_attach
   name: az container attach
@@ -16,7 +12,6 @@ directCommands:
     Attach local standard output and error streams to a container in a container group. This command provides diagnostic information during container startup. Once the container has started, it streams STDOUT and STDERR to your local console.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
   syntax: >-
     az container attach [--container-name]
                         [--ids]
@@ -49,7 +44,6 @@ directCommands:
     Create a container group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
   syntax: >-
     az container create --resource-group
                         [--acr-identity]
@@ -332,7 +326,6 @@ directCommands:
     Delete a container group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
   syntax: >-
     az container delete [--ids]
                         [--name]
@@ -368,7 +361,6 @@ directCommands:
     The most common use case is to open an interactive bash shell. See examples below.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
   syntax: >-
     az container exec --exec-command
                       [--container-name]
@@ -407,7 +399,6 @@ directCommands:
     Export a container group in yaml format.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
   syntax: >-
     az container export --file
                         [--ids]
@@ -442,7 +433,6 @@ directCommands:
     List container groups.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
   syntax: az container list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -454,7 +444,6 @@ directCommands:
     Examine the logs for a container in a container group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
   syntax: >-
     az container logs [--container-name]
                       [--follow]
@@ -494,7 +483,6 @@ directCommands:
     Restarts all containers in a container group in place. If container image has updates, new image will be downloaded.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
   syntax: >-
     az container restart --name
                          --resource-group
@@ -519,7 +507,6 @@ directCommands:
     Get the details of a container group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
   syntax: >-
     az container show [--ids]
                       [--name]
@@ -550,7 +537,6 @@ directCommands:
     Starts all containers in a container group. Compute resources will be allocated and billing will start.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
   syntax: >-
     az container start --name
                        --resource-group
@@ -577,7 +563,6 @@ directCommands:
     Stops all containers in a container group. Compute resources will be deallocated and billing will stop.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/container/_help.py
   syntax: >-
     az container stop --name
                       --resource-group
@@ -591,8 +576,6 @@ directCommands:
     summary: |-
       Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
 commands:
-- az_container_app
-- az_container_app_up
 - az_container_attach
 - az_container_create
 - az_container_delete

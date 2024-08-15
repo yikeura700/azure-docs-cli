@@ -12,7 +12,6 @@ directCommands:
     Cancel a specified run of an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task cancel-run --registry
                            --run-id
@@ -40,7 +39,6 @@ directCommands:
     Create a series of steps for building, testing and OS & Framework patching containers. Tasks support triggers from git commits and base image updates.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task create --name
                        --registry
@@ -253,7 +251,6 @@ directCommands:
     Delete a task from an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task delete --name
                        --registry
@@ -286,7 +283,6 @@ directCommands:
     List the tasks for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task list --registry
                      [--resource-group]
@@ -309,7 +305,6 @@ directCommands:
     List all of the executed runs for an Azure Container Registry, with the ability to filter by a specific Task.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task list-runs --registry
                           [--image]
@@ -358,7 +353,6 @@ directCommands:
     Show logs for a particular run. If no run-id is supplied, show logs for the last created run.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task logs --registry
                      [--image]
@@ -407,7 +401,6 @@ directCommands:
     Manually trigger a task that might otherwise be waiting for git commits or base image update triggers.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task run --name
                     --registry
@@ -502,7 +495,6 @@ directCommands:
     Get the properties of a named task for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task show --name
                      --registry
@@ -538,7 +530,6 @@ directCommands:
     Get the properties of a specified run of an Azure Container Registry Task.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task show-run --registry
                          --run-id
@@ -566,7 +557,6 @@ directCommands:
     Update a task for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task update --name
                        --registry
@@ -721,7 +711,6 @@ directCommands:
     Patch the run properties of an Azure Container Registry Task.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task update-run --registry
                            --run-id
@@ -799,5 +788,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Manage a collection of steps for building, testing and OS & Framework patching container images using Azure Container Registries.

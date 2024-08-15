@@ -12,7 +12,6 @@ directCommands:
     Create a new resolver in the GraphQL API or updates an existing one.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim graphql resolver create --api-id
                                     --display-name
@@ -60,7 +59,6 @@ directCommands:
     Delete the specified resolver in the GraphQL API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim graphql resolver delete --api-id
                                     --resolver-id
@@ -103,7 +101,6 @@ directCommands:
     List a collection of the resolvers for the specified GraphQL API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim graphql resolver list --api-id
                                   --resource-group
@@ -131,7 +128,6 @@ directCommands:
     Get the details of the GraphQL API Resolver specified by its identifier.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim graphql resolver show --api-id
                                   --resolver-id
@@ -193,5 +189,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/19/2024
   description: Manage Azure API Management GraphQL API's Resolvers.

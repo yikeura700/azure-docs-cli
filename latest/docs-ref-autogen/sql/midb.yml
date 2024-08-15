@@ -12,7 +12,6 @@ directCommands:
     Create a managed database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb create --managed-instance
                        --name
@@ -59,7 +58,6 @@ directCommands:
     Delete a managed database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb delete [--ids]
                        [--managed-instance]
@@ -102,7 +100,6 @@ directCommands:
     List managed databases on a managed instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb list [--ids]
                      [--managed-instance]
@@ -131,7 +128,6 @@ directCommands:
     List restorable deleted managed databases.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb list-deleted [--ids]
                              [--managed-instance]
@@ -160,7 +156,6 @@ directCommands:
     Recover a managed database using geo-pair instance backup.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb recover --recoverable-database-id
                         [--ids]
@@ -204,7 +199,6 @@ directCommands:
     Restore a managed database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb restore --dest-name
                         --time
@@ -285,7 +279,6 @@ directCommands:
     Get the details for a managed database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb show [--ids]
                      [--managed-instance]
@@ -318,7 +311,6 @@ directCommands:
     Update a managed database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb update [--add]
                        [--force-string]
@@ -443,5 +435,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage SQL Managed Instance databases.

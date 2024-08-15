@@ -12,7 +12,6 @@ directCommands:
     Migrate the throughput of the MongoDB collection between autoscale and manually provisioned.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb mongodb collection throughput migrate --account-name
                                                       --database-name
@@ -47,7 +46,6 @@ directCommands:
     Get the throughput of the MongoDB collection under an Azure Cosmos DB MongoDB database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb mongodb collection throughput show --account-name
                                                    --database-name
@@ -76,7 +74,6 @@ directCommands:
     Update the throughput of the MongoDB collection under an Azure Cosmos DB MongoDB database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb mongodb collection throughput update --account-name
                                                      --database-name
@@ -137,5 +134,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage throughput of MongoDB collection under an Azure Cosmos DB account.

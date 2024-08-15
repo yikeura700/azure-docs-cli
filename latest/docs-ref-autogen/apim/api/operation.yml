@@ -12,7 +12,6 @@ directCommands:
     Creates a new operation in the API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api operation create --api-id
                                  --display-name
@@ -72,7 +71,6 @@ directCommands:
     Deletes the specified operation in the API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api operation delete --api-id
                                  --operation-id
@@ -110,7 +108,6 @@ directCommands:
     List a collection of the operations for the specified API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api operation list --api-id
                                --resource-group
@@ -138,7 +135,6 @@ directCommands:
     Gets the details of the API Operation specified by its identifier.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api operation show --api-id
                                --operation-id
@@ -171,7 +167,6 @@ directCommands:
     Updates the details of the operation in the API specified by its identifier.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api operation update --api-id
                                  --operation-id
@@ -270,5 +265,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/19/2024
   description: Manage Azure API Management API Operations.

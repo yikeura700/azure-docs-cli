@@ -12,7 +12,6 @@ directCommands:
     Create Authorization Rule for the given Relay Service WCF Relay.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay wcfrelay authorization-rule create --name
                                                 --namespace-name
@@ -50,7 +49,6 @@ directCommands:
     Delete the Authorization Rule of Relay Service WCF Relay.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay wcfrelay authorization-rule delete [--ids]
                                                 [--name]
@@ -87,7 +85,6 @@ directCommands:
     List of Authorization Rule by Relay Service WCF Relay.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay wcfrelay authorization-rule list --namespace-name
                                               --relay-name
@@ -124,7 +121,6 @@ directCommands:
     Show properties of Authorization Rule for the given Relay Service WCF Relay.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay wcfrelay authorization-rule show [--ids]
                                               [--name]
@@ -161,7 +157,6 @@ directCommands:
     Update Authorization Rule for the given Relay Service WCF Relay.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay wcfrelay authorization-rule update --rights
                                                 [--add]
@@ -249,5 +244,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/09/2021
   description: Manage Azure Relay Service WCF Relay Authorization Rule.

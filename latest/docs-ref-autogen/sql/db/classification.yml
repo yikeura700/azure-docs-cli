@@ -12,7 +12,6 @@ directCommands:
     Delete the sensitivity classification of a given column.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db classification delete --column
                                     --schema
@@ -61,7 +60,6 @@ directCommands:
     Get the sensitivity classifications of a given database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db classification list [--count]
                                   [--filter]
@@ -106,7 +104,6 @@ directCommands:
     Get the sensitivity classification of a given column.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db classification show --column
                                   --schema
@@ -155,7 +152,6 @@ directCommands:
     Update a columns's sensitivity classification.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db classification update --column
                                     --schema
@@ -240,5 +236,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage sensitivity classifications.

@@ -12,7 +12,6 @@ directCommands:
     Accepts a transfer request.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/billing/_help.py
   syntax: >-
     az billing transfer accept-transfer --transfer-name
                                         [--product-details]
@@ -31,7 +30,6 @@ directCommands:
     List the transfer requests received by the caller.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/billing/_help.py
   syntax: >-
     az billing transfer list [--max-items]
                              [--next-token]
@@ -48,7 +46,6 @@ directCommands:
     Get a transfer request by ID. The caller must be the recipient of the transfer request.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/billing/_help.py
   syntax: az billing transfer show --transfer-name
   requiredParameters:
   - isRequired: true
@@ -84,5 +81,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/26/2020
   description: Manage transfer.
