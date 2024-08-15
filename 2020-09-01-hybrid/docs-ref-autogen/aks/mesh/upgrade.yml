@@ -20,7 +20,6 @@ directCommands:
     This command completes Azure Service Mesh canary upgrade by removing the previous revision.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks mesh upgrade complete --name
                                  --resource-group
@@ -92,7 +91,6 @@ directCommands:
     This command rolls back Azure Service Mesh upgrade to the previous stable revision.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks mesh upgrade rollback --name
                                  --resource-group
@@ -164,7 +162,6 @@ directCommands:
     This command initiates upgrade of Azure Service Mesh to the specified revision.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks mesh upgrade start --name
                               --resource-group

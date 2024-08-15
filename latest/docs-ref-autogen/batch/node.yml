@@ -14,7 +14,6 @@ directCommands:
     This operation can only run when the allocation state of the Pool is steady. When this operation runs, the allocation state changes from steady to resizing. Each request may remove up to 100 nodes.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch node delete --pool-id
                          [--account-endpoint]
@@ -74,7 +73,6 @@ directCommands:
     Lists the Compute Nodes in the specified Pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch node list --pool-id
                        [--account-endpoint]
@@ -111,7 +109,6 @@ directCommands:
     You can restart a Compute Node only if it is in an idle or running state.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch node reboot --node-id
                          --pool-id
@@ -150,7 +147,6 @@ directCommands:
     You can reinstall the operating system on a Compute Node only if it is in an idle or running state. This API can be invoked only on Pools created with the cloud service configuration property.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch node reimage --node-id
                           --pool-id
@@ -187,7 +183,6 @@ directCommands:
     Gets information about the specified Compute Node.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch node show --node-id
                        --pool-id
@@ -266,5 +261,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage Batch compute nodes.

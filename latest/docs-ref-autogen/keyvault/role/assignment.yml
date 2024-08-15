@@ -12,7 +12,6 @@ directCommands:
     Create a new role assignment for a user, group, or service principal.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault role assignment create --role
                                        --scope
@@ -57,7 +56,6 @@ directCommands:
     Delete a role assignment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault role assignment delete [--assignee]
                                        [--assignee-object-id]
@@ -98,7 +96,6 @@ directCommands:
     List role assignments.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault role assignment list [--assignee]
                                      [--assignee-object-id]
@@ -154,5 +151,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage role assignments.

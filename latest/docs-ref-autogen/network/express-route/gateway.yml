@@ -12,7 +12,6 @@ directCommands:
     Create an ExpressRoute gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route gateway create --name
                                             --resource-group
@@ -67,7 +66,6 @@ directCommands:
     Delete an ExpressRoute gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route gateway delete [--ids]
                                             [--name]
@@ -101,7 +99,6 @@ directCommands:
     List ExpressRoute gateways.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network express-route gateway list [--resource-group]
   examples:
   - summary: |-
@@ -117,7 +114,6 @@ directCommands:
     Get the details of an ExpressRoute gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route gateway show [--ids]
                                           [--name]
@@ -146,7 +142,6 @@ directCommands:
     Update settings of an ExpressRoute gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route gateway update [--add]
                                             [--allow-non-vwan-traffic {0, 1, f, false, n, no, t, true, y, yes}]
@@ -222,7 +217,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route gateway wait [--created]
                                           [--custom]
@@ -314,5 +308,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage ExpressRoute gateways.

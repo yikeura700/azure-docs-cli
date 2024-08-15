@@ -16,7 +16,6 @@ directCommands:
     List the number of network resources in a region that are used against a subscription quota.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network list-usages --location
   examples:
   - summary: |-
@@ -59,20 +58,6 @@ commands:
 - az_network_bastion_tunnel
 - az_network_bastion_update
 - az_network_bastion_wait
-- az_network_cross-connection
-- az_network_cross-connection_list
-- az_network_cross-connection_list-arp-tables
-- az_network_cross-connection_list-route-tables
-- az_network_cross-connection_peering
-- az_network_cross-connection_peering_create
-- az_network_cross-connection_peering_delete
-- az_network_cross-connection_peering_list
-- az_network_cross-connection_peering_show
-- az_network_cross-connection_peering_update
-- az_network_cross-connection_show
-- az_network_cross-connection_summarize-route-table
-- az_network_cross-connection_update
-- az_network_cross-connection_wait
 - az_network_dns
 - az_network_dns_record-set
 - az_network_dns_record-set_a
@@ -532,11 +517,6 @@ commands:
 - az_network_nic_show
 - az_network_nic_show-effective-route-table
 - az_network_nic_update
-- az_network_nic_vtap-config
-- az_network_nic_vtap-config_create
-- az_network_nic_vtap-config_delete
-- az_network_nic_vtap-config_list
-- az_network_nic_vtap-config_show
 - az_network_nic_wait
 - az_network_nsg
 - az_network_nsg_create
@@ -756,12 +736,6 @@ commands:
 - az_network_vnet_subnet_show
 - az_network_vnet_subnet_update
 - az_network_vnet_subnet_wait
-- az_network_vnet_tap
-- az_network_vnet_tap_create
-- az_network_vnet_tap_delete
-- az_network_vnet_tap_list
-- az_network_vnet_tap_show
-- az_network_vnet_tap_update
 - az_network_vnet_update
 - az_network_vnet_wait
 - az_network_vpn-connection

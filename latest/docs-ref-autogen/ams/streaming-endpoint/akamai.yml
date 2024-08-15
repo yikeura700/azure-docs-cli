@@ -12,7 +12,6 @@ directCommands:
     Add an AkamaiAccessControl to an existing streaming endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-endpoint akamai add [--account-name]
                                          [--base64-key]
@@ -53,7 +52,6 @@ directCommands:
     Remove an AkamaiAccessControl from an existing streaming endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-endpoint akamai remove --identifier
                                             [--account-name]
@@ -110,5 +108,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage AkamaiAccessControl objects to be used on streaming endpoints.

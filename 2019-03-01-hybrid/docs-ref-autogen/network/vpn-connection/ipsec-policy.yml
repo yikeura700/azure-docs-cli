@@ -15,7 +15,6 @@ directCommands:
     set them all.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vpn-connection ipsec-policy add --connection-name
                                                --dh-group {DHGroup1, DHGroup14, DHGroup2, DHGroup2048, DHGroup24, ECP256, ECP384, None}
@@ -90,7 +89,6 @@ directCommands:
     Delete all IPsec policies on a VPN connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vpn-connection ipsec-policy clear --connection-name
                                                  --resource-group
@@ -119,7 +117,6 @@ directCommands:
     List IPSec policies associated with a VPN connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vpn-connection ipsec-policy list --connection-name
                                                 --resource-group
@@ -142,7 +139,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vpn-connection ipsec-policy wait [--connection-name]
                                                 [--created]
@@ -225,5 +221,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage VPN connection IPSec policies.

@@ -12,7 +12,6 @@ directCommands:
     Create a read replica for a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server replica create --name
                                    --resource-group
@@ -59,7 +58,6 @@ directCommands:
     List all read replicas for a given server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server replica list [--ids]
                                  [--resource-group]
@@ -88,7 +86,6 @@ directCommands:
     Stop replication to a read replica and make it a read/write server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server replica stop [--ids]
                                  [--name]
@@ -145,5 +142,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage read replicas.

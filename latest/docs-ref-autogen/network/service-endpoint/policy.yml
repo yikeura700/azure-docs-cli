@@ -12,7 +12,6 @@ directCommands:
     Create a service endpoint policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network service-endpoint policy create --name
                                               --resource-group
@@ -49,7 +48,6 @@ directCommands:
     Delete a service endpoint policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network service-endpoint policy delete [--ids]
                                               [--name]
@@ -83,7 +81,6 @@ directCommands:
     List service endpoint policies.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network service-endpoint policy list [--resource-group]
   examples:
   - summary: |-
@@ -99,7 +96,6 @@ directCommands:
     Get the details of a service endpoint policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network service-endpoint policy show [--ids]
                                             [--name]
@@ -128,7 +124,6 @@ directCommands:
     Update a service endpoint policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network service-endpoint policy update [--add]
                                               [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -183,7 +178,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network service-endpoint policy wait [--created]
                                             [--custom]
@@ -268,5 +262,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage service endpoint policies.

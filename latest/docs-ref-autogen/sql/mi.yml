@@ -12,7 +12,6 @@ directCommands:
     Create a managed instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi create --name
                      --resource-group
@@ -230,7 +229,6 @@ directCommands:
     Delete a managed instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi delete [--ids]
                      [--name]
@@ -269,7 +267,6 @@ directCommands:
     Failover a managed instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi failover [--ids]
                        [--name]
@@ -310,7 +307,6 @@ directCommands:
     List available managed instances.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi list [--expand-ad-admin]
                    [--resource-group]
@@ -335,7 +331,6 @@ directCommands:
     Refresh external governance enablement status.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi refresh-external-governance-status [--ids]
                                                  [--managed-instance-name]
@@ -369,7 +364,6 @@ directCommands:
     Get the details for a managed instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi show [--expand-ad-admin]
                    [--ids]
@@ -403,7 +397,6 @@ directCommands:
     Start the managed instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi start [--ids]
                     [--managed-instance]
@@ -440,7 +433,6 @@ directCommands:
     Stop the managed instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi stop [--ids]
                    [--managed-instance]
@@ -477,7 +469,6 @@ directCommands:
     Update a managed instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi update [--add]
                      [--admin-password]
@@ -773,5 +764,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage SQL managed instances.

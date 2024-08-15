@@ -14,7 +14,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'managed create， self-hosted create' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime create --name
                                           --resource-group
@@ -85,7 +84,6 @@ directCommands:
     Delete an integration runtime.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime delete [--ids]
                                           [--name]
@@ -130,7 +128,6 @@ directCommands:
     Get the integration runtime connection infomation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime get-connection-info [--ids]
                                                        [--name]
@@ -165,7 +162,6 @@ directCommands:
     Get metric data for a self-hosted integration runtime.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime get-monitoring-data [--ids]
                                                        [--name]
@@ -200,7 +196,6 @@ directCommands:
     Gets detailed status information for an integration runtime.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime get-status [--ids]
                                               [--name]
@@ -235,7 +230,6 @@ directCommands:
     List integration runtimes.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime list --resource-group
                                         --workspace-name
@@ -258,7 +252,6 @@ directCommands:
     Get keys for a self-hosted integration runtime.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime list-auth-key --name
                                                  --resource-group
@@ -288,7 +281,6 @@ directCommands:
     Regenerate self-hosted integration runtime key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime regenerate-auth-key [--ids]
                                                        [--key-name {authKey1, authKey2}]
@@ -329,7 +321,6 @@ directCommands:
     Get an integration runtime.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime show [--ids]
                                         [--if-none-match]
@@ -368,7 +359,6 @@ directCommands:
     Start an SSIS integration runtime.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime start [--ids]
                                          [--name]
@@ -408,7 +398,6 @@ directCommands:
     Stop an SSIS integration runtime.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime stop [--ids]
                                         [--name]
@@ -453,7 +442,6 @@ directCommands:
     Synchronize credentials among integration runtime nodes.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime sync-credentials [--ids]
                                                     [--name]
@@ -488,7 +476,6 @@ directCommands:
     Update an integration runtime.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime update --auto-update {Off, On}
                                           --update-delay-offset
@@ -535,7 +522,6 @@ directCommands:
     Upgrade self-hosted integration runtime.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime upgrade [--ids]
                                            [--name]
@@ -570,7 +556,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of a integration runtime is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime wait --name
                                         --resource-group
@@ -672,5 +657,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage Synapse's integration runtimes.

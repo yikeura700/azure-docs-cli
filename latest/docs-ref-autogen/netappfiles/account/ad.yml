@@ -12,7 +12,6 @@ directCommands:
     Add an active directory to the account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account ad add --account-name
                                   --resource-group
@@ -131,7 +130,6 @@ directCommands:
     List the active directories of an account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account ad list --account-name
                                    --resource-group
@@ -154,7 +152,6 @@ directCommands:
     Remove an active directory from the account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account ad remove --account-name
                                      --active-directory
@@ -193,7 +190,6 @@ directCommands:
     Get the specified ANF active directory.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account ad show --account-name
                                    --active-directory-id
@@ -221,7 +217,6 @@ directCommands:
     Updates an active directory to the account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account ad update --account-name
                                      --active-directory-id
@@ -357,7 +352,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account ad wait [--account-name]
                                    [--created]
@@ -442,5 +436,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/07/2024
   description: Manage Azure NetApp Files (ANF) Account active directories.

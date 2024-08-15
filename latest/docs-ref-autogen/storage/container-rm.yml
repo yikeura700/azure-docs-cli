@@ -12,7 +12,6 @@ directCommands:
     Create a new container under the specified storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container-rm create --name
                                    --storage-account
@@ -77,7 +76,6 @@ directCommands:
     Delete the specified container under its account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container-rm delete [--ids]
                                    [--name]
@@ -121,7 +119,6 @@ directCommands:
     Check for the existence of a container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container-rm exists [--ids]
                                    [--name]
@@ -160,7 +157,6 @@ directCommands:
     List all containers under the specified storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container-rm list --storage-account
                                  [--include-deleted]
@@ -195,7 +191,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container-rm migrate-vlw [--ids]
                                         [--name]
@@ -239,7 +234,6 @@ directCommands:
     Show the properties for a specified container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container-rm show [--ids]
                                  [--name]
@@ -278,7 +272,6 @@ directCommands:
     Update the properties for a container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container-rm update [--add]
                                    [--force-string]
@@ -378,5 +371,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage Azure containers using the Microsoft.Storage resource provider.

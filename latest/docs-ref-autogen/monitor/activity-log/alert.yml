@@ -14,7 +14,6 @@ directCommands:
     This command will create a default activity log with one condition which compares if the activities logs 'category' field equals to 'ServiceHealth'. The newly created activity log alert does not have any action groups attached to it.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor activity-log alert create --activity-log-alert-name
                                          --resource-group
@@ -92,7 +91,6 @@ directCommands:
     Delete an activity log alert.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor activity-log alert delete [--activity-log-alert-name]
                                          [--ids]
@@ -117,7 +115,6 @@ directCommands:
     List activity log alert rules under a resource group or the current subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: az monitor activity-log alert list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -129,7 +126,6 @@ directCommands:
     Get an activity log alert.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor activity-log alert show [--activity-log-alert-name]
                                        [--ids]
@@ -154,7 +150,6 @@ directCommands:
     Update a new activity log alert or update an existing one.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor activity-log alert update [--activity-log-alert-name]
                                          [--add]
@@ -265,5 +260,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: Manage activity log alert rules.

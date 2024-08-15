@@ -12,7 +12,6 @@ directCommands:
     List all backup jobs of a Recovery Services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup job list --resource-group
                        --vault-name
@@ -63,7 +62,6 @@ directCommands:
     Show details of a particular job.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup job show [--ids]
                        [--name]
@@ -100,7 +98,6 @@ directCommands:
     Suspend or terminate a currently running job.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup job stop [--ids]
                        [--name]
@@ -137,7 +134,6 @@ directCommands:
     Wait until either the job completes or the specified timeout value is reached.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup job wait [--ids]
                        [--name]
@@ -202,5 +198,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: Entity which contains details of the job.

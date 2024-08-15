@@ -12,7 +12,6 @@ directCommands:
     Authorize a partner configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner configuration authorize --resource-group
                                                  [--auth-exp-date]
@@ -46,7 +45,6 @@ directCommands:
     Create a partner configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner configuration create --resource-group
                                               [--authorized-partner]
@@ -95,7 +93,6 @@ directCommands:
     Delete a partner configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner configuration delete --resource-group
                                               [--yes]
@@ -119,7 +116,6 @@ directCommands:
     List available partner configurations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner configuration list [--odata-query]
                                             [--resource-group]
@@ -149,7 +145,6 @@ directCommands:
     Get the details of a partner configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: az eventgrid partner configuration show --resource-group
   examples:
   - summary: |-
@@ -166,7 +161,6 @@ directCommands:
     Unauthorize a partner configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner configuration unauthorize --resource-group
                                                    [--auth-exp-date]
@@ -200,7 +194,6 @@ directCommands:
     Update a partner configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner configuration update --resource-group
                                               [--default-maximum-expiration-time-in-days]
@@ -254,5 +247,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/08/2022
   description: Manage partner configurations.

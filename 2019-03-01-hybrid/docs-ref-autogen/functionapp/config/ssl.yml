@@ -12,7 +12,6 @@ directCommands:
     Bind an SSL certificate to a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config ssl bind --certificate-thumbprint
                                    --ssl-type {IP, SNI}
@@ -63,7 +62,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config ssl create --hostname
                                      --name
@@ -100,7 +98,6 @@ directCommands:
     Delete an SSL certificate from a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config ssl delete --certificate-thumbprint
                                      --resource-group
@@ -119,7 +116,6 @@ directCommands:
     Import an SSL certificate to a function app from Key Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config ssl import --key-vault
                                      --key-vault-certificate-name
@@ -166,7 +162,6 @@ directCommands:
     List SSL certificates for a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: az functionapp config ssl list --resource-group
   examples:
   - summary: |-
@@ -183,7 +178,6 @@ directCommands:
     Show the details of an SSL certificate for a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config ssl show --certificate-name
                                    --resource-group
@@ -206,7 +200,6 @@ directCommands:
     Unbind an SSL certificate from a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config ssl unbind --certificate-thumbprint
                                      [--hostname]
@@ -245,7 +238,6 @@ directCommands:
     Upload an SSL certificate to a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config ssl upload --certificate-file
                                      --certificate-password
@@ -321,5 +313,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Configure SSL certificates.

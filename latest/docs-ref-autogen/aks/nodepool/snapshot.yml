@@ -16,7 +16,6 @@ directCommands:
     Create a nodepool snapshot.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool snapshot create --name
                                     --nodepool-id
@@ -114,7 +113,6 @@ directCommands:
     Delete a nodepool snapshot.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool snapshot delete --name
                                     --resource-group
@@ -174,7 +172,6 @@ directCommands:
     List nodepool snapshots.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: az aks nodepool snapshot list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -198,7 +195,6 @@ directCommands:
     Show the details of a nodepool snapshot.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool snapshot show --name
                                   --resource-group
@@ -236,7 +232,6 @@ directCommands:
     Update tags on a snapshot of a nodepool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool snapshot update --name
                                     --resource-group
@@ -300,7 +295,6 @@ directCommands:
     If an operation on a nodepool snapshot was interrupted or was started with `--no-wait`, use this command to wait for it to complete.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool snapshot wait --name
                                   --resource-group

@@ -12,7 +12,6 @@ directCommands:
     Create a rule for a URL path map.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway url-path-map rule create --gateway-name
                                                             --name
@@ -76,7 +75,6 @@ directCommands:
     Delete a rule for a URL path map.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway url-path-map rule delete --gateway-name
                                                             --name
@@ -115,7 +113,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway url-path-map rule wait [--created]
                                                           [--custom]
@@ -197,5 +194,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage the rules of a URL path map.

@@ -12,7 +12,6 @@ directCommands:
     Create a Service Bus Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace create --name
                                    --resource-group
@@ -110,7 +109,6 @@ directCommands:
     Delete an existing namespace. This operation also removes all associated resources under the namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace delete [--ids]
                                    [--name]
@@ -144,7 +142,6 @@ directCommands:
     Check the give namespace name availability.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: az servicebus namespace exists --name
   requiredParameters:
   - isRequired: true
@@ -157,7 +154,6 @@ directCommands:
     List all the available namespaces within the subscription by resource group & also irrespective of the resource groups.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: az servicebus namespace list [--resource-group]
   examples:
   - summary: |-
@@ -176,7 +172,6 @@ directCommands:
     Get a description for the specified namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace show [--ids]
                                  [--name]
@@ -205,7 +200,6 @@ directCommands:
     Update a service namespace. Once created, this namespace's resource manifest is immutable. This operation is idempotent.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace update [--add]
                                    [--alternate-name]
@@ -312,7 +306,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace wait [--created]
                                  [--custom]
@@ -435,5 +428,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Servicebus namespace.

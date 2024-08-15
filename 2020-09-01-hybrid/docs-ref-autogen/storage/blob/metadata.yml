@@ -12,7 +12,6 @@ directCommands:
     Return all user-defined metadata for the specified blob or snapshot.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob metadata show --container-name
                                   --name
@@ -85,7 +84,6 @@ directCommands:
     Sets user-defined metadata for the specified blob as one or more name-value pairs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob metadata update --container-name
                                     --name
@@ -180,5 +178,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage blob metadata.

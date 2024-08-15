@@ -25,11 +25,7 @@ directCommands:
                        --resource-group
                        --target-id
                        --workspace-name
-                       [--entry-point]
-                       [--job-input-file]
-                       [--job-input-format]
                        [--job-name]
-                       [--job-output-format]
                        [--job-params]
                        [--no-build]
                        [--project]
@@ -39,7 +35,7 @@ directCommands:
                        [<PROGRAM_ARGS>]
   examples:
   - summary: |-
-      Submit a Q# program from the current folder and wait for the result.
+      Submit the Q# program from the current folder and wait for the result.
     syntax: az quantum execute -g MyResourceGroup -w MyWorkspace -l MyLocation -t MyTarget
   - summary: |-
       Submit and wait for a Q# program from the current folder with job and program parameters.
@@ -69,31 +65,19 @@ directCommands:
     summary: |-
       Name of the Quantum Workspace. You can configure the default workspace using `az quantum workspace set`.
   optionalParameters:
-  - name: --entry-point
-    summary: |-
-      The entry point for the QIR program or circuit. Required for QIR. Ignored on Q# jobs.
-  - name: --job-input-file
-    summary: |-
-      The location of the input file to submit. Required for QIR, QIO, and pass-through jobs. Ignored on Q# jobs.
-  - name: --job-input-format
-    summary: |-
-      The format of the file to submit. Omit this parameter on Q# jobs.
   - name: --job-name
     summary: |-
       A friendly name to give to this run of the program.
-  - name: --job-output-format
-    summary: |-
-      The expected job output format. Ignored on Q# jobs.
   - name: --job-params
     summary: |-
       Job parameters passed to the target as a list of key=value pairs, json string, or `@{file}` with json content.
   - name: --no-build
     defaultValue: "False"
     summary: |-
-      [Deprecated] If specified, the Q# program is not built before submitting.
+      If specified, the Q# program is not built before submitting.
   - name: --project
     summary: |-
-      [Deprecated] The location of the Q# project to submit. Defaults to current folder.
+      The location of the Q# project to submit. Defaults to current folder.
   - name: --shots
     summary: |-
       The number of times to run the Q# program on the given target.
@@ -119,11 +103,7 @@ directCommands:
                    --resource-group
                    --target-id
                    --workspace-name
-                   [--entry-point]
-                   [--job-input-file]
-                   [--job-input-format]
                    [--job-name]
-                   [--job-output-format]
                    [--job-params]
                    [--no-build]
                    [--project]
@@ -133,7 +113,7 @@ directCommands:
                    [<PROGRAM_ARGS>]
   examples:
   - summary: |-
-      Submit a Q# program from the current folder and wait for the result.
+      Submit the Q# program from the current folder and wait for the result.
     syntax: az quantum run -g MyResourceGroup -w MyWorkspace -l MyLocation -t MyTarget
   - summary: |-
       Submit and wait for a Q# program from the current folder with job and program parameters.
@@ -163,31 +143,19 @@ directCommands:
     summary: |-
       Name of the Quantum Workspace. You can configure the default workspace using `az quantum workspace set`.
   optionalParameters:
-  - name: --entry-point
-    summary: |-
-      The entry point for the QIR program or circuit. Required for QIR. Ignored on Q# jobs.
-  - name: --job-input-file
-    summary: |-
-      The location of the input file to submit. Required for QIR, QIO, and pass-through jobs. Ignored on Q# jobs.
-  - name: --job-input-format
-    summary: |-
-      The format of the file to submit. Omit this parameter on Q# jobs.
   - name: --job-name
     summary: |-
       A friendly name to give to this run of the program.
-  - name: --job-output-format
-    summary: |-
-      The expected job output format. Ignored on Q# jobs.
   - name: --job-params
     summary: |-
       Job parameters passed to the target as a list of key=value pairs, json string, or `@{file}` with json content.
   - name: --no-build
     defaultValue: "False"
     summary: |-
-      [Deprecated] If specified, the Q# program is not built before submitting.
+      If specified, the Q# program is not built before submitting.
   - name: --project
     summary: |-
-      [Deprecated] The location of the Q# project to submit. Defaults to current folder.
+      The location of the Q# project to submit. Defaults to current folder.
   - name: --shots
     summary: |-
       The number of times to run the Q# program on the given target.
@@ -223,14 +191,10 @@ commands:
 - az_quantum_workspace_clear
 - az_quantum_workspace_create
 - az_quantum_workspace_delete
-- az_quantum_workspace_keys
-- az_quantum_workspace_keys_list
-- az_quantum_workspace_keys_regenerate
 - az_quantum_workspace_list
 - az_quantum_workspace_quotas
 - az_quantum_workspace_set
 - az_quantum_workspace_show
-- az_quantum_workspace_update
 globalParameters:
 - name: --debug
   summary: |-

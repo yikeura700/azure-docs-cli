@@ -12,7 +12,6 @@ directCommands:
     List all recovery points of a backed up item.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup recoverypoint list --container-name
                                  --item-name
@@ -87,7 +86,6 @@ directCommands:
     Move a particular recovery point of a backed up item from one tier to another tier.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup recoverypoint move --container-name
                                  --destination-tier {VaultArchive}
@@ -148,7 +146,6 @@ directCommands:
     Shows details of a particular recovery point.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup recoverypoint show [--backup-management-type {AzureIaasVM, AzureStorage, AzureWorkload}]
                                  [--container-name]
@@ -203,7 +200,6 @@ directCommands:
     List the start and end points of the unbroken log chain(s) of the given backup item.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup recoverypoint show-log-chain --container-name
                                            --item-name
@@ -283,5 +279,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: A snapshot of data at that point-of-time, stored in Recovery Services Vault, from which you can restore information.

@@ -12,7 +12,6 @@ directCommands:
     Add a GitHub Actions workflow file to the specified repository. The workflow will build and deploy your app to the specified functionapp.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment github-actions add --repo
                                                  [--branch]
@@ -86,7 +85,6 @@ directCommands:
     Remove and disconnect the GitHub Actions workflow file from the specified repository.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment github-actions remove --repo
                                                     [--branch]
@@ -164,5 +162,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Configure GitHub Actions for a functionapp.

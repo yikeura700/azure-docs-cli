@@ -14,7 +14,6 @@ directCommands:
     This command creates an Azure SQL Managed Instance link by joining distributed availability group on SQL Server based on the parameters passed.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi link create --distributed-availability-group-name
                           --instance-name
@@ -66,7 +65,6 @@ directCommands:
     This command may cause data loss if the link is dropped and replica's LSNs are not synchronized with the primary, thus user must explicitly confirm the command when prompted, or use --yes parameter.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi link delete [--distributed-availability-group-name]
                           [--ids]
@@ -109,7 +107,6 @@ directCommands:
     Returns information about link feature for Azure SQL Managed Instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi link list --instance-name
                         --resource-group
@@ -132,7 +129,6 @@ directCommands:
     Returns information about link feature for Azure SQL Managed Instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi link show [--distributed-availability-group-name]
                         [--ids]
@@ -165,7 +161,6 @@ directCommands:
     Updates the properties of an instance link.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi link update [--distributed-availability-group-name]
                           [--ids]
@@ -233,5 +228,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Instance link management commands.

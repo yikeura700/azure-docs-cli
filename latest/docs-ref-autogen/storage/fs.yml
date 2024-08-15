@@ -12,7 +12,6 @@ directCommands:
     Create file system for Azure Data Lake Storage Gen2 account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs create --name
                          [--account-key]
@@ -84,7 +83,6 @@ directCommands:
     Delete a file system in ADLS Gen2 account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs delete --name
                          [--account-key]
@@ -137,7 +135,6 @@ directCommands:
     Check for the existence of a file system in ADLS Gen2 account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs exists --name
                          [--account-key]
@@ -187,7 +184,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs generate-sas --name
                                [--account-key]
@@ -288,7 +284,6 @@ directCommands:
     List file systems in ADLS Gen2 account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs list [--account-key]
                        [--account-name]
@@ -335,7 +330,6 @@ directCommands:
     List the deleted (file or directory) paths under the specified file system.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs list-deleted-path --file-system
                                     [--account-key]
@@ -395,7 +389,6 @@ directCommands:
     Show properties of file system in ADLS Gen2 account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs show --name
                        [--account-key]
@@ -448,7 +441,6 @@ directCommands:
     Operation will only be successful if used within the specified number of days set in the delete retention policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs undelete-path --deleted-path-name
                                 --deletion-id
@@ -573,5 +565,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage file systems in Azure Data Lake Storage Gen2 account.

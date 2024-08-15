@@ -12,7 +12,6 @@ directCommands:
     List role definitions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse role definition list --workspace-name
                                     [--is-built-in {false, true}]
@@ -39,7 +38,6 @@ directCommands:
     Get role definition by role id/name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse role definition show --role
                                     --workspace-name
@@ -93,5 +91,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage Synapse's role definitions.

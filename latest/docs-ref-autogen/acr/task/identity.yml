@@ -12,7 +12,6 @@ directCommands:
     Update the managed identity for a task.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task identity assign --name
                                 --registry
@@ -54,7 +53,6 @@ directCommands:
     Remove managed identities for a task.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task identity remove --name
                                 --registry
@@ -94,7 +92,6 @@ directCommands:
     Display the managed identities for task.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr task identity show --name
                               --registry
@@ -145,5 +142,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Managed Identities for Task. Please see https://aka.ms/acr/tasks/task-create-managed-identity for more information.

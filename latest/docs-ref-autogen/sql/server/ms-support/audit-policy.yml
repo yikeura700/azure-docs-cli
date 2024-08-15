@@ -12,7 +12,6 @@ directCommands:
     Show server Microsoft support operations audit policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server ms-support audit-policy show [--ids]
                                                [--name]
@@ -39,7 +38,6 @@ directCommands:
     If the Microsoft support operations policy is being enabled, `--storage-account` or both `--storage-endpoint` and `--storage-key` must be specified.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server ms-support audit-policy update [--add]
                                                  [--blob-storage-target-state {Disabled, Enabled}]
@@ -179,7 +177,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the server's Microsoft support operations audit policy is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server ms-support audit-policy wait [--created]
                                                [--custom]
@@ -265,5 +262,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage a server's Microsoft support operations auditing policy.

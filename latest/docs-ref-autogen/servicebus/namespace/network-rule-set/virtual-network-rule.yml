@@ -12,7 +12,6 @@ directCommands:
     Add a Virtual-Network-Rule for network rule of namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace network-rule-set virtual-network-rule add --namespace-name
                                                                       --resource-group
@@ -40,7 +39,6 @@ directCommands:
     Remove network rule for a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace network-rule-set virtual-network-rule remove --namespace-name
                                                                          --resource-group
@@ -90,5 +88,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Manage Azure ServiceBus subnet-rule in networkruleSet for namespace.

@@ -12,7 +12,6 @@ directCommands:
     Delete always-ready settings in the scale configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp scale config always-ready delete --setting-names
                                                     [--ids]
@@ -48,7 +47,6 @@ directCommands:
     Add or update existing always-ready settings in the scale configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp scale config always-ready set --settings
                                                  [--ids]
@@ -106,5 +104,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage the always-ready settings in the scale configuration.

@@ -12,7 +12,6 @@ directCommands:
     Update a containerapp to app-insights connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update app-insights [--appconfig-id]
                                                    [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python}]
@@ -81,7 +80,6 @@ directCommands:
     Update a containerapp to appconfig connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update appconfig [--appconfig-id]
                                                 [--client-type {dotnet, dotnet-internal, java, nodejs, none, python}]
@@ -180,7 +178,6 @@ directCommands:
     Update a containerapp to cognitiveservices connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update cognitiveservices [--appconfig-id]
                                                         [--client-type {dotnet, none, python}]
@@ -274,7 +271,6 @@ directCommands:
     Update a containerapp to confluent-cloud connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update confluent-cloud --connection
                                                       [--appconfig-id]
@@ -365,7 +361,6 @@ directCommands:
     Update a containerapp-to-containerapp connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update containerapp [--appconfig-id]
                                                    [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -428,7 +423,6 @@ directCommands:
     Update a containerapp to cosmos-cassandra connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update cosmos-cassandra [--appconfig-id]
                                                        [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -532,7 +526,6 @@ directCommands:
     Update a containerapp to cosmos-gremlin connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update cosmos-gremlin [--appconfig-id]
                                                      [--client-type {dotnet, dotnet-internal, java, nodejs, none, php, python}]
@@ -636,7 +629,6 @@ directCommands:
     Update a containerapp to cosmos-mongo connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update cosmos-mongo [--appconfig-id]
                                                    [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, springBoot}]
@@ -740,7 +732,6 @@ directCommands:
     Update a containerapp to cosmos-sql connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update cosmos-sql [--appconfig-id]
                                                  [--client-type {dotnet, dotnet-internal, java, nodejs, none, python, springBoot}]
@@ -844,7 +835,6 @@ directCommands:
     Update a containerapp to cosmos-table connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update cosmos-table [--appconfig-id]
                                                    [--client-type {dotnet, dotnet-internal, java, nodejs, none, python, springBoot}]
@@ -948,7 +938,6 @@ directCommands:
     Update a containerapp to eventhub connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update eventhub [--appconfig-id]
                                                [--client-type {dotnet, dotnet-internal, go, java, kafka-springBoot, nodejs, none, python, springBoot}]
@@ -1052,7 +1041,6 @@ directCommands:
     Update a containerapp to keyvault connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update keyvault [--appconfig-id]
                                                [--client-type {dotnet, dotnet-internal, java, nodejs, none, python, springBoot}]
@@ -1152,7 +1140,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update mysql [--appconfig-id]
                                             [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1238,7 +1225,6 @@ directCommands:
     Update a containerapp to mysql-flexible connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update mysql-flexible [--appconfig-id]
                                                      [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1343,7 +1329,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update postgres [--appconfig-id]
                                                [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1454,7 +1439,6 @@ directCommands:
     Update a containerapp to postgres-flexible connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update postgres-flexible [--appconfig-id]
                                                         [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1555,7 +1539,6 @@ directCommands:
     Update a containerapp to redis connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update redis [--appconfig-id]
                                             [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -1629,7 +1612,6 @@ directCommands:
     Update a containerapp to redis-enterprise connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update redis-enterprise [--appconfig-id]
                                                        [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -1698,7 +1680,6 @@ directCommands:
     Update a containerapp to servicebus connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update servicebus [--appconfig-id]
                                                  [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -1802,7 +1783,6 @@ directCommands:
     Update a containerapp to signalr connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update signalr [--appconfig-id]
                                               [--client-type {dotnet, dotnet-internal, none}]
@@ -1901,7 +1881,6 @@ directCommands:
     Update a containerapp to sql connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update sql [--appconfig-id]
                                           [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -2012,7 +1991,6 @@ directCommands:
     Update a containerapp to storage-blob connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update storage-blob [--appconfig-id]
                                                    [--client-type {dotnet, dotnet-internal, java, nodejs, none, python, springBoot}]
@@ -2116,7 +2094,6 @@ directCommands:
     Update a containerapp to storage-file connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update storage-file [--appconfig-id]
                                                    [--client-type {dotnet, dotnet-internal, java, nodejs, none, php, python, ruby, springBoot}]
@@ -2195,7 +2172,6 @@ directCommands:
     Update a containerapp to storage-queue connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update storage-queue [--appconfig-id]
                                                     [--client-type {dotnet, dotnet-internal, java, nodejs, none, python, springBoot}]
@@ -2299,7 +2275,6 @@ directCommands:
     Update a containerapp to storage-table connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update storage-table [--appconfig-id]
                                                     [--client-type {dotnet, dotnet-internal, java, nodejs, none, python}]
@@ -2403,7 +2378,6 @@ directCommands:
     Update a containerapp to webpubsub connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp connection update webpubsub [--appconfig-id]
                                                 [--client-type {dotnet, dotnet-internal, java, nodejs, none, python}]
@@ -2548,5 +2522,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/14/2024
   description: Update a containerapp connection.

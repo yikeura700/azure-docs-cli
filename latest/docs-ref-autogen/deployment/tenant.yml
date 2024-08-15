@@ -12,7 +12,6 @@ directCommands:
     Cancel a deployment at tenant scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az deployment tenant cancel --name
   examples:
   - summary: |-
@@ -31,7 +30,6 @@ directCommands:
     Please specify only one of --template-file FILE | --template-uri URI | --template-spec to input the ARM template.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment tenant create --location
                                 [--confirm-with-what-if]
@@ -130,7 +128,6 @@ directCommands:
     Delete a deployment at tenant scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment tenant delete --name
                                 [--no-wait]
@@ -154,7 +151,6 @@ directCommands:
     Export the template used for a deployment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az deployment tenant export --name
   examples:
   - summary: |-
@@ -171,7 +167,6 @@ directCommands:
     List deployments at tenant scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az deployment tenant list [--filter]
   examples:
   - summary: |-
@@ -188,7 +183,6 @@ directCommands:
     Show a deployment at tenant scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az deployment tenant show --name
   examples:
   - summary: |-
@@ -207,7 +201,6 @@ directCommands:
     Please specify only one of --template-file FILE | --template-uri URI | --template-spec to input the ARM template.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment tenant validate --location
                                   [--handle-extended-json-format]
@@ -267,7 +260,6 @@ directCommands:
     Place the CLI in a waiting state until a deployment condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment tenant wait --name
                               [--created]
@@ -322,7 +314,6 @@ directCommands:
     Please specify only one of --template-file FILE | --template-uri URI | --template-spec to input the ARM template.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment tenant what-if --location
                                  [--exclude-change-types {Create, Delete, Deploy, Ignore, Modify, NoChange, Unsupported}]
@@ -423,5 +414,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage Azure Resource Manager template deployment at tenant scope.

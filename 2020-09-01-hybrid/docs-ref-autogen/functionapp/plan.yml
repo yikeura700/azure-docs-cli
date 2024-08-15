@@ -12,7 +12,6 @@ directCommands:
     Create an App Service Plan for an Azure Function.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp plan create --name
                                --resource-group
@@ -73,7 +72,6 @@ directCommands:
     Delete an App Service Plan.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp plan delete [--ids]
                                [--name]
@@ -103,7 +101,6 @@ directCommands:
     List App Service Plans.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: az functionapp plan list [--resource-group]
   examples:
   - summary: |-
@@ -119,7 +116,6 @@ directCommands:
     Get the App Service Plans for a resource group or a set of resource groups.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp plan show [--ids]
                              [--name]
@@ -148,7 +144,6 @@ directCommands:
     Update an App Service plan for an Azure Function.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp plan update [--add]
                                [--force-string]
@@ -234,5 +229,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage App Service Plans for an Azure Function.

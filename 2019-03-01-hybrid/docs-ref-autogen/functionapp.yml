@@ -18,7 +18,6 @@ directCommands:
     The function app's name must be able to produce a unique FQDN as AppName.azurewebsites.net.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp create --name
                           --resource-group
@@ -418,7 +417,6 @@ directCommands:
     Delete a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp delete [--ids]
                           [--keep-empty-plan]
@@ -457,7 +455,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deploy [--async {false, true}]
                           [--clean {false, true}]
@@ -534,7 +531,6 @@ directCommands:
     List function apps.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: az functionapp list [--resource-group]
   examples:
   - summary: |-
@@ -556,7 +552,6 @@ directCommands:
     List available locations for running function apps.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: az functionapp list-consumption-locations
 - uid: az_functionapp_list-flexconsumption-locations
   name: az functionapp list-flexconsumption-locations
@@ -564,7 +559,6 @@ directCommands:
     List available locations for running function apps on the Flex Consumption plan.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: az functionapp list-flexconsumption-locations
 - uid: az_functionapp_list-flexconsumption-runtimes
   name: az functionapp list-flexconsumption-runtimes
@@ -572,7 +566,6 @@ directCommands:
     List available built-in stacks which can be used for function apps on the Flex Consumption plan.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp list-flexconsumption-runtimes --location
                                                  --runtime
@@ -591,7 +584,6 @@ directCommands:
     List available built-in stacks which can be used for function apps.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: az functionapp list-runtimes [--os {linux, windows}]
   optionalParameters:
   - name: --os --os-type
@@ -604,7 +596,6 @@ directCommands:
     Restart a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp restart [--ids]
                            [--name]
@@ -670,7 +661,6 @@ directCommands:
     Get the details of a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp show [--ids]
                         [--name]
@@ -736,7 +726,6 @@ directCommands:
     Start a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp start [--ids]
                          [--name]
@@ -769,7 +758,6 @@ directCommands:
     Stop a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp stop [--ids]
                         [--name]
@@ -802,7 +790,6 @@ directCommands:
     Update a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp update [--add]
                           [--force]
@@ -859,8 +846,6 @@ directCommands:
     summary: |-
       Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
 commands:
-- az_functionapp_app
-- az_functionapp_app_up
 - az_functionapp_config
 - az_functionapp_config_access-restriction
 - az_functionapp_config_access-restriction_add

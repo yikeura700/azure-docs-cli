@@ -12,7 +12,6 @@ directCommands:
     List all soft-deleted Api Management services instances available for undelete for the given subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: az apim deletedservice list
   examples:
   - summary: |-
@@ -24,7 +23,6 @@ directCommands:
     Purge soft-deleted Api Management service instance (deletes it with no option to undelete).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim deletedservice purge --location
                                  --service-name
@@ -47,7 +45,6 @@ directCommands:
     Get soft-deleted Api Management service instances available for undelete by name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim deletedservice show --location
                                 --service-name
@@ -93,5 +90,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/19/2024
   description: Manage soft-deleted Azure API Management services.

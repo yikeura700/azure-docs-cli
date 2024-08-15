@@ -14,7 +14,6 @@ directCommands:
     Convert an Azure Availability Set to contain VMs with managed disks.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm availability-set convert [--ids]
                                    [--name]
@@ -48,7 +47,6 @@ directCommands:
     For more information, see https://docs.microsoft.com/azure/virtual-machines/availability.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm availability-set create --name
                                   --resource-group
@@ -104,7 +102,6 @@ directCommands:
     Delete an availability set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm availability-set delete [--availability-set-name]
                                   [--ids]
@@ -133,7 +130,6 @@ directCommands:
     List availability sets.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: az vm availability-set list [--resource-group]
   examples:
   - summary: |-
@@ -149,7 +145,6 @@ directCommands:
     List all available virtual machine sizes that can be used to create a new virtual machine in an existing availability set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm availability-set list-sizes [--availability-set-name]
                                       [--ids]
@@ -178,7 +173,6 @@ directCommands:
     Get information about an availability set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm availability-set show [--availability-set-name]
                                 [--ids]
@@ -207,7 +201,6 @@ directCommands:
     Update an Azure Availability Set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm availability-set update [--add]
                                   [--force-string]
@@ -289,5 +282,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: To provide redundancy to an application, it is recommended to group two or more virtual machines in an availability set. This configuration ensures that during either a planned or unplanned maintenance event, at least one virtual machine will be available.

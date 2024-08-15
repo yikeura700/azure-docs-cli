@@ -14,7 +14,6 @@ directCommands:
     Delete a network profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network profile delete [--ids]
                               [--name]
@@ -53,7 +52,6 @@ directCommands:
     List network profiles.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network profile list [--resource-group]
   examples:
   - summary: |-
@@ -69,7 +67,6 @@ directCommands:
     Get the details of a network profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network profile show [--expand]
                             [--ids]
@@ -102,7 +99,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network profile wait [--created]
                             [--custom]
@@ -189,5 +185,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: To create a network profile, see the create command for the relevant resource. Currently, only Azure Container Instances are supported.

@@ -12,7 +12,6 @@ directCommands:
     Create a volume group along with specified volumes.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume-group create --account-name
                                        --group-name
@@ -233,7 +232,6 @@ directCommands:
     Delete the specified volume group only if there are no volumes under volume group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume-group delete [--account-name]
                                        [--group-name]
@@ -276,7 +274,6 @@ directCommands:
     List all volume groups for given account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume-group list --account-name
                                      --resource-group
@@ -299,7 +296,6 @@ directCommands:
     Get details of the specified volume group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume-group show [--account-name]
                                      [--group-name]
@@ -332,7 +328,6 @@ directCommands:
     Update a volume group along with specified volumes.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume-group update [--account-name]
                                        [--add]
@@ -391,7 +386,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume-group wait [--account-name]
                                      [--created]
@@ -480,5 +474,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/07/2024
   description: Manage Azure NetApp Files (ANF) Volume Group Resources.

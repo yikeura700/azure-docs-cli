@@ -12,7 +12,6 @@ directCommands:
     Check if a Management Group Name is Valid.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: az account management-group check-name-availability --name
   examples:
   - summary: |-
@@ -29,7 +28,6 @@ directCommands:
     Create a new management group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: >-
     az account management-group create --name
                                        [--display-name]
@@ -70,7 +68,6 @@ directCommands:
     Delete an existing management group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: >-
     az account management-group delete --name
                                        [--no-register]
@@ -94,7 +91,6 @@ directCommands:
     List all management groups in the current tenant.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: az account management-group list [--no-register]
   examples:
   - summary: |-
@@ -111,7 +107,6 @@ directCommands:
     Get the details of the management group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: >-
     az account management-group show --name
                                      [--expand]
@@ -151,7 +146,6 @@ directCommands:
     Update an existing management group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: >-
     az account management-group update --name
                                        [--add]
@@ -245,5 +239,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/25/2024
   description: Manage Azure Management Groups.

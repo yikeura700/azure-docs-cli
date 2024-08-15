@@ -12,7 +12,6 @@ directCommands:
     Configure a new custom OpenID Connect identity provider.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp auth openid-connect add --provider-name
                                             [--client-id]
@@ -76,7 +75,6 @@ directCommands:
     Removes an existing custom OpenID Connect identity provider.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp auth openid-connect remove --provider-name
                                                [--ids]
@@ -118,7 +116,6 @@ directCommands:
     Show the authentication settings for the custom OpenID Connect identity provider.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp auth openid-connect show --provider-name
                                              [--ids]
@@ -153,7 +150,6 @@ directCommands:
     Update the client id and client secret setting name for an existing custom OpenID Connect identity provider.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp auth openid-connect update --provider-name
                                                [--client-id]
@@ -240,5 +236,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/14/2024
   description: Manage containerapp authentication and authorization of the custom OpenID Connect identity providers.

@@ -14,7 +14,6 @@ directCommands:
     This is required to authenticate and interact with other Azure services using bearer tokens.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm identity assign [--identities]
                           [--ids]
@@ -58,7 +57,6 @@ directCommands:
     Remove managed service identities from a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm identity remove [--identities]
                           [--ids]
@@ -100,7 +98,6 @@ directCommands:
     Display VM's managed identity info.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm identity show [--ids]
                         [--name]
@@ -152,5 +149,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Manage service identities of a VM.

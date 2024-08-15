@@ -12,7 +12,6 @@ directCommands:
     Create an application gateway WAF policy custom rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy custom-rule create --action {Allow, Block, JSChallenge, Log}
                                                                  --name
@@ -85,7 +84,6 @@ directCommands:
     Delete an application gateway WAF policy custom rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy custom-rule delete --name
                                                                  --policy-name
@@ -113,7 +111,6 @@ directCommands:
     List application gateway WAF policy custom rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy custom-rule list --policy-name
                                                                --resource-group
@@ -136,7 +133,6 @@ directCommands:
     Get the details of an application gateway WAF policy custom rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy custom-rule show --name
                                                                --policy-name
@@ -164,7 +160,6 @@ directCommands:
     Update an application gateway WAF policy custom rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy custom-rule update --name
                                                                  --policy-name
@@ -278,5 +273,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage application gateway web application firewall (WAF) policy custom rules.

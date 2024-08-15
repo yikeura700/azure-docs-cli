@@ -14,7 +14,6 @@ directCommands:
     Rules are executed in the order in which they are created.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway routing-rule create --gateway-name
                                                        --name
@@ -70,7 +69,6 @@ directCommands:
     Delete a rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway routing-rule delete --gateway-name
                                                        --name
@@ -104,7 +102,6 @@ directCommands:
     List rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway routing-rule list --gateway-name
                                                      --resource-group
@@ -127,7 +124,6 @@ directCommands:
     Get the details of a rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway routing-rule show --gateway-name
                                                      --name
@@ -155,7 +151,6 @@ directCommands:
     Update a rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway routing-rule update --gateway-name
                                                        --name
@@ -227,7 +222,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway routing-rule wait [--created]
                                                      [--custom]
@@ -312,5 +306,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Evaluate probe information and define TCP/TLS routing rules.

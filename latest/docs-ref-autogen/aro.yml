@@ -12,7 +12,6 @@ directCommands:
     Create a cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/aro/_help.py
   syntax: >-
     az aro create --master-subnet
                   --name
@@ -175,7 +174,6 @@ directCommands:
     Delete a cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/aro/_help.py
   syntax: >-
     az aro delete --name
                   --resource-group
@@ -209,7 +207,6 @@ directCommands:
     List admin kubeconfig of a cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/aro/_help.py
   syntax: >-
     az aro get-admin-kubeconfig --name
                                 --resource-group
@@ -238,7 +235,6 @@ directCommands:
     List versions available for installation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/aro/_help.py
   syntax: az aro get-versions --location
   examples:
   - summary: |-
@@ -258,7 +254,6 @@ directCommands:
     List clusters.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/aro/_help.py
   syntax: az aro list [--resource-group]
   examples:
   - summary: |-
@@ -277,7 +272,6 @@ directCommands:
     List credentials of a cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/aro/_help.py
   syntax: >-
     az aro list-credentials --name
                             --resource-group
@@ -300,7 +294,6 @@ directCommands:
     Get the details of a cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/aro/_help.py
   syntax: >-
     az aro show --name
                 --resource-group
@@ -323,7 +316,6 @@ directCommands:
     Update a cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/aro/_help.py
   syntax: >-
     az aro update --name
                   --resource-group
@@ -366,7 +358,6 @@ directCommands:
     Validate permissions required to create a cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/aro/_help.py
   syntax: >-
     az aro validate --master-subnet
                     --name
@@ -445,7 +436,6 @@ directCommands:
     If an operation on a cluster was interrupted or was started with `--no-wait`, use this command to wait for it to complete.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/aro/_help.py
   syntax: >-
     az aro wait --name
                 --resource-group
@@ -529,5 +519,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/22/2023
   description: Manage Azure Red Hat OpenShift clusters.

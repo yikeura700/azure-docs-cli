@@ -12,7 +12,6 @@ directCommands:
     Enable Autoscale for a running cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight autoscale create --cluster-name
                                   --resource-group
@@ -86,7 +85,6 @@ directCommands:
     Disable Autoscale for a running cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight autoscale delete --cluster-name
                                   --resource-group
@@ -120,7 +118,6 @@ directCommands:
     List the available timezone name when enabling Schedule-based Autoscale.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: az hdinsight autoscale list-timezones
   examples:
   - summary: |-
@@ -132,7 +129,6 @@ directCommands:
     Get the Autoscale configuration of a specified cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight autoscale show --cluster-name
                                 --resource-group
@@ -155,7 +151,6 @@ directCommands:
     Update the Autoscale configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight autoscale update --cluster-name
                                   --resource-group
@@ -199,7 +194,6 @@ directCommands:
     Place the CLI in a waiting state until an operation is complete.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight autoscale wait --name
                                 --resource-group
@@ -285,5 +279,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/23/2021
   description: Manage HDInsight cluster's Autoscale configuration.

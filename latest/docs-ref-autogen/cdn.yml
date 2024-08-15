@@ -12,7 +12,6 @@ directCommands:
     Check the availability of a resource name. This is needed for resources where name is globally unique, such as a CDN endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn name-exists --name
                        [--type {Microsoft.Cdn/Profiles/AfdEndpoints, Microsoft.Cdn/Profiles/Endpoints}]
@@ -37,7 +36,6 @@ directCommands:
     Check the quota and actual usage of the CDN profiles under the given subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn usage [--max-items]
                  [--next-token]
@@ -137,5 +135,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/28/2024
   description: Manage Azure Content Delivery Networks (CDNs).

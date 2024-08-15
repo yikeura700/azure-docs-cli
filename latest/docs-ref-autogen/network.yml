@@ -16,7 +16,6 @@ directCommands:
     List available service aliases in the region which can be used for Service Endpoint Policies.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network list-service-aliases [--location]
                                     [--max-items]
@@ -47,7 +46,6 @@ directCommands:
     A service tag represents a group of IP address prefixes to help minimize complexity for security rule creation. To learn more about list-service-tags, visit https://docs.microsoft.com/azure/virtual-network/security-overview#service-tags. Note that the location parameter is used as a reference for version (not as a filter based on location). For example, even if you specify --location eastus2 you will get the list of service tags with prefix details across all regions but limited to the cloud that your subscription belongs to (i.e. Public, US government, China or Germany).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network list-service-tags --location
   examples:
   - summary: |-
@@ -64,7 +62,6 @@ directCommands:
     List the number of network resources in a region that are used against a subscription quota.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network list-usages --location
                            [--max-items]
@@ -345,20 +342,6 @@ commands:
 - az_network_bastion_tunnel
 - az_network_bastion_update
 - az_network_bastion_wait
-- az_network_cross-connection
-- az_network_cross-connection_list
-- az_network_cross-connection_list-arp-tables
-- az_network_cross-connection_list-route-tables
-- az_network_cross-connection_peering
-- az_network_cross-connection_peering_create
-- az_network_cross-connection_peering_delete
-- az_network_cross-connection_peering_list
-- az_network_cross-connection_peering_show
-- az_network_cross-connection_peering_update
-- az_network_cross-connection_show
-- az_network_cross-connection_summarize-route-table
-- az_network_cross-connection_update
-- az_network_cross-connection_wait
 - az_network_cross-region-lb
 - az_network_cross-region-lb_address-pool
 - az_network_cross-region-lb_address-pool_address
@@ -1009,11 +992,6 @@ commands:
 - az_network_nic_show
 - az_network_nic_show-effective-route-table
 - az_network_nic_update
-- az_network_nic_vtap-config
-- az_network_nic_vtap-config_create
-- az_network_nic_vtap-config_delete
-- az_network_nic_vtap-config_list
-- az_network_nic_vtap-config_show
 - az_network_nic_wait
 - az_network_nsg
 - az_network_nsg_create
@@ -1468,12 +1446,6 @@ commands:
 - az_network_vnet_subnet_show
 - az_network_vnet_subnet_update
 - az_network_vnet_subnet_wait
-- az_network_vnet_tap
-- az_network_vnet_tap_create
-- az_network_vnet_tap_delete
-- az_network_vnet_tap_list
-- az_network_vnet_tap_show
-- az_network_vnet_tap_update
 - az_network_vnet_update
 - az_network_vnet_wait
 - az_network_vpn-connection

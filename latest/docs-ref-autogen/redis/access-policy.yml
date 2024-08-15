@@ -12,7 +12,6 @@ directCommands:
     Add an Access Policy to the Redis Cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis access-policy create --access-policy-name
                                   --name
@@ -45,7 +44,6 @@ directCommands:
     Delete the Access Policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis access-policy delete --access-policy-name
                                   [--ids]
@@ -80,7 +78,6 @@ directCommands:
     Get the list of Access Policies associated with the Redis Cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis access-policy list --name
                                 --resource-group
@@ -103,7 +100,6 @@ directCommands:
     Get the detailed information about an Access Policy of the Redis Cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis access-policy show --access-policy-name
                                 [--ids]
@@ -138,7 +134,6 @@ directCommands:
     Update an Access Policy of the Redis Cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis access-policy update --access-policy-name
                                   --permissions
@@ -203,5 +198,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/25/2024
   description: Manage Access Policies for Redis Cache.

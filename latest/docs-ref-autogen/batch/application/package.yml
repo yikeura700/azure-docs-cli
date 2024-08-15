@@ -14,7 +14,6 @@ directCommands:
     This step is unnecessary if the package has already been successfully activated by the `create` command.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch application package activate --application-name
                                           --format
@@ -48,7 +47,6 @@ directCommands:
     Create a Batch application package record and activate it.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch application package create --application-name
                                         --name
@@ -82,7 +80,6 @@ directCommands:
     Deletes an application package record and its associated binary file.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch application package delete --application-name
                                         --name
@@ -117,7 +114,6 @@ directCommands:
     Lists all of the application packages in the specified application.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch application package list --application-name
                                       --name
@@ -146,7 +142,6 @@ directCommands:
     Gets information about the specified application package.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch application package show --application-name
                                       --name
@@ -200,5 +195,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage Batch application packages.

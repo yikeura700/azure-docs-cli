@@ -16,7 +16,6 @@ directCommands:
     Create the specified Backup Vault in the NetApp account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault create --account-name
                                                --backup-vault-name
@@ -94,7 +93,6 @@ directCommands:
     Delete the specified Backup Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault delete [--account-name]
                                                [--backup-vault-name]
@@ -174,7 +172,6 @@ directCommands:
     List and describe all Backup Vaults in the NetApp account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault list --account-name
                                              --resource-group
@@ -232,7 +229,6 @@ directCommands:
     Get the Backup Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault show [--account-name]
                                              [--backup-vault-name]
@@ -292,7 +288,6 @@ directCommands:
     Update the specified Backup Vault in the NetApp account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault update [--account-name]
                                                [--add]
@@ -404,7 +399,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault wait [--account-name]
                                              [--backup-vault-name]

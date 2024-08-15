@@ -12,7 +12,6 @@ directCommands:
     Add one backend address into the load balance backend address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb address-pool address add --ip-address
                                            --lb-name
@@ -72,7 +71,6 @@ directCommands:
     List all backend addresses of the load balance backend address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb address-pool address list --lb-name
                                             --pool-name
@@ -100,7 +98,6 @@ directCommands:
     Remove one backend address from the load balance backend address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb address-pool address remove --lb-name
                                               --name
@@ -139,7 +136,6 @@ directCommands:
     Show the backend address from the load balance backend address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb address-pool address show --lb-name
                                             --name
@@ -172,7 +168,6 @@ directCommands:
     Update the backend address into the load balance backend address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb address-pool address update --lb-name
                                               --name
@@ -245,7 +240,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb address-pool address wait [--created]
                                             [--custom]
@@ -334,5 +328,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage backend addresses of the cross-region load balance backend address pool.

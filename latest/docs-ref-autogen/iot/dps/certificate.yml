@@ -12,7 +12,6 @@ directCommands:
     Create/upload a certficate to an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps certificate create --certificate-name
                                   --dps-name
@@ -53,7 +52,6 @@ directCommands:
     Delete a certificate in an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps certificate delete --certificate-name
                                   --dps-name
@@ -88,7 +86,6 @@ directCommands:
     This verification code is used to complete the proof of possession step for a certificate. Use this verification code as the CN of a new certificate signed with the root certificates private key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps certificate generate-verification-code --certificate-name
                                                       --dps-name
@@ -121,7 +118,6 @@ directCommands:
     List all certificates contained within an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps certificate list --dps-name
                                 [--resource-group]
@@ -144,7 +140,6 @@ directCommands:
     Show information about a particular certificate in an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps certificate show --certificate-name
                                 --dps-name
@@ -177,7 +172,6 @@ directCommands:
     Upload a new certificate to replace the existing certificate with the same name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps certificate update --certificate-name
                                   --dps-name
@@ -225,7 +219,6 @@ directCommands:
     Verify a certificate by uploading a verification certificate containing the verification code obtained by calling generate-verification-code. This is the last step in the proof of possession process.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps certificate verify --certificate-name
                                   --dps-name
@@ -290,5 +283,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/21/2024
   description: Manage certificates for an Azure IoT Hub Device Provisioning Service instance.

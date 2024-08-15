@@ -12,7 +12,6 @@ directCommands:
     Create a queue under the given account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage queue create --name
                             [--account-key]
@@ -60,7 +59,6 @@ directCommands:
     Delete the specified queue and any messages it contains.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage queue delete --name
                             [--account-key]
@@ -104,7 +102,6 @@ directCommands:
     Return a boolean indicating whether the queue exists.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage queue exists --name
                             [--account-key]
@@ -143,7 +140,6 @@ directCommands:
     Generate a shared access signature for the queue.Use the returned signature with the sas_token parameter of QueueService.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage queue generate-sas --name
                                   [--account-key]
@@ -211,7 +207,6 @@ directCommands:
     List queues in a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage queue list [--account-key]
                           [--account-name]
@@ -295,5 +290,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage storage queues.

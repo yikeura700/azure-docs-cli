@@ -16,7 +16,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr connected-registry' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr connected-registry create --name
                                      --registry
@@ -109,7 +108,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr connected-registry' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr connected-registry deactivate --name
                                          --registry
@@ -144,7 +142,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr connected-registry' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr connected-registry delete --name
                                      --registry
@@ -187,7 +184,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr connected-registry' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr connected-registry get-settings --name
                                            --parent-protocol {http, https}
@@ -236,7 +232,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr connected-registry' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr connected-registry list --registry
                                    [--no-children]
@@ -276,7 +271,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr connected-registry' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr connected-registry list-client-tokens --name
                                                  --registry
@@ -308,7 +302,6 @@ directCommands:
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'permissions update' instead.
   previewOrExperimentalInfo: "Command group 'acr connected-registry' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr connected-registry repo --name
                                    --registry
@@ -352,7 +345,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr connected-registry' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr connected-registry show --name
                                    --registry
@@ -382,7 +374,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr connected-registry' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr connected-registry update --name
                                      --registry
@@ -484,5 +475,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Manage connected registry resources with Azure Container Registries.

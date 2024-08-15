@@ -12,7 +12,6 @@ directCommands:
     List registered clouds.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cloud/_help.py
   syntax: az cloud list
 - uid: az_cloud_list-profiles
   name: az cloud list-profiles
@@ -20,7 +19,6 @@ directCommands:
     List the supported profiles for a cloud.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cloud/_help.py
   syntax: >-
     az cloud list-profiles [--name]
                            [--show-all]
@@ -41,7 +39,6 @@ directCommands:
     When registering a cloud, specify only the resource manager endpoint for the autodetection of other endpoints.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cloud/_help.py
   syntax: >-
     az cloud register --name
                       [--cloud-config]
@@ -148,7 +145,6 @@ directCommands:
     Set the active cloud.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cloud/_help.py
   syntax: >-
     az cloud set --name
                  [--profile {2017-03-09-profile, 2018-03-01-hybrid, 2019-03-01-hybrid, 2020-09-01-hybrid, latest}]
@@ -172,7 +168,6 @@ directCommands:
     Get the details of a registered cloud.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cloud/_help.py
   syntax: az cloud show [--name]
   optionalParameters:
   - name: --name -n
@@ -185,7 +180,6 @@ directCommands:
     Unregister a cloud.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cloud/_help.py
   syntax: az cloud unregister --name
   examples:
   - summary: |-
@@ -202,7 +196,6 @@ directCommands:
     Update the configuration of a cloud.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cloud/_help.py
   syntax: >-
     az cloud update [--cloud-config]
                     [--endpoint-active-directory]
@@ -316,5 +309,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/30/2020
   description: Manage registered Azure clouds.

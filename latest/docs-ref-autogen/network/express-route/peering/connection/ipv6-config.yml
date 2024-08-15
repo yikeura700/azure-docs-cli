@@ -12,7 +12,6 @@ directCommands:
     Remove connection config to ExpressRoute circuit connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering connection ipv6-config remove --circuit-name
                                                                    --name
@@ -51,7 +50,6 @@ directCommands:
     Set connection config to ExpressRoute circuit connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering connection ipv6-config set --circuit-name
                                                                 --name
@@ -94,7 +92,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering connection ipv6-config wait [--circuit-name]
                                                                  [--created]
@@ -184,5 +181,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage ExpressRoute circuit connection configs.

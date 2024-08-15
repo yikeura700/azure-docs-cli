@@ -12,7 +12,6 @@ directCommands:
     Gets an advanced threat protection setting.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi advanced-threat-protection-setting show [--ids]
                                                       [--name]
@@ -37,7 +36,6 @@ directCommands:
     Update a SQL Managed Instance's advanced threat protection setting.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi advanced-threat-protection-setting update [--add]
                                                         [--force-string]
@@ -117,5 +115,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage a SQL Managed Instance's advanced threat protection setting.

@@ -12,7 +12,6 @@ directCommands:
     Creates a SQL Instance key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi key create --kid
                          --managed-instance
@@ -36,7 +35,6 @@ directCommands:
     Deletes a SQL Instance key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi key delete --kid
                          [--ids]
@@ -67,7 +65,6 @@ directCommands:
     Gets a list of managed instance keys.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi key list [--filter]
                        [--ids]
@@ -96,7 +93,6 @@ directCommands:
     Shows a SQL Instance key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi key show --kid
                        [--ids]
@@ -151,5 +147,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage a SQL Instance's keys.

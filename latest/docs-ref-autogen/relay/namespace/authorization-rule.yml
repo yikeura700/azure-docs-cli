@@ -12,7 +12,6 @@ directCommands:
     Create Authorization Rule for the given Relay Service Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay namespace authorization-rule create --name
                                                  --namespace-name
@@ -45,7 +44,6 @@ directCommands:
     Deletes the Authorization Rule of the Relay Service Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay namespace authorization-rule delete [--ids]
                                                  [--name]
@@ -78,7 +76,6 @@ directCommands:
     Shows the list of Authorization Rule by Relay Service Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay namespace authorization-rule list --namespace-name
                                                --resource-group
@@ -110,7 +107,6 @@ directCommands:
     Shows the details of Relay Service Namespace Authorization Rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay namespace authorization-rule show [--ids]
                                                [--name]
@@ -143,7 +139,6 @@ directCommands:
     Updates Authorization Rule for the given Relay Service Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay namespace authorization-rule update [--add]
                                                  [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -225,5 +220,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/09/2021
   description: Manage Azure Relay Service Namespace Authorization Rule.

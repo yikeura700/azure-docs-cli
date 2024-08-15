@@ -12,7 +12,6 @@ directCommands:
     Add a managed rule set to an exclusion.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy managed-rule exclusion rule-set add --match-operator {Contains, EndsWith, Equals, EqualsAny, StartsWith}
                                                                                   --match-variable {RequestArgKeys, RequestArgNames, RequestArgValues, RequestCookieKeys, RequestCookieNames, RequestCookieValues, RequestHeaderKeys, RequestHeaderNames, RequestHeaderValues}
@@ -73,7 +72,6 @@ directCommands:
     List all managed rule sets of an exclusion.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy managed-rule exclusion rule-set list --policy-name
                                                                                    --resource-group
@@ -96,7 +94,6 @@ directCommands:
     Remove managed rule set within an exclusion.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy managed-rule exclusion rule-set remove --match-operator {Contains, EndsWith, Equals, EqualsAny, StartsWith}
                                                                                      --match-variable {RequestArgKeys, RequestArgNames, RequestArgValues, RequestCookieKeys, RequestCookieNames, RequestCookieValues, RequestHeaderKeys, RequestHeaderNames, RequestHeaderValues}
@@ -176,5 +173,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Define a managed rule set for exclusions.

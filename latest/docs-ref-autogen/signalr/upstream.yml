@@ -12,7 +12,6 @@ directCommands:
     Clear upstream settings of an existing SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr upstream clear [--ids]
                               [--name]
@@ -37,7 +36,6 @@ directCommands:
     List upstream settings of an existing SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr upstream list --name
                              --resource-group
@@ -56,7 +54,6 @@ directCommands:
     Update order sensitive upstream settings for an existing SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr upstream update --template
                                [--ids]
@@ -117,5 +114,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/10/2023
   description: Manage upstream settings.

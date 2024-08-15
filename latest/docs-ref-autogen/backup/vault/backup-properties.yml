@@ -12,7 +12,6 @@ directCommands:
     Sets backup related properties of the Recovery Services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault backup-properties set [--backup-storage-redundancy {GeoRedundant, LocallyRedundant, ZoneRedundant}]
                                           [--classic-alerts {Disable, Enable}]
@@ -79,7 +78,6 @@ directCommands:
     Gets backup related properties of the Recovery Services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault backup-properties show [--ids]
                                            [--name]
@@ -130,5 +128,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: Properties of the Recovery Services vault.

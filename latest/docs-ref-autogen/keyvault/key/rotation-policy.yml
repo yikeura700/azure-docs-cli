@@ -12,7 +12,6 @@ directCommands:
     Get the rotation policy of a Key Vault key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key rotation-policy show [--hsm-name]
                                          [--id]
@@ -37,7 +36,6 @@ directCommands:
     Update the rotation policy of a Key Vault key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault key rotation-policy update --value
                                            [--hsm-name]
@@ -122,5 +120,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage key's rotation policy.

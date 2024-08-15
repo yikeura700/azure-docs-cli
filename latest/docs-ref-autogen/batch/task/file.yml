@@ -12,7 +12,6 @@ directCommands:
     Deletes the specified Task file from the Compute Node where the Task ran.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch task file delete --file-path
                               --job-id
@@ -58,7 +57,6 @@ directCommands:
     Download the content of a Batch task file.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch task file download --destination
                                 --file-path
@@ -116,7 +114,6 @@ directCommands:
     Lists the files in a Task's directory on its Compute Node.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch task file list --job-id
                             --task-id
@@ -156,7 +153,6 @@ directCommands:
     Gets the properties of the specified Task file.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch task file show --file-path
                             --job-id
@@ -225,5 +221,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage Batch task files.

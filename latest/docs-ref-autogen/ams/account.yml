@@ -12,7 +12,6 @@ directCommands:
     Checks whether the Media Service resource name is available.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account check-name --name
                               [--location]
@@ -31,7 +30,6 @@ directCommands:
     Create an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account create --name
                           --resource-group
@@ -87,7 +85,6 @@ directCommands:
     Delete an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account delete [--ids]
                           [--name]
@@ -112,7 +109,6 @@ directCommands:
     List Azure Media Services accounts for the entire subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: az ams account list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -124,7 +120,6 @@ directCommands:
     Show the details of an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account show [--ids]
                         [--name]
@@ -149,7 +144,6 @@ directCommands:
     Update the details of an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account update [--add]
                           [--force-string]
@@ -242,5 +236,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage Azure Media Services accounts.

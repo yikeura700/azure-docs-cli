@@ -16,7 +16,6 @@ directCommands:
     Create a new directory under the specified share or parent directory.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage directory create --name
                                 --share-name
@@ -134,7 +133,6 @@ directCommands:
     Delete the specified empty directory.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage directory delete --name
                                 --share-name
@@ -244,7 +242,6 @@ directCommands:
     Check for the existence of a storage directory.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage directory exists --name
                                 --share-name
@@ -352,7 +349,6 @@ directCommands:
     List directories in a share.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage directory list --share-name
                               [--account-key]
@@ -459,7 +455,6 @@ directCommands:
     Get all user-defined metadata and system properties for the specified directory.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage directory show --name
                               --share-name

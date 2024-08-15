@@ -12,7 +12,6 @@ directCommands:
     Download a script which mounts files of a recovery point.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup restore files mount-rp [--container-name]
                                      [--ids]
@@ -53,7 +52,6 @@ directCommands:
     Close access to the recovery point.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup restore files unmount-rp [--container-name]
                                        [--ids]
@@ -116,5 +114,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: Gives access to all files of a recovery point.

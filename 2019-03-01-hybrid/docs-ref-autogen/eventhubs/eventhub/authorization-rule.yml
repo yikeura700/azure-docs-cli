@@ -12,7 +12,6 @@ directCommands:
     Create an AuthorizationRule for the specified Event Hub. Creation/update of the AuthorizationRule will take a few seconds to take effect.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub authorization-rule create --authorization-rule-name
                                                     --eventhub-name
@@ -50,7 +49,6 @@ directCommands:
     Delete an Event Hub AuthorizationRule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub authorization-rule delete [--authorization-rule-name]
                                                     [--eventhub-name]
@@ -92,7 +90,6 @@ directCommands:
     List the authorization rules for an Event Hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub authorization-rule list --eventhub-name
                                                   --namespace-name
@@ -120,7 +117,6 @@ directCommands:
     Get an AuthorizationRule for an Event Hub by rule name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub authorization-rule show [--authorization-rule-name]
                                                   [--eventhub-name]
@@ -157,7 +153,6 @@ directCommands:
     Update an AuthorizationRule for the specified Event Hub. Creation/update of the AuthorizationRule will take a few seconds to take effect.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub authorization-rule update [--add]
                                                     [--authorization-rule-name]
@@ -243,5 +238,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manage Azure Service Bus Authorizationrule for Eventhub.

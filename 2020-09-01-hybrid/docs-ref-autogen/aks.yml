@@ -16,7 +16,6 @@ directCommands:
     Show the dashboard for a Kubernetes cluster in a web browser.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks browse --name
                   --resource-group
@@ -106,7 +105,6 @@ directCommands:
     Validate an ACR is accessible from an AKS cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks check-acr --acr
                      --name
@@ -139,7 +137,6 @@ directCommands:
     Create a new managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks create --name
                   --resource-group
@@ -1032,6 +1029,7 @@ directCommands:
                   [--aad-tenant-id]
                   [--aci-subnet-name]
                   [--admin-username]
+                  [--advanced-networking-observability-tls-management {Managed, None}]
                   [--aks-custom-headers]
                   [--ampls-resource-id]
                   [--api-server-authorized-ip-ranges]
@@ -1355,6 +1353,12 @@ directCommands:
     defaultValue: "azureuser"
     summary: |-
       User account to create on node VMs for SSH access.
+  - name: --advanced-networking-observability-tls-management
+    defaultValue: "Managed"
+    parameterValueGroup: "Managed, None"
+    summary: |-
+      Management of TLS certificates for querying network flow logs via the flow log endpoint for Advanced Networking observability clusters. Valid values are "Managed" and "None". If not specified, the default is Managed.
+    isPreview: true
   - name: --aks-custom-headers
     summary: |-
       Send custom headers. When specified, format should be Key1=Value1,Key2=Value2.
@@ -2143,7 +2147,6 @@ directCommands:
     Delete a managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks delete --name
                   --resource-group
@@ -2219,7 +2222,6 @@ directCommands:
     Disable Kubernetes addons.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks disable-addons --addons
                           --name
@@ -2302,7 +2304,6 @@ directCommands:
     - azure-keyvault-secrets-provider : enable Azure Keyvault Secrets Provider addon.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks enable-addons --addons
                          --name
@@ -2548,7 +2549,6 @@ directCommands:
     By default, the credentials are merged into the .kube/config file so kubectl can use them.  See -f parameter for details.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks get-credentials --name
                            --resource-group
@@ -2664,7 +2664,6 @@ directCommands:
     Get the upgrade versions available for a managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks get-upgrades --name
                         --resource-group
@@ -2710,7 +2709,6 @@ directCommands:
     Get the versions available for creating a managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: az aks get-versions --location
   examples:
   - summary: |-
@@ -2744,7 +2742,6 @@ directCommands:
     Download and install kubectl, the Kubernetes command-line tool. Download and install kubelogin, a client-go credential (exec) plugin implementing azure authentication.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks install-cli [--base-src-url]
                        [--client-version]
@@ -2875,7 +2872,6 @@ directCommands:
     List managed Kubernetes clusters.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: az aks list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -2899,7 +2895,6 @@ directCommands:
     Abort last running operation on managed cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks operation-abort --name
                            --resource-group
@@ -2963,7 +2958,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks remove-dev-spaces --name
                              --resource-group
@@ -2997,7 +2991,6 @@ directCommands:
     Kubernetes will be unavailable during cluster certificate rotation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks rotate-certs --name
                         --resource-group
@@ -3059,7 +3052,6 @@ directCommands:
     Scale the node pool in a managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks scale --name
                  --node-count
@@ -3135,7 +3127,6 @@ directCommands:
     Show the details for a managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks show --name
                 --resource-group
@@ -3188,7 +3179,6 @@ directCommands:
     Starts a Stopped Managed Cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks start --name
                  --resource-group
@@ -3242,7 +3232,6 @@ directCommands:
     This can only be performed on Azure Virtual Machine Scale set backed clusters. Stopping a cluster stops the control plane and agent nodes entirely, while maintaining all object and cluster state. A cluster does not accrue charges while it is stopped. See `stopping a cluster <https://docs.microsoft.com/azure/aks/start-stop-cluster>`_ for more details about stopping a cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks stop --name
                 --resource-group
@@ -3294,7 +3283,6 @@ directCommands:
     Update a managed Kubernetes cluster. When called with no optional arguments this attempts to move the cluster to its goal state without changing the current cluster configuration. This can be used to move out of a non succeeded state.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks update --name
                   --resource-group
@@ -3942,6 +3930,7 @@ directCommands:
                   --resource-group
                   [--aad-admin-group-object-ids]
                   [--aad-tenant-id]
+                  [--advanced-networking-observability-tls-management {Managed, None}]
                   [--aks-custom-headers]
                   [--api-server-authorized-ip-ranges]
                   [--apiserver-subnet-id]
@@ -4204,6 +4193,11 @@ directCommands:
   - name: --aad-tenant-id
     summary: |-
       The ID of an Azure Active Directory tenant.
+  - name: --advanced-networking-observability-tls-management
+    parameterValueGroup: "Managed, None"
+    summary: |-
+      Management of TLS certificates for querying network flow logs via the flow log endpoint for Advanced Networking observability clusters. Valid values are "Managed" and "None". If not specified, the default is Managed.
+    isPreview: true
   - name: --aks-custom-headers
     summary: |-
       Send custom headers. When specified, format should be Key1=Value1,Key2=Value2.
@@ -4850,7 +4844,6 @@ directCommands:
     Update credentials for a managed Kubernetes cluster, like service principal.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks update-credentials --name
                               --resource-group
@@ -4894,7 +4887,6 @@ directCommands:
     Kubernetes will be unavailable during cluster upgrades.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks upgrade --name
                    --resource-group
@@ -5054,60 +5046,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
-  syntax: >-
-    az aks use-dev-spaces --name
-                          --resource-group
-                          [--endpoint {None, Private, Public}]
-                          [--space]
-                          [--update]
-                          [--yes]
-  examples:
-  - summary: |-
-      Use Azure Dev Spaces with a managed Kubernetes cluster, interactively selecting a dev space.
-    syntax: az aks use-dev-spaces -g my-aks-group -n my-aks
-  - summary: |-
-      Use Azure Dev Spaces with a managed Kubernetes cluster, updating to the latest Azure Dev Spaces             client components and selecting a new or existing dev space 'my-space'.
-    syntax: az aks use-dev-spaces -g my-aks-group -n my-aks --update --space my-space
-  - summary: |-
-      Use Azure Dev Spaces with a managed Kubernetes cluster, selecting a new or existing dev space             'develop/my-space' without prompting for confirmation.
-    syntax: az aks use-dev-spaces -g my-aks-group -n my-aks -s develop/my-space -y
-  - summary: |-
-      Use Azure Dev Spaces with a managed Kubernetes cluster with a private endpoint.
-    syntax: az aks use-dev-spaces -g my-aks-group -n my-aks -e private
-  requiredParameters:
-  - isRequired: true
-    name: --name -n
-    summary: |-
-      Name of the managed cluster.
-  - isRequired: true
-    name: --resource-group -g
-    summary: |-
-      Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
-  optionalParameters:
-  - name: --endpoint -e
-    defaultValue: "Public"
-    parameterValueGroup: "None, Private, Public"
-    summary: |-
-      The endpoint type to be used for a Azure Dev Spaces controller. See https://aka.ms/azds-networking for more information.
-  - name: --space -s
-    summary: |-
-      Name of the new or existing dev space to select. Defaults to an interactive selection experience.
-  - name: --update
-    defaultValue: "False"
-    summary: |-
-      Update to the latest Azure Dev Spaces client components.
-  - name: --yes -y
-    defaultValue: "False"
-    summary: |-
-      Do not prompt for confirmation. Requires --space.
-- uid: az_aks_use-dev-spaces(dev-spaces)
-  name: az aks use-dev-spaces
-  extensionSuffix: dev-spaces
-  summary: |-
-    Use Azure Dev Spaces with a managed Kubernetes cluster.
-  status: GA
-  sourceType: Extension
   syntax: >-
     az aks use-dev-spaces --name
                           --resource-group
@@ -5162,7 +5100,6 @@ directCommands:
     If an operation on a cluster was interrupted or was started with `--no-wait`, use this command to wait for it to complete.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks wait --name
                 --resource-group
@@ -5288,8 +5225,6 @@ commands:
 - az_aks_addon_list-available
 - az_aks_addon_show
 - az_aks_addon_update
-- az_aks_app
-- az_aks_app_up
 - az_aks_approuting
 - az_aks_approuting_disable
 - az_aks_approuting_disable(aks-preview)
@@ -5527,7 +5462,6 @@ commands:
 - az_aks_upgrade
 - az_aks_upgrade(aks-preview)
 - az_aks_use-dev-spaces
-- az_aks_use-dev-spaces(dev-spaces)
 - az_aks_wait
 - az_aks_wait(aks-preview)
 globalParameters:

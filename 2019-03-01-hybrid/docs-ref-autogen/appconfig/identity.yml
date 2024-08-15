@@ -12,7 +12,6 @@ directCommands:
     Update managed identities for an App Configuration store.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig identity assign --name
                                  [--identities]
@@ -45,7 +44,6 @@ directCommands:
     Remove managed identities for an App Configuration store.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig identity remove --name
                                  [--identities]
@@ -78,7 +76,6 @@ directCommands:
     Display managed identities for an App Configuration store.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig identity show --name
                                [--resource-group]
@@ -124,5 +121,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/18/2024
   description: Managed identities for App Configuration stores.

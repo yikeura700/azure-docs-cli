@@ -12,7 +12,6 @@ directCommands:
     Configure the Network Watcher service for different regions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher configure --locations
                                  [--enabled {false, true}]
@@ -47,7 +46,6 @@ directCommands:
     List Network Watchers.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network watcher list
 - uid: az_network_watcher_run-configuration-diagnostic
   name: az network watcher run-configuration-diagnostic
@@ -57,7 +55,6 @@ directCommands:
     Requires that Network Watcher is enabled for the region in which the target is located.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher run-configuration-diagnostic --resource
                                                     [--destination]
@@ -125,7 +122,6 @@ directCommands:
     Requires that Network Watcher is enabled for the region in which the VM is located. For more information about show-next-hop visit https://learn.microsoft.com/en-us/azure/network-watcher/diagnose-vm-network-routing-problem-cli.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher show-next-hop --dest-ip
                                      --source-ip
@@ -169,7 +165,6 @@ directCommands:
     For more information on using security group view visit https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-security-group-view-cli.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher show-security-group-view --vm
                                                 [--no-wait {0, 1, f, false, n, no, t, true, y, yes}]
@@ -199,7 +194,6 @@ directCommands:
     For more information about using network topology visit https://learn.microsoft.com/en-us/azure/network-watcher/view-network-topology.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher show-topology [--location]
                                      [--resource-group]
@@ -232,7 +226,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher test-connectivity --source-resource
                                          [--dest-address]
@@ -299,7 +292,6 @@ directCommands:
     Requires that Network Watcher is enabled for the region in which the VM is located. For more information visit https://learn.microsoft.com/en-us/azure/network-watcher/diagnose-vm-network-traffic-filtering-problem-cli.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher test-ip-flow --direction {Inbound, Outbound}
                                     --local
@@ -431,5 +423,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage the Azure Network Watcher. Network Watcher assists with monitoring and diagnosing conditions at a network scenario level. To learn more visit https://docs.microsoft.com/azure/network-watcher/.

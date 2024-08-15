@@ -12,7 +12,6 @@ directCommands:
     Approve a private endpoint connection request for eventhubs namesapce.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace private-endpoint-connection approve [--description]
                                                                [--id]
@@ -60,7 +59,6 @@ directCommands:
     Create PrivateEndpointConnections of service namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace private-endpoint-connection create --name
                                                               --namespace-name
@@ -99,7 +97,6 @@ directCommands:
     Delete a private endpoint connection request for eventhubs namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace private-endpoint-connection delete [--description]
                                                               [--id]
@@ -152,7 +149,6 @@ directCommands:
     List the available PrivateEndpointConnections within a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace private-endpoint-connection list --namespace-name
                                                             --resource-group
@@ -180,7 +176,6 @@ directCommands:
     Reject a private endpoint connection request for eventhubs namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace private-endpoint-connection reject [--description]
                                                               [--id]
@@ -228,7 +223,6 @@ directCommands:
     Get a description for the specified Private Endpoint Connection name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace private-endpoint-connection show [--id]
                                                             [--ids]
@@ -261,7 +255,6 @@ directCommands:
     Update PrivateEndpointConnections of service namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace private-endpoint-connection update [--add]
                                                               [--description]
@@ -321,7 +314,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace private-endpoint-connection wait [--created]
                                                             [--custom]
@@ -412,5 +404,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manage eventhubs namespace private endpoint connection.

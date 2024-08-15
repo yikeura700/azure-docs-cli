@@ -12,7 +12,6 @@ directCommands:
     Query activity runs based on input filter conditions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse activity-run query-by-pipeline-run --last-updated-after
                                                   --last-updated-before
@@ -87,5 +86,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Synapse activity-run.

@@ -14,7 +14,6 @@ directCommands:
     If an outage occurs on the primary server, the grace period indicates that Azure SQL Managed Database will not initiate automatic failover before the grace period expires. Please note that failover operation with --allow-data-loss option might cause data loss due to the nature of asynchronous synchronization.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql instance-failover-group create --mi
                                           --name
@@ -65,7 +64,6 @@ directCommands:
     Deletes a failover group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql instance-failover-group delete --location
                                           --name
@@ -89,7 +87,6 @@ directCommands:
     Set the primary of the instance failover group by failing over all databases from the current primary managed instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql instance-failover-group set-primary --location
                                                --name
@@ -119,7 +116,6 @@ directCommands:
     Gets a failover group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql instance-failover-group show --location
                                         --name
@@ -143,7 +139,6 @@ directCommands:
     Updates the instance failover group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql instance-failover-group update --location
                                           --name
@@ -226,5 +221,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage SQL Instance Failover Groups.

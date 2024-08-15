@@ -12,7 +12,6 @@ directCommands:
     Create a synapse managed private endpoints.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse managed-private-endpoints create --file
                                                 --pe-name
@@ -44,7 +43,6 @@ directCommands:
     Delete synapse managed private endpoints in a workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse managed-private-endpoints delete --pe-name
                                                 [--ids]
@@ -82,7 +80,6 @@ directCommands:
     List synapse managed private endpoints in a workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: az synapse managed-private-endpoints list --workspace-name
   examples:
   - summary: |-
@@ -99,7 +96,6 @@ directCommands:
     Get a synapse managed private endpoints.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse managed-private-endpoints show --pe-name
                                               [--ids]
@@ -156,5 +152,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage synapse managed private endpoints.

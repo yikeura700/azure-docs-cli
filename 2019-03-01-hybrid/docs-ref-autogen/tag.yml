@@ -12,7 +12,6 @@ directCommands:
     Create a tag value.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az tag add-value --name
                      --value
@@ -37,7 +36,6 @@ directCommands:
     The az tag create command with an id creates or updates the entire set of tags on a resource, resource group or subscription. This operation allows adding or replacing the entire set of tags on the specified resource, resource group or subscription. The specified entity can have a maximum of 50 tags. Please note: 'tag create' acts like a 'tag init' hence tags created with this command are the only ones being present after execution.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az tag create [--name]
                   [--tags]
@@ -69,7 +67,6 @@ directCommands:
     The az tag delete command with an id deletes the entire set of tags on a resource, resource group or subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az tag delete [--name]
                   [--yes]
@@ -102,7 +99,6 @@ directCommands:
     The az tag list command with an id lists the entire set of tags on a resource, resource group or subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az tag list
   examples:
   - summary: |-
@@ -120,7 +116,6 @@ directCommands:
     Deletes a tag value.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az tag remove-value --name
                         --value
@@ -164,5 +159,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Tag Management on a resource.

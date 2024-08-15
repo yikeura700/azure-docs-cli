@@ -16,7 +16,6 @@ directCommands:
     Assess patches on a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm assess-patches [--ids]
                          [--name]
@@ -50,7 +49,6 @@ directCommands:
     Manage auto-shutdown for VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm auto-shutdown [--email]
                         [--ids]
@@ -104,7 +102,6 @@ directCommands:
     For an end-to-end tutorial, see https://docs.microsoft.com/azure/virtual-machines/linux/capture-image.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm capture --vhd-name-prefix
                   [--ids]
@@ -164,7 +161,6 @@ directCommands:
     Convert a VM with unmanaged disks to use managed disks.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm convert [--ids]
                   [--name]
@@ -203,7 +199,6 @@ directCommands:
     For an end-to-end tutorial, see https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm create --name
                  --resource-group
@@ -740,7 +735,6 @@ directCommands:
     For an end-to-end tutorial, see https://docs.microsoft.com/azure/virtual-machines/linux/capture-image.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm deallocate [--hibernate {0, 1, f, false, n, no, t, true, y, yes}]
                      [--ids]
@@ -795,7 +789,6 @@ directCommands:
     Delete a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm delete [--force-deletion]
                  [--ids]
@@ -843,7 +836,6 @@ directCommands:
     For an end-to-end tutorial, see https://docs.microsoft.com/azure/virtual-machines/linux/capture-image.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm generalize [--ids]
                      [--name]
@@ -885,7 +877,6 @@ directCommands:
     Get instance information about a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm get-instance-view [--ids]
                             [--name]
@@ -917,7 +908,6 @@ directCommands:
     Install patches on a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm install-patches --maximum-duration
                           --reboot-setting {Always, IfRequired, Never}
@@ -1003,7 +993,6 @@ directCommands:
     `--resource-group` can pass in an empty string as a parameter, which will output all VM information under the subscription. For more information on querying information about Virtual Machines, see https://docs.microsoft.com/cli/azure/query-az-cli2.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm list [--resource-group]
                [--show-details]
@@ -1035,7 +1024,6 @@ directCommands:
     List IP addresses associated with a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm list-ip-addresses [--ids]
                             [--name]
@@ -1067,7 +1055,6 @@ directCommands:
     List available sizes for VMs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm list-sizes [--ids]
                      [--location]
@@ -1094,7 +1081,6 @@ directCommands:
     This command incorporates subscription level restriction, offering the most accurate information.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm list-skus [--all {false, true}]
                     [--location]
@@ -1138,7 +1124,6 @@ directCommands:
     List available usage resources for VMs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: az vm list-usage --location
   examples:
   - summary: |-
@@ -1155,7 +1140,6 @@ directCommands:
     List available resizing options for VMs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm list-vm-resize-options [--ids]
                                  [--name]
@@ -1189,7 +1173,6 @@ directCommands:
     Adds a security rule to the network security group (NSG) that is attached to the VM's network interface (NIC) or subnet. The existing NSG will be used or a new one will be created. The rule name is 'open-port-{port}' and will overwrite an existing rule with this name. For multi-NIC VMs, or for more fine-grained control, use the appropriate network commands directly (nsg rule create, etc).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm open-port --port
                     [--apply-to-subnet]
@@ -1247,7 +1230,6 @@ directCommands:
     The operation to perform maintenance on a virtual machine.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm perform-maintenance [--ids]
                               [--name]
@@ -1277,7 +1259,6 @@ directCommands:
     Reapply VMs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm reapply [--ids]
                   [--name]
@@ -1314,7 +1295,6 @@ directCommands:
     Redeploy an existing VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm redeploy [--ids]
                    [--name]
@@ -1353,7 +1333,6 @@ directCommands:
     Reimage (upgrade the operating system) a virtual machine which don't have a ephemeral OS disk, for virtual machines who have a ephemeral OS disk the virtual machine is reset to initial state. NOTE: The retaining of old OS disk depends on the value of deleteOption of OS disk. If deleteOption is detach, the old OS disk will be preserved after reimage. If deleteOption is delete, the old OS disk will be deleted after reimage. The deleteOption of the OS disk should be updated accordingly before performing the reimage.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm reimage [--admin-password]
                   [--custom-data]
@@ -1404,7 +1383,6 @@ directCommands:
     Update a VM's size.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm resize --size
                  [--ids]
@@ -1448,7 +1426,6 @@ directCommands:
     Restart VMs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm restart [--force]
                   [--ids]
@@ -1490,7 +1467,6 @@ directCommands:
     Get the details of a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm show [--ids]
                [--include-user-data]
@@ -1532,7 +1508,6 @@ directCommands:
     Simulate the eviction of a Spot VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm simulate-eviction [--ids]
                             [--name]
@@ -1561,7 +1536,6 @@ directCommands:
     Start a stopped VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm start [--ids]
                 [--name]
@@ -1603,7 +1577,6 @@ directCommands:
     The VM will continue to be billed. To avoid this, you can deallocate the VM through "az vm deallocate".
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm stop [--ids]
                [--name]
@@ -1650,7 +1623,6 @@ directCommands:
     Update VM objects and properties using paths that correspond to 'az vm show'.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm update [--add]
                  [--capacity-reservation-group]
@@ -1846,7 +1818,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the VM is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm wait [--created]
                [--custom]

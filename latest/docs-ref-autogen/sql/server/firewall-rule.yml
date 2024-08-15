@@ -12,7 +12,6 @@ directCommands:
     Create a firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server firewall-rule create --name
                                        --resource-group
@@ -52,7 +51,6 @@ directCommands:
     Deletes a firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server firewall-rule delete [--ids]
                                        [--name]
@@ -81,7 +79,6 @@ directCommands:
     List a server's firewall rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server firewall-rule list [--ids]
                                      [--resource-group]
@@ -110,7 +107,6 @@ directCommands:
     Shows the details for a firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server firewall-rule show [--ids]
                                      [--name]
@@ -143,7 +139,6 @@ directCommands:
     Update a firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server firewall-rule update [--end-ip-address]
                                        [--ids]
@@ -209,5 +204,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage a server's firewall rules.

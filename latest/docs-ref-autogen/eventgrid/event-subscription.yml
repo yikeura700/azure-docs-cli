@@ -18,7 +18,6 @@ directCommands:
     Create a new event subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid event-subscription create --name
                                            [--aad-tenant-id]
@@ -588,7 +587,6 @@ directCommands:
     Delete an event subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid event-subscription delete --name
                                            [--source-resource-id]
@@ -713,7 +711,6 @@ directCommands:
     4. For both #2 and #3 above, to filter only by a resource group, you can additionally specify the --resource-group parameter.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid event-subscription list [--location]
                                          [--odata-query]
@@ -892,7 +889,6 @@ directCommands:
     Get the details of an event subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid event-subscription show --name
                                          [--include-attrib-secret {false, true}]
@@ -1014,7 +1010,6 @@ directCommands:
     Update an event subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid event-subscription update --name
                                            [--add]

@@ -14,7 +14,6 @@ directCommands:
     Copy autoscale rules from one profile to another.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale rule copy --autoscale-name
                                    --dest-schedule
@@ -51,7 +50,6 @@ directCommands:
     For more information on autoscaling, visit: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-understanding-autoscale-settings.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale rule create --autoscale-name
                                      --condition
@@ -144,7 +142,6 @@ directCommands:
     Remove autoscale rules from a profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale rule delete --autoscale-name
                                      --index
@@ -174,7 +171,6 @@ directCommands:
     List autoscale rules for a profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor autoscale rule list --autoscale-name
                                    --resource-group
@@ -227,5 +223,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: 'For more information on autoscaling, visit: https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-understanding-autoscale-settings.'

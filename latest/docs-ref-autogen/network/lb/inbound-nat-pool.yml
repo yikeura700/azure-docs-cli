@@ -12,7 +12,6 @@ directCommands:
     Create an inbound NAT address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb inbound-nat-pool create --backend-port
                                           --frontend-port-range-end
@@ -85,7 +84,6 @@ directCommands:
     Delete an inbound NAT address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb inbound-nat-pool delete --lb-name
                                           --name
@@ -119,7 +117,6 @@ directCommands:
     List inbound NAT address pools.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb inbound-nat-pool list --lb-name
                                         --resource-group
@@ -142,7 +139,6 @@ directCommands:
     Get the details of an inbound NAT address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb inbound-nat-pool show --lb-name
                                         --name
@@ -170,7 +166,6 @@ directCommands:
     Update an inbound NAT address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb inbound-nat-pool update --lb-name
                                           --name
@@ -259,7 +254,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb inbound-nat-pool wait [--created]
                                         [--custom]
@@ -344,5 +338,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage inbound NAT address pools of a load balancer.

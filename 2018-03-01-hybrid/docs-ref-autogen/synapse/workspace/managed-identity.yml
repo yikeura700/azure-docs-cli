@@ -12,7 +12,6 @@ directCommands:
     Grant workspace's sql-access to managed-identity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace managed-identity grant-sql-access [--ids]
                                                            [--no-wait]
@@ -49,7 +48,6 @@ directCommands:
     Revoke workspace's sql-access to managed-identity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace managed-identity revoke-sql-access [--ids]
                                                             [--no-wait]
@@ -86,7 +84,6 @@ directCommands:
     Show workspace's sql-access state to managed-identity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace managed-identity show-sql-access [--ids]
                                                           [--resource-group]
@@ -118,7 +115,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of sql-access state to managed-identity is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace managed-identity wait [--created]
                                                [--custom]
@@ -201,5 +197,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage workspace's managed-identity.

@@ -12,7 +12,6 @@ directCommands:
     Create a cache rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr cache create --name
                         --registry
@@ -57,7 +56,6 @@ directCommands:
     Delete a cache rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr cache delete --name
                         --registry
@@ -90,7 +88,6 @@ directCommands:
     List the cache rules in an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr cache list --registry
                       [--resource-group]
@@ -113,7 +110,6 @@ directCommands:
     Show a cache rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr cache show --name
                       --registry
@@ -141,7 +137,6 @@ directCommands:
     Update the credential set on a cache rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr cache update --name
                         --registry
@@ -226,5 +221,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Manage cache rules in Azure Container Registries.

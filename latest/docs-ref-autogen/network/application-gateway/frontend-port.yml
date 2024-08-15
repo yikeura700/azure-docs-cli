@@ -12,7 +12,6 @@ directCommands:
     Create a frontend port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway frontend-port create --gateway-name
                                                         --name
@@ -50,7 +49,6 @@ directCommands:
     Delete a frontend port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway frontend-port delete --gateway-name
                                                         --name
@@ -84,7 +82,6 @@ directCommands:
     List frontend ports.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway frontend-port list --gateway-name
                                                       --resource-group
@@ -107,7 +104,6 @@ directCommands:
     Get the details of a frontend port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway frontend-port show --gateway-name
                                                       --name
@@ -135,7 +131,6 @@ directCommands:
     Update a frontend port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway frontend-port update --gateway-name
                                                         --name
@@ -190,7 +185,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway frontend-port wait [--created]
                                                       [--custom]
@@ -275,5 +269,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage frontend ports of an application gateway.

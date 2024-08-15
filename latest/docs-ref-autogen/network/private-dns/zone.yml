@@ -12,7 +12,6 @@ directCommands:
     Create a Private DNS zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns zone create --name
                                        --resource-group
@@ -47,7 +46,6 @@ directCommands:
     All DNS records in the zone will also be deleted. This operation cannot be undone. Private DNS zone cannot be deleted unless all virtual network links to it are removed.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns zone delete [--ids]
                                        [--if-match]
@@ -90,7 +88,6 @@ directCommands:
     Export a Private DNS zone as a DNS zone file.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns zone export --name
                                        --resource-group
@@ -118,7 +115,6 @@ directCommands:
     Create a Private DNS zone using a DNS zone file.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns zone import --file-name
                                        --name
@@ -146,7 +142,6 @@ directCommands:
     List Private DNS zones.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns zone list [--max-items]
                                      [--next-token]
@@ -171,7 +166,6 @@ directCommands:
     Get a Private DNS zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns zone show [--ids]
                                      [--name]
@@ -200,7 +194,6 @@ directCommands:
     Update a Private DNS zone's properties. Does not modify Private DNS records or virtual network links within the zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns zone update [--add]
                                        [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -259,7 +252,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns zone wait [--created]
                                      [--custom]
@@ -346,5 +338,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage Private DNS zones.

@@ -12,7 +12,6 @@ directCommands:
     Add a group owner.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad group owner add --group
                           --owner-object-id
@@ -35,7 +34,6 @@ directCommands:
     List group owners.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az ad group owner list --group
   examples:
   - summary: |-
@@ -52,7 +50,6 @@ directCommands:
     Remove a group owner.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad group owner remove --group
                              --owner-object-id
@@ -98,5 +95,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/25/2024
   description: Manage group owners.

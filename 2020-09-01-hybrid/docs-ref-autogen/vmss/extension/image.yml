@@ -12,7 +12,6 @@ directCommands:
     List the information on available extensions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss extension image list [--latest]
                                  [--location]
@@ -76,5 +75,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Find the available VM extensions for a subscription and region.

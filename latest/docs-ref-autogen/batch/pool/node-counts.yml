@@ -14,7 +14,6 @@ directCommands:
     Note that the numbers returned may not always be up to date. If you need exact node counts, use a list query.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch pool node-counts list [--account-endpoint]
                                    [--account-key]
@@ -60,5 +59,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Get node counts for Batch pools.

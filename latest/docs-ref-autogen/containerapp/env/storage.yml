@@ -16,7 +16,6 @@ directCommands:
     List the storages for an environment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp env storage list --name
                                      --resource-group
@@ -62,7 +61,6 @@ directCommands:
     Remove a storage from an environment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp env storage remove --name
                                        --resource-group
@@ -130,7 +128,6 @@ directCommands:
     Create or update a storage.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp env storage set --access-mode {ReadOnly, ReadWrite}
                                     --account-name
@@ -250,7 +247,6 @@ directCommands:
     Show the details of a storage.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp env storage show --name
                                      --resource-group

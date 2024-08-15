@@ -16,7 +16,6 @@ directCommands:
     Create an Table under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb table create --account-name
                              --name
@@ -49,7 +48,6 @@ directCommands:
     Delete the Table under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb table delete --account-name
                              --name
@@ -79,7 +77,6 @@ directCommands:
     Checks if an Azure Cosmos DB table exists.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb table exists --account-name
                              --name
@@ -103,7 +100,6 @@ directCommands:
     List the Tables under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb table list --account-name
                            --resource-group
@@ -122,7 +118,6 @@ directCommands:
     Restore a deleted table within the same account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb table restore --account-name
                               --resource-group
@@ -196,7 +191,6 @@ directCommands:
     Retrieves latest restorable timestamp for the given table in given region.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb table retrieve-latest-backup-time --account-name
                                                   --location
@@ -256,7 +250,6 @@ directCommands:
     Show the details of a Table under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb table show --account-name
                            --name

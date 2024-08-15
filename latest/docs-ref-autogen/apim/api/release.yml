@@ -12,7 +12,6 @@ directCommands:
     Creates a new Release for the API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api release create --api-id
                                --api-revision
@@ -58,7 +57,6 @@ directCommands:
     Deletes the specified release in the API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api release delete --api-id
                                --release-id
@@ -96,7 +94,6 @@ directCommands:
     Lists all releases of an API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api release list --api-id
                              --resource-group
@@ -124,7 +121,6 @@ directCommands:
     Returns the details of an API release.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api release show --api-id
                              --release-id
@@ -157,7 +153,6 @@ directCommands:
     Updates the details of the release of the API specified by its identifier.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api release update --api-id
                                --release-id
@@ -244,5 +239,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/19/2024
   description: Manage Azure API Management API Release.

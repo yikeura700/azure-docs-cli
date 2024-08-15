@@ -12,7 +12,6 @@ directCommands:
     Create a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server create --name
                          --resource-group
@@ -125,7 +124,6 @@ directCommands:
     Deletes a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server delete [--ids]
                          [--name]
@@ -155,7 +153,6 @@ directCommands:
     List available servers.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server list [--expand-ad-admin]
                        [--resource-group]
@@ -180,7 +177,6 @@ directCommands:
     Returns server usages.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server list-usages [--ids]
                               [--name]
@@ -205,7 +201,6 @@ directCommands:
     Refreshes external governance status.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server refresh-external-governance-status [--ids]
                                                      [--resource-group]
@@ -234,7 +229,6 @@ directCommands:
     Gets a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server show [--expand-ad-admin]
                        [--ids]
@@ -264,7 +258,6 @@ directCommands:
     Update a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server update [--add]
                          [--admin-password]
@@ -371,7 +364,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the SQL server is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server wait [--created]
                        [--custom]
@@ -524,5 +516,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage SQL servers.

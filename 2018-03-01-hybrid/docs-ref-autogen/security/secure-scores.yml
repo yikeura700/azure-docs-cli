@@ -12,7 +12,6 @@ directCommands:
     List of secure-scores details and state results.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/security/_help.py
   syntax: az security secure-scores list
   examples:
   - summary: |-
@@ -24,7 +23,6 @@ directCommands:
     Shows a secure score details for selected initiative.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/security/_help.py
   syntax: az security secure-scores show --name
   examples:
   - summary: |-
@@ -63,5 +61,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/13/2024
   description: Secure scores.

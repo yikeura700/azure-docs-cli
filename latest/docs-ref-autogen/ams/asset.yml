@@ -12,7 +12,6 @@ directCommands:
     Create an asset.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset create --account-name
                         --name
@@ -53,7 +52,6 @@ directCommands:
     Delete an asset.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset delete [--account-name]
                         [--ids]
@@ -82,7 +80,6 @@ directCommands:
     Get the asset storage encryption keys used to decrypt content created by version 2 of the Media Services API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset get-encryption-key [--account-name]
                                     [--ids]
@@ -111,7 +108,6 @@ directCommands:
     Lists storage container URLs with shared access signatures (SAS) for uploading and downloading Asset content. The signatures are derived from the storage account keys.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset get-sas-urls [--account-name]
                               [--expiry]
@@ -125,7 +121,7 @@ directCommands:
     summary: |-
       The name of the Azure Media Services account.
   - name: --expiry
-    defaultValue: "2024-08-15 04:33:57.884712"
+    defaultValue: "2024-08-16 10:53:27.349507"
     summary: |-
       Specifies the UTC datetime (Y-m-d'T'H:M:S'Z') at which the SAS becomes invalid. This must be less than 24 hours from the current time.
   - name: --ids
@@ -151,7 +147,6 @@ directCommands:
     List all the assets of an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset list --account-name
                       --resource-group
@@ -187,7 +182,6 @@ directCommands:
     List streaming locators which are associated with this asset.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset list-streaming-locators [--account-name]
                                          [--ids]
@@ -216,7 +210,6 @@ directCommands:
     Show the details of an asset.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset show [--account-name]
                       [--ids]
@@ -245,7 +238,6 @@ directCommands:
     Update the details of an asset.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams asset update [--account-name]
                         [--add]
@@ -330,5 +322,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage assets for an Azure Media Services account.

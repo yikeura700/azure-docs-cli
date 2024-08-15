@@ -14,7 +14,6 @@ directCommands:
     Assign an identity object of a Cognitive Services account. An system assigned identity will be generate and assigned to the account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account identity assign --name
                                                  --resource-group
@@ -39,7 +38,6 @@ directCommands:
     Remove the identity (if exists) from a Cognitive Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account identity remove --name
                                                  --resource-group
@@ -64,7 +62,6 @@ directCommands:
     Show the identity object of a Cognitive Services account, empty object might be returned if the account has no assigned identity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account identity show --name
                                                --resource-group
@@ -110,5 +107,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/27/2023
   description: Manage identity of Cognitive Services accounts.

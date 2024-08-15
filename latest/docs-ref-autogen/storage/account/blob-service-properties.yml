@@ -14,7 +14,6 @@ directCommands:
     Show the properties of a storage account's blob service, including properties for Storage Analytics and CORS (Cross-Origin Resource Sharing) rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account blob-service-properties show --account-name
                                                     [--resource-group]
@@ -39,7 +38,6 @@ directCommands:
     Update the properties of a storage account's blob service, including properties for Storage Analytics and CORS (Cross-Origin Resource Sharing) rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account blob-service-properties update --account-name
                                                       [--add]
@@ -174,5 +172,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage the properties of a storage account's blob service.

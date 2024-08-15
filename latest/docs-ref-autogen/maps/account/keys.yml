@@ -12,7 +12,6 @@ directCommands:
     Get the keys to use with the Maps APIs. A key is used to authenticate and authorize access to the Maps REST APIs. Only one key is needed at a time; two are given to provide seamless key regeneration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/maps/_help.py
   syntax: >-
     az maps account keys list --account-name
                               --resource-group
@@ -35,7 +34,6 @@ directCommands:
     Regenerate either the primary or secondary key for use with the Maps APIs. The old key will stop working immediately.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/maps/_help.py
   syntax: >-
     az maps account keys renew --account-name
                                --key {primary, secondary}
@@ -86,5 +84,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/13/2021
   description: Manage Azure Maps account keys.

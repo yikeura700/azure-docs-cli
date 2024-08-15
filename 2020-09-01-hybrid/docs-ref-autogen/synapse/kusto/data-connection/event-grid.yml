@@ -16,7 +16,6 @@ directCommands:
   isExperimental: true
   previewOrExperimentalInfo: "Command group 'synapse kusto data-connection' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kusto data-connection event-grid create --data-connection-name
                                                        --database-name
@@ -97,7 +96,6 @@ directCommands:
   isExperimental: true
   previewOrExperimentalInfo: "Command group 'synapse kusto data-connection' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kusto data-connection event-grid update [--blob-storage-event-type {Microsoft.Storage.BlobCreated, Microsoft.Storage.BlobRenamed}]
                                                        [--consumer-group]
@@ -200,5 +198,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage kusto pool data connection with synapse sub group event-grid.

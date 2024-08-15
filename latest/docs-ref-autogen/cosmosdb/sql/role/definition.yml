@@ -12,7 +12,6 @@ directCommands:
     Create a SQL role definition under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role definition create --account-name
                                            --body
@@ -63,7 +62,6 @@ directCommands:
     Delete a SQL role definition under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role definition delete --account-name
                                            --id
@@ -102,7 +100,6 @@ directCommands:
     Check if an Azure Cosmos DB role definition exists.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role definition exists --account-name
                                            --id
@@ -130,7 +127,6 @@ directCommands:
     List all SQL role definitions under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role definition list --account-name
                                          --resource-group
@@ -153,7 +149,6 @@ directCommands:
     Show the properties of a SQL role definition under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role definition show --account-name
                                          --id
@@ -181,7 +176,6 @@ directCommands:
     Update a SQL role definition under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role definition update --account-name
                                            --body
@@ -215,7 +209,6 @@ directCommands:
     Poll on a SQL role definition until a specific condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql role definition wait --account-name
                                          --id
@@ -305,5 +298,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB SQL role definitions.

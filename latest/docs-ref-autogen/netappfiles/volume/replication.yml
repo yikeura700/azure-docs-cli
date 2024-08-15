@@ -14,7 +14,6 @@ directCommands:
     Authorize the replication connection on the source volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume replication approve [--account-name]
                                               [--ids]
@@ -60,7 +59,6 @@ directCommands:
     List all replications for a specified volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume replication list --account-name
                                            --name
@@ -96,7 +94,6 @@ directCommands:
     The replication process is resumed from source to destination.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume replication re-initialize [--account-name]
                                                     [--ids]
@@ -138,7 +135,6 @@ directCommands:
     Re-establish a previously deleted replication between 2 volumes that have a common ad-hoc or policy-based snapshots.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume replication reestablish [--account-name]
                                                   [--ids]
@@ -184,7 +180,6 @@ directCommands:
     Delete the replication connection on the destination volume, and send release to the source replication.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume replication remove [--account-name]
                                              [--ids]
@@ -229,7 +224,6 @@ directCommands:
     If any quota rules exists on destination volume they will be overwritten with source volume's quota rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume replication resume [--account-name]
                                              [--ids]
@@ -273,7 +267,6 @@ directCommands:
     Get the replication status for the specified replication volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume replication status [--account-name]
                                              [--ids]
@@ -313,7 +306,6 @@ directCommands:
     The replication process is suspended until resumed or deleted.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume replication suspend [--account-name]
                                               [--force {0, 1, f, false, n, no, t, true, y, yes}]
@@ -388,5 +380,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/07/2024
   description: Manage Azure NetApp Files (ANF) Volume replication.

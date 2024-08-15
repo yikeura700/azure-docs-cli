@@ -12,7 +12,6 @@ directCommands:
     Create a new resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az group create --location
                     --name
@@ -40,7 +39,6 @@ directCommands:
     Delete a resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az group delete --name
                     [--no-wait]
@@ -72,7 +70,6 @@ directCommands:
     Check if a resource group exists.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az group exists --name
   examples:
   - summary: |-
@@ -89,7 +86,6 @@ directCommands:
     Captures a resource group as a template.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az group export --name
                     [--include-comments]
@@ -128,7 +124,6 @@ directCommands:
     List resource groups.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az group list [--tag]
   examples:
   - summary: |-
@@ -144,7 +139,6 @@ directCommands:
     Get a resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az group show --name
   requiredParameters:
   - isRequired: true
@@ -157,7 +151,6 @@ directCommands:
     Update a resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az group update --name
                     [--force-string]
@@ -190,7 +183,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the resource group is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az group wait --name
                   [--created]
@@ -292,5 +284,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage resource groups and template deployments.

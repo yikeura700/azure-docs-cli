@@ -20,7 +20,6 @@ directCommands:
     The blob is marked for later deletion during garbage collection.  In order to delete a blob, all of its snapshots must also be deleted. Both can be removed at the same time.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob delete --container-name
                            --name
@@ -192,7 +191,6 @@ directCommands:
     Delete blobs from a blob container recursively.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob delete-batch --source
                                  [--account-key]
@@ -285,7 +283,6 @@ directCommands:
     Download a blob to a file path.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob download --container-name
                              --file
@@ -393,7 +390,6 @@ directCommands:
     Download blobs from a blob container recursively.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob download-batch --destination
                                    --source
@@ -469,7 +465,6 @@ directCommands:
     Check for the existence of a blob in a container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob exists --container-name
                            --name
@@ -562,7 +557,6 @@ directCommands:
     Generate a shared access signature for the blob.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob generate-sas --container-name
                                  --name
@@ -783,7 +777,6 @@ directCommands:
     List blobs in a given container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob list --container-name
                          [--account-key]
@@ -926,7 +919,6 @@ directCommands:
     For block blob this command only supports block blob on standard storage accounts. For page blob, this command only supports for page blobs on premium accounts.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob set-tier --container-name
                              --name
@@ -1063,7 +1055,6 @@ directCommands:
     Get the details of a blob.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob show --container-name
                          --name
@@ -1224,7 +1215,6 @@ directCommands:
     Creates a read-only snapshot of a blob.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob snapshot --container-name
                              --name
@@ -1290,7 +1280,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob sync --container
                          --source
@@ -1362,7 +1351,6 @@ directCommands:
     If one property is set for the content_settings, all properties will be overriden.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob update --container-name
                            --name
@@ -1453,7 +1441,6 @@ directCommands:
     Create a new blob from a file path, or updates the content of an existing blob with automatic chunking and progress notifications.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob upload --container-name
                            --file
@@ -1597,7 +1584,6 @@ directCommands:
     Upload files from a local directory to a blob container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob upload-batch --destination
                                  --source
@@ -1745,7 +1731,6 @@ directCommands:
     Create the url to access a blob.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob url --container-name
                         --name

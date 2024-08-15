@@ -16,7 +16,6 @@ directCommands:
     Create an SQL database under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql database create --account-name
                                     --name
@@ -49,7 +48,6 @@ directCommands:
     Delete the SQL database under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql database delete --account-name
                                     --name
@@ -79,7 +77,6 @@ directCommands:
     Checks if an Azure Cosmos DB SQL database exists.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql database exists --account-name
                                     --name
@@ -103,7 +100,6 @@ directCommands:
     List the SQL databases under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql database list --account-name
                                   --resource-group
@@ -155,7 +151,6 @@ directCommands:
     Restore a deleted sql database within the same account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql database restore --account-name
                                      --name
@@ -229,7 +224,6 @@ directCommands:
     Show the details of a SQL database under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql database show --account-name
                                   --name

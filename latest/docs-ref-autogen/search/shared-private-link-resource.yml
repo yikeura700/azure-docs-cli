@@ -12,7 +12,6 @@ directCommands:
     Create shared privatelink resources in a Search service in the given resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search shared-private-link-resource create --group-id
                                                   --name
@@ -57,7 +56,6 @@ directCommands:
     Initiates the deletion of the shared private link resource from the search service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search shared-private-link-resource delete --name
                                                   --resource-group
@@ -87,7 +85,6 @@ directCommands:
     Gets a list of all shared private link resources managed by the given service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search shared-private-link-resource list --resource-group
                                                 --service-name
@@ -106,7 +103,6 @@ directCommands:
     Gets the details of the shared private link resource managed by the search service in the given resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search shared-private-link-resource show --name
                                                 --resource-group
@@ -130,7 +126,6 @@ directCommands:
     Update shared privatelink resources in a Search service in the given resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search shared-private-link-resource update --group-id
                                                   --name
@@ -175,7 +170,6 @@ directCommands:
     Wait for async shared private link resource operations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search shared-private-link-resource wait --name
                                                 --resource-group
@@ -260,5 +254,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/01/2021
   description: Manage Azure Search shared private link resources.

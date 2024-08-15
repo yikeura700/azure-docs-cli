@@ -12,7 +12,6 @@ directCommands:
     Create a route in a route table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network route-table route create --name
                                         --resource-group
@@ -59,7 +58,6 @@ directCommands:
     Delete a route from a route table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network route-table route delete [--ids]
                                         [--name]
@@ -102,7 +100,6 @@ directCommands:
     List routes in a route table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network route-table route list --resource-group
                                       --route-table-name
@@ -125,7 +122,6 @@ directCommands:
     Get the details of a route in a route table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network route-table route show [--ids]
                                       [--name]
@@ -158,7 +154,6 @@ directCommands:
     Update a route in a route table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network route-table route update [--add]
                                         [--address-prefix]
@@ -229,7 +224,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network route-table route wait [--created]
                                       [--custom]
@@ -318,5 +312,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage routes in a route table.

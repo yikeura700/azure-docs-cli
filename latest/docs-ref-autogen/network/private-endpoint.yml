@@ -12,7 +12,6 @@ directCommands:
     Create a private endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint create --connection-name
                                        --name
@@ -103,7 +102,6 @@ directCommands:
     Delete a private endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint delete [--ids]
                                        [--name]
@@ -137,7 +135,6 @@ directCommands:
     List private endpoints.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network private-endpoint list [--resource-group]
   examples:
   - summary: |-
@@ -153,7 +150,6 @@ directCommands:
     Returns all of the resource types that can be linked to a Private Endpoint in this subscription in this region.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint list-types [--location]
                                            [--resource-group]
@@ -174,7 +170,6 @@ directCommands:
     Get the details of a private endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint show [--expand]
                                      [--ids]
@@ -207,7 +202,6 @@ directCommands:
     Update a private endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint update [--add]
                                        [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -269,7 +263,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint wait [--created]
                                      [--custom]
@@ -377,5 +370,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage private endpoints.

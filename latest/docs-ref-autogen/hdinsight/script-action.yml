@@ -12,7 +12,6 @@ directCommands:
     Deletes a specified persisted script action of the cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight script-action delete --cluster-name
                                       --name
@@ -36,7 +35,6 @@ directCommands:
     Execute script actions on the specified HDInsight cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight script-action execute --cluster-name
                                        --name
@@ -93,7 +91,6 @@ directCommands:
     Lists all the persisted script actions for the specified cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight script-action list --cluster-name
                                     --resource-group
@@ -112,7 +109,6 @@ directCommands:
     Lists all scripts' execution history for the specified cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight script-action list-execution-history --cluster-name
                                                       --resource-group
@@ -131,7 +127,6 @@ directCommands:
     Promotes the specified ad-hoc script execution to a persisted script.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight script-action promote --cluster-name
                                        --execution-id
@@ -155,7 +150,6 @@ directCommands:
     Gets the script execution detail for the given script execution ID.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight script-action show-execution-details --cluster-name
                                                       --execution-id
@@ -205,5 +199,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/23/2021
   description: Manage HDInsight script actions.

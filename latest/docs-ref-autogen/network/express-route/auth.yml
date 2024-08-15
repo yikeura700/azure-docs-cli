@@ -14,7 +14,6 @@ directCommands:
     Create a new link authorization for an ExpressRoute circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route auth create --circuit-name
                                          --name
@@ -48,7 +47,6 @@ directCommands:
     Delete a link authorization of an ExpressRoute circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route auth delete [--circuit-name]
                                          [--ids]
@@ -86,7 +84,6 @@ directCommands:
     List link authorizations of an ExpressRoute circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route auth list --circuit-name
                                        --resource-group
@@ -112,7 +109,6 @@ directCommands:
     Get the details of a link authorization of an ExpressRoute circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route auth show [--circuit-name]
                                        [--ids]
@@ -145,7 +141,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route auth wait [--circuit-name]
                                        [--created]
@@ -233,5 +228,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: To learn more about ExpressRoute circuit authentication visit https://docs.microsoft.com/azure/expressroute/howto-linkvnet-cli#connect-a-virtual-network-in-a-different-subscription-to-a-circuit.

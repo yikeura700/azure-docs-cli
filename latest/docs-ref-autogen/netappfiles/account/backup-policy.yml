@@ -12,7 +12,6 @@ directCommands:
     Create a backup policy for Netapp Account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-policy create --account-name
                                                 --backup-policy-name
@@ -72,7 +71,6 @@ directCommands:
     Delete backup policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-policy delete [--account-name]
                                                 [--backup-policy-name]
@@ -115,7 +113,6 @@ directCommands:
     List backup policies for Netapp Account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-policy list --account-name
                                               --resource-group
@@ -138,7 +135,6 @@ directCommands:
     Get a particular backup Policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-policy show [--account-name]
                                               [--backup-policy-name]
@@ -171,7 +167,6 @@ directCommands:
     Update a backup policy for Netapp Account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-policy update [--account-name]
                                                 [--add]
@@ -247,7 +242,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-policy wait [--account-name]
                                               [--backup-policy-name]
@@ -336,5 +330,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/07/2024
   description: Manage Azure NetApp Files (ANF) Bakup Policy Resources.

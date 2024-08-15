@@ -12,7 +12,6 @@ directCommands:
     This operation reverts Migration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus migration abort [--config-name {$default}]
                                   [--ids]
@@ -43,7 +42,6 @@ directCommands:
     This operation Completes Migration of entities by pointing the connection strings to Premium namespace and any entities created after the operation will be under Premium Namespace. CompleteMigration operation will fail when entity migration is in-progress.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus migration complete [--config-name {$default}]
                                      [--ids]
@@ -74,7 +72,6 @@ directCommands:
     Delete a MigrationConfiguration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus migration delete [--config-name {$default}]
                                    [--ids]
@@ -105,7 +102,6 @@ directCommands:
     List all migrationConfigurations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus migration list --name
                                  --resource-group
@@ -124,7 +120,6 @@ directCommands:
     Get Migration Config.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus migration show [--config-name {$default}]
                                  [--ids]
@@ -155,7 +150,6 @@ directCommands:
     Create Migration configuration and starts migration of entities from Standard to Premium namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus migration start [--config-name {$default}]
                                   [--ids]
@@ -199,7 +193,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus migration wait [--config-name {$default}]
                                  [--created]
@@ -291,5 +284,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Manage Azure Service Bus Migration of Standard to Premium.

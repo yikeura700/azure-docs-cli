@@ -12,7 +12,6 @@ directCommands:
     Construct the recovery configuration of an Azure workload backed up item.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup recoveryconfig show --restore-mode {AlternateWorkloadRestore, OriginalWorkloadRestore, RestoreAsFiles}
                                   [--backup-management-type {AzureIaasVM, AzureStorage, AzureWorkload}]
@@ -137,5 +136,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: Manage recovery configuration of an Azure workload backed up item.

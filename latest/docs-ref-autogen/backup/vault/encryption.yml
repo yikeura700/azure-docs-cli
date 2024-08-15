@@ -12,7 +12,6 @@ directCommands:
     Show details of encryption properties of a Recovery Services Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault encryption show [--ids]
                                     [--name]
@@ -41,7 +40,6 @@ directCommands:
     Update encryption properties of a Recovery Services Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault encryption update --encryption-key-id
                                       [--ids]
@@ -118,5 +116,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: Encryption details of a Recovery Services Vault.

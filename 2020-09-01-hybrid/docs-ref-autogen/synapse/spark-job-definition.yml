@@ -12,7 +12,6 @@ directCommands:
     Create a spark job definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark-job-definition create --file
                                            --name
@@ -52,7 +51,6 @@ directCommands:
     Delete a spark job definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark-job-definition delete --name
                                            --workspace-name
@@ -83,7 +81,6 @@ directCommands:
     List spark job definitions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: az synapse spark-job-definition list --workspace-name
   examples:
   - summary: |-
@@ -100,7 +97,6 @@ directCommands:
     Get a spark job definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark-job-definition show --name
                                          --workspace-name
@@ -125,7 +121,6 @@ directCommands:
     Update a spark job definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark-job-definition update --file
                                            --name
@@ -165,7 +160,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of a spark job definition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark-job-definition wait --name
                                          --workspace-name
@@ -245,5 +239,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage spark job definitions in a synapse workspace.

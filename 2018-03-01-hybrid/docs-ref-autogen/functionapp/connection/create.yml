@@ -16,7 +16,6 @@ directCommands:
     Create a functionapp connection to app-insights.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create app-insights [--app-insights]
                                                   [--appconfig-id]
@@ -96,7 +95,6 @@ directCommands:
     Create a functionapp connection to appconfig.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create appconfig [--app-config]
                                                [--appconfig-id]
@@ -206,7 +204,6 @@ directCommands:
     Create a functionapp connection to cognitiveservices.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create cognitiveservices [--account]
                                                        [--appconfig-id]
@@ -311,7 +308,6 @@ directCommands:
     Create a functionapp connection to confluent-cloud.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create confluent-cloud --bootstrap-server
                                                      --kafka-key
@@ -398,7 +394,6 @@ directCommands:
     Create a functionapp connection to cosmos-cassandra.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create cosmos-cassandra [--account]
                                                       [--appconfig-id]
@@ -517,7 +512,6 @@ directCommands:
     Create a functionapp connection to cosmos-gremlin.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create cosmos-gremlin [--account]
                                                     [--appconfig-id]
@@ -640,7 +634,6 @@ directCommands:
     Create a functionapp connection to cosmos-mongo.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create cosmos-mongo [--account]
                                                   [--appconfig-id]
@@ -759,7 +752,6 @@ directCommands:
     Create a functionapp connection to cosmos-sql.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create cosmos-sql [--account]
                                                 [--appconfig-id]
@@ -878,7 +870,6 @@ directCommands:
     Create a functionapp connection to cosmos-table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create cosmos-table [--account]
                                                   [--appconfig-id]
@@ -997,7 +988,6 @@ directCommands:
     Create a functionapp connection to eventhub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create eventhub [--appconfig-id]
                                               [--client-type {dotnet, dotnet-internal, go, java, kafka-springBoot, nodejs, none, python, springBoot}]
@@ -1112,7 +1102,6 @@ directCommands:
     Create a functionapp connection to keyvault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create keyvault [--appconfig-id]
                                               [--client-type {dotnet, dotnet-internal, java, nodejs, none, python, springBoot}]
@@ -1235,7 +1224,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create mysql [--appconfig-id]
                                            [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1336,7 +1324,6 @@ directCommands:
     Create a functionapp connection to mysql-flexible.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create mysql-flexible [--appconfig-id]
                                                     [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1581,7 +1568,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create postgres [--appconfig-id]
                                               [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1864,7 +1850,6 @@ directCommands:
     Create a functionapp connection to postgres-flexible.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create postgres-flexible [--appconfig-id]
                                                        [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -2101,7 +2086,6 @@ directCommands:
     Create a functionapp connection to redis.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create redis [--appconfig-id]
                                            [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -2190,7 +2174,6 @@ directCommands:
     Create a functionapp connection to redis-enterprise.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create redis-enterprise [--appconfig-id]
                                                       [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -2274,7 +2257,6 @@ directCommands:
     Create a functionapp connection to servicebus.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create servicebus [--appconfig-id]
                                                 [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -2389,7 +2371,6 @@ directCommands:
     Create a functionapp connection to signalr.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create signalr [--appconfig-id]
                                              [--client-type {dotnet, dotnet-internal, none}]
@@ -2499,7 +2480,6 @@ directCommands:
     Create a functionapp connection to sql.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create sql [--appconfig-id]
                                          [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -2756,7 +2736,6 @@ directCommands:
     Create a functionapp connection to storage-blob.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create storage-blob [--account]
                                                   [--appconfig-id]
@@ -2883,7 +2862,6 @@ directCommands:
     Create a functionapp connection to storage-file.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create storage-file [--account]
                                                   [--appconfig-id]
@@ -2973,7 +2951,6 @@ directCommands:
     Create a functionapp connection to storage-queue.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create storage-queue [--account]
                                                    [--appconfig-id]
@@ -3088,7 +3065,6 @@ directCommands:
     Create a functionapp connection to storage-table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create storage-table [--account]
                                                    [--appconfig-id]
@@ -3203,7 +3179,6 @@ directCommands:
     Create a functionapp connection to webpubsub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection create webpubsub [--appconfig-id]
                                                [--client-type {dotnet, dotnet-internal, java, nodejs, none, python}]

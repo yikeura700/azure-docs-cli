@@ -12,7 +12,6 @@ directCommands:
     Create an ExpressRoute gateway connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route gateway connection create --gateway-name
                                                        --name
@@ -93,7 +92,6 @@ directCommands:
     Delete an ExpressRoute gateway connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route gateway connection delete [--gateway-name]
                                                        [--ids]
@@ -131,7 +129,6 @@ directCommands:
     List ExpressRoute gateway connections.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route gateway connection list --gateway-name
                                                      --resource-group
@@ -154,7 +151,6 @@ directCommands:
     Get the details of an ExpressRoute gateway connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route gateway connection show [--gateway-name]
                                                      [--ids]
@@ -187,7 +183,6 @@ directCommands:
     Update an ExpressRoute gateway connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route gateway connection update [--add]
                                                        [--associated]
@@ -286,7 +281,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route gateway connection wait [--created]
                                                      [--custom]
@@ -375,5 +369,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage ExpressRoute gateway connections.

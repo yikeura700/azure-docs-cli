@@ -12,7 +12,6 @@ directCommands:
     Create the specified quota rule within the given volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume quota-rule create --account-name
                                             --name
@@ -77,7 +76,6 @@ directCommands:
     Delete quota rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume quota-rule delete [--account-name]
                                             [--ids]
@@ -128,7 +126,6 @@ directCommands:
     List all quota rules associated with the volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume quota-rule list --account-name
                                           --pool-name
@@ -161,7 +158,6 @@ directCommands:
     Get details of the specified quota rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume quota-rule show [--account-name]
                                           [--ids]
@@ -202,7 +198,6 @@ directCommands:
     Update the specified quota rule within the given volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume quota-rule update [--account-name]
                                             [--add]
@@ -273,7 +268,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume quota-rule wait [--account-name]
                                           [--created]
@@ -370,5 +364,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/07/2024
   description: Manage Azure NetApp Files (ANF) Volume Quota Rules Resources.

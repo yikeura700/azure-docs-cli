@@ -12,7 +12,6 @@ directCommands:
     Create an authorization in the specified express route port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port authorization create --name
                                                        --port-name
@@ -46,7 +45,6 @@ directCommands:
     Delete the specified authorization from the specified express route port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port authorization delete [--ids]
                                                        [--name]
@@ -89,7 +87,6 @@ directCommands:
     List all authorizations in an express route port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port authorization list --port-name
                                                      --resource-group
@@ -121,7 +118,6 @@ directCommands:
     Get the specified authorization from the specified express route port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port authorization show [--ids]
                                                      [--name]
@@ -154,7 +150,6 @@ directCommands:
     Update an authorization in the specified express route port.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port authorization update [--add]
                                                        [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -209,7 +204,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port authorization wait [--created]
                                                      [--custom]
@@ -298,5 +292,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage ExpressRoute ports authorzation.

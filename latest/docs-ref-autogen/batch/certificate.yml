@@ -16,7 +16,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command is implicitly deprecated because command group 'batch certificate' is deprecated and will be removed in a future release.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch certificate create --certificate-file
                                 --thumbprint
@@ -54,7 +53,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command is implicitly deprecated because command group 'batch certificate' is deprecated and will be removed in a future release.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch certificate delete --thumbprint
                                 [--abort]
@@ -95,7 +93,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command is implicitly deprecated because command group 'batch certificate' is deprecated and will be removed in a future release.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch certificate list [--account-endpoint]
                               [--account-key]
@@ -128,7 +125,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command is implicitly deprecated because command group 'batch certificate' is deprecated and will be removed in a future release.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch certificate show --thumbprint
                               [--account-endpoint]
@@ -183,5 +179,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage Batch certificates.

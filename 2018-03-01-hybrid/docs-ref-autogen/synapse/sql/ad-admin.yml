@@ -12,7 +12,6 @@ directCommands:
     Create the SQL Azure Active Directory administrator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql ad-admin create --display-name
                                    --object-id
@@ -54,7 +53,6 @@ directCommands:
     Delete the SQL Azure Active Directory administrator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql ad-admin delete --resource-group
                                    --workspace-name
@@ -88,7 +86,6 @@ directCommands:
     Get the SQL Azure Active Directory administrator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql ad-admin show --resource-group
                                  --workspace-name
@@ -111,7 +108,6 @@ directCommands:
     Update the SQL Azure Active Directory administrator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql ad-admin update --resource-group
                                    --workspace-name
@@ -171,7 +167,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql ad-admin wait --resource-group
                                  --workspace-name
@@ -250,5 +245,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage SQL Active Directory administrator.

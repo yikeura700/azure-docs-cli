@@ -12,7 +12,6 @@ directCommands:
     List a list of authorization rules for a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs georecovery-alias authorization-rule list --alias
                                                            --namespace-name
@@ -45,7 +44,6 @@ directCommands:
     Get an AuthorizationRule for a Namespace by rule name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs georecovery-alias authorization-rule show [--alias]
                                                            [--authorization-rule-name]
@@ -102,5 +100,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manage Azure EventHubs Authorizationrule for Geo Recovery configuration Alias.

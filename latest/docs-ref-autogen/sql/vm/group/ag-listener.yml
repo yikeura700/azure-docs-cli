@@ -12,7 +12,6 @@ directCommands:
     Creates an availability group listener.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm group ag-listener create --ag-name
                                        --group-name
@@ -87,7 +86,6 @@ directCommands:
     Deletes an availability group listener.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm group ag-listener delete --group-name
                                        [--ids]
@@ -123,7 +121,6 @@ directCommands:
     Lists all availability group listeners in a SQL virtual machine group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm group ag-listener list --group-name
                                      --resource-group
@@ -142,7 +139,6 @@ directCommands:
     Gets an availability group listener.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm group ag-listener show --group-name
                                      [--expand {*, AssessmentSettings, AutoBackupSettings, AutoPatchingSettings, KeyVaultCredentialSettings, ServerConfigurationsManagementSettings}]
@@ -178,7 +174,6 @@ directCommands:
     Updates an availability group listener.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm group ag-listener update --group-name
                                        [--add]
@@ -262,5 +257,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage SQL availability group listeners.

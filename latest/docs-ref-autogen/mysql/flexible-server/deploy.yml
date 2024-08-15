@@ -12,7 +12,6 @@ directCommands:
     Run an existing workflow in your github repository.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server deploy run --action-name
                                         --branch
@@ -35,7 +34,6 @@ directCommands:
     Create GitHub Actions workflow file for MySQL server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server deploy setup --admin-password
                                           --admin-user
@@ -128,5 +126,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Enable and run GitHub Actions workflow for MySQL server.

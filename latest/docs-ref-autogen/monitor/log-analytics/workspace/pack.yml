@@ -12,7 +12,6 @@ directCommands:
     Disable an intelligence pack for a given workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace pack disable --intelligence-pack-name
                                                     --resource-group
@@ -40,7 +39,6 @@ directCommands:
     Enable an intelligence pack for a given workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace pack enable --intelligence-pack-name
                                                    --resource-group
@@ -68,7 +66,6 @@ directCommands:
     List all the intelligence packs possible and whether they are enabled or disabled for a given workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace pack list --resource-group
                                                  --workspace-name
@@ -114,5 +111,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: Manage intelligent packs for log analytics workspace.

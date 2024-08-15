@@ -12,7 +12,6 @@ directCommands:
     Add a CORS rule to a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage cors add --methods {DELETE, GET, HEAD, MERGE, OPTIONS, POST, PUT}
                         --origins
@@ -71,7 +70,6 @@ directCommands:
     Remove all CORS rules from a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage cors clear --services
                           [--account-key]
@@ -110,7 +108,6 @@ directCommands:
     List all CORS rules for a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage cors list [--account-key]
                          [--account-name]
@@ -171,5 +168,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage storage service Cross-Origin Resource Sharing (CORS).

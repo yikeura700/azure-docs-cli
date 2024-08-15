@@ -12,7 +12,6 @@ directCommands:
     Create a resource group lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az group lock create --lock-type {CanNotDelete, ReadOnly}
                          --name
@@ -46,7 +45,6 @@ directCommands:
     Delete a resource group lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az group lock delete [--ids]
                          [--name]
@@ -71,7 +69,6 @@ directCommands:
     List lock information in the resource-group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az group lock list --resource-group
                        [--filter-string]
@@ -94,7 +91,6 @@ directCommands:
     Show the details of a resource group lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az group lock show [--ids]
                        [--name]
@@ -119,7 +115,6 @@ directCommands:
     Update a resource group lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az group lock update [--ids]
                          [--lock-type {CanNotDelete, ReadOnly}]
@@ -178,5 +173,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage Azure resource group locks.

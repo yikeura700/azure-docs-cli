@@ -12,7 +12,6 @@ directCommands:
     Create a subscription lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: >-
     az account lock create --lock-type {CanNotDelete, ReadOnly}
                            --name
@@ -41,7 +40,6 @@ directCommands:
     Delete a subscription lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: >-
     az account lock delete [--ids]
                            [--name]
@@ -62,7 +60,6 @@ directCommands:
     List lock information in the subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: az account lock list [--filter-string]
   examples:
   - summary: |-
@@ -78,7 +75,6 @@ directCommands:
     Show the details of a subscription lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: >-
     az account lock show [--ids]
                          [--name]
@@ -99,7 +95,6 @@ directCommands:
     Update a subscription lock.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: >-
     az account lock update [--ids]
                            [--lock-type {CanNotDelete, ReadOnly}]
@@ -154,5 +149,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/25/2024
   description: Manage Azure subscription level locks.

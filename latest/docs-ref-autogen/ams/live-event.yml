@@ -12,7 +12,6 @@ directCommands:
     Create a live event.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-event create --account-name
                              --ips
@@ -132,7 +131,6 @@ directCommands:
     Delete a live event.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-event delete [--account-name]
                              [--ids]
@@ -161,7 +159,6 @@ directCommands:
     List all the live events of an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-event list --account-name
                            --resource-group
@@ -184,7 +181,6 @@ directCommands:
     Reset a live event.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-event reset [--account-name]
                             [--ids]
@@ -218,7 +214,6 @@ directCommands:
     Show the details of a live event.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-event show [--account-name]
                            [--ids]
@@ -247,7 +242,6 @@ directCommands:
     Allocate a live event to be started later.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-event standby [--account-name]
                               [--ids]
@@ -281,7 +275,6 @@ directCommands:
     Start a live event.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-event start [--account-name]
                             [--ids]
@@ -315,7 +308,6 @@ directCommands:
     Stop a live event.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-event stop [--account-name]
                            [--ids]
@@ -354,7 +346,6 @@ directCommands:
     Update the details of a live event.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-event update [--account-name]
                              [--add]
@@ -438,7 +429,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the live event is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-event wait [--account-name]
                            [--created]
@@ -535,5 +525,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage live events for an Azure Media Service account.

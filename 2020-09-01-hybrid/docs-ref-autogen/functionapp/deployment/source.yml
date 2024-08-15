@@ -18,7 +18,6 @@ directCommands:
     Note that the GitHub action password is now redacted in the result. Please use the `az functionapp deployment source show` command to view the GitHub action password.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment source config --repo-url
                                             [--branch]
@@ -79,7 +78,6 @@ directCommands:
     Get a URL for a git repository endpoint to clone and push to for function app deployment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment source config-local-git [--ids]
                                                       [--name]
@@ -119,7 +117,6 @@ directCommands:
     By default Kudu assumes that zip deployments do not require any build-related actions like npm install or dotnet publish. This can be overridden by including an .deployment file in your zip file with the following content '[config] SCM_DO_BUILD_DURING_DEPLOYMENT = true', to enable Kudu detection logic and build script generation process. See https://github.com/projectkudu/kudu/wiki/Configurable-settings#enabledisable-build-actions-preview. Alternately the setting can be enabled using the az functionapp config appsettings set command.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment source config-zip --src
                                                 [--build-remote {false, true}]
@@ -224,7 +221,6 @@ directCommands:
     Delete a source control deployment configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment source delete [--ids]
                                             [--name]
@@ -257,7 +253,6 @@ directCommands:
     Get the details of a source control deployment configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment source show [--ids]
                                           [--name]
@@ -290,7 +285,6 @@ directCommands:
     Synchronize from the repository. Only needed under manual integration mode.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment source sync [--ids]
                                           [--name]
@@ -325,7 +319,6 @@ directCommands:
     If no token is provided, the command will clean up existing token. Note that tokens are now redacted in the result.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: az functionapp deployment source update-token [--git-token]
   optionalParameters:
   - name: --git-token

@@ -12,7 +12,6 @@ directCommands:
     Create a topic subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic subscription create --name
                                             --namespace-name
@@ -114,7 +113,6 @@ directCommands:
     Delete a subscription from the specified topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic subscription delete [--ids]
                                             [--name]
@@ -147,7 +145,6 @@ directCommands:
     List all the subscriptions under a specified topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic subscription list --namespace-name
                                           --resource-group
@@ -180,7 +177,6 @@ directCommands:
     Get a subscription description for the specified topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic subscription show [--ids]
                                           [--name]
@@ -213,7 +209,6 @@ directCommands:
     Update a topic subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic subscription update [--add]
                                             [--auto-delete-on-idle]
@@ -366,5 +361,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Servicebus topic subscription.

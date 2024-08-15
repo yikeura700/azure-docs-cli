@@ -12,7 +12,6 @@ directCommands:
     Create a service principal.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az ad sp create --id
   examples:
   - summary: |-
@@ -33,7 +32,6 @@ directCommands:
     By default, this command does not assign any role to the service principal. You may use --role and --scopes to assign a specific role and narrow the scope to a resource or resource group. You may also use `az role assignment create` to create role assignments for this service principal later. See [steps to add a role assignment](https://aka.ms/azadsp-more) for more information.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad sp create-for-rbac [--cert]
                              [--create-cert]
@@ -97,7 +95,6 @@ directCommands:
     Delete a service principal.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az ad sp delete --id
   examples:
   - summary: |-
@@ -116,7 +113,6 @@ directCommands:
     For low latency, by default, only the first 100 will be returned unless you provide filter arguments or use "--all".
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad sp list [--all]
                   [--display-name]
@@ -145,7 +141,6 @@ directCommands:
     Get the details of a service principal.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az ad sp show --id
   examples:
   - summary: |-
@@ -168,7 +163,6 @@ directCommands:
     Update a service principal.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad sp update --id
                     [--add]
@@ -239,5 +233,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/25/2024
   description: Manage Microsoft Entra service principals.

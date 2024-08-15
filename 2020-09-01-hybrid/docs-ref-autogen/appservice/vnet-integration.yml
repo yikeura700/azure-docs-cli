@@ -12,7 +12,6 @@ directCommands:
     List the virtual network integrations used in an appservice plan.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice vnet-integration list --plan
                                         --resource-group
@@ -56,5 +55,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: A method that lists the virtual network integrations used in an appservice plan.

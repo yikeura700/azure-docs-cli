@@ -12,7 +12,6 @@ directCommands:
     Add a private endpoint ip configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint ip-config add --endpoint-name
                                               --name
@@ -58,7 +57,6 @@ directCommands:
     List ip configuration within a private endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint ip-config list --endpoint-name
                                                --resource-group
@@ -81,7 +79,6 @@ directCommands:
     Remove a private endpoint ip configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint ip-config remove --endpoint-name
                                                  --name
@@ -115,7 +112,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-endpoint ip-config wait [--created]
                                                [--custom]
@@ -198,5 +194,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage private endpoint ip configurations.

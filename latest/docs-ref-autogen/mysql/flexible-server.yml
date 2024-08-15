@@ -59,7 +59,6 @@ directCommands:
     https://docs.microsoft.com/en-us/azure/mysql/flexible-server/how-to-manage-virtual-network-cli.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server create [--address-prefixes]
                                     [--admin-password]
@@ -247,7 +246,7 @@ directCommands:
     summary: |-
       The password of the administrator. Minimum 8 characters and maximum 128 characters. Password must contain characters from three of the following categories: English uppercase letters, English lowercase letters, numbers, and non-alphanumeric characters.
   - name: --admin-user -u
-    defaultValue: "awedgiraffe2"
+    defaultValue: "sinfuliguana0"
     summary: |-
       Administrator username for the server. Once set, it cannot be changed.
   - name: --auto-scale-iops
@@ -351,7 +350,6 @@ directCommands:
     Delete a flexible server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server delete [--ids]
                                     [--name]
@@ -387,7 +385,6 @@ directCommands:
     Detach vnet for a flexible server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server detach-vnet --public-network-access {Disabled, Enabled}
                                          [--ids]
@@ -464,7 +461,6 @@ directCommands:
     Geo-restore a flexible server from backup.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server geo-restore --location
                                          --source-server
@@ -583,7 +579,6 @@ directCommands:
     List available flexible servers.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: az mysql flexible-server list [--resource-group]
   examples:
   - summary: |-
@@ -605,7 +600,6 @@ directCommands:
     Lists available sku's in the given region.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: az mysql flexible-server list-skus --location
   examples:
   - summary: |-
@@ -625,7 +619,6 @@ directCommands:
     Restart a flexible server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server restart [--failover]
                                      [--ids]
@@ -661,7 +654,6 @@ directCommands:
     Restore a flexible server from backup.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server restore --source-server
                                      [--address-prefixes]
@@ -738,7 +730,7 @@ directCommands:
     summary: |-
       Name of resource group. You can configure the default group using `az configure --defaults group=<name>`.
   - name: --restore-time
-    defaultValue: "2024-08-14T05:33:54+00:00"
+    defaultValue: "2024-08-15T11:53:25+00:00"
     summary: |-
       The point in time in UTC to restore from (ISO8601 format), e.g., 2017-04-26T02:10:00+00:00The default value is set to current time.
   - name: --sku-name
@@ -782,7 +774,6 @@ directCommands:
     Get the details of a flexible server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server show [--ids]
                                   [--name]
@@ -811,7 +802,6 @@ directCommands:
     Show the connection strings for a MySQL flexible-server database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server show-connection-string [--admin-password]
                                                     [--admin-user]
@@ -852,7 +842,6 @@ directCommands:
     Start a flexible server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server start [--ids]
                                    [--name]
@@ -886,7 +875,6 @@ directCommands:
     Stop a flexible server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server stop [--ids]
                                   [--name]
@@ -922,7 +910,6 @@ directCommands:
     > [!WARNING] > Enabling High-availability may result in a short downtime for the server based on your server configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server update [--add]
                                     [--admin-password]
@@ -1096,7 +1083,6 @@ directCommands:
     Upgrade the major version of a flexible server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server upgrade --version {8}
                                      [--ids]
@@ -1144,7 +1130,6 @@ directCommands:
     Wait for the flexible server to satisfy certain conditions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server wait [--created]
                                   [--custom]

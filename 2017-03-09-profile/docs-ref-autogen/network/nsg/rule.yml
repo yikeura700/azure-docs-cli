@@ -12,7 +12,6 @@ directCommands:
     Create a network security group rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nsg rule create --name
                                --nsg-name
@@ -102,7 +101,6 @@ directCommands:
     Delete a network security group rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nsg rule delete [--ids]
                                [--name]
@@ -140,7 +138,6 @@ directCommands:
     List all rules in a network security group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nsg rule list [--ids]
                              [--include-default]
@@ -174,7 +171,6 @@ directCommands:
     Get the details of a network security group rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nsg rule show [--ids]
                              [--name]
@@ -207,7 +203,6 @@ directCommands:
     Update a network security group rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nsg rule update [--access {Allow, Deny}]
                                [--add]
@@ -304,7 +299,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nsg rule wait [--created]
                              [--custom]
@@ -393,5 +387,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage network security group rules.

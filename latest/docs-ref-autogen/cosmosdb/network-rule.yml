@@ -12,7 +12,6 @@ directCommands:
     Adds a virtual network rule to an existing Cosmos DB database account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb network-rule add --subnet
                                  [--ids]
@@ -53,7 +52,6 @@ directCommands:
     Lists the virtual network accounts associated with a Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb network-rule list --name
                                   --resource-group
@@ -72,7 +70,6 @@ directCommands:
     Remove a virtual network rule from an existing Cosmos DB database account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb network-rule remove --subnet
                                     [--ids]
@@ -130,5 +127,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB network rules.

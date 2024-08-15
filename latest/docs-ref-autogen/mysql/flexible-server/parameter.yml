@@ -12,7 +12,6 @@ directCommands:
     List the parameter values for a flexible server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server parameter list --resource-group
                                             --server-name
@@ -55,7 +54,6 @@ directCommands:
     Update the parameter of a flexible server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server parameter set [--ids]
                                            [--name]
@@ -99,7 +97,6 @@ directCommands:
     Batch update parameters of a flexible server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server parameter set-batch --args
                                                  [--ids]
@@ -138,7 +135,6 @@ directCommands:
     Get the parameter for a flexible server.".
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server parameter show [--ids]
                                             [--name]
@@ -195,5 +191,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Commands for managing server parameter values for flexible server.

@@ -12,7 +12,6 @@ directCommands:
     List the information on available extensions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm extension image list [--latest]
                                [--location]
@@ -55,7 +54,6 @@ directCommands:
     List the names of available extensions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm extension image list-names [--ids]
                                      [--location]
@@ -87,7 +85,6 @@ directCommands:
     List the versions for available extensions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm extension image list-versions [--filter]
                                         [--ids]
@@ -132,7 +129,6 @@ directCommands:
     Display information for an extension.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm extension image show [--ids]
                                [--location]
@@ -199,5 +195,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Find the available VM extensions for a subscription and region.

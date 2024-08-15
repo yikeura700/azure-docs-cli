@@ -16,7 +16,6 @@ directCommands:
     Close file handles of a file share.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share close-handle --name
                                   [--account-key]
@@ -198,7 +197,6 @@ directCommands:
     Creates a new share under the specified account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share create --name
                             [--account-key]
@@ -256,7 +254,6 @@ directCommands:
     If the share does not exist, the operation fails on the service. By default, the exception is swallowed by the client. To expose the exception, specify True for fail_not_exist.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share delete --name
                             [--account-key]
@@ -309,7 +306,6 @@ directCommands:
     Check for the existence of a file share.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share exists --name
                             [--account-key]
@@ -359,7 +355,6 @@ directCommands:
     Generate a shared access signature for the share.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share generate-sas --name
                                   [--account-key]
@@ -449,7 +444,6 @@ directCommands:
     List the file shares in a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share list [--account-key]
                           [--account-name]
@@ -505,7 +499,6 @@ directCommands:
     List file handles of a file share.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share list-handle --name
                                  [--account-key]
@@ -675,7 +668,6 @@ directCommands:
     The data returned does not include the shares's list of files or directories.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share show --name
                           [--account-key]
@@ -718,7 +710,6 @@ directCommands:
     Create a snapshot of an existing share under the specified account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share snapshot --name
                               [--account-key]
@@ -767,7 +758,6 @@ directCommands:
     Note that this value may not include all recently created or recently re-sized files.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share stats --name
                            [--account-key]
@@ -806,7 +796,6 @@ directCommands:
     Set service-defined properties for the specified share.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share update --name
                             --quota
@@ -850,7 +839,6 @@ directCommands:
     Create a URI to access a file share.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share url --name
                          [--account-key]

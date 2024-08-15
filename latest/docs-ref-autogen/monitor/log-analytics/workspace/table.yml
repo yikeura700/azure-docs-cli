@@ -12,7 +12,6 @@ directCommands:
     Create a Log Analytics workspace microsoft/custom log table. The table name needs to end with '_CL'.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace table create --name
                                                     --resource-group
@@ -67,7 +66,6 @@ directCommands:
     Delete a Log Analytics workspace table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace table delete [--ids]
                                                     [--name]
@@ -106,7 +104,6 @@ directCommands:
     List all the tables for the given Log Analytics workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace table list --resource-group
                                                   --workspace-name
@@ -129,7 +126,6 @@ directCommands:
     Migrate a Log Analytics table from support of the Data Collector API and Custom Fields features to support of Data Collection Rule-based Custom Logs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace table migrate [--ids]
                                                      [--resource-group]
@@ -162,7 +158,6 @@ directCommands:
     Get a Log Analytics workspace table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace table show [--ids]
                                                   [--name]
@@ -195,7 +190,6 @@ directCommands:
     Update the properties of a Log Analytics workspace table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace table update --name
                                                     --resource-group
@@ -250,7 +244,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace table wait [--created]
                                                   [--custom]
@@ -345,5 +338,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: Manage tables for log analytics workspace.

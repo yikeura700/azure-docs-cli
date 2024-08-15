@@ -12,7 +12,6 @@ directCommands:
     Assign a managed service identity to an application gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway identity assign --gateway-name
                                                    --identity
@@ -46,7 +45,6 @@ directCommands:
     Remove the managed service identity of an application-gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway identity remove [--gateway-name]
                                                    [--ids]
@@ -80,7 +78,6 @@ directCommands:
     Show the managed service identity of an application gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway identity show --gateway-name
                                                  --resource-group
@@ -103,7 +100,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway identity wait [--created]
                                                  [--custom]
@@ -186,5 +182,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage the managed service identity of an application gateway.

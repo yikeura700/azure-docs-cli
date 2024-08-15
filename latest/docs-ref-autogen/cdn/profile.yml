@@ -10,7 +10,6 @@ directCommands:
     Create a new Azure Front Door Standard or Azure Front Door Premium or CDN profile with a profile name under the specified subscription and resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn profile create --name
                           --resource-group
@@ -60,7 +59,6 @@ directCommands:
     Delete an existing  Azure Front Door Standard or Azure Front Door Premium or CDN profile with the specified parameters. Deleting a profile will result in the deletion of all of the sub-resources including endpoints, origins and custom domains.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn profile delete [--ids]
                           [--name]
@@ -94,7 +92,6 @@ directCommands:
     List all of the Azure Front Door Standard, Azure Front Door Premium, and CDN profiles within an Azure subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn profile list [--max-items]
                         [--next-token]
@@ -119,7 +116,6 @@ directCommands:
     Get an Azure Front Door Standard or Azure Front Door Premium or CDN profile with the specified profile name under the specified subscription and resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn profile show [--ids]
                         [--name]
@@ -148,7 +144,6 @@ directCommands:
     Update a new Azure Front Door Standard or Azure Front Door Premium or CDN profile with a profile name under the specified subscription and resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn profile update [--add]
                           [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -239,5 +234,4 @@ globalParameters:
 - name: --verbose
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
-metadata:
-  ms.date: 03/28/2024
+metadata: {}

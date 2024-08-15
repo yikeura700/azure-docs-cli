@@ -12,7 +12,6 @@ directCommands:
     Create app service environment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice ase create --name
                              --resource-group
@@ -146,7 +145,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice ase create-inbound-services --name
                                               --resource-group
@@ -189,7 +187,6 @@ directCommands:
     Delete app service environment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice ase delete --name
                              [--no-wait]
@@ -222,7 +219,6 @@ directCommands:
     List app service environments.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: az appservice ase list [--resource-group]
   examples:
   - summary: |-
@@ -241,7 +237,6 @@ directCommands:
     List VIPs associated with an app service environment v2.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice ase list-addresses --name
                                      [--resource-group]
@@ -264,7 +259,6 @@ directCommands:
     List app service plans associated with an app service environment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice ase list-plans --name
                                  [--resource-group]
@@ -289,7 +283,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice ase send-test-notification --name
                                              [--resource-group]
@@ -312,7 +305,6 @@ directCommands:
     Show details of an app service environment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice ase show --name
                            [--resource-group]
@@ -335,7 +327,6 @@ directCommands:
     Update app service environment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice ase update --name
                              [--allow-incoming-ftp-connections {false, true}]
@@ -400,7 +391,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice ase upgrade --name
                               [--no-wait]
@@ -463,5 +453,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage App Service Environments.

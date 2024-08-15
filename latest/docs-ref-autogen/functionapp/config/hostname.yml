@@ -12,7 +12,6 @@ directCommands:
     Bind a hostname to a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config hostname add [--hostname]
                                        [--ids]
@@ -49,7 +48,6 @@ directCommands:
     Unbind a hostname from a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config hostname delete [--hostname]
                                           [--ids]
@@ -82,7 +80,6 @@ directCommands:
     Get the external-facing IP address for a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config hostname get-external-ip [--ids]
                                                    [--name]
@@ -111,7 +108,6 @@ directCommands:
     List all hostname bindings for a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config hostname list --resource-group
                                         --webapp-name
@@ -163,5 +159,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Configure hostnames for a function app.

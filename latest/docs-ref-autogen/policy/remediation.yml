@@ -12,7 +12,6 @@ directCommands:
     Cancel a resource policy remediation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy remediation cancel --name
                                  [--management-group]
@@ -51,7 +50,6 @@ directCommands:
     Create a resource policy remediation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy remediation create --name
                                  --policy-assignment
@@ -127,7 +125,6 @@ directCommands:
     Delete a resource policy remediation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy remediation delete --name
                                  [--management-group]
@@ -166,7 +163,6 @@ directCommands:
     List resource policy remediations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy remediation list [--management-group]
                                [--namespace]
@@ -199,7 +195,6 @@ directCommands:
     Show a resource policy remediation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy remediation show --name
                                [--management-group]
@@ -265,5 +260,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage resource policy remediations.

@@ -12,7 +12,6 @@ directCommands:
     Delete key-values.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig kv delete --key
                            [--auth-mode {key, login}]
@@ -64,7 +63,6 @@ directCommands:
     Export configurations to another place from your App Configuration store.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig kv export --destination {appconfig, appservice, file}
                            [--appservice-account]
@@ -225,7 +223,6 @@ directCommands:
     Import configurations into your App Configuration store from another place.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig kv import --source {appconfig, appservice, file}
                            [--appservice-account]
@@ -385,7 +382,6 @@ directCommands:
     List key-values.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig kv list [--all]
                          [--auth-mode {key, login}]
@@ -470,7 +466,6 @@ directCommands:
     Lock a key-value to prohibit write operations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig kv lock --key
                          [--auth-mode {key, login}]
@@ -519,7 +514,6 @@ directCommands:
     Restore key-values.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig kv restore --datetime
                             [--auth-mode {key, login}]
@@ -572,7 +566,6 @@ directCommands:
     Set a key-value.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig kv set --key
                         [--auth-mode {key, login}]
@@ -645,7 +638,6 @@ directCommands:
     Set a keyvault reference.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig kv set-keyvault --key
                                  --secret-identifier
@@ -703,7 +695,6 @@ directCommands:
     Show all attributes of a key-value.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig kv show --key
                          [--auth-mode {key, login}]
@@ -754,7 +745,6 @@ directCommands:
     Unlock a key-value to gain write operations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig kv unlock --key
                            [--auth-mode {key, login}]
@@ -833,5 +823,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/18/2024
   description: Manage key-values stored in an App Configuration store.

@@ -16,7 +16,6 @@ directCommands:
     Add a GitHub Actions workflow to a repository to deploy a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp github-action add --repo-url
                                       [--branch]
@@ -196,7 +195,6 @@ directCommands:
     Remove a previously configured Container Apps GitHub Actions workflow from a repository.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp github-action delete [--ids]
                                          [--login-with-github]
@@ -237,7 +235,6 @@ directCommands:
     Show the GitHub Actions configuration on a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp github-action show [--ids]
                                        [--name]

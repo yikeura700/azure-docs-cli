@@ -16,7 +16,6 @@ directCommands:
     Create a backup under the Backup Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault backup create --account-name
                                                       --backup-name
@@ -126,7 +125,6 @@ directCommands:
     Delete a Backup under the Backup Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault backup delete [--account-name]
                                                       [--backup-name]
@@ -214,7 +212,6 @@ directCommands:
     List all backups Under a Backup Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault backup list --account-name
                                                     --backup-vault-name
@@ -290,7 +287,6 @@ directCommands:
     Restore the specified files from the specified backup to the active filesystem.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault backup restore-file --destination-volume-id
                                                             --file-list
@@ -398,7 +394,6 @@ directCommands:
     Get the specified Backup under Backup Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault backup show [--account-name]
                                                     [--backup-name]
@@ -466,7 +461,6 @@ directCommands:
     Update a backup under the Backup Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault backup update [--account-name]
                                                       [--add]
@@ -591,7 +585,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles account backup-vault backup wait [--account-name]
                                                     [--backup-name]

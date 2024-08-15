@@ -12,7 +12,6 @@ directCommands:
     Attach a secondary storage to an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account storage add [--account-name]
                                [--ids]
@@ -51,7 +50,6 @@ directCommands:
     Detach a secondary storage from an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account storage remove [--account-name]
                                   [--ids]
@@ -80,7 +78,6 @@ directCommands:
     Set the authentication of a storage account attached to an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account storage set-authentication --storage-auth {ManagedIdentity, System}
                                               [--account-name]
@@ -126,7 +123,6 @@ directCommands:
     Synchronize storage account keys for a storage account associated with an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account storage sync-storage-keys --storage-account-id
                                              [--account-name]
@@ -181,5 +177,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage storage for an Azure Media Services account.

@@ -12,7 +12,6 @@ directCommands:
     Remove the Access Control on a path and sub-paths in Azure Data Lake Storage Gen2 account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs access remove-recursive --acl
                                           --file-system
@@ -87,7 +86,6 @@ directCommands:
     Set the access control properties of a path(directory or file) in Azure Data Lake Storage Gen2 account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs access set --file-system
                              --path
@@ -163,7 +161,6 @@ directCommands:
     Set the Access Control on a path and sub-paths in Azure Data Lake Storage Gen2 account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs access set-recursive --acl
                                        --file-system
@@ -238,7 +235,6 @@ directCommands:
     Show the access control properties of a path (directory or file) in Azure Data Lake Storage Gen2 account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs access show --file-system
                               --path
@@ -287,7 +283,6 @@ directCommands:
     Modify the Access Control on a path and sub-paths in Azure Data Lake Storage Gen2 account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs access update-recursive --acl
                                           --file-system
@@ -387,5 +382,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage file system access and permissions for Azure Data Lake Storage Gen2 account.

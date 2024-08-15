@@ -12,7 +12,6 @@ directCommands:
     Create a new Azure file share under the specified storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share-rm create --name
                                --storage-account
@@ -74,7 +73,6 @@ directCommands:
     BREAKING CHANGE: Snapshot can not be deleted by default and we have added a new parameter to use if you want to include sanpshots for delete operation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share-rm delete [--ids]
                                [--include]
@@ -137,7 +135,6 @@ directCommands:
     Check for the existence of an Azure file share.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share-rm exists [--ids]
                                [--name]
@@ -176,7 +173,6 @@ directCommands:
     List the Azure file shares under the specified storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share-rm list --storage-account
                              [--include-deleted]
@@ -219,7 +215,6 @@ directCommands:
     Restore a file share within a valid retention days if share soft delete is enabled.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share-rm restore --deleted-version
                                 [--ids]
@@ -265,7 +260,6 @@ directCommands:
     Show the properties for a specified Azure file share or share snapshot.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share-rm show [--expand]
                              [--ids]
@@ -318,7 +312,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share-rm snapshot [--access-tier {Cool, Hot, Premium, TransactionOptimized}]
                                  [--enabled-protocols {NFS, SMB}]
@@ -374,7 +367,6 @@ directCommands:
     Get the usage bytes of the data stored on the share.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share-rm stats [--ids]
                               [--name]
@@ -407,7 +399,6 @@ directCommands:
     Update the properties for an Azure file share.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share-rm update [--access-tier {Cool, Hot, Premium, TransactionOptimized}]
                                [--add]
@@ -513,5 +504,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage Azure file shares using the Microsoft.Storage resource provider.

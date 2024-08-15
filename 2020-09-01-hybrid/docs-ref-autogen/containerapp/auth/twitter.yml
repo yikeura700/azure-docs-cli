@@ -12,7 +12,6 @@ directCommands:
     Show the authentication settings for the Twitter identity provider.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp auth twitter show [--ids]
                                       [--name]
@@ -41,7 +40,6 @@ directCommands:
     Update the consumer key and consumer secret for the Twitter identity provider.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp auth twitter update [--consumer-key]
                                         [--consumer-secret]
@@ -111,5 +109,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/14/2024
   description: Manage containerapp authentication and authorization of the Twitter identity provider.

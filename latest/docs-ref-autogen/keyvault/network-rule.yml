@@ -12,7 +12,6 @@ directCommands:
     Add a network rule to the network ACLs for a Key Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault network-rule add --name
                                  [--ip-address]
@@ -48,7 +47,6 @@ directCommands:
     List the network rules from the network ACLs for a Key Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault network-rule list --name
                                   [--resource-group]
@@ -67,7 +65,6 @@ directCommands:
     Remove a network rule from the network ACLs for a Key Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault network-rule remove --name
                                     [--ip-address]
@@ -103,7 +100,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the vault is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault network-rule wait --name
                                   [--created]
@@ -184,5 +180,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage vault network ACLs.

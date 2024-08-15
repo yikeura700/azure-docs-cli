@@ -12,7 +12,6 @@ directCommands:
     Add admin details for a specified certificate issuer.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate issuer admin add --email
                                              --issuer-name
@@ -49,7 +48,6 @@ directCommands:
     Remove admin details for the specified certificate issuer.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate issuer admin delete --email
                                                 --issuer-name
@@ -75,7 +73,6 @@ directCommands:
     Requires certificates/manageissuers/getissuers permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate issuer admin list --issuer-name
                                               --vault-name
@@ -117,5 +114,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage admin information for certificate issuers.

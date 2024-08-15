@@ -12,7 +12,6 @@ directCommands:
     Creates the EventHubs Eventhub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub create --name
                                  --namespace-name
@@ -107,7 +106,6 @@ directCommands:
     Update a new Event Hub as a nested resource within a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub update [--add]
                                  [--archive-name-format]
@@ -249,5 +247,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manage Azure EventHubs eventhub and authorization-rule.

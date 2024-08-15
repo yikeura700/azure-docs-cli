@@ -12,7 +12,6 @@ directCommands:
     Assign managed identities to an IoT Hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub identity assign [--ids]
                                [--name]
@@ -61,7 +60,6 @@ directCommands:
     Remove managed identities from an IoT Hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub identity remove [--ids]
                                [--name]
@@ -105,7 +103,6 @@ directCommands:
     Show the identity properties of an IoT Hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub identity show [--ids]
                              [--name]
@@ -157,5 +154,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/21/2024
   description: Manage identities of an Azure IoT hub.

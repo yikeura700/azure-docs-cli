@@ -12,7 +12,6 @@ directCommands:
     Create the ServiceBus Rule for Subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic subscription rule create --name
                                                  --namespace-name
@@ -124,7 +123,6 @@ directCommands:
     Delete an existing rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic subscription rule delete [--ids]
                                                  [--name]
@@ -161,7 +159,6 @@ directCommands:
     List all the rules within given topic-subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic subscription rule list --namespace-name
                                                --resource-group
@@ -199,7 +196,6 @@ directCommands:
     Get the description for the specified rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic subscription rule show [--ids]
                                                [--name]
@@ -236,7 +232,6 @@ directCommands:
     Update a new rule and updates an existing rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic subscription rule update [--action-compatibility-level]
                                                  [--action-preprocessing {0, 1, f, false, n, no, t, true, y, yes}]
@@ -387,5 +382,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Servicebus topic subscription rule.

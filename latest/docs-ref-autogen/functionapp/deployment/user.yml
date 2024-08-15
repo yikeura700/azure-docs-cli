@@ -14,7 +14,6 @@ directCommands:
     All function and web apps in the subscription will be impacted since they share the same deployment credentials.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment user set --user-name
                                        [--password]
@@ -37,7 +36,6 @@ directCommands:
     Gets publishing user.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: az functionapp deployment user show
 commands:
 - az_functionapp_deployment_user_set
@@ -67,5 +65,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage user credentials for deployment.

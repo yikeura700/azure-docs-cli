@@ -12,7 +12,6 @@ directCommands:
     Create an authorization rule for a queue.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus queue authorization-rule create --authorization-rule-name
                                                   --namespace-name
@@ -50,7 +49,6 @@ directCommands:
     Delete a queue authorization rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus queue authorization-rule delete [--authorization-rule-name]
                                                   [--ids]
@@ -87,7 +85,6 @@ directCommands:
     List all authorization rules for a queue.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus queue authorization-rule list --namespace-name
                                                 --queue-name
@@ -115,7 +112,6 @@ directCommands:
     Get an authorization rule for a queue by rule name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus queue authorization-rule show [--authorization-rule-name]
                                                 [--ids]
@@ -152,7 +148,6 @@ directCommands:
     Update an authorization rule for a queue.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus queue authorization-rule update [--add]
                                                   [--authorization-rule-name]
@@ -238,5 +233,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Servicebus queue authorization-rule.

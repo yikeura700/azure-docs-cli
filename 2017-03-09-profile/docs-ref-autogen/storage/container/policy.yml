@@ -12,7 +12,6 @@ directCommands:
     Create a stored access policy on the containing object.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container policy create --container-name
                                        --name
@@ -64,7 +63,6 @@ directCommands:
     Delete a stored access policy on a containing object.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container policy delete --container-name
                                        --name
@@ -104,7 +102,6 @@ directCommands:
     List stored access policies on a containing object.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container policy list --container-name
                                      [--account-key]
@@ -139,7 +136,6 @@ directCommands:
     Show a stored access policy on a containing object.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container policy show --container-name
                                      --name
@@ -203,5 +199,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage container stored access policies.

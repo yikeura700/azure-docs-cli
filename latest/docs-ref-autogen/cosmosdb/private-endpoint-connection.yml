@@ -12,7 +12,6 @@ directCommands:
     Approve the specified private endpoint connection associated with Azure Cosmos DB.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb private-endpoint-connection approve [--account-name]
                                                     [--description]
@@ -53,7 +52,6 @@ directCommands:
     Delete the specified private endpoint connection associated with Azure Cosmos DB.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb private-endpoint-connection delete [--account-name]
                                                    [--id]
@@ -90,7 +88,6 @@ directCommands:
     Reject the specified private endpoint connection associated with Azure Cosmos DB.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb private-endpoint-connection reject [--account-name]
                                                    [--description]
@@ -131,7 +128,6 @@ directCommands:
     Show details of a private endpoint connection associated with Azure Cosmos DB.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb private-endpoint-connection show [--account-name]
                                                  [--id]
@@ -192,5 +188,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB private endpoint connections.

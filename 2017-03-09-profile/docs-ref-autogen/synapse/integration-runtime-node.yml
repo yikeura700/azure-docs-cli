@@ -12,7 +12,6 @@ directCommands:
     Remove a self-hosted integration runtime node.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime-node delete --node-name
                                                [--ids]
@@ -58,7 +57,6 @@ directCommands:
     Get self-hosted integration runtime node ip.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime-node get-ip-address --node-name
                                                        [--ids]
@@ -99,7 +97,6 @@ directCommands:
     Get self-hosted integration runtime node information.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime-node show --node-name
                                              [--ids]
@@ -140,7 +137,6 @@ directCommands:
     Update self-hosted integration runtime node.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse integration-runtime-node update --auto-update {Off, On}
                                                --node-name
@@ -216,5 +212,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage Synapse's self-hosted integration runtime nodes.

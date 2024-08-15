@@ -1,14 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_iot_hub_certificate
 name: az iot hub certificate
-importantNote: >-
-  > [!NOTE]
-
-  > This command group has commands that are defined in both Azure CLI and at least one extension. Install each extension to benefit from its extended capabilities. [Learn more](https://learn.microsoft.com/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: |-
   Manage IoT Hub certificates.
 status: GA
-sourceType: Core and Extension
+sourceType: Core
 directCommands:
 - uid: az_iot_hub_certificate_create
   name: az iot hub certificate create
@@ -18,7 +14,6 @@ directCommands:
     For a detailed explanation of CA certificates in Azure IoT Hub, see https://docs.microsoft.com/azure/iot-hub/iot-hub-x509ca-overview.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub certificate create --hub-name
                                   --name
@@ -64,7 +59,6 @@ directCommands:
     For a detailed explanation of CA certificates in Azure IoT Hub, see https://docs.microsoft.com/azure/iot-hub/iot-hub-x509ca-overview.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub certificate delete --etag
                                   --name
@@ -106,7 +100,6 @@ directCommands:
     This verification code is used to complete the proof of possession step for a certificate. Use this verification code as the CN of a new certificate signed with the root certificates private key. For a detailed explanation of CA certificates in Azure IoT Hub, see https://docs.microsoft.com/azure/iot-hub/iot-hub-x509ca-overview.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub certificate generate-verification-code --etag
                                                       --name
@@ -151,7 +144,6 @@ directCommands:
     For a detailed explanation of CA certificates in Azure IoT Hub, see https://docs.microsoft.com/azure/iot-hub/iot-hub-x509ca-overview.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub certificate list [--hub-name]
                                 [--ids]
@@ -182,7 +174,6 @@ directCommands:
     For a detailed explanation of CA certificates in Azure IoT Hub, see https://docs.microsoft.com/azure/iot-hub/iot-hub-x509ca-overview.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub certificate show --name
                                 [--hub-name]
@@ -222,7 +213,6 @@ directCommands:
     Uploads a new certificate to replace the existing certificate with the same name. For a detailed explanation of CA certificates in Azure IoT Hub, see https://docs.microsoft.com/azure/iot-hub/iot-hub-x509ca-overview.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub certificate update --etag
                                   --name
@@ -277,7 +267,6 @@ directCommands:
     Verifies a certificate by uploading a verification certificate containing the verification code obtained by calling generate-verification-code. This is the last step in the proof of possession process. For a detailed explanation of CA certificates in Azure IoT Hub, see https://docs.microsoft.com/azure/iot-hub/iot-hub-x509ca-overview.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub certificate verify --etag
                                   --name
@@ -324,9 +313,6 @@ commands:
 - az_iot_hub_certificate_delete
 - az_iot_hub_certificate_generate-verification-code
 - az_iot_hub_certificate_list
-- az_iot_hub_certificate_root-authority
-- az_iot_hub_certificate_root-authority_set
-- az_iot_hub_certificate_root-authority_show
 - az_iot_hub_certificate_show
 - az_iot_hub_certificate_update
 - az_iot_hub_certificate_verify

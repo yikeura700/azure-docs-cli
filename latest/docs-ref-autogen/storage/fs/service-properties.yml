@@ -12,7 +12,6 @@ directCommands:
     Show the properties of a storage account's datalake service, including Azure Storage Analytics.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs service-properties show [--account-key]
                                           [--account-name]
@@ -50,7 +49,6 @@ directCommands:
     Update the properties of a storage account's datalake service, including Azure Storage Analytics.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs service-properties update [--404-document]
                                             [--account-key]
@@ -133,5 +131,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage storage datalake service properties.

@@ -12,7 +12,6 @@ directCommands:
     Create an EventHub schema group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace schema-registry create --name
                                                   --namespace-name
@@ -51,7 +50,6 @@ directCommands:
     Delete an EventHub schema group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace schema-registry delete [--ids]
                                                   [--name]
@@ -80,7 +78,6 @@ directCommands:
     List all the Schema Groups in a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace schema-registry list --namespace-name
                                                 --resource-group
@@ -116,7 +113,6 @@ directCommands:
     Get the details of an EventHub schema group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace schema-registry show [--ids]
                                                 [--name]
@@ -145,7 +141,6 @@ directCommands:
     Update an EventHub schema group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace schema-registry update [--add]
                                                   [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -230,5 +225,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manages eventhubs namespace schema registry.

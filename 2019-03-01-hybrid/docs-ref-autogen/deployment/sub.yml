@@ -12,7 +12,6 @@ directCommands:
     Cancel a deployment at subscription scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az deployment sub cancel --name
   examples:
   - summary: |-
@@ -31,7 +30,6 @@ directCommands:
     Please specify only one of --template-file FILE | --template-uri URI | --template-spec to input the ARM template.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment sub create --location
                              [--handle-extended-json-format]
@@ -99,7 +97,6 @@ directCommands:
     Delete a deployment at subscription scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment sub delete --name
                              [--no-wait]
@@ -123,7 +120,6 @@ directCommands:
     Export the template used for a deployment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az deployment sub export --name
   examples:
   - summary: |-
@@ -140,7 +136,6 @@ directCommands:
     List deployments at subscription scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az deployment sub list [--filter]
   examples:
   - summary: |-
@@ -157,7 +152,6 @@ directCommands:
     Show a deployment at subscription scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az deployment sub show --name
   examples:
   - summary: |-
@@ -176,7 +170,6 @@ directCommands:
     Please specify only one of --template-file FILE | --template-uri URI | --template-spec to input the ARM template.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment sub validate --location
                                [--handle-extended-json-format]
@@ -232,7 +225,6 @@ directCommands:
     Place the CLI in a waiting state until a deployment condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment sub wait --name
                            [--created]
@@ -313,5 +305,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage Azure Resource Manager template deployment at subscription scope.

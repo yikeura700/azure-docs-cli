@@ -12,7 +12,6 @@ directCommands:
     Add a virtual network gateway IPSec policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway ipsec-policy add --dh-group {DHGroup1, DHGroup14, DHGroup2, DHGroup2048, DHGroup24, ECP256, ECP384, None}
                                              --gateway-name
@@ -87,7 +86,6 @@ directCommands:
     Delete all IPsec policies on a virtual network gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway ipsec-policy clear --gateway-name
                                                --resource-group
@@ -116,7 +114,6 @@ directCommands:
     List IPSec policies associated with a virtual network gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway ipsec-policy list --gateway-name
                                               --resource-group
@@ -139,7 +136,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway ipsec-policy wait [--created]
                                               [--custom]
@@ -222,5 +218,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage virtual network gateway IPSec policies.

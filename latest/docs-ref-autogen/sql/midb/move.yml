@@ -12,7 +12,6 @@ directCommands:
     Cancel managed database move operation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb move cancel --dest-mi
                             [--dest-resource-group]
@@ -70,7 +69,6 @@ directCommands:
     Complete managed database move operation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb move complete --dest-mi
                               [--dest-resource-group]
@@ -128,7 +126,6 @@ directCommands:
     List managed database move operations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb move list [--dest-mi]
                           [--dest-resource-group]
@@ -183,7 +180,6 @@ directCommands:
     Start managed database move operation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb move start --dest-mi
                            [--dest-resource-group]
@@ -265,5 +261,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Start, complete, cancel and list managed database move operations.

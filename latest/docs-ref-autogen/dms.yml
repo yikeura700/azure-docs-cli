@@ -16,7 +16,6 @@ directCommands:
     Check if a given DMS instance name is available in a given region as well as the name's validity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms check-name --location
                       --name
@@ -39,7 +38,6 @@ directCommands:
     Perform a health check and return the status of the service and virtual machine size.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms check-status --name
                         --resource-group
@@ -62,7 +60,6 @@ directCommands:
     Create an instance of the Azure Database Migration Service (classic).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms create --location
                   --name
@@ -110,7 +107,6 @@ directCommands:
     Delete an instance of the Azure Database Migration Service (classic).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms delete --name
                   --resource-group
@@ -148,7 +144,6 @@ directCommands:
     List the DMS instances within your currently configured subscription (to set this use "az account set"). If provided, only show the instances within a given resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: az dms list [--resource-group]
   examples:
   - summary: |-
@@ -167,7 +162,6 @@ directCommands:
     List the SKUs that are supported by the Azure Database Migration Service (classic).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: az dms list-skus
 - uid: az_dms_show
   name: az dms show
@@ -175,7 +169,6 @@ directCommands:
     Show the details for an instance of the Azure Database Migration Service (classic).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms show --name
                 --resource-group
@@ -194,7 +187,6 @@ directCommands:
     Start an instance of the Azure Database Migration Service (classic). It can then be used to run data migrations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms start --name
                  --resource-group
@@ -223,7 +215,6 @@ directCommands:
     Stop an instance of the Azure Database Migration Service (classic). While stopped, it can't be used to run data migrations and the owner won't be billed.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms stop --name
                 --resource-group
@@ -248,7 +239,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the DMS instance is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms wait --name
                 --resource-group

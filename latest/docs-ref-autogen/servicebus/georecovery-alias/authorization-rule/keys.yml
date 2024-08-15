@@ -12,7 +12,6 @@ directCommands:
     Gets the primary and secondary connection strings for the namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus georecovery-alias authorization-rule keys list --alias
                                                                  --authorization-rule-name
@@ -62,5 +61,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Manage Azure Authorization Rule keys for Service Bus Namespace.

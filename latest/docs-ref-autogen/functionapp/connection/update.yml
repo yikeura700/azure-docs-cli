@@ -12,7 +12,6 @@ directCommands:
     Update a functionapp to app-insights connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update app-insights [--appconfig-id]
                                                   [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python}]
@@ -77,7 +76,6 @@ directCommands:
     Update a functionapp to appconfig connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update appconfig [--appconfig-id]
                                                [--client-type {dotnet, dotnet-internal, java, nodejs, none, python}]
@@ -172,7 +170,6 @@ directCommands:
     Update a functionapp to cognitiveservices connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update cognitiveservices [--appconfig-id]
                                                        [--client-type {dotnet, none, python}]
@@ -262,7 +259,6 @@ directCommands:
     Update a functionapp to confluent-cloud connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update confluent-cloud --connection
                                                      [--appconfig-id]
@@ -353,7 +349,6 @@ directCommands:
     Update a functionapp to cosmos-cassandra connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update cosmos-cassandra [--appconfig-id]
                                                       [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -453,7 +448,6 @@ directCommands:
     Update a functionapp to cosmos-gremlin connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update cosmos-gremlin [--appconfig-id]
                                                     [--client-type {dotnet, dotnet-internal, java, nodejs, none, php, python}]
@@ -553,7 +547,6 @@ directCommands:
     Update a functionapp to cosmos-mongo connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update cosmos-mongo [--appconfig-id]
                                                   [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, springBoot}]
@@ -653,7 +646,6 @@ directCommands:
     Update a functionapp to cosmos-sql connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update cosmos-sql [--appconfig-id]
                                                 [--client-type {dotnet, dotnet-internal, java, nodejs, none, python, springBoot}]
@@ -753,7 +745,6 @@ directCommands:
     Update a functionapp to cosmos-table connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update cosmos-table [--appconfig-id]
                                                   [--client-type {dotnet, dotnet-internal, java, nodejs, none, python, springBoot}]
@@ -853,7 +844,6 @@ directCommands:
     Update a functionapp to eventhub connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update eventhub [--appconfig-id]
                                               [--client-type {dotnet, dotnet-internal, go, java, kafka-springBoot, nodejs, none, python, springBoot}]
@@ -953,7 +943,6 @@ directCommands:
     Update a functionapp to keyvault connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update keyvault [--appconfig-id]
                                               [--client-type {dotnet, dotnet-internal, java, nodejs, none, python, springBoot}]
@@ -1049,7 +1038,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update mysql [--appconfig-id]
                                            [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1131,7 +1119,6 @@ directCommands:
     Update a functionapp to mysql-flexible connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update mysql-flexible [--appconfig-id]
                                                     [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1232,7 +1219,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update postgres [--appconfig-id]
                                               [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1339,7 +1325,6 @@ directCommands:
     Update a functionapp to postgres-flexible connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update postgres-flexible [--appconfig-id]
                                                        [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1436,7 +1421,6 @@ directCommands:
     Update a functionapp to redis connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update redis [--appconfig-id]
                                            [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -1506,7 +1490,6 @@ directCommands:
     Update a functionapp to redis-enterprise connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update redis-enterprise [--appconfig-id]
                                                       [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -1571,7 +1554,6 @@ directCommands:
     Update a functionapp to servicebus connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update servicebus [--appconfig-id]
                                                 [--client-type {dotnet, dotnet-internal, go, java, nodejs, none, python, springBoot}]
@@ -1671,7 +1653,6 @@ directCommands:
     Update a functionapp to signalr connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update signalr [--appconfig-id]
                                              [--client-type {dotnet, dotnet-internal, none}]
@@ -1766,7 +1747,6 @@ directCommands:
     Update a functionapp to sql connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update sql [--appconfig-id]
                                          [--client-type {django, dotnet, dotnet-internal, go, java, nodejs, none, php, python, ruby, springBoot}]
@@ -1873,7 +1853,6 @@ directCommands:
     Update a functionapp to storage-blob connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update storage-blob [--appconfig-id]
                                                   [--client-type {dotnet, dotnet-internal, java, nodejs, none, python, springBoot}]
@@ -1973,7 +1952,6 @@ directCommands:
     Update a functionapp to storage-file connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update storage-file [--appconfig-id]
                                                   [--client-type {dotnet, dotnet-internal, java, nodejs, none, php, python, ruby, springBoot}]
@@ -2048,7 +2026,6 @@ directCommands:
     Update a functionapp to storage-queue connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update storage-queue [--appconfig-id]
                                                    [--client-type {dotnet, dotnet-internal, java, nodejs, none, python, springBoot}]
@@ -2148,7 +2125,6 @@ directCommands:
     Update a functionapp to storage-table connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update storage-table [--appconfig-id]
                                                    [--client-type {dotnet, dotnet-internal, java, nodejs, none, python}]
@@ -2248,7 +2224,6 @@ directCommands:
     Update a functionapp to webpubsub connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp connection update webpubsub [--appconfig-id]
                                                [--client-type {dotnet, dotnet-internal, java, nodejs, none, python}]
@@ -2388,5 +2363,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Update a functionapp connection.

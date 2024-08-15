@@ -14,7 +14,6 @@ directCommands:
     To learn about installing extensions automatically, visit https://aka.ms/AzExtDynamicInstall.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/extension/_help.py
   syntax: >-
     az extension add [--allow-preview {false, true}]
                      [--name]
@@ -85,7 +84,6 @@ directCommands:
     List the installed extensions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/extension/_help.py
   syntax: az extension list
 - uid: az_extension_list-available
   name: az extension list-available
@@ -93,7 +91,6 @@ directCommands:
     List publicly available extensions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/extension/_help.py
   syntax: az extension list-available [--show-details]
   examples:
   - summary: |-
@@ -113,7 +110,6 @@ directCommands:
     List available versions for an extension.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/extension/_help.py
   syntax: az extension list-versions --name
   examples:
   - summary: |-
@@ -130,7 +126,6 @@ directCommands:
     Remove an extension.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/extension/_help.py
   syntax: az extension remove --name
   examples:
   - summary: |-
@@ -147,7 +142,6 @@ directCommands:
     Show an extension.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/extension/_help.py
   syntax: az extension show --name
   examples:
   - summary: |-
@@ -164,7 +158,6 @@ directCommands:
     Update an extension.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/extension/_help.py
   syntax: >-
     az extension update --name
                         [--allow-preview {false, true}]
@@ -226,5 +219,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 09/16/2020
   description: Manage and update CLI extensions.

@@ -238,15 +238,6 @@
         uid: az_appservice_plan
         displayName: az appservice plan
         items: []
-    - name: staticwebapp
-      items:
-      - name: Commands
-        uid: az_staticwebapp
-        displayName: az staticwebapp
-      - name: dbconnection
-        uid: az_staticwebapp_dbconnection
-        displayName: az staticwebapp dbconnection
-        items: []
     - name: webapp
       items:
       - name: Commands
@@ -585,19 +576,9 @@
         displayName: az connectedvmware vm-template
         items: []
   - name: Astronomer
-    items:
-    - name: Commands
-      uid: sp-Astronomer
-      displayName: Astronomer
-    - name: astronomer
-      items:
-      - name: Commands
-        uid: az_astronomer
-        displayName: az astronomer
-      - name: organization
-        uid: az_astronomer_organization
-        displayName: az astronomer organization
-        items: []
+    uid: sp-Astronomer
+    displayName: Astronomer
+    items: []
   - name: Attestation
     items:
     - name: Commands
@@ -696,28 +677,9 @@
             displayName: az automation source-control sync-job stream
             items: []
   - name: Autonomous Development Platform
-    items:
-    - name: Commands
-      uid: sp-Autonomous_Development_Platform
-      displayName: Autonomous Development Platform
-    - name: adp
-      items:
-      - name: Commands
-        uid: az_adp
-        displayName: az adp
-      - name: account
-        items:
-        - name: Commands
-          uid: az_adp_account
-          displayName: az adp account
-        - name: data-pool
-          uid: az_adp_account_data-pool
-          displayName: az adp account data-pool
-          items: []
-      - name: workspace
-        uid: az_adp_workspace
-        displayName: az adp workspace
-        items: []
+    uid: sp-Autonomous_Development_Platform
+    displayName: Autonomous Development Platform
+    items: []
   - name: Azure Active Directory
     items:
     - name: Commands
@@ -749,10 +711,6 @@
           uid: az_ad_app_permission
           displayName: az ad app permission
           items: []
-      - name: ds
-        uid: az_ad_ds
-        displayName: az ad ds
-        items: []
       - name: group
         items:
         - name: Commands
@@ -788,54 +746,13 @@
         displayName: az ad user
         items: []
   - name: Azure App Compliance Automation Tool
-    items:
-    - name: Commands
-      uid: sp-Azure_App_Compliance_Automation_Tool
-      displayName: Azure App Compliance Automation Tool
-    - name: acat
-      items:
-      - name: Commands
-        uid: az_acat
-        displayName: az acat
-      - name: report
-        items:
-        - name: Commands
-          uid: az_acat_report
-          displayName: az acat report
-        - name: snapshot
-          uid: az_acat_report_snapshot
-          displayName: az acat report snapshot
-          items: []
-        - name: webhook
-          uid: az_acat_report_webhook
-          displayName: az acat report webhook
-          items: []
+    uid: sp-Azure_App_Compliance_Automation_Tool
+    displayName: Azure App Compliance Automation Tool
+    items: []
   - name: Azure Arc Kubernetes Runtime
-    items:
-    - name: Commands
-      uid: sp-Azure_Arc_Kubernetes_Runtime
-      displayName: Azure Arc Kubernetes Runtime
-    - name: k8s-runtime
-      items:
-      - name: Commands
-        uid: az_k8s-runtime
-        displayName: az k8s-runtime
-      - name: bgp-peer
-        uid: az_k8s-runtime_bgp-peer
-        displayName: az k8s-runtime bgp-peer
-        items: []
-      - name: load-balancer
-        uid: az_k8s-runtime_load-balancer
-        displayName: az k8s-runtime load-balancer
-        items: []
-      - name: service
-        uid: az_k8s-runtime_service
-        displayName: az k8s-runtime service
-        items: []
-      - name: storage-class
-        uid: az_k8s-runtime_storage-class
-        displayName: az k8s-runtime storage-class
-        items: []
+    uid: sp-Azure_Arc_Kubernetes_Runtime
+    displayName: Azure Arc Kubernetes Runtime
+    items: []
   - name: Azure CLI
     items:
     - name: Commands
@@ -862,10 +779,6 @@
       uid: az_cloud
       displayName: az cloud
       items: []
-    - name: command-change
-      uid: az_command-change
-      displayName: az command-change
-      items: []
     - name: config
       items:
       - name: Commands
@@ -888,28 +801,10 @@
       uid: az_extension
       displayName: az extension
       items: []
-    - name: fzf
-      uid: az_fzf
-      displayName: az fzf
-      items: []
-    - name: scenario
-      uid: az_scenario
-      displayName: az scenario
-      items: []
   - name: Azure Compute Gallery
-    items:
-    - name: Commands
-      uid: sp-Azure_Compute_Gallery
-      displayName: Azure Compute Gallery
-    - name: gallery
-      items:
-      - name: Commands
-        uid: az_gallery
-        displayName: az gallery
-      - name: service-artifact
-        uid: az_gallery_service-artifact
-        displayName: az gallery service-artifact
-        items: []
+    uid: sp-Azure_Compute_Gallery
+    displayName: Azure Compute Gallery
+    items: []
   - name: Azure Large Instance
     items:
     - name: Commands
@@ -959,19 +854,9 @@
         displayName: az new-relic plan
         items: []
   - name: Azure Operator Insights - Network Analytics
-    items:
-    - name: Commands
-      uid: sp-Azure_Operator_Insights_-_Network_Analytics
-      displayName: Azure Operator Insights - Network Analytics
-    - name: network-analytics
-      items:
-      - name: Commands
-        uid: az_network-analytics
-        displayName: az network-analytics
-      - name: data-product
-        uid: az_network-analytics_data-product
-        displayName: az network-analytics data-product
-        items: []
+    uid: sp-Azure_Operator_Insights_-_Network_Analytics
+    displayName: Azure Operator Insights - Network Analytics
+    items: []
   - name: Azure Operator Service Manager
     items:
     - name: Commands
@@ -1036,99 +921,9 @@
             displayName: az aosm publisher network-service-design version
             items: []
   - name: Azure Site Recovery
-    items:
-    - name: Commands
-      uid: sp-Azure_Site_Recovery
-      displayName: Azure Site Recovery
-    - name: site-recovery
-      items:
-      - name: Commands
-        uid: az_site-recovery
-        displayName: az site-recovery
-      - name: alert-setting
-        uid: az_site-recovery_alert-setting
-        displayName: az site-recovery alert-setting
-        items: []
-      - name: event
-        uid: az_site-recovery_event
-        displayName: az site-recovery event
-        items: []
-      - name: fabric
-        uid: az_site-recovery_fabric
-        displayName: az site-recovery fabric
-        items: []
-      - name: job
-        uid: az_site-recovery_job
-        displayName: az site-recovery job
-        items: []
-      - name: logical-network
-        uid: az_site-recovery_logical-network
-        displayName: az site-recovery logical-network
-        items: []
-      - name: network
-        items:
-        - name: Commands
-          uid: az_site-recovery_network
-          displayName: az site-recovery network
-        - name: mapping
-          uid: az_site-recovery_network_mapping
-          displayName: az site-recovery network mapping
-          items: []
-      - name: policy
-        uid: az_site-recovery_policy
-        displayName: az site-recovery policy
-        items: []
-      - name: protectable-item
-        uid: az_site-recovery_protectable-item
-        displayName: az site-recovery protectable-item
-        items: []
-      - name: protected-item
-        uid: az_site-recovery_protected-item
-        displayName: az site-recovery protected-item
-        items: []
-      - name: protection-container
-        items:
-        - name: Commands
-          uid: az_site-recovery_protection-container
-          displayName: az site-recovery protection-container
-        - name: mapping
-          uid: az_site-recovery_protection-container_mapping
-          displayName: az site-recovery protection-container mapping
-          items: []
-      - name: recovery-plan
-        uid: az_site-recovery_recovery-plan
-        displayName: az site-recovery recovery-plan
-        items: []
-      - name: recovery-services-provider
-        uid: az_site-recovery_recovery-services-provider
-        displayName: az site-recovery recovery-services-provider
-        items: []
-      - name: replication-eligibility
-        uid: az_site-recovery_replication-eligibility
-        displayName: az site-recovery replication-eligibility
-        items: []
-      - name: vault
-        items:
-        - name: Commands
-          uid: az_site-recovery_vault
-          displayName: az site-recovery vault
-        - name: health
-          uid: az_site-recovery_vault_health
-          displayName: az site-recovery vault health
-          items: []
-      - name: vmware-site
-        items:
-        - name: Commands
-          uid: az_site-recovery_vmware-site
-          displayName: az site-recovery vmware-site
-        - name: machine
-          uid: az_site-recovery_vmware-site_machine
-          displayName: az site-recovery vmware-site machine
-          items: []
-        - name: run-as-account
-          uid: az_site-recovery_vmware-site_run-as-account
-          displayName: az site-recovery vmware-site run-as-account
-          items: []
+    uid: sp-Azure_Site_Recovery
+    displayName: Azure Site Recovery
+    items: []
   - name: Azure Sphere
     items:
     - name: Commands
@@ -1214,19 +1009,9 @@
         displayName: az sphere product
         items: []
   - name: Azure Storage Actions
-    items:
-    - name: Commands
-      uid: sp-Azure_Storage_Actions
-      displayName: Azure Storage Actions
-    - name: storage-actions
-      items:
-      - name: Commands
-        uid: az_storage-actions
-        displayName: az storage-actions
-      - name: task
-        uid: az_storage-actions_task
-        displayName: az storage-actions task
-        items: []
+    uid: sp-Azure_Storage_Actions
+    displayName: Azure Storage Actions
+    items: []
   - name: Azure Support
     items:
     - name: Commands
@@ -1371,27 +1156,9 @@
       displayName: az baremetalinstance
       items: []
   - name: Batch
-    items:
-    - name: Commands
-      uid: sp-Batch
-      displayName: Batch
-    - name: batch
-      items:
-      - name: Commands
-        uid: az_batch
-        displayName: az batch
-      - name: file
-        uid: az_batch_file
-        displayName: az batch file
-        items: []
-      - name: job
-        uid: az_batch_job
-        displayName: az batch job
-        items: []
-      - name: pool
-        uid: az_batch_pool
-        displayName: az batch pool
-        items: []
+    uid: sp-Batch
+    displayName: Batch
+    items: []
   - name: Bicep
     items:
     - name: Commands
@@ -1446,14 +1213,9 @@
           displayName: az blueprint version artifact
           items: []
   - name: Bot Service
-    items:
-    - name: Commands
-      uid: sp-Bot_Service
-      displayName: Bot Service
-    - name: healthbot
-      uid: az_healthbot
-      displayName: az healthbot
-      items: []
+    uid: sp-Bot_Service
+    displayName: Bot Service
+    items: []
   - name: Cache for Redis
     items:
     - name: Commands
@@ -1503,44 +1265,9 @@
         displayName: az cloud-service update-domain
         items: []
   - name: CloudSimple on Azure
-    items:
-    - name: Commands
-      uid: sp-CloudSimple_on_Azure
-      displayName: CloudSimple on Azure
-    - name: csvmware
-      items:
-      - name: Commands
-        uid: az_csvmware
-        displayName: az csvmware
-      - name: private-cloud
-        uid: az_csvmware_private-cloud
-        displayName: az csvmware private-cloud
-        items: []
-      - name: resource-pool
-        uid: az_csvmware_resource-pool
-        displayName: az csvmware resource-pool
-        items: []
-      - name: virtual-network
-        uid: az_csvmware_virtual-network
-        displayName: az csvmware virtual-network
-        items: []
-      - name: vm
-        items:
-        - name: Commands
-          uid: az_csvmware_vm
-          displayName: az csvmware vm
-        - name: disk
-          uid: az_csvmware_vm_disk
-          displayName: az csvmware vm disk
-          items: []
-        - name: nic
-          uid: az_csvmware_vm_nic
-          displayName: az csvmware vm nic
-          items: []
-      - name: vm-template
-        uid: az_csvmware_vm-template
-        displayName: az csvmware vm-template
-        items: []
+    uid: sp-CloudSimple_on_Azure
+    displayName: CloudSimple on Azure
+    items: []
   - name: Cognitive Search
     uid: sp-Cognitive_Search
     displayName: Cognitive Search
@@ -1643,19 +1370,9 @@
           displayName: az communication user-identity user
           items: []
   - name: Compute Diagnostic
-    items:
-    - name: Commands
-      uid: sp-Compute_Diagnostic
-      displayName: Compute Diagnostic
-    - name: compute-diagnostic
-      items:
-      - name: Commands
-        uid: az_compute-diagnostic
-        displayName: az compute-diagnostic
-      - name: spot-placement-recommender
-        uid: az_compute-diagnostic_spot-placement-recommender
-        displayName: az compute-diagnostic spot-placement-recommender
-        items: []
+    uid: sp-Compute_Diagnostic
+    displayName: Compute Diagnostic
+    items: []
   - name: Confidential Computing
     items:
     - name: Commands
@@ -2057,19 +1774,9 @@
         displayName: az containerapp ssl
         items: []
   - name: Container Instances
-    items:
-    - name: Commands
-      uid: sp-Container_Instances
-      displayName: Container Instances
-    - name: container
-      items:
-      - name: Commands
-        uid: az_container
-        displayName: az container
-      - name: app
-        uid: az_container_app
-        displayName: az container app
-        items: []
+    uid: sp-Container_Instances
+    displayName: Container Instances
+    items: []
   - name: Container Registry
     items:
     - name: Commands
@@ -2101,32 +1808,6 @@
     - name: Commands
       uid: sp-Cost_Management
       displayName: Cost Management
-    - name: billing-benefits
-      items:
-      - name: Commands
-        uid: az_billing-benefits
-        displayName: az billing-benefits
-      - name: reservation-order-aliases
-        uid: az_billing-benefits_reservation-order-aliases
-        displayName: az billing-benefits reservation-order-aliases
-        items: []
-      - name: savings-plan
-        uid: az_billing-benefits_savings-plan
-        displayName: az billing-benefits savings-plan
-        items: []
-      - name: savings-plan-order
-        items:
-        - name: Commands
-          uid: az_billing-benefits_savings-plan-order
-          displayName: az billing-benefits savings-plan-order
-        - name: savings-plan
-          uid: az_billing-benefits_savings-plan-order_savings-plan
-          displayName: az billing-benefits savings-plan-order savings-plan
-          items: []
-      - name: savings-plan-order-aliases
-        uid: az_billing-benefits_savings-plan-order-aliases
-        displayName: az billing-benefits savings-plan-order-aliases
-        items: []
     - name: consumption
       items:
       - name: Commands
@@ -3084,102 +2765,9 @@
     displayName: DevTest Labs
     items: []
   - name: Digital Twins
-    items:
-    - name: Commands
-      uid: sp-Digital_Twins
-      displayName: Digital Twins
-    - name: dt
-      items:
-      - name: Commands
-        uid: az_dt
-        displayName: az dt
-      - name: data-history
-        items:
-        - name: Commands
-          uid: az_dt_data-history
-          displayName: az dt data-history
-        - name: connection
-          items:
-          - name: Commands
-            uid: az_dt_data-history_connection
-            displayName: az dt data-history connection
-          - name: create
-            uid: az_dt_data-history_connection_create
-            displayName: az dt data-history connection create
-            items: []
-      - name: endpoint
-        items:
-        - name: Commands
-          uid: az_dt_endpoint
-          displayName: az dt endpoint
-        - name: create
-          uid: az_dt_endpoint_create
-          displayName: az dt endpoint create
-          items: []
-      - name: identity
-        uid: az_dt_identity
-        displayName: az dt identity
-        items: []
-      - name: job
-        items:
-        - name: Commands
-          uid: az_dt_job
-          displayName: az dt job
-        - name: deletion
-          uid: az_dt_job_deletion
-          displayName: az dt job deletion
-          items: []
-        - name: import
-          uid: az_dt_job_import
-          displayName: az dt job import
-          items: []
-      - name: model
-        uid: az_dt_model
-        displayName: az dt model
-        items: []
-      - name: network
-        items:
-        - name: Commands
-          uid: az_dt_network
-          displayName: az dt network
-        - name: private-endpoint
-          items:
-          - name: Commands
-            uid: az_dt_network_private-endpoint
-            displayName: az dt network private-endpoint
-          - name: connection
-            uid: az_dt_network_private-endpoint_connection
-            displayName: az dt network private-endpoint connection
-            items: []
-        - name: private-link
-          uid: az_dt_network_private-link
-          displayName: az dt network private-link
-          items: []
-      - name: role-assignment
-        uid: az_dt_role-assignment
-        displayName: az dt role-assignment
-        items: []
-      - name: route
-        uid: az_dt_route
-        displayName: az dt route
-        items: []
-      - name: twin
-        items:
-        - name: Commands
-          uid: az_dt_twin
-          displayName: az dt twin
-        - name: component
-          uid: az_dt_twin_component
-          displayName: az dt twin component
-          items: []
-        - name: relationship
-          uid: az_dt_twin_relationship
-          displayName: az dt twin relationship
-          items: []
-        - name: telemetry
-          uid: az_dt_twin_telemetry
-          displayName: az dt twin telemetry
-          items: []
+    uid: sp-Digital_Twins
+    displayName: Digital Twins
+    items: []
   - name: Disk Pool
     items:
     - name: Commands
@@ -3199,64 +2787,17 @@
     displayName: Disks
     items: []
   - name: Dynatrace Observability
-    items:
-    - name: Commands
-      uid: sp-Dynatrace_Observability
-      displayName: Dynatrace Observability
-    - name: dynatrace
-      items:
-      - name: Commands
-        uid: az_dynatrace
-        displayName: az dynatrace
-      - name: monitor
-        items:
-        - name: Commands
-          uid: az_dynatrace_monitor
-          displayName: az dynatrace monitor
-        - name: sso-config
-          uid: az_dynatrace_monitor_sso-config
-          displayName: az dynatrace monitor sso-config
-          items: []
-        - name: tag-rule
-          uid: az_dynatrace_monitor_tag-rule
-          displayName: az dynatrace monitor tag-rule
-          items: []
+    uid: sp-Dynatrace_Observability
+    displayName: Dynatrace Observability
+    items: []
   - name: Edge Order
-    items:
-    - name: Commands
-      uid: sp-Edge_Order
-      displayName: Edge Order
-    - name: edgeorder
-      items:
-      - name: Commands
-        uid: az_edgeorder
-        displayName: az edgeorder
-      - name: address
-        uid: az_edgeorder_address
-        displayName: az edgeorder address
-        items: []
-      - name: order
-        uid: az_edgeorder_order
-        displayName: az edgeorder order
-        items: []
-      - name: order-item
-        uid: az_edgeorder_order-item
-        displayName: az edgeorder order-item
-        items: []
+    uid: sp-Edge_Order
+    displayName: Edge Order
+    items: []
   - name: Edge Zones
-    items:
-    - name: Commands
-      uid: sp-Edge_Zones
-      displayName: Edge Zones
-    - name: edge-zones
-      items:
-      - name: Commands
-        uid: az_edge-zones
-        displayName: az edge-zones
-      - name: extended-zone
-        uid: az_edge-zones_extended-zone
-        displayName: az edge-zones extended-zone
-        items: []
+    uid: sp-Edge_Zones
+    displayName: Edge Zones
+    items: []
   - name: Elastic
     items:
     - name: Commands
@@ -3415,41 +2956,13 @@
     displayName: Event Hubs
     items: []
   - name: Firmware Analysis
-    items:
-    - name: Commands
-      uid: sp-Firmware_Analysis
-      displayName: Firmware Analysis
-    - name: firmwareanalysis
-      items:
-      - name: Commands
-        uid: az_firmwareanalysis
-        displayName: az firmwareanalysis
-      - name: firmware
-        uid: az_firmwareanalysis_firmware
-        displayName: az firmwareanalysis firmware
-        items: []
-      - name: workspace
-        uid: az_firmwareanalysis_workspace
-        displayName: az firmwareanalysis workspace
-        items: []
+    uid: sp-Firmware_Analysis
+    displayName: Firmware Analysis
+    items: []
   - name: Fluid Relay
-    items:
-    - name: Commands
-      uid: sp-Fluid_Relay
-      displayName: Fluid Relay
-    - name: fluid-relay
-      items:
-      - name: Commands
-        uid: az_fluid-relay
-        displayName: az fluid-relay
-      - name: container
-        uid: az_fluid-relay_container
-        displayName: az fluid-relay container
-        items: []
-      - name: server
-        uid: az_fluid-relay_server
-        displayName: az fluid-relay server
-        items: []
+    uid: sp-Fluid_Relay
+    displayName: Fluid Relay
+    items: []
   - name: Front Door
     uid: sp-Front_Door
     displayName: Front Door
@@ -3464,10 +2977,6 @@
       - name: Commands
         uid: az_functionapp
         displayName: az functionapp
-      - name: app
-        uid: az_functionapp_app
-        displayName: az functionapp app
-        items: []
       - name: config
         items:
         - name: Commands
@@ -3504,19 +3013,9 @@
         displayName: az functionapp devops-pipeline
         items: []
   - name: Graph Services
-    items:
-    - name: Commands
-      uid: sp-Graph_Services
-      displayName: Graph Services
-    - name: graph-services
-      items:
-      - name: Commands
-        uid: az_graph-services
-        displayName: az graph-services
-      - name: account
-        uid: az_graph-services_account
-        displayName: az graph-services account
-        items: []
+    uid: sp-Graph_Services
+    displayName: Graph Services
+    items: []
   - name: HDInsight
     items:
     - name: Commands
@@ -3626,24 +3125,9 @@
         displayName: az hpc-cache usage-model
         items: []
   - name: Informatica
-    items:
-    - name: Commands
-      uid: sp-Informatica
-      displayName: Informatica
-    - name: informatica
-      items:
-      - name: Commands
-        uid: az_informatica
-        displayName: az informatica
-      - name: data-management
-        items:
-        - name: Commands
-          uid: az_informatica_data-management
-          displayName: az informatica data-management
-        - name: organization
-          uid: az_informatica_data-management_organization
-          displayName: az informatica data-management organization
-          items: []
+    uid: sp-Informatica
+    displayName: Informatica
+    items: []
   - name: IoT
     items:
     - name: Commands
@@ -3654,325 +3138,6 @@
       - name: Commands
         uid: az_iot
         displayName: az iot
-      - name: central
-        items:
-        - name: Commands
-          uid: az_iot_central
-          displayName: az iot central
-        - name: api-token
-          uid: az_iot_central_api-token
-          displayName: az iot central api-token
-          items: []
-        - name: device
-          items:
-          - name: Commands
-            uid: az_iot_central_device
-            displayName: az iot central device
-          - name: attestation
-            uid: az_iot_central_device_attestation
-            displayName: az iot central device attestation
-            items: []
-          - name: c2d-message
-            uid: az_iot_central_device_c2d-message
-            displayName: az iot central device c2d-message
-            items: []
-          - name: command
-            uid: az_iot_central_device_command
-            displayName: az iot central device command
-            items: []
-          - name: edge
-            items:
-            - name: Commands
-              uid: az_iot_central_device_edge
-              displayName: az iot central device edge
-            - name: children
-              uid: az_iot_central_device_edge_children
-              displayName: az iot central device edge children
-              items: []
-            - name: manifest
-              uid: az_iot_central_device_edge_manifest
-              displayName: az iot central device edge manifest
-              items: []
-            - name: module
-              uid: az_iot_central_device_edge_module
-              displayName: az iot central device edge module
-              items: []
-          - name: telemetry
-            uid: az_iot_central_device_telemetry
-            displayName: az iot central device telemetry
-            items: []
-          - name: twin
-            uid: az_iot_central_device_twin
-            displayName: az iot central device twin
-            items: []
-        - name: device-group
-          uid: az_iot_central_device-group
-          displayName: az iot central device-group
-          items: []
-        - name: device-template
-          uid: az_iot_central_device-template
-          displayName: az iot central device-template
-          items: []
-        - name: diagnostics
-          uid: az_iot_central_diagnostics
-          displayName: az iot central diagnostics
-          items: []
-        - name: enrollment-group
-          uid: az_iot_central_enrollment-group
-          displayName: az iot central enrollment-group
-          items: []
-        - name: export
-          items:
-          - name: Commands
-            uid: az_iot_central_export
-            displayName: az iot central export
-          - name: destination
-            uid: az_iot_central_export_destination
-            displayName: az iot central export destination
-            items: []
-        - name: file-upload-config
-          uid: az_iot_central_file-upload-config
-          displayName: az iot central file-upload-config
-          items: []
-        - name: job
-          uid: az_iot_central_job
-          displayName: az iot central job
-          items: []
-        - name: organization
-          uid: az_iot_central_organization
-          displayName: az iot central organization
-          items: []
-        - name: role
-          uid: az_iot_central_role
-          displayName: az iot central role
-          items: []
-        - name: scheduled-job
-          uid: az_iot_central_scheduled-job
-          displayName: az iot central scheduled-job
-          items: []
-        - name: user
-          uid: az_iot_central_user
-          displayName: az iot central user
-          items: []
-      - name: device
-        items:
-        - name: Commands
-          uid: az_iot_device
-          displayName: az iot device
-        - name: c2d-message
-          uid: az_iot_device_c2d-message
-          displayName: az iot device c2d-message
-          items: []
-        - name: registration
-          uid: az_iot_device_registration
-          displayName: az iot device registration
-          items: []
-      - name: dps
-        items:
-        - name: Commands
-          uid: az_iot_dps
-          displayName: az iot dps
-        - name: connection-string
-          uid: az_iot_dps_connection-string
-          displayName: az iot dps connection-string
-          items: []
-        - name: enrollment
-          items:
-          - name: Commands
-            uid: az_iot_dps_enrollment
-            displayName: az iot dps enrollment
-          - name: registration
-            uid: az_iot_dps_enrollment_registration
-            displayName: az iot dps enrollment registration
-            items: []
-        - name: enrollment-group
-          items:
-          - name: Commands
-            uid: az_iot_dps_enrollment-group
-            displayName: az iot dps enrollment-group
-          - name: registration
-            uid: az_iot_dps_enrollment-group_registration
-            displayName: az iot dps enrollment-group registration
-            items: []
-        - name: registration
-          uid: az_iot_dps_registration
-          displayName: az iot dps registration
-          items: []
-      - name: du
-        items:
-        - name: Commands
-          uid: az_iot_du
-          displayName: az iot du
-        - name: account
-          items:
-          - name: Commands
-            uid: az_iot_du_account
-            displayName: az iot du account
-          - name: private-endpoint-connection
-            uid: az_iot_du_account_private-endpoint-connection
-            displayName: az iot du account private-endpoint-connection
-            items: []
-          - name: private-link-resource
-            uid: az_iot_du_account_private-link-resource
-            displayName: az iot du account private-link-resource
-            items: []
-        - name: device
-          items:
-          - name: Commands
-            uid: az_iot_du_device
-            displayName: az iot du device
-          - name: class
-            uid: az_iot_du_device_class
-            displayName: az iot du device class
-            items: []
-          - name: compliance
-            uid: az_iot_du_device_compliance
-            displayName: az iot du device compliance
-            items: []
-          - name: deployment
-            uid: az_iot_du_device_deployment
-            displayName: az iot du device deployment
-            items: []
-          - name: group
-            uid: az_iot_du_device_group
-            displayName: az iot du device group
-            items: []
-          - name: health
-            uid: az_iot_du_device_health
-            displayName: az iot du device health
-            items: []
-          - name: log
-            uid: az_iot_du_device_log
-            displayName: az iot du device log
-            items: []
-          - name: module
-            uid: az_iot_du_device_module
-            displayName: az iot du device module
-            items: []
-        - name: instance
-          uid: az_iot_du_instance
-          displayName: az iot du instance
-          items: []
-        - name: update
-          items:
-          - name: Commands
-            uid: az_iot_du_update
-            displayName: az iot du update
-          - name: file
-            uid: az_iot_du_update_file
-            displayName: az iot du update file
-            items: []
-          - name: init
-            uid: az_iot_du_update_init
-            displayName: az iot du update init
-            items: []
-      - name: edge
-        items:
-        - name: Commands
-          uid: az_iot_edge
-          displayName: az iot edge
-        - name: deployment
-          uid: az_iot_edge_deployment
-          displayName: az iot edge deployment
-          items: []
-        - name: devices
-          uid: az_iot_edge_devices
-          displayName: az iot edge devices
-          items: []
-      - name: hub
-        items:
-        - name: Commands
-          uid: az_iot_hub
-          displayName: az iot hub
-        - name: certificate
-          items:
-          - name: Commands
-            uid: az_iot_hub_certificate
-            displayName: az iot hub certificate
-          - name: root-authority
-            uid: az_iot_hub_certificate_root-authority
-            displayName: az iot hub certificate root-authority
-            items: []
-        - name: configuration
-          uid: az_iot_hub_configuration
-          displayName: az iot hub configuration
-          items: []
-        - name: connection-string
-          uid: az_iot_hub_connection-string
-          displayName: az iot hub connection-string
-          items: []
-        - name: device-identity
-          items:
-          - name: Commands
-            uid: az_iot_hub_device-identity
-            displayName: az iot hub device-identity
-          - name: children
-            uid: az_iot_hub_device-identity_children
-            displayName: az iot hub device-identity children
-            items: []
-          - name: connection-string
-            uid: az_iot_hub_device-identity_connection-string
-            displayName: az iot hub device-identity connection-string
-            items: []
-          - name: parent
-            uid: az_iot_hub_device-identity_parent
-            displayName: az iot hub device-identity parent
-            items: []
-        - name: device-twin
-          uid: az_iot_hub_device-twin
-          displayName: az iot hub device-twin
-          items: []
-        - name: digital-twin
-          uid: az_iot_hub_digital-twin
-          displayName: az iot hub digital-twin
-          items: []
-        - name: distributed-tracing
-          uid: az_iot_hub_distributed-tracing
-          displayName: az iot hub distributed-tracing
-          items: []
-        - name: job
-          uid: az_iot_hub_job
-          displayName: az iot hub job
-          items: []
-        - name: message-endpoint
-          items:
-          - name: Commands
-            uid: az_iot_hub_message-endpoint
-            displayName: az iot hub message-endpoint
-          - name: create
-            uid: az_iot_hub_message-endpoint_create
-            displayName: az iot hub message-endpoint create
-            items: []
-          - name: update
-            uid: az_iot_hub_message-endpoint_update
-            displayName: az iot hub message-endpoint update
-            items: []
-        - name: message-route
-          items:
-          - name: Commands
-            uid: az_iot_hub_message-route
-            displayName: az iot hub message-route
-          - name: fallback
-            uid: az_iot_hub_message-route_fallback
-            displayName: az iot hub message-route fallback
-            items: []
-        - name: module-identity
-          items:
-          - name: Commands
-            uid: az_iot_hub_module-identity
-            displayName: az iot hub module-identity
-          - name: connection-string
-            uid: az_iot_hub_module-identity_connection-string
-            displayName: az iot hub module-identity connection-string
-            items: []
-        - name: module-twin
-          uid: az_iot_hub_module-twin
-          displayName: az iot hub module-twin
-          items: []
-        - name: state
-          uid: az_iot_hub_state
-          displayName: az iot hub state
-          items: []
       - name: ops
         items:
         - name: Commands
@@ -4087,10 +3252,6 @@
       - name: addon
         uid: az_aks_addon
         displayName: az aks addon
-        items: []
-      - name: app
-        uid: az_aks_app
-        displayName: az aks app
         items: []
       - name: approuting
         items:
@@ -4299,14 +3460,9 @@
         displayName: az aksarc vnet
         items: []
   - name: Lab Services
-    items:
-    - name: Commands
-      uid: sp-Lab_Services
-      displayName: Lab Services
-    - name: hack
-      uid: az_hack
-      displayName: az hack
-      items: []
+    uid: sp-Lab_Services
+    displayName: Lab Services
+    items: []
   - name: Load Testing
     items:
     - name: Commands
@@ -4396,35 +3552,9 @@
           displayName: az logic workflow identity
           items: []
   - name: Logz.io
-    items:
-    - name: Commands
-      uid: sp-Logz.io
-      displayName: Logz.io
-    - name: logz
-      items:
-      - name: Commands
-        uid: az_logz
-        displayName: az logz
-      - name: monitor
-        uid: az_logz_monitor
-        displayName: az logz monitor
-        items: []
-      - name: rule
-        uid: az_logz_rule
-        displayName: az logz rule
-        items: []
-      - name: sso
-        uid: az_logz_sso
-        displayName: az logz sso
-        items: []
-      - name: sub-account
-        uid: az_logz_sub-account
-        displayName: az logz sub-account
-        items: []
-      - name: sub-rule
-        uid: az_logz_sub-rule
-        displayName: az logz sub-rule
-        items: []
+    uid: sp-Logz.io
+    displayName: Logz.io
+    items: []
   - name: Machine Learning
     items:
     - name: Commands
@@ -5115,10 +4245,6 @@
           uid: az_ad_app_permission
           displayName: az ad app permission
           items: []
-      - name: ds
-        uid: az_ad_ds
-        displayName: az ad ds
-        items: []
       - name: group
         items:
         - name: Commands
@@ -5221,61 +4347,9 @@
             displayName: az partnercenter marketplace offer submission
             items: []
   - name: Migrate
-    items:
-    - name: Commands
-      uid: sp-Migrate
-      displayName: Migrate
-    - name: offazure
-      items:
-      - name: Commands
-        uid: az_offazure
-        displayName: az offazure
-      - name: hyperv
-        items:
-        - name: Commands
-          uid: az_offazure_hyperv
-          displayName: az offazure hyperv
-        - name: cluster
-          uid: az_offazure_hyperv_cluster
-          displayName: az offazure hyperv cluster
-          items: []
-        - name: host
-          uid: az_offazure_hyperv_host
-          displayName: az offazure hyperv host
-          items: []
-        - name: machine
-          uid: az_offazure_hyperv_machine
-          displayName: az offazure hyperv machine
-          items: []
-        - name: run-as-account
-          uid: az_offazure_hyperv_run-as-account
-          displayName: az offazure hyperv run-as-account
-          items: []
-        - name: site
-          uid: az_offazure_hyperv_site
-          displayName: az offazure hyperv site
-          items: []
-      - name: vmware
-        items:
-        - name: Commands
-          uid: az_offazure_vmware
-          displayName: az offazure vmware
-        - name: machine
-          uid: az_offazure_vmware_machine
-          displayName: az offazure vmware machine
-          items: []
-        - name: run-as-account
-          uid: az_offazure_vmware_run-as-account
-          displayName: az offazure vmware run-as-account
-          items: []
-        - name: site
-          uid: az_offazure_vmware_site
-          displayName: az offazure vmware site
-          items: []
-        - name: vcenter
-          uid: az_offazure_vmware_vcenter
-          displayName: az offazure vmware vcenter
-          items: []
+    uid: sp-Migrate
+    displayName: Migrate
+    items: []
   - name: Mixed Reality
     items:
     - name: Commands
@@ -5360,10 +4434,6 @@
     - name: Commands
       uid: sp-Monitor
       displayName: Monitor
-    - name: change-analysis
-      uid: az_change-analysis
-      displayName: az change-analysis
-      items: []
     - name: footprint
       items:
       - name: Commands
@@ -5612,15 +4682,6 @@
         uid: az_network_bastion
         displayName: az network bastion
         items: []
-      - name: cross-connection
-        items:
-        - name: Commands
-          uid: az_network_cross-connection
-          displayName: az network cross-connection
-        - name: peering
-          uid: az_network_cross-connection_peering
-          displayName: az network cross-connection peering
-          items: []
       - name: dns
         items:
         - name: Commands
@@ -5962,10 +5023,6 @@
             uid: az_network_nic_ip-config_inbound-nat-rule
             displayName: az network nic ip-config inbound-nat-rule
             items: []
-        - name: vtap-config
-          uid: az_network_nic_vtap-config
-          displayName: az network nic vtap-config
-          items: []
       - name: nsg
         items:
         - name: Commands
@@ -6086,10 +5143,6 @@
         - name: subnet
           uid: az_network_vnet_subnet
           displayName: az network vnet subnet
-          items: []
-        - name: tap
-          uid: az_network_vnet_tap
-          displayName: az network vnet tap
           items: []
       - name: vnet-gateway
         items:
@@ -6408,14 +5461,9 @@
           displayName: az peering service provider
           items: []
   - name: Nexus Identity
-    items:
-    - name: Commands
-      uid: sp-Nexus_Identity
-      displayName: Nexus Identity
-    - name: nexusidentity
-      uid: az_nexusidentity
-      displayName: az nexusidentity
-      items: []
+    uid: sp-Nexus_Identity
+    displayName: Nexus Identity
+    items: []
   - name: Nginx
     items:
     - name: Commands
@@ -6492,101 +5540,13 @@
           displayName: az notification-hub namespace authorization-rule
           items: []
   - name: Oracle.Database
-    items:
-    - name: Commands
-      uid: sp-Oracle.Database
-      displayName: Oracle.Database
-    - name: oracle-database
-      items:
-      - name: Commands
-        uid: az_oracle-database
-        displayName: az oracle-database
-      - name: autonomous-database
-        items:
-        - name: Commands
-          uid: az_oracle-database_autonomous-database
-          displayName: az oracle-database autonomous-database
-        - name: backup
-          uid: az_oracle-database_autonomous-database_backup
-          displayName: az oracle-database autonomous-database backup
-          items: []
-        - name: character-set
-          uid: az_oracle-database_autonomous-database_character-set
-          displayName: az oracle-database autonomous-database character-set
-          items: []
-        - name: national-character-set
-          uid: az_oracle-database_autonomous-database_national-character-set
-          displayName: az oracle-database autonomous-database national-character-set
-          items: []
-        - name: version
-          uid: az_oracle-database_autonomous-database_version
-          displayName: az oracle-database autonomous-database version
-          items: []
-      - name: cloud-exadata-infrastructure
-        items:
-        - name: Commands
-          uid: az_oracle-database_cloud-exadata-infrastructure
-          displayName: az oracle-database cloud-exadata-infrastructure
-        - name: database-server
-          uid: az_oracle-database_cloud-exadata-infrastructure_database-server
-          displayName: az oracle-database cloud-exadata-infrastructure database-server
-          items: []
-      - name: cloud-vm-cluster
-        items:
-        - name: Commands
-          uid: az_oracle-database_cloud-vm-cluster
-          displayName: az oracle-database cloud-vm-cluster
-        - name: database-node
-          uid: az_oracle-database_cloud-vm-cluster_database-node
-          displayName: az oracle-database cloud-vm-cluster database-node
-          items: []
-      - name: database-system-shape
-        uid: az_oracle-database_database-system-shape
-        displayName: az oracle-database database-system-shape
-        items: []
-      - name: dns-private-view
-        uid: az_oracle-database_dns-private-view
-        displayName: az oracle-database dns-private-view
-        items: []
-      - name: dns-private-zone
-        uid: az_oracle-database_dns-private-zone
-        displayName: az oracle-database dns-private-zone
-        items: []
-      - name: gi-version
-        uid: az_oracle-database_gi-version
-        displayName: az oracle-database gi-version
-        items: []
+    uid: sp-Oracle.Database
+    displayName: Oracle.Database
+    items: []
   - name: Orbital
-    items:
-    - name: Commands
-      uid: sp-Orbital
-      displayName: Orbital
-    - name: orbital
-      items:
-      - name: Commands
-        uid: az_orbital
-        displayName: az orbital
-      - name: available-ground-station
-        uid: az_orbital_available-ground-station
-        displayName: az orbital available-ground-station
-        items: []
-      - name: contact-profile
-        uid: az_orbital_contact-profile
-        displayName: az orbital contact-profile
-        items: []
-      - name: operation-result
-        uid: az_orbital_operation-result
-        displayName: az orbital operation-result
-        items: []
-      - name: spacecraft
-        items:
-        - name: Commands
-          uid: az_orbital_spacecraft
-          displayName: az orbital spacecraft
-        - name: contact
-          uid: az_orbital_spacecraft_contact
-          displayName: az orbital spacecraft contact
-          items: []
+    uid: sp-Orbital
+    displayName: Orbital
+    items: []
   - name: Palo Alto Networks
     items:
     - name: Commands
@@ -6757,23 +5717,9 @@
           displayName: az providerhub sku nested-resource-type-third
           items: []
   - name: Purview
-    items:
-    - name: Commands
-      uid: sp-Purview
-      displayName: Purview
-    - name: purview
-      items:
-      - name: Commands
-        uid: az_purview
-        displayName: az purview
-      - name: account
-        uid: az_purview_account
-        displayName: az purview account
-        items: []
-      - name: default-account
-        uid: az_purview_default-account
-        displayName: az purview default-account
-        items: []
+    uid: sp-Purview
+    displayName: Purview
+    items: []
   - name: Quantum
     items:
     - name: Commands
@@ -6797,33 +5743,13 @@
         displayName: az quantum target
         items: []
       - name: workspace
-        items:
-        - name: Commands
-          uid: az_quantum_workspace
-          displayName: az quantum workspace
-        - name: keys
-          uid: az_quantum_workspace_keys
-          displayName: az quantum workspace keys
-          items: []
+        uid: az_quantum_workspace
+        displayName: az quantum workspace
+        items: []
   - name: Qumulo
-    items:
-    - name: Commands
-      uid: sp-Qumulo
-      displayName: Qumulo
-    - name: qumulo
-      items:
-      - name: Commands
-        uid: az_qumulo
-        displayName: az qumulo
-      - name: storage
-        items:
-        - name: Commands
-          uid: az_qumulo_storage
-          displayName: az qumulo storage
-        - name: file-system
-          uid: az_qumulo_storage_file-system
-          displayName: az qumulo storage file-system
-          items: []
+    uid: sp-Qumulo
+    displayName: Qumulo
+    items: []
   - name: Quota
     items:
     - name: Commands
@@ -7056,19 +5982,6 @@
     - name: Commands
       uid: sp-SAP_on_Azure
       displayName: SAP on Azure
-    - name: hanainstance
-      uid: az_hanainstance
-      displayName: az hanainstance
-      items: []
-    - name: sapmonitor
-      items:
-      - name: Commands
-        uid: az_sapmonitor
-        displayName: az sapmonitor
-      - name: provider-instance
-        uid: az_sapmonitor_provider-instance
-        displayName: az sapmonitor provider-instance
-        items: []
     - name: workloads
       items:
       - name: Commands
@@ -7883,23 +6796,9 @@
         displayName: az stack-hci-vm storagepath
         items: []
   - name: Standby Pool
-    items:
-    - name: Commands
-      uid: sp-Standby_Pool
-      displayName: Standby Pool
-    - name: standby-container-group-pool
-      uid: az_standby-container-group-pool
-      displayName: az standby-container-group-pool
-      items: []
-    - name: standby-vm-pool
-      items:
-      - name: Commands
-        uid: az_standby-vm-pool
-        displayName: az standby-vm-pool
-      - name: vm
-        uid: az_standby-vm-pool_vm
-        displayName: az standby-vm-pool vm
-        items: []
+    uid: sp-Standby_Pool
+    displayName: Standby Pool
+    items: []
   - name: Storage
     items:
     - name: Commands
@@ -8159,14 +7058,9 @@
           displayName: az storagesync sync-group server-endpoint
           items: []
   - name: Storage Cache - AML file systems
-    items:
-    - name: Commands
-      uid: sp-Storage_Cache_-_AML_file_systems
-      displayName: Storage Cache - AML file systems
-    - name: amlfs
-      uid: az_amlfs
-      displayName: az amlfs
-      items: []
+    uid: sp-Storage_Cache_-_AML_file_systems
+    displayName: Storage Cache - AML file systems
+    items: []
   - name: Stream Analytics
     items:
     - name: Commands

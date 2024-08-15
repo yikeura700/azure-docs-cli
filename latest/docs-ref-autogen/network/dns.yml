@@ -12,7 +12,6 @@ directCommands:
     Returns the DNS records specified by the referencing targetResourceIds.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network dns list-references [--parameters]
   examples:
   - summary: |-
@@ -155,5 +154,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage DNS domains in Azure.

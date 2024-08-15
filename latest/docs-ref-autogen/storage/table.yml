@@ -12,7 +12,6 @@ directCommands:
     Create a new table in the storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage table create --name
                             [--account-key]
@@ -57,7 +56,6 @@ directCommands:
     Delete the specified table and any data it contains.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage table delete --name
                             [--account-key]
@@ -102,7 +100,6 @@ directCommands:
     Return a boolean indicating whether the table exists.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage table exists --name
                             [--account-key]
@@ -142,7 +139,6 @@ directCommands:
     Generate a shared access signature for the table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage table generate-sas --name
                                   [--account-key]
@@ -213,7 +209,6 @@ directCommands:
     List tables in a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage table list [--account-key]
                           [--account-name]
@@ -261,7 +256,6 @@ directCommands:
     It is only available on the secondary location endpoint when read-access geo-redundant replication is enabled for the account.  :return: Dictionary of service stats :rtype: Dict[str, object] :raises: :class:`~azure.core.exceptions.HttpResponseError:`.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage table stats [--account-key]
                            [--account-name]
@@ -327,5 +321,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage NoSQL key-value storage.

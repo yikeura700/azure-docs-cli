@@ -12,7 +12,6 @@ directCommands:
     Create an inbound NAT rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb inbound-nat-rule create --backend-port
                                           --lb-name
@@ -77,7 +76,6 @@ directCommands:
     Delete an inbound NAT rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb inbound-nat-rule delete --lb-name
                                           --name
@@ -111,7 +109,6 @@ directCommands:
     List inbound NAT rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb inbound-nat-rule list --lb-name
                                         --resource-group
@@ -134,7 +131,6 @@ directCommands:
     Get the details of an inbound NAT rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb inbound-nat-rule show --lb-name
                                         --name
@@ -162,7 +158,6 @@ directCommands:
     Update an inbound NAT rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb inbound-nat-rule update --lb-name
                                           --name
@@ -239,7 +234,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb inbound-nat-rule wait [--created]
                                         [--custom]
@@ -324,5 +318,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage inbound NAT rules of a load balancer.

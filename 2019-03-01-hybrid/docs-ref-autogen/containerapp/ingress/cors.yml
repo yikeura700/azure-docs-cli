@@ -12,7 +12,6 @@ directCommands:
     Disable CORS policy for a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp ingress cors disable [--ids]
                                          [--name]
@@ -41,7 +40,6 @@ directCommands:
     Enable CORS policy for a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp ingress cors enable --allowed-origins
                                         [--allow-credentials {false, true}]
@@ -100,7 +98,6 @@ directCommands:
     Show CORS policy for a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp ingress cors show [--ids]
                                       [--name]
@@ -129,7 +126,6 @@ directCommands:
     Update CORS policy for a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp ingress cors update [--allow-credentials {false, true}]
                                         [--allowed-headers]
@@ -207,5 +203,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/14/2024
   description: Commands to manage CORS policy for a container app.

@@ -12,7 +12,6 @@ directCommands:
     List nodes of a cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb postgres cluster server list --cluster-name
                                              --resource-group
@@ -35,7 +34,6 @@ directCommands:
     Get information about a node in cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb postgres cluster server show [--cluster-name]
                                              [--ids]
@@ -90,5 +88,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB for PostgreSQL cluster servers.

@@ -12,7 +12,6 @@ directCommands:
     Trigger the discovery of any unprotected items of the given workload type in the given container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup protectable-item initialize --container-name
                                           --resource-group
@@ -46,7 +45,6 @@ directCommands:
     Retrieve all protectable items within a certain container or across all registered containers.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup protectable-item list --resource-group
                                     --vault-name
@@ -95,7 +93,6 @@ directCommands:
     Retrieve the specified protectable item within the given container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup protectable-item show --protectable-item-type {HANAInstance, SAPHanaDatabase, SAPHanaSystem, SQLAG, SQLDatabase, SQLInstance}
                                     --server-name
@@ -169,5 +166,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: Manage the item which is yet to be protected or backed up to an Azure Recovery services vault with an associated policy.

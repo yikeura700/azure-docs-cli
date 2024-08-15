@@ -12,7 +12,6 @@ directCommands:
     Create an Cassandra keyspace under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra keyspace create --account-name
                                           --name
@@ -45,7 +44,6 @@ directCommands:
     Delete the Cassandra keyspace under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra keyspace delete --account-name
                                           --name
@@ -79,7 +77,6 @@ directCommands:
     Checks if an Azure Cosmos DB Cassandra keyspace exists.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra keyspace exists --account-name
                                           --name
@@ -103,7 +100,6 @@ directCommands:
     List the Cassandra keyspaces under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra keyspace list --account-name
                                         --resource-group
@@ -126,7 +122,6 @@ directCommands:
     Show the details of a Cassandra keyspace under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra keyspace show --account-name
                                         --name
@@ -179,5 +174,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB Cassandra keyspaces.

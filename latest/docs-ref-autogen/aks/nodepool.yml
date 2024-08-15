@@ -16,7 +16,6 @@ directCommands:
     Add a node pool to the managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool add --cluster-name
                         --name
@@ -590,7 +589,6 @@ directCommands:
     Delete the agent pool in the managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool delete --cluster-name
                            --name
@@ -701,7 +699,6 @@ directCommands:
     Get the available upgrade versions for an agent pool of the managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool get-upgrades --cluster-name
                                  --name
@@ -757,7 +754,6 @@ directCommands:
     List node pools in the managed Kubernetes cluster. To get list of nodes in the cluster run `kubectl get nodes` command.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool list --cluster-name
                          --resource-group
@@ -795,7 +791,6 @@ directCommands:
     Abort last running operation on nodepool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool operation-abort --cluster-name
                                     --name
@@ -867,7 +862,6 @@ directCommands:
     Scale the node pool in a managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool scale --cluster-name
                           --name
@@ -941,7 +935,6 @@ directCommands:
     Show the details for a node pool in the managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool show --cluster-name
                          --name
@@ -989,7 +982,6 @@ directCommands:
     Start stopped agent pool in the managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool start --cluster-name
                           --name
@@ -1065,7 +1057,6 @@ directCommands:
     Stop running agent pool in the managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool stop --cluster-name
                          --name
@@ -1143,7 +1134,6 @@ directCommands:
     Update a node pool to enable/disable cluster-autoscaler or change min-count or max-count. When called with no optional arguments this attempts to move the node pool to its goal state without changing the current node pool configuration. This can be used to move out of a non succeeded state.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool update --cluster-name
                            --name
@@ -1453,7 +1443,6 @@ directCommands:
     Upgrade the node pool in a managed Kubernetes cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool upgrade --cluster-name
                             --name
@@ -1591,7 +1580,6 @@ directCommands:
     If an operation on a node pool was interrupted or was started with `--no-wait`, use this command to wait for it to complete.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks nodepool wait --cluster-name
                          --name

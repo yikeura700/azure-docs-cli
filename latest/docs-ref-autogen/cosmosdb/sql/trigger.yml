@@ -12,7 +12,6 @@ directCommands:
     Create an SQL trigger under an Azure Cosmos DB SQL container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql trigger create --account-name
                                    --body
@@ -66,7 +65,6 @@ directCommands:
     Delete the SQL trigger under an Azure Cosmos DB SQL container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql trigger delete --account-name
                                    --container-name
@@ -106,7 +104,6 @@ directCommands:
     List the SQL triggers under an Azure Cosmos DB SQL container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql trigger list --account-name
                                  --container-name
@@ -135,7 +132,6 @@ directCommands:
     Show the details of a SQL trigger under an Azure Cosmos DB SQL container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql trigger show --account-name
                                  --container-name
@@ -169,7 +165,6 @@ directCommands:
     Updates an Azure Cosmos DB SQL trigger.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb sql trigger update --account-name
                                    --container-name
@@ -243,5 +238,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB SQL triggers.
