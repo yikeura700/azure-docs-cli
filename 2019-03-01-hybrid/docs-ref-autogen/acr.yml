@@ -1,10 +1,10 @@
 ### YamlMime:AzureCLIGroup
 uid: az_acr
 name: az acr
-importantNote: >-
+extensionInformation: >-
   > [!NOTE]
 
-  > This command group has commands that are defined in two or more extensions. Each extension will automatically install the first time you run an extension command. [Learn more](https://learn.microsoft.com/cli/azure/azure-cli-extensions-overview) about extensions.
+  > This reference is part of the **acrquery** extension for the Azure CLI (version 2.48.0 or higher). The extension will automatically install the first time you run an **az acr** command. [Learn more](https://learn.microsoft.com/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: |-
   KQL querying against ACR content.
 status: GA
@@ -64,22 +64,6 @@ directCommands:
     summary: |-
       Registry username.
 commands:
-- az_acr_export-pipeline
-- az_acr_export-pipeline_create
-- az_acr_export-pipeline_delete
-- az_acr_export-pipeline_list
-- az_acr_export-pipeline_show
-- az_acr_import-pipeline
-- az_acr_import-pipeline_create
-- az_acr_import-pipeline_delete
-- az_acr_import-pipeline_list
-- az_acr_import-pipeline_show
-- az_acr_pipeline-run
-- az_acr_pipeline-run_clean
-- az_acr_pipeline-run_create
-- az_acr_pipeline-run_delete
-- az_acr_pipeline-run_list
-- az_acr_pipeline-run_show
 - az_acr_query
 globalParameters:
 - name: --debug
