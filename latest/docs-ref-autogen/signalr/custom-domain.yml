@@ -12,7 +12,6 @@ directCommands:
     Create a custom domain of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr custom-domain create --certificate-resource-id
                                     --domain-name
@@ -46,7 +45,6 @@ directCommands:
     Delete a custom domain of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr custom-domain delete --name
                                     --resource-group
@@ -70,7 +68,6 @@ directCommands:
     List custom domains of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr custom-domain list --resource-group
                                   --signalr-name
@@ -89,7 +86,6 @@ directCommands:
     Show the detail of a custom domain of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr custom-domain show --name
                                   --resource-group
@@ -113,7 +109,6 @@ directCommands:
     Update a custom domain of SignalR Service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/signalr/_help.py
   syntax: >-
     az signalr custom-domain update --name
                                     --resource-group
@@ -191,5 +186,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/10/2023
   description: Manage custom domain settings.

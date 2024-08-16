@@ -12,7 +12,6 @@ directCommands:
     Update an existing function app's scale configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp scale config set [--ids]
                                     [--instance-memory]
@@ -67,7 +66,6 @@ directCommands:
     Get the details of a function app's scale configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp scale config show [--ids]
                                      [--name]
@@ -121,5 +119,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage a function app's scale configuration.

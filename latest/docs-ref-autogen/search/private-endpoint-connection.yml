@@ -12,7 +12,6 @@ directCommands:
     Disconnects the private endpoint connection and deletes it from the search service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search private-endpoint-connection delete --name
                                                  --resource-group
@@ -42,7 +41,6 @@ directCommands:
     Gets a list of all private endpoint connections in the given service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search private-endpoint-connection list --resource-group
                                                --service-name
@@ -61,7 +59,6 @@ directCommands:
     Gets the details of the private endpoint connection to the search service in the given resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search private-endpoint-connection show --name
                                                --resource-group
@@ -85,7 +82,6 @@ directCommands:
     Update an existing private endpoint connection in a Search service in the given resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search private-endpoint-connection update --actions-required
                                                  --description
@@ -148,5 +144,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/01/2021
   description: Manage Azure Search private endpoint connections.

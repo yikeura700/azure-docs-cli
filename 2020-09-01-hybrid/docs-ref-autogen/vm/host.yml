@@ -12,7 +12,6 @@ directCommands:
     Create a dedicated host.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host create --host-group
                       --name
@@ -78,7 +77,6 @@ directCommands:
     Delete a dedicated host.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host delete [--host-group]
                       [--host-name]
@@ -117,7 +115,6 @@ directCommands:
     Get instance information about a dedicated host.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host get-instance-view [--host-group]
                                  [--ids]
@@ -153,7 +150,6 @@ directCommands:
     List dedicated hosts.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host list --host-group
                     --resource-group
@@ -185,7 +181,6 @@ directCommands:
     Get the details of a dedicated host.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host show [--expand {instanceView, userData}]
                     [--host-group]
@@ -223,7 +218,6 @@ directCommands:
     Update a dedicated host.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host update [--add]
                       [--force-string]
@@ -278,7 +272,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm host wait [--created]
                     [--custom]
@@ -380,5 +373,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Manage Dedicated Hosts for Virtual Machines.

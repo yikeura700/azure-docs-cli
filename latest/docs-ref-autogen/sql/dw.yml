@@ -12,7 +12,6 @@ directCommands:
     Create a data warehouse.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql dw create --name
                      --resource-group
@@ -70,7 +69,6 @@ directCommands:
     Delete a data warehouse.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql dw delete [--ids]
                      [--name]
@@ -113,7 +111,6 @@ directCommands:
     List data warehouses for a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql dw list [--ids]
                    [--resource-group]
@@ -142,7 +139,6 @@ directCommands:
     Pauses a datawarehouse.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql dw pause [--ids]
                     [--name]
@@ -171,7 +167,6 @@ directCommands:
     Resumes a datawarehouse.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql dw resume [--ids]
                      [--name]
@@ -200,7 +195,6 @@ directCommands:
     Get the details for a data warehouse.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql dw show [--filter]
                    [--ids]
@@ -237,7 +231,6 @@ directCommands:
     Update a data warehouse.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql dw update [--add]
                      [--filter]
@@ -334,5 +327,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage data warehouses.

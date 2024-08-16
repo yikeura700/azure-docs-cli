@@ -12,7 +12,6 @@ directCommands:
     Create new Redis Cache instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis create --location
                     --name
@@ -165,7 +164,6 @@ directCommands:
     Deletes a Redis cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis delete [--ids]
                     [--name]
@@ -195,7 +193,6 @@ directCommands:
     Export data stored in a Redis cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis export --container
                     --prefix
@@ -248,7 +245,6 @@ directCommands:
     Delete all of the keys in a cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis flush [--ids]
                    [--name]
@@ -280,7 +276,6 @@ directCommands:
     Usage example - az redis force-reboot --name testCacheName --resource-group testResourceGroup --reboot-type {AllNodes, PrimaryNode, SecondaryNode}  [--shard-id].
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis force-reboot --reboot-type {AllNodes, PrimaryNode, SecondaryNode}
                           [--ids]
@@ -316,7 +311,6 @@ directCommands:
     Import data into a Redis cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis import --files
                     [--auth-method {ManagedIdentity, SAS}]
@@ -368,7 +362,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'redis import' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis import-method --files
                            [--auth-method {ManagedIdentity, SAS}]
@@ -414,7 +407,6 @@ directCommands:
     Lists details about all caches within current Subscription or provided Resource Group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: az redis list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -428,7 +420,6 @@ directCommands:
     This operation requires write permission to the cache resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis list-keys [--ids]
                        [--name]
@@ -455,7 +446,6 @@ directCommands:
     Usage example - az redis regenerate-keys --name testCacheName --resource-group testResourceGroup --key-type {Primary, Secondary}.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis regenerate-keys --key-type {Primary, Secondary}
                              [--ids]
@@ -487,7 +477,6 @@ directCommands:
     Gets a Redis cache (resource description).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis show [--ids]
                   [--name]
@@ -514,7 +503,6 @@ directCommands:
     Scale or update settings of a Redis cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis update [--add]
                     [--force-string]
@@ -655,5 +643,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/25/2024
   description: Manage dedicated Redis caches for your Azure applications.

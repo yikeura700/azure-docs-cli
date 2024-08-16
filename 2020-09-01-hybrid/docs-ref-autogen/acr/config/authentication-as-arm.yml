@@ -16,7 +16,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr config authentication-as-arm' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr config authentication-as-arm show --registry
                                              [--resource-group]
@@ -41,7 +40,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr config authentication-as-arm' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr config authentication-as-arm update --registry
                                                [--resource-group]
@@ -94,5 +92,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Manage 'Azure AD authenticate as ARM' policy for Azure Container Registries.

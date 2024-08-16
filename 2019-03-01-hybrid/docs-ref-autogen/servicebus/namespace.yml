@@ -12,7 +12,6 @@ directCommands:
     Create a Service Bus Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace create --name
                                    --resource-group
@@ -148,5 +147,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Manage Azure Service Bus Namespace.

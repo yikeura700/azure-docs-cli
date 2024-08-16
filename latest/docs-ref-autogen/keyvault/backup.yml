@@ -12,7 +12,6 @@ directCommands:
     Begin a full backup of the HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault backup start [--blob-container-name]
                              [--hsm-name]
@@ -71,5 +70,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage full HSM backup.

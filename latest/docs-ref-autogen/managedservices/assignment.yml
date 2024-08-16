@@ -12,7 +12,6 @@ directCommands:
     Creates a new registration assignment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/managedservices/_help.py
   syntax: >-
     az managedservices assignment create --definition
                                          [--assignment-id]
@@ -42,7 +41,6 @@ directCommands:
     Deletes the registration assignment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/managedservices/_help.py
   syntax: >-
     az managedservices assignment delete --assignment
                                          [--resource-group]
@@ -68,7 +66,6 @@ directCommands:
     List all the registration assignments.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/managedservices/_help.py
   syntax: >-
     az managedservices assignment list [--include-definition {false, true}]
                                        [--resource-group]
@@ -96,7 +93,6 @@ directCommands:
     Gets a registration assignment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/managedservices/_help.py
   syntax: >-
     az managedservices assignment show --assignment
                                        [--include-definition {false, true}]
@@ -154,5 +150,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 09/16/2019
   description: Manage the registration assignments in Azure.

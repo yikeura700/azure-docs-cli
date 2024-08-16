@@ -16,7 +16,6 @@ directCommands:
     Queues a quick build, providing streaming logs for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr build --registry
                  [--agent-pool]
@@ -124,7 +123,6 @@ directCommands:
     Gets health information on the environment and optionally a target registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr check-health [--ignore-errors]
                         [--name]
@@ -158,7 +156,6 @@ directCommands:
     Checks if an Azure Container Registry name is valid and available for use.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: az acr check-name --name
   examples:
   - summary: |-
@@ -175,7 +172,6 @@ directCommands:
     Create an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr create --name
                   --resource-group
@@ -266,7 +262,6 @@ directCommands:
     Deletes an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr delete --name
                   [--resource-group]
@@ -294,7 +289,6 @@ directCommands:
     Imports an image to an Azure Container Registry from another Container Registry. Import removes the need to docker pull, docker tag, docker push. For larger images consider using `--no-wait`.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr import --name
                   --source
@@ -366,7 +360,6 @@ directCommands:
     Lists all the container registries under the current subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: az acr list [--resource-group]
   examples:
   - summary: |-
@@ -387,7 +380,6 @@ directCommands:
     Docker must be installed on your machine. Once done, use 'docker logout <registry url>' to log out. (If you only need an access token and do not want to install Docker, specify '--expose-token').
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr login --name
                  [--expose-token]
@@ -465,7 +457,7 @@ directCommands:
     summary: |-
       The name of the container registry that the query is run against.
   optionalParameters:
-  - name: --password -p
+  - name: --password
     summary: |-
       Registry password.
   - name: --repository
@@ -474,7 +466,7 @@ directCommands:
   - name: --skip-token
     summary: |-
       Skip token to get the next page of the query if applicable.
-  - name: --username -u
+  - name: --username
     summary: |-
       Registry username.
 - uid: az_acr_run
@@ -483,7 +475,6 @@ directCommands:
     Queues a quick run providing streamed logs for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr run --registry
                [--agent-pool]
@@ -586,7 +577,6 @@ directCommands:
     Get the details of an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr show --name
                 [--resource-group]
@@ -612,7 +602,6 @@ directCommands:
     Display registry endpoints.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr show-endpoints --name
                           [--resource-group]
@@ -631,7 +620,6 @@ directCommands:
     Get the storage usage for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr show-usage --name
                       [--resource-group]
@@ -654,7 +642,6 @@ directCommands:
     Update an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr update --name
                   [--add]

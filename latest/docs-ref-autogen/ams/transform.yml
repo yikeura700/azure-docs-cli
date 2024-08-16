@@ -12,7 +12,6 @@ directCommands:
     Create a transform.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams transform create --account-name
                             --name
@@ -92,7 +91,6 @@ directCommands:
     Delete a transform.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams transform delete [--account-name]
                             [--ids]
@@ -121,7 +119,6 @@ directCommands:
     List all the transforms of an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams transform list --account-name
                           --resource-group
@@ -149,7 +146,6 @@ directCommands:
     Show the details of a transform.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams transform show [--account-name]
                           [--ids]
@@ -178,7 +174,6 @@ directCommands:
     Update the details of a transform.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams transform update [--account-name]
                             [--add]
@@ -263,5 +258,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage transforms for an Azure Media Services account.

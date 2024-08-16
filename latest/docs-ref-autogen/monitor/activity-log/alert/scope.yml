@@ -10,7 +10,6 @@ directCommands:
     Add scopes to this activity log alert rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor activity-log alert scope add --scope
                                             [--activity-log-alert-name]
@@ -77,7 +76,6 @@ directCommands:
     Removes scopes from this activity log alert rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor activity-log alert scope remove --scope
                                                [--activity-log-alert-name]
@@ -146,5 +144,4 @@ globalParameters:
 - name: --verbose
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
-metadata:
-  ms.date: 10/11/2023
+metadata: {}

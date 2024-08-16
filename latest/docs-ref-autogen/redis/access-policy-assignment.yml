@@ -12,7 +12,6 @@ directCommands:
     Add an Access Policy Assignment (Redis User) to the Redis Cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis access-policy-assignment create --access-policy-name
                                              --name
@@ -55,7 +54,6 @@ directCommands:
     Delete the Access Policy Assignment (Redis User).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis access-policy-assignment delete --policy-assignment-name
                                              [--ids]
@@ -90,7 +88,6 @@ directCommands:
     Get the list of Access Policy Assignments (Redis Users) associated with the Redis Cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis access-policy-assignment list --name
                                            --resource-group
@@ -113,7 +110,6 @@ directCommands:
     Get the detailed information about an Access Policy Assignment (Redis User) of the Redis Cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis access-policy-assignment show --policy-assignment-name
                                            [--ids]
@@ -148,7 +144,6 @@ directCommands:
     Update an Access Policy Assignment (Redis User) of the Redis Cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis access-policy-assignment update --access-policy-name
                                              --object-id
@@ -223,5 +218,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/25/2024
   description: Manage Access Policy Assignments (Redis Users) for Redis Cache.

@@ -12,7 +12,6 @@ directCommands:
     Create an authorization rule for a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace authorization-rule create --authorization-rule-name
                                                       --namespace-name
@@ -45,7 +44,6 @@ directCommands:
     Delete a namespace authorization rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace authorization-rule delete [--authorization-rule-name]
                                                       [--ids]
@@ -78,7 +76,6 @@ directCommands:
     List the authorization rules for a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace authorization-rule list --namespace-name
                                                     --resource-group
@@ -101,7 +98,6 @@ directCommands:
     Get an authorization rule for a namespace by rule name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace authorization-rule show [--authorization-rule-name]
                                                     [--ids]
@@ -134,7 +130,6 @@ directCommands:
     Update an authorization rule for a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace authorization-rule update [--add]
                                                       [--authorization-rule-name]
@@ -216,5 +211,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Servicebus namespace authorization-rule.

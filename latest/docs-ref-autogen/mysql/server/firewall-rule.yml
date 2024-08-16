@@ -12,7 +12,6 @@ directCommands:
     Create a new firewall rule for a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server firewall-rule create --end-ip-address
                                          --name
@@ -53,7 +52,6 @@ directCommands:
     Delete a firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server firewall-rule delete [--ids]
                                          [--name]
@@ -91,7 +89,6 @@ directCommands:
     List all firewall rules for a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server firewall-rule list [--ids]
                                        [--resource-group]
@@ -120,7 +117,6 @@ directCommands:
     Get the details of a firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server firewall-rule show [--ids]
                                        [--name]
@@ -153,7 +149,6 @@ directCommands:
     Update a firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server firewall-rule update [--add]
                                          [--end-ip-address]
@@ -242,5 +237,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage firewall rules for a server.

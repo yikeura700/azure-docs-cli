@@ -12,7 +12,6 @@ directCommands:
     Create a new event subscription for a domain topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid domain topic event-subscription create --domain-name
                                                         --domain-topic-name
@@ -219,7 +218,6 @@ directCommands:
     Delete an event subscription of a domain topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid domain topic event-subscription delete --domain-name
                                                         --domain-topic-name
@@ -260,7 +258,6 @@ directCommands:
     List event subscriptions of a specific domain topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid domain topic event-subscription list --domain-name
                                                       --domain-topic-name
@@ -293,7 +290,6 @@ directCommands:
     Get the details of an event subscription of a domain topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid domain topic event-subscription show --domain-name
                                                       --domain-topic-name
@@ -346,7 +342,6 @@ directCommands:
     Update an event subscription of a domain topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid domain topic event-subscription update --domain-name
                                                         --domain-topic-name
@@ -522,5 +517,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/08/2022
   description: Manage event subscriptions of a domain topic.

@@ -12,7 +12,6 @@ directCommands:
     Create a streaming endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-endpoint create --account-name
                                      --name
@@ -91,7 +90,6 @@ directCommands:
     Delete a streaming endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-endpoint delete [--account-name]
                                      [--ids]
@@ -120,7 +118,6 @@ directCommands:
     Get the sku details for a streaming endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-endpoint get-skus [--account-name]
                                        [--ids]
@@ -149,7 +146,6 @@ directCommands:
     List all the streaming endpoints within an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-endpoint list --account-name
                                    --resource-group
@@ -168,7 +164,6 @@ directCommands:
     Set the scale of a streaming endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-endpoint scale --scale-units
                                     [--account-name]
@@ -203,7 +198,6 @@ directCommands:
     Show the details of a streaming endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-endpoint show [--account-name]
                                    [--ids]
@@ -232,7 +226,6 @@ directCommands:
     Start a streaming endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-endpoint start [--account-name]
                                     [--ids]
@@ -266,7 +259,6 @@ directCommands:
     Stop a streaming endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-endpoint stop [--account-name]
                                    [--ids]
@@ -300,7 +292,6 @@ directCommands:
     Update the details of a streaming endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-endpoint update [--account-name]
                                      [--add]
@@ -394,7 +385,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the streaming endpoint is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams streaming-endpoint wait [--account-name]
                                    [--created]
@@ -494,5 +484,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage streaming endpoints for an Azure Media Service account.

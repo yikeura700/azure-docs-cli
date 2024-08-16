@@ -18,7 +18,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command is implicitly deprecated because command group 'acr helm' is deprecated and will be removed in a future release. Use 'helm v3' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr helm repo add --name
                          [--password]
@@ -70,5 +69,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Manage helm chart repositories for Azure Container Registries.

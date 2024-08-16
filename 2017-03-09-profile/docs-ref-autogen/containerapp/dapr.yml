@@ -12,7 +12,6 @@ directCommands:
     Disable Dapr for a container app. Removes existing values.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp dapr disable [--ids]
                                  [--name]
@@ -41,7 +40,6 @@ directCommands:
     Enable Dapr for a container app. Updates existing values.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp dapr enable [--dal]
                                 [--dapr-app-id]
@@ -123,5 +121,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/14/2024
   description: Commands to manage Dapr. To manage Dapr components, see `az containerapp env dapr-component`.

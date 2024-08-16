@@ -12,7 +12,6 @@ directCommands:
     Create the Relay Service Hybrid Connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay hyco create --name
                          --namespace-name
@@ -50,7 +49,6 @@ directCommands:
     Deletes the Relay Service Hybrid Connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay hyco delete [--ids]
                          [--name]
@@ -83,7 +81,6 @@ directCommands:
     List the Hybrid Connection by Relay Service Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay hyco list --namespace-name
                        --resource-group
@@ -115,7 +112,6 @@ directCommands:
     Shows the Relay Service Hybrid Connection Details.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay hyco show [--ids]
                        [--name]
@@ -148,7 +144,6 @@ directCommands:
     Updates the Relay Service Hybrid Connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay hyco update [--add]
                          [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -246,5 +241,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/09/2021
   description: Manage Azure Relay Service Hybrid Connection and Authorization Rule.

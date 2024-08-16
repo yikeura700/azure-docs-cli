@@ -12,7 +12,6 @@ directCommands:
     Clear legal hold tags.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container legal-hold clear --account-name
                                           --container-name
@@ -50,7 +49,6 @@ directCommands:
     Set legal hold tags.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container legal-hold set --account-name
                                         --container-name
@@ -88,7 +86,6 @@ directCommands:
     Get the legal hold properties of a container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container legal-hold show --account-name
                                          --container-name
@@ -139,5 +136,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage container legal holds.

@@ -12,7 +12,6 @@ directCommands:
     Create a live output.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-output create --account-name
                               --archive-window-length
@@ -68,7 +67,6 @@ directCommands:
     Delete a live output.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-output delete [--account-name]
                               [--ids]
@@ -101,7 +99,6 @@ directCommands:
     List all the live outputs in a live event.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-output list --account-name
                             --live-event-name
@@ -125,7 +122,6 @@ directCommands:
     Show the details of a live output.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams live-output show [--account-name]
                             [--ids]
@@ -182,5 +178,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage live outputs for an Azure Media Service account.

@@ -16,7 +16,6 @@ directCommands:
     Open a containerapp in the browser, if possible.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp browse [--ids]
                            [--name]
@@ -45,7 +44,6 @@ directCommands:
     Create a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp create --name
                            --resource-group
@@ -710,7 +708,6 @@ directCommands:
     Delete a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp delete [--ids]
                            [--name]
@@ -788,7 +785,6 @@ directCommands:
     Open an SSH-like interactive shell within a container app replica.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp exec --name
                          --resource-group
@@ -835,7 +831,6 @@ directCommands:
     List container apps.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp list [--environment]
                          [--resource-group]
@@ -893,7 +888,6 @@ directCommands:
     List usages of subscription level quotas in specific region.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: az containerapp list-usages --location
   examples:
   - summary: |-
@@ -910,7 +904,6 @@ directCommands:
     Show details of a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp show [--ids]
                          [--name]
@@ -978,7 +971,6 @@ directCommands:
     Show the verification id for binding app or environment custom domains.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: az containerapp show-custom-domain-verification-id
   examples:
   - summary: |-
@@ -993,7 +985,6 @@ directCommands:
     Create or update a container app as well as any associated resources (ACR, resource group, container apps environment, GitHub Actions, etc.).
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp up --name
                        [--branch]
@@ -1255,7 +1246,6 @@ directCommands:
     Update a container app. In multiple revisions mode, create a new revision based on the latest revision.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp update [--args]
                            [--command]

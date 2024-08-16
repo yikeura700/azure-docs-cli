@@ -12,7 +12,6 @@ directCommands:
     Create NetworkRuleSet for a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace network-rule-set create --namespace-name
                                                     --resource-group
@@ -56,7 +55,6 @@ directCommands:
     List list of NetworkRuleSet for a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace network-rule-set list --namespace-name
                                                   --resource-group
@@ -75,7 +73,6 @@ directCommands:
     Get NetworkRuleSet for a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace network-rule-set show [--ids]
                                                   [--namespace-name]
@@ -100,7 +97,6 @@ directCommands:
     Update NetworkRuleSet for a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus namespace network-rule-set update [--add]
                                                     [--default-action {Allow, Deny}]
@@ -195,5 +191,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Servicebus namespace network-rule-set.

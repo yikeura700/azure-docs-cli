@@ -12,7 +12,6 @@ directCommands:
     Delete a function.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp function delete --function-name
                                    --name
@@ -40,7 +39,6 @@ directCommands:
     List functions in a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp function list --name
                                  --resource-group
@@ -63,7 +61,6 @@ directCommands:
     Get the details of a function.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp function show --function-name
                                  --name
@@ -118,5 +115,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage function app functions.

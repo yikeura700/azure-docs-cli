@@ -16,7 +16,6 @@ directCommands:
     This article lists the Azure CLI commands for Azure Cognitive Services account and subscription management only. Refer to the documentation at https://docs.microsoft.com/azure/cognitive-services/ for individual services to learn how to use the APIs and supported SDKs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account create --kind
                                         --location
@@ -112,7 +111,6 @@ directCommands:
     This article lists the Azure CLI commands for Azure Cognitive Services account and subscription management only. Refer to the documentation at https://docs.microsoft.com/azure/cognitive-services/ for individual services to learn how to use the APIs and supported SDKs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account delete --name
                                         --resource-group
@@ -137,7 +135,6 @@ directCommands:
     This article lists the Azure CLI commands for Azure Cognitive Services account and subscription management only. Refer to the documentation at https://docs.microsoft.com/azure/cognitive-services/ for individual services to learn how to use the APIs and supported SDKs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: az cognitiveservices account list [--resource-group]
   examples:
   - summary: |-
@@ -155,7 +152,6 @@ directCommands:
     This article lists the Azure CLI commands for Azure Cognitive Services account and subscription management only. Refer to the documentation at https://docs.microsoft.com/azure/cognitive-services/ for individual services to learn how to use the APIs and supported SDKs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: az cognitiveservices account list-deleted
   examples:
   - summary: |-
@@ -167,7 +163,6 @@ directCommands:
     List all valid kinds for Azure Cognitive Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: az cognitiveservices account list-kinds
 - uid: az_cognitiveservices_account_list-models
   name: az cognitiveservices account list-models
@@ -177,7 +172,6 @@ directCommands:
     This article lists the Azure CLI commands for Azure Cognitive Services account and subscription management only. Refer to the documentation at https://docs.microsoft.com/azure/cognitive-services/ for individual services to learn how to use the APIs and supported SDKs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account list-models --name
                                              --resource-group
@@ -202,7 +196,6 @@ directCommands:
     This article lists the Azure CLI commands for Azure Cognitive Services account and subscription management only. Refer to the documentation at https://docs.microsoft.com/azure/cognitive-services/ for individual services to learn how to use the APIs and supported SDKs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account list-skus [--kind]
                                            [--location]
@@ -237,7 +230,6 @@ directCommands:
     List usages for Azure Cognitive Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account list-usage --name
                                             --resource-group
@@ -258,7 +250,6 @@ directCommands:
     This article lists the Azure CLI commands for Azure Cognitive Services account and subscription management only. Refer to the documentation at https://docs.microsoft.com/azure/cognitive-services/ for individual services to learn how to use the APIs and supported SDKs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account purge --location
                                        --name
@@ -288,7 +279,6 @@ directCommands:
     This article lists the Azure CLI commands for Azure Cognitive Services account and subscription management only. Refer to the documentation at https://docs.microsoft.com/azure/cognitive-services/ for individual services to learn how to use the APIs and supported SDKs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account recover --location
                                          --name
@@ -318,7 +308,6 @@ directCommands:
     This article lists the Azure CLI commands for Azure Cognitive Services account and subscription management only. Refer to the documentation at https://docs.microsoft.com/azure/cognitive-services/ for individual services to learn how to use the APIs and supported SDKs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account show --name
                                       --resource-group
@@ -343,7 +332,6 @@ directCommands:
     This article lists the Azure CLI commands for Azure Cognitive Services account and subscription management only. Refer to the documentation at https://docs.microsoft.com/azure/cognitive-services/ for individual services to learn how to use the APIs and supported SDKs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account show-deleted --location
                                               --name
@@ -373,7 +361,6 @@ directCommands:
     This article lists the Azure CLI commands for Azure Cognitive Services account and subscription management only. Refer to the documentation at https://docs.microsoft.com/azure/cognitive-services/ for individual services to learn how to use the APIs and supported SDKs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account update --name
                                         --resource-group
@@ -476,5 +463,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/27/2023
   description: This article lists the Azure CLI commands for Azure Cognitive Services account and subscription management only. Refer to the documentation at https://docs.microsoft.com/azure/cognitive-services/ for individual services to learn how to use the APIs and supported SDKs.

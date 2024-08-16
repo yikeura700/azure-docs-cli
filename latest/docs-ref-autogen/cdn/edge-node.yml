@@ -12,7 +12,6 @@ directCommands:
     List are the global Point of Presence (POP) locations used to deliver CDN content to end users.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn edge-node list [--max-items]
                           [--next-token]
@@ -50,5 +49,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/28/2024
   description: View all available CDN edge nodes.

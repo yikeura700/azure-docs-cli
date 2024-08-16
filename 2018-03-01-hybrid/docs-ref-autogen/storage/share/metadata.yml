@@ -12,7 +12,6 @@ directCommands:
     Return all user-defined metadata for the specified share.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share metadata show --name
                                    [--account-key]
@@ -53,7 +52,6 @@ directCommands:
     Each call to this operation replaces all existing metadata attached to the share. To remove all metadata from the share, call this operation with no metadata dict.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage share metadata update --name
                                      [--account-key]
@@ -114,5 +112,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage the metadata of a file share.

@@ -12,7 +12,6 @@ directCommands:
     Create an address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway address-pool create --gateway-name
                                                        --name
@@ -50,7 +49,6 @@ directCommands:
     Delete an address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway address-pool delete --gateway-name
                                                        --name
@@ -84,7 +82,6 @@ directCommands:
     List address pools.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway address-pool list --gateway-name
                                                      --resource-group
@@ -107,7 +104,6 @@ directCommands:
     Get the details of an address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway address-pool show --gateway-name
                                                      --name
@@ -135,7 +131,6 @@ directCommands:
     Update an address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway address-pool update --gateway-name
                                                        --name
@@ -196,7 +191,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway address-pool wait [--created]
                                                      [--custom]
@@ -281,5 +275,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage address pools of an application gateway.

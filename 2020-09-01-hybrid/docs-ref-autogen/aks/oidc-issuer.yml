@@ -12,7 +12,6 @@ directCommands:
     Rotate oidc issuer service account signing keys.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks oidc-issuer rotate-signing-keys --name
                                            --resource-group
@@ -63,5 +62,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Oidc issuer related commands.

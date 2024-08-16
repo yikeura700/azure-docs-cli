@@ -12,7 +12,6 @@ directCommands:
     Creates a server key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server key create --kid
                              --resource-group
@@ -36,7 +35,6 @@ directCommands:
     Deletes a server key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server key delete --kid
                              [--ids]
@@ -67,7 +65,6 @@ directCommands:
     Gets a list of server keys.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server key list [--ids]
                            [--resource-group]
@@ -92,7 +89,6 @@ directCommands:
     Shows a server key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server key show --kid
                            [--ids]
@@ -147,5 +143,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage a server's keys.

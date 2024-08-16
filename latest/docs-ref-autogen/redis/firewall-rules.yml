@@ -14,7 +14,6 @@ directCommands:
     Usage example - az redis firewall-rules create --name testCacheName --resource-group testResourceGroup  --start-ip 10.10.10.10 --end-ip 20.20.20.20 --rule-name 10to20.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis firewall-rules create --end-ip
                                    --name
@@ -48,7 +47,6 @@ directCommands:
     Deletes a single firewall rule in a specified redis cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis firewall-rules delete --rule-name
                                    [--ids]
@@ -79,7 +77,6 @@ directCommands:
     Gets all firewall rules in the specified redis cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis firewall-rules list --name
                                  --resource-group
@@ -98,7 +95,6 @@ directCommands:
     Gets a single firewall rule in a specified redis cache.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis firewall-rules show --rule-name
                                  [--ids]
@@ -129,7 +125,6 @@ directCommands:
     Update a redis cache firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis firewall-rules update --end-ip
                                    --rule-name
@@ -195,5 +190,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/25/2024
   description: Manage Redis firewall rules.

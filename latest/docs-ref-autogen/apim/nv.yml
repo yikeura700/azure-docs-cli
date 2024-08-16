@@ -12,7 +12,6 @@ directCommands:
     Create an API Management Named Value.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim nv create --display-name
                       --named-value-id
@@ -71,7 +70,6 @@ directCommands:
     Delete an API Management Named Value.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim nv delete --named-value-id
                       --resource-group
@@ -101,7 +99,6 @@ directCommands:
     List API Management Named Values.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim nv list --resource-group
                     --service-name
@@ -120,7 +117,6 @@ directCommands:
     Show details of an API Management Named Value.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim nv show --named-value-id
                     --resource-group
@@ -144,7 +140,6 @@ directCommands:
     Gets the secret of an API Management Named Value.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim nv show-secret --named-value-id
                            --resource-group
@@ -168,7 +163,6 @@ directCommands:
     Update an API Management Named Value.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim nv update --named-value-id
                       --resource-group
@@ -236,7 +230,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of an apim named value is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim nv wait --named-value-id
                     --resource-group
@@ -326,5 +319,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/19/2024
   description: Manage Azure API Management Named Values.

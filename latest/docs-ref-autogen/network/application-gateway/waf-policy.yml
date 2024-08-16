@@ -14,7 +14,6 @@ directCommands:
     Create an application gateway WAF policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy create --name
                                                      --resource-group
@@ -70,7 +69,6 @@ directCommands:
     Delete an application gateway WAF policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy delete [--ids]
                                                      [--name]
@@ -104,7 +102,6 @@ directCommands:
     List application gateway WAF policies.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy list [--max-items]
                                                    [--next-token]
@@ -125,7 +122,6 @@ directCommands:
     Get the details of an application gateway WAF policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy show [--ids]
                                                    [--name]
@@ -154,7 +150,6 @@ directCommands:
     Update an application gateway WAF policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy update [--add]
                                                      [--custom-rules]
@@ -219,7 +214,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy wait [--created]
                                                    [--custom]
@@ -331,5 +325,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: To learn more about Web Application Firewall visit https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/ag-overview.

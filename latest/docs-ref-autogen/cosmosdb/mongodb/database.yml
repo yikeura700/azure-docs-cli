@@ -16,7 +16,6 @@ directCommands:
     Create an MongoDB database under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb mongodb database create --account-name
                                         --name
@@ -49,7 +48,6 @@ directCommands:
     Delete the MongoDB database under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb mongodb database delete --account-name
                                         --name
@@ -83,7 +81,6 @@ directCommands:
     Checks if an Azure Cosmos DB MongoDB database exists.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb mongodb database exists --account-name
                                         --name
@@ -107,7 +104,6 @@ directCommands:
     List the MongoDB databases under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb mongodb database list --account-name
                                       --resource-group
@@ -159,7 +155,6 @@ directCommands:
     Restore a deleted mongodb database within the same account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb mongodb database restore --account-name
                                          --name
@@ -233,7 +228,6 @@ directCommands:
     Show the details of a MongoDB database under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb mongodb database show --account-name
                                       --name

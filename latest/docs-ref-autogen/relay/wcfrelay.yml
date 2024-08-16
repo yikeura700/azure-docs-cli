@@ -12,7 +12,6 @@ directCommands:
     Create the Relay Service WCF Relay.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay wcfrelay create --name
                              --namespace-name
@@ -61,7 +60,6 @@ directCommands:
     Deletes the Relay Service WCF Relay.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay wcfrelay delete [--ids]
                              [--name]
@@ -94,7 +92,6 @@ directCommands:
     List the WCF Relay by Relay Service Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay wcfrelay list --namespace-name
                            --resource-group
@@ -126,7 +123,6 @@ directCommands:
     Shows the Relay Service WCF Relay Details.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay wcfrelay show [--ids]
                            [--name]
@@ -159,7 +155,6 @@ directCommands:
     Updates existing Relay Service WCF Relay.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay wcfrelay update [--add]
                              [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -257,5 +252,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/09/2021
   description: Manage Azure Relay Service WCF Relay and Authorization Rule.

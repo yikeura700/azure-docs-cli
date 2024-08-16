@@ -12,7 +12,6 @@ directCommands:
     Create a Service Bus queue. This operation is idempotent.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus queue create --name
                                --namespace-name
@@ -108,7 +107,6 @@ directCommands:
     Delete a queue from the specified namespace in a resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus queue delete [--ids]
                                [--name]
@@ -137,7 +135,6 @@ directCommands:
     List the queues within a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus queue list --namespace-name
                              --resource-group
@@ -165,7 +162,6 @@ directCommands:
     Get a description for the specified queue.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus queue show [--ids]
                              [--name]
@@ -194,7 +190,6 @@ directCommands:
     Update a Service Bus queue. This operation is idempotent.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus queue update [--add]
                                [--auto-delete-on-idle]
@@ -330,5 +325,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Servicebus queue.

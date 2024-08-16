@@ -16,7 +16,6 @@ directCommands:
     Create a local user for a given storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account local-user create --account-name
                                          --name
@@ -139,7 +138,6 @@ directCommands:
     Delete a local user.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account local-user delete --account-name
                                          --name
@@ -197,7 +195,6 @@ directCommands:
     List local users for a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account local-user list --account-name
                                        --resource-group
@@ -271,7 +268,6 @@ directCommands:
     List sharedkeys and sshAuthorizedKeys for a local user.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account local-user list-keys --account-name
                                             --name
@@ -329,7 +325,6 @@ directCommands:
     Regenerate sshPassword for a local user.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account local-user regenerate-password --account-name
                                                       --name
@@ -387,7 +382,6 @@ directCommands:
     Show info for a local user.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account local-user show --account-name
                                        --name
@@ -445,7 +439,6 @@ directCommands:
     Update properties for a local user.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account local-user update --account-name
                                          --name

@@ -12,7 +12,6 @@ directCommands:
     Create a new server Active Directory administrator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server ad-admin create --display-name
                                   --object-id
@@ -41,7 +40,6 @@ directCommands:
     Sets a server's AD admin.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server ad-admin delete [--ids]
                                   [--resource-group]
@@ -66,7 +64,6 @@ directCommands:
     Gets a list of Azure Active Directory administrators in a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server ad-admin list [--ids]
                                 [--resource-group]
@@ -91,7 +88,6 @@ directCommands:
     Update an existing server Active Directory administrator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql server ad-admin update --display-name
                                   --object-id
@@ -171,5 +167,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage a server's Active Directory administrator.

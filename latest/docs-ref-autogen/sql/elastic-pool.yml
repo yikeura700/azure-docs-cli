@@ -12,7 +12,6 @@ directCommands:
     Create an elastic pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql elastic-pool create --name
                                --resource-group
@@ -112,7 +111,6 @@ directCommands:
     Deletes an elastic pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql elastic-pool delete [--ids]
                                [--name]
@@ -146,7 +144,6 @@ directCommands:
     Gets all elastic pools in a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql elastic-pool list [--ids]
                              [--resource-group]
@@ -175,7 +172,6 @@ directCommands:
     Gets a list of databases in an elastic pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql elastic-pool list-dbs [--ids]
                                  [--name]
@@ -206,7 +202,6 @@ directCommands:
     Also includes available pool DTU settings, storage limits, and per database settings. In order to reduce verbosity, additional storage limits and per database settings are hidden by default.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql elastic-pool list-editions --location
                                       [--available]
@@ -256,7 +251,6 @@ directCommands:
     Gets an elastic pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql elastic-pool show [--ids]
                              [--name]
@@ -285,7 +279,6 @@ directCommands:
     Update an elastic pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql elastic-pool update [--add]
                                [--capacity]
@@ -424,5 +417,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage elastic pools.

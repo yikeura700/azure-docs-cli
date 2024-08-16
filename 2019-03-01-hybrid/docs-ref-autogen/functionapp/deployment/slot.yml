@@ -12,7 +12,6 @@ directCommands:
     Configure deployment slot auto swap.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment slot auto-swap --slot
                                              [--auto-swap-slot]
@@ -52,7 +51,6 @@ directCommands:
     Create a deployment slot.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment slot create --name
                                           --resource-group
@@ -115,7 +113,6 @@ directCommands:
     Delete a deployment slot.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment slot delete --slot
                                           [--ids]
@@ -150,7 +147,6 @@ directCommands:
     List all deployment slots.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment slot list [--ids]
                                         [--name]
@@ -179,7 +175,6 @@ directCommands:
     Swap deployment slots for a function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp deployment slot swap --slot
                                         [--action {preview, reset, swap}]
@@ -256,5 +251,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage function app deployment slots.

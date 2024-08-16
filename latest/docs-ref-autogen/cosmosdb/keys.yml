@@ -12,7 +12,6 @@ directCommands:
     List the access keys or connection strings for a Azure Cosmos DB database account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb keys list --name
                           --resource-group
@@ -42,7 +41,6 @@ directCommands:
     Regenerate an access key for a Azure Cosmos DB database account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb keys regenerate --key-kind {primary, primaryReadonly, secondary, secondaryReadonly}
                                 [--ids]
@@ -100,5 +98,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB keys.

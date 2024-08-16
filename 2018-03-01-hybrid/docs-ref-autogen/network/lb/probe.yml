@@ -12,7 +12,6 @@ directCommands:
     Create a probe in the load balance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb probe create --lb-name
                                --name
@@ -72,7 +71,6 @@ directCommands:
     Delete a probe in the load balancer.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb probe delete --lb-name
                                --name
@@ -106,7 +104,6 @@ directCommands:
     List probes in the load balancer.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb probe list --lb-name
                              --resource-group
@@ -129,7 +126,6 @@ directCommands:
     Get the details of a probe in the load balancer.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb probe show --lb-name
                              --name
@@ -157,7 +153,6 @@ directCommands:
     Update a probe in the load balancer.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb probe update --lb-name
                                --name
@@ -229,7 +224,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb probe wait [--created]
                              [--custom]
@@ -314,5 +308,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Evaluate probe information and define routing rules.

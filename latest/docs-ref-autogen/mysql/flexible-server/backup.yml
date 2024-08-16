@@ -12,7 +12,6 @@ directCommands:
     Create a backup for a given server with specified backup name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server backup create --backup-name
                                            --name
@@ -40,7 +39,6 @@ directCommands:
     List all the backups for a given server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server backup list --name
                                          --resource-group
@@ -63,7 +61,6 @@ directCommands:
     Show the details of a specific backup for a given server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server backup show [--backup-name]
                                          [--ids]
@@ -119,5 +116,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage flexible server backups.

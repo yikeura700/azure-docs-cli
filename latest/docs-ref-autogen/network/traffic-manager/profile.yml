@@ -12,7 +12,6 @@ directCommands:
     Check the availability of a relative DNS name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network traffic-manager profile check-dns [--name]
                                                  [--type]
@@ -34,7 +33,6 @@ directCommands:
     Create a traffic manager profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network traffic-manager profile create --name
                                               --resource-group
@@ -125,7 +123,6 @@ directCommands:
     Delete a traffic manager profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network traffic-manager profile delete [--ids]
                                               [--name]
@@ -157,7 +154,6 @@ directCommands:
     List traffic manager profiles.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network traffic-manager profile list [--resource-group]
   examples:
   - summary: |-
@@ -173,7 +169,6 @@ directCommands:
     Get the details of a traffic manager profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network traffic-manager profile show [--ids]
                                             [--name]
@@ -202,7 +197,6 @@ directCommands:
     Update a traffic manager profile.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network traffic-manager profile update [--custom-headers]
                                               [--ids]
@@ -315,5 +309,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage Azure Traffic Manager profiles.

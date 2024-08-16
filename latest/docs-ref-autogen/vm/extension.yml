@@ -14,7 +14,6 @@ directCommands:
     Delete operation to delete the extension.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm extension delete [--ids]
                            [--name]
@@ -55,7 +54,6 @@ directCommands:
     List the extensions attached to a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm extension list [--ids]
                          [--resource-group]
@@ -86,7 +84,6 @@ directCommands:
     Get extension details from `az vm extension image list`.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm extension set --name
                         --publisher
@@ -184,7 +181,6 @@ directCommands:
     Display information about extensions attached to a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm extension show [--ids]
                          [--instance-view]
@@ -222,7 +218,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of a virtual machine extension is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm extension wait [--created]
                          [--custom]
@@ -325,5 +320,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Extensions are small applications that provide post-deployment configuration and automation tasks on Azure virtual machines. For example, if a virtual machine requires software installation, anti-virus protection, or Docker configuration, a VM extension can be used to complete these tasks. Extensions can be bundled with a new virtual machine deployment or run against any existing system.

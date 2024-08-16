@@ -12,7 +12,6 @@ directCommands:
     Create a policy set definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy set-definition create --definitions
                                     --name
@@ -94,7 +93,6 @@ directCommands:
     Delete a policy set definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy set-definition delete --name
                                     [--management-group]
@@ -121,7 +119,6 @@ directCommands:
     List policy set definitions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy set-definition list [--management-group]
                                   [--subscription]
@@ -138,7 +135,6 @@ directCommands:
     Show a policy set definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy set-definition show --name
                                   [--management-group]
@@ -165,7 +161,6 @@ directCommands:
     Update a policy set definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy set-definition update --name
                                     [--definition-groups]
@@ -256,5 +251,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage resource policy set definitions.

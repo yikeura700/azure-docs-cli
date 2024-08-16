@@ -14,7 +14,6 @@ directCommands:
     Create a load balancer.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb create --name
                          --resource-group
@@ -126,7 +125,6 @@ directCommands:
     Delete the specified load balancer.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb delete [--ids]
                          [--name]
@@ -160,7 +158,6 @@ directCommands:
     List load balancers.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network lb list [--resource-group]
   examples:
   - summary: |-
@@ -176,7 +173,6 @@ directCommands:
     List associated load balancer network interfaces.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb list-nic --name
                            --resource-group
@@ -199,7 +195,6 @@ directCommands:
     Get the details of a load balancer.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb show [--expand]
                        [--ids]
@@ -234,7 +229,6 @@ directCommands:
     This command can only be used to update the tags for a load balancer. Name and resource group are immutable and cannot be updated.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb update [--add]
                          [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -297,7 +291,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb wait [--created]
                        [--custom]
@@ -428,5 +421,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: To learn more about Azure Load Balancer visit https://learn.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-cli.

@@ -16,7 +16,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr artifact-streaming' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr artifact-streaming create --image
                                      --name
@@ -59,7 +58,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr artifact-streaming' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr artifact-streaming show --name
                                    --repository
@@ -99,7 +97,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'acr artifact-streaming' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr artifact-streaming update --enable-streaming {false, true}
                                      --name
@@ -170,5 +167,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Manage artifact streaming for any repositories or supported images in an ACR.

@@ -12,7 +12,6 @@ directCommands:
     Cancels the asynchronous operation on the elastic pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql elastic-pool op cancel --name
                                   [--elastic-pool]
@@ -51,7 +50,6 @@ directCommands:
     Gets a list of operations performed on the elastic pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql elastic-pool op list [--elastic-pool]
                                 [--ids]
@@ -102,5 +100,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage operations on an elastic pool.

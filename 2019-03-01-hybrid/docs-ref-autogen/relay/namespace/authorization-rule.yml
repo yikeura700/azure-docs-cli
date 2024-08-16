@@ -12,7 +12,6 @@ directCommands:
     Create Authorization Rule for the given Relay Service Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay namespace authorization-rule create --name
                                                  --namespace-name
@@ -66,5 +65,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/09/2021
   description: Manage Azure Relay Service Namespace Authorization Rule.

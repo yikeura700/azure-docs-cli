@@ -12,7 +12,6 @@ directCommands:
     Approve a private endpoint connection request for a Key Vault/HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault private-endpoint-connection approve [--description]
                                                     [--hsm-name]
@@ -72,7 +71,6 @@ directCommands:
     Delete the specified private endpoint connection associated with a Key Vault/HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault private-endpoint-connection delete [--hsm-name]
                                                    [--id]
@@ -128,7 +126,6 @@ directCommands:
     List all private endpoint connections associated with a HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault private-endpoint-connection list --hsm-name
                                                  [--resource-group]
@@ -151,7 +148,6 @@ directCommands:
     Reject a private endpoint connection request for a Key Vault/HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault private-endpoint-connection reject [--description]
                                                    [--hsm-name]
@@ -211,7 +207,6 @@ directCommands:
     Show details of a private endpoint connection associated with a Key Vault/HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault private-endpoint-connection show [--hsm-name]
                                                  [--id]
@@ -259,7 +254,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the private endpoint connection is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault private-endpoint-connection wait [--created]
                                                  [--custom]
@@ -355,5 +349,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage vault/HSM private endpoint connections.

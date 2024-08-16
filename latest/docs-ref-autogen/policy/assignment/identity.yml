@@ -12,7 +12,6 @@ directCommands:
     Add a system assigned identity or a user assigned identity to a policy assignment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy assignment identity assign --name
                                          [--identity-scope]
@@ -62,7 +61,6 @@ directCommands:
     Remove a managed identity from a policy assignment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy assignment identity remove --name
                                          [--resource-group]
@@ -85,7 +83,6 @@ directCommands:
     Show a policy assignment's managed identity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy assignment identity show --name
                                        [--resource-group]
@@ -135,5 +132,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage a policy assignment's managed identity.

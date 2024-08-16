@@ -12,7 +12,6 @@ directCommands:
     Create a new shared access policy in an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps policy create --dps-name
                              --pn
@@ -59,7 +58,6 @@ directCommands:
     Delete a shared access policies in an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps policy delete --dps-name
                              --pn
@@ -92,7 +90,6 @@ directCommands:
     List all shared access policies in an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps policy list --dps-name
                            [--resource-group]
@@ -115,7 +112,6 @@ directCommands:
     Show details of a shared access policies in an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps policy show --dps-name
                            --pn
@@ -143,7 +139,6 @@ directCommands:
     Update a shared access policy in an Azure IoT Hub Device Provisioning Service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot dps policy update --dps-name
                              --pn
@@ -217,5 +212,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/21/2024
   description: Manage shared access policies for an Azure IoT Hub Device Provisioning Service instance.

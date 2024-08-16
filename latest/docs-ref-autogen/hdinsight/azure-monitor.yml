@@ -12,7 +12,6 @@ directCommands:
     Disable the Azure Monitor logs integration on an HDInsight cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight azure-monitor disable --name
                                        --resource-group
@@ -31,7 +30,6 @@ directCommands:
     Enable the Azure Monitor logs integration on an HDInsight cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight azure-monitor enable --name
                                       --resource-group
@@ -65,7 +63,6 @@ directCommands:
     Get the status of Azure Monitor logs integration on an HDInsight cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/hdinsight/_help.py
   syntax: >-
     az hdinsight azure-monitor show --name
                                     --resource-group
@@ -107,5 +104,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/23/2021
   description: Manage Azure Monitor logs integration on an HDInsight cluster.

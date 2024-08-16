@@ -16,7 +16,6 @@ directCommands:
     Aborts a pending copy_blob operation, and leaves a destination blob with zero length and full metadata.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob copy cancel --copy-id
                                 --destination-blob
@@ -70,7 +69,6 @@ directCommands:
     Copy a blob asynchronously. Use `az storage blob show` to check the status of the blobs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob copy start --destination-blob
                                --destination-container
@@ -371,7 +369,6 @@ directCommands:
     Copy multiple blobs to a blob container. Use `az storage blob show` to check the status of the blobs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage blob copy start-batch [--account-key]
                                      [--account-name]

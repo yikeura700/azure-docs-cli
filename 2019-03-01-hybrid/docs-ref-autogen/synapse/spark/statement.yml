@@ -12,7 +12,6 @@ directCommands:
     Cancel a Spark statement.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark statement cancel --livy-id
                                       --session-id
@@ -54,7 +53,6 @@ directCommands:
     Invoke a Spark statement.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark statement invoke --code
                                       --language {CSharp, PySpark, Python, SQL, Scala, Spark, SparkDotNet}
@@ -102,7 +100,6 @@ directCommands:
     List all Spark statements.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark statement list --session-id
                                     --spark-pool-name
@@ -133,7 +130,6 @@ directCommands:
     Get a Spark statement.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark statement show --livy-id
                                     --session-id
@@ -193,5 +189,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage Synapse Spark statements.

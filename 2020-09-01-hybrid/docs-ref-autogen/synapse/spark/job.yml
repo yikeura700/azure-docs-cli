@@ -12,7 +12,6 @@ directCommands:
     Cancel a Spark job.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark job cancel --livy-id
                                 --spark-pool-name
@@ -46,7 +45,6 @@ directCommands:
     List all Spark jobs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark job list --spark-pool-name
                               --workspace-name
@@ -78,7 +76,6 @@ directCommands:
     Get a Spark job.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark job show --livy-id
                               --spark-pool-name
@@ -106,7 +103,6 @@ directCommands:
     Submit a Spark job.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse spark job submit --executor-size {Large, Medium, Small}
                                 --executors
@@ -222,5 +218,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage Synapse Spark batch jobs.

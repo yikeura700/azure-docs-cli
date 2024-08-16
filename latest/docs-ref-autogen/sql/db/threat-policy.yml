@@ -16,7 +16,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command is implicitly deprecated because command group 'sql db threat-policy' is deprecated and will be removed in a future release. Use 'sql db advanced-threat-protection-setting' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db threat-policy show [--ids]
                                  [--name]
@@ -49,7 +48,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command is implicitly deprecated because command group 'sql db threat-policy' is deprecated and will be removed in a future release. Use 'sql db advanced-threat-protection-setting' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db threat-policy update [--add]
                                    [--disabled-alerts]
@@ -179,5 +177,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage a database's threat detection policies.

@@ -14,7 +14,6 @@ directCommands:
     Rules can be created for an IPv4 address, address range (CIDR format), or a virtual network subnet.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account network-rule add --account-name
                                         [--action]
@@ -68,7 +67,6 @@ directCommands:
     List network rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account network-rule list --account-name
                                          [--resource-group]
@@ -91,7 +89,6 @@ directCommands:
     Remove a network rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account network-rule remove --account-name
                                            [--ip-address]
@@ -160,5 +157,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage network rules.

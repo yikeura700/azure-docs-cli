@@ -12,7 +12,6 @@ directCommands:
     Upload a server trust certificate from box to Sql Managed Instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi partner-cert create --certificate-name
                                   --instance-name
@@ -46,7 +45,6 @@ directCommands:
     Delete a server trust certificate that was uploaded from box to Sql Managed Instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi partner-cert delete [--certificate-name]
                                   [--ids]
@@ -85,7 +83,6 @@ directCommands:
     Get a list of server trust certificates that were uploaded from box to the given Sql Managed Instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi partner-cert list --instance-name
                                 --resource-group
@@ -104,7 +101,6 @@ directCommands:
     Get a server trust certificate that was uploaded from box to Sql Managed Instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi partner-cert show [--certificate-name]
                                 [--ids]
@@ -157,5 +153,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Server trust certificate management commands.

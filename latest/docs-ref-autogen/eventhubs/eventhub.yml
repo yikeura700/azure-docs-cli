@@ -12,7 +12,6 @@ directCommands:
     Creates the EventHubs Eventhub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub create --name
                                  --namespace-name
@@ -107,7 +106,6 @@ directCommands:
     Delete an Event Hub from the specified Namespace and resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub delete [--event-hub-name]
                                  [--ids]
@@ -136,7 +134,6 @@ directCommands:
     List all the Event Hubs in a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub list --namespace-name
                                --resource-group
@@ -172,7 +169,6 @@ directCommands:
     Get an Event Hubs description for the specified Event Hub.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub show [--event-hub-name]
                                [--ids]
@@ -201,7 +197,6 @@ directCommands:
     Update a new Event Hub as a nested resource within a Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs eventhub update [--add]
                                  [--archive-name-format]
@@ -352,5 +347,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manage Azure EventHubs eventhub and authorization-rule.

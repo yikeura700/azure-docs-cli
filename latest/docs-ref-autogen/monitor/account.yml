@@ -12,7 +12,6 @@ directCommands:
     Create a workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor account create --azure-monitor-workspace-name
                               --resource-group
@@ -44,7 +43,6 @@ directCommands:
     Delete a workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor account delete [--azure-monitor-workspace-name]
                               [--ids]
@@ -83,7 +81,6 @@ directCommands:
     List all workspaces in the specified subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: az monitor account list [--resource-group]
   examples:
   - summary: |-
@@ -99,7 +96,6 @@ directCommands:
     Show the specific azure monitor workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor account show [--azure-monitor-workspace-name]
                             [--ids]
@@ -128,7 +124,6 @@ directCommands:
     Update a workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor account update [--add]
                               [--azure-monitor-workspace-name]
@@ -178,7 +173,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor account wait [--azure-monitor-workspace-name]
                             [--created]
@@ -263,5 +257,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: Manage monitor account.

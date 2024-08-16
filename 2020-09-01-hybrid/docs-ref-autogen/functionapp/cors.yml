@@ -12,7 +12,6 @@ directCommands:
     Add allowed origins.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp cors add --allowed-origins
                             [--ids]
@@ -51,7 +50,6 @@ directCommands:
     Enable or disable access-control-allow-credentials.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp cors credentials --enable {false, true}
                                     [--ids]
@@ -94,7 +92,6 @@ directCommands:
     Remove allowed origins.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp cors remove --allowed-origins
                                [--ids]
@@ -136,7 +133,6 @@ directCommands:
     Show allowed origins.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp cors show [--ids]
                              [--name]
@@ -193,5 +189,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Cross-Origin Resource Sharing (CORS).

@@ -12,7 +12,6 @@ directCommands:
     Add regions for the managed HSM Pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault region add --hsm-name
                            --region
@@ -45,7 +44,6 @@ directCommands:
     Get regions information associated with the managed HSM Pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault region list --hsm-name
                             [--resource-group]
@@ -64,7 +62,6 @@ directCommands:
     Remove regions for the managed HSM Pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault region remove --hsm-name
                               --region
@@ -97,7 +94,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the HSM is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault region wait --hsm-name
                             [--created]
@@ -178,5 +174,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage MHSM multi-regions.

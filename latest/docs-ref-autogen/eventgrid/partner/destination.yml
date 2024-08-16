@@ -12,7 +12,6 @@ directCommands:
     Activate a partner destination.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner destination activate [--ids]
                                               [--name]
@@ -41,7 +40,6 @@ directCommands:
     Create a partner destination.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner destination create --location
                                             --name
@@ -100,7 +98,6 @@ directCommands:
     Delete a partner destination.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner destination delete [--ids]
                                             [--name]
@@ -134,7 +131,6 @@ directCommands:
     List available partner destinations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner destination list [--odata-query]
                                           [--resource-group]
@@ -164,7 +160,6 @@ directCommands:
     Get the details of a partner destination.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner destination show [--ids]
                                           [--name]
@@ -193,7 +188,6 @@ directCommands:
     Update the details of a partner destination.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner destination update [--ids]
                                             [--name]
@@ -252,5 +246,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/08/2022
   description: Manage partner destinations.

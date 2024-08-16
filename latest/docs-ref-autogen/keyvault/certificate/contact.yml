@@ -12,7 +12,6 @@ directCommands:
     Add a contact to the specified vault to receive notifications of certificate operations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate contact add --email
                                         --vault-name
@@ -40,7 +39,6 @@ directCommands:
     Remove a certificate contact from the specified vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate contact delete --email
                                            --vault-name
@@ -61,7 +59,6 @@ directCommands:
     The GetCertificateContacts operation returns the set of certificate contact resources in the specified key vault. This operation requires the certificates/managecontacts permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: az keyvault certificate contact list --vault-name
   requiredParameters:
   - isRequired: true
@@ -97,5 +94,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage contacts for certificate management.

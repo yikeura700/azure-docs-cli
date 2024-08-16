@@ -12,7 +12,6 @@ directCommands:
     Create an API Management API Schema.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api schema create --api-id
                               --resource-group
@@ -82,7 +81,6 @@ directCommands:
     Delete an API Management API Schema.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api schema delete --api-id
                               --resource-group
@@ -130,7 +128,6 @@ directCommands:
     Get etag of an API Management API schema.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api schema get-etag --api-id
                                 --resource-group
@@ -163,7 +160,6 @@ directCommands:
     List API Management API schema's.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api schema list --api-id
                             --resource-group
@@ -204,7 +200,6 @@ directCommands:
     Show details of an API Management API Schema.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api schema show --api-id
                             --resource-group
@@ -237,7 +232,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of an apim api schema is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api schema wait --api-id
                             --name
@@ -331,5 +325,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/19/2024
   description: Manage Azure API Management API Schema's.

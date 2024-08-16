@@ -12,7 +12,6 @@ directCommands:
     Add managed rule set to the WAF policy managed rules. For rule set and rules, please visit: https://docs.microsoft.com/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy managed-rule rule-set add --policy-name
                                                                         --resource-group
@@ -62,7 +61,6 @@ directCommands:
     List all managed rule set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy managed-rule rule-set list --policy-name
                                                                          --resource-group
@@ -85,7 +83,6 @@ directCommands:
     Remove a managed rule set by rule set group name if rule_group_name is specified. Otherwise, remove all rule set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy managed-rule rule-set remove --policy-name
                                                                            --resource-group
@@ -125,7 +122,6 @@ directCommands:
     Manage rules of a WAF policy. If --group-name and --rules are provided, override existing rules. If --group-name is provided, clear all rules under a certain rule group. If neither of them are provided, update rule set and clear all rules under itself. For rule set and rules, please visit: https://docs.microsoft.com/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy managed-rule rule-set update --policy-name
                                                                            --resource-group
@@ -199,5 +195,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage managed rule set of managed rules of a WAF policy.

@@ -14,7 +14,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage logging off [--account-key]
                            [--account-name]
@@ -52,7 +51,6 @@ directCommands:
     Show logging settings for a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage logging show [--account-key]
                             [--account-name]
@@ -90,7 +88,6 @@ directCommands:
     Update logging settings for a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage logging update --log
                               --retention
@@ -162,5 +159,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage storage service logging information.

@@ -12,7 +12,6 @@ directCommands:
     Create a policy attestation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy attestation create --attestation-name
                                  --policy-assignment
@@ -115,7 +114,6 @@ directCommands:
     Delete an existing policy attestation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy attestation delete --attestation-name
                                  [--namespace]
@@ -154,7 +152,6 @@ directCommands:
     List all attestations for a resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy attestation list [--filter]
                                [--resource]
@@ -189,7 +186,6 @@ directCommands:
     Get a policy attestation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy attestation show --attestation-name
                                [--namespace]
@@ -228,7 +224,6 @@ directCommands:
     Update an existing policy attestation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy attestation update --attestation-name
                                  [--assessment-date]
@@ -332,5 +327,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage resource policy attestations.

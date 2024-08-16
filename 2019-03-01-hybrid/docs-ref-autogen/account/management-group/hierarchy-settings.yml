@@ -12,7 +12,6 @@ directCommands:
     Create hierarchy settings defined at the Management Group level.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: >-
     az account management-group hierarchy-settings create --name
                                                           [--default-management-group]
@@ -48,7 +47,6 @@ directCommands:
     Delete the hierarchy settings defined at the Management Group level.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: >-
     az account management-group hierarchy-settings delete --name
                                                           [--yes]
@@ -72,7 +70,6 @@ directCommands:
     Get all the hierarchy settings defined at the Management Group level.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: az account management-group hierarchy-settings list --name
   examples:
   - summary: |-
@@ -89,7 +86,6 @@ directCommands:
     Update the hierarchy settings defined at the Management Group level.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: >-
     az account management-group hierarchy-settings update --name
                                                           [--add]
@@ -169,5 +165,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/25/2024
   description: Provide operations for hierarchy settings defined at the management group level. Settings can only be set on the root Management Group of the hierarchy.

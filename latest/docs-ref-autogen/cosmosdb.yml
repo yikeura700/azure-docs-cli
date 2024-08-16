@@ -16,7 +16,6 @@ directCommands:
     Checks if an Azure Cosmos DB account name exists.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb check-name-exists [--ids]
                                   [--name]
@@ -41,7 +40,6 @@ directCommands:
     Creates a new Azure Cosmos DB database account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb create --name
                        --resource-group
@@ -515,7 +513,6 @@ directCommands:
     Deletes an Azure Cosmos DB database account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb delete [--ids]
                        [--name]
@@ -557,7 +554,6 @@ directCommands:
     Changes the failover priority for the Azure Cosmos DB database account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb failover-priority-change --failover-policies
                                          [--ids]
@@ -592,7 +588,6 @@ directCommands:
     List Azure Cosmos DB database accounts.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: az cosmosdb list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -618,7 +613,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'cosmosdb keys list --type connection-strings' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb list-connection-strings [--ids]
                                         [--name]
@@ -649,7 +643,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'cosmosdb keys list' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb list-keys [--ids]
                           [--name]
@@ -680,7 +673,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'cosmosdb keys list --type read-only-keys' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb list-read-only-keys [--ids]
                                     [--name]
@@ -711,7 +703,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'cosmosdb keys regenerate' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb regenerate-key --key-kind {primary, primaryReadonly, secondary, secondaryReadonly}
                                [--ids]
@@ -747,7 +738,6 @@ directCommands:
     Create a new Azure Cosmos DB database account by restoring from an existing database account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb restore --account-name
                         --location
@@ -922,7 +912,6 @@ directCommands:
     Get the details of an Azure Cosmos DB database account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb show [--ids]
                      [--name]
@@ -980,7 +969,6 @@ directCommands:
     Update an Azure Cosmos DB database account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb update [--analytical-storage-schema-type {FullFidelity, WellDefined}]
                        [--backup-interval]

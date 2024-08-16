@@ -12,7 +12,6 @@ directCommands:
     Add a TXT record.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set txt add-record --record-set-name
                                                      --resource-group
@@ -47,7 +46,6 @@ directCommands:
     Create an empty TXT record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set txt create --name
                                                  --resource-group
@@ -85,7 +83,6 @@ directCommands:
     Delete a TXT record set and all associated records.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set txt delete [--ids]
                                                  [--if-match]
@@ -127,7 +124,6 @@ directCommands:
     List all TXT record sets in a zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set txt list --resource-group
                                                --zone-name
@@ -161,7 +157,6 @@ directCommands:
     By default, if the last record in a set is removed, the record set is deleted. To retain the empty record set, include --keep-empty-record-set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set txt remove-record --record-set-name
                                                         --resource-group
@@ -202,7 +197,6 @@ directCommands:
     Get the details of a TXT record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set txt show [--ids]
                                                [--name]
@@ -235,7 +229,6 @@ directCommands:
     Update a TXT record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns record-set txt update [--add]
                                                  [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -320,5 +313,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage Private DNS TXT records.

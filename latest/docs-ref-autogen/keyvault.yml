@@ -12,7 +12,6 @@ directCommands:
     Check that the given name is valid and is not already in use.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault check-name --name
                            [--resource-type {hsm}]
@@ -35,7 +34,6 @@ directCommands:
     If `--enable-rbac-authorization` is not specified, then default permissions are created for the current user or service principal unless the `--no-self-perms` flag is specified.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault create --resource-group
                        [--administrators]
@@ -164,7 +162,6 @@ directCommands:
     Delete a Vault or HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault delete [--hsm-name]
                        [--name]
@@ -194,7 +191,6 @@ directCommands:
     Delete security policy settings for a Key Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault delete-policy --name
                               [--application-id]
@@ -234,7 +230,6 @@ directCommands:
     List Vaults and/or HSMs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault list [--resource-group]
                      [--resource-type]
@@ -251,7 +246,6 @@ directCommands:
     Get information about the deleted Vaults or HSMs in a subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: az keyvault list-deleted [--resource-type]
   optionalParameters:
   - name: --resource-type
@@ -263,7 +257,6 @@ directCommands:
     Permanently delete the specified Vault or HSM. Aka Purges the deleted Vault or HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault purge [--hsm-name]
                       [--location]
@@ -291,7 +284,6 @@ directCommands:
     Recover a previously deleted Vault or HSM for which soft delete was enabled.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault recover [--hsm-name]
                         [--location]
@@ -325,7 +317,6 @@ directCommands:
     Update security policy settings for a Key Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault set-policy --name
                            [--application-id]
@@ -395,7 +386,6 @@ directCommands:
     Show details of a Vault or HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault show [--hsm-name]
                      [--name]
@@ -420,7 +410,6 @@ directCommands:
     Show details of a deleted Vault or HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault show-deleted [--hsm-name]
                              [--location]
@@ -445,7 +434,6 @@ directCommands:
     Update the properties of a Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault update --name
                        [--add]
@@ -537,7 +525,6 @@ directCommands:
     Update the properties of a HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault update-hsm --hsm-name
                            [--add]
@@ -613,7 +600,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the Vault is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault wait --name
                      [--created]
@@ -670,7 +656,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the HSM is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault wait-hsm --hsm-name
                          [--created]
@@ -879,5 +864,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage KeyVault keys, secrets, and certificates.

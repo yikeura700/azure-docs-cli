@@ -12,7 +12,6 @@ directCommands:
     List a list of managed instance server configuration options.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi server-configuration-option list --instance-name
                                                --resource-group
@@ -35,7 +34,6 @@ directCommands:
     Set managed instance server configuration option.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi server-configuration-option set [--ids]
                                               [--instance-name]
@@ -78,7 +76,6 @@ directCommands:
     Get managed instance server configuration option.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi server-configuration-option show [--ids]
                                                [--instance-name]
@@ -112,7 +109,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi server-configuration-option wait [--created]
                                                [--custom]
@@ -200,5 +196,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Server configuration option management commands.

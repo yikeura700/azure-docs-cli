@@ -12,7 +12,6 @@ directCommands:
     Create a column's sensitivity classification.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql pool classification create --column
                                               --information-type
@@ -70,7 +69,6 @@ directCommands:
     Delete the sensitivity classification of a given column.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql pool classification delete --column
                                               --schema
@@ -122,7 +120,6 @@ directCommands:
     Get the sensitivity classifications of a given SQL pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql pool classification list --name
                                             --resource-group
@@ -155,7 +152,6 @@ directCommands:
     Get the sensitivity classification of a given column.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql pool classification show --column
                                             --schema
@@ -207,7 +203,6 @@ directCommands:
     Update a column's sensitivity classification.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql pool classification update --column
                                               --schema
@@ -298,5 +293,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage sensitivity classifications.

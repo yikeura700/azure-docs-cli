@@ -12,7 +12,6 @@ directCommands:
     Create a Maps Account. A Maps Account holds the keys which allow access to the Maps REST APIs.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/maps/_help.py
   syntax: >-
     az maps account create --account-name
                            --resource-group
@@ -86,7 +85,6 @@ directCommands:
     Delete a Maps Account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/maps/_help.py
   syntax: >-
     az maps account delete [--account-name]
                            [--ids]
@@ -115,7 +113,6 @@ directCommands:
     Show all maps accounts in a subscription or in a resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/maps/_help.py
   syntax: az maps account list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -127,7 +124,6 @@ directCommands:
     Show the details of a maps account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/maps/_help.py
   syntax: >-
     az maps account show [--account-name]
                          [--ids]
@@ -156,7 +152,6 @@ directCommands:
     Updates a Maps Account. Only a subset of the parameters may be updated after creation, such as Sku, Tags, Properties.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/maps/_help.py
   syntax: >-
     az maps account update --sku {G2, S0, S1}
                            [--account-name]
@@ -263,5 +258,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/13/2021
   description: Manage Azure Maps accounts.

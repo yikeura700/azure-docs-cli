@@ -14,7 +14,6 @@ directCommands:
     Delete all messages from the specified queue.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage message clear --queue-name
                              [--account-key]
@@ -53,7 +52,6 @@ directCommands:
     Delete the specified message.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage message delete --id
                               --pop-receipt
@@ -102,7 +100,6 @@ directCommands:
     Retrieve one or more messages from the front of the queue.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage message get --queue-name
                            [--account-key]
@@ -149,7 +146,6 @@ directCommands:
     Retrieve one or more messages from the front of the queue, but do not alter the visibility of the message.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage message peek --queue-name
                             [--account-key]
@@ -192,7 +188,6 @@ directCommands:
     Add a new message to the back of the message queue.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage message put --content
                            --queue-name
@@ -244,7 +239,6 @@ directCommands:
     Update the visibility timeout of a message.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage message update --id
                               --pop-receipt
@@ -331,5 +325,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: 'Please specify one of the following authentication parameters for your commands: --auth-mode, --account-key, --connection-string, --sas-token. You also can use corresponding environment variables to store your authentication credentials, e.g. AZURE_STORAGE_KEY, AZURE_STORAGE_CONNECTION_STRING and AZURE_STORAGE_SAS_TOKEN.'

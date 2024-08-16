@@ -12,7 +12,6 @@ directCommands:
     Configure Sticky session for a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp ingress sticky-sessions set --affinity {none, sticky}
                                                 [--ids]
@@ -51,7 +50,6 @@ directCommands:
     Show the Affinity for a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp ingress sticky-sessions show [--ids]
                                                  [--name]
@@ -102,5 +100,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/14/2024
   description: Commands to set Sticky session affinity for a container app.

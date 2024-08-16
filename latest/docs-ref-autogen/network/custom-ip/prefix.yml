@@ -12,7 +12,6 @@ directCommands:
     Create a custom IP prefix resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network custom-ip prefix create --name
                                        --resource-group
@@ -93,7 +92,6 @@ directCommands:
     Delete a custom IP prefix resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network custom-ip prefix delete [--ids]
                                        [--name]
@@ -127,7 +125,6 @@ directCommands:
     List custom IP prefix resources.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network custom-ip prefix list [--max-items]
                                      [--next-token]
@@ -152,7 +149,6 @@ directCommands:
     Get the details of a custom IP prefix resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network custom-ip prefix show [--expand]
                                      [--ids]
@@ -185,7 +181,6 @@ directCommands:
     Update a custom IP prefix resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network custom-ip prefix update [--add]
                                        [--authorization-message]
@@ -258,7 +253,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network custom-ip prefix wait [--created]
                                      [--custom]
@@ -347,5 +341,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage custom IP prefix resources.

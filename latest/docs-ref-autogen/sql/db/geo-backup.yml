@@ -16,7 +16,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'sql db geo-backup' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db geo-backup list [--ids]
                               [--resource-group]
@@ -47,7 +46,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'sql db geo-backup' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db geo-backup restore --dest-database
                                  --dest-server
@@ -183,7 +181,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'sql db geo-backup' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db geo-backup show [--database]
                               [--expand-keys {false, true}]
@@ -249,5 +246,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage SQL database geo redundant backups.

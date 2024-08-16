@@ -14,7 +14,6 @@ directCommands:
     If the container does not have an active lease, the Blob service creates a lease on the container and returns a new lease ID.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container lease acquire --container-name
                                        [--account-key]
@@ -72,7 +71,6 @@ directCommands:
     Once a lease is broken, it cannot be renewed. Any authorized request can break the lease; the request is not required to specify a matching lease ID. When a lease is broken, the lease break period is allowed to elapse, during which time no lease operation except break and release can be performed on the container. When a lease is successfully broken, the response indicates the interval in seconds until a new lease can be acquired.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container lease break --container-name
                                      [--account-key]
@@ -125,7 +123,6 @@ directCommands:
     A change must include the current lease ID and a new lease ID.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container lease change --container-name
                                       --lease-id
@@ -184,7 +181,6 @@ directCommands:
     The lease may be released if the lease_id specified matches that associated with the container. Releasing the lease allows another client to immediately acquire the lease for the container as soon as the release is complete.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container lease release --container-name
                                        --lease-id
@@ -238,7 +234,6 @@ directCommands:
     The lease can be renewed if the lease ID specified matches that associated with the container. Note that the lease may be renewed even if it has expired as long as the container has not been leased again since the expiration of that lease. When you renew a lease, the lease duration clock resets.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container lease renew --container-name
                                      --lease-id
@@ -315,5 +310,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage blob storage container leases.

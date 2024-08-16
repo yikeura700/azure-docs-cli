@@ -16,7 +16,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'cdn endpoint rule' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint rule add --action-name {CacheExpiration, CacheKeyQueryString, ModifyRequestHeader, ModifyResponseHeader, OriginGroupOverride, UrlRedirect, UrlRewrite}
                              --order
@@ -174,7 +173,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'cdn endpoint rule' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint rule remove [--ids]
                                 [--name]
@@ -220,7 +218,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: "Command group 'cdn endpoint rule' is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn endpoint rule show [--ids]
                               [--name]
@@ -284,5 +281,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/28/2024
   description: Manage delivery rules for an endpoint.

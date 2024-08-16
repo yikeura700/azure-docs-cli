@@ -12,7 +12,6 @@ directCommands:
     Create a NAT gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nat gateway create --name
                                   --resource-group
@@ -61,7 +60,6 @@ directCommands:
     Delete a NAT gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nat gateway delete [--ids]
                                   [--name]
@@ -95,7 +93,6 @@ directCommands:
     List NAT gateways.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network nat gateway list [--resource-group]
   examples:
   - summary: |-
@@ -111,7 +108,6 @@ directCommands:
     Show details of a NAT gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nat gateway show [--ids]
                                 [--name]
@@ -143,7 +139,6 @@ directCommands:
     Update a NAT gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nat gateway update [--add]
                                   [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -206,7 +201,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nat gateway wait [--created]
                                 [--custom]
@@ -291,5 +285,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage NAT gateways.

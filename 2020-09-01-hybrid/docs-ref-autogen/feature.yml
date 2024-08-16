@@ -12,7 +12,6 @@ directCommands:
     List preview features.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az feature list [--namespace]
   examples:
   - summary: |-
@@ -28,7 +27,6 @@ directCommands:
     Register a preview feature.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az feature register --name
                         --namespace
@@ -51,7 +49,6 @@ directCommands:
     Gets the preview feature with the specified name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az feature show --name
                     --namespace
@@ -70,7 +67,6 @@ directCommands:
     Unregister a preview feature.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az feature unregister --name
                           --namespace
@@ -117,5 +113,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage resource provider features.

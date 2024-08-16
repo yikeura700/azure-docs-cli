@@ -16,7 +16,6 @@ directCommands:
     Show the authentication settings for the containerapp.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp auth show [--ids]
                               [--name]
@@ -74,7 +73,6 @@ directCommands:
     Update the authentication settings for the containerapp.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp auth update [--action {AllowAnonymous, RedirectToLoginPage, Return401, Return403}]
                                 [--config-file-path]

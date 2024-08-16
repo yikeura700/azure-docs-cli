@@ -14,7 +14,6 @@ directCommands:
     Create a virtual network gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway create --name
                                    --public-ip-address
@@ -130,7 +129,6 @@ directCommands:
     In order to delete a Virtual Network Gateway, you must first delete ALL Connection objects in Azure that are connected to the Gateway. After deleting the Gateway, proceed to delete other resources now not in use. For more information, follow the order of instructions on this page: https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-delete-vnet-gateway-portal.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway delete [--ids]
                                    [--name]
@@ -164,7 +162,6 @@ directCommands:
     List virtual network gateways.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network vnet-gateway list --resource-group
   examples:
   - summary: |-
@@ -181,7 +178,6 @@ directCommands:
     List the routes of a virtual network gateway advertised to the specified peer.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway list-advertised-routes --peer
                                                    [--ids]
@@ -221,7 +217,6 @@ directCommands:
     Retrieve the status of BGP peers.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway list-bgp-peer-status [--ids]
                                                  [--name]
@@ -259,7 +254,6 @@ directCommands:
     This operation retrieves a list of routes the virtual network gateway has learned, including routes learned from BGP peers.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway list-learned-routes [--ids]
                                                 [--name]
@@ -293,7 +287,6 @@ directCommands:
     Reset a virtual network gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway reset [--gateway-vip]
                                   [--ids]
@@ -335,7 +328,6 @@ directCommands:
     Get the details of a virtual network gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway show [--ids]
                                  [--name]
@@ -366,7 +358,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway show-supported-devices [--ids]
                                                    [--name]
@@ -395,7 +386,6 @@ directCommands:
     Update a virtual network gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway update [--add]
                                    [--address-prefix]
@@ -521,7 +511,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway wait [--created]
                                  [--custom]
@@ -631,5 +620,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: To learn more about Azure Virtual Network Gateways, visit https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-cli.

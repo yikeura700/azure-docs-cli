@@ -12,7 +12,6 @@ directCommands:
     Create a certificate issuer record.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate issuer create --issuer-name
                                           --provider-name
@@ -56,7 +55,6 @@ directCommands:
     Requires certificates/manageissuers/deleteissuers permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate issuer delete --issuer-name
                                           --vault-name
@@ -77,7 +75,6 @@ directCommands:
     Requires the certificates/manageissuers/getissuers permission.  :return: An iterator-like instance of Issuers :rtype: ~azure.core.paging.ItemPaged[~azure.keyvault.certificates.CertificateIssuer]  :raises: :class:`~azure.core.exceptions.HttpResponseError`  Example:     .. literalinclude:: ../tests/test_examples_certificates.py         :start-after: [START list_properties_of_issuers]         :end-before: [END list_properties_of_issuers]         :language: python         :caption: List issuers of a vault         :dedent: 8.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: az keyvault certificate issuer list --vault-name
   requiredParameters:
   - isRequired: true
@@ -92,7 +89,6 @@ directCommands:
     Requires certificates/manageissuers/getissuers permission.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate issuer show --issuer-name
                                         --vault-name
@@ -111,7 +107,6 @@ directCommands:
     Update a certificate issuer record.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault certificate issuer update --issuer-name
                                           --vault-name
@@ -181,5 +176,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage certificate issuer information.

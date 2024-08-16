@@ -12,7 +12,6 @@ directCommands:
     Create a new event subscription for a domain.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid domain event-subscription create --domain-name
                                                   --name
@@ -214,7 +213,6 @@ directCommands:
     Delete an event subscription of a domain.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid domain event-subscription delete --domain-name
                                                   --name
@@ -250,7 +248,6 @@ directCommands:
     List event subscriptions of a specific domain.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid domain event-subscription list --domain-name
                                                 --resource-group
@@ -278,7 +275,6 @@ directCommands:
     Get the details of an event subscription of a domain.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid domain event-subscription show --domain-name
                                                 --name
@@ -326,7 +322,6 @@ directCommands:
     Update an event subscription of a domain.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid domain event-subscription update --domain-name
                                                   --name
@@ -497,5 +492,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/08/2022
   description: Manage event subscriptions of domain.

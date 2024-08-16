@@ -12,7 +12,6 @@ directCommands:
     Create a firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace firewall-rule create --end-ip-address
                                               --name
@@ -59,7 +58,6 @@ directCommands:
     Delete a firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace firewall-rule delete [--ids]
                                               [--name]
@@ -102,7 +100,6 @@ directCommands:
     List all firewall rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace firewall-rule list --resource-group
                                             --workspace-name
@@ -125,7 +122,6 @@ directCommands:
     Get a firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace firewall-rule show [--ids]
                                             [--name]
@@ -158,7 +154,6 @@ directCommands:
     Update a firewall rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace firewall-rule update [--end-ip-address]
                                               [--ids]
@@ -207,7 +202,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of a firewall rule is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse workspace firewall-rule wait --rule-name
                                             [--created]
@@ -298,5 +292,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage a workspace's firewall rules.

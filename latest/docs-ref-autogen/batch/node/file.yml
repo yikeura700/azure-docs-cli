@@ -12,7 +12,6 @@ directCommands:
     Deletes the specified file from the Compute Node.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch node file delete --file-path
                               --node-id
@@ -58,7 +57,6 @@ directCommands:
     Download the content of the a node file.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch node file download --destination
                                 --file-path
@@ -116,7 +114,6 @@ directCommands:
     Lists all of the files in Task directories on the specified Compute Node.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch node file list --node-id
                             --pool-id
@@ -156,7 +153,6 @@ directCommands:
     Gets the properties of the specified Compute Node file.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch node file show --file-path
                             --node-id
@@ -225,5 +221,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage Batch compute node files.

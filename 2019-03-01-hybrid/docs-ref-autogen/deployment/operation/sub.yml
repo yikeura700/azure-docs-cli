@@ -12,7 +12,6 @@ directCommands:
     List deployment operations at subscription scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az deployment operation sub list --name
   examples:
   - summary: |-
@@ -29,7 +28,6 @@ directCommands:
     Show a deployment operation at subscription scope.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment operation sub show --name
                                      --operation-ids
@@ -70,5 +68,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage deployment operations at subscription scope.

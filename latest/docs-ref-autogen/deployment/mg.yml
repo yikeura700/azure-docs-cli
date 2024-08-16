@@ -12,7 +12,6 @@ directCommands:
     Cancel a deployment at management group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment mg cancel --management-group-id
                             --name
@@ -37,7 +36,6 @@ directCommands:
     Please specify only one of --template-file FILE | --template-uri URI | --template-spec to input the ARM template.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment mg create --location
                             --management-group-id
@@ -147,7 +145,6 @@ directCommands:
     Delete a deployment at management group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment mg delete --management-group-id
                             --name
@@ -176,7 +173,6 @@ directCommands:
     Export the template used for a deployment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment mg export --management-group-id
                             --name
@@ -199,7 +195,6 @@ directCommands:
     List deployments at management group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment mg list --management-group-id
                           [--filter]
@@ -223,7 +218,6 @@ directCommands:
     Show a deployment at management group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment mg show --management-group-id
                           --name
@@ -248,7 +242,6 @@ directCommands:
     Please specify only one of --template-file FILE | --template-uri URI | --template-spec to input the ARM template.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment mg validate --location
                               --management-group-id
@@ -313,7 +306,6 @@ directCommands:
     Place the CLI in a waiting state until a deployment condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment mg wait --management-group-id
                           --name
@@ -369,7 +361,6 @@ directCommands:
     Please specify only one of --template-file FILE | --template-uri URI | --template-spec to input the ARM template.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment mg what-if --location
                              --management-group-id
@@ -475,5 +466,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage Azure Resource Manager template deployment at management group.

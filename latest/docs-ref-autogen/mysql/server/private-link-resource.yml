@@ -12,7 +12,6 @@ directCommands:
     List the private link resources supported for a MySQL server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server private-link-resource list [--ids]
                                                [--resource-group]
@@ -58,5 +57,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage MySQL server private link resources.

@@ -16,7 +16,6 @@ directCommands:
     Create an app service plan.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice plan create --name
                               --resource-group
@@ -191,7 +190,6 @@ directCommands:
     Delete an app service plan.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice plan delete [--ids]
                               [--name]
@@ -225,7 +223,6 @@ directCommands:
     List app service plans.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: az appservice plan list [--resource-group]
   examples:
   - summary: |-
@@ -263,7 +260,6 @@ directCommands:
     Get the app service plans for a resource group or a set of resource groups.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice plan show [--ids]
                             [--name]
@@ -323,7 +319,6 @@ directCommands:
     See https:///go.microsoft.com/fwlink/?linkid=2133856 to learn more.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az appservice plan update [--add]
                               [--elastic-scale {false, true}]

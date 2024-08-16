@@ -12,7 +12,6 @@ directCommands:
     List the access keys or Kerberos keys (if active directory enabled) for a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account keys list --account-name
                                  [--resource-group]
@@ -40,7 +39,6 @@ directCommands:
     Kerberos key is generated per storage account for Azure Files identity based authentication either with Azure Active Directory Domain Service (Azure AD DS) or Active Directory Domain Service (AD DS). It is used as the password of the identity registered in the domain service that represents the storage account. Kerberos key does not provide access permission to perform any control or data plane read or write operations against the storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account keys renew --account-name
                                   --key {key1, key2, primary, secondary}
@@ -94,5 +92,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage storage account keys.

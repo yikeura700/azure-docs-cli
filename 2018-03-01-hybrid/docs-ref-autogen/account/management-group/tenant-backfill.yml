@@ -12,7 +12,6 @@ directCommands:
     Get the backfill status for a tenant.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: az account management-group tenant-backfill get
   examples:
   - summary: |-
@@ -24,7 +23,6 @@ directCommands:
     Start backfilling subscriptions for a tenant.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: az account management-group tenant-backfill start
   examples:
   - summary: |-
@@ -58,5 +56,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/25/2024
   description: Backfill Tenant Subscription Operations for Management Groups.

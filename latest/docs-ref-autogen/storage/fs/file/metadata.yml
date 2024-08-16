@@ -12,7 +12,6 @@ directCommands:
     Return all user-defined metadata for the specified file.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs file metadata show --file-system
                                      --path
@@ -67,7 +66,6 @@ directCommands:
     Each call to this operation replaces all existing metadata attached to the file system. To remove all metadata from the file system, call this operation with no metadata dict.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage fs file metadata update --file-system
                                        --metadata
@@ -143,5 +141,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage the metadata for file in file system.

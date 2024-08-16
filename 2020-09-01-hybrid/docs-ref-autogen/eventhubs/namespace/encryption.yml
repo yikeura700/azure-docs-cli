@@ -12,7 +12,6 @@ directCommands:
     Add Encryption properties to a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace encryption add --encryption-config
                                           --namespace-name
@@ -46,7 +45,6 @@ directCommands:
     Remove one or more Encryption properties from a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace encryption remove --encryption-config
                                              --namespace-name
@@ -96,5 +94,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manage eventhubs namespace encryption properties.

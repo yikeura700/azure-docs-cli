@@ -12,7 +12,6 @@ directCommands:
     Create a policy definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy definition create --name
                                 [--description]
@@ -89,7 +88,6 @@ directCommands:
     Delete a policy definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy definition delete --name
                                 [--management-group]
@@ -116,7 +114,6 @@ directCommands:
     List policy definitions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy definition list [--management-group]
                               [--subscription]
@@ -133,7 +130,6 @@ directCommands:
     Show a policy definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy definition show --name
                               [--management-group]
@@ -160,7 +156,6 @@ directCommands:
     Update a policy definition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az policy definition update --name
                                 [--description]
@@ -232,5 +227,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage resource policy definitions.

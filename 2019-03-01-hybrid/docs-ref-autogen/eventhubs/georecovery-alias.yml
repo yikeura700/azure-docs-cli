@@ -12,7 +12,6 @@ directCommands:
     Sets a Geo-Disaster Recovery Configuration Alias for the give Namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs georecovery-alias set --alias
                                        --partner-namespace
@@ -85,5 +84,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manage Azure EventHubs Geo Recovery configuration Alias.

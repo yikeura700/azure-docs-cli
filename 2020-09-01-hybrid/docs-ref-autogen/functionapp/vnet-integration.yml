@@ -14,7 +14,6 @@ directCommands:
     If there are multiple vnets of the same name across different resource groups, use vnet resource id to specify which vnet to use. If vnet name is used, by default, the vnet in the same resource group as the functionapp will be used.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp vnet-integration add --name
                                         --resource-group
@@ -64,7 +63,6 @@ directCommands:
     List the virtual network integrations on a functionapp.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp vnet-integration list --name
                                          --resource-group
@@ -92,7 +90,6 @@ directCommands:
     Remove a regional virtual network integration from functionapp.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp vnet-integration remove --name
                                            --resource-group
@@ -143,5 +140,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Methods that list, add, and remove virtual networks integrations from a functionapp.

@@ -18,7 +18,6 @@ directCommands:
     Break all the file locks on a volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume break-file-locks [--account-name]
                                            [--client-ip]
@@ -77,7 +76,6 @@ directCommands:
     Create the specified volume within the capacity pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume create --account-name
                                  --creation-token
@@ -718,7 +716,6 @@ directCommands:
     Delete the specified volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume delete [--account-name]
                                  [--force {0, 1, f, false, n, no, t, true, y, yes}]
@@ -770,7 +767,6 @@ directCommands:
     Finalizes the relocation of the volume and cleans up the old volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume finalize-relocation [--account-name]
                                               [--ids]
@@ -812,7 +808,6 @@ directCommands:
     Returns the list of group Ids for a specific LDAP User.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume get-groupid-list-for-ldapuser --username
                                                         [--account-name]
@@ -860,7 +855,6 @@ directCommands:
     List all volumes within the capacity pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume list --account-name
                                --pool-name
@@ -934,7 +928,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume migrate-backup --backup-vault-id
                                          [--account-name]
@@ -1024,7 +1017,6 @@ directCommands:
     Moves volume to another pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume pool-change --new-pool-resource-id
                                       [--account-name]
@@ -1072,7 +1064,6 @@ directCommands:
     This operation will populate availability zone information for a volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume populate-availability-zone [--account-name]
                                                      [--ids]
@@ -1114,7 +1105,6 @@ directCommands:
     Relocates volume to a new stamp.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume relocate [--account-name]
                                    [--creation-token]
@@ -1160,7 +1150,6 @@ directCommands:
     Reset cifs password from volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume reset-cifs-pw [--account-name]
                                         [--ids]
@@ -1202,7 +1191,6 @@ directCommands:
     Revert a volume to the snapshot specified in the body.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume revert [--account-name]
                                  [--ids]
@@ -1248,7 +1236,6 @@ directCommands:
     Reverts the volume relocation process, cleans up the new volume and starts using the former-existing volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume revert-relocation [--account-name]
                                             [--ids]
@@ -1295,7 +1282,6 @@ directCommands:
     Get the details of the specified volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume show [--account-name]
                                [--ids]
@@ -1367,7 +1353,6 @@ directCommands:
     Update the specified volume within the capacity pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume update [--account-name]
                                  [--add]
@@ -1891,7 +1876,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles volume wait [--account-name]
                                [--created]

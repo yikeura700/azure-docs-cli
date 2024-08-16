@@ -14,7 +14,6 @@ directCommands:
     You can only regenerate one key at a time.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search admin-key renew --key-kind
                               --resource-group
@@ -38,7 +37,6 @@ directCommands:
     Gets the primary and secondary admin API keys for the specified Azure Cognitive Search service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search admin-key show --resource-group
                              --service-name
@@ -79,5 +77,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/01/2021
   description: Manage Azure Search admin keys.

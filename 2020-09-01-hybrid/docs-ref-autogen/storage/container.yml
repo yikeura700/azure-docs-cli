@@ -20,7 +20,6 @@ directCommands:
     By default, container data is private ("off") to the account owner. Use "blob" to allow public read access for blobs. Use "container" to allow public read and list access to the entire container. You can configure the --public-access using `az storage container set-permission -n CONTAINER_NAME --public-access blob/container/off`.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container create --name
                                 [--account-key]
@@ -101,7 +100,6 @@ directCommands:
     The container and any blobs contained within it are later deleted during garbage collection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container delete --name
                                 [--account-key]
@@ -167,7 +165,6 @@ directCommands:
     Check for the existence of a storage container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container exists --name
                                 [--account-key]
@@ -211,7 +208,6 @@ directCommands:
     Generate a SAS token for a storage container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container generate-sas --name
                                       [--account-key]
@@ -417,7 +413,6 @@ directCommands:
     List containers in a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container list [--account-key]
                               [--account-name]
@@ -476,7 +471,6 @@ directCommands:
     Set the permissions for the specified container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container set-permission --name
                                         [--account-key]
@@ -533,7 +527,6 @@ directCommands:
     Return all user-defined metadata and system properties for the specified container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container show --name
                               [--account-key]
@@ -577,7 +570,6 @@ directCommands:
     Get the permissions for the specified container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage container show-permission --name
                                          [--account-key]

@@ -16,7 +16,6 @@ directCommands:
     Add the hostname to a container app without binding.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp hostname add --hostname
                                  [--ids]
@@ -55,7 +54,6 @@ directCommands:
     Add or update the hostname and binding with a certificate.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp hostname bind --hostname
                                   [--certificate]
@@ -171,7 +169,6 @@ directCommands:
     Delete hostnames from a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp hostname delete --hostname
                                     [--ids]
@@ -215,7 +212,6 @@ directCommands:
     List the hostnames of a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp hostname list --name
                                   --resource-group

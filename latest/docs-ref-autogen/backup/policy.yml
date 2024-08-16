@@ -12,7 +12,6 @@ directCommands:
     Create a new policy for the given BackupManagementType and workloadType.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup policy create --backup-management-type {AzureIaasVM, AzureStorage, AzureWorkload}
                             --name
@@ -57,7 +56,6 @@ directCommands:
     Delete a backup policy which doesn't have any associated backup items.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup policy delete [--ids]
                             [--name]
@@ -90,7 +88,6 @@ directCommands:
     Get the default policy with default values to backup a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup policy get-default-for-vm --resource-group
                                         --vault-name
@@ -113,7 +110,6 @@ directCommands:
     List all policies for a Recovery services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup policy list --resource-group
                           --vault-name
@@ -158,7 +154,6 @@ directCommands:
     List all items protected by a backup policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup policy list-associated-items [--backup-management-type {AzureIaasVM, AzureStorage, AzureWorkload}]
                                            [--ids]
@@ -196,7 +191,6 @@ directCommands:
     Update the existing policy with the provided details.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup policy set [--backup-management-type {AzureIaasVM, AzureStorage, AzureWorkload}]
                          [--fix-for-inconsistent-items {false, true}]
@@ -247,7 +241,6 @@ directCommands:
     Show details of a particular policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup policy show [--ids]
                           [--name]
@@ -307,5 +300,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: A backup policy defines when you want to take a backup and for how long you would retain each backup copy.

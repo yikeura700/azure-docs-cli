@@ -16,7 +16,6 @@ directCommands:
   isExperimental: true
   previewOrExperimentalInfo: "Command group 'synapse kusto attached-database-configuration' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kusto attached-database-configuration create --attached-database-configuration-name
                                                             --kusto-pool-name
@@ -87,7 +86,6 @@ directCommands:
   isExperimental: true
   previewOrExperimentalInfo: "Command group 'synapse kusto attached-database-configuration' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kusto attached-database-configuration delete [--attached-database-configuration-name]
                                                             [--ids]
@@ -136,7 +134,6 @@ directCommands:
   isExperimental: true
   previewOrExperimentalInfo: "Command group 'synapse kusto attached-database-configuration' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kusto attached-database-configuration list --kusto-pool-name
                                                           --resource-group
@@ -166,7 +163,6 @@ directCommands:
   isExperimental: true
   previewOrExperimentalInfo: "Command group 'synapse kusto attached-database-configuration' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kusto attached-database-configuration show [--attached-database-configuration-name]
                                                           [--ids]
@@ -205,7 +201,6 @@ directCommands:
   isExperimental: true
   previewOrExperimentalInfo: "Command group 'synapse kusto attached-database-configuration' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kusto attached-database-configuration update [--add]
                                                             [--attached-database-configuration-name]
@@ -295,7 +290,6 @@ directCommands:
   isExperimental: true
   previewOrExperimentalInfo: "Command group 'synapse kusto attached-database-configuration' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kusto attached-database-configuration wait [--attached-database-configuration-name]
                                                           [--created]
@@ -398,5 +392,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage kusto pool attached database configuration with synapse.

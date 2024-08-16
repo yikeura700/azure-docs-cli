@@ -12,7 +12,6 @@ directCommands:
     List available verified partners.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: az eventgrid partner verified-partner list [--odata-query]
   examples:
   - summary: |-
@@ -28,7 +27,6 @@ directCommands:
     Get the details of a verified partner.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: az eventgrid partner verified-partner show --verified-partner-name
   examples:
   - summary: |-
@@ -67,5 +65,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/08/2022
   description: Manage verified partners.

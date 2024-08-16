@@ -12,7 +12,6 @@ directCommands:
     List ExpressRoute links.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port link list --port-name
                                             --resource-group
@@ -35,7 +34,6 @@ directCommands:
     Get the details of an ExpressRoute link.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port link show --name
                                             --port-name
@@ -63,7 +61,6 @@ directCommands:
     Manage MACsec configuration of an ExpressRoute Link.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port link update --name
                                               --port-name
@@ -144,7 +141,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route port link wait [--created]
                                             [--custom]
@@ -227,5 +223,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: View ExpressRoute links.

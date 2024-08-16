@@ -12,7 +12,6 @@ directCommands:
     Assign System or User or System,User assigned identities to a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace identity assign --namespace-name
                                            --resource-group
@@ -45,7 +44,6 @@ directCommands:
     Remove System or User or System,User assigned identities from a namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventhubs/_help.py
   syntax: >-
     az eventhubs namespace identity remove --namespace-name
                                            --resource-group
@@ -100,5 +98,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/17/2023
   description: Manage eventhubs namespace identity.

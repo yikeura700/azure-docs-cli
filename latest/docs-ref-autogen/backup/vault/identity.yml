@@ -12,7 +12,6 @@ directCommands:
     Assign Identities to Recovery Services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault identity assign [--ids]
                                     [--name]
@@ -49,7 +48,6 @@ directCommands:
     Remove Identities of Recovery Services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault identity remove [--ids]
                                     [--name]
@@ -86,7 +84,6 @@ directCommands:
     Show Identities of Recovery Services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup vault identity show [--ids]
                                   [--name]
@@ -138,5 +135,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: Identity details of a Recovery Services Vault.

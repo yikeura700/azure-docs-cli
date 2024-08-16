@@ -16,7 +16,6 @@ directCommands:
     Aborts a pending copy_file operation, and leaves a destination file  with zero length and full metadata.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage file copy cancel --copy-id
                                 --destination-path
@@ -124,7 +123,6 @@ directCommands:
     Copy a file asynchronously.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage file copy start --destination-path
                                --destination-share
@@ -334,7 +332,6 @@ directCommands:
     Copy multiple files or blobs to a file share.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage file copy start-batch [--account-key]
                                      [--account-name]

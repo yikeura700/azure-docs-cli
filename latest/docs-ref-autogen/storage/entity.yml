@@ -12,7 +12,6 @@ directCommands:
     Delete an existing entity in a table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage entity delete --partition-key
                              --row-key
@@ -67,7 +66,6 @@ directCommands:
     Insert an entity into a table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage entity insert --entity
                              --table-name
@@ -124,7 +122,6 @@ directCommands:
     Update an existing entity by merging the entity's properties.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage entity merge --entity
                             --table-name
@@ -174,7 +171,6 @@ directCommands:
     List entities which satisfy a query.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage entity query --table-name
                             [--account-key]
@@ -236,7 +232,6 @@ directCommands:
     Update an existing entity in a table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage entity replace --entity
                               --table-name
@@ -286,7 +281,6 @@ directCommands:
     Get a single entity in a table.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage entity show --partition-key
                            --row-key
@@ -366,5 +360,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage table storage entities.

@@ -12,7 +12,6 @@ directCommands:
     Create an Active Directory administrator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server ad-admin create --display-name
                                              --identity
@@ -56,7 +55,6 @@ directCommands:
     Delete an Active Directory administrator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server ad-admin delete --resource-group
                                              --server-name
@@ -90,7 +88,6 @@ directCommands:
     List all Active Directory administrators.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server ad-admin list --resource-group
                                            --server-name
@@ -113,7 +110,6 @@ directCommands:
     Get an Active Directory administrator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server ad-admin show --resource-group
                                            --server-name
@@ -136,7 +132,6 @@ directCommands:
     Wait for the Active Directory administrator to satisfy certain conditions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server ad-admin wait --resource-group
                                            --server-name
@@ -222,5 +217,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage server Active Directory administrator.

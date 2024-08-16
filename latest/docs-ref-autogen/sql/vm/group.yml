@@ -12,7 +12,6 @@ directCommands:
     Creates a SQL virtual machine group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm group create --domain-fqdn
                            --image-offer
@@ -100,7 +99,6 @@ directCommands:
     Deletes a SQL virtual machine group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm group delete [--ids]
                            [--name]
@@ -130,7 +128,6 @@ directCommands:
     Lists all SQL virtual machine groups in a resource group or subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: az sql vm group list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -142,7 +139,6 @@ directCommands:
     Gets a SQL virtual machine group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm group show [--ids]
                          [--name]
@@ -167,7 +163,6 @@ directCommands:
     Updates a SQL virtual machine group if there are not SQL virtual machines attached to the group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm group update [--add]
                            [--bootstrap-acc]
@@ -291,5 +286,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage SQL virtual machine groups.

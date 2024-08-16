@@ -12,7 +12,6 @@ directCommands:
     Create Identities.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/identity/_help.py
   syntax: >-
     az identity create --name
                        --resource-group
@@ -44,7 +43,6 @@ directCommands:
     Deletes the identity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/identity/_help.py
   syntax: >-
     az identity delete [--ids]
                        [--name]
@@ -69,7 +67,6 @@ directCommands:
     List Managed Identities.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/identity/_help.py
   syntax: az identity list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -81,7 +78,6 @@ directCommands:
     List available operations for the Managed Identity provider.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/identity/_help.py
   syntax: az identity list-operations
 - uid: az_identity_show
   name: az identity show
@@ -89,7 +85,6 @@ directCommands:
     Gets the identity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/identity/_help.py
   syntax: >-
     az identity show [--ids]
                      [--name]
@@ -139,5 +134,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/16/2023
   description: Managed Identities.

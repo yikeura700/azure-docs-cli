@@ -12,7 +12,6 @@ directCommands:
     Create a pipeline.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse pipeline create --file
                                --name
@@ -48,7 +47,6 @@ directCommands:
     Creates a run of a pipeline.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse pipeline create-run --name
                                    --workspace-name
@@ -91,7 +89,6 @@ directCommands:
     Delete a pipeline.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse pipeline delete --name
                                --workspace-name
@@ -127,7 +124,6 @@ directCommands:
     List pipelines.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: az synapse pipeline list --workspace-name
   examples:
   - summary: |-
@@ -146,7 +142,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'update' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse pipeline set --file
                             --name
@@ -182,7 +177,6 @@ directCommands:
     Get a pipeline.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse pipeline show --name
                              --workspace-name
@@ -207,7 +201,6 @@ directCommands:
     Update an exist pipeline.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse pipeline update --file
                                --name
@@ -270,5 +263,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage Synapse's pipelines.

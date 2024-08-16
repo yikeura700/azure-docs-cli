@@ -12,7 +12,6 @@ directCommands:
     Get the server's advanced threat protection setting.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server advanced-threat-protection-setting show [--ids]
                                                                      [--name]
@@ -41,7 +40,6 @@ directCommands:
     Update the server's advanced threat protection setting.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql flexible-server advanced-threat-protection-setting update --state {Disabled, Enabled}
                                                                        [--ids]
@@ -102,5 +100,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage the server's advanced threat protection setting.

@@ -12,7 +12,6 @@ directCommands:
     Add an AAAA record.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set aaaa add-record --ipv6-address
                                               --record-set-name
@@ -57,7 +56,6 @@ directCommands:
     Create an empty AAAA record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set aaaa create --name
                                           --resource-group
@@ -107,7 +105,6 @@ directCommands:
     Delete an AAAA record set and all associated records.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set aaaa delete --name
                                           --resource-group
@@ -145,7 +142,6 @@ directCommands:
     List all AAAA record sets in a zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set aaaa list --resource-group
                                         --zone-name
@@ -173,7 +169,6 @@ directCommands:
     By default, if the last record in a set is removed, the record set is deleted. To retain the empty record set, include --keep-empty-record-set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set aaaa remove-record --ipv6-address
                                                  --record-set-name
@@ -214,7 +209,6 @@ directCommands:
     Get the details of an AAAA record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set aaaa show --name
                                         --resource-group
@@ -242,7 +236,6 @@ directCommands:
     Update an AAAA record set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns record-set aaaa update --name
                                           --resource-group
@@ -336,5 +329,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage DNS AAAA records.

@@ -12,7 +12,6 @@ directCommands:
     Create a saved search for a given workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace saved-search create --category
                                                            --display-name
@@ -68,7 +67,6 @@ directCommands:
     Delete a saved search for a given workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace saved-search delete [--ids]
                                                            [--name]
@@ -102,7 +100,6 @@ directCommands:
     List all saved searches for a given workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace saved-search list --resource-group
                                                          --workspace-name
@@ -121,7 +118,6 @@ directCommands:
     Show a saved search for a given workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace saved-search show [--ids]
                                                          [--name]
@@ -150,7 +146,6 @@ directCommands:
     Update a saved search for a given workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace saved-search update --name
                                                            --resource-group
@@ -228,5 +223,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: Manage saved search for log analytics workspace.

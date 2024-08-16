@@ -14,7 +14,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'deployment operation sub list' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az deployment operation list --name
   examples:
   - summary: |-
@@ -33,7 +32,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'deployment operation sub show' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az deployment operation show --name
                                  --operation-ids
@@ -80,5 +78,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage deployment operations at subscription scope.

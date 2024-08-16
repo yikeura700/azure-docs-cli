@@ -12,7 +12,6 @@ directCommands:
     Create the data policy rules associated with the specified storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account management-policy create --account-name
                                                 --policy
@@ -40,7 +39,6 @@ directCommands:
     Delete the data policy rules associated with the specified storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account management-policy delete --account-name
                                                 --resource-group
@@ -59,7 +57,6 @@ directCommands:
     Get the data policy rules associated with the specified storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account management-policy show --account-name
                                               --resource-group
@@ -78,7 +75,6 @@ directCommands:
     Update the data policy rules associated with the specified storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account management-policy update --account-name
                                                 --resource-group
@@ -146,5 +142,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/29/2024
   description: Manage storage account management policies.

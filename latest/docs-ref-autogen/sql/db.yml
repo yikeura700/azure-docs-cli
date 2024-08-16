@@ -14,7 +14,6 @@ directCommands:
     A full list of performance level options can be seen by executing `az sql db list-editions -a -o table -l LOCATION`. The copy destination database must have the same edition as the source database, but you can change the edition after the copy has completed.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db copy --dest-name
                    [--assign-identity {false, true}]
@@ -165,7 +164,6 @@ directCommands:
     A full list of performance level options can be seen by executing `az sql db list-editions -a -o table -l LOCATION`.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db create --name
                      --resource-group
@@ -359,7 +357,6 @@ directCommands:
     Delete a database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db delete [--ids]
                      [--name]
@@ -402,7 +399,6 @@ directCommands:
     Export a database to a bacpac.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db export --admin-password
                      --admin-user
@@ -487,7 +483,6 @@ directCommands:
     Imports a bacpac into a new database, or an existing empty database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db import --admin-password
                      --admin-user
@@ -572,7 +567,6 @@ directCommands:
     List databases on a server or elastic pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db list [--elastic-pool]
                    [--ids]
@@ -605,7 +599,6 @@ directCommands:
     Gets a list of restorable dropped databases.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db list-deleted [--ids]
                            [--resource-group]
@@ -632,7 +625,6 @@ directCommands:
     Includes available service objectives and storage limits. In order to reduce verbosity, settings to intentionally reduce storage limits are hidden by default.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db list-editions --location
                             [--available]
@@ -683,7 +675,6 @@ directCommands:
     Gets database usages.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db list-usages [--ids]
                           [--name]
@@ -712,7 +703,6 @@ directCommands:
     Rename a database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db rename --new-name
                      [--ids]
@@ -751,7 +741,6 @@ directCommands:
     Create a new database by restoring from a backup.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db restore --dest-name
                       [--assign-identity {false, true}]
@@ -901,7 +890,6 @@ directCommands:
     Get the details for a database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db show [--expand-keys {false, true}]
                    [--ids]
@@ -944,7 +932,6 @@ directCommands:
     Generates a connection string to a database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db show-connection-string --client {ado.net, jdbc, odbc, php, php_pdo, sqlcmd}
                                      [--auth-type {ADIntegrated, ADPassword, SqlPassword}]
@@ -988,7 +975,6 @@ directCommands:
     Get the details for a deleted database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db show-deleted --restorable-dropped-database-id
                            [--expand-keys {false, true}]
@@ -1033,7 +1019,6 @@ directCommands:
     Update a database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql db update [--add]
                      [--assign-identity {false, true}]
@@ -1332,5 +1317,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage databases.

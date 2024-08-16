@@ -16,7 +16,6 @@ directCommands:
   isExperimental: true
   previewOrExperimentalInfo: "Command group 'synapse kusto data-connection' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kusto data-connection delete [--data-connection-name]
                                             [--database-name]
@@ -69,7 +68,6 @@ directCommands:
   isExperimental: true
   previewOrExperimentalInfo: "Command group 'synapse kusto data-connection' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kusto data-connection list --database-name
                                           --kusto-pool-name
@@ -104,7 +102,6 @@ directCommands:
   isExperimental: true
   previewOrExperimentalInfo: "Command group 'synapse kusto data-connection' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kusto data-connection show [--data-connection-name]
                                           [--database-name]
@@ -147,7 +144,6 @@ directCommands:
   isExperimental: true
   previewOrExperimentalInfo: "Command group 'synapse kusto data-connection' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus"
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse kusto data-connection wait [--created]
                                           [--custom]
@@ -258,5 +254,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage kusto pool data connection with synapse.

@@ -12,7 +12,6 @@ directCommands:
     Create a listener.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway listener create --frontend-port
                                                    --gateway-name
@@ -67,7 +66,6 @@ directCommands:
     Delete a listener.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway listener delete --gateway-name
                                                    --name
@@ -101,7 +99,6 @@ directCommands:
     List listeners.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway listener list --gateway-name
                                                  --resource-group
@@ -124,7 +121,6 @@ directCommands:
     Get the details of a listener.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway listener show --gateway-name
                                                  --name
@@ -152,7 +148,6 @@ directCommands:
     Update a listener.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway listener update --gateway-name
                                                    --name
@@ -223,7 +218,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway listener wait [--created]
                                                  [--custom]
@@ -308,5 +302,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage listeners of an application gateway.

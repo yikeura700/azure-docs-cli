@@ -12,7 +12,6 @@ directCommands:
     Complete Log Replay service on specified database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb log-replay complete [--ids]
                                     [--last-backup-name]
@@ -49,7 +48,6 @@ directCommands:
     Get status of Log Replay service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb log-replay show [--ids]
                                 [--managed-instance]
@@ -82,7 +80,6 @@ directCommands:
     Start Log Replay service on specified database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb log-replay start --ss
                                  --storage-uri
@@ -148,7 +145,6 @@ directCommands:
     Stop Log Replay service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb log-replay stop [--ids]
                                 [--managed-instance]
@@ -191,7 +187,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of the managed database is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql midb log-replay wait [--created]
                                 [--custom]
@@ -286,5 +281,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: SQL Managed Instance database Log Replay service commands.

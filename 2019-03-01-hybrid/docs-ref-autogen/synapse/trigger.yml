@@ -12,7 +12,6 @@ directCommands:
     Create a trigger.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse trigger create --file
                               --name
@@ -48,7 +47,6 @@ directCommands:
     Delete a trigger.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse trigger delete --name
                               --workspace-name
@@ -84,7 +82,6 @@ directCommands:
     Get a trigger's event subscription status.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse trigger get-event-subscription-status --name
                                                      --workspace-name
@@ -109,7 +106,6 @@ directCommands:
     List triggers.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: az synapse trigger list --workspace-name
   examples:
   - summary: |-
@@ -128,7 +124,6 @@ directCommands:
   isDeprecated: true
   deprecateInfo: This command has been deprecated and will be removed in a future release. Use 'update' instead.
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse trigger set --file
                            --name
@@ -164,7 +159,6 @@ directCommands:
     Get a trigger.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse trigger show --name
                             --workspace-name
@@ -189,7 +183,6 @@ directCommands:
     Starts a trigger.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse trigger start --name
                              --workspace-name
@@ -220,7 +213,6 @@ directCommands:
     Stops a trigger.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse trigger stop --name
                             --workspace-name
@@ -251,7 +243,6 @@ directCommands:
     Subscribe event trigger to events.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse trigger subscribe-to-event --name
                                           --workspace-name
@@ -282,7 +273,6 @@ directCommands:
     Unsubscribe event trigger from events.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse trigger unsubscribe-from-event --name
                                               --workspace-name
@@ -313,7 +303,6 @@ directCommands:
     Update an exist trigger.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse trigger update --file
                               --name
@@ -349,7 +338,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of a trigger is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse trigger wait --name
                             --workspace-name
@@ -435,5 +423,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage Synapse's triggers.

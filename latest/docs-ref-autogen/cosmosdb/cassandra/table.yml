@@ -12,7 +12,6 @@ directCommands:
     Create an Cassandra table under an Azure Cosmos DB Cassandra keyspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra table create --account-name
                                        --keyspace-name
@@ -67,7 +66,6 @@ directCommands:
     Delete the Cassandra table under an Azure Cosmos DB Cassandra keyspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra table delete --account-name
                                        --keyspace-name
@@ -102,7 +100,6 @@ directCommands:
     Checks if an Azure Cosmos DB Cassandra table exists.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra table exists --account-name
                                        --keyspace-name
@@ -131,7 +128,6 @@ directCommands:
     List the Cassandra tables under an Azure Cosmos DB Cassandra keyspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra table list --account-name
                                      --keyspace-name
@@ -159,7 +155,6 @@ directCommands:
     Show the details of a Cassandra table under an Azure Cosmos DB Cassandra keyspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra table show --account-name
                                      --keyspace-name
@@ -188,7 +183,6 @@ directCommands:
     Update an Cassandra table under an Azure Cosmos DB Cassandra keyspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra table update --account-name
                                        --keyspace-name
@@ -264,5 +258,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB Cassandra tables.

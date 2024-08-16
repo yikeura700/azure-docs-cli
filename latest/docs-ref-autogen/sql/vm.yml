@@ -12,7 +12,6 @@ directCommands:
     Adds SQL virtual machine to a SQL virtual machine group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm add-to-group --sqlvm-group
                            [--bootstrap-acc-pwd]
@@ -59,7 +58,6 @@ directCommands:
     Creates a SQL virtual machine.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm create --name
                      --resource-group
@@ -263,7 +261,6 @@ directCommands:
     Deletes a SQL virtual machine.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm delete [--ids]
                      [--name]
@@ -293,7 +290,6 @@ directCommands:
     Enable Azure AD authentication of a SQL virtual machine.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm enable-azure-ad-auth [--ids]
                                    [--msi-client-id]
@@ -339,7 +335,6 @@ directCommands:
     Lists all SQL virtual machines in a resource group or subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: az sql vm list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -351,7 +346,6 @@ directCommands:
     Remove SQL virtual machine from its current SQL virtual machine group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm remove-from-group [--ids]
                                 [--name]
@@ -380,7 +374,6 @@ directCommands:
     Gets a SQL virtual machine.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm show [--expand {*, AssessmentSettings, AutoBackupSettings, AutoPatchingSettings, KeyVaultCredentialSettings, ServerConfigurationsManagementSettings}]
                    [--ids]
@@ -410,7 +403,6 @@ directCommands:
     Starts SQL best practice assessment on SQL virtual machine.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm start-assessment [--ids]
                                [--name]
@@ -439,7 +431,6 @@ directCommands:
     Updates the properties of a SQL virtual machine.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm update [--add]
                      [--agent-rg]
@@ -727,7 +718,6 @@ directCommands:
     Validate Azure AD authentication of a SQL virtual machine at the client side without enabling it.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql vm validate-azure-ad-auth [--ids]
                                      [--msi-client-id]
@@ -805,5 +795,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Manage SQL virtual machines.

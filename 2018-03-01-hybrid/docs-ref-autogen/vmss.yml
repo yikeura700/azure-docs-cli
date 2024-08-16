@@ -14,7 +14,6 @@ directCommands:
     For an end-to-end tutorial, see https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-linux-create-cli.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss create --name
                    --resource-group
@@ -388,7 +387,6 @@ directCommands:
     Deallocate VMs within a VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss deallocate --name
                        --resource-group
@@ -421,7 +419,6 @@ directCommands:
     Delete a VM scale set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss delete [--ids]
                    [--name]
@@ -451,7 +448,6 @@ directCommands:
     Delete VMs within a VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss delete-instances --instance-ids
                              --name
@@ -485,7 +481,6 @@ directCommands:
     View an instance of a VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss get-instance-view [--ids]
                               [--instance-id]
@@ -518,7 +513,6 @@ directCommands:
     List all VM scale sets under a resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss list [--max-items]
                  [--next-token]
@@ -543,7 +537,6 @@ directCommands:
     Get the IP address and port number used to connect to individual VM instances within a set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss list-instance-connection-info [--ids]
                                           [--name]
@@ -572,7 +565,6 @@ directCommands:
     List public IP addresses of VM instances within a set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss list-instance-public-ips [--ids]
                                      [--name]
@@ -603,7 +595,6 @@ directCommands:
     Return a list of virtual machines managed by VMSS. For VMSS in Flexible Orchestration mode, please use "az vm list" to get full details.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss list-instances --name
                            --resource-group
@@ -643,7 +634,6 @@ directCommands:
     List SKUs available for your VM scale set, including the minimum and maximum VM instances allowed for each SKU.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss list-skus --name
                       --resource-group
@@ -671,7 +661,6 @@ directCommands:
     Reimage VMs within a VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss reimage [--ids]
                     [--instance-ids]
@@ -715,7 +704,6 @@ directCommands:
     Restart VMs within a VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss restart --name
                     --resource-group
@@ -748,7 +736,6 @@ directCommands:
     Change the number of VMs within a VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss scale --new-capacity
                   [--ids]
@@ -788,7 +775,6 @@ directCommands:
     Change ServiceState property for a given service within a VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss set-orchestration-service-state --action
                                             --service-name
@@ -833,7 +819,6 @@ directCommands:
     Get details on VMs within a VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss show --name
                  --resource-group
@@ -861,7 +846,6 @@ directCommands:
     Start VMs within a VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss start --name
                   --resource-group
@@ -896,7 +880,6 @@ directCommands:
     The VMs will continue to be billed. To avoid this, you can deallocate VM instances within a VMSS through "az vmss deallocate".
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss stop --name
                  --resource-group
@@ -932,7 +915,6 @@ directCommands:
     Update a VMSS. Run 'az vmss update-instances' command to roll out the changes to VMs if you have not configured upgrade policy.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss update [--add]
                    [--custom-data]
@@ -1046,7 +1028,6 @@ directCommands:
     Upgrade VMs within a VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss update-instances --instance-ids
                              --name
@@ -1080,7 +1061,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of a scale set is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss wait [--created]
                  [--custom]
@@ -1221,5 +1201,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Manage groupings of virtual machines in an Azure Virtual Machine Scale Set (VMSS).

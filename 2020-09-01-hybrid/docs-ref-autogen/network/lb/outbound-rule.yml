@@ -12,7 +12,6 @@ directCommands:
     Create an outbound-rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb outbound-rule create --address-pool
                                        --lb-name
@@ -74,7 +73,6 @@ directCommands:
     Delete an outbound-rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb outbound-rule delete --lb-name
                                        --name
@@ -108,7 +106,6 @@ directCommands:
     List outbound rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb outbound-rule list --lb-name
                                      --resource-group
@@ -131,7 +128,6 @@ directCommands:
     Get the details of an outbound rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb outbound-rule show --lb-name
                                      --name
@@ -159,7 +155,6 @@ directCommands:
     Update an outbound-rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb outbound-rule update --lb-name
                                        --name
@@ -236,7 +231,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb outbound-rule wait [--created]
                                      [--custom]
@@ -321,5 +315,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage outbound rules of a load balancer.

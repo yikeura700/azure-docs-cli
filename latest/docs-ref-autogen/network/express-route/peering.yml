@@ -12,7 +12,6 @@ directCommands:
     Create peering settings for an ExpressRoute circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering create --circuit-name
                                             --resource-group
@@ -98,7 +97,6 @@ directCommands:
     Delete peering settings.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering delete [--circuit-name]
                                             [--ids]
@@ -138,7 +136,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering get-stats [--circuit-name]
                                                [--ids]
@@ -171,7 +168,6 @@ directCommands:
     List peering settings of an ExpressRoute circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering list --circuit-name
                                           --resource-group
@@ -203,7 +199,6 @@ directCommands:
     Get the details of an express route peering.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering show [--circuit-name]
                                           [--ids]
@@ -236,7 +231,6 @@ directCommands:
     Update peering settings of an ExpressRoute circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering update [--add]
                                             [--advertised-public-prefixes]
@@ -340,7 +334,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering wait [--circuit-name]
                                           [--created]
@@ -443,5 +436,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage ExpressRoute peering of an ExpressRoute circuit.

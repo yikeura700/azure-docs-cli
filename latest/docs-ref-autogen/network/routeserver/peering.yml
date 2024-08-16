@@ -12,7 +12,6 @@ directCommands:
     Create a route server peering.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver peering create --name
                                           --resource-group
@@ -54,7 +53,6 @@ directCommands:
     Delete a route server peering.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver peering delete [--ids]
                                           [--name]
@@ -97,7 +95,6 @@ directCommands:
     List all route server peerings under a resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver peering list --resource-group
                                         --routeserver
@@ -120,7 +117,6 @@ directCommands:
     List all routes the route server bgp connection is advertising to the specified peer.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver peering list-advertised-routes [--ids]
                                                           [--name]
@@ -158,7 +154,6 @@ directCommands:
     List all routes the route server bgp connection has learned.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver peering list-learned-routes [--ids]
                                                        [--name]
@@ -196,7 +191,6 @@ directCommands:
     Show a route server peering.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver peering show [--ids]
                                         [--name]
@@ -229,7 +223,6 @@ directCommands:
     Update a route server peering.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver peering update [--add]
                                           [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -292,7 +285,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network routeserver peering wait [--created]
                                         [--custom]
@@ -383,5 +375,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage the route server peering.

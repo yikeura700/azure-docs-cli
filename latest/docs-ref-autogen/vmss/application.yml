@@ -12,7 +12,6 @@ directCommands:
     List applications for VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss application list --name
                              --resource-group
@@ -35,7 +34,6 @@ directCommands:
     Set applications for VMSS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss application set --app-version-ids
                             [--app-config-overrides]
@@ -108,5 +106,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Manage applications for VM scale set.

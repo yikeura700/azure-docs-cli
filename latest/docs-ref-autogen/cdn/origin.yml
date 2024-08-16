@@ -12,7 +12,6 @@ directCommands:
     Create a new origin within the specified endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn origin create --endpoint-name
                          --name
@@ -104,7 +103,6 @@ directCommands:
     Delete an existing origin within an endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn origin delete [--endpoint-name]
                          [--ids]
@@ -147,7 +145,6 @@ directCommands:
     List all of the existing origins within an endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn origin list --endpoint-name
                        --profile-name
@@ -180,7 +177,6 @@ directCommands:
     Get an existing origin within an endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn origin show [--endpoint-name]
                        [--ids]
@@ -213,7 +209,6 @@ directCommands:
     Update a new origin within the specified endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn origin update [--add]
                          [--disabled {0, 1, f, false, n, no, t, true, y, yes}]
@@ -328,7 +323,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn origin wait [--created]
                        [--custom]
@@ -421,5 +415,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/28/2024
   description: List or show existing origins related to CDN endpoints.

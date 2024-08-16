@@ -12,7 +12,6 @@ directCommands:
     Create a DNS zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns zone create --name
                                --resource-group
@@ -55,7 +54,6 @@ directCommands:
     Delete a DNS zone. WARNING: All DNS records in the zone will also be deleted. This operation cannot be undone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns zone delete [--ids]
                                [--if-match]
@@ -98,7 +96,6 @@ directCommands:
     Export a DNS zone as a DNS zone file.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns zone export --name
                                --resource-group
@@ -126,7 +123,6 @@ directCommands:
     Create a DNS zone using a DNS zone file.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns zone import --file-name
                                --name
@@ -154,7 +150,6 @@ directCommands:
     List the DNS zones.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns zone list [--max-items]
                              [--next-token]
@@ -186,7 +181,6 @@ directCommands:
     Get a DNS zone. Retrieves the zone properties, but not the record sets within the zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns zone show [--ids]
                              [--name]
@@ -215,7 +209,6 @@ directCommands:
     Update a DNS zone. Does not modify DNS records within the zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network dns zone update [--add]
                                [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -296,5 +289,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage DNS zones.

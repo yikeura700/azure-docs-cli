@@ -12,7 +12,6 @@ directCommands:
     Create an address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb address-pool create --address-pool-name
                                       --lb-name
@@ -46,7 +45,6 @@ directCommands:
     Delete an address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb address-pool delete --address-pool-name
                                       --lb-name
@@ -80,7 +78,6 @@ directCommands:
     List address pools.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb address-pool list --lb-name
                                     --resource-group
@@ -103,7 +100,6 @@ directCommands:
     Get the details of an address pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb address-pool show --address-pool-name
                                     --lb-name
@@ -131,7 +127,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network lb address-pool wait [--created]
                                     [--custom]
@@ -215,5 +210,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage address pools of a load balancer.

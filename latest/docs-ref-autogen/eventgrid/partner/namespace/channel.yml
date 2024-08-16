@@ -12,7 +12,6 @@ directCommands:
     Create a new channel for a partner namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner namespace channel create --channel-type {PartnerDestination, PartnerTopic}
                                                   --destination-rg
@@ -122,7 +121,6 @@ directCommands:
     Delete a partner namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner namespace channel delete [--ids]
                                                   [--name]
@@ -160,7 +158,6 @@ directCommands:
     List available partner channels.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner namespace channel list --partner-namespace-name
                                                 --resource-group
@@ -191,7 +188,6 @@ directCommands:
     Get the details of a channel under a partner namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner namespace channel show [--ids]
                                                 [--name]
@@ -227,7 +223,6 @@ directCommands:
     Update the details of a channel under a partner namespace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid partner namespace channel update [--aad-app-id]
                                                   [--aad-tenant-id]
@@ -332,5 +327,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/08/2022
   description: Manage partner channels.

@@ -12,7 +12,6 @@ directCommands:
     Creates a Api Version Set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api versionset create --display-name
                                   --resource-group
@@ -69,7 +68,6 @@ directCommands:
     Deletes specific Api Version Set.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api versionset delete --resource-group
                                   --service-name
@@ -102,7 +100,6 @@ directCommands:
     Lists a collection of API Version Sets in the specified service instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api versionset list --resource-group
                                 --service-name
@@ -125,7 +122,6 @@ directCommands:
     Gets the details of the Api Version Set specified by its identifier.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api versionset show --resource-group
                                 --service-name
@@ -153,7 +149,6 @@ directCommands:
     Updates the details of the Api VersionSet specified by its identifier.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api versionset update --resource-group
                                   --service-name
@@ -254,5 +249,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/19/2024
   description: Manage Azure API Management API Version Set.

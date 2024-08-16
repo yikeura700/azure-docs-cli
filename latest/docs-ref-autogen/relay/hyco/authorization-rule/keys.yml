@@ -12,7 +12,6 @@ directCommands:
     List the keys and connection strings of Authorization Rule for Relay Service Hybrid Connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay hyco authorization-rule keys list --hybrid-connection-name
                                                --name
@@ -48,7 +47,6 @@ directCommands:
     Regenerate keys of Authorization Rule for Relay Service Hybrid Connection.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/relay/_help.py
   syntax: >-
     az relay hyco authorization-rule keys renew --key {PrimaryKey, SecondaryKey}
                                                 [--hybrid-connection-name]
@@ -118,5 +116,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/09/2021
   description: Manage Azure Authorization Rule keys for Relay Service Hybrid Connection.

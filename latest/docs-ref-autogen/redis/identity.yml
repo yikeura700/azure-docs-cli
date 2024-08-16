@@ -12,7 +12,6 @@ directCommands:
     Assign identity for Azure cache for Redis.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis identity assign [--ids]
                              [--mi-system-assigned]
@@ -45,7 +44,6 @@ directCommands:
     Remove the identity already assigned for Azure cache for Redis.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis identity remove [--ids]
                              [--mi-system-assigned]
@@ -78,7 +76,6 @@ directCommands:
     Show the identity assigned for Azure cache for Redis.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/redis/_help.py
   syntax: >-
     az redis identity show [--ids]
                            [--name]
@@ -126,5 +123,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 01/25/2024
   description: Manage identity assigned to Azure cache for Redis.

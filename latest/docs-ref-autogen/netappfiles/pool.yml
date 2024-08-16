@@ -14,7 +14,6 @@ directCommands:
     Create a new Azure NetApp Files (ANF) capacity pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles pool create --account-name
                                --name
@@ -87,7 +86,6 @@ directCommands:
     Delete the specified ANF capacity pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles pool delete [--account-name]
                                [--ids]
@@ -132,7 +130,6 @@ directCommands:
     List the ANF capacity pools for the specified account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles pool list --account-name
                              --resource-group
@@ -166,7 +163,6 @@ directCommands:
     Get the specified ANF capacity pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles pool show [--account-name]
                              [--ids]
@@ -201,7 +197,6 @@ directCommands:
     Update the specified ANF capacity pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles pool update [--account-name]
                                [--add]
@@ -279,7 +274,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles pool wait [--account-name]
                              [--created]
@@ -368,5 +362,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/07/2024
   description: Manage Azure NetApp Files (ANF) Capacity Pool Resources.

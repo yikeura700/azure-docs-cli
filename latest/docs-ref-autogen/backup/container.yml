@@ -12,7 +12,6 @@ directCommands:
     List containers registered to a Recovery services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup container list --backup-management-type {AzureIaasVM, AzureStorage, AzureWorkload, MAB}
                              --resource-group
@@ -46,7 +45,6 @@ directCommands:
     Reset the registration details for a given container.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup container re-register --workload-type {MSSQL, SAPASE, SAPHANA, SAPHanaDatabase, SQLDataBase}
                                     [--backup-management-type {AzureIaasVM, AzureStorage, AzureWorkload}]
@@ -97,7 +95,6 @@ directCommands:
     Register a Resource to the given Recovery Services Vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup container register --resource-group
                                  --resource-id
@@ -138,7 +135,6 @@ directCommands:
     Show details of a container registered to a Recovery services vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup container show [--backup-management-type {AzureIaasVM, AzureStorage, AzureWorkload, MAB}]
                              [--ids]
@@ -180,7 +176,6 @@ directCommands:
     Unregister a Backup Container to make the underlying 'resource' be protected by another vault.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/backup/_help.py
   syntax: >-
     az backup container unregister [--backup-management-type {AzureIaasVM, AzureStorage, AzureWorkload, MAB}]
                                    [--container-name]
@@ -248,5 +243,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/22/2024
   description: Resource which houses items or applications to be protected.

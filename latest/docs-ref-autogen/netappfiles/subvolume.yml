@@ -12,7 +12,6 @@ directCommands:
     Create a subvolume in the path or clones the subvolume mentioned in the parentPath.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles subvolume create --account-name
                                     --name
@@ -68,7 +67,6 @@ directCommands:
     Delete subvolume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles subvolume delete [--account-name]
                                     [--ids]
@@ -119,7 +117,6 @@ directCommands:
     List a list of the subvolumes in the volume.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles subvolume list --account-name
                                   --pool-name
@@ -161,7 +158,6 @@ directCommands:
     Get the path associated with the subvolumeName provided.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles subvolume show [--account-name]
                                   [--ids]
@@ -202,7 +198,6 @@ directCommands:
     Update a subvolume in the path or clones the subvolume mentioned in the parentPath.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles subvolume update [--account-name]
                                     [--add]
@@ -277,7 +272,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/netappfiles/_help.py
   syntax: >-
     az netappfiles subvolume wait [--account-name]
                                   [--created]
@@ -376,5 +370,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/07/2024
   description: Manage Azure NetApp Files (ANF) Subvolume Resources.

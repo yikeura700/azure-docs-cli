@@ -12,7 +12,6 @@ directCommands:
     Create a rewrite rule condition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway rewrite-rule condition create --gateway-name
                                                                  --resource-group
@@ -70,7 +69,6 @@ directCommands:
     Delete a rewrite rule condition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway rewrite-rule condition delete --gateway-name
                                                                  --resource-group
@@ -114,7 +112,6 @@ directCommands:
     List rewrite rule conditions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway rewrite-rule condition list --gateway-name
                                                                --resource-group
@@ -147,7 +144,6 @@ directCommands:
     List all available server variables.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network application-gateway rewrite-rule condition list-server-variables
   examples:
   - summary: |-
@@ -159,7 +155,6 @@ directCommands:
     Get the details of a rewrite rule condition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway rewrite-rule condition show --gateway-name
                                                                --resource-group
@@ -197,7 +192,6 @@ directCommands:
     Update a rewrite rule condition.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway rewrite-rule condition update --gateway-name
                                                                  --resource-group
@@ -272,7 +266,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway rewrite-rule condition wait [--created]
                                                                [--custom]
@@ -358,5 +351,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage rewrite rule conditions of an application gateway.

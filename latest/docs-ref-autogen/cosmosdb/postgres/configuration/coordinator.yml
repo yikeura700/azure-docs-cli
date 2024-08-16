@@ -12,7 +12,6 @@ directCommands:
     Get information of a configuration for coordinator.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb postgres configuration coordinator show [--cluster-name]
                                                         [--configuration-name]
@@ -45,7 +44,6 @@ directCommands:
     Updates configuration of coordinator in a cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb postgres configuration coordinator update [--cluster-name]
                                                           [--configuration-name]
@@ -87,7 +85,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb postgres configuration coordinator wait [--cluster-name]
                                                         [--configuration-name]
@@ -173,5 +170,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB for PostgreSQL coordinator configurations.

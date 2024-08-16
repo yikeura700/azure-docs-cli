@@ -12,7 +12,6 @@ directCommands:
     Create server key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server key create --kid
                                --name
@@ -36,7 +35,6 @@ directCommands:
     Delete server key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server key delete --kid
                                [--ids]
@@ -72,7 +70,6 @@ directCommands:
     Gets a list of  Server keys.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server key list [--ids]
                              [--name]
@@ -97,7 +94,6 @@ directCommands:
     Show server key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql server key show --kid
                              [--ids]
@@ -152,5 +148,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage MySQL server keys.

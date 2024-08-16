@@ -12,7 +12,6 @@ directCommands:
     Create a new event subscription for a topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid topic event-subscription create --name
                                                  --resource-group
@@ -214,7 +213,6 @@ directCommands:
     Delete an event subscription of a topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid topic event-subscription delete --name
                                                  --resource-group
@@ -250,7 +248,6 @@ directCommands:
     List event subscriptions of a specific topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid topic event-subscription list --resource-group
                                                --topic-name
@@ -278,7 +275,6 @@ directCommands:
     Get the details of an event subscription of a topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid topic event-subscription show --name
                                                --resource-group
@@ -326,7 +322,6 @@ directCommands:
     Update an event subscription of a topic.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/eventgrid/_help.py
   syntax: >-
     az eventgrid topic event-subscription update --name
                                                  --resource-group
@@ -497,5 +492,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/08/2022
   description: Manage event subscriptions of topic.

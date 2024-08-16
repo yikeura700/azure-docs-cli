@@ -16,7 +16,6 @@ directCommands:
     Check that the storage account name is valid and is not already in use.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: az storage account check-name --name
   requiredParameters:
   - isRequired: true
@@ -31,7 +30,6 @@ directCommands:
     The SKU of the storage account defaults to 'Standard_RAGRS'.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account create --name
                               --resource-group
@@ -486,7 +484,6 @@ directCommands:
     Delete a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account delete [--ids]
                               [--name]
@@ -523,7 +520,6 @@ directCommands:
     Generate a shared access signature for the storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account generate-sas --expiry
                                     --permissions
@@ -601,7 +597,6 @@ directCommands:
     List storage accounts.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: az storage account list [--resource-group]
   examples:
   - summary: |-
@@ -620,7 +615,6 @@ directCommands:
     Show storage account properties.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account show [--ids]
                             [--name]
@@ -652,7 +646,6 @@ directCommands:
     Get the connection string for a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account show-connection-string [--blob-endpoint]
                                               [--file-endpoint]
@@ -716,7 +709,6 @@ directCommands:
     Show the current count and limit of the storage accounts under the subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: az storage account show-usage
   examples:
   - summary: |-
@@ -728,7 +720,6 @@ directCommands:
     Update the properties of a storage account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/storage/_help.py
   syntax: >-
     az storage account update [--access-tier {Cool, Hot}]
                               [--account-type]

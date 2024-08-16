@@ -12,7 +12,6 @@ directCommands:
     Create the ServiceBus Rule for Subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/servicebus/_help.py
   syntax: >-
     az servicebus topic subscription rule create --name
                                                  --namespace-name
@@ -145,5 +144,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/16/2023
   description: Manage Azure Service Bus Rule.

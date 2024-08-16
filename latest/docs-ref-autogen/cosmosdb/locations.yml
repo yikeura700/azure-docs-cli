@@ -12,7 +12,6 @@ directCommands:
     Retrieves the list of cosmosdb locations and their properties.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: az cosmosdb locations list
 - uid: az_cosmosdb_locations_show
   name: az cosmosdb locations show
@@ -20,7 +19,6 @@ directCommands:
     Show the Azure Cosmos DB location properties in the given location.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: az cosmosdb locations show --location
   examples:
   - summary: |-
@@ -59,5 +57,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage Azure Cosmos DB location properties.

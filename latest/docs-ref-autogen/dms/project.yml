@@ -16,7 +16,6 @@ directCommands:
     Check if a given project name is available within a given instance of DMS as well as the name's validity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms project check-name --name
                               --resource-group
@@ -46,7 +45,6 @@ directCommands:
       3) MySQL -> AzureDbForMySQL.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms project create --location
                           --name
@@ -157,7 +155,6 @@ directCommands:
     Delete a project.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms project delete --name
                           --resource-group
@@ -195,7 +192,6 @@ directCommands:
     List the projects within an instance of DMS.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms project list --resource-group
                         --service-name
@@ -218,7 +214,6 @@ directCommands:
     Show the details of a migration project.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms project show --name
                         --resource-group

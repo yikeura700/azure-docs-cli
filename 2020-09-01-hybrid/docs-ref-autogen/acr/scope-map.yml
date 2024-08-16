@@ -12,7 +12,6 @@ directCommands:
     Create a scope map for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr scope-map create --name
                             --registry
@@ -58,7 +57,6 @@ directCommands:
     Delete a scope map for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr scope-map delete --name
                             --registry
@@ -90,7 +88,6 @@ directCommands:
     List all scope maps for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr scope-map list --registry
                           [--resource-group]
@@ -113,7 +110,6 @@ directCommands:
     Show details and attributes of a scope map for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr scope-map show --name
                           --registry
@@ -141,7 +137,6 @@ directCommands:
     Update a scope map for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr scope-map update --name
                             --registry
@@ -214,5 +209,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Manage scope access maps for Azure Container Registries.

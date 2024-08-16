@@ -12,7 +12,6 @@ directCommands:
     List certificates used on endpoints on the target instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi endpoint-cert list --instance-name
                                  --resource-group
@@ -31,7 +30,6 @@ directCommands:
     Get a certificate used on the endpoint with the given id.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql mi endpoint-cert show [--endpoint-type]
                                  [--ids]
@@ -82,5 +80,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Endpoint certificates management commands.

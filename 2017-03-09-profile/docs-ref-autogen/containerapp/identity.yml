@@ -14,7 +14,6 @@ directCommands:
     Managed identities can be user-assigned or system-assigned.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp identity assign [--ids]
                                     [--name]
@@ -66,7 +65,6 @@ directCommands:
     Remove a managed identity from a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp identity remove [--ids]
                                     [--name]
@@ -121,7 +119,6 @@ directCommands:
     Show managed identities of a container app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp identity show [--ids]
                                   [--name]
@@ -173,5 +170,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/14/2024
   description: Commands to manage managed identities.

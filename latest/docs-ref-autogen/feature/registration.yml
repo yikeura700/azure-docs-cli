@@ -12,7 +12,6 @@ directCommands:
     Create a feature registration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az feature registration create --name
                                    --namespace
@@ -35,7 +34,6 @@ directCommands:
     Delete a feature registration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az feature registration delete --name
                                    --namespace
@@ -64,7 +62,6 @@ directCommands:
     List feature registrations.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az feature registration list [--namespace]
   examples:
   - summary: |-
@@ -80,7 +77,6 @@ directCommands:
     Returns a feature registration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az feature registration show --name
                                  --provider-namespace
@@ -123,5 +119,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage resource provider feature registrations.

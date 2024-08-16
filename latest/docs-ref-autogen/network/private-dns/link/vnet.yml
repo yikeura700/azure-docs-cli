@@ -12,7 +12,6 @@ directCommands:
     Create a virtual network link to the specified Private DNS zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns link vnet create --name
                                             --registration-enabled {0, 1, f, false, n, no, t, true, y, yes}
@@ -63,7 +62,6 @@ directCommands:
     In case of a registration virtual network, all auto-registered DNS records in the zone for the virtual network will also be deleted. This operation cannot be undone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns link vnet delete [--ids]
                                             [--if-match]
@@ -110,7 +108,6 @@ directCommands:
     List the virtual network links to the specified private DNS zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns link vnet list --resource-group
                                           --zone-name
@@ -146,7 +143,6 @@ directCommands:
     Get a virtual network link to the specified private DNS zone.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns link vnet show [--ids]
                                           [--name]
@@ -179,7 +175,6 @@ directCommands:
     Update a virtual network link's properties. Does not modify virtual network within the link.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns link vnet update [--add]
                                             [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
@@ -247,7 +242,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network private-dns link vnet wait [--created]
                                           [--custom]
@@ -336,5 +330,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage virtual network links to the specified Private DNS zone.

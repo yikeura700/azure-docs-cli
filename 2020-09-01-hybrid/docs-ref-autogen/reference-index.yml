@@ -16,7 +16,6 @@ directCommands:
     For automation scenarios or to set all available options, use the new `az config`.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/configure/_help.py
   syntax: >-
     az configure [--defaults]
                  [--list-defaults {false, true}]
@@ -49,7 +48,6 @@ directCommands:
     This command is interactive. If possible, it launches the default web browser to open GitHub issue creation page with the body auto-generated and pre-filled. You will have a chance to edit the issue body before submitting it.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/feedback/_help.py
   syntax: az feedback
 - uid: az_find
   name: az find
@@ -57,7 +55,6 @@ directCommands:
     I'm an AI robot, my advice is based on our Azure documentation as well as the usage patterns of Azure CLI and Azure ARM users. Using me improves Azure products and documentation.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/find/_help.py
   syntax: az find [<CLI_TERM>]
   examples:
   - summary: |-
@@ -73,15 +70,6 @@ directCommands:
   - name: <CLI_TERM>
     summary: |-
       An Azure CLI command or group for which you need an example.
-- uid: az_init
-  name: az init
-  summary: |-
-    It's an effortless setting up tool for configs.
-  status: Experimental
-  isExperimental: true
-  previewOrExperimentalInfo: 'This command is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
-  sourceType: Extension
-  syntax: az init
 - uid: az_interactive
   name: az interactive
   summary: |-
@@ -119,7 +107,6 @@ directCommands:
     For more details, see https://learn.microsoft.com/cli/azure/authenticate-azure-cli.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: >-
     az login [--allow-no-subscriptions]
              [--federated-token]
@@ -190,7 +177,6 @@ directCommands:
     Log out to remove access to Azure subscriptions.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/profile/_help.py
   syntax: az logout [--username]
   optionalParameters:
   - name: --username
@@ -370,11 +356,9 @@ directCommands:
   sourceType: Core
   syntax: az version
 commands:
-- az_acat
 - az_account
 - az_acr
 - az_ad
-- az_adp
 - az_advisor
 - az_ai-examples
 - az_aks
@@ -382,7 +366,6 @@ commands:
 - az_akshybrid
 - az_alerts-management
 - az_alias
-- az_amlfs
 - az_aosm
 - az_apic
 - az_appconfig
@@ -390,7 +373,6 @@ commands:
 - az_arcappliance
 - az_arcdata
 - az_artifacts
-- az_astronomer
 - az_attestation
 - az_automanage
 - az_automation
@@ -398,18 +380,14 @@ commands:
 - az_baremetalinstance
 - az_batch
 - az_bicep
-- az_billing-benefits
 - az_blueprint
 - az_boards
 - az_cache
 - az_capacity
-- az_change-analysis
 - az_cli-translator
 - az_cloud
 - az_cloud-service
-- az_command-change
 - az_communication
-- az_compute-diagnostic
 - az_confcom
 - az_confidentialledger
 - az_config
@@ -420,11 +398,9 @@ commands:
 - az_connectedvmware
 - az_connection
 - az_consumption
-- az_container
 - az_containerapp
 - az_cosmosdb
 - az_costmanagement
-- az_csvmware
 - az_custom-providers
 - az_customlocation
 - az_databox
@@ -450,9 +426,6 @@ commands:
 - az_dnc
 - az_dns-resolver
 - az_dt
-- az_dynatrace
-- az_edge-zones
-- az_edgeorder
 - az_elastic
 - az_elastic-san
 - az_eventgrid
@@ -461,37 +434,26 @@ commands:
 - az_feature
 - az_feedback
 - az_find
-- az_firmwareanalysis
 - az_fleet
-- az_fluid-relay
 - az_footprint
 - az_functionapp
-- az_fzf
-- az_gallery
 - az_grafana
 - az_graph
-- az_graph-services
 - az_group
 - az_guestconfig
-- az_hack
-- az_hanainstance
 - az_hdinsight
 - az_hdinsight-on-aks
-- az_healthbot
 - az_healthcareapis
 - az_hpc-cache
 - az_hybridaks
 - az_identity
 - az_image
 - az_import-export
-- az_informatica
-- az_init
 - az_interactive
 - az_internet-analyzer
 - az_iot
 - az_k8s-configuration
 - az_k8s-extension
-- az_k8s-runtime
 - az_k8sconfiguration
 - az_keyvault
 - az_kusto
@@ -503,7 +465,6 @@ commands:
 - az_logicapp
 - az_login
 - az_logout
-- az_logz
 - az_maintenance
 - az_managed-cassandra
 - az_managedapp
@@ -517,18 +478,13 @@ commands:
 - az_mysql
 - az_netappfiles
 - az_network
-- az_network-analytics
 - az_network-function
 - az_networkcloud
 - az_networkfabric
 - az_new-relic
 - az_next
-- az_nexusidentity
 - az_nginx
 - az_notification-hub
-- az_offazure
-- az_oracle-database
-- az_orbital
 - az_palo-alto
 - az_partnercenter
 - az_peering
@@ -541,9 +497,7 @@ commands:
 - az_private-link
 - az_provider
 - az_providerhub
-- az_purview
 - az_quantum
-- az_qumulo
 - az_quota
 - az_redisenterprise
 - az_relay
@@ -555,8 +509,6 @@ commands:
 - az_resourcemanagement
 - az_rest
 - az_role
-- az_sapmonitor
-- az_scenario
 - az_scvmm
 - az_security
 - az_self-help
@@ -565,7 +517,6 @@ commands:
 - az_serial-console
 - az_servicebus
 - az_sig
-- az_site-recovery
 - az_snapshot
 - az_spatial-anchors-account
 - az_sphere
@@ -577,11 +528,8 @@ commands:
 - az_stack
 - az_stack-hci
 - az_stack-hci-vm
-- az_standby-container-group-pool
-- az_standby-vm-pool
 - az_staticwebapp
 - az_storage
-- az_storage-actions
 - az_storage-mover
 - az_storagesync
 - az_stream-analytics

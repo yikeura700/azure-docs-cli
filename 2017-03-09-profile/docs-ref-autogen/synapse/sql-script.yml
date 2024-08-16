@@ -12,7 +12,6 @@ directCommands:
     Create or update a SQL script.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql-script create --file
                                  --name
@@ -75,7 +74,6 @@ directCommands:
     Delete a SQL script.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql-script delete --name
                                  --workspace-name
@@ -106,7 +104,6 @@ directCommands:
     Export a SQL script.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql-script export --output-folder
                                  --workspace-name
@@ -137,7 +134,6 @@ directCommands:
     Import a SQL script.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql-script import --file
                                  --name
@@ -200,7 +196,6 @@ directCommands:
     List SQL scripts in a synapse workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: az synapse sql-script list --workspace-name
   examples:
   - summary: |-
@@ -217,7 +212,6 @@ directCommands:
     Get a SQL script.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql-script show --name
                                --workspace-name
@@ -242,7 +236,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of a sql script is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse sql-script wait --name
                                --workspace-name
@@ -323,5 +316,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage SQL scripts in a synapse workspace.

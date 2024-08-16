@@ -14,7 +14,6 @@ directCommands:
     Create a connection monitor.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network network-watcher connection-monitor create --connection-monitor-name
                                                          --network-watcher-name
@@ -88,7 +87,6 @@ directCommands:
     Delete the specified connection monitor.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network network-watcher connection-monitor delete [--connection-monitor-name]
                                                          [--ids]
@@ -127,7 +125,6 @@ directCommands:
     List all connection monitors for the specified Network Watcher.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network network-watcher connection-monitor list --network-watcher-name
                                                        --resource-group
@@ -146,7 +143,6 @@ directCommands:
     Get a connection monitor by name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network network-watcher connection-monitor show [--connection-monitor-name]
                                                        [--ids]
@@ -175,7 +171,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network network-watcher connection-monitor wait [--connection-monitor-name]
                                                        [--created]
@@ -263,5 +258,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Connection monitor provides unified, end-to-end connection monitoring in Network Watcher. The Connection monitor feature supports hybrid and Azure cloud deployments.

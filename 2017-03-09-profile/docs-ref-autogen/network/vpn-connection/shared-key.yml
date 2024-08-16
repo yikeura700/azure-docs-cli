@@ -12,7 +12,6 @@ directCommands:
     Reset a VPN connection shared key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vpn-connection shared-key reset [--connection-name]
                                                [--ids]
@@ -53,7 +52,6 @@ directCommands:
     Retrieve a VPN connection shared key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vpn-connection shared-key show [--connection-name]
                                               [--ids]
@@ -85,7 +83,6 @@ directCommands:
     Update a VPN connection shared key.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vpn-connection shared-key update --value
                                                 [--add]
@@ -168,5 +165,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage VPN shared keys.

@@ -12,7 +12,6 @@ directCommands:
     Gets the Batch service quotas for the specified subscription at the given location.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: az batch location quotas show --location
   requiredParameters:
   - isRequired: true
@@ -46,5 +45,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage Batch service quotas at the region level.

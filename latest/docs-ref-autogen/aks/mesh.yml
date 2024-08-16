@@ -20,7 +20,6 @@ directCommands:
     This command disables Azure Service Mesh in given cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks mesh disable --name
                         --resource-group
@@ -84,7 +83,6 @@ directCommands:
     This command disables an Azure Service Mesh ingress gateway in given cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks mesh disable-ingress-gateway --ingress-gateway-type {External, Internal}
                                         --name
@@ -172,7 +170,6 @@ directCommands:
     This command enables Azure Service Mesh in given cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks mesh enable --name
                        --resource-group
@@ -288,7 +285,6 @@ directCommands:
     This command enables an Azure Service Mesh ingress gateway in given cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks mesh enable-ingress-gateway --ingress-gateway-type {External, Internal}
                                        --name
@@ -366,7 +362,6 @@ directCommands:
     This command lists available Azure Service Mesh revisions and their compatibility information for the given location.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: az aks mesh get-revisions --location
   examples:
   - summary: |-
@@ -404,7 +399,6 @@ directCommands:
     This command lists available Azure Service Mesh upgrades for the mesh revision installed on the cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks mesh get-upgrades --name
                              --resource-group

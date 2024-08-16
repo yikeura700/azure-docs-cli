@@ -12,7 +12,6 @@ directCommands:
     Create a search service in the given resource group. If the search service already exists, all properties will be updated with the given values.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search service create --name
                              --resource-group
@@ -102,7 +101,6 @@ directCommands:
     Delete a search service in the given resource group, along with its associated resources.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search service delete [--ids]
                              [--name]
@@ -132,7 +130,6 @@ directCommands:
     Gets a list of all Search services in the given resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: az search service list --resource-group
   requiredParameters:
   - isRequired: true
@@ -145,7 +142,6 @@ directCommands:
     Get the search service with the given name in the given resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search service show [--ids]
                            [--name]
@@ -170,7 +166,6 @@ directCommands:
     Update a search service in the given resource group. If the search service already exists, all properties will be updated with the given values.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search service update [--aad-auth-failure-mode {http401WithBearerChallenge, http403}]
                              [--add]
@@ -263,7 +258,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search service wait [--created]
                            [--custom]
@@ -348,5 +342,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/01/2021
   description: Manage Azure Search services.

@@ -18,7 +18,6 @@ directCommands:
   isPreview: true
   previewOrExperimentalInfo: 'This command is in preview and under development. Reference and support levels: https://aka.ms/CLI_refstatus'
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp env certificate create --hostname
                                            --name
@@ -57,7 +56,6 @@ directCommands:
     Delete a certificate from the Container Apps environment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp env certificate delete [--certificate]
                                            [--ids]
@@ -161,7 +159,6 @@ directCommands:
     List certificates for an environment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp env certificate list --name
                                          --resource-group
@@ -285,7 +282,6 @@ directCommands:
     Add or update a certificate.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp env certificate upload --certificate-file
                                            [--certificate-name]

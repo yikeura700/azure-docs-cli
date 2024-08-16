@@ -12,7 +12,6 @@ directCommands:
     Create a Maps Creator resource. Creator resource will manage Azure resources required to populate a custom set of mapping data. It requires an account to exist before it can be created.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/maps/_help.py
   syntax: >-
     az maps creator create --account-name
                            --creator-name
@@ -54,7 +53,6 @@ directCommands:
     Delete a Maps Creator resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/maps/_help.py
   syntax: >-
     az maps creator delete [--account-name]
                            [--creator-name]
@@ -92,7 +90,6 @@ directCommands:
     Get all Creator instances for an Azure Maps Account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/maps/_help.py
   syntax: >-
     az maps creator list --account-name
                          --resource-group
@@ -115,7 +112,6 @@ directCommands:
     Get a Maps Creator resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/maps/_help.py
   syntax: >-
     az maps creator show [--account-name]
                          [--creator-name]
@@ -148,7 +144,6 @@ directCommands:
     Updates the Maps Creator resource. Only a subset of the parameters may be updated after creation, such as Tags.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/maps/_help.py
   syntax: >-
     az maps creator update [--account-name]
                            [--creator-name]
@@ -214,5 +209,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/13/2021
   description: Manage creator with maps.

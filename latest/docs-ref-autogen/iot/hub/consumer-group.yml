@@ -12,7 +12,6 @@ directCommands:
     Create an event hub consumer group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub consumer-group create --hub-name
                                      --name
@@ -48,7 +47,6 @@ directCommands:
     Delete an event hub consumer group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub consumer-group delete [--event-hub-name]
                                      [--hub-name]
@@ -82,7 +80,6 @@ directCommands:
     List event hub consumer groups.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub consumer-group list [--event-hub-name]
                                    [--hub-name]
@@ -116,7 +113,6 @@ directCommands:
     Get the details for an event hub consumer group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/iot/_help.py
   syntax: >-
     az iot hub consumer-group show [--event-hub-name]
                                    [--hub-name]
@@ -178,5 +174,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 05/21/2024
   description: Manage the event hub consumer groups of an IoT hub.

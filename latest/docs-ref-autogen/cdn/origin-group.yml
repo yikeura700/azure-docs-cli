@@ -12,7 +12,6 @@ directCommands:
     Create a new origin group within the specified endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn origin-group create --endpoint-name
                                --name
@@ -102,7 +101,6 @@ directCommands:
     Delete an existing origin group within an endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn origin-group delete [--endpoint-name]
                                [--ids]
@@ -145,7 +143,6 @@ directCommands:
     List all of the existing origin groups within an endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn origin-group list --endpoint-name
                              --profile-name
@@ -178,7 +175,6 @@ directCommands:
     Get an existing origin group within an endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn origin-group show [--endpoint-name]
                              [--ids]
@@ -211,7 +207,6 @@ directCommands:
     Update a new origin group within the specified endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn origin-group update [--add]
                                [--endpoint-name]
@@ -321,7 +316,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn origin-group wait [--created]
                              [--custom]
@@ -414,5 +408,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/28/2024
   description: Manage origin groups of an endpoint.

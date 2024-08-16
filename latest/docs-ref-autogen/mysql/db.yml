@@ -12,7 +12,6 @@ directCommands:
     Create a MySQL database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql db create --name
                        --resource-group
@@ -52,7 +51,6 @@ directCommands:
     Delete a database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql db delete --name
                        [--ids]
@@ -92,7 +90,6 @@ directCommands:
     List the databases for a server.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql db list --resource-group
                      --server-name
@@ -115,7 +112,6 @@ directCommands:
     Show the details of a database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/mysql/_help.py
   syntax: >-
     az mysql db show --name
                      [--ids]
@@ -174,5 +170,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/24/2024
   description: Manage MySQL databases on a server.

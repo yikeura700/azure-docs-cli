@@ -12,7 +12,6 @@ directCommands:
     Upload a root certificate.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway root-cert create --gateway-name
                                              --name
@@ -51,7 +50,6 @@ directCommands:
     Delete a root certificate.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway root-cert delete --gateway-name
                                              --name
@@ -88,7 +86,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway root-cert wait [--created]
                                            [--custom]
@@ -170,5 +167,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage root certificates of a virtual network gateway.

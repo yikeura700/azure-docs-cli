@@ -12,7 +12,6 @@ directCommands:
     List all of the private link resources in the specified account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch private-link-resource list --account-name
                                         --resource-group
@@ -36,7 +35,6 @@ directCommands:
     Get information about the specified private link resource.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch private-link-resource show --account-name
                                         --name
@@ -82,5 +80,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/08/2023
   description: Manage Batch account private Link Resources.

@@ -16,7 +16,6 @@ directCommands:
     Create a container apps job.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp job create --name
                                --resource-group
@@ -455,7 +454,6 @@ directCommands:
     Delete a Container Apps Job.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp job delete [--ids]
                                [--name]
@@ -533,7 +531,6 @@ directCommands:
     List Container Apps Job by subscription or resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: az containerapp job list [--resource-group]
   examples:
   - summary: |-
@@ -571,7 +568,6 @@ directCommands:
     Show details of a Container Apps Job.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp job show [--ids]
                              [--name]
@@ -629,7 +625,6 @@ directCommands:
     Start a Container Apps Job execution.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp job start [--args]
                               [--command]
@@ -702,7 +697,6 @@ directCommands:
     Stops a Container Apps Job execution.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp job stop [--execution-name-list]
                              [--ids]
@@ -750,7 +744,6 @@ directCommands:
     Update a Container Apps Job.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/containerapp/_help.py
   syntax: >-
     az containerapp job update [--args]
                                [--command]

@@ -12,7 +12,6 @@ directCommands:
     Assign/Update AAD(Azure Active Directory) authentication to a virtual network gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway aad assign --audience
                                        --gateway-name
@@ -56,7 +55,6 @@ directCommands:
     Remove AAD(Azure Active Directory) authentication from a virtual network gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway aad remove --gateway-name
                                        --resource-group
@@ -85,7 +83,6 @@ directCommands:
     Show AAD(Azure Active Directory) authentication of a virtual network gateway.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway aad show --gateway-name
                                      --resource-group
@@ -108,7 +105,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network vnet-gateway aad wait [--created]
                                      [--custom]
@@ -191,5 +187,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage AAD(Azure Active Directory) authentication of a virtual network gateway.

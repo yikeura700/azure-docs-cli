@@ -12,7 +12,6 @@ directCommands:
     Create connections between two ExpressRoute circuits.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering connection create --circuit-name
                                                        --name
@@ -67,7 +66,6 @@ directCommands:
     Delete the specified Express Route Circuit Connection from the specified express route circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering connection delete [--circuit-name]
                                                        [--ids]
@@ -109,7 +107,6 @@ directCommands:
     List all global reach connections associated with a private peering in an express route circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering connection list --circuit-name
                                                      --peering-name
@@ -137,7 +134,6 @@ directCommands:
     Get the specified Express Route Circuit Connection from the specified express route circuit.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering connection show [--circuit-name]
                                                      [--ids]
@@ -174,7 +170,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network express-route peering connection wait [--circuit-name]
                                                      [--created]
@@ -270,5 +265,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage ExpressRoute circuit connections.

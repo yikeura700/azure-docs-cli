@@ -12,7 +12,6 @@ directCommands:
     Create a traffic manager endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network traffic-manager endpoint create --name
                                                --profile-name
@@ -108,7 +107,6 @@ directCommands:
     Delete a traffic manager endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network traffic-manager endpoint delete [--ids]
                                                [--name]
@@ -149,7 +147,6 @@ directCommands:
     List traffic manager endpoints.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network traffic-manager endpoint list --profile-name
                                              --resource-group
@@ -178,7 +175,6 @@ directCommands:
     Get the details of a traffic manager endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network traffic-manager endpoint show [--ids]
                                              [--name]
@@ -216,7 +212,6 @@ directCommands:
     Get the default geographic hierarchy used by the geographic traffic routing method.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network traffic-manager endpoint show-geographic-hierarchy
   examples:
   - summary: |-
@@ -228,7 +223,6 @@ directCommands:
     Update a traffic manager endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network traffic-manager endpoint update [--always-serve {Disabled, Enabled}]
                                                [--custom-headers]
@@ -356,5 +350,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage Azure Traffic Manager end points.

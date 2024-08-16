@@ -12,7 +12,6 @@ directCommands:
     List the private link resources supported for a Key Vault/HSM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/keyvault/_help.py
   syntax: >-
     az keyvault private-link-resource list [--hsm-name]
                                            [--resource-group]
@@ -61,5 +60,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 11/15/2023
   description: Manage vault/HSM private link resources.

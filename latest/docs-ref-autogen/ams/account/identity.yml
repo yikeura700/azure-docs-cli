@@ -12,7 +12,6 @@ directCommands:
     Assign a managed identity to an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account identity assign [--ids]
                                    [--name]
@@ -54,7 +53,6 @@ directCommands:
     Remove a managed identity to an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account identity remove [--ids]
                                    [--name]
@@ -96,7 +94,6 @@ directCommands:
     Show the details of managed identity settings for an Azure Media Services account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/ams/_help.py
   syntax: >-
     az ams account identity show [--ids]
                                  [--name]
@@ -148,5 +145,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 08/26/2022
   description: Manage managed identity settings for an Azure Media Services account.

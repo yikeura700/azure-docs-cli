@@ -12,7 +12,6 @@ directCommands:
     Create a load balancing rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network cross-region-lb rule create --backend-port
                                            --frontend-port
@@ -91,7 +90,6 @@ directCommands:
     Delete a load balancing rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network cross-region-lb rule delete --lb-name
                                            --name
@@ -125,7 +123,6 @@ directCommands:
     List load balancing rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network cross-region-lb rule list --lb-name
                                          --resource-group
@@ -148,7 +145,6 @@ directCommands:
     Get the details of a load balancing rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network cross-region-lb rule show --lb-name
                                          --name
@@ -176,7 +172,6 @@ directCommands:
     Update a load balancing rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network cross-region-lb rule update --lb-name
                                            --name
@@ -290,5 +285,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage cross-region load balancing rules.

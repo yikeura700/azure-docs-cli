@@ -20,7 +20,6 @@ directCommands:
     This command adds multiple DNS zone resource IDs to App Routing.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks approuting zone add --ids
                                --name
@@ -84,7 +83,6 @@ directCommands:
     This command deletes DNS zone resource IDs from App Routing in given cluster.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks approuting zone delete --ids
                                   --name
@@ -148,7 +146,6 @@ directCommands:
     This command lists the DNS zone resources used in App Routing.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks approuting zone list --name
                                 --resource-group
@@ -190,7 +187,6 @@ directCommands:
     This command replaces the DNS zone resource IDs used in App Routing.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks approuting zone update --ids
                                   --name

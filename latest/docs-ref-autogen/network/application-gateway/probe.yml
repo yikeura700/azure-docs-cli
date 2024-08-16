@@ -12,7 +12,6 @@ directCommands:
     Create a probe.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway probe create --gateway-name
                                                 --name
@@ -100,7 +99,6 @@ directCommands:
     Delete a probe.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway probe delete --gateway-name
                                                 --name
@@ -134,7 +132,6 @@ directCommands:
     List probes.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway probe list --gateway-name
                                               --resource-group
@@ -157,7 +154,6 @@ directCommands:
     Get the details of a probe.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway probe show --gateway-name
                                               --name
@@ -185,7 +181,6 @@ directCommands:
     Update a probe.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway probe update --gateway-name
                                                 --name
@@ -287,7 +282,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway probe wait [--created]
                                               [--custom]
@@ -372,5 +366,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage probes to gather and evaluate information on an application gateway.

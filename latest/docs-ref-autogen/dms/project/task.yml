@@ -16,7 +16,6 @@ directCommands:
     Cancel a task if it's currently queued or running.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms project task cancel --name
                                --project-name
@@ -82,7 +81,6 @@ directCommands:
     Check if a given task name is available within a given instance of DMS as well as the name's validity.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms project task check-name --name
                                    --project-name
@@ -117,7 +115,6 @@ directCommands:
       3) MySQL -> AzureDbForMySQL :: OfflineMigration, OnlineMigration, ReplicateChanges.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms project task create --database-options-json
                                --name
@@ -575,7 +572,6 @@ directCommands:
         az dms project task show ... --expand command.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms project task cutover --name
                                 --object-name
@@ -609,7 +605,6 @@ directCommands:
     Delete a migration task.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms project task delete --name
                                --project-name
@@ -652,7 +647,6 @@ directCommands:
     List the tasks within a project. Some tasks may have a status of Unknown, which indicates that an error occurred while querying the status of that task.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms project task list --project-name
                              --resource-group
@@ -724,7 +718,6 @@ directCommands:
     Show the details of a migration task. Use the "--expand" to get more details.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/dms/_help.py
   syntax: >-
     az dms project task show --name
                              --project-name

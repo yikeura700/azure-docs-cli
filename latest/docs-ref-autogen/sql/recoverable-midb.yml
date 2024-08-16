@@ -12,7 +12,6 @@ directCommands:
     Get all recoverable managed databases for given instance name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql recoverable-midb list --instance-name
                                  --resource-group
@@ -35,7 +34,6 @@ directCommands:
     Get recoverable managed database.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/sql/_help.py
   syntax: >-
     az sql recoverable-midb show --database-name
                                  --instance-name
@@ -85,5 +83,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/16/2024
   description: Recoverable managed databases command group.

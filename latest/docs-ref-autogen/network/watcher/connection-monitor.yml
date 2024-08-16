@@ -14,7 +14,6 @@ directCommands:
     Create a connection monitor.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher connection-monitor create --connection-monitor-name
                                                  --endpoint-dest-name
@@ -192,7 +191,6 @@ directCommands:
     Delete a connection monitor for the given region.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher connection-monitor delete --connection-monitor-name
                                                  --location
@@ -221,7 +219,6 @@ directCommands:
     List connection monitors for the given region.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network watcher connection-monitor list --location
   examples:
   - summary: |-
@@ -241,7 +238,6 @@ directCommands:
     Query a snapshot of the most recent connection state of a connection monitor.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher connection-monitor query --connection-monitor-name
                                                 --location
@@ -270,7 +266,6 @@ directCommands:
     Shows a connection monitor by name.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher connection-monitor show --connection-monitor-name
                                                --location
@@ -293,7 +288,6 @@ directCommands:
     Start the specified connection monitor.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher connection-monitor start --connection-monitor-name
                                                 --location
@@ -322,7 +316,6 @@ directCommands:
     Stop the specified connection monitor.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher connection-monitor stop --connection-monitor-name
                                                --location
@@ -351,7 +344,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher connection-monitor wait [--connection-monitor-name]
                                                [--created]
@@ -465,5 +457,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Connection monitor can be used to monitor network connectivity between an Azure virtual machine and an IP address. The IP address can be assigned to another Azure resource or a resource on the Internet or on-premises. To learn more visit https://aka.ms/connectionmonitordoc.

@@ -12,7 +12,6 @@ directCommands:
     Add an OWASP CRS exclusion rule to the WAF policy managed rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy managed-rule exclusion add --match-operator {Contains, EndsWith, Equals, EqualsAny, StartsWith}
                                                                          --match-variable {RequestArgKeys, RequestArgNames, RequestArgValues, RequestCookieKeys, RequestCookieNames, RequestCookieValues, RequestHeaderKeys, RequestHeaderNames, RequestHeaderValues}
@@ -61,7 +60,6 @@ directCommands:
     List all OWASP CRS exclusion rules that are applied on a WAF policy managed rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy managed-rule exclusion list --policy-name
                                                                           --resource-group
@@ -80,7 +78,6 @@ directCommands:
     Remove all OWASP CRS exclusion rules that are applied on a WAF policy managed rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway waf-policy managed-rule exclusion remove --policy-name
                                                                             --resource-group
@@ -126,5 +123,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage OWASP CRS exclusions that are applied on a WAF policy managed rules.

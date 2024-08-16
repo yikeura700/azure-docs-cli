@@ -12,7 +12,6 @@ directCommands:
     Create a Log Analytics workspace restore logs table. The table name needs to end with '_RST'.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace table restore create --end-restore-time
                                                             --name
@@ -82,5 +81,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: Manage tables for log analytics workspace restore logs table.

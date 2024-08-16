@@ -12,7 +12,6 @@ directCommands:
     Create a workspace instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace create --name
                                               --resource-group
@@ -92,7 +91,6 @@ directCommands:
     The name is kept for 14 days and cannot be used for another workspace. To remove the workspace completely and release the name, use the --force flag.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace delete [--force {0, 1, f, false, n, no, t, true, y, yes}]
                                               [--ids]
@@ -142,7 +140,6 @@ directCommands:
     For more information, visit: https://docs.microsoft.com/en-us/rest/api/loganalytics/workspace-schema/get.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace get-schema --name
                                                   --resource-group
@@ -165,7 +162,6 @@ directCommands:
     Get the shared keys for a workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace get-shared-keys --name
                                                        --resource-group
@@ -188,7 +184,6 @@ directCommands:
     Get a list of workspaces under a resource group or a subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: az monitor log-analytics workspace list [--resource-group]
   optionalParameters:
   - name: --resource-group -g
@@ -200,7 +195,6 @@ directCommands:
     List the available service tiers for the workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace list-available-service-tier [--ids]
                                                                    [--resource-group]
@@ -225,7 +219,6 @@ directCommands:
     Get a list of deleted workspaces that can be recovered in a subscription or a resource group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: az monitor log-analytics workspace list-deleted-workspaces [--resource-group]
   examples:
   - summary: |-
@@ -241,7 +234,6 @@ directCommands:
     List a list of workspaces which the current user has administrator privileges and are not associated with an Azure Subscription.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: az monitor log-analytics workspace list-link-target
 - uid: az_monitor_log-analytics_workspace_list-management-groups
   name: az monitor log-analytics workspace list-management-groups
@@ -249,7 +241,6 @@ directCommands:
     Get a list of management groups connected to a workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace list-management-groups --name
                                                               --resource-group
@@ -272,7 +263,6 @@ directCommands:
     Get a list of usage metrics for a workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace list-usages --name
                                                    --resource-group
@@ -295,7 +285,6 @@ directCommands:
     Recover a workspace in a soft-delete state within 14 days.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace recover --workspace-name
                                                [--no-wait]
@@ -323,7 +312,6 @@ directCommands:
     Show a workspace instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace show [--ids]
                                             [--name]
@@ -352,7 +340,6 @@ directCommands:
     Update a workspace instance.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace update [--add]
                                               [--capacity-reservation-level {100, 1000, 10000, 200, 2000, 25000, 300, 400, 500, 5000, 50000}]
@@ -451,7 +438,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor log-analytics workspace wait [--created]
                                             [--custom]
@@ -587,5 +573,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: Manage Azure log analytics workspace.

@@ -12,7 +12,6 @@ directCommands:
     Create a role assignment.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse role assignment create --role
                                       --workspace-name
@@ -105,7 +104,6 @@ directCommands:
     Delete role assignments of workspace.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse role assignment delete --workspace-name
                                       [--assignee]
@@ -197,7 +195,6 @@ directCommands:
     List role assignments.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse role assignment list --workspace-name
                                     [--assignee]
@@ -271,7 +268,6 @@ directCommands:
     Get a role assignment by id.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/synapse/_help.py
   syntax: >-
     az synapse role assignment show --id
                                     --workspace-name
@@ -321,5 +317,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/27/2021
   description: Manage Synapse's role assignments.

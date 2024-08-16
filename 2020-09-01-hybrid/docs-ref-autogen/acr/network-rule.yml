@@ -12,7 +12,6 @@ directCommands:
     Add a network rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr network-rule add --name
                             [--ip-address]
@@ -39,7 +38,6 @@ directCommands:
     List network rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr network-rule list --name
                              [--resource-group]
@@ -62,7 +60,6 @@ directCommands:
     Remove a network rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr network-rule remove --name
                                [--ip-address]
@@ -112,5 +109,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Manage network rules for Azure Container Registries.

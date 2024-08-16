@@ -12,7 +12,6 @@ directCommands:
     Attach managed data disks to a scale set or its instances.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss disk attach [--caching {None, ReadOnly, ReadWrite}]
                         [--ids]
@@ -62,7 +61,6 @@ directCommands:
     Detach managed data disks from a scale set or its instances.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vmss disk detach --lun
                         [--ids]
@@ -119,5 +117,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Manage data disks of a VMSS.

@@ -12,7 +12,6 @@ directCommands:
     Adds an Access Restriction to the function app.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config access-restriction add --priority
                                                  [--action {Allow, Deny}]
@@ -125,7 +124,6 @@ directCommands:
     Removes an Access Restriction from the functionapp.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config access-restriction remove [--action {Allow, Deny}]
                                                     [--ids]
@@ -196,7 +194,6 @@ directCommands:
     Sets if SCM site is using the same restrictions as the main site.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config access-restriction set [--default-action {Allow, Deny}]
                                                  [--ids]
@@ -250,7 +247,6 @@ directCommands:
     Show Access Restriction settings for functionapp.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appservice/_help.py
   syntax: >-
     az functionapp config access-restriction show [--ids]
                                                   [--name]
@@ -307,5 +303,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Methods that show, set, add, and remove access restrictions on a functionapp.

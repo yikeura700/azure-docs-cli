@@ -12,7 +12,6 @@ directCommands:
     Create an HTTP listener.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway http-listener create --frontend-port
                                                         --gateway-name
@@ -75,7 +74,6 @@ directCommands:
     Delete an HTTP listener.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway http-listener delete --gateway-name
                                                         --name
@@ -109,7 +107,6 @@ directCommands:
     List HTTP listeners.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway http-listener list --gateway-name
                                                       --resource-group
@@ -132,7 +129,6 @@ directCommands:
     Get the details of an HTTP listener.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway http-listener show --gateway-name
                                                       --name
@@ -160,7 +156,6 @@ directCommands:
     Update an HTTP listener.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway http-listener update --gateway-name
                                                         --name
@@ -239,7 +234,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network application-gateway http-listener wait [--created]
                                                       [--custom]
@@ -324,5 +318,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: Manage HTTP listeners of an application gateway.

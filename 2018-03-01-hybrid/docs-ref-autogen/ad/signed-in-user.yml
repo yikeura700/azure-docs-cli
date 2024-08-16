@@ -12,7 +12,6 @@ directCommands:
     Get the list of directory objects that are owned by the user.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az ad signed-in-user list-owned-objects [--type]
   optionalParameters:
   - name: --type -t
@@ -24,7 +23,6 @@ directCommands:
     Get the details for the currently logged-in user.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az ad signed-in-user show
 commands:
 - az_ad_signed-in-user_list-owned-objects
@@ -54,5 +52,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/25/2024
   description: Show graph information about current signed-in user in CLI.

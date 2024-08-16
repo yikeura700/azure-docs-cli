@@ -14,7 +14,6 @@ directCommands:
     Rules can be created for an IPv4 address, address range (CIDR format), or a virtual network subnet.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account network-rule add --name
                                                   --resource-group
@@ -53,7 +52,6 @@ directCommands:
     List network rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account network-rule list --name
                                                    --resource-group
@@ -76,7 +74,6 @@ directCommands:
     Remove a network rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cognitiveservices/_help.py
   syntax: >-
     az cognitiveservices account network-rule remove --name
                                                      --resource-group
@@ -138,5 +135,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/27/2023
   description: Manage network rules.

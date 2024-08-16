@@ -14,7 +14,6 @@ directCommands:
     Create and start a packet capture session.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher packet-capture create --name
                                              --resource-group
@@ -108,7 +107,6 @@ directCommands:
     Delete a packet capture session.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher packet-capture delete --location
                                              --name
@@ -137,7 +135,6 @@ directCommands:
     List all packet capture sessions within a region.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network watcher packet-capture list --location
   examples:
   - summary: |-
@@ -154,7 +151,6 @@ directCommands:
     Show details of a packet capture session.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher packet-capture show --location
                                            --name
@@ -177,7 +173,6 @@ directCommands:
     Show the status of a packet capture session.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher packet-capture show-status --location
                                                   --name
@@ -206,7 +201,6 @@ directCommands:
     Stop a running packet capture session.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher packet-capture stop --location
                                            --name
@@ -235,7 +229,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network watcher packet-capture wait [--created]
                                            [--custom]
@@ -325,5 +318,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/19/2024
   description: These commands require that both Azure Network Watcher is enabled for the VMs region and that AzureNetworkWatcherExtension is enabled on the VM. For more information visit https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-packet-capture-manage-cli.

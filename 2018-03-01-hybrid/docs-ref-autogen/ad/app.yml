@@ -14,7 +14,6 @@ directCommands:
     For more detailed documentation, see https://docs.microsoft.com/graph/api/resources/application.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad app create --display-name
                      [--app-roles]
@@ -173,7 +172,6 @@ directCommands:
     Delete an application.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az ad app delete --id
   examples:
   - summary: |-
@@ -192,7 +190,6 @@ directCommands:
     For low latency, by default, only the first 100 will be returned unless you provide filter arguments or use "--all".
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad app list [--all]
                    [--app-id]
@@ -225,7 +222,6 @@ directCommands:
     Get the details of an application.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az ad app show --id
   examples:
   - summary: |-
@@ -248,7 +244,6 @@ directCommands:
     Update an application.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad app update --id
                      [--add]
@@ -477,5 +472,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/25/2024
   description: Manage Microsoft Entra applications.

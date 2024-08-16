@@ -12,7 +12,6 @@ directCommands:
     Add a filter to a feature flag.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature filter add --filter-name
                                     [--auth-mode {key, login}]
@@ -86,7 +85,6 @@ directCommands:
     Delete a filter from a feature flag.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature filter delete [--all]
                                        [--auth-mode {key, login}]
@@ -153,7 +151,6 @@ directCommands:
     List all filters for a feature flag.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature filter list [--all]
                                      [--auth-mode {key, login}]
@@ -211,7 +208,6 @@ directCommands:
     Show filters of a feature flag.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature filter show --filter-name
                                      [--auth-mode {key, login}]
@@ -267,7 +263,6 @@ directCommands:
     Update a filter in a feature flag.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/appconfig/_help.py
   syntax: >-
     az appconfig feature filter update --filter-name
                                        [--auth-mode {key, login}]
@@ -362,5 +357,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/18/2024
   description: Manage filters associated with feature flags stored in an App Configuration store.

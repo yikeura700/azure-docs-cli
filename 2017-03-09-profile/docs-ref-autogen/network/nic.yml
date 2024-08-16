@@ -1,16 +1,12 @@
 ### YamlMime:AzureCLIGroup
 uid: az_network_nic
 name: az network nic
-importantNote: >-
-  > [!NOTE]
-
-  > This command group has commands that are defined in both Azure CLI and at least one extension. Install each extension to benefit from its extended capabilities. [Learn more](https://learn.microsoft.com/cli/azure/azure-cli-extensions-overview) about extensions.
 summary: |-
   Manage network interfaces.
 description: |-
   To learn more about network interfaces in Azure, visit https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface?tabs=network-interface-portal.
 status: GA
-sourceType: Core and Extension
+sourceType: Core
 directCommands:
 - uid: az_network_nic_create
   name: az network nic create
@@ -18,7 +14,6 @@ directCommands:
     Create a network interface.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nic create --name
                           --resource-group
@@ -111,7 +106,6 @@ directCommands:
     Delete a network interface.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nic delete [--ids]
                           [--name]
@@ -147,7 +141,6 @@ directCommands:
     To list network interfaces attached to VMs in VM scale sets use `az vmss nic list` or `az vmss nic list-vm-nics`.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: az network nic list [--resource-group]
   examples:
   - summary: |-
@@ -163,7 +156,6 @@ directCommands:
     Get the details of a network interface.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nic show [--expand]
                         [--ids]
@@ -196,7 +188,6 @@ directCommands:
     Update a network interface.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nic update [--add]
                           [--dns-servers]
@@ -264,7 +255,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/network/_help.py
   syntax: >-
     az network nic wait [--created]
                         [--custom]
@@ -341,11 +331,6 @@ commands:
 - az_network_nic_list
 - az_network_nic_show
 - az_network_nic_update
-- az_network_nic_vtap-config
-- az_network_nic_vtap-config_create
-- az_network_nic_vtap-config_delete
-- az_network_nic_vtap-config_list
-- az_network_nic_vtap-config_show
 - az_network_nic_wait
 globalParameters:
 - name: --debug

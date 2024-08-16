@@ -12,7 +12,6 @@ directCommands:
     Create a new custom domain within an endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn custom-domain create --custom-domain-name
                                 --endpoint-name
@@ -55,7 +54,6 @@ directCommands:
     Delete an existing custom domain within an endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn custom-domain delete [--custom-domain-name]
                                 [--endpoint-name]
@@ -97,7 +95,6 @@ directCommands:
     Disable https delivery of the custom domain.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn custom-domain disable-https --endpoint-name
                                        --name
@@ -126,7 +123,6 @@ directCommands:
     Enable HTTPS for a custom domain. The resource name of the custom domain could be obtained using "az cdn custom-domain list".
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn custom-domain enable-https --endpoint-name
                                       --name
@@ -193,7 +189,6 @@ directCommands:
     List all of the existing custom domains within an endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn custom-domain list --endpoint-name
                               --profile-name
@@ -226,7 +221,6 @@ directCommands:
     Get an existing custom domain within an endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn custom-domain show [--custom-domain-name]
                               [--endpoint-name]
@@ -263,7 +257,6 @@ directCommands:
     Update a new custom domain within an endpoint.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn custom-domain update [--add]
                                 [--custom-domain-name]
@@ -322,7 +315,6 @@ directCommands:
     Place the CLI in a waiting state until a condition is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cdn/_help.py
   syntax: >-
     az cdn custom-domain wait [--created]
                               [--custom]
@@ -417,5 +409,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 03/28/2024
   description: Manage Azure CDN Custom Domains to provide custom host names for endpoints.

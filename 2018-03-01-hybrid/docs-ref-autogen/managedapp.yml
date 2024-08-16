@@ -12,7 +12,6 @@ directCommands:
     Create a managed application.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az managedapp create --kind
                          --managed-rg-id
@@ -87,7 +86,6 @@ directCommands:
     Delete a managed application.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az managedapp delete [--ids]
                          [--name]
@@ -116,7 +114,6 @@ directCommands:
     List managed applications.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: az managedapp list [--resource-group]
   examples:
   - summary: |-
@@ -132,7 +129,6 @@ directCommands:
     Gets a managed application.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/resource/_help.py
   syntax: >-
     az managedapp show [--ids]
                        [--name]
@@ -187,5 +183,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 06/24/2024
   description: Manage template solutions provided and maintained by Independent Software Vendors (ISVs).

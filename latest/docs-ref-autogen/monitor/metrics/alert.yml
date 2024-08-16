@@ -12,7 +12,6 @@ directCommands:
     Create a metric-based alert rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor metrics alert create --condition
                                     --name
@@ -152,7 +151,6 @@ directCommands:
     Delete a metrics-based alert rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor metrics alert delete [--ids]
                                     [--name]
@@ -181,7 +179,6 @@ directCommands:
     List metric-based alert rules.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: az monitor metrics alert list [--resource-group]
   examples:
   - summary: |-
@@ -197,7 +194,6 @@ directCommands:
     Show a metrics-based alert rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor metrics alert show [--ids]
                                   [--name]
@@ -226,7 +222,6 @@ directCommands:
     Update a metric-based alert rule.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/monitor/_help.py
   syntax: >-
     az monitor metrics alert update [--add]
                                     [--add-action]
@@ -377,5 +372,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 10/11/2023
   description: Manage near-realtime metric alert rules.

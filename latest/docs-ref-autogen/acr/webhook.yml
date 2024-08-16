@@ -12,7 +12,6 @@ directCommands:
     Create a webhook for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr webhook create --actions {chart_delete, chart_push, delete, push, quarantine}
                           --name
@@ -79,7 +78,6 @@ directCommands:
     Delete a webhook from an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr webhook delete --name
                           --registry
@@ -107,7 +105,6 @@ directCommands:
     Get the service URI and custom headers for the webhook.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr webhook get-config --name
                               --registry
@@ -135,7 +132,6 @@ directCommands:
     List all of the webhooks for an Azure Container Registry.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr webhook list --registry
                         [--resource-group]
@@ -158,7 +154,6 @@ directCommands:
     List recent events for a webhook.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr webhook list-events --name
                                --registry
@@ -186,7 +181,6 @@ directCommands:
     Trigger a ping event for a webhook.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr webhook ping --name
                         --registry
@@ -214,7 +208,6 @@ directCommands:
     Get the details of a webhook.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr webhook show --name
                         --registry
@@ -242,7 +235,6 @@ directCommands:
     Update a webhook.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acr/_help.py
   syntax: >-
     az acr webhook update --name
                           --registry
@@ -350,5 +342,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/26/2024
   description: Manage webhooks for Azure Container Registries.

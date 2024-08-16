@@ -12,7 +12,6 @@ directCommands:
     Migrate the throughput of the Cassandra keyspace between autoscale and manually provisioned.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra keyspace throughput migrate --account-name
                                                       --name
@@ -42,7 +41,6 @@ directCommands:
     Get the throughput of the Cassandra keyspace under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra keyspace throughput show --account-name
                                                    --name
@@ -66,7 +64,6 @@ directCommands:
     Update the throughput of the Cassandra keyspace under an Azure Cosmos DB account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/cosmosdb/_help.py
   syntax: >-
     az cosmosdb cassandra keyspace throughput update --account-name
                                                      --name
@@ -122,5 +119,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: Manage throughput of Cassandra keyspace under an Azure Cosmos DB account.

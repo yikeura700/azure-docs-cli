@@ -14,7 +14,6 @@ directCommands:
     You can create up to 50 query keys per service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search query-key create --name
                                --resource-group
@@ -40,7 +39,6 @@ directCommands:
     Unlike admin keys, query keys are not regenerated. The process for regenerating a query key is to delete and then recreate it.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search query-key delete --key-value
                                --resource-group
@@ -64,7 +62,6 @@ directCommands:
     Returns the list of query API keys for the given Azure Cognitive Search service.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/search/_help.py
   syntax: >-
     az search query-key list --resource-group
                              --service-name
@@ -106,5 +103,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/01/2021
   description: Manage Azure Search query keys.

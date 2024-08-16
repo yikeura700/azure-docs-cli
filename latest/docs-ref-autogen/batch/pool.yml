@@ -16,7 +16,6 @@ directCommands:
     Create a Batch pool in an account. When creating a pool, choose arguments from either Cloud Services Configuration or Virtual Machine Configuration.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch pool create [--accelerated-networking {false, true}]
                          [--account-endpoint]
@@ -373,7 +372,6 @@ directCommands:
     When you request that a Pool be deleted, the following actions occur: the Pool state is set to deleting; any ongoing resize operation on the Pool are stopped; the Batch service starts resizing the Pool to zero Compute Nodes; any Tasks running on existing Compute Nodes are terminated and requeued (as if a resize Pool operation had been requested with the default requeue option); finally, the Pool is removed from the system. Because running Tasks are requeued, the user can rerun these Tasks by updating their Job to target a different Pool. The Tasks can then run on the new Pool. If you want to override the requeue behavior, then you should call resize Pool explicitly to shrink the Pool to zero size before deleting the Pool. If you call an Update, Patch or Delete API on a Pool in the deleting state, it will fail with HTTP status code 409 with error code PoolBeingDeleted.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch pool delete --pool-id
                          [--account-endpoint]
@@ -421,7 +419,6 @@ directCommands:
     Lists all of the Pools in the specified Account.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch pool list [--account-endpoint]
                        [--account-key]
@@ -454,7 +451,6 @@ directCommands:
     Update the properties of a Batch pool. Unspecified properties which can be updated are reset to their defaults.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch pool reset --pool-id
                         [--account-endpoint]
@@ -513,7 +509,6 @@ directCommands:
     Resize or stop resizing a Batch pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch pool resize --pool-id
                          [--abort]
@@ -578,7 +573,6 @@ directCommands:
     Update the properties of a Batch pool. Updating a property in a subgroup will reset the unspecified properties of that group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch pool set --pool-id
                       [--account-endpoint]
@@ -662,7 +656,6 @@ directCommands:
     Gets information about the specified Pool.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/batch/_help.py
   syntax: >-
     az batch pool show --pool-id
                        [--account-endpoint]

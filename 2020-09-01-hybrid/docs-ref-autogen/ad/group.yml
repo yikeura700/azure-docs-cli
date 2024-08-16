@@ -12,7 +12,6 @@ directCommands:
     Create a group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad group create --display-name
                        --mail-nickname
@@ -45,7 +44,6 @@ directCommands:
     Delete a group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az ad group delete --group
   requiredParameters:
   - isRequired: true
@@ -58,7 +56,6 @@ directCommands:
     Get a collection of object IDs of groups of which the specified group is a member.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad group get-member-groups --group
                                   [--security-enabled-only {false, true}]
@@ -79,7 +76,6 @@ directCommands:
     List groups in the directory.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: >-
     az ad group list [--display-name]
                      [--filter]
@@ -96,7 +92,6 @@ directCommands:
     Get the details of a group.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/role/_help.py
   syntax: az ad group show --group
   requiredParameters:
   - isRequired: true
@@ -143,5 +138,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/25/2024
   description: Manage Microsoft Entra groups.

@@ -14,7 +14,6 @@ directCommands:
     Disable the boot diagnostics on a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm boot-diagnostics disable [--ids]
                                    [--name]
@@ -46,7 +45,6 @@ directCommands:
     Enable the boot diagnostics on a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm boot-diagnostics enable [--ids]
                                   [--name]
@@ -82,7 +80,6 @@ directCommands:
     Get the boot diagnostics log from a VM.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/vm/_help.py
   syntax: >-
     az vm boot-diagnostics get-boot-log [--ids]
                                         [--name]
@@ -137,5 +134,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 04/18/2024
   description: Use this feature to troubleshoot boot failures for custom or platform images.

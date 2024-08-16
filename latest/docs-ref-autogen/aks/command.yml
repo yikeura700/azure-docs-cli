@@ -12,7 +12,6 @@ directCommands:
     Run a shell command (with kubectl, helm) on your aks cluster, support attaching files as well.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks command invoke --name
                           --resource-group
@@ -45,7 +44,6 @@ directCommands:
     Fetch result from previously triggered 'aks command invoke'.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/acs/_help.py
   syntax: >-
     az aks command result --name
                           --resource-group
@@ -91,5 +89,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 07/30/2024
   description: See detail usage in 'az aks command invoke', 'az aks command result'.

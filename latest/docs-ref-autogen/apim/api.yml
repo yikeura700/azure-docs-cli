@@ -12,7 +12,6 @@ directCommands:
     Create an API Management API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api create --api-id
                        --display-name
@@ -110,7 +109,6 @@ directCommands:
     Delete an API Management API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api delete --api-id
                        --resource-group
@@ -153,7 +151,6 @@ directCommands:
     Export an API Management API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api export --api-id
                        --ef {OpenApiJsonFile, OpenApiJsonUrl, OpenApiYamlFile, OpenApiYamlUrl, SwaggerFile, SwaggerUrl, WadlFile, WadlUrl, WsdlFile, WsdlUrl}
@@ -192,7 +189,6 @@ directCommands:
     Import an API Management API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api import --path
                        --resource-group
@@ -303,7 +299,6 @@ directCommands:
     List API Management API's.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api list --resource-group
                      --service-name
@@ -335,7 +330,6 @@ directCommands:
     Show details of an API Management API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api show --api-id
                      --resource-group
@@ -359,7 +353,6 @@ directCommands:
     Update an API Management API.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api update --api-id
                        --resource-group
@@ -462,7 +455,6 @@ directCommands:
     Place the CLI in a waiting state until a condition of an apim api is met.
   status: GA
   sourceType: Core
-  editLink: https://github.com/Azure/azure-cli/blob/dev/src/azure-cli/azure/cli/command_modules/apim/_help.py
   syntax: >-
     az apim api wait --api-id
                      --name
@@ -581,5 +573,4 @@ globalParameters:
   summary: |-
     Increase logging verbosity. Use --debug for full debug logs.
 metadata:
-  ms.date: 02/19/2024
   description: Manage Azure API Management API's.
