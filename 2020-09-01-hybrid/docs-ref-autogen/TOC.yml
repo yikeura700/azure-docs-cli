@@ -971,9 +971,31 @@
           displayName: az acat report webhook
           items: []
   - name: Azure Arc Kubernetes Runtime
-    uid: sp-Azure_Arc_Kubernetes_Runtime
-    displayName: Azure Arc Kubernetes Runtime
-    items: []
+    items:
+    - name: Commands
+      uid: sp-Azure_Arc_Kubernetes_Runtime
+      displayName: Azure Arc Kubernetes Runtime
+    - name: k8s-runtime
+      items:
+      - name: Commands
+        uid: az_k8s-runtime
+        displayName: az k8s-runtime
+      - name: bgp-peer
+        uid: az_k8s-runtime_bgp-peer
+        displayName: az k8s-runtime bgp-peer
+        items: []
+      - name: load-balancer
+        uid: az_k8s-runtime_load-balancer
+        displayName: az k8s-runtime load-balancer
+        items: []
+      - name: service
+        uid: az_k8s-runtime_service
+        displayName: az k8s-runtime service
+        items: []
+      - name: storage-class
+        uid: az_k8s-runtime_storage-class
+        displayName: az k8s-runtime storage-class
+        items: []
   - name: Azure CLI
     items:
     - name: Commands
@@ -7385,9 +7407,14 @@
         displayName: az quantum target
         items: []
       - name: workspace
-        uid: az_quantum_workspace
-        displayName: az quantum workspace
-        items: []
+        items:
+        - name: Commands
+          uid: az_quantum_workspace
+          displayName: az quantum workspace
+        - name: keys
+          uid: az_quantum_workspace_keys
+          displayName: az quantum workspace keys
+          items: []
   - name: Qumulo
     items:
     - name: Commands
